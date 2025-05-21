@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.Extensions.DependencyInjection.NamedService</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.Extensions.DependencyInjection.INamedServiceProvider`1">
+      <summary>
+            Provides a mechanism for retrieving named service objects of the specified type.</summary>
+      <typeparam name="TService">The type of the service objects to retrieve.</typeparam>
+    </member>
+    <member name="M:Microsoft.Extensions.DependencyInjection.INamedServiceProvider`1.GetService(System.String)">
+      <summary>
+            Gets the service object with the specified name.</summary>
+      <param name="name">The name of the service object.</param>
+      <returns>The object.</returns>
+    </member>
+    <member name="M:Microsoft.Extensions.DependencyInjection.INamedServiceProvider`1.GetServices(System.String)">
+      <summary>
+            Gets all the service objects with the specified name.</summary>
+      <param name="name">The name of the service objects.</param>
+      <returns>The collection of objects.</returns>
+    </member>
+    <member name="T:Microsoft.Extensions.DependencyInjection.NamedServiceCollectionExtensions">
+      <summary>
+            Extensions for adding named services to <see cref="T:Microsoft.Extensions.DependencyInjection.INamedServiceProvider`1" />.</summary>
+    </member>
+    <member name="M:Microsoft.Extensions.DependencyInjection.NamedServiceCollectionExtensions.AddNamedSingleton``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String,System.Func{System.IServiceProvider,``0})">
+      <summary>
+            Adds a singleton named service of the type specific in <typeparamref name="TService" /> to the
+            specified <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />.</summary>
+      <param name="serviceCollection">The <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" /> to add the service to.</param>
+      <param name="name">The name of the service.</param>
+      <param name="implementationFactory">The factory that creates the service.</param>
+      <typeparam name="TService">The type of the service to add.</typeparam>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="M:Microsoft.Extensions.DependencyInjection.NamedServiceCollectionExtensions.AddNamedSingleton``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String)">
+      <summary>
+            Adds a singleton named service of the type specific in <typeparamref name="TService" /> to the
+            specified <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />.</summary>
+      <param name="serviceCollection">The <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" /> to add the service to.</param>
+      <param name="name">The name of the service.</param>
+      <typeparam name="TService">The type of the service to add.</typeparam>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="M:Microsoft.Extensions.DependencyInjection.NamedServiceCollectionExtensions.AddNamedSingleton``2(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String)">
+      <summary>
+            Adds a singleton named service of the type specific in <typeparamref name="TService" /> to the
+            specified <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />.</summary>
+      <param name="serviceCollection">The <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" /> to add the service to.</param>
+      <param name="name">The name of the service.</param>
+      <typeparam name="TService">The type of the service to add.</typeparam>
+      <typeparam name="TImplementation">The type of the implementation to use.</typeparam>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="M:Microsoft.Extensions.DependencyInjection.NamedServiceCollectionExtensions.AddNamedTransient``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String,System.Func{System.IServiceProvider,``0})">
+      <summary>
+            Adds a transient named service of the type specific in <typeparamref name="TService" /> to the
+            specified <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />.</summary>
+      <param name="serviceCollection">The <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" /> to add the service to.</param>
+      <param name="name">The name of the service.</param>
+      <param name="implementationFactory">The factory that creates the service.</param>
+      <typeparam name="TService">The type of the service to add.</typeparam>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="M:Microsoft.Extensions.DependencyInjection.NamedServiceCollectionExtensions.AddNamedTransient``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String)">
+      <summary>
+            Adds a transient named service of the type specific in <typeparamref name="TService" /> to the
+            specified <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />.</summary>
+      <param name="serviceCollection">The <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" /> to add the service to.</param>
+      <param name="name">The name of the service.</param>
+      <typeparam name="TService">The type of the service to add.</typeparam>
+      <returns>A reference to this instance after the operation has completed.</returns>
+    </member>
+    <member name="T:Microsoft.Extensions.DependencyInjection.NamedServiceProviderExtensions">
+      <summary>
+            Extension methods for getting services from an <see cref="T:Microsoft.Extensions.DependencyInjection.INamedServiceProvider`1" />.</summary>
+    </member>
+    <member name="M:Microsoft.Extensions.DependencyInjection.NamedServiceProviderExtensions.GetRequiredService``1(Microsoft.Extensions.DependencyInjection.INamedServiceProvider{``0},System.String)">
+      <summary>
+            Get service of type <typeparamref name="TService" /> from the <see cref="T:Microsoft.Extensions.DependencyInjection.INamedServiceProvider`1" />.</summary>
+      <param name="provider">The <see cref="T:Microsoft.Extensions.DependencyInjection.INamedServiceProvider`1" /> to retrieve the service object from.</param>
+      <param name="name">The name of the service.</param>
+      <typeparam name="TService">The type of service object to get.</typeparam>
+      <exception cref="T:System.InvalidOperationException">There is no service of type <typeparamref name="TService" /> with the name.</exception>
+      <returns>A service object of type <typeparamref name="TService" />.</returns>
+    </member>
+  </members>
+</doc>

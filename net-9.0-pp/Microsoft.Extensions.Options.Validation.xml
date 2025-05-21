@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.Extensions.Options.Validation</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.Extensions.Options.Validation.OptionsValidatorAttribute">
+      <summary>
+            Triggers the automatic generation of the implementation of <see cref="T:Microsoft.Extensions.Options.IValidateOptions`1" /> at compile time.</summary>
+    </member>
+    <member name="M:Microsoft.Extensions.Options.Validation.OptionsValidatorAttribute.#ctor" />
+    <member name="T:Microsoft.Extensions.Options.Validation.ValidateEnumeratedItemsAttribute">
+      <summary>
+            Marks a field or property to be enumerated, and each enumerated object to be validated.</summary>
+    </member>
+    <member name="M:Microsoft.Extensions.Options.Validation.ValidateEnumeratedItemsAttribute.#ctor">
+      <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Extensions.Options.Validation.ValidateEnumeratedItemsAttribute" /> class.</summary>
+    </member>
+    <member name="M:Microsoft.Extensions.Options.Validation.ValidateEnumeratedItemsAttribute.#ctor(System.Type)">
+      <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Extensions.Options.Validation.ValidateEnumeratedItemsAttribute" /> class.</summary>
+      <param name="validator">A type that implements <see cref="T:Microsoft.Extensions.Options.IValidateOptions`1" /> for the enumerable's type.</param>
+    </member>
+    <member name="P:Microsoft.Extensions.Options.Validation.ValidateEnumeratedItemsAttribute.Validator">
+      <summary>
+            Gets the type to use to validate the enumerable's objects.</summary>
+    </member>
+    <member name="T:Microsoft.Extensions.Options.Validation.ValidateObjectMembersAttribute">
+      <summary>
+            Marks a field or property to be validated transitively.</summary>
+    </member>
+    <member name="M:Microsoft.Extensions.Options.Validation.ValidateObjectMembersAttribute.#ctor">
+      <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Extensions.Options.Validation.ValidateObjectMembersAttribute" /> class.</summary>
+    </member>
+    <member name="M:Microsoft.Extensions.Options.Validation.ValidateObjectMembersAttribute.#ctor(System.Type)">
+      <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Extensions.Options.Validation.ValidateObjectMembersAttribute" /> class.</summary>
+      <param name="validator">A type that implements <see cref="T:Microsoft.Extensions.Options.IValidateOptions`1" /> for the field/property's type.</param>
+    </member>
+    <member name="P:Microsoft.Extensions.Options.Validation.ValidateObjectMembersAttribute.Validator">
+      <summary>
+            Gets the type to use to validate a field or property.</summary>
+    </member>
+  </members>
+</doc>
