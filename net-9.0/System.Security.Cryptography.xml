@@ -2738,7 +2738,15 @@ The <paramref name="tag" /> parameter length is not 16 bytes (128 bits).</except
       <summary>Asynchronously reads the bytes from the underlying stream, applies the relevant cryptographic transforms, and writes the result to the destination stream.</summary>
       <param name="destination">The stream to which the contents of the current stream will be copied.</param>
       <param name="bufferSize">The size, in bytes, of the buffer. This value must be greater than zero. The default size is 81920.</param>
-      <param name="cancellationToken">The token to monitor for cancellation requests. The default value is <xref data-throw-if-not-resolved="true" uid="System.Threading.CancellationToken.None"></xref>.</param>
+      <param name="cancellationToken">The token to monitor for cancellation requests. The default value is <see cref="P:System.Threading.CancellationToken.None" />.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="destination" /> is <see langword="null" />.</exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="bufferSize" /> is negative or zero.</exception>
+      <exception cref="T:System.ObjectDisposedException">Either the current stream or the destination stream is disposed.</exception>
+      <exception cref="T:System.NotSupportedException">The current stream does not support reading, or the destination stream does not support writing.</exception>
+      <exception cref="T:System.Security.Cryptography.CryptographicException">An error occurred during a cryptographic operation.</exception>
+      <exception cref="T:System.OperationCanceledException">The cancellation token was canceled. This exception is stored into the returned task.</exception>
       <returns>A task that represents the asynchronous copy operation.</returns>
     </member>
     <member name="M:System.Security.Cryptography.CryptoStream.Dispose(System.Boolean)">
@@ -2835,8 +2843,10 @@ The <paramref name="tag" /> parameter length is not 16 bytes (128 bits).</except
     <member name="M:System.Security.Cryptography.CryptoStream.ReadAsync(System.Memory{System.Byte},System.Threading.CancellationToken)">
       <summary>Asynchronously reads a sequence of bytes from the current stream, advances the position within the stream by the number of bytes read, and monitors cancellation requests.</summary>
       <param name="buffer">The region of memory to write the data into.</param>
-      <param name="cancellationToken">The token to monitor for cancellation requests. The default value is <xref data-throw-if-not-resolved="true" uid="System.Threading.CancellationToken.None"></xref>.</param>
-      <returns>A task that represents the asynchronous read operation. The value of its <xref data-throw-if-not-resolved="true" uid="System.Threading.Tasks.ValueTask`1.Result"></xref> property contains the total number of bytes read into the buffer. The result value can be less than the number of bytes allocated in the buffer if that many bytes are not currently available, or it can be 0 (zero) if the end of the stream has been reached.</returns>
+      <param name="cancellationToken">The token to monitor for cancellation requests. The default value is <see cref="P:System.Threading.CancellationToken.None" />.</param>
+      <exception cref="T:System.NotSupportedException">The <see cref="T:System.Security.Cryptography.CryptoStreamMode" /> associated with the current <see cref="T:System.Security.Cryptography.CryptoStream" /> object does not match the underlying stream. For example, this exception is thrown when using <see cref="F:System.Security.Cryptography.CryptoStreamMode.Read" /> with an underlying stream that's write only.</exception>
+      <exception cref="T:System.OperationCanceledException">The cancellation token was canceled. This exception is stored into the returned task.</exception>
+      <returns>A task that represents the asynchronous read operation. The value of its <see cref="P:System.Threading.Tasks.ValueTask`1.Result" /> property contains the total number of bytes read into the buffer. The result value can be less than the number of bytes allocated in the buffer if that many bytes are not currently available, or it can be 0 (zero) if the end of the stream has been reached.</returns>
     </member>
     <member name="M:System.Security.Cryptography.CryptoStream.ReadByte">
       <summary>Reads a byte from the stream and advances the position within the stream by one byte, or returns -1 if at the end of the stream.</summary>
@@ -2886,7 +2896,9 @@ The <paramref name="tag" /> parameter length is not 16 bytes (128 bits).</except
     <member name="M:System.Security.Cryptography.CryptoStream.WriteAsync(System.ReadOnlyMemory{System.Byte},System.Threading.CancellationToken)">
       <summary>Asynchronously writes a sequence of bytes to the current stream, advances the current position within this stream by the number of bytes written, and monitors cancellation requests.</summary>
       <param name="buffer">The region of memory to write data from.</param>
-      <param name="cancellationToken">The token to monitor for cancellation requests. The default value is <xref data-throw-if-not-resolved="true" uid="System.Threading.CancellationToken.None"></xref>.</param>
+      <param name="cancellationToken">The token to monitor for cancellation requests. The default value is <see cref="P:System.Threading.CancellationToken.None" />.</param>
+      <exception cref="T:System.NotSupportedException">The <see cref="T:System.Security.Cryptography.CryptoStreamMode" /> associated with current <see cref="T:System.Security.Cryptography.CryptoStream" /> object does not match the underlying stream. For example, this exception is thrown when using <see cref="F:System.Security.Cryptography.CryptoStreamMode.Write" /> with an underlying stream that is read only.</exception>
+      <exception cref="T:System.OperationCanceledException">The cancellation token was canceled. This exception is stored into the returned task.</exception>
       <returns>A task that represents the asynchronous write operation.</returns>
     </member>
     <member name="M:System.Security.Cryptography.CryptoStream.WriteByte(System.Byte)">
@@ -7456,9 +7468,9 @@ Releases the unmanaged resources used by the <see cref="T:System.Security.Crypto
         <paramref name="key" /> is <see langword="null" />.</exception>
     </member>
     <member name="M:System.Security.Cryptography.HMACSHA3_256.Dispose(System.Boolean)">
-      <summary>Releases the unmanaged resources used by the <xref data-throw-if-not-resolved="true" uid="System.Security.Cryptography.HMAC"></xref> class when a key change is legitimate and optionally releases the managed resources.</summary>
+      <summary>Releases the unmanaged resources used by the <see cref="T:System.Security.Cryptography.HMAC" /> class when a key change is legitimate and optionally releases the managed resources.</summary>
       <param name="disposing">
-        <code data-dev-comment-type="langword">true</code> to release both managed and unmanaged resources; <code data-dev-comment-type="langword">false</code> to release only unmanaged resources.</param>
+        <see langword="true" /> to release both managed and unmanaged resources; <see langword="false" /> to release only unmanaged resources.</param>
     </member>
     <member name="M:System.Security.Cryptography.HMACSHA3_256.HashCore(System.Byte[],System.Int32,System.Int32)">
       <summary>When overridden in a derived class, routes data written to the object into the HMAC algorithm for computing the HMAC value.</summary>
@@ -7581,7 +7593,7 @@ Releases the unmanaged resources used by the <see cref="T:System.Security.Crypto
       <returns>The computed HMAC value in a byte array.</returns>
     </member>
     <member name="M:System.Security.Cryptography.HMACSHA3_256.Initialize">
-      <summary>Initializes an instance of the default implementation of <xref data-throw-if-not-resolved="true" uid="System.Security.Cryptography.HMAC"></xref>.</summary>
+      <summary>Initializes an instance of the default implementation of <see cref="T:System.Security.Cryptography.HMAC" />.</summary>
     </member>
     <member name="M:System.Security.Cryptography.HMACSHA3_256.TryHashData(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.Int32@)">
       <summary>Attempts to compute the HMAC of data using the SHA-3-256 algorithm.</summary>
@@ -7627,9 +7639,9 @@ Releases the unmanaged resources used by the <see cref="T:System.Security.Crypto
         <paramref name="key" /> is <see langword="null" />.</exception>
     </member>
     <member name="M:System.Security.Cryptography.HMACSHA3_384.Dispose(System.Boolean)">
-      <summary>Releases the unmanaged resources used by the <xref data-throw-if-not-resolved="true" uid="System.Security.Cryptography.HMAC"></xref> class when a key change is legitimate and optionally releases the managed resources.</summary>
+      <summary>Releases the unmanaged resources used by the <see cref="T:System.Security.Cryptography.HMAC" /> class when a key change is legitimate and optionally releases the managed resources.</summary>
       <param name="disposing">
-        <code data-dev-comment-type="langword">true</code> to release both managed and unmanaged resources; <code data-dev-comment-type="langword">false</code> to release only unmanaged resources.</param>
+        <see langword="true" /> to release both managed and unmanaged resources; <see langword="false" /> to release only unmanaged resources.</param>
     </member>
     <member name="M:System.Security.Cryptography.HMACSHA3_384.HashCore(System.Byte[],System.Int32,System.Int32)">
       <summary>When overridden in a derived class, routes data written to the object into the HMAC algorithm for computing the HMAC value.</summary>
@@ -7752,7 +7764,7 @@ Releases the unmanaged resources used by the <see cref="T:System.Security.Crypto
       <returns>The computed HMAC value in a byte array.</returns>
     </member>
     <member name="M:System.Security.Cryptography.HMACSHA3_384.Initialize">
-      <summary>Initializes an instance of the default implementation of <xref data-throw-if-not-resolved="true" uid="System.Security.Cryptography.HMAC"></xref>.</summary>
+      <summary>Initializes an instance of the default implementation of <see cref="T:System.Security.Cryptography.HMAC" />.</summary>
     </member>
     <member name="M:System.Security.Cryptography.HMACSHA3_384.TryHashData(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.Int32@)">
       <summary>Attempts to compute the HMAC of data using the SHA-3-384 algorithm.</summary>
@@ -7798,9 +7810,9 @@ Releases the unmanaged resources used by the <see cref="T:System.Security.Crypto
         <paramref name="key" /> is <see langword="null" />.</exception>
     </member>
     <member name="M:System.Security.Cryptography.HMACSHA3_512.Dispose(System.Boolean)">
-      <summary>Releases the unmanaged resources used by the <xref data-throw-if-not-resolved="true" uid="System.Security.Cryptography.HMAC"></xref> class when a key change is legitimate and optionally releases the managed resources.</summary>
+      <summary>Releases the unmanaged resources used by the <see cref="T:System.Security.Cryptography.HMAC" /> class when a key change is legitimate and optionally releases the managed resources.</summary>
       <param name="disposing">
-        <code data-dev-comment-type="langword">true</code> to release both managed and unmanaged resources; <code data-dev-comment-type="langword">false</code> to release only unmanaged resources.</param>
+        <see langword="true" /> to release both managed and unmanaged resources; <see langword="false" /> to release only unmanaged resources.</param>
     </member>
     <member name="M:System.Security.Cryptography.HMACSHA3_512.HashCore(System.Byte[],System.Int32,System.Int32)">
       <summary>When overridden in a derived class, routes data written to the object into the HMAC algorithm for computing the HMAC value.</summary>
@@ -7923,7 +7935,7 @@ Releases the unmanaged resources used by the <see cref="T:System.Security.Crypto
       <returns>The computed HMAC value in a byte array.</returns>
     </member>
     <member name="M:System.Security.Cryptography.HMACSHA3_512.Initialize">
-      <summary>Initializes an instance of the default implementation of <xref data-throw-if-not-resolved="true" uid="System.Security.Cryptography.HMAC"></xref>.</summary>
+      <summary>Initializes an instance of the default implementation of <see cref="T:System.Security.Cryptography.HMAC" />.</summary>
     </member>
     <member name="M:System.Security.Cryptography.HMACSHA3_512.TryHashData(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.Int32@)">
       <summary>Attempts to compute the HMAC of data using the SHA-3-512 algorithm.</summary>
@@ -16302,8 +16314,8 @@ This object was created with a constructor which did not accept a signing key.</
         <paramref name="rawData" /> did not decode as an Authority Information Access extension.</exception>
     </member>
     <member name="M:System.Security.Cryptography.X509Certificates.X509AuthorityInformationAccessExtension.CopyFrom(System.Security.Cryptography.AsnEncodedData)">
-      <summary>Copies the extension properties of the specified <xref data-throw-if-not-resolved="true" uid="System.Security.Cryptography.AsnEncodedData"></xref> object.</summary>
-      <param name="asnEncodedData">The <xref data-throw-if-not-resolved="true" uid="System.Security.Cryptography.AsnEncodedData"></xref> to be copied.</param>
+      <summary>Copies the extension properties of the specified <see cref="T:System.Security.Cryptography.AsnEncodedData" /> object.</summary>
+      <param name="asnEncodedData">The <see cref="T:System.Security.Cryptography.AsnEncodedData" /> to be copied.</param>
     </member>
     <member name="M:System.Security.Cryptography.X509Certificates.X509AuthorityInformationAccessExtension.EnumerateCAIssuersUris">
       <summary>Enumerates the AccessDescription values whose AccessMethod is CAIssuers (1.3.6.1.5.5.7.48.2) and content data type is URI.</summary>
@@ -16358,8 +16370,8 @@ This object was created with a constructor which did not accept a signing key.</
         <paramref name="rawData" /> did not decode as an Authority Key Identifier extension.</exception>
     </member>
     <member name="M:System.Security.Cryptography.X509Certificates.X509AuthorityKeyIdentifierExtension.CopyFrom(System.Security.Cryptography.AsnEncodedData)">
-      <summary>Copies the extension properties of the specified <xref data-throw-if-not-resolved="true" uid="System.Security.Cryptography.AsnEncodedData"></xref> object.</summary>
-      <param name="asnEncodedData">The <xref data-throw-if-not-resolved="true" uid="System.Security.Cryptography.AsnEncodedData"></xref> to be copied.</param>
+      <summary>Copies the extension properties of the specified <see cref="T:System.Security.Cryptography.AsnEncodedData" /> object.</summary>
+      <param name="asnEncodedData">The <see cref="T:System.Security.Cryptography.AsnEncodedData" /> to be copied.</param>
     </member>
     <member name="M:System.Security.Cryptography.X509Certificates.X509AuthorityKeyIdentifierExtension.Create(System.Byte[],System.Security.Cryptography.X509Certificates.X500DistinguishedName,System.Byte[])">
       <summary>Creates an <see cref="T:System.Security.Cryptography.X509Certificates.X509AuthorityKeyIdentifierExtension" /> that specifies the provided key identifier, issuer name and serial number.</summary>
@@ -19059,8 +19071,8 @@ The Subject Alternative Name extension or Subject Name could not be decoded.</ex
         <paramref name="rawData" /> did not decode as a Subject Alternative Name extension.</exception>
     </member>
     <member name="M:System.Security.Cryptography.X509Certificates.X509SubjectAlternativeNameExtension.CopyFrom(System.Security.Cryptography.AsnEncodedData)">
-      <summary>Copies the extension properties of the specified <xref data-throw-if-not-resolved="true" uid="System.Security.Cryptography.AsnEncodedData"></xref> object.</summary>
-      <param name="asnEncodedData">The <xref data-throw-if-not-resolved="true" uid="System.Security.Cryptography.AsnEncodedData"></xref> to be copied.</param>
+      <summary>Copies the extension properties of the specified <see cref="T:System.Security.Cryptography.AsnEncodedData" /> object.</summary>
+      <param name="asnEncodedData">The <see cref="T:System.Security.Cryptography.AsnEncodedData" /> to be copied.</param>
     </member>
     <member name="M:System.Security.Cryptography.X509Certificates.X509SubjectAlternativeNameExtension.EnumerateDnsNames">
       <summary>Enumerates the alternative name entries with a DNS Name type identifier.</summary>

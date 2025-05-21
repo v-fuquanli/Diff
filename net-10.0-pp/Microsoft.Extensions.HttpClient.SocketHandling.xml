@@ -11,7 +11,7 @@
     <member name="M:Microsoft.Extensions.HttpClient.SocketHandling.HttpClientSocketHandlingExtensions.AddSocketsHttpHandler(Microsoft.Extensions.DependencyInjection.IHttpClientBuilder,System.Action{Microsoft.Extensions.HttpClient.SocketHandling.SocketsHttpHandlerBuilder})">
       <summary>
             Adds a delegate that will set <see cref="T:System.Net.Http.SocketsHttpHandler" /> as the primary <see cref="T:System.Net.Http.HttpMessageHandler" />
-            for a named <see cref="N:Microsoft.Extensions.HttpClient" />.</summary>
+            for a named HttpClient.</summary>
       <param name="builder">The <see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" />.</param>
       <param name="configure">Configure using a <see cref="T:Microsoft.Extensions.HttpClient.SocketHandling.SocketsHttpHandlerBuilder" /> instance.</param>
       <returns>The given <see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" /> instance to allow method chaining.</returns>
@@ -19,7 +19,7 @@
     <member name="M:Microsoft.Extensions.HttpClient.SocketHandling.HttpClientSocketHandlingExtensions.AddSocketsHttpHandler(Microsoft.Extensions.DependencyInjection.IHttpClientBuilder)">
       <summary>
             Adds a delegate that will set <see cref="T:System.Net.Http.SocketsHttpHandler" /> as the primary <see cref="T:System.Net.Http.HttpMessageHandler" />
-            for a named <see cref="N:Microsoft.Extensions.HttpClient" />.</summary>
+            for a named HttpClient.</summary>
       <param name="builder">The <see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" />.</param>
       <returns>The given <see cref="T:Microsoft.Extensions.DependencyInjection.IHttpClientBuilder" /> instance to allow method chaining.</returns>
     </member>
@@ -53,14 +53,14 @@
     <member name="M:Microsoft.Extensions.HttpClient.SocketHandling.SocketsHttpHandlerBuilder.ConfigureOptions(Microsoft.Extensions.Configuration.IConfigurationSection)">
       <summary>
             Adds a delegate that will set <see cref="T:System.Net.Http.SocketsHttpHandler" /> as the primary <see cref="T:System.Net.Http.HttpMessageHandler" />
-            for a named <see cref="N:Microsoft.Extensions.HttpClient" /> and will use <see cref="T:Microsoft.Extensions.Configuration.IConfigurationSection" /> to configure it.</summary>
+            for a named HttpClient and will use <see cref="T:Microsoft.Extensions.Configuration.IConfigurationSection" /> to configure it.</summary>
       <param name="section">Configuration for <see cref="T:Microsoft.Extensions.HttpClient.SocketHandling.SocketsHttpHandlerOptions" />.</param>
       <returns>The <see cref="T:Microsoft.Extensions.HttpClient.SocketHandling.SocketsHttpHandlerBuilder" />.</returns>
     </member>
     <member name="M:Microsoft.Extensions.HttpClient.SocketHandling.SocketsHttpHandlerBuilder.ConfigureOptions(System.Action{Microsoft.Extensions.HttpClient.SocketHandling.SocketsHttpHandlerOptions})">
       <summary>
             Adds a delegate that will set <see cref="T:System.Net.Http.SocketsHttpHandler" /> as the primary <see cref="T:System.Net.Http.HttpMessageHandler" />
-            for a named <see cref="N:Microsoft.Extensions.HttpClient" /> and will use the delegate to configure it.</summary>
+            for a named HttpClient and will use the delegate to configure it.</summary>
       <param name="configure">Configuration for <see cref="T:Microsoft.Extensions.HttpClient.SocketHandling.SocketsHttpHandlerOptions" />.</param>
       <returns>The <see cref="T:Microsoft.Extensions.HttpClient.SocketHandling.SocketsHttpHandlerBuilder" />.</returns>
     </member>

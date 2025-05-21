@@ -4,133 +4,6 @@
     <name>Microsoft.Extensions.AI</name>
   </assembly>
   <members>
-    <member name="T:Microsoft.Extensions.AI.AIFunctionFactory">
-      <summary>Provides factory methods for creating commonly used implementations of <see cref="T:Microsoft.Extensions.AI.AIFunction" />.</summary>
-    </member>
-    <member name="M:Microsoft.Extensions.AI.AIFunctionFactory.Create(System.Delegate,Microsoft.Extensions.AI.AIFunctionFactoryOptions)">
-      <summary>Creates an <see cref="T:Microsoft.Extensions.AI.AIFunction" /> instance for a method, specified via a delegate.</summary>
-      <param name="method">The method to be represented via the created <see cref="T:Microsoft.Extensions.AI.AIFunction" />.</param>
-      <param name="options">Metadata to use to override defaults inferred from <paramref name="method" />.</param>
-      <exception cref="T:System.ArgumentNullException">
-        <paramref name="method" /> is <see langword="null" />.</exception>
-      <returns>The created <see cref="T:Microsoft.Extensions.AI.AIFunction" /> for invoking <paramref name="method" />.</returns>
-    </member>
-    <member name="M:Microsoft.Extensions.AI.AIFunctionFactory.Create(System.Delegate,System.String,System.String,System.Text.Json.JsonSerializerOptions)">
-      <summary>Creates an <see cref="T:Microsoft.Extensions.AI.AIFunction" /> instance for a method, specified via a delegate.</summary>
-      <param name="method">The method to be represented via the created <see cref="T:Microsoft.Extensions.AI.AIFunction" />.</param>
-      <param name="name">The name to use for the <see cref="T:Microsoft.Extensions.AI.AIFunction" />.</param>
-      <param name="description">The description to use for the <see cref="T:Microsoft.Extensions.AI.AIFunction" />.</param>
-      <param name="serializerOptions">The <see cref="T:System.Text.Json.JsonSerializerOptions" /> used to marshal function parameters and any return value.</param>
-      <exception cref="T:System.ArgumentNullException">
-        <paramref name="method" /> is <see langword="null" />.</exception>
-      <returns>The created <see cref="T:Microsoft.Extensions.AI.AIFunction" /> for invoking <paramref name="method" />.</returns>
-    </member>
-    <member name="M:Microsoft.Extensions.AI.AIFunctionFactory.Create(System.Reflection.MethodInfo,System.Object,Microsoft.Extensions.AI.AIFunctionFactoryOptions)">
-      <summary>
-            Creates an <see cref="T:Microsoft.Extensions.AI.AIFunction" /> instance for a method, specified via an <see cref="T:System.Reflection.MethodInfo" /> instance
-            and an optional target object if the method is an instance method.</summary>
-      <param name="method">The method to be represented via the created <see cref="T:Microsoft.Extensions.AI.AIFunction" />.</param>
-      <param name="target">
-            The target object for the <paramref name="method" /> if it represents an instance method.
-            This should be <see langword="null" /> if and only if <paramref name="method" /> is a static method.</param>
-      <param name="options">Metadata to use to override defaults inferred from <paramref name="method" />.</param>
-      <exception cref="T:System.ArgumentNullException">
-        <paramref name="method" /> is <see langword="null" />.</exception>
-      <returns>The created <see cref="T:Microsoft.Extensions.AI.AIFunction" /> for invoking <paramref name="method" />.</returns>
-    </member>
-    <member name="M:Microsoft.Extensions.AI.AIFunctionFactory.Create(System.Reflection.MethodInfo,System.Object,System.String,System.String,System.Text.Json.JsonSerializerOptions)">
-      <summary>
-            Creates an <see cref="T:Microsoft.Extensions.AI.AIFunction" /> instance for a method, specified via an <see cref="T:System.Reflection.MethodInfo" /> instance
-            and an optional target object if the method is an instance method.</summary>
-      <param name="method">The method to be represented via the created <see cref="T:Microsoft.Extensions.AI.AIFunction" />.</param>
-      <param name="target">
-            The target object for the <paramref name="method" /> if it represents an instance method.
-            This should be <see langword="null" /> if and only if <paramref name="method" /> is a static method.</param>
-      <param name="name">The name to use for the <see cref="T:Microsoft.Extensions.AI.AIFunction" />.</param>
-      <param name="description">The description to use for the <see cref="T:Microsoft.Extensions.AI.AIFunction" />.</param>
-      <param name="serializerOptions">The <see cref="T:System.Text.Json.JsonSerializerOptions" /> used to marshal function parameters and return value.</param>
-      <exception cref="T:System.ArgumentNullException">
-        <paramref name="method" /> is <see langword="null" />.</exception>
-      <returns>The created <see cref="T:Microsoft.Extensions.AI.AIFunction" /> for invoking <paramref name="method" />.</returns>
-    </member>
-    <member name="M:Microsoft.Extensions.AI.AIFunctionFactory.Create(System.Reflection.MethodInfo,System.Type,Microsoft.Extensions.AI.AIFunctionFactoryOptions)">
-      <summary>
-            Creates an <see cref="T:Microsoft.Extensions.AI.AIFunction" /> instance for a method, specified via an <see cref="T:System.Reflection.MethodInfo" /> for
-            and instance method, along with a <see cref="T:System.Type" /> representing the type of the target object to
-            instantiate each time the method is invoked.</summary>
-      <param name="method">The instance method to be represented via the created <see cref="T:Microsoft.Extensions.AI.AIFunction" />.</param>
-      <param name="targetType">
-            The <see cref="T:System.Type" /> to construct an instance of on which to invoke <paramref name="method" /> when
-            the resulting <see cref="T:Microsoft.Extensions.AI.AIFunction" /> is invoked. If <see cref="P:Microsoft.Extensions.AI.AIFunctionArguments.Services" /> is provided,
-            ActivatorUtilities.CreateInstance will be used to construct the instance using those services; otherwise,
-            <see cref="M:System.Activator.CreateInstance(System.Type)" /> is used, utilizing the type's public parameterless constructor.
-            If an instance can't be constructed, an exception is thrown during the function's invocation.</param>
-      <param name="options">Metadata to use to override defaults inferred from <paramref name="method" />.</param>
-      <exception cref="T:System.ArgumentNullException">
-        <paramref name="method" /> is <see langword="null" />.</exception>
-      <returns>The created <see cref="T:Microsoft.Extensions.AI.AIFunction" /> for invoking <paramref name="method" />.</returns>
-    </member>
-    <member name="T:Microsoft.Extensions.AI.AIFunctionFactoryOptions">
-      <summary>
-            Represents options that can be provided when creating an <see cref="T:Microsoft.Extensions.AI.AIFunction" /> from a method.</summary>
-    </member>
-    <member name="M:Microsoft.Extensions.AI.AIFunctionFactoryOptions.#ctor">
-      <summary>
-            Initializes a new instance of the <see cref="T:Microsoft.Extensions.AI.AIFunctionFactoryOptions" /> class.</summary>
-    </member>
-    <member name="P:Microsoft.Extensions.AI.AIFunctionFactoryOptions.AdditionalProperties">
-      <summary>
-            Gets or sets additional values to store on the resulting <see cref="P:Microsoft.Extensions.AI.AITool.AdditionalProperties" /> property.</summary>
-    </member>
-    <member name="P:Microsoft.Extensions.AI.AIFunctionFactoryOptions.ConfigureParameterBinding">
-      <summary>Gets or sets a delegate used to determine how a particular parameter to the function should be bound.</summary>
-    </member>
-    <member name="P:Microsoft.Extensions.AI.AIFunctionFactoryOptions.Description">
-      <summary>Gets or sets the description to use for the function.</summary>
-      <returns>
-            The description for the function. The default value is a description derived from the passed <see cref="T:System.Delegate" /> or <see cref="T:System.Reflection.MethodInfo" />, if possible
-            (for example, via a <see cref="T:System.ComponentModel.DescriptionAttribute" /> on the method).</returns>
-    </member>
-    <member name="P:Microsoft.Extensions.AI.AIFunctionFactoryOptions.JsonSchemaCreateOptions">
-      <summary>
-            Gets or sets the <see cref="T:Microsoft.Extensions.AI.AIJsonSchemaCreateOptions" /> governing the generation of JSON schemas for the function.</summary>
-    </member>
-    <member name="P:Microsoft.Extensions.AI.AIFunctionFactoryOptions.MarshalResult">
-      <summary>Gets or sets a delegate used to determine the <see cref="T:System.Object" /> returned by <see cref="M:Microsoft.Extensions.AI.AIFunction.InvokeAsync(Microsoft.Extensions.AI.AIFunctionArguments,System.Threading.CancellationToken)" />.</summary>
-    </member>
-    <member name="P:Microsoft.Extensions.AI.AIFunctionFactoryOptions.Name">
-      <summary>Gets or sets the name to use for the function.</summary>
-      <returns>
-            The name to use for the function. The default value is a name derived from the method represented by the passed <see cref="T:System.Delegate" /> or <see cref="T:System.Reflection.MethodInfo" />.</returns>
-    </member>
-    <member name="P:Microsoft.Extensions.AI.AIFunctionFactoryOptions.SerializerOptions">
-      <summary>Gets or sets the <see cref="T:System.Text.Json.JsonSerializerOptions" /> used to marshal .NET values being passed to the underlying delegate.</summary>
-    </member>
-    <member name="T:Microsoft.Extensions.AI.AIFunctionFactoryOptions.ParameterBindingOptions">
-      <summary>Provides configuration options produced by the <see cref="P:Microsoft.Extensions.AI.AIFunctionFactoryOptions.ConfigureParameterBinding" /> delegate.</summary>
-    </member>
-    <member name="M:Microsoft.Extensions.AI.AIFunctionFactoryOptions.ParameterBindingOptions.Equals(Microsoft.Extensions.AI.AIFunctionFactoryOptions.ParameterBindingOptions)">
-      <param name="other" />
-    </member>
-    <member name="M:Microsoft.Extensions.AI.AIFunctionFactoryOptions.ParameterBindingOptions.Equals(System.Object)">
-      <param name="obj" />
-    </member>
-    <member name="M:Microsoft.Extensions.AI.AIFunctionFactoryOptions.ParameterBindingOptions.GetHashCode" />
-    <member name="M:Microsoft.Extensions.AI.AIFunctionFactoryOptions.ParameterBindingOptions.op_Equality(Microsoft.Extensions.AI.AIFunctionFactoryOptions.ParameterBindingOptions,Microsoft.Extensions.AI.AIFunctionFactoryOptions.ParameterBindingOptions)">
-      <param name="left" />
-      <param name="right" />
-    </member>
-    <member name="M:Microsoft.Extensions.AI.AIFunctionFactoryOptions.ParameterBindingOptions.op_Inequality(Microsoft.Extensions.AI.AIFunctionFactoryOptions.ParameterBindingOptions,Microsoft.Extensions.AI.AIFunctionFactoryOptions.ParameterBindingOptions)">
-      <param name="left" />
-      <param name="right" />
-    </member>
-    <member name="M:Microsoft.Extensions.AI.AIFunctionFactoryOptions.ParameterBindingOptions.ToString" />
-    <member name="P:Microsoft.Extensions.AI.AIFunctionFactoryOptions.ParameterBindingOptions.BindParameter">
-      <summary>Gets a delegate used to determine the value for a bound parameter.</summary>
-    </member>
-    <member name="P:Microsoft.Extensions.AI.AIFunctionFactoryOptions.ParameterBindingOptions.ExcludeFromSchema">
-      <summary>Gets a value indicating whether the parameter should be excluded from the generated schema.</summary>
-    </member>
     <member name="T:Microsoft.Extensions.AI.CachingChatClient">
       <summary>
             Represents a delegating chat client that caches the results of chat calls.</summary>
@@ -324,10 +197,9 @@
       <param name="chatClient">The <see cref="T:Microsoft.Extensions.AI.IChatClient" />.</param>
       <param name="chatMessage">The chat message to send.</param>
       <param name="options">The chat options to configure the request.</param>
-      <param name="useJsonSchema">
-            Optionally specifies whether to set a JSON schema on the <see cref="T:Microsoft.Extensions.AI.ChatResponseFormat" />.
-            This improves reliability if the underlying model supports native structured output with a schema, but may cause an error if the model does not support it.
-            If not specified, the default value is <see langword="true" />.</param>
+      <param name="useJsonSchemaResponseFormat">
+        <see langword="true" /> to set a JSON schema on the <see cref="T:Microsoft.Extensions.AI.ChatResponseFormat" />; otherwise, <see langword="false" />. The default is <see langword="true" />.
+            Using a JSON schema improves reliability if the underlying model supports native structured output with a schema, but might cause an error if the model does not support it.</param>
       <param name="cancellationToken">The <see cref="T:System.Threading.CancellationToken" /> to monitor for cancellation requests. The default is <see cref="P:System.Threading.CancellationToken.None" />.</param>
       <typeparam name="T">The type of structured output to request.</typeparam>
       <returns>The response messages generated by the client.</returns>
@@ -338,10 +210,9 @@
       <param name="chatMessage">The chat message to send.</param>
       <param name="serializerOptions">The JSON serialization options to use.</param>
       <param name="options">The chat options to configure the request.</param>
-      <param name="useJsonSchema">
-            Optionally specifies whether to set a JSON schema on the <see cref="T:Microsoft.Extensions.AI.ChatResponseFormat" />.
-            This improves reliability if the underlying model supports native structured output with a schema, but may cause an error if the model does not support it.
-            If not specified, the default value is <see langword="true" />.</param>
+      <param name="useJsonSchemaResponseFormat">
+        <see langword="true" /> to set a JSON schema on the <see cref="T:Microsoft.Extensions.AI.ChatResponseFormat" />; otherwise, <see langword="false" />. The default is <see langword="true" />.
+            Using a JSON schema improves reliability if the underlying model supports native structured output with a schema, but might cause an error if the model does not support it.</param>
       <param name="cancellationToken">The <see cref="T:System.Threading.CancellationToken" /> to monitor for cancellation requests. The default is <see cref="P:System.Threading.CancellationToken.None" />.</param>
       <typeparam name="T">The type of structured output to request.</typeparam>
       <returns>The response messages generated by the client.</returns>
@@ -351,10 +222,9 @@
       <param name="chatClient">The <see cref="T:Microsoft.Extensions.AI.IChatClient" />.</param>
       <param name="messages">The chat content to send.</param>
       <param name="options">The chat options to configure the request.</param>
-      <param name="useJsonSchema">
-            Optionally specifies whether to set a JSON schema on the <see cref="T:Microsoft.Extensions.AI.ChatResponseFormat" />.
-            This improves reliability if the underlying model supports native structured output with a schema, but may cause an error if the model does not support it.
-            If not specified, the default value is <see langword="true" />.</param>
+      <param name="useJsonSchemaResponseFormat">
+        <see langword="true" /> to set a JSON schema on the <see cref="T:Microsoft.Extensions.AI.ChatResponseFormat" />; otherwise, <see langword="false" />. The default is <see langword="true" />.
+            Using a JSON schema improves reliability if the underlying model supports native structured output with a schema, but might cause an error if the model does not support it.</param>
       <param name="cancellationToken">The <see cref="T:System.Threading.CancellationToken" /> to monitor for cancellation requests. The default is <see cref="P:System.Threading.CancellationToken.None" />.</param>
       <typeparam name="T">The type of structured output to request.</typeparam>
       <returns>The response messages generated by the client.</returns>
@@ -365,14 +235,13 @@
       <param name="messages">The chat content to send.</param>
       <param name="serializerOptions">The JSON serialization options to use.</param>
       <param name="options">The chat options to configure the request.</param>
-      <param name="useJsonSchema">
-            Optionally specifies whether to set a JSON schema on the <see cref="T:Microsoft.Extensions.AI.ChatResponseFormat" />.
-            This improves reliability if the underlying model supports native structured output with a schema, but may cause an error if the model does not support it.
-            If not specified, the default value is <see langword="true" />.</param>
+      <param name="useJsonSchemaResponseFormat">
+        <see langword="true" /> to set a JSON schema on the <see cref="T:Microsoft.Extensions.AI.ChatResponseFormat" />; otherwise, <see langword="false" />. The default is <see langword="true" />.
+            Using a JSON schema improves reliability if the underlying model supports native structured output with a schema, but might cause an error if the model does not support it.</param>
       <param name="cancellationToken">The <see cref="T:System.Threading.CancellationToken" /> to monitor for cancellation requests. The default is <see cref="P:System.Threading.CancellationToken.None" />.</param>
       <typeparam name="T">The type of structured output to request.</typeparam>
       <exception cref="T:System.ArgumentNullException">
-        <paramref name="serializerOptions" /> is <see langword="null" />.</exception>
+        <paramref name="chatClient" /> or <paramref name="messages" /> or <paramref name="serializerOptions" /> is <see langword="null" />.</exception>
       <returns>The response messages generated by the client.</returns>
     </member>
     <member name="M:Microsoft.Extensions.AI.ChatClientStructuredOutputExtensions.GetResponseAsync``1(Microsoft.Extensions.AI.IChatClient,System.String,Microsoft.Extensions.AI.ChatOptions,System.Nullable{System.Boolean},System.Threading.CancellationToken)">
@@ -380,11 +249,9 @@
       <param name="chatClient">The <see cref="T:Microsoft.Extensions.AI.IChatClient" />.</param>
       <param name="chatMessage">The text content for the chat message to send.</param>
       <param name="options">The chat options to configure the request.</param>
-      <param name="useJsonSchema">
-            Optionally specifies whether to set a JSON schema on the <see cref="T:Microsoft.Extensions.AI.ChatResponseFormat" />.
-            This improves reliability if the underlying model supports native structured output with a schema, but may cause an error if the model does not support it.
-            If not specified, the default value is determined by the implementation.
-            If a specific value is required, it must be specified by the caller.</param>
+      <param name="useJsonSchemaResponseFormat">
+        <see langword="true" /> to set a JSON schema on the <see cref="T:Microsoft.Extensions.AI.ChatResponseFormat" />; otherwise, <see langword="false" />.
+            Using a JSON schema improves reliability if the underlying model supports native structured output with a schema, but might cause an error if the model does not support it.</param>
       <param name="cancellationToken">The <see cref="T:System.Threading.CancellationToken" /> to monitor for cancellation requests. The default is <see cref="P:System.Threading.CancellationToken.None" />.</param>
       <typeparam name="T">The type of structured output to request.</typeparam>
       <returns>The response messages generated by the client.</returns>
@@ -395,10 +262,9 @@
       <param name="chatMessage">The text content for the chat message to send.</param>
       <param name="serializerOptions">The JSON serialization options to use.</param>
       <param name="options">The chat options to configure the request.</param>
-      <param name="useJsonSchema">
-            Optionally specifies whether to set a JSON schema on the <see cref="T:Microsoft.Extensions.AI.ChatResponseFormat" />.
-            This improves reliability if the underlying model supports native structured output with a schema, but may cause an error if the model does not support it.
-            If not specified, the default value is <see langword="true" />.</param>
+      <param name="useJsonSchemaResponseFormat">
+        <see langword="true" /> to set a JSON schema on the <see cref="T:Microsoft.Extensions.AI.ChatResponseFormat" />; otherwise, <see langword="false" />. The default is <see langword="true" />.
+            Using a JSON schema improves reliability if the underlying model supports native structured output with a schema, but might cause an error if the model does not support it.</param>
       <param name="cancellationToken">The <see cref="T:System.Threading.CancellationToken" /> to monitor for cancellation requests. The default is <see cref="P:System.Threading.CancellationToken.None" />.</param>
       <typeparam name="T">The type of structured output to request.</typeparam>
       <returns>The response messages generated by the client.</returns>
@@ -726,6 +592,11 @@ This is used when there is a call to <xref data-throw-if-not-resolved="true" uid
     <member name="P:Microsoft.Extensions.AI.FunctionInvocationContext.FunctionCount">
       <summary>Gets or sets the total number of function call requests within the iteration.</summary>
     </member>
+    <member name="P:Microsoft.Extensions.AI.FunctionInvocationContext.IsStreaming">
+      <summary>
+            Gets or sets a value indicating whether the function invocation is occurring as part of a
+            <see cref="M:Microsoft.Extensions.AI.IChatClient.GetStreamingResponseAsync(System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.ChatMessage},Microsoft.Extensions.AI.ChatOptions,System.Threading.CancellationToken)" /> call as opposed to a <see cref="M:Microsoft.Extensions.AI.IChatClient.GetResponseAsync(System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.ChatMessage},Microsoft.Extensions.AI.ChatOptions,System.Threading.CancellationToken)" /> call.</summary>
+    </member>
     <member name="P:Microsoft.Extensions.AI.FunctionInvocationContext.Iteration">
       <summary>Gets or sets the number of this iteration with the underlying client.</summary>
     </member>
@@ -770,13 +641,12 @@ This is used when there is a call to <xref data-throw-if-not-resolved="true" uid
       <returns>The response messages generated by the client.</returns>
     </member>
     <member name="M:Microsoft.Extensions.AI.FunctionInvokingChatClient.InvokeFunctionAsync(Microsoft.Extensions.AI.FunctionInvocationContext,System.Threading.CancellationToken)">
-      <summary>Invokes the function asynchronously.</summary>
-      <param name="context">
-            The function invocation context detailing the function to be invoked and its arguments along with additional request information.</param>
-      <param name="cancellationToken">The <see cref="T:System.Threading.CancellationToken" /> to monitor for cancellation requests. The default is <see cref="P:System.Threading.CancellationToken.None" />.</param>
+      <summary>This method will invoke the function within the try block.</summary>
+      <param name="context">The function invocation context.</param>
+      <param name="cancellationToken">Cancellation token.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="context" /> is <see langword="null" />.</exception>
-      <returns>The result of the function invocation, or <see langword="null" /> if the function invocation returned <see langword="null" />.</returns>
+      <returns>The function result.</returns>
     </member>
     <member name="P:Microsoft.Extensions.AI.FunctionInvokingChatClient.AllowConcurrentInvocation">
       <summary>
@@ -789,6 +659,9 @@ This is used when there is a call to <xref data-throw-if-not-resolved="true" uid
     <member name="P:Microsoft.Extensions.AI.FunctionInvokingChatClient.CurrentContext">
       <summary>
             Gets or sets the <see cref="T:Microsoft.Extensions.AI.FunctionInvocationContext" /> for the current function invocation.</summary>
+    </member>
+    <member name="P:Microsoft.Extensions.AI.FunctionInvokingChatClient.FunctionInvocationServices">
+      <summary>Gets the <see cref="T:System.IServiceProvider" /> specified when constructing the <see cref="T:Microsoft.Extensions.AI.FunctionInvokingChatClient" />, if any.</summary>
     </member>
     <member name="P:Microsoft.Extensions.AI.FunctionInvokingChatClient.IncludeDetailedErrors">
       <summary>
@@ -828,6 +701,9 @@ This is used when there is a call to <xref data-throw-if-not-resolved="true" uid
     </member>
     <member name="P:Microsoft.Extensions.AI.FunctionInvokingChatClient.FunctionInvocationResult.Status">
       <summary>Gets status about how the function invocation completed.</summary>
+    </member>
+    <member name="P:Microsoft.Extensions.AI.FunctionInvokingChatClient.FunctionInvocationResult.Terminate">
+      <summary>Gets a value indicating whether the caller should terminate the processing loop.</summary>
     </member>
     <member name="T:Microsoft.Extensions.AI.FunctionInvokingChatClient.FunctionInvocationStatus">
       <summary>Provides error codes for when errors occur as part of the function calling loop.</summary>
@@ -955,6 +831,18 @@ This is used when there is a call to <xref data-throw-if-not-resolved="true" uid
     <member name="P:Microsoft.Extensions.AI.LoggingSpeechToTextClient.JsonSerializerOptions">
       <summary>Gets or sets JSON serialization options to use when serializing logging data.</summary>
     </member>
+    <member name="T:Microsoft.Extensions.AI.LoggingSpeechToTextClientBuilderExtensions">
+      <summary>Provides extensions for configuring <see cref="T:Microsoft.Extensions.AI.LoggingSpeechToTextClient" /> instances.</summary>
+    </member>
+    <member name="M:Microsoft.Extensions.AI.LoggingSpeechToTextClientBuilderExtensions.UseLogging(Microsoft.Extensions.AI.SpeechToTextClientBuilder,Microsoft.Extensions.Logging.ILoggerFactory,System.Action{Microsoft.Extensions.AI.LoggingSpeechToTextClient})">
+      <summary>Adds logging to the audio transcription client pipeline.</summary>
+      <param name="builder">The <see cref="T:Microsoft.Extensions.AI.SpeechToTextClientBuilder" />.</param>
+      <param name="loggerFactory">
+            An optional <see cref="T:Microsoft.Extensions.Logging.ILoggerFactory" /> used to create a logger with which logging should be performed.
+            If not supplied, a required instance will be resolved from the service provider.</param>
+      <param name="configure">An optional callback that can be used to configure the <see cref="T:Microsoft.Extensions.AI.LoggingSpeechToTextClient" /> instance.</param>
+      <returns>The <paramref name="builder" />.</returns>
+    </member>
     <member name="T:Microsoft.Extensions.AI.OpenTelemetryChatClient">
       <summary>Represents a delegating chat client that implements the OpenTelemetry Semantic Conventions for Generative AI systems.</summary>
     </member>
@@ -1032,6 +920,14 @@ This is used when there is a call to <xref data-throw-if-not-resolved="true" uid
       <param name="serviceKey">An optional key that can be used to help identify the target service.</param>
       <returns>The found object, otherwise <code data-dev-comment-type="langword">null</code>.</returns>
     </member>
+    <member name="P:Microsoft.Extensions.AI.OpenTelemetryEmbeddingGenerator`2.EnableSensitiveData">
+      <summary>
+            Gets or sets a value indicating whether potentially sensitive information should be included in telemetry.</summary>
+      <returns>
+        <see langword="true" /> if potentially sensitive information should be included in telemetry;
+            <see langword="false" /> if telemetry shouldn't include raw inputs and outputs.
+            The default value is <see langword="false" />.</returns>
+    </member>
     <member name="T:Microsoft.Extensions.AI.OpenTelemetryEmbeddingGeneratorBuilderExtensions">
       <summary>Provides extensions for configuring <see cref="T:Microsoft.Extensions.AI.OpenTelemetryEmbeddingGenerator`2" /> instances.</summary>
     </member>
@@ -1073,18 +969,6 @@ This is used when there is a call to <xref data-throw-if-not-resolved="true" uid
       <summary>Adds a factory for an intermediate audio transcription client to the audio transcription client pipeline.</summary>
       <param name="clientFactory">The client factory function.</param>
       <returns>The updated <see cref="T:Microsoft.Extensions.AI.SpeechToTextClientBuilder" /> instance.</returns>
-    </member>
-    <member name="T:Microsoft.Extensions.AI.SpeechToTextClientBuilderExtensions">
-      <summary>Provides extensions for configuring <see cref="T:Microsoft.Extensions.AI.LoggingSpeechToTextClient" /> instances.</summary>
-    </member>
-    <member name="M:Microsoft.Extensions.AI.SpeechToTextClientBuilderExtensions.UseLogging(Microsoft.Extensions.AI.SpeechToTextClientBuilder,Microsoft.Extensions.Logging.ILoggerFactory,System.Action{Microsoft.Extensions.AI.LoggingSpeechToTextClient})">
-      <summary>Adds logging to the audio transcription client pipeline.</summary>
-      <param name="builder">The <see cref="T:Microsoft.Extensions.AI.SpeechToTextClientBuilder" />.</param>
-      <param name="loggerFactory">
-            An optional <see cref="T:Microsoft.Extensions.Logging.ILoggerFactory" /> used to create a logger with which logging should be performed.
-            If not supplied, a required instance will be resolved from the service provider.</param>
-      <param name="configure">An optional callback that can be used to configure the <see cref="T:Microsoft.Extensions.AI.LoggingSpeechToTextClient" /> instance.</param>
-      <returns>The <paramref name="builder" />.</returns>
     </member>
     <member name="T:Microsoft.Extensions.AI.SpeechToTextClientBuilderSpeechToTextClientExtensions">
       <summary>Provides extension methods for working with <see cref="T:Microsoft.Extensions.AI.ISpeechToTextClient" /> in the context of <see cref="T:Microsoft.Extensions.AI.SpeechToTextClientBuilder" />.</summary>

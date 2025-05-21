@@ -25,8 +25,8 @@
     </member>
     <member name="P:System.Formats.Nrbf.ArrayRecord.Lengths">
       <summary>
-            When overridden in a derived class, gets a buffer of integers that represent the number of elements in every dimension.</summary>
-      <returns>A buffer of integers that represent the number of elements in every dimension.</returns>
+            When overridden in a derived class, gets a buffer of integers that represent the number of elements in each dimension.</summary>
+      <returns>A buffer of integers that represent the number of elements in each dimension.</returns>
     </member>
     <member name="P:System.Formats.Nrbf.ArrayRecord.Rank">
       <summary>
@@ -157,7 +157,7 @@
             Checks if the member with the given name was present in the payload.</summary>
       <param name="memberName">The name of the member.</param>
       <returns>
-        <see langword="true" /> if it was present, otherwise <see langword="false" />.</returns>
+        <see langword="true" /> if the member was present, otherwise <see langword="false" />.</returns>
     </member>
     <member name="P:System.Formats.Nrbf.ClassRecord.Id">
       <summary>Gets the ID of the record.</summary>
@@ -314,7 +314,7 @@ This parameter is treated as uninitialized.</param>
     </member>
     <member name="T:System.Formats.Nrbf.SerializationRecordId">
       <summary>
-            The ID of <see cref="T:System.Formats.Nrbf.SerializationRecord" />.</summary>
+            Represents the ID of <see cref="T:System.Formats.Nrbf.SerializationRecord" />.</summary>
     </member>
     <member name="M:System.Formats.Nrbf.SerializationRecordId.Equals(System.Formats.Nrbf.SerializationRecordId)">
       <summary>Indicates whether the current object is equal to another object of the same type.</summary>
@@ -410,7 +410,7 @@ This parameter is treated as uninitialized.</param>
     </member>
     <member name="F:System.Formats.Nrbf.SerializationRecordType.SystemClassWithMembers">
       <summary>
-            A system class information without type info.</summary>
+            System class information without type info.</summary>
     </member>
     <member name="F:System.Formats.Nrbf.SerializationRecordType.SystemClassWithMembersAndTypes">
       <summary>
@@ -435,8 +435,8 @@ This parameter is treated as uninitialized.</param>
       <returns>The length of the array.</returns>
     </member>
     <member name="P:System.Formats.Nrbf.SZArrayRecord`1.Lengths">
-      <summary>When overridden in a derived class, gets a buffer of integers that represent the number of elements in every dimension.</summary>
-      <returns>A buffer of integers that represent the number of elements in every dimension.</returns>
+      <summary>When overridden in a derived class, gets a buffer of integers that represent the number of elements in each dimension.</summary>
+      <returns>A buffer of integers that represent the number of elements in each dimension.</returns>
     </member>
   </members>
 </doc>

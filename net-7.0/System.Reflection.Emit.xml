@@ -643,7 +643,7 @@
     <member name="P:System.Reflection.Emit.EnumBuilder.IsByRefLike">
       <summary>Gets a value that indicates whether the type is a byref-like structure.</summary>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if the <xref data-throw-if-not-resolved="true" uid="System.Type"></xref> is a byref-like structure; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if the <see cref="T:System.Type" /> is a byref-like structure; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="P:System.Reflection.Emit.EnumBuilder.IsConstructedGenericType">
       <summary>Gets a value that indicates whether this object represents a constructed generic type.</summary>
@@ -653,12 +653,12 @@
     <member name="P:System.Reflection.Emit.EnumBuilder.IsSZArray">
       <summary>Gets a value that indicates whether the type is an array type that can represent only a single-dimensional array with a zero lower bound.</summary>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if the current <xref data-throw-if-not-resolved="true" uid="System.Type"></xref> is an array type that can represent only a single-dimensional array with a zero lower bound; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if the current <see cref="T:System.Type" /> is an array type that can represent only a single-dimensional array with a zero lower bound; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="P:System.Reflection.Emit.EnumBuilder.IsTypeDefinition">
       <summary>Gets a value that indicates whether the type is a type definition.</summary>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if the current <xref data-throw-if-not-resolved="true" uid="System.Type"></xref> is a type definition; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if the current <see cref="T:System.Type" /> is a type definition; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="P:System.Reflection.Emit.EnumBuilder.Module">
       <summary>Retrieves the dynamic module that contains this <see cref="T:System.Reflection.Emit.EnumBuilder" /> definition.</summary>
@@ -1126,7 +1126,7 @@
     <member name="P:System.Reflection.Emit.GenericTypeParameterBuilder.IsByRefLike">
       <summary>Gets a value that indicates whether the type is a byref-like structure.</summary>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if the <xref data-throw-if-not-resolved="true" uid="System.Type"></xref> is a byref-like structure; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if the <see cref="T:System.Type" /> is a byref-like structure; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="P:System.Reflection.Emit.GenericTypeParameterBuilder.IsConstructedGenericType">
       <summary>Gets a value that indicates whether this object represents a constructed generic type.</summary>
@@ -1151,12 +1151,12 @@
     <member name="P:System.Reflection.Emit.GenericTypeParameterBuilder.IsSZArray">
       <summary>Gets a value that indicates whether the type is an array type that can represent only a single-dimensional array with a zero lower bound.</summary>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if the current <xref data-throw-if-not-resolved="true" uid="System.Type"></xref> is an array type that can represent only a single-dimensional array with a zero lower bound; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if the current <see cref="T:System.Type" /> is an array type that can represent only a single-dimensional array with a zero lower bound; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="P:System.Reflection.Emit.GenericTypeParameterBuilder.IsTypeDefinition">
       <summary>Gets a value that indicates whether the type is a type definition.</summary>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if the current <xref data-throw-if-not-resolved="true" uid="System.Type"></xref> is a type definition; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if the current <see cref="T:System.Type" /> is a type definition; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="P:System.Reflection.Emit.GenericTypeParameterBuilder.MetadataToken">
       <summary>Gets a token that identifies the current dynamic module in metadata.</summary>
@@ -3148,7 +3148,7 @@
     <member name="P:System.Reflection.Emit.TypeBuilder.IsByRefLike">
       <summary>Gets a value that indicates whether the type is a byref-like structure.</summary>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if the <xref data-throw-if-not-resolved="true" uid="System.Type"></xref> is a byref-like structure; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if the <see cref="T:System.Type" /> is a byref-like structure; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="P:System.Reflection.Emit.TypeBuilder.IsConstructedGenericType">
       <summary>Gets a value that indicates whether this object represents a constructed generic type.</summary>

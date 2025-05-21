@@ -1001,5 +1001,18 @@
             Logs that highlight an abnormal or unexpected event in the application flow, but do not otherwise cause the
             application execution to stop.</summary>
     </member>
+    <member name="T:Microsoft.Extensions.Logging.ProviderAliasAttribute">
+      <summary>
+            Defines an alias for <see cref="T:Microsoft.Extensions.Logging.ILoggerProvider" /> implementation to be used in filtering rules.</summary>
+    </member>
+    <member name="M:Microsoft.Extensions.Logging.ProviderAliasAttribute.#ctor(System.String)">
+      <summary>
+            Creates a new <see cref="T:Microsoft.Extensions.Logging.ProviderAliasAttribute" /> instance.</summary>
+      <param name="alias">The alias to set.</param>
+    </member>
+    <member name="P:Microsoft.Extensions.Logging.ProviderAliasAttribute.Alias">
+      <summary>
+            Gets the alias of the provider.</summary>
+    </member>
   </members>
 </doc>

@@ -7,19 +7,6 @@
     <member name="T:Microsoft.Extensions.AI.OpenAIClientExtensions">
       <summary>Provides extension methods for working with <see cref="T:OpenAI.OpenAIClient" />s.</summary>
     </member>
-    <member name="M:Microsoft.Extensions.AI.OpenAIClientExtensions.AsChatClient(OpenAI.OpenAIClient,System.String)">
-      <summary>Gets an <see cref="T:Microsoft.Extensions.AI.IChatClient" /> for use with this <see cref="T:OpenAI.OpenAIClient" />.</summary>
-      <param name="openAIClient">The client.</param>
-      <param name="modelId">The model.</param>
-      <returns>An <see cref="T:Microsoft.Extensions.AI.IChatClient" /> that can be used to converse via the <see cref="T:OpenAI.OpenAIClient" />.</returns>
-    </member>
-    <member name="M:Microsoft.Extensions.AI.OpenAIClientExtensions.AsEmbeddingGenerator(OpenAI.OpenAIClient,System.String,System.Nullable{System.Int32})">
-      <summary>Gets an <see cref="T:Microsoft.Extensions.AI.IEmbeddingGenerator`2" /> for use with this <see cref="T:OpenAI.OpenAIClient" />.</summary>
-      <param name="openAIClient">The client.</param>
-      <param name="modelId">The model to use.</param>
-      <param name="dimensions">The number of dimensions to generate in each embedding.</param>
-      <returns>An <see cref="T:Microsoft.Extensions.AI.IEmbeddingGenerator`2" /> that can be used to generate embeddings via the <see cref="T:OpenAI.Embeddings.EmbeddingClient" />.</returns>
-    </member>
     <member name="M:Microsoft.Extensions.AI.OpenAIClientExtensions.AsIChatClient(OpenAI.Chat.ChatClient)">
       <summary>Gets an <see cref="T:Microsoft.Extensions.AI.IChatClient" /> for use with this <see cref="T:OpenAI.Chat.ChatClient" />.</summary>
       <param name="chatClient">The client.</param>

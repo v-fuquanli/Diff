@@ -1185,33 +1185,33 @@
       <summary>Initializes a new instance of the <see cref="T:System.ComponentModel.DateOnlyConverter" /> class.</summary>
     </member>
     <member name="M:System.ComponentModel.DateOnlyConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
-      <summary>Gets a value indicating whether this converter can convert an object in the given source type to a <xref data-throw-if-not-resolved="true" uid="System.DateOnly"></xref> object using the specified context.</summary>
-      <param name="context">An <xref data-throw-if-not-resolved="true" uid="System.ComponentModel.ITypeDescriptorContext"></xref> that provides a format context.</param>
+      <summary>Gets a value indicating whether this converter can convert an object in the given source type to a <see cref="T:System.DateOnly" /> object using the specified context.</summary>
+      <param name="context">An <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> that provides a format context.</param>
       <param name="sourceType">The type to convert from.</param>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if this object can perform the conversion; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if this object can perform the conversion; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="M:System.ComponentModel.DateOnlyConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)">
       <summary>Gets a value indicating whether this converter can convert an object to the given destination type using the context.</summary>
-      <param name="context">An <xref data-throw-if-not-resolved="true" uid="System.ComponentModel.ITypeDescriptorContext"></xref> that provides a format context.</param>
+      <param name="context">An <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> that provides a format context.</param>
       <param name="destinationType">The type to convert to.</param>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if this converter can perform the conversion; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if this converter can perform the conversion; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="M:System.ComponentModel.DateOnlyConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
-      <summary>Converts the given value object to a <xref data-throw-if-not-resolved="true" uid="System.DateOnly"></xref> object.</summary>
-      <param name="context">An <xref data-throw-if-not-resolved="true" uid="System.ComponentModel.ITypeDescriptorContext"></xref> that provides a format context.</param>
-      <param name="culture">An optional <xref data-throw-if-not-resolved="true" uid="System.Globalization.CultureInfo"></xref>. If not supplied, the current culture is assumed.</param>
-      <param name="value">The <xref data-throw-if-not-resolved="true" uid="System.Object"></xref> to convert.</param>
-      <returns>An <xref data-throw-if-not-resolved="true" uid="System.Object"></xref> that represents the converted <code data-dev-comment-type="paramref">value</code>.</returns>
+      <summary>Converts the given value object to a <see cref="T:System.DateOnly" /> object.</summary>
+      <param name="context">An <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> that provides a format context.</param>
+      <param name="culture">An optional <see cref="T:System.Globalization.CultureInfo" />. If not supplied, the current culture is assumed.</param>
+      <param name="value">The <see cref="T:System.Object" /> to convert.</param>
+      <returns>An <see cref="T:System.Object" /> that represents the converted <paramref name="value" />.</returns>
     </member>
     <member name="M:System.ComponentModel.DateOnlyConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
-      <summary>Converts the given value object from a <xref data-throw-if-not-resolved="true" uid="System.DateOnly"></xref> object using the arguments.</summary>
-      <param name="context">An <xref data-throw-if-not-resolved="true" uid="System.ComponentModel.ITypeDescriptorContext"></xref> that provides a format context.</param>
-      <param name="culture">An optional <xref data-throw-if-not-resolved="true" uid="System.Globalization.CultureInfo"></xref>. If not supplied, the current culture is assumed.</param>
-      <param name="value">The <xref data-throw-if-not-resolved="true" uid="System.Object"></xref> to convert.</param>
-      <param name="destinationType">The <xref data-throw-if-not-resolved="true" uid="System.Type"></xref> to convert the value to.</param>
-      <returns>An <xref data-throw-if-not-resolved="true" uid="System.Object"></xref> that represents the converted <code data-dev-comment-type="paramref">value</code>.</returns>
+      <summary>Converts the given value object from a <see cref="T:System.DateOnly" /> object using the arguments.</summary>
+      <param name="context">An <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> that provides a format context.</param>
+      <param name="culture">An optional <see cref="T:System.Globalization.CultureInfo" />. If not supplied, the current culture is assumed.</param>
+      <param name="value">The <see cref="T:System.Object" /> to convert.</param>
+      <param name="destinationType">The <see cref="T:System.Type" /> to convert the value to.</param>
+      <returns>An <see cref="T:System.Object" /> that represents the converted <paramref name="value" />.</returns>
     </member>
     <member name="T:System.ComponentModel.DateTimeConverter">
       <summary>Provides a type converter to convert <see cref="T:System.DateTime" /> objects to and from various other representations.</summary>
@@ -6822,33 +6822,33 @@ The view object must implement any interfaces the development environment requir
       <summary>Initializes a new instance of the <see cref="T:System.ComponentModel.TimeOnlyConverter" /> class.</summary>
     </member>
     <member name="M:System.ComponentModel.TimeOnlyConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
-      <summary>Gets a value indicating whether this converter can convert an object in the given source type to a <xref data-throw-if-not-resolved="true" uid="System.TimeOnly"></xref> object using the specified context.</summary>
-      <param name="context">An <xref data-throw-if-not-resolved="true" uid="System.ComponentModel.ITypeDescriptorContext"></xref> that provides a format context.</param>
+      <summary>Gets a value indicating whether this converter can convert an object in the given source type to a <see cref="T:System.TimeOnly" /> object using the specified context.</summary>
+      <param name="context">An <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> that provides a format context.</param>
       <param name="sourceType">The type to convert from.</param>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if this object can perform the conversion; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if this object can perform the conversion; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="M:System.ComponentModel.TimeOnlyConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)">
       <summary>Gets a value indicating whether this converter can convert an object to the given destination type using the context.</summary>
-      <param name="context">An <xref data-throw-if-not-resolved="true" uid="System.ComponentModel.ITypeDescriptorContext"></xref> that provides a format context.</param>
+      <param name="context">An <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> that provides a format context.</param>
       <param name="destinationType">The type to convert to.</param>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if this converter can perform the conversion; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if this converter can perform the conversion; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="M:System.ComponentModel.TimeOnlyConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
-      <summary>Converts the given value object to a <xref data-throw-if-not-resolved="true" uid="System.TimeOnly"></xref> object.</summary>
-      <param name="context">An <xref data-throw-if-not-resolved="true" uid="System.ComponentModel.ITypeDescriptorContext"></xref> that provides a format context.</param>
-      <param name="culture">An optional <xref data-throw-if-not-resolved="true" uid="System.Globalization.CultureInfo"></xref>. If not supplied, the current culture is assumed.</param>
-      <param name="value">The <xref data-throw-if-not-resolved="true" uid="System.Object"></xref> to convert.</param>
-      <returns>An <xref data-throw-if-not-resolved="true" uid="System.Object"></xref> that represents the converted <code data-dev-comment-type="paramref">value</code>.</returns>
+      <summary>Converts the given value object to a <see cref="T:System.TimeOnly" /> object.</summary>
+      <param name="context">An <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> that provides a format context.</param>
+      <param name="culture">An optional <see cref="T:System.Globalization.CultureInfo" />. If not supplied, the current culture is assumed.</param>
+      <param name="value">The <see cref="T:System.Object" /> to convert.</param>
+      <returns>An <see cref="T:System.Object" /> that represents the converted <paramref name="value" />.</returns>
     </member>
     <member name="M:System.ComponentModel.TimeOnlyConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
-      <summary>Converts the given value object from a <xref data-throw-if-not-resolved="true" uid="System.TimeOnly"></xref> object using the arguments.</summary>
-      <param name="context">An <xref data-throw-if-not-resolved="true" uid="System.ComponentModel.ITypeDescriptorContext"></xref> that provides a format context.</param>
-      <param name="culture">An optional <xref data-throw-if-not-resolved="true" uid="System.Globalization.CultureInfo"></xref>. If not supplied, the current culture is assumed.</param>
-      <param name="value">The <xref data-throw-if-not-resolved="true" uid="System.Object"></xref> to convert.</param>
-      <param name="destinationType">The <xref data-throw-if-not-resolved="true" uid="System.Type"></xref> to convert the value to.</param>
-      <returns>An <xref data-throw-if-not-resolved="true" uid="System.Object"></xref> that represents the converted <code data-dev-comment-type="paramref">value</code>.</returns>
+      <summary>Converts the given value object from a <see cref="T:System.TimeOnly" /> object using the arguments.</summary>
+      <param name="context">An <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> that provides a format context.</param>
+      <param name="culture">An optional <see cref="T:System.Globalization.CultureInfo" />. If not supplied, the current culture is assumed.</param>
+      <param name="value">The <see cref="T:System.Object" /> to convert.</param>
+      <param name="destinationType">The <see cref="T:System.Type" /> to convert the value to.</param>
+      <returns>An <see cref="T:System.Object" /> that represents the converted <paramref name="value" />.</returns>
     </member>
     <member name="T:System.ComponentModel.TimeSpanConverter">
       <summary>Provides a type converter to convert <see cref="T:System.TimeSpan" /> objects to and from other representations.</summary>

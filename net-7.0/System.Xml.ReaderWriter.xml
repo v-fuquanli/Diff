@@ -5883,12 +5883,12 @@ This field was added in .NET Framework 2.0.</summary>
       <returns>The duplicate node.</returns>
     </member>
     <member name="M:System.Xml.XmlProcessingInstruction.WriteContentTo(System.Xml.XmlWriter)">
-      <summary>Saves all the children of the node to the specified <xref data-throw-if-not-resolved="true" uid="System.Xml.XmlWriter"></xref>. Because ProcessingInstruction nodes do not have children, this method has no effect.</summary>
-      <param name="w">The <code data-dev-comment-type="langword">XmlWriter</code> to which you want to save.</param>
+      <summary>Saves all the children of the node to the specified <see cref="T:System.Xml.XmlWriter" />. Because ProcessingInstruction nodes do not have children, this method has no effect.</summary>
+      <param name="w">The <see langword="XmlWriter" /> to which you want to save.</param>
     </member>
     <member name="M:System.Xml.XmlProcessingInstruction.WriteTo(System.Xml.XmlWriter)">
-      <summary>Saves the node to the specified <xref data-throw-if-not-resolved="true" uid="System.Xml.XmlWriter"></xref>.</summary>
-      <param name="w">The <code data-dev-comment-type="langword">XmlWriter</code> to which you want to save.</param>
+      <summary>Saves the node to the specified <see cref="T:System.Xml.XmlWriter" />.</summary>
+      <param name="w">The <see langword="XmlWriter" /> to which you want to save.</param>
     </member>
     <member name="P:System.Xml.XmlProcessingInstruction.Data">
       <summary>Gets or sets the content of the processing instruction, excluding the target.</summary>

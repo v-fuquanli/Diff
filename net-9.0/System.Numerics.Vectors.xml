@@ -2865,10 +2865,10 @@
         <paramref name="array" /> is <see langword="null" />.</exception>
       <exception cref="T:System.ArgumentException">The number of elements in the current instance is greater than in the array.</exception>
       <exception cref="T:System.ArgumentOutOfRangeException">
-        <paramref name="index" /> is less than zero.  
-  
- -or-  
-  
+        <paramref name="index" /> is less than zero.
+
+ -or-
+
  <paramref name="index" /> is greater than or equal to the array length.</exception>
       <exception cref="T:System.RankException">
         <paramref name="array" /> is multidimensional.</exception>
@@ -3239,12 +3239,12 @@
         <see langword="true" /> if the source vector was successfully copied to <paramref name="destination" />. <see langword="false" /> if <paramref name="destination" /> is not large enough to hold the source vector.</returns>
     </member>
     <member name="P:System.Numerics.Vector2.E">
-      <summary>Gets a vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.E"></xref>.</summary>
-      <returns>A vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.E"></xref> (that is, it returns the vector <code>Create(float.E)</code>).</returns>
+      <summary>Gets a vector whose elements are equal to <see cref="P:System.Single.E" />.</summary>
+      <returns>A vector whose elements are equal to <see cref="P:System.Single.E" /> (that is, it returns the vector <code data-dev-comment-type="c">Create(float.E)</code>).</returns>
     </member>
     <member name="P:System.Numerics.Vector2.Epsilon">
-      <summary>Gets a vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.Epsilon"></xref>.</summary>
-      <returns>A vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.Epsilon"></xref> (that is, it returns the vector <code>Create(float.Epsilon)</code>).</returns>
+      <summary>Gets a vector whose elements are equal to <see cref="P:System.Single.Epsilon" />.</summary>
+      <returns>A vector whose elements are equal to <see cref="P:System.Single.Epsilon" /> (that is, it returns the vector <code data-dev-comment-type="c">Create(float.Epsilon)</code>).</returns>
     </member>
     <member name="P:System.Numerics.Vector2.Item(System.Int32)">
       <summary>Gets or sets the element at the specified index.</summary>
@@ -3254,32 +3254,32 @@
       <returns>The the element at <paramref name="index" />.</returns>
     </member>
     <member name="P:System.Numerics.Vector2.NaN">
-      <summary>Gets a vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.NaN"></xref>.</summary>
-      <returns>A vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.NaN"></xref> (that is, it returns the vector <code>Create(float.NaN)</code>).</returns>
+      <summary>Gets a vector whose elements are equal to <see cref="P:System.Single.NaN" />.</summary>
+      <returns>A vector whose elements are equal to <see cref="P:System.Single.NaN" /> (that is, it returns the vector <code data-dev-comment-type="c">Create(float.NaN)</code>).</returns>
     </member>
     <member name="P:System.Numerics.Vector2.NegativeInfinity">
-      <summary>Gets a vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.NegativeInfinity"></xref>.</summary>
-      <returns>A vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.NegativeInfinity"></xref> (that is, it returns the vector <code>Create(float.NegativeInfinity)</code>).</returns>
+      <summary>Gets a vector whose elements are equal to <see cref="P:System.Single.NegativeInfinity" />.</summary>
+      <returns>A vector whose elements are equal to <see cref="P:System.Single.NegativeInfinity" /> (that is, it returns the vector <code data-dev-comment-type="c">Create(float.NegativeInfinity)</code>).</returns>
     </member>
     <member name="P:System.Numerics.Vector2.NegativeZero">
-      <summary>Gets a vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.NegativeZero"></xref>.</summary>
-      <returns>A vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.NegativeZero"></xref> (that is, it returns the vector <code>Create(float.NegativeZero)</code>).</returns>
+      <summary>Gets a vector whose elements are equal to <see cref="P:System.Single.NegativeZero" />.</summary>
+      <returns>A vector whose elements are equal to <see cref="P:System.Single.NegativeZero" /> (that is, it returns the vector <code data-dev-comment-type="c">Create(float.NegativeZero)</code>).</returns>
     </member>
     <member name="P:System.Numerics.Vector2.One">
       <summary>Gets a vector whose 2 elements are equal to one.</summary>
       <returns>A vector whose two elements are equal to one (that is, it returns the vector <code>(1,1)</code>).</returns>
     </member>
     <member name="P:System.Numerics.Vector2.Pi">
-      <summary>Gets a vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.Pi"></xref>.</summary>
-      <returns>A vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.Pi"></xref> (that is, it returns the vector <code>Create(float.Pi)</code>).</returns>
+      <summary>Gets a vector whose elements are equal to <see cref="P:System.Single.Pi" />.</summary>
+      <returns>A vector whose elements are equal to <see cref="P:System.Single.Pi" /> (that is, it returns the vector <code data-dev-comment-type="c">Create(float.Pi)</code>).</returns>
     </member>
     <member name="P:System.Numerics.Vector2.PositiveInfinity">
-      <summary>Gets a vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.PositiveInfinity"></xref>.</summary>
-      <returns>A vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.PositiveInfinity"></xref> (that is, it returns the vector <code>Create(float.PositiveInfinity)</code>).</returns>
+      <summary>Gets a vector whose elements are equal to <see cref="P:System.Single.PositiveInfinity" />.</summary>
+      <returns>A vector whose elements are equal to <see cref="P:System.Single.PositiveInfinity" /> (that is, it returns the vector <code data-dev-comment-type="c">Create(float.PositiveInfinity)</code>).</returns>
     </member>
     <member name="P:System.Numerics.Vector2.Tau">
-      <summary>Gets a vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.Tau"></xref>.</summary>
-      <returns>A vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.Tau"></xref> (that is, it returns the vector <code>Create(float.Tau)</code>).</returns>
+      <summary>Gets a vector whose elements are equal to <see cref="P:System.Single.Tau" />.</summary>
+      <returns>A vector whose elements are equal to <see cref="P:System.Single.Tau" /> (that is, it returns the vector <code data-dev-comment-type="c">Create(float.Tau)</code>).</returns>
     </member>
     <member name="P:System.Numerics.Vector2.UnitX">
       <summary>Gets the vector (1,0).</summary>
@@ -3363,10 +3363,10 @@
         <paramref name="array" /> is <see langword="null" />.</exception>
       <exception cref="T:System.ArgumentException">The number of elements in the current instance is greater than in the array.</exception>
       <exception cref="T:System.ArgumentOutOfRangeException">
-        <paramref name="index" /> is less than zero.  
-  
- -or-  
-  
+        <paramref name="index" /> is less than zero.
+
+ -or-
+
  <paramref name="index" /> is greater than or equal to the array length.</exception>
       <exception cref="T:System.RankException">
         <paramref name="array" /> is multidimensional.</exception>
@@ -3738,12 +3738,12 @@
         <see langword="true" /> if the source vector was successfully copied to <paramref name="destination" />. <see langword="false" /> if <paramref name="destination" /> is not large enough to hold the source vector.</returns>
     </member>
     <member name="P:System.Numerics.Vector3.E">
-      <summary>Gets a vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.E"></xref>.</summary>
-      <returns>A vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.E"></xref> (that is, it returns the vector <code>Create(float.E)</code>).</returns>
+      <summary>Gets a vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.E" />.</summary>
+      <returns>A vector whose elements are equal to <see cref="P:System.Single.E" /> (that is, it returns the vector <code data-dev-comment-type="c">Create(float.E)</code>).</returns>
     </member>
     <member name="P:System.Numerics.Vector3.Epsilon">
-      <summary>Gets a vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.Epsilon"></xref>.</summary>
-      <returns>A vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.Epsilon"></xref> (that is, it returns the vector <code>Create(float.Epsilon)</code>).</returns>
+      <summary>Gets a vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.Epsilon" />.</summary>
+      <returns>A vector whose elements are equal to <see cref="P:System.Single.Epsilon" /> (that is, it returns the vector <code data-dev-comment-type="c">Create(float.Epsilon)</code>).</returns>
     </member>
     <member name="P:System.Numerics.Vector3.Item(System.Int32)">
       <summary>Gets or sets the element at the specified index.</summary>
@@ -3753,32 +3753,32 @@
       <returns>The the element at <paramref name="index" />.</returns>
     </member>
     <member name="P:System.Numerics.Vector3.NaN">
-      <summary>Gets a vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.NaN"></xref>.</summary>
-      <returns>A vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.NaN"></xref> (that is, it returns the vector <code>Create(float.NaN)</code>).</returns>
+      <summary>Gets a vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.NaN" />.</summary>
+      <returns>A vector whose elements are equal to <see cref="P:System.Single.NaN" /> (that is, it returns the vector <code data-dev-comment-type="c">Create(float.NaN)</code>).</returns>
     </member>
     <member name="P:System.Numerics.Vector3.NegativeInfinity">
-      <summary>Gets a vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.NegativeInfinity"></xref>.</summary>
-      <returns>A vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.NegativeInfinity"></xref> (that is, it returns the vector <code>Create(float.NegativeInfinity)</code>).</returns>
+      <summary>Gets a vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.NegativeInfinity" />.</summary>
+      <returns>A vector whose elements are equal to <see cref="P:System.Single.NegativeInfinity" /> (that is, it returns the vector <code data-dev-comment-type="c">Create(float.NegativeInfinity)</code>).</returns>
     </member>
     <member name="P:System.Numerics.Vector3.NegativeZero">
-      <summary>Gets a vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.NegativeZero"></xref>.</summary>
-      <returns>A vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.NegativeZero"></xref> (that is, it returns the vector <code>Create(float.NegativeZero)</code>).</returns>
+      <summary>Gets a vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.NegativeZero" />.</summary>
+      <returns>A vector whose elements are equal to <see cref="P:System.Single.NegativeZero" /> (that is, it returns the vector <code data-dev-comment-type="c">Create(float.NegativeZero)</code>).</returns>
     </member>
     <member name="P:System.Numerics.Vector3.One">
       <summary>Gets a vector whose 3 elements are equal to one.</summary>
       <returns>A vector whose three elements are equal to one (that is, it returns the vector <code>(1,1,1)</code>).</returns>
     </member>
     <member name="P:System.Numerics.Vector3.Pi">
-      <summary>Gets a vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.Pi"></xref>.</summary>
-      <returns>A vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.Pi"></xref> (that is, it returns the vector <code>Create(float.Pi)</code>).</returns>
+      <summary>Gets a vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.Pi" />.</summary>
+      <returns>A vector whose elements are equal to <see cref="P:System.Single.Pi" /> (that is, it returns the vector <code data-dev-comment-type="c">Create(float.Pi)</code>).</returns>
     </member>
     <member name="P:System.Numerics.Vector3.PositiveInfinity">
-      <summary>Gets a vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.PositiveInfinity"></xref>.</summary>
-      <returns>A vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.PositiveInfinity"></xref> (that is, it returns the vector <code>Create(float.PositiveInfinity)</code>).</returns>
+      <summary>Gets a vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.PositiveInfinity" />.</summary>
+      <returns>A vector whose elements are equal to <see cref="P:System.Single.PositiveInfinity" /> (that is, it returns the vector <code data-dev-comment-type="c">Create(float.PositiveInfinity)</code>).</returns>
     </member>
     <member name="P:System.Numerics.Vector3.Tau">
-      <summary>Gets a vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.Tau"></xref>.</summary>
-      <returns>A vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.Tau"></xref> (that is, it returns the vector <code>Create(float.Tau)</code>).</returns>
+      <summary>Gets a vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.Tau" />.</summary>
+      <returns>A vector whose elements are equal to <see cref="P:System.Single.Tau" /> (that is, it returns the vector <code data-dev-comment-type="c">Create(float.Tau)</code>).</returns>
     </member>
     <member name="P:System.Numerics.Vector3.UnitX">
       <summary>Gets the vector (1,0,0).</summary>

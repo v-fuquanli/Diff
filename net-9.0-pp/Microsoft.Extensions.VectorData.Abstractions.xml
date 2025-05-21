@@ -22,6 +22,475 @@
       <summary>
             Gets the value that the list should contain.</summary>
     </member>
+    <member name="T:Microsoft.Extensions.VectorData.ConnectorSupport.Filter.FilterTranslationPreprocessor">
+      <summary>
+            A processor for user-provided filter expressions which performs various common transformations before actual translation takes place.
+            This is an internal support type meant for use by connectors only, and not for use by applications.</summary>
+    </member>
+    <member name="M:Microsoft.Extensions.VectorData.ConnectorSupport.Filter.FilterTranslationPreprocessor.#ctor" />
+    <member name="M:Microsoft.Extensions.VectorData.ConnectorSupport.Filter.FilterTranslationPreprocessor.VisitMember(System.Linq.Expressions.MemberExpression)">
+      <summary>Visits the children of the <xref data-throw-if-not-resolved="true" uid="System.Linq.Expressions.MemberExpression"></xref>.</summary>
+      <param name="node">The expression to visit.</param>
+      <returns>The modified expression, if it or any subexpression was modified; otherwise, returns the original expression.</returns>
+    </member>
+    <member name="P:Microsoft.Extensions.VectorData.ConnectorSupport.Filter.FilterTranslationPreprocessor.InlineCapturedVariables">
+      <summary>
+            Whether to inline captured variables in the filter expression (when the database doesn't support parameters).</summary>
+    </member>
+    <member name="P:Microsoft.Extensions.VectorData.ConnectorSupport.Filter.FilterTranslationPreprocessor.TransformCapturedVariablesToQueryParameterExpressions">
+      <summary>
+            Whether to transform captured variables in the filter expression to <see cref="T:Microsoft.Extensions.VectorData.ConnectorSupport.Filter.QueryParameterExpression" /> (when the database supports parameters).</summary>
+    </member>
+    <member name="T:Microsoft.Extensions.VectorData.ConnectorSupport.Filter.QueryParameterExpression">
+      <summary>
+            An expression representation a query parameter (captured variable) in the filter expression.</summary>
+    </member>
+    <member name="M:Microsoft.Extensions.VectorData.ConnectorSupport.Filter.QueryParameterExpression.#ctor(System.String,System.Object,System.Type)">
+      <summary>
+            An expression representation a query parameter (captured variable) in the filter expression.</summary>
+      <param name="name" />
+      <param name="value" />
+      <param name="type" />
+    </member>
+    <member name="M:Microsoft.Extensions.VectorData.ConnectorSupport.Filter.QueryParameterExpression.VisitChildren(System.Linq.Expressions.ExpressionVisitor)">
+      <summary>Reduces the node and then calls the visitor delegate on the reduced expression. The method throws an exception if the node is not reducible.</summary>
+      <param name="visitor">An instance of <xref data-throw-if-not-resolved="true" uid="System.Func`2"></xref>.</param>
+      <returns>The expression being visited, or an expression which should replace it in the tree.</returns>
+    </member>
+    <member name="P:Microsoft.Extensions.VectorData.ConnectorSupport.Filter.QueryParameterExpression.Name">
+      <summary>
+            The name of the parameter.</summary>
+    </member>
+    <member name="P:Microsoft.Extensions.VectorData.ConnectorSupport.Filter.QueryParameterExpression.NodeType">
+      <summary>Gets the node type of this <xref data-throw-if-not-resolved="true" uid="System.Linq.Expressions.Expression"></xref>.</summary>
+      <returns>One of the <xref data-throw-if-not-resolved="true" uid="System.Linq.Expressions.ExpressionType"></xref> values.</returns>
+    </member>
+    <member name="P:Microsoft.Extensions.VectorData.ConnectorSupport.Filter.QueryParameterExpression.Type">
+      <summary>Gets the static type of the expression that this <xref data-throw-if-not-resolved="true" uid="System.Linq.Expressions.Expression"></xref> represents.</summary>
+      <returns>The <xref data-throw-if-not-resolved="true" uid="System.Type"></xref> that represents the static type of the expression.</returns>
+    </member>
+    <member name="P:Microsoft.Extensions.VectorData.ConnectorSupport.Filter.QueryParameterExpression.Value">
+      <summary>
+            The value of the parameter.</summary>
+    </member>
+    <member name="T:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordDataPropertyModel">
+      <summary>
+            Represents a data property on a vector store record.
+            This is an internal support type meant for use by connectors only, and not for use by applications.</summary>
+    </member>
+    <member name="M:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordDataPropertyModel.#ctor(System.String,System.Type)">
+      <summary>
+            Represents a data property on a vector store record.
+            This is an internal support type meant for use by connectors only, and not for use by applications.</summary>
+      <param name="modelName" />
+      <param name="type" />
+    </member>
+    <member name="M:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordDataPropertyModel.ToString">
+      <summary>Returns a string that represents the current object.</summary>
+      <returns>A string that represents the current object.</returns>
+    </member>
+    <member name="P:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordDataPropertyModel.IsFullTextIndexed">
+      <summary>
+            Gets or sets a value indicating whether this data property is indexed for full-text search.</summary>
+      <returns>
+            The default is <see langword="false" />.</returns>
+    </member>
+    <member name="P:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordDataPropertyModel.IsIndexed">
+      <summary>
+            Gets or sets a value indicating whether this data property is indexed.</summary>
+      <returns>
+            The default is <see langword="false" />.</returns>
+    </member>
+    <member name="T:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordJsonModelBuilder">
+      <summary>
+            A model builder that performs logic specific to connectors which use System.Text.Json for serialization.
+            This is an internal support type meant for use by connectors only, and not for use by applications.</summary>
+    </member>
+    <member name="M:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordJsonModelBuilder.#ctor(Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordModelBuildingOptions)">
+      <summary>
+            Constructs a new <see cref="T:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordJsonModelBuilder" />.</summary>
+      <param name="options" />
+    </member>
+    <member name="M:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordJsonModelBuilder.Build(System.Type,Microsoft.Extensions.VectorData.VectorStoreRecordDefinition,Microsoft.Extensions.AI.IEmbeddingGenerator,System.Text.Json.JsonSerializerOptions)">
+      <summary>
+            Builds and returns an <see cref="T:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordModel" /> from the given <paramref name="type" /> and <paramref name="vectorStoreRecordDefinition" />.</summary>
+      <param name="type" />
+      <param name="vectorStoreRecordDefinition" />
+      <param name="defaultEmbeddingGenerator" />
+      <param name="jsonSerializerOptions" />
+    </member>
+    <member name="M:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordJsonModelBuilder.Customize">
+      <summary>Extension hook for connectors to be able to customize the model.</summary>
+    </member>
+    <member name="T:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordKeyPropertyModel">
+      <summary>
+            Represents a key property on a vector store record.
+            This is an internal support type meant for use by connectors only, and not for use by applications.</summary>
+    </member>
+    <member name="M:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordKeyPropertyModel.#ctor(System.String,System.Type)">
+      <summary>
+            Represents a key property on a vector store record.
+            This is an internal support type meant for use by connectors only, and not for use by applications.</summary>
+      <param name="modelName" />
+      <param name="type" />
+    </member>
+    <member name="M:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordKeyPropertyModel.ToString">
+      <summary>Returns a string that represents the current object.</summary>
+      <returns>A string that represents the current object.</returns>
+    </member>
+    <member name="T:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordModel">
+      <summary>
+            A model representing a record in a vector store collection.
+            This is an internal support type meant for use by connectors only, and not for use by applications.</summary>
+    </member>
+    <member name="M:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordModel.CreateRecord``1">
+      <summary>
+            Instantiates a new record of the specified type.</summary>
+      <typeparam name="TRecord" />
+    </member>
+    <member name="M:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordModel.GetDataOrKeyProperty``1(System.Linq.Expressions.Expression{System.Func{``0,System.Object}})">
+      <summary>
+            Get the data or key property selected by provided expression.</summary>
+      <param name="expression">The property selector.</param>
+      <typeparam name="TRecord" />
+      <exception cref="T:System.InvalidOperationException">Thrown if the provided property name is not a valid data or key property name.</exception>
+    </member>
+    <member name="M:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordModel.GetFullTextDataPropertyOrSingle``1(System.Linq.Expressions.Expression{System.Func{``0,System.Object}})">
+      <summary>
+            Get the text data property, that has full text search indexing enabled, with the provided name if a name is provided, and fall back
+            to a text data property in the schema if not. If no name is provided and there is more than one text data property with
+            full text search indexing enabled, an exception will be thrown.</summary>
+      <param name="expression">The full text search property selector.</param>
+      <typeparam name="TRecord" />
+      <exception cref="T:System.InvalidOperationException">Thrown if the provided property name is not a valid text data property name.</exception>
+    </member>
+    <member name="M:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordModel.GetVectorPropertyOrSingle``1(Microsoft.Extensions.VectorData.VectorSearchOptions{``0})">
+      <summary>
+            Get the vector property with the provided name if a name is provided, and fall back
+            to a vector property in the schema if not. If no name is provided and there is more
+            than one vector property, an exception will be thrown.</summary>
+      <param name="searchOptions">The search options.</param>
+      <typeparam name="TRecord" />
+      <exception cref="T:System.InvalidOperationException">Thrown if the provided property name is not a valid vector property name.</exception>
+    </member>
+    <member name="P:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordModel.DataProperties">
+      <summary>
+            The data properties of the record.</summary>
+    </member>
+    <member name="P:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordModel.KeyProperties">
+      <summary>
+            The key properties of the record.</summary>
+    </member>
+    <member name="P:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordModel.KeyProperty">
+      <summary>
+            Returns the single key property in the model, and throws if there are multiple key properties.
+            Suitable for connectors where validation is in place for single keys only (<see cref="P:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordModelBuildingOptions.SupportsMultipleKeys" />).</summary>
+    </member>
+    <member name="P:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordModel.Properties">
+      <summary>
+            All properties of the record, of all types.</summary>
+    </member>
+    <member name="P:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordModel.PropertyMap">
+      <summary>
+            All properties of the record, of all types, indexed by their model name.</summary>
+    </member>
+    <member name="P:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordModel.VectorProperties">
+      <summary>
+            The vector properties of the record.</summary>
+    </member>
+    <member name="P:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordModel.VectorProperty">
+      <summary>
+            Returns the single vector property in the model, and throws if there are multiple vector properties.
+            Suitable for connectors where validation is in place for single vectors only (<see cref="P:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordModelBuildingOptions.SupportsMultipleVectors" />).</summary>
+    </member>
+    <member name="T:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordModelBuilder">
+      <summary>
+            Represents a builder for a <see cref="T:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordModel" />.
+            This is an internal support type meant for use by connectors only, and not for use by applications.</summary>
+    </member>
+    <member name="M:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordModelBuilder.#ctor(Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordModelBuildingOptions)">
+      <summary>
+            Constructs a new <see cref="T:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordModelBuilder" />.</summary>
+      <param name="options" />
+    </member>
+    <member name="M:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordModelBuilder.Build(System.Type,Microsoft.Extensions.VectorData.VectorStoreRecordDefinition,Microsoft.Extensions.AI.IEmbeddingGenerator)">
+      <summary>
+            Builds and returns an <see cref="T:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordModel" /> from the given <paramref name="type" /> and <paramref name="vectorStoreRecordDefinition" />.</summary>
+      <param name="type" />
+      <param name="vectorStoreRecordDefinition" />
+      <param name="defaultEmbeddingGenerator" />
+    </member>
+    <member name="M:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordModelBuilder.Customize">
+      <summary>
+            Extension hook for connectors to be able to customize the model.</summary>
+    </member>
+    <member name="M:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordModelBuilder.ProcessRecordDefinition(Microsoft.Extensions.VectorData.VectorStoreRecordDefinition,System.Type)">
+      <summary>
+            As part of building the model, this method processes the given <paramref name="vectorStoreRecordDefinition" />.</summary>
+      <param name="vectorStoreRecordDefinition" />
+      <param name="type" />
+    </member>
+    <member name="M:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordModelBuilder.ProcessTypeProperties(System.Type,Microsoft.Extensions.VectorData.VectorStoreRecordDefinition)">
+      <summary>
+            As part of building the model, this method processes the properties of the given <paramref name="type" />,
+            detecting and reading attributes that affect the model. Not called for dynamic mapping scenarios.</summary>
+      <param name="type" />
+      <param name="vectorStoreRecordDefinition" />
+    </member>
+    <member name="M:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordModelBuilder.SetupEmbeddingGeneration(Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordVectorPropertyModel,Microsoft.Extensions.AI.IEmbeddingGenerator,System.Type)">
+      <summary>
+            Attempts to setup embedding generation on the given vector property, with the given embedding generator and user-configured embedding type.
+            Can be overridden by connectors to provide support for other embedding types.</summary>
+      <param name="vectorProperty" />
+      <param name="embeddingGenerator" />
+      <param name="embeddingType" />
+    </member>
+    <member name="M:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordModelBuilder.Validate(System.Type)">
+      <summary>
+            Validates the model after all properties have been processed.</summary>
+      <param name="type" />
+    </member>
+    <member name="M:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordModelBuilder.ValidateProperty(Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordPropertyModel)">
+      <summary>
+            Validates a single property, performing validation on it.</summary>
+      <param name="propertyModel" />
+    </member>
+    <member name="P:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordModelBuilder.DataProperties">
+      <summary>
+            The data properties of the record.</summary>
+    </member>
+    <member name="P:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordModelBuilder.DefaultEmbeddingGenerator">
+      <summary>
+            The default embedding generator to use for vector properties, when none is specified at the property or collection level.</summary>
+    </member>
+    <member name="P:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordModelBuilder.KeyProperties">
+      <summary>
+            The key properties of the record.</summary>
+    </member>
+    <member name="P:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordModelBuilder.Options">
+      <summary>
+            Options for building the model.</summary>
+    </member>
+    <member name="P:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordModelBuilder.Properties">
+      <summary>
+            All properties of the record, of all types.</summary>
+    </member>
+    <member name="P:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordModelBuilder.PropertyMap">
+      <summary>
+            All properties of the record, of all types, indexed by their model name.</summary>
+    </member>
+    <member name="P:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordModelBuilder.VectorProperties">
+      <summary>
+            The vector properties of the record.</summary>
+    </member>
+    <member name="T:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordModelBuildingOptions">
+      <summary>
+            Contains options affecting model building; passed to <see cref="T:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordModelBuilder" />.
+            This is an internal support type meant for use by connectors only, and not for use by applications.</summary>
+    </member>
+    <member name="M:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordModelBuildingOptions.#ctor" />
+    <member name="P:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordModelBuildingOptions.EscapeIdentifier">
+      <summary>
+            A method for escaping storage names.</summary>
+    </member>
+    <member name="P:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordModelBuildingOptions.RequiresAtLeastOneVector">
+      <summary>
+            Whether at least one vector property is required.</summary>
+    </member>
+    <member name="P:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordModelBuildingOptions.ReservedKeyStorageName">
+      <summary>
+            Indicates that the database requires the key property to have a special, reserved name.
+            When set, the model builder will manage the key storage name, and users may not customize it.</summary>
+    </member>
+    <member name="P:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordModelBuildingOptions.SupportedDataPropertyTypes">
+      <summary>
+            The set of types that are supported as data properties.</summary>
+    </member>
+    <member name="P:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordModelBuildingOptions.SupportedEnumerableDataPropertyElementTypes">
+      <summary>
+            The set of element types that are supported within collection types in data properties.</summary>
+    </member>
+    <member name="P:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordModelBuildingOptions.SupportedKeyPropertyTypes">
+      <summary>
+            The set of types that are supported as key properties.</summary>
+    </member>
+    <member name="P:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordModelBuildingOptions.SupportedVectorPropertyTypes">
+      <summary>
+            The set of types that are supported as vector properties.</summary>
+    </member>
+    <member name="P:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordModelBuildingOptions.SupportsMultipleKeys">
+      <summary>
+            Whether multiple key properties are supported.</summary>
+    </member>
+    <member name="P:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordModelBuildingOptions.SupportsMultipleVectors">
+      <summary>
+            Whether multiple vector properties are supported.</summary>
+    </member>
+    <member name="P:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordModelBuildingOptions.UsesExternalSerializer">
+      <summary>
+            Indicates that an external serializer will be used (e.g. System.Text.Json).</summary>
+    </member>
+    <member name="T:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordPropertyModel">
+      <summary>
+            Represents a property on a vector store record.
+            This is an internal support type meant for use by connectors only, and not for use by applications.</summary>
+    </member>
+    <member name="M:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordPropertyModel.#ctor(System.String,System.Type)">
+      <summary>
+            Represents a property on a vector store record.
+            This is an internal support type meant for use by connectors only, and not for use by applications.</summary>
+      <param name="modelName" />
+      <param name="type" />
+    </member>
+    <member name="M:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordPropertyModel.GetValueAsObject(System.Object)">
+      <summary>
+            Reads the property from the given <paramref name="record" />, returning the value as an <see cref="T:System.Object" />.</summary>
+      <param name="record" />
+    </member>
+    <member name="M:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordPropertyModel.SetValueAsObject(System.Object,System.Object)">
+      <summary>
+            Writes the property from the given <paramref name="record" />, accepting the value to write as an <see cref="T:System.Object" />.</summary>
+      <param name="record" />
+      <param name="value" />
+    </member>
+    <member name="P:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordPropertyModel.ModelName">
+      <summary>
+            The model name of the property. If the property corresponds to a .NET property, this name is the name of that property.</summary>
+    </member>
+    <member name="P:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordPropertyModel.PropertyInfo">
+      <summary>
+            The reflection <see cref="P:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordPropertyModel.PropertyInfo" /> for the .NET property.
+            <see langword="null" /> when using dynamic mapping.</summary>
+    </member>
+    <member name="P:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordPropertyModel.StorageName">
+      <summary>
+            The storage name of the property. This is the name to which the property is mapped in the vector store.</summary>
+    </member>
+    <member name="P:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordPropertyModel.TemporaryStorageName">
+      <summary>
+            A temporary storage name for the property, for use during the serialization process by certain connectors.</summary>
+    </member>
+    <member name="P:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordPropertyModel.Type">
+      <summary>
+            The CLR type of the property.</summary>
+    </member>
+    <member name="T:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordVectorPropertyModel">
+      <summary>
+            Represents a vector property on a vector store record.
+            This is an internal support type meant for use by connectors only, and not for use by applications.</summary>
+    </member>
+    <member name="M:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordVectorPropertyModel.#ctor(System.String,System.Type)">
+      <summary>
+            Represents a vector property on a vector store record.
+            This is an internal support type meant for use by connectors only, and not for use by applications.</summary>
+      <param name="modelName" />
+      <param name="type" />
+    </member>
+    <member name="M:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordVectorPropertyModel.GetSupportedInputTypes">
+      <summary>
+            Returns the types of input that this property model supports.</summary>
+    </member>
+    <member name="M:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordVectorPropertyModel.ToString">
+      <summary>Returns a string that represents the current object.</summary>
+      <returns>A string that represents the current object.</returns>
+    </member>
+    <member name="M:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordVectorPropertyModel.TryGenerateEmbedding``3(``0,System.Threading.CancellationToken,System.Threading.Tasks.Task{``1}@)">
+      <summary>
+            Attempts to generate an embedding of type <typeparamref name="TEmbedding" /> from the vector property represented by this instance on the given <paramref name="record" />, using
+            the configured <see cref="P:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordVectorPropertyModel.EmbeddingGenerator" />.</summary>
+      <param name="record" />
+      <param name="cancellationToken" />
+      <param name="task" />
+      <typeparam name="TRecord" />
+      <typeparam name="TEmbedding" />
+      <typeparam name="TUnwrappedEmbedding" />
+    </member>
+    <member name="M:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordVectorPropertyModel.TryGenerateEmbeddings``3(System.Collections.Generic.IEnumerable{``0},System.Threading.CancellationToken,System.Threading.Tasks.Task{Microsoft.Extensions.AI.GeneratedEmbeddings{``1}}@)">
+      <summary>
+            Attempts to generate embeddings of type <typeparamref name="TEmbedding" /> from the vector property represented by this instance on the given <paramref name="records" />, using
+            the configured <see cref="P:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordVectorPropertyModel.EmbeddingGenerator" />.</summary>
+      <param name="records" />
+      <param name="cancellationToken" />
+      <param name="task" />
+      <typeparam name="TRecord" />
+      <typeparam name="TEmbedding" />
+      <typeparam name="TUnwrappedEmbedding" />
+    </member>
+    <member name="M:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordVectorPropertyModel.TrySetupEmbeddingGeneration``2(Microsoft.Extensions.AI.IEmbeddingGenerator,System.Type)">
+      <summary>
+            Checks whether the <see cref="P:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordVectorPropertyModel.EmbeddingGenerator" /> configured on this property supports the given embedding type.
+            The implementation on this non-generic <see cref="T:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordVectorPropertyModel" /> checks for <see cref="T:System.String" />
+            and <see cref="T:Microsoft.Extensions.AI.DataContent" /> as input types for <see cref="P:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordVectorPropertyModel.EmbeddingGenerator" />.</summary>
+      <param name="embeddingGenerator" />
+      <param name="embeddingType" />
+      <typeparam name="TEmbedding" />
+      <typeparam name="TUnwrappedEmbedding" />
+    </member>
+    <member name="P:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordVectorPropertyModel.Dimensions">
+      <summary>
+            The number of dimensions that the vector has.</summary>
+    </member>
+    <member name="P:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordVectorPropertyModel.DistanceFunction">
+      <summary>
+            The distance function to use when comparing vectors.</summary>
+      <returns>
+            The default varies by database type. See the documentation of your chosen database connector for more information.</returns>
+    </member>
+    <member name="P:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordVectorPropertyModel.EmbeddingGenerator">
+      <summary>
+            The embedding generator to use for this property.</summary>
+    </member>
+    <member name="P:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordVectorPropertyModel.EmbeddingType">
+      <summary>
+            If <see cref="P:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordVectorPropertyModel.EmbeddingGenerator" /> is set, contains the type representing the embedding stored in the database.
+            Otherwise, this property is identical to <see cref="T:System.Type" />.</summary>
+    </member>
+    <member name="P:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordVectorPropertyModel.IndexKind">
+      <summary>
+            The kind of index to use.</summary>
+      <returns>
+            The default varies by database type. See the documentation of your chosen database connector for more information.</returns>
+    </member>
+    <member name="T:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordVectorPropertyModel`1">
+      <summary>Represents a vector property on a vector store record.
+This is an internal support type meant for use by connectors only, and not for use by applications.</summary>
+      <typeparam name="TInput" />
+    </member>
+    <member name="M:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordVectorPropertyModel`1.#ctor(System.String)">
+      <param name="modelName" />
+    </member>
+    <member name="M:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordVectorPropertyModel`1.GetSupportedInputTypes">
+      <summary>Returns the types of input that this property model supports.</summary>
+    </member>
+    <member name="M:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordVectorPropertyModel`1.TryGenerateEmbedding``3(``0,System.Threading.CancellationToken,System.Threading.Tasks.Task{``1}@)">
+      <summary>Attempts to generate an embedding of type <code data-dev-comment-type="typeparamref">TEmbedding</code> from the vector property represented by this instance on the given <code data-dev-comment-type="paramref">record</code>, using
+the configured <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordVectorPropertyModel.EmbeddingGenerator"></xref>.</summary>
+      <param name="record" />
+      <param name="cancellationToken" />
+      <param name="task" />
+      <typeparam name="TRecord" />
+      <typeparam name="TEmbedding" />
+      <typeparam name="TUnwrappedEmbedding" />
+    </member>
+    <member name="M:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordVectorPropertyModel`1.TryGenerateEmbeddings``3(System.Collections.Generic.IEnumerable{``0},System.Threading.CancellationToken,System.Threading.Tasks.Task{Microsoft.Extensions.AI.GeneratedEmbeddings{``1}}@)">
+      <summary>Attempts to generate embeddings of type <code data-dev-comment-type="typeparamref">TEmbedding</code> from the vector property represented by this instance on the given <code data-dev-comment-type="paramref">records</code>, using
+the configured <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordVectorPropertyModel.EmbeddingGenerator"></xref>.</summary>
+      <param name="records" />
+      <param name="cancellationToken" />
+      <param name="task" />
+      <typeparam name="TRecord" />
+      <typeparam name="TEmbedding" />
+      <typeparam name="TUnwrappedEmbedding" />
+    </member>
+    <member name="M:Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordVectorPropertyModel`1.TrySetupEmbeddingGeneration``2(Microsoft.Extensions.AI.IEmbeddingGenerator,System.Type)">
+      <summary>Checks whether the <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordVectorPropertyModel.EmbeddingGenerator"></xref> configured on this property supports the given embedding type.
+The implementation on this non-generic <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordVectorPropertyModel"></xref> checks for <xref data-throw-if-not-resolved="true" uid="System.String"></xref>
+and <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.AI.DataContent"></xref> as input types for <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.VectorData.ConnectorSupport.VectorStoreRecordVectorPropertyModel.EmbeddingGenerator"></xref>.</summary>
+      <param name="embeddingGenerator" />
+      <param name="embeddingType" />
+      <typeparam name="TEmbedding" />
+      <typeparam name="TUnwrappedEmbedding" />
+    </member>
     <member name="T:Microsoft.Extensions.VectorData.DistanceFunction">
       <summary>
             Defines a list of well-known distance functions that can be used to compare vectors.</summary>
@@ -80,9 +549,64 @@
       <summary>
             Defines a base class for filter clauses.</summary>
     </member>
+    <member name="T:Microsoft.Extensions.VectorData.GetFilteredRecordOptions`1">
+      <summary>
+            Defines options for filter search.</summary>
+      <typeparam name="TRecord">Type of the record.</typeparam>
+    </member>
+    <member name="M:Microsoft.Extensions.VectorData.GetFilteredRecordOptions`1.#ctor" />
+    <member name="P:Microsoft.Extensions.VectorData.GetFilteredRecordOptions`1.IncludeVectors">
+      <summary>
+            Gets or sets a value indicating whether to include vectors in the retrieval result.</summary>
+    </member>
+    <member name="P:Microsoft.Extensions.VectorData.GetFilteredRecordOptions`1.OrderBy">
+      <summary>
+            Gets or sets the data property to order by.</summary>
+      <returns>
+            If not provided, the order of returned results is non-deterministic.</returns>
+    </member>
+    <member name="P:Microsoft.Extensions.VectorData.GetFilteredRecordOptions`1.Skip">
+      <summary>
+            Gets or sets the number of results to skip before returning results, that is, the index of the first result to return.</summary>
+      <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the value is less than 0.</exception>
+    </member>
+    <member name="T:Microsoft.Extensions.VectorData.GetFilteredRecordOptions`1.OrderByDefinition">
+      <summary>
+            A builder for sorting.</summary>
+      <typeparam name="TRecord" />
+    </member>
+    <member name="M:Microsoft.Extensions.VectorData.GetFilteredRecordOptions`1.OrderByDefinition.#ctor" />
+    <member name="M:Microsoft.Extensions.VectorData.GetFilteredRecordOptions`1.OrderByDefinition.Ascending(System.Linq.Expressions.Expression{System.Func{`0,System.Object}})">
+      <summary>
+            Creates an ascending sort.</summary>
+      <param name="propertySelector" />
+    </member>
+    <member name="M:Microsoft.Extensions.VectorData.GetFilteredRecordOptions`1.OrderByDefinition.Descending(System.Linq.Expressions.Expression{System.Func{`0,System.Object}})">
+      <summary>
+            Creates a descending sort.</summary>
+      <param name="propertySelector" />
+    </member>
+    <member name="P:Microsoft.Extensions.VectorData.GetFilteredRecordOptions`1.OrderByDefinition.Values">
+      <summary>
+            Gets the expressions to sort by.</summary>
+    </member>
+    <member name="T:Microsoft.Extensions.VectorData.GetFilteredRecordOptions`1.OrderByDefinition.SortInfo">
+      <summary>
+            Provides a way to define property ordering.</summary>
+      <typeparam name="TRecord" />
+    </member>
+    <member name="P:Microsoft.Extensions.VectorData.GetFilteredRecordOptions`1.OrderByDefinition.SortInfo.Ascending">
+      <summary>
+            True if the sort is ascending; otherwise, false.</summary>
+    </member>
+    <member name="P:Microsoft.Extensions.VectorData.GetFilteredRecordOptions`1.OrderByDefinition.SortInfo.PropertySelector">
+      <summary>
+            The expression to select the property to sort by.</summary>
+    </member>
     <member name="T:Microsoft.Extensions.VectorData.GetRecordOptions">
       <summary>
-            Defines options for calling <see cref="M:Microsoft.Extensions.VectorData.IVectorStoreRecordCollection`2.GetAsync(`0,Microsoft.Extensions.VectorData.GetRecordOptions,System.Threading.CancellationToken)" />.</summary>
+            Defines options for calling <see cref="M:Microsoft.Extensions.VectorData.IVectorStoreRecordCollection`2.GetAsync(`0,Microsoft.Extensions.VectorData.GetRecordOptions,System.Threading.CancellationToken)" />
+            or <see cref="M:Microsoft.Extensions.VectorData.IVectorStoreRecordCollection`2.GetAsync(System.Collections.Generic.IEnumerable{`0},Microsoft.Extensions.VectorData.GetRecordOptions,System.Threading.CancellationToken)" />.</summary>
     </member>
     <member name="M:Microsoft.Extensions.VectorData.GetRecordOptions.#ctor">
       <summary>
@@ -106,8 +630,8 @@
     <member name="P:Microsoft.Extensions.VectorData.HybridSearchOptions`1.AdditionalProperty">
       <summary>
             Gets or sets the additional target property to do the text/keyword search on.
-            The property must have full text search enabled.
-            If not provided will look if there is a text property with full text search enabled, and
+            The property must have full text indexing enabled.
+            If not provided will look if there is a text property with full text indexing enabled, and
             will throw if either none or multiple exist.</summary>
     </member>
     <member name="P:Microsoft.Extensions.VectorData.HybridSearchOptions`1.Filter">
@@ -128,11 +652,8 @@
     </member>
     <member name="P:Microsoft.Extensions.VectorData.HybridSearchOptions`1.Skip">
       <summary>
-            Gets or sets the number of results to skip before returning results, i.e. the index of the first result to return.</summary>
-    </member>
-    <member name="P:Microsoft.Extensions.VectorData.HybridSearchOptions`1.Top">
-      <summary>
-            Gets or sets the maximum number of results to return.</summary>
+            Gets or sets the number of results to skip before returning results, that is, the index of the first result to return.</summary>
+      <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the value is less than 0.</exception>
     </member>
     <member name="P:Microsoft.Extensions.VectorData.HybridSearchOptions`1.VectorProperty">
       <summary>
@@ -147,11 +668,20 @@
             Contains a method for doing a hybrid search using a vector and keywords.</summary>
       <typeparam name="TRecord">The record data model to use for retrieving data from the store.</typeparam>
     </member>
-    <member name="M:Microsoft.Extensions.VectorData.IKeywordHybridSearch`1.HybridSearchAsync``1(``0,System.Collections.Generic.ICollection{System.String},Microsoft.Extensions.VectorData.HybridSearchOptions{`0},System.Threading.CancellationToken)">
+    <member name="M:Microsoft.Extensions.VectorData.IKeywordHybridSearch`1.GetService(System.Type,System.Object)">
+      <summary>Asks the <see cref="T:Microsoft.Extensions.VectorData.IKeywordHybridSearch`1" /> for an object of the specified type <paramref name="serviceType" />.</summary>
+      <param name="serviceType">The type of object being requested.</param>
+      <param name="serviceKey">An optional key that can be used to help identify the target service.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="serviceType" /> is <see langword="null" />.</exception>
+      <returns>The found object, otherwise <see langword="null" />.</returns>
+    </member>
+    <member name="M:Microsoft.Extensions.VectorData.IKeywordHybridSearch`1.HybridSearchAsync``1(``0,System.Collections.Generic.ICollection{System.String},System.Int32,Microsoft.Extensions.VectorData.HybridSearchOptions{`0},System.Threading.CancellationToken)">
       <summary>
             Performs a hybrid search for records that match the given embedding and keywords, after applying the provided filters.</summary>
       <param name="vector">The vector to search the store with.</param>
       <param name="keywords">A collection of keywords to search the store with.</param>
+      <param name="top">The maximum number of results to return.</param>
       <param name="options">The options that control the behavior of the search.</param>
       <param name="cancellationToken">The <see cref="T:System.Threading.CancellationToken" /> to monitor for cancellation requests. The default is <see cref="P:System.Threading.CancellationToken.None" />.</param>
       <typeparam name="TVector">The type of the vector.</typeparam>
@@ -190,10 +720,19 @@
             Contains a method for doing a vector search using text that will be vectorized downstream.</summary>
       <typeparam name="TRecord">The record data model to use for retrieving data from the store.</typeparam>
     </member>
-    <member name="M:Microsoft.Extensions.VectorData.IVectorizableTextSearch`1.VectorizableTextSearchAsync(System.String,Microsoft.Extensions.VectorData.VectorSearchOptions{`0},System.Threading.CancellationToken)">
+    <member name="M:Microsoft.Extensions.VectorData.IVectorizableTextSearch`1.GetService(System.Type,System.Object)">
+      <summary>Asks the <see cref="T:Microsoft.Extensions.VectorData.IVectorizableTextSearch`1" /> for an object of the specified type <paramref name="serviceType" />.</summary>
+      <param name="serviceType">The type of object being requested.</param>
+      <param name="serviceKey">An optional key that can be used to help identify the target service.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="serviceType" /> is <see langword="null" />.</exception>
+      <returns>The found object, otherwise <see langword="null" />.</returns>
+    </member>
+    <member name="M:Microsoft.Extensions.VectorData.IVectorizableTextSearch`1.VectorizableTextSearchAsync(System.String,System.Int32,Microsoft.Extensions.VectorData.VectorSearchOptions{`0},System.Threading.CancellationToken)">
       <summary>
             Searches the vector store for records that match the given text and filter. The text string will be vectorized downstream and used for the vector search.</summary>
       <param name="searchText">The text to search the store with.</param>
+      <param name="top">The maximum number of results to return.</param>
       <param name="options">The options that control the behavior of the search.</param>
       <param name="cancellationToken">The <see cref="T:System.Threading.CancellationToken" /> to monitor for cancellation requests. The default is <see cref="P:System.Threading.CancellationToken.None" />.</param>
       <returns>The records found by the vector search, including their result scores.</returns>
@@ -203,10 +742,44 @@
             Contains a method for doing a vector search using a vector.</summary>
       <typeparam name="TRecord">The record data model to use for retrieving data from the store.</typeparam>
     </member>
-    <member name="M:Microsoft.Extensions.VectorData.IVectorizedSearch`1.VectorizedSearchAsync``1(``0,Microsoft.Extensions.VectorData.VectorSearchOptions{`0},System.Threading.CancellationToken)">
+    <member name="M:Microsoft.Extensions.VectorData.IVectorizedSearch`1.VectorizedSearchAsync``1(``0,System.Int32,Microsoft.Extensions.VectorData.VectorSearchOptions{`0},System.Threading.CancellationToken)">
       <summary>
             Searches the vector store for records that match the given embedding and filter.</summary>
       <param name="vector">The vector to search the store with.</param>
+      <param name="top">The maximum number of results to return.</param>
+      <param name="options">The options that control the behavior of the search.</param>
+      <param name="cancellationToken">The <see cref="T:System.Threading.CancellationToken" /> to monitor for cancellation requests. The default is <see cref="P:System.Threading.CancellationToken.None" />.</param>
+      <typeparam name="TVector">The type of the vector.</typeparam>
+      <returns>The records found by the vector search, including their result scores.</returns>
+    </member>
+    <member name="T:Microsoft.Extensions.VectorData.IVectorSearch`1">
+      <summary>
+            An interface for performing vector searches on a vector store.</summary>
+      <typeparam name="TRecord">The record data model to use for retrieving data from the store.</typeparam>
+    </member>
+    <member name="M:Microsoft.Extensions.VectorData.IVectorSearch`1.GetService(System.Type,System.Object)">
+      <summary>Asks the <see cref="T:Microsoft.Extensions.VectorData.IVectorSearch`1" /> for an object of the specified type <paramref name="serviceType" />.</summary>
+      <param name="serviceType">The type of object being requested.</param>
+      <param name="serviceKey">An optional key that can be used to help identify the target service.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="serviceType" /> is <see langword="null" />.</exception>
+      <returns>The found object, otherwise <see langword="null" />.</returns>
+    </member>
+    <member name="M:Microsoft.Extensions.VectorData.IVectorSearch`1.SearchAsync``1(``0,System.Int32,Microsoft.Extensions.VectorData.VectorSearchOptions{`0},System.Threading.CancellationToken)">
+      <summary>
+            Searches the vector store for records that are similar to given value.</summary>
+      <param name="value">The value on which to perform the similarity search.</param>
+      <param name="top">The maximum number of results to return.</param>
+      <param name="options">The options that control the behavior of the search.</param>
+      <param name="cancellationToken">The <see cref="T:System.Threading.CancellationToken" /> to monitor for cancellation requests. The default is <see cref="P:System.Threading.CancellationToken.None" />.</param>
+      <typeparam name="TInput">The type of the input value on which to perform the similarity search.</typeparam>
+      <returns>The records found by the vector search, including their result scores.</returns>
+    </member>
+    <member name="M:Microsoft.Extensions.VectorData.IVectorSearch`1.SearchEmbeddingAsync``1(``0,System.Int32,Microsoft.Extensions.VectorData.VectorSearchOptions{`0},System.Threading.CancellationToken)">
+      <summary>
+            Searches the vector store for records that are similar to given embedding.</summary>
+      <param name="vector">The vector to search the store with.</param>
+      <param name="top">The maximum number of results to return.</param>
       <param name="options">The options that control the behavior of the search.</param>
       <param name="cancellationToken">The <see cref="T:System.Threading.CancellationToken" /> to monitor for cancellation requests. The default is <see cref="P:System.Threading.CancellationToken.None" />.</param>
       <typeparam name="TVector">The type of the vector.</typeparam>
@@ -216,6 +789,21 @@
       <summary>
             Defines an interface for accessing the list of collections in a vector store.</summary>
     </member>
+    <member name="M:Microsoft.Extensions.VectorData.IVectorStore.CollectionExistsAsync(System.String,System.Threading.CancellationToken)">
+      <summary>
+            Checks if the collection exists in the vector store.</summary>
+      <param name="name">The name of the collection.</param>
+      <param name="cancellationToken">The <see cref="T:System.Threading.CancellationToken" /> to monitor for cancellation requests. The default is <see cref="P:System.Threading.CancellationToken.None" />.</param>
+      <returns>
+        <see langword="true" /> if the collection exists, <see langword="false" /> otherwise.</returns>
+    </member>
+    <member name="M:Microsoft.Extensions.VectorData.IVectorStore.DeleteCollectionAsync(System.String,System.Threading.CancellationToken)">
+      <summary>
+            Deletes the collection from the vector store.</summary>
+      <param name="name">The name of the collection.</param>
+      <param name="cancellationToken">The <see cref="T:System.Threading.CancellationToken" /> to monitor for cancellation requests. The default is <see cref="P:System.Threading.CancellationToken.None" />.</param>
+      <returns>A <see cref="T:System.Threading.Tasks.Task" /> that completes when the collection has been deleted.</returns>
+    </member>
     <member name="M:Microsoft.Extensions.VectorData.IVectorStore.GetCollection``2(System.String,Microsoft.Extensions.VectorData.VectorStoreRecordDefinition)">
       <summary>
             Gets a collection from the vector store.</summary>
@@ -224,6 +812,14 @@
       <typeparam name="TKey">The data type of the record key.</typeparam>
       <typeparam name="TRecord">The record data model to use for adding, updating, and retrieving data from the collection.</typeparam>
       <returns>A new <see cref="T:Microsoft.Extensions.VectorData.IVectorStoreRecordCollection`2" /> instance for managing the records in the collection.</returns>
+    </member>
+    <member name="M:Microsoft.Extensions.VectorData.IVectorStore.GetService(System.Type,System.Object)">
+      <summary>Asks the <see cref="T:Microsoft.Extensions.VectorData.IVectorStore" /> for an object of the specified type <paramref name="serviceType" />.</summary>
+      <param name="serviceType">The type of object being requested.</param>
+      <param name="serviceKey">An optional key that can be used to help identify the target service.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="serviceType" /> is <see langword="null" />.</exception>
+      <returns>The found object, otherwise <see langword="null" />.</returns>
     </member>
     <member name="M:Microsoft.Extensions.VectorData.IVectorStore.ListCollectionNamesAsync(System.Threading.CancellationToken)">
       <summary>
@@ -264,7 +860,7 @@
       <exception cref="T:Microsoft.Extensions.VectorData.VectorStoreOperationException">The command fails to execute for any reason other than that the record does not exist.</exception>
       <returns>The unique identifier for the record.</returns>
     </member>
-    <member name="M:Microsoft.Extensions.VectorData.IVectorStoreRecordCollection`2.DeleteBatchAsync(System.Collections.Generic.IEnumerable{`0},System.Threading.CancellationToken)">
+    <member name="M:Microsoft.Extensions.VectorData.IVectorStoreRecordCollection`2.DeleteAsync(System.Collections.Generic.IEnumerable{`0},System.Threading.CancellationToken)">
       <summary>
             Deletes a batch of records from the vector store. Does not guarantee that the collection exists.</summary>
       <param name="keys">The unique IDs associated with the records to remove.</param>
@@ -289,7 +885,7 @@
       <exception cref="T:Microsoft.Extensions.VectorData.VectorStoreRecordMappingException">The mapping between the storage model and record data model fails.</exception>
       <returns>The record if found, otherwise null.</returns>
     </member>
-    <member name="M:Microsoft.Extensions.VectorData.IVectorStoreRecordCollection`2.GetBatchAsync(System.Collections.Generic.IEnumerable{`0},Microsoft.Extensions.VectorData.GetRecordOptions,System.Threading.CancellationToken)">
+    <member name="M:Microsoft.Extensions.VectorData.IVectorStoreRecordCollection`2.GetAsync(System.Collections.Generic.IEnumerable{`0},Microsoft.Extensions.VectorData.GetRecordOptions,System.Threading.CancellationToken)">
       <summary>
             Gets a batch of records from the vector store. Does not guarantee that the collection exists.</summary>
       <param name="keys">The unique IDs associated with the record to get.</param>
@@ -298,6 +894,17 @@
       <exception cref="T:Microsoft.Extensions.VectorData.VectorStoreOperationException">The command fails to execute for any reason.</exception>
       <exception cref="T:Microsoft.Extensions.VectorData.VectorStoreRecordMappingException">The mapping between the storage model and record data model fails.</exception>
       <returns>The records associated with the specified unique keys.</returns>
+    </member>
+    <member name="M:Microsoft.Extensions.VectorData.IVectorStoreRecordCollection`2.GetAsync(System.Linq.Expressions.Expression{System.Func{`1,System.Boolean}},System.Int32,Microsoft.Extensions.VectorData.GetFilteredRecordOptions{`1},System.Threading.CancellationToken)">
+      <summary>
+            Gets matching records from the vector store. Does not guarantee that the collection exists.</summary>
+      <param name="filter">The predicate to filter the records.</param>
+      <param name="top">The maximum number of results to return.</param>
+      <param name="options">Options for retrieving the records.</param>
+      <param name="cancellationToken">The <see cref="T:System.Threading.CancellationToken" /> to monitor for cancellation requests. The default is <see cref="P:System.Threading.CancellationToken.None" />.</param>
+      <exception cref="T:Microsoft.Extensions.VectorData.VectorStoreOperationException">The command fails to execute for any reason.</exception>
+      <exception cref="T:Microsoft.Extensions.VectorData.VectorStoreRecordMappingException">The mapping between the storage model and record data model fails.</exception>
+      <returns>The records matching given predicate.</returns>
     </member>
     <member name="M:Microsoft.Extensions.VectorData.IVectorStoreRecordCollection`2.UpsertAsync(`1,System.Threading.CancellationToken)">
       <summary>
@@ -308,20 +915,20 @@
       <param name="cancellationToken">The <see cref="T:System.Threading.CancellationToken" /> to monitor for cancellation requests. The default is <see cref="P:System.Threading.CancellationToken.None" />.</param>
       <exception cref="T:Microsoft.Extensions.VectorData.VectorStoreOperationException">The command fails to execute for any reason.</exception>
       <exception cref="T:Microsoft.Extensions.VectorData.VectorStoreRecordMappingException">The mapping between the storage model and record data model fails.</exception>
-      <returns>The unique identifier for the record.</returns>
+      <returns>The key for the records, to be used when keys are generated in the database.</returns>
     </member>
-    <member name="M:Microsoft.Extensions.VectorData.IVectorStoreRecordCollection`2.UpsertBatchAsync(System.Collections.Generic.IEnumerable{`1},System.Threading.CancellationToken)">
+    <member name="M:Microsoft.Extensions.VectorData.IVectorStoreRecordCollection`2.UpsertAsync(System.Collections.Generic.IEnumerable{`1},System.Threading.CancellationToken)">
       <summary>
-            Upserts a group of records into the vector store. Does not guarantee that the collection exists.
+            Upserts a batch of records into the vector store. Does not guarantee that the collection exists.
                 If the record already exists, it is updated.
                 If the record does not exist, it is created.</summary>
       <param name="records">The records to upsert.</param>
       <param name="cancellationToken">The <see cref="T:System.Threading.CancellationToken" /> to monitor for cancellation requests. The default is <see cref="P:System.Threading.CancellationToken.None" />.</param>
       <exception cref="T:Microsoft.Extensions.VectorData.VectorStoreOperationException">The command fails to execute for any reason.</exception>
       <exception cref="T:Microsoft.Extensions.VectorData.VectorStoreRecordMappingException">The mapping between the storage model and record data model fails.</exception>
-      <returns>The unique identifiers for the records.</returns>
+      <returns>The keys for the records, to be used when keys are generated in the database.</returns>
     </member>
-    <member name="P:Microsoft.Extensions.VectorData.IVectorStoreRecordCollection`2.CollectionName">
+    <member name="P:Microsoft.Extensions.VectorData.IVectorStoreRecordCollection`2.Name">
       <summary>
             Gets the name of the collection.</summary>
     </member>
@@ -344,6 +951,33 @@
       <param name="options">Options to control the mapping behavior.</param>
       <returns>The mapped result.</returns>
     </member>
+    <member name="T:Microsoft.Extensions.VectorData.KeywordHybridSearchExtensions">
+      <summary>Provides a collection of static methods for extending <see cref="T:Microsoft.Extensions.VectorData.IKeywordHybridSearch`1" /> instances.</summary>
+    </member>
+    <member name="M:Microsoft.Extensions.VectorData.KeywordHybridSearchExtensions.GetRequiredService``1(Microsoft.Extensions.VectorData.IKeywordHybridSearch{``0},System.Type,System.Object)">
+      <summary>
+            Asks the <see cref="T:Microsoft.Extensions.VectorData.IKeywordHybridSearch`1" /> for an object of the specified type <paramref name="serviceType" />
+            and throw an exception if one isn't available.</summary>
+      <param name="keywordHybridSearch">The keyword hybrid search.</param>
+      <param name="serviceType">The type of object being requested.</param>
+      <param name="serviceKey">An optional key that can be used to help identify the target service.</param>
+      <typeparam name="TRecord">The record data model to use for retrieving data from the store.</typeparam>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="serviceType" /> is <see langword="null" />.</exception>
+      <exception cref="T:System.InvalidOperationException">No service of the requested type for the specified key is available.</exception>
+      <returns>The found object.</returns>
+    </member>
+    <member name="T:Microsoft.Extensions.VectorData.Properties.VectorDataStrings" />
+    <member name="P:Microsoft.Extensions.VectorData.Properties.VectorDataStrings.Culture" />
+    <member name="P:Microsoft.Extensions.VectorData.Properties.VectorDataStrings.EmbeddingGeneratorWithInvalidEmbeddingType" />
+    <member name="P:Microsoft.Extensions.VectorData.Properties.VectorDataStrings.EmbeddingPropertyTypeIncompatibleWithEmbeddingGenerator" />
+    <member name="P:Microsoft.Extensions.VectorData.Properties.VectorDataStrings.EmbeddingTypePassedToSearchAsync" />
+    <member name="P:Microsoft.Extensions.VectorData.Properties.VectorDataStrings.IncludeVectorsNotSupportedWithEmbeddingGeneration" />
+    <member name="P:Microsoft.Extensions.VectorData.Properties.VectorDataStrings.IncompatibleEmbeddingGenerator" />
+    <member name="P:Microsoft.Extensions.VectorData.Properties.VectorDataStrings.IncompatibleEmbeddingGeneratorWasConfiguredForInputType" />
+    <member name="P:Microsoft.Extensions.VectorData.Properties.VectorDataStrings.NoEmbeddingGeneratorWasConfiguredForSearch" />
+    <member name="P:Microsoft.Extensions.VectorData.Properties.VectorDataStrings.NonEmbeddingVectorPropertyWithoutEmbeddingGenerator" />
+    <member name="P:Microsoft.Extensions.VectorData.Properties.VectorDataStrings.ResourceManager" />
     <member name="T:Microsoft.Extensions.VectorData.StorageToDataModelMapperOptions">
       <summary>
             Defines options to use with the <see cref="M:Microsoft.Extensions.VectorData.IVectorStoreRecordMapper`2.MapFromStorageToDataModel(`1,Microsoft.Extensions.VectorData.StorageToDataModelMapperOptions)" /> method.</summary>
@@ -352,6 +986,22 @@
     <member name="P:Microsoft.Extensions.VectorData.StorageToDataModelMapperOptions.IncludeVectors">
       <summary>
             Gets or sets a value indicating whether to include vectors in the retrieval result.</summary>
+    </member>
+    <member name="T:Microsoft.Extensions.VectorData.VectorSearchExtensions">
+      <summary>Provides a collection of static methods for extending <see cref="T:Microsoft.Extensions.VectorData.IVectorizedSearch`1" /> instances.</summary>
+    </member>
+    <member name="M:Microsoft.Extensions.VectorData.VectorSearchExtensions.GetRequiredService``1(Microsoft.Extensions.VectorData.IVectorSearch{``0},System.Type,System.Object)">
+      <summary>
+            Asks the <see cref="T:Microsoft.Extensions.VectorData.IVectorSearch`1" /> for an object of the specified type <paramref name="serviceType" />
+            and throw an exception if one isn't available.</summary>
+      <param name="vectorSearch">The vector search.</param>
+      <param name="serviceType">The type of object being requested.</param>
+      <param name="serviceKey">An optional key that can be used to help identify the target service.</param>
+      <typeparam name="TRecord">The record data model to use for retrieving data from the store.</typeparam>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="serviceType" /> is <see langword="null" />.</exception>
+      <exception cref="T:System.InvalidOperationException">No service of the requested type for the specified key is available.</exception>
+      <returns>The found object.</returns>
     </member>
     <member name="T:Microsoft.Extensions.VectorData.VectorSearchFilter">
       <summary>
@@ -417,11 +1067,6 @@
             Gets or sets the number of results to skip before returning results, that is, the index of the first result to return.</summary>
       <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the value is less than 0.</exception>
     </member>
-    <member name="P:Microsoft.Extensions.VectorData.VectorSearchOptions`1.Top">
-      <summary>
-            Gets or sets the maximum number of results to return.</summary>
-      <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the value is less than 1.</exception>
-    </member>
     <member name="P:Microsoft.Extensions.VectorData.VectorSearchOptions`1.VectorProperty">
       <summary>
             Gets or sets the vector property to search on.
@@ -457,31 +1102,6 @@
       <summary>
             Gets the score of this result in relation to the search query.</summary>
     </member>
-    <member name="T:Microsoft.Extensions.VectorData.VectorSearchResults`1">
-      <summary>
-            Contains the full list of search results for a vector search operation with metadata.</summary>
-      <param name="results">The list of records returned by the search operation.</param>
-      <typeparam name="TRecord">The record data model to use for retrieving data from the store.</typeparam>
-    </member>
-    <member name="M:Microsoft.Extensions.VectorData.VectorSearchResults`1.#ctor(System.Collections.Generic.IAsyncEnumerable{Microsoft.Extensions.VectorData.VectorSearchResult{`0}})">
-      <summary>
-            Contains the full list of search results for a vector search operation with metadata.</summary>
-      <param name="results">The list of records returned by the search operation.</param>
-      <typeparam name="TRecord">The record data model to use for retrieving data from the store.</typeparam>
-    </member>
-    <member name="P:Microsoft.Extensions.VectorData.VectorSearchResults`1.Metadata">
-      <summary>
-            Gets or sets the metadata associated with the content.</summary>
-    </member>
-    <member name="P:Microsoft.Extensions.VectorData.VectorSearchResults`1.Results">
-      <summary>
-            Gets the search results.</summary>
-    </member>
-    <member name="P:Microsoft.Extensions.VectorData.VectorSearchResults`1.TotalCount">
-      <summary>
-            Gets or sets the total count of results found by the search operation, or null
-            if the count was not requested or cannot be computed.</summary>
-    </member>
     <member name="T:Microsoft.Extensions.VectorData.VectorStoreException">
       <summary>
             Defines a base exception type for any type of failure when using vector stores.</summary>
@@ -509,9 +1129,28 @@
       <summary>
             Gets or sets the name of the vector store operation that failed.</summary>
     </member>
-    <member name="P:Microsoft.Extensions.VectorData.VectorStoreException.VectorStoreType">
+    <member name="P:Microsoft.Extensions.VectorData.VectorStoreException.VectorStoreName">
       <summary>
-            Gets or sets the type of vector store that the failing operation was performed on.</summary>
+            The name of the vector store (database).</summary>
+    </member>
+    <member name="P:Microsoft.Extensions.VectorData.VectorStoreException.VectorStoreSystemName">
+      <summary>The name of the vector store system.</summary>
+    </member>
+    <member name="T:Microsoft.Extensions.VectorData.VectorStoreExtensions">
+      <summary>Provides a collection of static methods for extending <see cref="T:Microsoft.Extensions.VectorData.IVectorStore" /> instances.</summary>
+    </member>
+    <member name="M:Microsoft.Extensions.VectorData.VectorStoreExtensions.GetRequiredService``1(Microsoft.Extensions.VectorData.IVectorStore,System.Type,System.Object)">
+      <summary>
+            Asks the <see cref="T:Microsoft.Extensions.VectorData.IVectorStore" /> for an object of the specified type <paramref name="serviceType" />
+            and throw an exception if one isn't available.</summary>
+      <param name="vectorStore">The vector store.</param>
+      <param name="serviceType">The type of object being requested.</param>
+      <param name="serviceKey">An optional key that can be used to help identify the target service.</param>
+      <typeparam name="TRecord">The record data model to use for retrieving data from the store.</typeparam>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="serviceType" /> is <see langword="null" />.</exception>
+      <exception cref="T:System.InvalidOperationException">No service of the requested type for the specified key is available.</exception>
+      <returns>The found object.</returns>
     </member>
     <member name="T:Microsoft.Extensions.VectorData.VectorStoreGenericDataModel`1">
       <summary>
@@ -519,9 +1158,13 @@
       <param name="key">The key of the record.</param>
       <typeparam name="TKey">The data type of the record key.</typeparam>
     </member>
+    <member name="M:Microsoft.Extensions.VectorData.VectorStoreGenericDataModel`1.#ctor">
+      <summary>
+            Constructs a new <see cref="T:Microsoft.Extensions.VectorData.VectorStoreGenericDataModel`1" />.</summary>
+    </member>
     <member name="M:Microsoft.Extensions.VectorData.VectorStoreGenericDataModel`1.#ctor(`0)">
       <summary>
-            Represents a generic data model that can be used to store and retrieve any data from a vector store.</summary>
+            Constructs a new <see cref="T:Microsoft.Extensions.VectorData.VectorStoreGenericDataModel`1" />.</summary>
       <param name="key">The key of the record.</param>
       <typeparam name="TKey">The data type of the record key.</typeparam>
     </member>
@@ -536,6 +1179,17 @@
     <member name="P:Microsoft.Extensions.VectorData.VectorStoreGenericDataModel`1.Vectors">
       <summary>
             Gets or sets a dictionary of vectors stored in the record.</summary>
+    </member>
+    <member name="T:Microsoft.Extensions.VectorData.VectorStoreMetadata">
+      <summary>Provides metadata about an <see cref="T:Microsoft.Extensions.VectorData.IVectorStore" />.</summary>
+    </member>
+    <member name="M:Microsoft.Extensions.VectorData.VectorStoreMetadata.#ctor" />
+    <member name="P:Microsoft.Extensions.VectorData.VectorStoreMetadata.VectorStoreName">
+      <summary>
+            The name of the vector store (database).</summary>
+    </member>
+    <member name="P:Microsoft.Extensions.VectorData.VectorStoreMetadata.VectorStoreSystemName">
+      <summary>The name of the vector store system.</summary>
     </member>
     <member name="T:Microsoft.Extensions.VectorData.VectorStoreOperationException">
       <summary>
@@ -556,6 +1210,21 @@
             Initializes a new instance of the <see cref="T:Microsoft.Extensions.VectorData.VectorStoreOperationException" /> class with a specified error message.</summary>
       <param name="message">The error message that explains the reason for the exception.</param>
     </member>
+    <member name="T:Microsoft.Extensions.VectorData.VectorStoreRecordCollectionMetadata">
+      <summary>Provides metadata about an <see cref="T:Microsoft.Extensions.VectorData.IVectorStoreRecordCollection`2" />.</summary>
+    </member>
+    <member name="M:Microsoft.Extensions.VectorData.VectorStoreRecordCollectionMetadata.#ctor" />
+    <member name="P:Microsoft.Extensions.VectorData.VectorStoreRecordCollectionMetadata.CollectionName">
+      <summary>
+            The name of a collection (table, container) within the vector store (database).</summary>
+    </member>
+    <member name="P:Microsoft.Extensions.VectorData.VectorStoreRecordCollectionMetadata.VectorStoreName">
+      <summary>
+            The name of the vector store (database).</summary>
+    </member>
+    <member name="P:Microsoft.Extensions.VectorData.VectorStoreRecordCollectionMetadata.VectorStoreSystemName">
+      <summary>The name of the vector store system.</summary>
+    </member>
     <member name="T:Microsoft.Extensions.VectorData.VectorStoreRecordDataAttribute">
       <summary>
             Defines an attribute to mark a property on a record class as 'data'.</summary>
@@ -567,9 +1236,21 @@
       <returns>
             The default is <see langword="false" />.</returns>
     </member>
+    <member name="P:Microsoft.Extensions.VectorData.VectorStoreRecordDataAttribute.IsFullTextIndexed">
+      <summary>
+            Gets or sets a value indicating whether this data property is indexed for full-text search.</summary>
+      <returns>
+            The default is <see langword="false" />.</returns>
+    </member>
     <member name="P:Microsoft.Extensions.VectorData.VectorStoreRecordDataAttribute.IsFullTextSearchable">
       <summary>
-            Gets or sets a value indicating whether this data property is full-text searchable.</summary>
+            Gets or sets a value indicating whether this data property is full text searchable.</summary>
+      <returns>
+            The default is <see langword="false" />.</returns>
+    </member>
+    <member name="P:Microsoft.Extensions.VectorData.VectorStoreRecordDataAttribute.IsIndexed">
+      <summary>
+            Gets or sets a value indicating whether this data property is indexed.</summary>
       <returns>
             The default is <see langword="false" />.</returns>
     </member>
@@ -598,9 +1279,21 @@
       <returns>
             The default is <see langword="false" />.</returns>
     </member>
+    <member name="P:Microsoft.Extensions.VectorData.VectorStoreRecordDataProperty.IsFullTextIndexed">
+      <summary>
+            Gets or sets a value indicating whether this data property is indexed for full-text search.</summary>
+      <returns>
+            The default is <see langword="false" />.</returns>
+    </member>
     <member name="P:Microsoft.Extensions.VectorData.VectorStoreRecordDataProperty.IsFullTextSearchable">
       <summary>
             Gets or sets a value indicating whether this data property is full text searchable.</summary>
+      <returns>
+            The default is <see langword="false" />.</returns>
+    </member>
+    <member name="P:Microsoft.Extensions.VectorData.VectorStoreRecordDataProperty.IsIndexed">
+      <summary>
+            Gets or sets a value indicating whether this data property is indexed.</summary>
       <returns>
             The default is <see langword="false" />.</returns>
     </member>
@@ -609,6 +1302,10 @@
             Describes the properties of a record stored in a vector store.</summary>
     </member>
     <member name="M:Microsoft.Extensions.VectorData.VectorStoreRecordDefinition.#ctor" />
+    <member name="P:Microsoft.Extensions.VectorData.VectorStoreRecordDefinition.EmbeddingGenerator">
+      <summary>
+            Gets or sets the default embedding generator for vector properties in this collection.</summary>
+    </member>
     <member name="P:Microsoft.Extensions.VectorData.VectorStoreRecordDefinition.Properties">
       <summary>
             Gets or sets the list of properties that are stored in the record.</summary>
@@ -731,6 +1428,13 @@
             Initializes a new instance of the <see cref="T:Microsoft.Extensions.VectorData.VectorStoreRecordVectorProperty" /> class by cloning the given source.</summary>
       <param name="source">The source to clone.</param>
     </member>
+    <member name="M:Microsoft.Extensions.VectorData.VectorStoreRecordVectorProperty.#ctor(System.String,System.Type,System.Int32)">
+      <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Extensions.VectorData.VectorStoreRecordVectorProperty" /> class.</summary>
+      <param name="propertyName">The name of the property.</param>
+      <param name="propertyType">The type of the property.</param>
+      <param name="dimensions">The number of dimensions that the vector has.</param>
+    </member>
     <member name="M:Microsoft.Extensions.VectorData.VectorStoreRecordVectorProperty.#ctor(System.String,System.Type)">
       <summary>
             Initializes a new instance of the <see cref="T:Microsoft.Extensions.VectorData.VectorStoreRecordVectorProperty" /> class.</summary>
@@ -747,11 +1451,31 @@
       <returns>
             The default varies by database type. See the documentation of your chosen database connector for more information.</returns>
     </member>
+    <member name="P:Microsoft.Extensions.VectorData.VectorStoreRecordVectorProperty.EmbeddingGenerator">
+      <summary>
+            Gets or sets the default embedding generator to use for this property.</summary>
+    </member>
+    <member name="P:Microsoft.Extensions.VectorData.VectorStoreRecordVectorProperty.EmbeddingType">
+      <summary>
+            Gets or sets the desired embedding type (e.g. <c>Embedding&lt;Half&gt;</c>, for cases where the default (typically <c>Embedding&lt;float&gt;</c>) isn't suitable.</summary>
+    </member>
     <member name="P:Microsoft.Extensions.VectorData.VectorStoreRecordVectorProperty.IndexKind">
       <summary>
             Gets or sets the kind of index to use.</summary>
       <returns>
             The default varies by database type. See the documentation of your chosen database connector for more information.</returns>
+    </member>
+    <member name="T:Microsoft.Extensions.VectorData.VectorStoreRecordVectorProperty`1">
+      <summary>
+            Defines a vector property on a vector store record.</summary>
+      <typeparam name="TInput" />
+    </member>
+    <member name="M:Microsoft.Extensions.VectorData.VectorStoreRecordVectorProperty`1.#ctor(Microsoft.Extensions.VectorData.VectorStoreRecordVectorProperty{`0})">
+      <param name="source" />
+    </member>
+    <member name="M:Microsoft.Extensions.VectorData.VectorStoreRecordVectorProperty`1.#ctor(System.String,System.Int32)">
+      <param name="propertyName" />
+      <param name="dimensions" />
     </member>
   </members>
 </doc>

@@ -532,7 +532,7 @@
     </member>
     <member name="M:System.Net.Http.Headers.HeaderStringValues.System#Collections#IEnumerable#GetEnumerator">
       <summary>Returns an enumerator that iterates through a collection.</summary>
-      <returns>An <xref data-throw-if-not-resolved="true" uid="System.Collections.IEnumerator"></xref> object that can be used to iterate through the collection.</returns>
+      <returns>An <see cref="T:System.Collections.IEnumerator" /> object that can be used to iterate through the collection.</returns>
     </member>
     <member name="M:System.Net.Http.Headers.HeaderStringValues.ToString">
       <summary>Gets a string containing all the headers in the collection.</summary>
@@ -722,16 +722,16 @@ The header value format is invalid for this header name, or the header does not 
       <returns>
         <code data-dev-comment-type="langword">true</code> if the read-only dictionary contains an element that has the specified key; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
     </member>
-    <member name="M:System.Net.Http.Headers.HttpHeadersNonValidated.System#Collections#Generic#IReadOnlyDictionary&lt;System#String,System#Net#Http#Headers#HeaderStringValues&gt;#TryGetValue(System.String,System.Net.Http.Headers.HeaderStringValues@)">
+    <member name="M:System.Net.Http.Headers.HttpHeadersNonValidated.System#Collections#Generic#IReadOnlyDictionary{System#String@System#Net#Http#Headers#HeaderStringValues}#TryGetValue(System.String,System.Net.Http.Headers.HeaderStringValues@)">
       <summary>Gets the value that is associated with the specified key.</summary>
       <param name="key">The key to locate.</param>
-      <param name="value">When this method returns, contains the value associated with the specified key, if the key is found; otherwise, contains the default value of <xref data-throw-if-not-resolved="true" uid="System.Net.Http.Headers.HeaderStringValues"></xref>. This parameter is passed uninitialized.</param>
+      <param name="value">When this method returns, contains the value associated with the specified key, if the key is found; otherwise, contains the default value of <see cref="T:System.Net.Http.Headers.HeaderStringValues" />. This parameter is passed uninitialized.</param>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if the collection contains the specified header; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if the collection contains the specified header; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="M:System.Net.Http.Headers.HttpHeadersNonValidated.System#Collections#IEnumerable#GetEnumerator">
       <summary>Returns an enumerator that iterates through a collection.</summary>
-      <returns>An <xref data-throw-if-not-resolved="true" uid="System.Collections.IEnumerator"></xref> object that can be used to iterate through the collection.</returns>
+      <returns>An <see cref="T:System.Collections.IEnumerator" /> object that can be used to iterate through the collection.</returns>
     </member>
     <member name="M:System.Net.Http.Headers.HttpHeadersNonValidated.TryGetValues(System.String,System.Net.Http.Headers.HeaderStringValues@)">
       <summary>Attempts to retrieve the values associated with the specified header name.</summary>

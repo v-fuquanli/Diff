@@ -5082,7 +5082,7 @@ Note: In .NET for Windows Store apps or the Portable Class Library, catch the ba
       <summary>Initializes a new instance of the <see cref="T:System.Runtime.InteropServices.Marshalling.ComExposedClassAttribute`1" /> class.</summary>
     </member>
     <member name="M:System.Runtime.InteropServices.Marshalling.ComExposedClassAttribute`1.GetComInterfaceEntries(System.Int32@)">
-      <summary>Gets the COM interface information to provide to a <xref data-throw-if-not-resolved="true" uid="System.Runtime.InteropServices.ComWrappers"></xref> instance to expose this type to COM.</summary>
+      <summary>Gets the COM interface information to provide to a <see cref="T:System.Runtime.InteropServices.ComWrappers" /> instance to expose this type to COM.</summary>
       <param name="count">The number of COM interfaces this type implements.</param>
       <returns>The interface entry information for the interfaces the type implements.</returns>
     </member>
@@ -5448,12 +5448,12 @@ Note: In .NET for Windows Store apps or the Portable Class Library, catch the ba
       <summary>Initializes a new instance of the <see cref="T:System.Runtime.InteropServices.ComWrappers" /> class.</summary>
     </member>
     <member name="M:System.Runtime.InteropServices.Marshalling.StrategyBasedComWrappers.ComputeVtables(System.Object,System.Runtime.InteropServices.CreateComInterfaceFlags,System.Int32@)">
-      <summary>Computes the desired Vtable for <code data-dev-comment-type="paramref">obj</code>, respecting the values of <code data-dev-comment-type="paramref">flags</code>.</summary>
+      <summary>Computes the desired Vtable for <paramref name="obj" />, respecting the values of <paramref name="flags" />.</summary>
       <param name="obj">Target of the returned Vtables.</param>
       <param name="flags">A bitwise combination of the enumeration values that specifies how to compute Vtables.</param>
       <param name="count">When this method returns, contains the number of elements contained in the returned memory.</param>
       <returns>
-        <xref data-throw-if-not-resolved="true" uid="System.Runtime.InteropServices.ComWrappers.ComInterfaceEntry"></xref> pointer containing memory for all COM interface entries.</returns>
+        <see cref="T:System.Runtime.InteropServices.ComWrappers.ComInterfaceEntry" /> pointer containing memory for all COM interface entries.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.Marshalling.StrategyBasedComWrappers.CreateCacheStrategy">
       <summary>Creates the caching strategy for a new COM object wrapper.</summary>
@@ -6637,21 +6637,21 @@ Note: In .NET for Windows Store apps or the Portable Class Library, catch the ba
       <returns>The result of rounding <code data-dev-comment-type="paramref">x</code> to <code data-dev-comment-type="paramref">digits</code> fractional-digits using <code data-dev-comment-type="paramref">mode</code>.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.Round(System.Runtime.InteropServices.NFloat,System.Int32)">
-      <summary>Rounds a value to a specified number of fractional-digits using the default rounding mode (<xref data-throw-if-not-resolved="true" uid="System.MidpointRounding.ToEven"></xref>).</summary>
+      <summary>Rounds a value to a specified number of fractional-digits using the default rounding mode (<see cref="F:System.MidpointRounding.ToEven" />).</summary>
       <param name="x">The value to round.</param>
-      <param name="digits">The number of fractional digits to which <code data-dev-comment-type="paramref">x</code> should be rounded.</param>
-      <returns>The result of rounding <code data-dev-comment-type="paramref">x</code> to <code data-dev-comment-type="paramref">digits</code> fractional-digits using the default rounding mode.</returns>
+      <param name="digits">The number of fractional digits to which <paramref name="x" /> should be rounded.</param>
+      <returns>The result of rounding <paramref name="x" /> to <paramref name="digits" /> fractional-digits using the default rounding mode.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.Round(System.Runtime.InteropServices.NFloat,System.MidpointRounding)">
       <summary>Rounds a value to the nearest integer using the specified rounding mode.</summary>
       <param name="x">The value to round.</param>
-      <param name="mode">The mode under which <code data-dev-comment-type="paramref">x</code> should be rounded.</param>
-      <returns>The result of rounding <code data-dev-comment-type="paramref">x</code> to the nearest integer using <code data-dev-comment-type="paramref">mode</code>.</returns>
+      <param name="mode">The mode under which <paramref name="x" /> should be rounded.</param>
+      <returns>The result of rounding <paramref name="x" /> to the nearest integer using <paramref name="mode" />.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.Round(System.Runtime.InteropServices.NFloat)">
-      <summary>Rounds a value to the nearest integer using the default rounding mode (<xref data-throw-if-not-resolved="true" uid="System.MidpointRounding.ToEven"></xref>).</summary>
+      <summary>Rounds a value to the nearest integer using the default rounding mode (<see cref="F:System.MidpointRounding.ToEven" />).</summary>
       <param name="x">The value to round.</param>
-      <returns>The result of rounding <code data-dev-comment-type="paramref">x</code> to the nearest integer using the default rounding mode.</returns>
+      <returns>The result of rounding <paramref name="x" /> to the nearest integer using the default rounding mode.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.ScaleB(System.Runtime.InteropServices.NFloat,System.Int32)">
       <summary>Computes the product of a value and its base-radix raised to the specified power.</summary>
@@ -6662,7 +6662,7 @@ Note: In .NET for Windows Store apps or the Portable Class Library, catch the ba
     <member name="M:System.Runtime.InteropServices.NFloat.Sign(System.Runtime.InteropServices.NFloat)">
       <summary>Computes the sign of a value.</summary>
       <param name="value">The value whose sign is to be computed.</param>
-      <returns>A positive value if <code data-dev-comment-type="paramref">value</code> is positive, <xref data-throw-if-not-resolved="true" uid="System.Numerics.INumberBase`1.Zero"></xref> if <code data-dev-comment-type="paramref">value</code> is zero, and a negative value if <code data-dev-comment-type="paramref">value</code> is negative.</returns>
+      <returns>A positive value if <paramref name="value" /> is positive, <see cref="P:System.Numerics.INumberBase`1.Zero" /> if <paramref name="value" /> is zero, and a negative value if <paramref name="value" /> is negative.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.Sin(System.Runtime.InteropServices.NFloat)">
       <summary>Computes the sine of a value.</summary>
@@ -6734,9 +6734,9 @@ Note: In .NET for Windows Store apps or the Portable Class Library, catch the ba
       <param name="right">The value that divides <paramref name="left" />.</param>
       <returns>The quotient of <paramref name="left" /> divided by <paramref name="right" />.</returns>
     </member>
-    <member name="M:System.Runtime.InteropServices.NFloat.System#Numerics#IFloatingPoint&lt;System#Runtime#InteropServices#NFloat&gt;#GetExponentByteCount">
-      <summary>Gets the number of bytes that will be written as part of <xref data-throw-if-not-resolved="true" uid="System.Numerics.IFloatingPoint`1.TryWriteExponentLittleEndian(System.Span{System.Byte},System.Int32@)"></xref>.</summary>
-      <returns>The number of bytes that will be written as part of <xref data-throw-if-not-resolved="true" uid="System.Numerics.IFloatingPoint`1.TryWriteExponentLittleEndian(System.Span{System.Byte},System.Int32@)"></xref>.</returns>
+    <member name="M:System.Runtime.InteropServices.NFloat.System#Numerics#IFloatingPoint{System#Runtime#InteropServices#NFloat}#GetExponentByteCount">
+      <summary>Gets the number of bytes that will be written as part of <see cref="M:System.Numerics.IFloatingPoint`1.TryWriteExponentLittleEndian(System.Span{System.Byte},System.Int32@)" />.</summary>
+      <returns>The number of bytes that will be written as part of <see cref="M:System.Numerics.IFloatingPoint`1.TryWriteExponentLittleEndian(System.Span{System.Byte},System.Int32@)" />.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.System#Numerics#IFloatingPoint&lt;System#Runtime#InteropServices#NFloat&gt;#GetExponentShortestBitLength">
       <summary>Gets the length, in bits, of the shortest two's complement representation of the current exponent.</summary>
@@ -6746,9 +6746,9 @@ Note: In .NET for Windows Store apps or the Portable Class Library, catch the ba
       <summary>Gets the length, in bits, of the current significand.</summary>
       <returns>The length, in bits, of the current significand.</returns>
     </member>
-    <member name="M:System.Runtime.InteropServices.NFloat.System#Numerics#IFloatingPoint&lt;System#Runtime#InteropServices#NFloat&gt;#GetSignificandByteCount">
-      <summary>Gets the number of bytes that will be written as part of <xref data-throw-if-not-resolved="true" uid="System.Numerics.IFloatingPoint`1.TryWriteSignificandLittleEndian(System.Span{System.Byte},System.Int32@)"></xref>.</summary>
-      <returns>The number of bytes that will be written as part of <xref data-throw-if-not-resolved="true" uid="System.Numerics.IFloatingPoint`1.TryWriteSignificandLittleEndian(System.Span{System.Byte},System.Int32@)"></xref>.</returns>
+    <member name="M:System.Runtime.InteropServices.NFloat.System#Numerics#IFloatingPoint{System#Runtime#InteropServices#NFloat}#GetSignificandByteCount">
+      <summary>Gets the number of bytes that will be written as part of <see cref="M:System.Numerics.IFloatingPoint`1.TryWriteSignificandLittleEndian(System.Span{System.Byte},System.Int32@)" />.</summary>
+      <returns>The number of bytes that will be written as part of <see cref="M:System.Numerics.IFloatingPoint`1.TryWriteSignificandLittleEndian(System.Span{System.Byte},System.Int32@)" />.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.System#Numerics#IFloatingPoint&lt;System#Runtime#InteropServices#NFloat&gt;#TryWriteExponentBigEndian(System.Span{System.Byte},System.Int32@)">
       <summary>Tries to write the current exponent, in big-endian format, to a given span.</summary>
