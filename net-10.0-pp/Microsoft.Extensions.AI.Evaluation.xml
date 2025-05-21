@@ -26,29 +26,86 @@
     </member>
     <member name="T:Microsoft.Extensions.AI.Evaluation.ChatConfiguration">
       <summary>
-            Specifies the <see cref="T:Microsoft.Extensions.AI.IChatClient" /> and the <see cref="T:Microsoft.Extensions.AI.Evaluation.IEvaluationTokenCounter" /> that should be used when
-            evaluation is performed using an AI model.</summary>
-      <param name="chatClient">An <see cref="T:Microsoft.Extensions.AI.IChatClient" /> that can be used to communicate with an AI model.</param>
+            Specifies the <see cref="T:Microsoft.Extensions.AI.IChatClient" /> that should be used when evaluation is performed using an AI model.</summary>
       <param name="tokenCounter">
             An <see cref="T:Microsoft.Extensions.AI.Evaluation.IEvaluationTokenCounter" /> that can be used to counts tokens present in evaluation prompts, or
             <see langword="null" /> if the AI model / deployment being used does not impose an input token limit.</param>
+      <param name="chatClient">An <see cref="T:Microsoft.Extensions.AI.IChatClient" /> that can be used to communicate with an AI model.</param>
     </member>
-    <member name="M:Microsoft.Extensions.AI.Evaluation.ChatConfiguration.#ctor(Microsoft.Extensions.AI.IChatClient,Microsoft.Extensions.AI.Evaluation.IEvaluationTokenCounter)">
+    <member name="M:Microsoft.Extensions.AI.Evaluation.ChatConfiguration.#ctor(Microsoft.Extensions.AI.IChatClient)">
       <summary>
-            Specifies the <see cref="T:Microsoft.Extensions.AI.IChatClient" /> and the <see cref="T:Microsoft.Extensions.AI.Evaluation.IEvaluationTokenCounter" /> that should be used when
-            evaluation is performed using an AI model.</summary>
+            Specifies the <see cref="T:Microsoft.Extensions.AI.IChatClient" /> that should be used when evaluation is performed using an AI model.</summary>
       <param name="chatClient">An <see cref="T:Microsoft.Extensions.AI.IChatClient" /> that can be used to communicate with an AI model.</param>
-      <param name="tokenCounter">
-            An <see cref="T:Microsoft.Extensions.AI.Evaluation.IEvaluationTokenCounter" /> that can be used to counts tokens present in evaluation prompts, or
-            <see langword="null" /> if the AI model / deployment being used does not impose an input token limit.</param>
     </member>
     <member name="P:Microsoft.Extensions.AI.Evaluation.ChatConfiguration.ChatClient">
       <summary>
             Gets an <see cref="T:Microsoft.Extensions.AI.IChatClient" /> that can be used to communicate with an AI model.</summary>
     </member>
-    <member name="P:Microsoft.Extensions.AI.Evaluation.ChatConfiguration.TokenCounter">
+    <member name="T:Microsoft.Extensions.AI.Evaluation.ChatMessageExtensions">
       <summary>
-            Gets an <see cref="T:Microsoft.Extensions.AI.Evaluation.IEvaluationTokenCounter" /> that can be used to counts tokens present in evaluation prompts.</summary>
+            Extension methods for <see cref="T:Microsoft.Extensions.AI.ChatMessage" />.</summary>
+    </member>
+    <member name="M:Microsoft.Extensions.AI.Evaluation.ChatMessageExtensions.RenderText(Microsoft.Extensions.AI.ChatMessage)">
+      <summary>
+            Renders the supplied <paramref name="message" /> to a <see langword="string" />. The returned
+            <see langword="string" /> can used as part of constructing an evaluation prompt to evaluate a conversation
+            that includes the supplied <paramref name="message" />.</summary>
+      <param name="message">The <see cref="T:Microsoft.Extensions.AI.ChatMessage" /> that is to be rendered.</param>
+      <returns>A <see langword="string" /> containing the rendered <paramref name="message" />.</returns>
+    </member>
+    <member name="M:Microsoft.Extensions.AI.Evaluation.ChatMessageExtensions.RenderText(System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.ChatMessage})">
+      <summary>
+            Renders the supplied <paramref name="messages" /> to a <see langword="string" />.The returned
+            <see langword="string" /> can used as part of constructing an evaluation prompt to evaluate a conversation
+            that includes the supplied <paramref name="messages" />.</summary>
+      <param name="messages">The <see cref="T:Microsoft.Extensions.AI.ChatMessage" />s that are to be rendered.</param>
+      <returns>A <see langword="string" /> containing the rendered <paramref name="messages" />.</returns>
+    </member>
+    <member name="M:Microsoft.Extensions.AI.Evaluation.ChatMessageExtensions.TryGetUserRequest(System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.ChatMessage},Microsoft.Extensions.AI.ChatMessage@,System.Collections.Generic.IReadOnlyList{Microsoft.Extensions.AI.ChatMessage}@)">
+      <summary>
+            Decomposes the supplied collection of <paramref name="messages" /> representing an LLM chat conversation into a
+            single <see cref="T:Microsoft.Extensions.AI.ChatMessage" /> representing the last <paramref name="userRequest" /> in this conversation and
+            a collection of <paramref name="remainingMessages" /> representing the rest of the conversation history.</summary>
+      <param name="messages">
+            A collection of <see cref="T:Microsoft.Extensions.AI.ChatMessage" />s representing an LLM chat conversation history.</param>
+      <param name="userRequest">
+            Returns the last <see cref="T:Microsoft.Extensions.AI.ChatMessage" /> in the supplied collection of <paramref name="messages" /> if this
+            last <see cref="T:Microsoft.Extensions.AI.ChatMessage" /> has <see cref="P:Microsoft.Extensions.AI.ChatMessage.Role" /> set to <see cref="P:Microsoft.Extensions.AI.ChatRole.User" />;
+            <see langword="null" /> otherwise.</param>
+      <param name="remainingMessages">
+            Returns the remaining <see cref="T:Microsoft.Extensions.AI.ChatMessage" />s in the conversation history excluding
+            <paramref name="userRequest" />.</param>
+      <returns>
+        <see langword="true" /> if the last <see cref="T:Microsoft.Extensions.AI.ChatMessage" /> in the supplied collection of
+            <paramref name="messages" /> has <see cref="P:Microsoft.Extensions.AI.ChatMessage.Role" /> set to <see cref="P:Microsoft.Extensions.AI.ChatRole.User" />;
+            <see langword="false" /> otherwise.</returns>
+    </member>
+    <member name="M:Microsoft.Extensions.AI.Evaluation.ChatMessageExtensions.TryGetUserRequest(System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.ChatMessage},Microsoft.Extensions.AI.ChatMessage@)">
+      <summary>
+            Given a collection of <paramref name="messages" /> representing an LLM chat conversation, returns a
+            single <see cref="T:Microsoft.Extensions.AI.ChatMessage" /> representing the last <paramref name="userRequest" /> in this conversation.</summary>
+      <param name="messages">
+            A collection of <see cref="T:Microsoft.Extensions.AI.ChatMessage" />s representing an LLM chat conversation history.</param>
+      <param name="userRequest">
+            Returns the last <see cref="T:Microsoft.Extensions.AI.ChatMessage" /> in the supplied collection of <paramref name="messages" /> if this
+            last <see cref="T:Microsoft.Extensions.AI.ChatMessage" /> has <see cref="P:Microsoft.Extensions.AI.ChatMessage.Role" /> set to <see cref="P:Microsoft.Extensions.AI.ChatRole.User" />;
+            <see langword="null" /> otherwise.</param>
+      <returns>
+        <see langword="true" /> if the last <see cref="T:Microsoft.Extensions.AI.ChatMessage" /> in the supplied collection of
+            <paramref name="messages" /> has <see cref="P:Microsoft.Extensions.AI.ChatMessage.Role" /> set to <see cref="P:Microsoft.Extensions.AI.ChatRole.User" />;
+            <see langword="false" /> otherwise.</returns>
+    </member>
+    <member name="T:Microsoft.Extensions.AI.Evaluation.ChatResponseExtensions">
+      <summary>
+            Extension methods for <see cref="T:Microsoft.Extensions.AI.ChatResponse" />.</summary>
+    </member>
+    <member name="M:Microsoft.Extensions.AI.Evaluation.ChatResponseExtensions.RenderText(Microsoft.Extensions.AI.ChatResponse)">
+      <summary>
+            Renders the supplied <paramref name="response" /> to a <see langword="string" />. The returned
+            <see langword="string" /> can used as part of constructing an evaluation prompt to evaluate a conversation
+            that includes the supplied <paramref name="response" />.</summary>
+      <param name="response">The <see cref="T:Microsoft.Extensions.AI.ChatResponse" /> that is to be rendered.</param>
+      <returns>A <see langword="string" /> containing the rendered <paramref name="response" />.</returns>
     </member>
     <member name="T:Microsoft.Extensions.AI.Evaluation.CompositeEvaluator">
       <summary>
@@ -75,9 +132,8 @@
             The conversation history including the request that produced the supplied <paramref name="modelResponse" />.</param>
       <param name="modelResponse">The response that is to be evaluated.</param>
       <param name="chatConfiguration">
-            A <see cref="T:Microsoft.Extensions.AI.Evaluation.ChatConfiguration" /> that specifies the <see cref="T:Microsoft.Extensions.AI.IChatClient" /> and the
-            <see cref="T:Microsoft.Extensions.AI.Evaluation.IEvaluationTokenCounter" /> that should be used if one or more composed <see cref="T:Microsoft.Extensions.AI.Evaluation.IEvaluator" />s use
-            an AI model to perform evaluation.</param>
+            A <see cref="T:Microsoft.Extensions.AI.Evaluation.ChatConfiguration" /> that specifies the <see cref="T:Microsoft.Extensions.AI.IChatClient" /> that should be used if one or
+            more composed <see cref="T:Microsoft.Extensions.AI.Evaluation.IEvaluator" />s use an AI model to perform evaluation.</param>
       <param name="additionalContext">
             Additional contextual information (beyond that which is available in <paramref name="messages" />) that composed
             <see cref="T:Microsoft.Extensions.AI.Evaluation.IEvaluator" />s may need to accurately evaluate the supplied <paramref name="modelResponse" />.</param>
@@ -92,10 +148,43 @@
     </member>
     <member name="T:Microsoft.Extensions.AI.Evaluation.EvaluationContext">
       <summary>
-            A base class that represents additional contextual information (beyond that which is available in the conversation
-            history) that an <see cref="T:Microsoft.Extensions.AI.Evaluation.IEvaluator" /> may need to accurately evaluate a supplied response.</summary>
+            An <see langword="abstract" /> base class that models additional contextual information (beyond that which is
+            available in the conversation history) or other data that an <see cref="T:Microsoft.Extensions.AI.Evaluation.IEvaluator" /> may need to accurately
+            evaluate supplied responses.</summary>
     </member>
-    <member name="M:Microsoft.Extensions.AI.Evaluation.EvaluationContext.#ctor" />
+    <member name="M:Microsoft.Extensions.AI.Evaluation.EvaluationContext.#ctor(System.String,Microsoft.Extensions.AI.AIContent[])">
+      <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Extensions.AI.Evaluation.EvaluationContext" /> class.</summary>
+      <param name="name">The name of the <see cref="T:Microsoft.Extensions.AI.Evaluation.EvaluationContext" />.</param>
+      <param name="contents">
+            The contents of the <see cref="T:Microsoft.Extensions.AI.Evaluation.EvaluationContext" />. (See <see cref="P:Microsoft.Extensions.AI.Evaluation.EvaluationContext.Contents" />.)</param>
+    </member>
+    <member name="M:Microsoft.Extensions.AI.Evaluation.EvaluationContext.#ctor(System.String,System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.AIContent})">
+      <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Extensions.AI.Evaluation.EvaluationContext" /> class.</summary>
+      <param name="name">The name of the <see cref="T:Microsoft.Extensions.AI.Evaluation.EvaluationContext" />.</param>
+      <param name="contents">
+            The contents of the <see cref="T:Microsoft.Extensions.AI.Evaluation.EvaluationContext" />. (See <see cref="P:Microsoft.Extensions.AI.Evaluation.EvaluationContext.Contents" />.)</param>
+    </member>
+    <member name="M:Microsoft.Extensions.AI.Evaluation.EvaluationContext.#ctor(System.String,System.String)">
+      <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Extensions.AI.Evaluation.EvaluationContext" /> class.</summary>
+      <param name="name">The name of the <see cref="T:Microsoft.Extensions.AI.Evaluation.EvaluationContext" />.</param>
+      <param name="content">
+            The content of the <see cref="T:Microsoft.Extensions.AI.Evaluation.EvaluationContext" />. (See <see cref="P:Microsoft.Extensions.AI.Evaluation.EvaluationContext.Contents" />.)</param>
+    </member>
+    <member name="P:Microsoft.Extensions.AI.Evaluation.EvaluationContext.Contents">
+      <summary>
+            Gets or sets a list of <see cref="T:Microsoft.Extensions.AI.AIContent" /> objects that include all the information present in this
+            <see cref="T:Microsoft.Extensions.AI.Evaluation.EvaluationContext" />.</summary>
+      <returns>
+            A list of <see cref="T:Microsoft.Extensions.AI.AIContent" /> objects that include all the information present in this
+            <see cref="T:Microsoft.Extensions.AI.Evaluation.EvaluationContext" />.</returns>
+    </member>
+    <member name="P:Microsoft.Extensions.AI.Evaluation.EvaluationContext.Name">
+      <summary>
+            Gets or sets the name for this <see cref="T:Microsoft.Extensions.AI.Evaluation.EvaluationContext" />.</summary>
+    </member>
     <member name="T:Microsoft.Extensions.AI.Evaluation.EvaluationDiagnostic">
       <summary>
             Represents a diagnostic (such as a warning, error or informational message) that applies to the result represented
@@ -188,6 +277,11 @@
             An optional string that can be used to provide some commentary around the result represented by this
             <see cref="T:Microsoft.Extensions.AI.Evaluation.EvaluationMetric" />.</param>
     </member>
+    <member name="P:Microsoft.Extensions.AI.Evaluation.EvaluationMetric.Context">
+      <summary>
+            Gets or sets any <see cref="T:Microsoft.Extensions.AI.Evaluation.EvaluationContext" />s that were considered by the <see cref="T:Microsoft.Extensions.AI.Evaluation.IEvaluator" /> as part
+            of the evaluation that produced the current <see cref="T:Microsoft.Extensions.AI.Evaluation.EvaluationMetric" />.</summary>
+    </member>
     <member name="P:Microsoft.Extensions.AI.Evaluation.EvaluationMetric.Diagnostics">
       <summary>
             Gets or sets a collection of zero or more <see cref="T:Microsoft.Extensions.AI.Evaluation.EvaluationDiagnostic" />s associated with the current
@@ -238,13 +332,6 @@
       <summary>
             Extension methods for <see cref="T:Microsoft.Extensions.AI.Evaluation.EvaluationMetric" />.</summary>
     </member>
-    <member name="M:Microsoft.Extensions.AI.Evaluation.EvaluationMetricExtensions.AddDiagnostic(Microsoft.Extensions.AI.Evaluation.EvaluationMetric,Microsoft.Extensions.AI.Evaluation.EvaluationDiagnostic)">
-      <summary>
-            Adds the supplied <see cref="T:Microsoft.Extensions.AI.Evaluation.EvaluationDiagnostic" /> to the supplied <see cref="T:Microsoft.Extensions.AI.Evaluation.EvaluationMetric" />'s
-            <see cref="P:Microsoft.Extensions.AI.Evaluation.EvaluationMetric.Diagnostics" /> collection.</summary>
-      <param name="metric">The <see cref="T:Microsoft.Extensions.AI.Evaluation.EvaluationMetric" />.</param>
-      <param name="diagnostic">The <see cref="T:Microsoft.Extensions.AI.Evaluation.EvaluationDiagnostic" /> to be added.</param>
-    </member>
     <member name="M:Microsoft.Extensions.AI.Evaluation.EvaluationMetricExtensions.AddDiagnostics(Microsoft.Extensions.AI.Evaluation.EvaluationMetric,Microsoft.Extensions.AI.Evaluation.EvaluationDiagnostic[])">
       <summary>
             Adds the supplied <see cref="T:Microsoft.Extensions.AI.Evaluation.EvaluationDiagnostic" />s to the supplied <see cref="T:Microsoft.Extensions.AI.Evaluation.EvaluationMetric" />'s
@@ -259,26 +346,49 @@
       <param name="metric">The <see cref="T:Microsoft.Extensions.AI.Evaluation.EvaluationMetric" />.</param>
       <param name="diagnostics">The <see cref="T:Microsoft.Extensions.AI.Evaluation.EvaluationDiagnostic" />s to be added.</param>
     </member>
+    <member name="M:Microsoft.Extensions.AI.Evaluation.EvaluationMetricExtensions.AddOrUpdateChatMetadata(Microsoft.Extensions.AI.Evaluation.EvaluationMetric,Microsoft.Extensions.AI.ChatResponse,System.Nullable{System.TimeSpan})">
+      <summary>
+            Adds or updates metadata available as part of the evaluation <paramref name="response" /> produced by an AI
+            model, in the supplied <paramref name="metric" />'s <see cref="P:Microsoft.Extensions.AI.Evaluation.EvaluationMetric.Metadata" /> dictionary.</summary>
+      <param name="metric">The <see cref="T:Microsoft.Extensions.AI.Evaluation.EvaluationMetric" />.</param>
+      <param name="response">The <see cref="T:Microsoft.Extensions.AI.ChatResponse" /> that contains metadata to be added or updated.</param>
+      <param name="duration">
+            An optional duration that represents the amount of time that it took for the AI model to produce the supplied
+            <paramref name="response" />. If supplied, the duration will also be included as part of the added metadata.</param>
+    </member>
+    <member name="M:Microsoft.Extensions.AI.Evaluation.EvaluationMetricExtensions.AddOrUpdateContext(Microsoft.Extensions.AI.Evaluation.EvaluationMetric,Microsoft.Extensions.AI.Evaluation.EvaluationContext[])">
+      <summary>
+            Adds or updates the supplied <paramref name="context" /> objects in the supplied <paramref name="metric" />'s
+            <see cref="P:Microsoft.Extensions.AI.Evaluation.EvaluationMetric.Context" /> dictionary.</summary>
+      <param name="metric">The <see cref="T:Microsoft.Extensions.AI.Evaluation.EvaluationMetric" />.</param>
+      <param name="context">The <see cref="T:Microsoft.Extensions.AI.Evaluation.EvaluationContext" /> objects to be added or updated.</param>
+    </member>
+    <member name="M:Microsoft.Extensions.AI.Evaluation.EvaluationMetricExtensions.AddOrUpdateContext(Microsoft.Extensions.AI.Evaluation.EvaluationMetric,System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.Evaluation.EvaluationContext})">
+      <summary>
+            Adds or updates the supplied <paramref name="context" /> objects in the supplied <paramref name="metric" />'s
+            <see cref="P:Microsoft.Extensions.AI.Evaluation.EvaluationMetric.Context" /> dictionary.</summary>
+      <param name="metric">The <see cref="T:Microsoft.Extensions.AI.Evaluation.EvaluationMetric" />.</param>
+      <param name="context">The <see cref="T:Microsoft.Extensions.AI.Evaluation.EvaluationContext" /> objects to be added or updated.</param>
+    </member>
     <member name="M:Microsoft.Extensions.AI.Evaluation.EvaluationMetricExtensions.AddOrUpdateMetadata(Microsoft.Extensions.AI.Evaluation.EvaluationMetric,System.Collections.Generic.IDictionary{System.String,System.String})">
       <summary>
-            Adds or updates the supplied <parameterref name="metadata" /> to the supplied <see cref="T:Microsoft.Extensions.AI.Evaluation.EvaluationMetric" />'s
-            <see cref="P:Microsoft.Extensions.AI.Evaluation.EvaluationMetric.Metadata" /> collection.</summary>
+            Adds or updates the supplied <paramref name="metadata" /> in the supplied <paramref name="metric" />'s
+            <see cref="P:Microsoft.Extensions.AI.Evaluation.EvaluationMetric.Metadata" /> dictionary.</summary>
       <param name="metric">The <see cref="T:Microsoft.Extensions.AI.Evaluation.EvaluationMetric" />.</param>
       <param name="metadata">The metadata to be added or updated.</param>
     </member>
     <member name="M:Microsoft.Extensions.AI.Evaluation.EvaluationMetricExtensions.AddOrUpdateMetadata(Microsoft.Extensions.AI.Evaluation.EvaluationMetric,System.String,System.String)">
       <summary>
             Adds or updates metadata with the specified <paramref name="name" /> and <paramref name="value" /> in the
-            supplied <see cref="T:Microsoft.Extensions.AI.Evaluation.EvaluationMetric" />'s <see cref="P:Microsoft.Extensions.AI.Evaluation.EvaluationMetric.Metadata" /> collection.</summary>
+            supplied <paramref name="metric" />'s <see cref="P:Microsoft.Extensions.AI.Evaluation.EvaluationMetric.Metadata" /> dictionary.</summary>
       <param name="metric">The <see cref="T:Microsoft.Extensions.AI.Evaluation.EvaluationMetric" />.</param>
       <param name="name">The name of the metadata.</param>
       <param name="value">The value of the metadata.</param>
     </member>
     <member name="M:Microsoft.Extensions.AI.Evaluation.EvaluationMetricExtensions.ContainsDiagnostics(Microsoft.Extensions.AI.Evaluation.EvaluationMetric,System.Func{Microsoft.Extensions.AI.Evaluation.EvaluationDiagnostic,System.Boolean})">
       <summary>
-            Returns <see langword="true" /> if the supplied <paramref name="metric" /> contains any
-            <see cref="T:Microsoft.Extensions.AI.Evaluation.EvaluationDiagnostic" /> matching the supplied <paramref name="predicate" />; <see langword="false" />
-            otherwise.</summary>
+            Determines if the supplied <paramref name="metric" /> contains any
+            <see cref="T:Microsoft.Extensions.AI.Evaluation.EvaluationDiagnostic" /> matching the supplied <paramref name="predicate" />.</summary>
       <param name="metric">The <see cref="T:Microsoft.Extensions.AI.Evaluation.EvaluationMetric" /> that is to be inspected.</param>
       <param name="predicate">
             A predicate that returns <see langword="true" /> if a matching <see cref="T:Microsoft.Extensions.AI.Evaluation.EvaluationDiagnostic" /> is found;
@@ -450,13 +560,49 @@
             The <see cref="T:Microsoft.Extensions.AI.Evaluation.EvaluationResult" /> containing the <see cref="T:Microsoft.Extensions.AI.Evaluation.EvaluationMetric" />s that are to be altered.</param>
       <param name="diagnostics">The <see cref="T:Microsoft.Extensions.AI.Evaluation.EvaluationDiagnostic" />s that are to be added.</param>
     </member>
-    <member name="M:Microsoft.Extensions.AI.Evaluation.EvaluationResultExtensions.AddDiagnosticToAllMetrics(Microsoft.Extensions.AI.Evaluation.EvaluationResult,Microsoft.Extensions.AI.Evaluation.EvaluationDiagnostic)">
+    <member name="M:Microsoft.Extensions.AI.Evaluation.EvaluationResultExtensions.AddOrUpdateChatMetadataInAllMetrics(Microsoft.Extensions.AI.Evaluation.EvaluationResult,Microsoft.Extensions.AI.ChatResponse,System.Nullable{System.TimeSpan})">
       <summary>
-            Adds the supplied <paramref name="diagnostic" /> to all <see cref="T:Microsoft.Extensions.AI.Evaluation.EvaluationMetric" />s contained in the
-            supplied <paramref name="result" />.</summary>
+            Adds or updates metadata available as part of the evaluation <paramref name="response" /> produced by an AI
+            model, in all <see cref="T:Microsoft.Extensions.AI.Evaluation.EvaluationMetric" />s contained in the supplied <paramref name="result" />.</summary>
       <param name="result">
             The <see cref="T:Microsoft.Extensions.AI.Evaluation.EvaluationResult" /> containing the <see cref="T:Microsoft.Extensions.AI.Evaluation.EvaluationMetric" />s that are to be altered.</param>
-      <param name="diagnostic">The <see cref="T:Microsoft.Extensions.AI.Evaluation.EvaluationDiagnostic" /> that is to be added.</param>
+      <param name="response">The <see cref="T:Microsoft.Extensions.AI.ChatResponse" /> that contains metadata to be added or updated.</param>
+      <param name="duration">
+            An optional duration that represents the amount of time that it took for the AI model to produce the supplied
+            <paramref name="response" />. If supplied, the duration will also be included as part of the added metadata.</param>
+    </member>
+    <member name="M:Microsoft.Extensions.AI.Evaluation.EvaluationResultExtensions.AddOrUpdateContextInAllMetrics(Microsoft.Extensions.AI.Evaluation.EvaluationResult,Microsoft.Extensions.AI.Evaluation.EvaluationContext[])">
+      <summary>
+            Adds or updates the supplied <paramref name="context" /> objects in all <see cref="T:Microsoft.Extensions.AI.Evaluation.EvaluationMetric" />s
+            contained in the supplied <paramref name="result" />.</summary>
+      <param name="result">
+            The <see cref="T:Microsoft.Extensions.AI.Evaluation.EvaluationResult" /> containing the <see cref="T:Microsoft.Extensions.AI.Evaluation.EvaluationMetric" />s that are to be altered.</param>
+      <param name="context">The <see cref="T:Microsoft.Extensions.AI.Evaluation.EvaluationContext" /> objects to be added or updated.</param>
+    </member>
+    <member name="M:Microsoft.Extensions.AI.Evaluation.EvaluationResultExtensions.AddOrUpdateContextInAllMetrics(Microsoft.Extensions.AI.Evaluation.EvaluationResult,System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.Evaluation.EvaluationContext})">
+      <summary>
+            Adds or updates the supplied <paramref name="context" /> objects in all <see cref="T:Microsoft.Extensions.AI.Evaluation.EvaluationMetric" />s
+            contained in the supplied <paramref name="result" />.</summary>
+      <param name="result">
+            The <see cref="T:Microsoft.Extensions.AI.Evaluation.EvaluationResult" /> containing the <see cref="T:Microsoft.Extensions.AI.Evaluation.EvaluationMetric" />s that are to be altered.</param>
+      <param name="context">The <see cref="T:Microsoft.Extensions.AI.Evaluation.EvaluationContext" /> objects to be added or updated.</param>
+    </member>
+    <member name="M:Microsoft.Extensions.AI.Evaluation.EvaluationResultExtensions.AddOrUpdateMetadataInAllMetrics(Microsoft.Extensions.AI.Evaluation.EvaluationResult,System.Collections.Generic.IDictionary{System.String,System.String})">
+      <summary>
+            Adds or updates the supplied <paramref name="metadata" /> in all <see cref="T:Microsoft.Extensions.AI.Evaluation.EvaluationMetric" />s contained in
+            the supplied <paramref name="result" />.</summary>
+      <param name="result">
+            The <see cref="T:Microsoft.Extensions.AI.Evaluation.EvaluationResult" /> containing the <see cref="T:Microsoft.Extensions.AI.Evaluation.EvaluationMetric" />s that are to be altered.</param>
+      <param name="metadata">The metadata to be added or updated.</param>
+    </member>
+    <member name="M:Microsoft.Extensions.AI.Evaluation.EvaluationResultExtensions.AddOrUpdateMetadataInAllMetrics(Microsoft.Extensions.AI.Evaluation.EvaluationResult,System.String,System.String)">
+      <summary>
+            Adds or updates metadata with the specified <paramref name="name" /> and <paramref name="value" /> in all
+            <see cref="T:Microsoft.Extensions.AI.Evaluation.EvaluationMetric" />s contained in the supplied <paramref name="result" />.</summary>
+      <param name="result">
+            The <see cref="T:Microsoft.Extensions.AI.Evaluation.EvaluationResult" /> containing the <see cref="T:Microsoft.Extensions.AI.Evaluation.EvaluationMetric" />s that are to be altered.</param>
+      <param name="name">The name of the metadata.</param>
+      <param name="value">The value of the metadata.</param>
     </member>
     <member name="M:Microsoft.Extensions.AI.Evaluation.EvaluationResultExtensions.ContainsDiagnostics(Microsoft.Extensions.AI.Evaluation.EvaluationResult,System.Func{Microsoft.Extensions.AI.Evaluation.EvaluationDiagnostic,System.Boolean})">
       <summary>
@@ -496,8 +642,8 @@
             The request that produced the <paramref name="modelResponse" /> that is to be evaluated.</param>
       <param name="modelResponse">The response that is to be evaluated.</param>
       <param name="chatConfiguration">
-            A <see cref="T:Microsoft.Extensions.AI.Evaluation.ChatConfiguration" /> that specifies the <see cref="T:Microsoft.Extensions.AI.IChatClient" /> and the
-            <see cref="T:Microsoft.Extensions.AI.Evaluation.IEvaluationTokenCounter" /> that should be used if the evaluation is performed using an AI model.</param>
+            A <see cref="T:Microsoft.Extensions.AI.Evaluation.ChatConfiguration" /> that specifies the <see cref="T:Microsoft.Extensions.AI.IChatClient" /> that should be used if one or
+            more composed <see cref="T:Microsoft.Extensions.AI.Evaluation.IEvaluator" />s use an AI model to perform evaluation.</param>
       <param name="additionalContext">
             Additional contextual information (beyond that which is available in <paramref name="userRequest" />) that the
             <paramref name="evaluator" /> may need to accurately evaluate the supplied <paramref name="modelResponse" />.</param>
@@ -514,8 +660,8 @@
             The request that produced the <paramref name="modelResponse" /> that is to be evaluated.</param>
       <param name="modelResponse">The response that is to be evaluated.</param>
       <param name="chatConfiguration">
-            A <see cref="T:Microsoft.Extensions.AI.Evaluation.ChatConfiguration" /> that specifies the <see cref="T:Microsoft.Extensions.AI.IChatClient" /> and the
-            <see cref="T:Microsoft.Extensions.AI.Evaluation.IEvaluationTokenCounter" /> that should be used if the evaluation is performed using an AI model.</param>
+            A <see cref="T:Microsoft.Extensions.AI.Evaluation.ChatConfiguration" /> that specifies the <see cref="T:Microsoft.Extensions.AI.IChatClient" /> that should be used if one or
+            more composed <see cref="T:Microsoft.Extensions.AI.Evaluation.IEvaluator" />s use an AI model to perform evaluation.</param>
       <param name="additionalContext">
             Additional contextual information (beyond that which is available in <paramref name="userRequest" />) that the
             <paramref name="evaluator" /> may need to accurately evaluate the supplied <paramref name="modelResponse" />.</param>
@@ -530,8 +676,8 @@
       <param name="evaluator">The <see cref="T:Microsoft.Extensions.AI.Evaluation.IEvaluator" /> that should perform the evaluation.</param>
       <param name="modelResponse">The response that is to be evaluated.</param>
       <param name="chatConfiguration">
-            A <see cref="T:Microsoft.Extensions.AI.Evaluation.ChatConfiguration" /> that specifies the <see cref="T:Microsoft.Extensions.AI.IChatClient" /> and the
-            <see cref="T:Microsoft.Extensions.AI.Evaluation.IEvaluationTokenCounter" /> that should be used if the evaluation is performed using an AI model.</param>
+            A <see cref="T:Microsoft.Extensions.AI.Evaluation.ChatConfiguration" /> that specifies the <see cref="T:Microsoft.Extensions.AI.IChatClient" /> that should be used if one or
+            more composed <see cref="T:Microsoft.Extensions.AI.Evaluation.IEvaluator" />s use an AI model to perform evaluation.</param>
       <param name="additionalContext">
             Additional contextual information that the <paramref name="evaluator" /> may need to accurately evaluate the
             supplied <paramref name="modelResponse" />.</param>
@@ -546,8 +692,8 @@
       <param name="evaluator">The <see cref="T:Microsoft.Extensions.AI.Evaluation.IEvaluator" /> that should perform the evaluation.</param>
       <param name="modelResponse">The response that is to be evaluated.</param>
       <param name="chatConfiguration">
-            A <see cref="T:Microsoft.Extensions.AI.Evaluation.ChatConfiguration" /> that specifies the <see cref="T:Microsoft.Extensions.AI.IChatClient" /> and the
-            <see cref="T:Microsoft.Extensions.AI.Evaluation.IEvaluationTokenCounter" /> that should be used if the evaluation is performed using an AI model.</param>
+            A <see cref="T:Microsoft.Extensions.AI.Evaluation.ChatConfiguration" /> that specifies the <see cref="T:Microsoft.Extensions.AI.IChatClient" /> that should be used if one or
+            more composed <see cref="T:Microsoft.Extensions.AI.Evaluation.IEvaluator" />s use an AI model to perform evaluation.</param>
       <param name="additionalContext">
             Additional contextual information that the <paramref name="evaluator" /> may need to accurately evaluate the
             supplied <paramref name="modelResponse" />.</param>
@@ -562,8 +708,8 @@
       <param name="evaluator">The <see cref="T:Microsoft.Extensions.AI.Evaluation.IEvaluator" /> that should perform the evaluation.</param>
       <param name="modelResponse">The response that is to be evaluated.</param>
       <param name="chatConfiguration">
-            A <see cref="T:Microsoft.Extensions.AI.Evaluation.ChatConfiguration" /> that specifies the <see cref="T:Microsoft.Extensions.AI.IChatClient" /> and the
-            <see cref="T:Microsoft.Extensions.AI.Evaluation.IEvaluationTokenCounter" /> that should be used if the evaluation is performed using an AI model.</param>
+            A <see cref="T:Microsoft.Extensions.AI.Evaluation.ChatConfiguration" /> that specifies the <see cref="T:Microsoft.Extensions.AI.IChatClient" /> that should be used if one or
+            more composed <see cref="T:Microsoft.Extensions.AI.Evaluation.IEvaluator" />s use an AI model to perform evaluation.</param>
       <param name="additionalContext">
             Additional contextual information that the <paramref name="evaluator" /> may need to accurately evaluate the
             supplied <paramref name="modelResponse" />.</param>
@@ -580,28 +726,14 @@
             The request that produced the <paramref name="modelResponse" /> that is to be evaluated.</param>
       <param name="modelResponse">The response that is to be evaluated.</param>
       <param name="chatConfiguration">
-            A <see cref="T:Microsoft.Extensions.AI.Evaluation.ChatConfiguration" /> that specifies the <see cref="T:Microsoft.Extensions.AI.IChatClient" /> and the
-            <see cref="T:Microsoft.Extensions.AI.Evaluation.IEvaluationTokenCounter" /> that should be used if the evaluation is performed using an AI model.</param>
+            A <see cref="T:Microsoft.Extensions.AI.Evaluation.ChatConfiguration" /> that specifies the <see cref="T:Microsoft.Extensions.AI.IChatClient" /> that should be used if one or
+            more composed <see cref="T:Microsoft.Extensions.AI.Evaluation.IEvaluator" />s use an AI model to perform evaluation.</param>
       <param name="additionalContext">
             Additional contextual information (beyond that which is available in <paramref name="userRequest" />) that the
             <paramref name="evaluator" /> may need to accurately evaluate the supplied <paramref name="modelResponse" />.</param>
       <param name="cancellationToken">
             A <see cref="T:System.Threading.CancellationToken" /> that can cancel the evaluation operation.</param>
       <returns>An <see cref="T:Microsoft.Extensions.AI.Evaluation.EvaluationResult" /> containing one or more <see cref="T:Microsoft.Extensions.AI.Evaluation.EvaluationMetric" />s.</returns>
-    </member>
-    <member name="T:Microsoft.Extensions.AI.Evaluation.IEvaluationTokenCounter">
-      <summary>
-            Counts the number of tokens present in evaluation prompts that are to be sent to an AI model.</summary>
-    </member>
-    <member name="M:Microsoft.Extensions.AI.Evaluation.IEvaluationTokenCounter.CountTokens(System.String)">
-      <summary>
-            Counts the number of tokens present in the supplied <paramref name="content" />.</summary>
-      <param name="content">The string content that is to be counted.</param>
-      <returns>The number of tokens present in the supplied <paramref name="content" />.</returns>
-    </member>
-    <member name="P:Microsoft.Extensions.AI.Evaluation.IEvaluationTokenCounter.InputTokenLimit">
-      <summary>
-            Gets the input token limit for the AI model / deployment in use.</summary>
     </member>
     <member name="T:Microsoft.Extensions.AI.Evaluation.IEvaluator">
       <summary>
@@ -615,8 +747,8 @@
             The conversation history including the request that produced the supplied <paramref name="modelResponse" />.</param>
       <param name="modelResponse">The response that is to be evaluated.</param>
       <param name="chatConfiguration">
-            A <see cref="T:Microsoft.Extensions.AI.Evaluation.ChatConfiguration" /> that specifies the <see cref="T:Microsoft.Extensions.AI.IChatClient" /> and the
-            <see cref="T:Microsoft.Extensions.AI.Evaluation.IEvaluationTokenCounter" /> that should be used if the evaluation is performed using an AI model.</param>
+            A <see cref="T:Microsoft.Extensions.AI.Evaluation.ChatConfiguration" /> that specifies the <see cref="T:Microsoft.Extensions.AI.IChatClient" /> that should be used if one or
+            more composed <see cref="T:Microsoft.Extensions.AI.Evaluation.IEvaluator" />s use an AI model to perform evaluation.</param>
       <param name="additionalContext">
             Additional contextual information (beyond that which is available in <paramref name="messages" />) that the
             <see cref="T:Microsoft.Extensions.AI.Evaluation.IEvaluator" /> may need to accurately evaluate the supplied <paramref name="modelResponse" />.</param>
@@ -664,20 +796,6 @@
       <param name="reason">
             An optional string that can be used to provide some commentary around the result represented by this
             <see cref="T:Microsoft.Extensions.AI.Evaluation.StringMetric" />.</param>
-    </member>
-    <member name="T:Microsoft.Extensions.AI.Evaluation.TokenizerExtensions">
-      <summary>
-            Extension methods for <see cref="T:Microsoft.ML.Tokenizers.Tokenizer" />.</summary>
-    </member>
-    <member name="M:Microsoft.Extensions.AI.Evaluation.TokenizerExtensions.ToTokenCounter(Microsoft.ML.Tokenizers.Tokenizer,System.Int32)">
-      <summary>
-            Returns an <see cref="T:Microsoft.Extensions.AI.Evaluation.IEvaluationTokenCounter" /> given the <see cref="T:Microsoft.ML.Tokenizers.Tokenizer" /> and the
-            <paramref name="inputTokenLimit" /> for a particular AI model / deployment.</summary>
-      <param name="tokenizer">The <see cref="T:Microsoft.ML.Tokenizers.Tokenizer" /> for a particular AI model.</param>
-      <param name="inputTokenLimit">
-            The threshold of maximum allowed input tokens for a particular AI model / deployment.</param>
-      <returns>
-            An <see cref="T:Microsoft.Extensions.AI.Evaluation.IEvaluationTokenCounter" /> for a particular AI model / deployment.</returns>
     </member>
   </members>
 </doc>

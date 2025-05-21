@@ -1169,6 +1169,8 @@ The characters in <paramref name="idData" /> are not all lower-case hexadecimal 
             When encoding the outbound message, this propagator uses information from the request's root Activity, ignoring any intermediate Activities that may have been created while processing the request.</summary>
       <returns>An instance of the <see cref="T:System.Diagnostics.DistributedContextPropagator" /> class.</returns>
     </member>
+    <member name="M:System.Diagnostics.DistributedContextPropagator.CreatePreW3CPropagator" />
+    <member name="M:System.Diagnostics.DistributedContextPropagator.CreateW3CPropagator" />
     <member name="M:System.Diagnostics.DistributedContextPropagator.ExtractBaggage(System.Object,System.Diagnostics.DistributedContextPropagator.PropagatorGetterCallback)">
       <summary>Extracts the baggage key-value pair list from an incoming request represented by the carrier. For example, from the headers of an HTTP request.</summary>
       <param name="carrier">The medium from which values will be read.</param>

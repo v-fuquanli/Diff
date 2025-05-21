@@ -338,6 +338,10 @@
       <param name="formatter">Function to create a string message of the state and exception.</param>
       <typeparam name="TState">The type of the object to be written.</typeparam>
     </member>
+    <member name="M:Microsoft.Extensions.Logging.Testing.FakeLogger.LogRecords(System.Collections.Generic.IEnumerable{Microsoft.Extensions.Logging.Abstractions.BufferedLogRecord})">
+      <summary>Delivers a batch of buffered log records to a logging provider.</summary>
+      <param name="records">The buffered log records to log.</param>
+    </member>
     <member name="P:Microsoft.Extensions.Logging.Testing.FakeLogger.Category">
       <summary>
             Gets this logger's category, as specified when the logger was created.</summary>

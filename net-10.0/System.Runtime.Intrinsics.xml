@@ -37154,6 +37154,46 @@
       <param name="indices">The per-element indices used to select a value from <paramref name="vector" />.</param>
       <returns>A new vector containing the values from <paramref name="vector" /> selected by the given <paramref name="indices" />.</returns>
     </member>
+    <member name="M:System.Runtime.Intrinsics.Vector128.ShuffleNative(System.Runtime.Intrinsics.Vector128{System.Byte},System.Runtime.Intrinsics.Vector128{System.Byte})">
+      <param name="vector" />
+      <param name="indices" />
+    </member>
+    <member name="M:System.Runtime.Intrinsics.Vector128.ShuffleNative(System.Runtime.Intrinsics.Vector128{System.Double},System.Runtime.Intrinsics.Vector128{System.Int64})">
+      <param name="vector" />
+      <param name="indices" />
+    </member>
+    <member name="M:System.Runtime.Intrinsics.Vector128.ShuffleNative(System.Runtime.Intrinsics.Vector128{System.Int16},System.Runtime.Intrinsics.Vector128{System.Int16})">
+      <param name="vector" />
+      <param name="indices" />
+    </member>
+    <member name="M:System.Runtime.Intrinsics.Vector128.ShuffleNative(System.Runtime.Intrinsics.Vector128{System.Int32},System.Runtime.Intrinsics.Vector128{System.Int32})">
+      <param name="vector" />
+      <param name="indices" />
+    </member>
+    <member name="M:System.Runtime.Intrinsics.Vector128.ShuffleNative(System.Runtime.Intrinsics.Vector128{System.Int64},System.Runtime.Intrinsics.Vector128{System.Int64})">
+      <param name="vector" />
+      <param name="indices" />
+    </member>
+    <member name="M:System.Runtime.Intrinsics.Vector128.ShuffleNative(System.Runtime.Intrinsics.Vector128{System.SByte},System.Runtime.Intrinsics.Vector128{System.SByte})">
+      <param name="vector" />
+      <param name="indices" />
+    </member>
+    <member name="M:System.Runtime.Intrinsics.Vector128.ShuffleNative(System.Runtime.Intrinsics.Vector128{System.Single},System.Runtime.Intrinsics.Vector128{System.Int32})">
+      <param name="vector" />
+      <param name="indices" />
+    </member>
+    <member name="M:System.Runtime.Intrinsics.Vector128.ShuffleNative(System.Runtime.Intrinsics.Vector128{System.UInt16},System.Runtime.Intrinsics.Vector128{System.UInt16})">
+      <param name="vector" />
+      <param name="indices" />
+    </member>
+    <member name="M:System.Runtime.Intrinsics.Vector128.ShuffleNative(System.Runtime.Intrinsics.Vector128{System.UInt32},System.Runtime.Intrinsics.Vector128{System.UInt32})">
+      <param name="vector" />
+      <param name="indices" />
+    </member>
+    <member name="M:System.Runtime.Intrinsics.Vector128.ShuffleNative(System.Runtime.Intrinsics.Vector128{System.UInt64},System.Runtime.Intrinsics.Vector128{System.UInt64})">
+      <param name="vector" />
+      <param name="indices" />
+    </member>
     <member name="M:System.Runtime.Intrinsics.Vector128.Sin(System.Runtime.Intrinsics.Vector128{System.Double})">
       <summary>Computes the sin of each element in a vector.</summary>
       <param name="vector">The vector that will have its Sin computed.</param>
@@ -38827,10 +38867,10 @@
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector256.Max``1(System.Runtime.Intrinsics.Vector256{``0},System.Runtime.Intrinsics.Vector256{``0})">
       <summary>Computes the maximum of two vectors on a per-element basis.</summary>
-      <param name="left">The vector to compare with <code data-dev-comment-type="paramref">right</code>.</param>
-      <param name="right">The vector to compare with <code data-dev-comment-type="paramref">left</code>.</param>
+      <param name="left">The vector to compare with <paramref name="right" />.</param>
+      <param name="right">The vector to compare with <paramref name="left" />.</param>
       <typeparam name="T">The type of the elements in the vector.</typeparam>
-      <returns>A vector whose elements are the maximum of the corresponding elements in <code data-dev-comment-type="paramref">left</code> and <code data-dev-comment-type="paramref">right</code>.</returns>
+      <returns>A vector whose elements are the maximum of the corresponding elements in <paramref name="left" /> and <paramref name="right" />.</returns>
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector256.MaxMagnitude``1(System.Runtime.Intrinsics.Vector256{``0},System.Runtime.Intrinsics.Vector256{``0})">
       <summary>Compares two vectors to compute which has the greater magnitude on a per-element basis.</summary>
@@ -38862,10 +38902,10 @@
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector256.Min``1(System.Runtime.Intrinsics.Vector256{``0},System.Runtime.Intrinsics.Vector256{``0})">
       <summary>Computes the minimum of two vectors on a per-element basis.</summary>
-      <param name="left">The vector to compare with <code data-dev-comment-type="paramref">right</code>.</param>
-      <param name="right">The vector to compare with <code data-dev-comment-type="paramref">left</code>.</param>
+      <param name="left">The vector to compare with <paramref name="right" />.</param>
+      <param name="right">The vector to compare with <paramref name="left" />.</param>
       <typeparam name="T">The type of the elements in the vector.</typeparam>
-      <returns>A vector whose elements are the minimum of the corresponding elements in <code data-dev-comment-type="paramref">left</code> and <code data-dev-comment-type="paramref">right</code>.</returns>
+      <returns>A vector whose elements are the minimum of the corresponding elements in <paramref name="left" /> and <paramref name="right" />.</returns>
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector256.MinMagnitude``1(System.Runtime.Intrinsics.Vector256{``0},System.Runtime.Intrinsics.Vector256{``0})">
       <summary>Compares two vectors to compute which has the lesser magnitude on a per-element basis.</summary>
@@ -39235,6 +39275,46 @@
       <param name="vector">The input vector from which values are selected.</param>
       <param name="indices">The per-element indices used to select a value from <paramref name="vector" />.</param>
       <returns>A new vector containing the values from <paramref name="vector" /> selected by the given <paramref name="indices" />.</returns>
+    </member>
+    <member name="M:System.Runtime.Intrinsics.Vector256.ShuffleNative(System.Runtime.Intrinsics.Vector256{System.Byte},System.Runtime.Intrinsics.Vector256{System.Byte})">
+      <param name="vector" />
+      <param name="indices" />
+    </member>
+    <member name="M:System.Runtime.Intrinsics.Vector256.ShuffleNative(System.Runtime.Intrinsics.Vector256{System.Double},System.Runtime.Intrinsics.Vector256{System.Int64})">
+      <param name="vector" />
+      <param name="indices" />
+    </member>
+    <member name="M:System.Runtime.Intrinsics.Vector256.ShuffleNative(System.Runtime.Intrinsics.Vector256{System.Int16},System.Runtime.Intrinsics.Vector256{System.Int16})">
+      <param name="vector" />
+      <param name="indices" />
+    </member>
+    <member name="M:System.Runtime.Intrinsics.Vector256.ShuffleNative(System.Runtime.Intrinsics.Vector256{System.Int32},System.Runtime.Intrinsics.Vector256{System.Int32})">
+      <param name="vector" />
+      <param name="indices" />
+    </member>
+    <member name="M:System.Runtime.Intrinsics.Vector256.ShuffleNative(System.Runtime.Intrinsics.Vector256{System.Int64},System.Runtime.Intrinsics.Vector256{System.Int64})">
+      <param name="vector" />
+      <param name="indices" />
+    </member>
+    <member name="M:System.Runtime.Intrinsics.Vector256.ShuffleNative(System.Runtime.Intrinsics.Vector256{System.SByte},System.Runtime.Intrinsics.Vector256{System.SByte})">
+      <param name="vector" />
+      <param name="indices" />
+    </member>
+    <member name="M:System.Runtime.Intrinsics.Vector256.ShuffleNative(System.Runtime.Intrinsics.Vector256{System.Single},System.Runtime.Intrinsics.Vector256{System.Int32})">
+      <param name="vector" />
+      <param name="indices" />
+    </member>
+    <member name="M:System.Runtime.Intrinsics.Vector256.ShuffleNative(System.Runtime.Intrinsics.Vector256{System.UInt16},System.Runtime.Intrinsics.Vector256{System.UInt16})">
+      <param name="vector" />
+      <param name="indices" />
+    </member>
+    <member name="M:System.Runtime.Intrinsics.Vector256.ShuffleNative(System.Runtime.Intrinsics.Vector256{System.UInt32},System.Runtime.Intrinsics.Vector256{System.UInt32})">
+      <param name="vector" />
+      <param name="indices" />
+    </member>
+    <member name="M:System.Runtime.Intrinsics.Vector256.ShuffleNative(System.Runtime.Intrinsics.Vector256{System.UInt64},System.Runtime.Intrinsics.Vector256{System.UInt64})">
+      <param name="vector" />
+      <param name="indices" />
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector256.Sin(System.Runtime.Intrinsics.Vector256{System.Double})">
       <summary>Computes the sin of each element in a vector.</summary>
@@ -41046,10 +41126,10 @@
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector512.Max``1(System.Runtime.Intrinsics.Vector512{``0},System.Runtime.Intrinsics.Vector512{``0})">
       <summary>Computes the maximum of two vectors on a per-element basis.</summary>
-      <param name="left">The vector to compare with <code data-dev-comment-type="paramref">right</code>.</param>
-      <param name="right">The vector to compare with <code data-dev-comment-type="paramref">left</code>.</param>
+      <param name="left">The vector to compare with <paramref name="right" />.</param>
+      <param name="right">The vector to compare with <paramref name="left" />.</param>
       <typeparam name="T">The type of the elements in the vector.</typeparam>
-      <returns>A vector whose elements are the maximum of the corresponding elements in <code data-dev-comment-type="paramref">left</code> and <code data-dev-comment-type="paramref">right</code>.</returns>
+      <returns>A vector whose elements are the maximum of the corresponding elements in <paramref name="left" /> and <paramref name="right" />.</returns>
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector512.MaxMagnitude``1(System.Runtime.Intrinsics.Vector512{``0},System.Runtime.Intrinsics.Vector512{``0})">
       <summary>Compares two vectors to compute which has the greater magnitude on a per-element basis.</summary>
@@ -41081,10 +41161,10 @@
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector512.Min``1(System.Runtime.Intrinsics.Vector512{``0},System.Runtime.Intrinsics.Vector512{``0})">
       <summary>Computes the minimum of two vectors on a per-element basis.</summary>
-      <param name="left">The vector to compare with <code data-dev-comment-type="paramref">right</code>.</param>
-      <param name="right">The vector to compare with <code data-dev-comment-type="paramref">left</code>.</param>
+      <param name="left">The vector to compare with <paramref name="right" />.</param>
+      <param name="right">The vector to compare with <paramref name="left" />.</param>
       <typeparam name="T">The type of the elements in the vector.</typeparam>
-      <returns>A vector whose elements are the minimum of the corresponding elements in <code data-dev-comment-type="paramref">left</code> and <code data-dev-comment-type="paramref">right</code>.</returns>
+      <returns>A vector whose elements are the minimum of the corresponding elements in <paramref name="left" /> and <paramref name="right" />.</returns>
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector512.MinMagnitude``1(System.Runtime.Intrinsics.Vector512{``0},System.Runtime.Intrinsics.Vector512{``0})">
       <summary>Compares two vectors to compute which has the lesser magnitude on a per-element basis.</summary>
@@ -41454,6 +41534,46 @@
       <param name="vector">The input vector from which values are selected.</param>
       <param name="indices">The per-element indices used to select a value from <paramref name="vector" />.</param>
       <returns>A new vector containing the values from <paramref name="vector" /> selected by the given <paramref name="indices" />.</returns>
+    </member>
+    <member name="M:System.Runtime.Intrinsics.Vector512.ShuffleNative(System.Runtime.Intrinsics.Vector512{System.Byte},System.Runtime.Intrinsics.Vector512{System.Byte})">
+      <param name="vector" />
+      <param name="indices" />
+    </member>
+    <member name="M:System.Runtime.Intrinsics.Vector512.ShuffleNative(System.Runtime.Intrinsics.Vector512{System.Double},System.Runtime.Intrinsics.Vector512{System.Int64})">
+      <param name="vector" />
+      <param name="indices" />
+    </member>
+    <member name="M:System.Runtime.Intrinsics.Vector512.ShuffleNative(System.Runtime.Intrinsics.Vector512{System.Int16},System.Runtime.Intrinsics.Vector512{System.Int16})">
+      <param name="vector" />
+      <param name="indices" />
+    </member>
+    <member name="M:System.Runtime.Intrinsics.Vector512.ShuffleNative(System.Runtime.Intrinsics.Vector512{System.Int32},System.Runtime.Intrinsics.Vector512{System.Int32})">
+      <param name="vector" />
+      <param name="indices" />
+    </member>
+    <member name="M:System.Runtime.Intrinsics.Vector512.ShuffleNative(System.Runtime.Intrinsics.Vector512{System.Int64},System.Runtime.Intrinsics.Vector512{System.Int64})">
+      <param name="vector" />
+      <param name="indices" />
+    </member>
+    <member name="M:System.Runtime.Intrinsics.Vector512.ShuffleNative(System.Runtime.Intrinsics.Vector512{System.SByte},System.Runtime.Intrinsics.Vector512{System.SByte})">
+      <param name="vector" />
+      <param name="indices" />
+    </member>
+    <member name="M:System.Runtime.Intrinsics.Vector512.ShuffleNative(System.Runtime.Intrinsics.Vector512{System.Single},System.Runtime.Intrinsics.Vector512{System.Int32})">
+      <param name="vector" />
+      <param name="indices" />
+    </member>
+    <member name="M:System.Runtime.Intrinsics.Vector512.ShuffleNative(System.Runtime.Intrinsics.Vector512{System.UInt16},System.Runtime.Intrinsics.Vector512{System.UInt16})">
+      <param name="vector" />
+      <param name="indices" />
+    </member>
+    <member name="M:System.Runtime.Intrinsics.Vector512.ShuffleNative(System.Runtime.Intrinsics.Vector512{System.UInt32},System.Runtime.Intrinsics.Vector512{System.UInt32})">
+      <param name="vector" />
+      <param name="indices" />
+    </member>
+    <member name="M:System.Runtime.Intrinsics.Vector512.ShuffleNative(System.Runtime.Intrinsics.Vector512{System.UInt64},System.Runtime.Intrinsics.Vector512{System.UInt64})">
+      <param name="vector" />
+      <param name="indices" />
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector512.Sin(System.Runtime.Intrinsics.Vector512{System.Double})">
       <summary>Computes the sin of each element in a vector.</summary>
@@ -42874,10 +42994,10 @@
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector64.Max``1(System.Runtime.Intrinsics.Vector64{``0},System.Runtime.Intrinsics.Vector64{``0})">
       <summary>Computes the maximum of two vectors on a per-element basis.</summary>
-      <param name="left">The vector to compare with <code data-dev-comment-type="paramref">right</code>.</param>
-      <param name="right">The vector to compare with <code data-dev-comment-type="paramref">left</code>.</param>
+      <param name="left">The vector to compare with <paramref name="right" />.</param>
+      <param name="right">The vector to compare with <paramref name="left" />.</param>
       <typeparam name="T">The type of the elements in the vector.</typeparam>
-      <returns>A vector whose elements are the maximum of the corresponding elements in <code data-dev-comment-type="paramref">left</code> and <code data-dev-comment-type="paramref">right</code>.</returns>
+      <returns>A vector whose elements are the maximum of the corresponding elements in <paramref name="left" /> and <paramref name="right" />.</returns>
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector64.MaxMagnitude``1(System.Runtime.Intrinsics.Vector64{``0},System.Runtime.Intrinsics.Vector64{``0})">
       <summary>Compares two vectors to compute which has the greater magnitude on a per-element basis.</summary>
@@ -42909,10 +43029,10 @@
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector64.Min``1(System.Runtime.Intrinsics.Vector64{``0},System.Runtime.Intrinsics.Vector64{``0})">
       <summary>Computes the minimum of two vectors on a per-element basis.</summary>
-      <param name="left">The vector to compare with <code data-dev-comment-type="paramref">right</code>.</param>
-      <param name="right">The vector to compare with <code data-dev-comment-type="paramref">left</code>.</param>
+      <param name="left">The vector to compare with <paramref name="right" />.</param>
+      <param name="right">The vector to compare with <paramref name="left" />.</param>
       <typeparam name="T">The type of the elements in the vector.</typeparam>
-      <returns>A vector whose elements are the minimum of the corresponding elements in <code data-dev-comment-type="paramref">left</code> and <code data-dev-comment-type="paramref">right</code>.</returns>
+      <returns>A vector whose elements are the minimum of the corresponding elements in <paramref name="left" /> and <paramref name="right" />.</returns>
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector64.MinMagnitude``1(System.Runtime.Intrinsics.Vector64{``0},System.Runtime.Intrinsics.Vector64{``0})">
       <summary>Compares two vectors to compute which has the lesser magnitude on a per-element basis.</summary>
@@ -43264,6 +43384,34 @@
       <param name="vector">The input vector from which values are selected.</param>
       <param name="indices">The per-element indices used to select a value from <paramref name="vector" />.</param>
       <returns>A new vector containing the values from <paramref name="vector" /> selected by the given <paramref name="indices" />.</returns>
+    </member>
+    <member name="M:System.Runtime.Intrinsics.Vector64.ShuffleNative(System.Runtime.Intrinsics.Vector64{System.Byte},System.Runtime.Intrinsics.Vector64{System.Byte})">
+      <param name="vector" />
+      <param name="indices" />
+    </member>
+    <member name="M:System.Runtime.Intrinsics.Vector64.ShuffleNative(System.Runtime.Intrinsics.Vector64{System.Int16},System.Runtime.Intrinsics.Vector64{System.Int16})">
+      <param name="vector" />
+      <param name="indices" />
+    </member>
+    <member name="M:System.Runtime.Intrinsics.Vector64.ShuffleNative(System.Runtime.Intrinsics.Vector64{System.Int32},System.Runtime.Intrinsics.Vector64{System.Int32})">
+      <param name="vector" />
+      <param name="indices" />
+    </member>
+    <member name="M:System.Runtime.Intrinsics.Vector64.ShuffleNative(System.Runtime.Intrinsics.Vector64{System.SByte},System.Runtime.Intrinsics.Vector64{System.SByte})">
+      <param name="vector" />
+      <param name="indices" />
+    </member>
+    <member name="M:System.Runtime.Intrinsics.Vector64.ShuffleNative(System.Runtime.Intrinsics.Vector64{System.Single},System.Runtime.Intrinsics.Vector64{System.Int32})">
+      <param name="vector" />
+      <param name="indices" />
+    </member>
+    <member name="M:System.Runtime.Intrinsics.Vector64.ShuffleNative(System.Runtime.Intrinsics.Vector64{System.UInt16},System.Runtime.Intrinsics.Vector64{System.UInt16})">
+      <param name="vector" />
+      <param name="indices" />
+    </member>
+    <member name="M:System.Runtime.Intrinsics.Vector64.ShuffleNative(System.Runtime.Intrinsics.Vector64{System.UInt32},System.Runtime.Intrinsics.Vector64{System.UInt32})">
+      <param name="vector" />
+      <param name="indices" />
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector64.Sin(System.Runtime.Intrinsics.Vector64{System.Double})">
       <summary>Computes the sin of each element in a vector.</summary>

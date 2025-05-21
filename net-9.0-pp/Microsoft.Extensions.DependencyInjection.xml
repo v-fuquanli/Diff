@@ -20,12 +20,12 @@
       <param name="options">The options to use for this instance.</param>
     </member>
     <member name="M:Microsoft.Extensions.DependencyInjection.DefaultServiceProviderFactory.CreateBuilder(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
-      <summary>Creates a container builder from an <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.DependencyInjection.IServiceCollection"></xref>.</summary>
+      <summary>Creates a container builder from an <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.DependencyInjection.IServiceCollection" />.</summary>
       <param name="services">The collection of services.</param>
       <returns>A container builder that can be used to create an <xref data-throw-if-not-resolved="true" uid="System.IServiceProvider"></xref>.</returns>
     </member>
     <member name="M:Microsoft.Extensions.DependencyInjection.DefaultServiceProviderFactory.CreateServiceProvider(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
-      <summary>Creates an <xref data-throw-if-not-resolved="true" uid="System.IServiceProvider"></xref> from the container builder.</summary>
+      <summary>Creates an <xref data-throw-if-not-resolved="true" uid="System.IServiceProvider" /> from the container builder.</summary>
       <param name="containerBuilder">The container builder.</param>
       <returns>The newly created service provider.</returns>
     </member>

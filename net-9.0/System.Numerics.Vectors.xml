@@ -1347,7 +1347,7 @@
       <returns>The restricted vector.</returns>
     </member>
     <member name="M:System.Numerics.Vector.ClampNative``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0},System.Numerics.Vector{``0})">
-      <summary>Restricts a vector between a minimum and a maximum value using platform specific behavior for <code>NaN</code> and <code>NegativeZero</code>..</summary>
+      <summary>Restricts a vector between a minimum and a maximum value using platform specific behavior for <code data-dev-comment-type="c">NaN</code> and <code data-dev-comment-type="c">NegativeZero</code>..</summary>
       <param name="value">The vector to restrict.</param>
       <param name="min">The minimum value.</param>
       <param name="max">The maximum value.</param>
@@ -1441,7 +1441,7 @@
       <param name="value">The vector whose magnitude is used in the result.</param>
       <param name="sign">The vector whose sign is used in the result.</param>
       <typeparam name="T" />
-      <returns>A vector with the magnitude of <code>value</code> and the sign of <code>sign</code>.</returns>
+      <returns>A vector with the magnitude of <code data-dev-comment-type="paramref">value</code> and the sign of <code data-dev-comment-type="paramref">sign</code>.</returns>
     </member>
     <member name="M:System.Numerics.Vector.Cos(System.Numerics.Vector{System.Double})">
       <param name="vector" />
@@ -1693,31 +1693,31 @@
       <summary>Determines which elements in a vector are NaN.</summary>
       <param name="vector">The vector to be checked.</param>
       <typeparam name="T" />
-      <returns>A vector whose elements are all-bits-set or zero, depending on if the corresponding elements in <code>vector</code> were NaN.</returns>
+      <returns>A vector whose elements are all-bits-set or zero, depending on if the corresponding elements in <code data-dev-comment-type="paramref">vector</code> were NaN.</returns>
     </member>
     <member name="M:System.Numerics.Vector.IsNegative``1(System.Numerics.Vector{``0})">
       <summary>Determines which elements in a vector represents negative real numbers.</summary>
       <param name="vector">The vector to be checked.</param>
       <typeparam name="T" />
-      <returns>A vector whose elements are all-bits-set or zero, depending on if the corresponding elements in <code>vector</code> were negative.</returns>
+      <returns>A vector whose elements are all-bits-set or zero, depending on if the corresponding elements in <code data-dev-comment-type="paramref">vector</code> were negative.</returns>
     </member>
     <member name="M:System.Numerics.Vector.IsPositive``1(System.Numerics.Vector{``0})">
       <summary>Determines which elements in a vector represents positive real numbers.</summary>
       <param name="vector">The vector to be checked.</param>
       <typeparam name="T" />
-      <returns>A vector whose elements are all-bits-set or zero, depending on if the corresponding elements in <code>vector</code> were positive.</returns>
+      <returns>A vector whose elements are all-bits-set or zero, depending on if the corresponding elements in <code data-dev-comment-type="paramref">vector</code> were positive.</returns>
     </member>
     <member name="M:System.Numerics.Vector.IsPositiveInfinity``1(System.Numerics.Vector{``0})">
       <summary>Determines which elements in a vector are positive infinity.</summary>
       <param name="vector">The vector to be checked.</param>
       <typeparam name="T" />
-      <returns>A vector whose elements are all-bits-set or zero, depending on if the corresponding elements in <code>vector</code> were positive infinity.</returns>
+      <returns>A vector whose elements are all-bits-set or zero, depending on if the corresponding elements in <code data-dev-comment-type="paramref">vector</code> were positive infinity.</returns>
     </member>
     <member name="M:System.Numerics.Vector.IsZero``1(System.Numerics.Vector{``0})">
       <summary>Determines which elements in a vector are zero.</summary>
       <param name="vector">The vector to be checked.</param>
       <typeparam name="T" />
-      <returns>A vector whose elements are all-bits-set or zero, depending on if the corresponding elements in <code>vector</code> were zero.</returns>
+      <returns>A vector whose elements are all-bits-set or zero, depending on if the corresponding elements in <code data-dev-comment-type="paramref">vector</code> were zero.</returns>
     </member>
     <member name="M:System.Numerics.Vector.Lerp(System.Numerics.Vector{System.Double},System.Numerics.Vector{System.Double},System.Numerics.Vector{System.Double})">
       <summary>Performs a linear interpolation between two vectors based on the given weighting.</summary>
@@ -1879,71 +1879,71 @@
       <summary>Returns a new vector whose elements are the maximum of each pair of elements in the two given vectors.</summary>
       <param name="left">The first vector to compare.</param>
       <param name="right">The second vector to compare.</param>
-      <typeparam name="T">The vector type. <code>T</code> can be any primitive numeric type.</typeparam>
+      <typeparam name="T">The vector type. <code data-dev-comment-type="c">T</code> can be any primitive numeric type.</typeparam>
       <returns>The maximum vector.</returns>
     </member>
     <member name="M:System.Numerics.Vector.MaxMagnitude``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})">
       <summary>Compares two vectors to compute which has the greater magnitude on a per-element basis.</summary>
-      <param name="left">The vector to compare with <code>right</code>.</param>
-      <param name="right">The vector to compare with <code>left</code>.</param>
+      <param name="left">The vector to compare with <code data-dev-comment-type="paramref">right</code>.</param>
+      <param name="right">The vector to compare with <code data-dev-comment-type="paramref">left</code>.</param>
       <typeparam name="T" />
-      <returns>A vector where the corresponding element comes from <code>left</code> if it has a greater magnitude than <code>right</code>; otherwise, <code>right</code>.</returns>
+      <returns>A vector where the corresponding element comes from <code data-dev-comment-type="paramref">left</code> if it has a greater magnitude than <code data-dev-comment-type="paramref">right</code>; otherwise, <code data-dev-comment-type="paramref">right</code>.</returns>
     </member>
     <member name="M:System.Numerics.Vector.MaxMagnitudeNumber``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})">
-      <summary>Compares two vectors, on a per-element basis, to compute which has the greater magnitude and returning the other value if an input is <code>NaN</code>.</summary>
-      <param name="left">The vector to compare with <code>right</code>.</param>
-      <param name="right">The vector to compare with <code>left</code>.</param>
+      <summary>Compares two vectors, on a per-element basis, to compute which has the greater magnitude and returning the other value if an input is <code data-dev-comment-type="c">NaN</code>.</summary>
+      <param name="left">The vector to compare with <code data-dev-comment-type="paramref">right</code>.</param>
+      <param name="right">The vector to compare with <code data-dev-comment-type="paramref">left</code>.</param>
       <typeparam name="T" />
-      <returns>A vector where the corresponding element comes from <code>left</code> if it has a greater magnitude than <code>right</code>; otherwise, <code>right</code>.</returns>
+      <returns>A vector where the corresponding element comes from <code data-dev-comment-type="paramref">left</code> if it has a greater magnitude than <code data-dev-comment-type="paramref">right</code>; otherwise, <code data-dev-comment-type="paramref">right</code>.</returns>
     </member>
     <member name="M:System.Numerics.Vector.MaxNative``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})">
-      <summary>Compare two vectors to determine which is greater on a per-element basis using platform specific behavior for <code>NaN</code> and <code>NegativeZero</code>.</summary>
-      <param name="left">The vector to compare with <code>right</code>.</param>
-      <param name="right">The vector to compare with <code>left</code>.</param>
+      <summary>Compare two vectors to determine which is greater on a per-element basis using platform specific behavior for <code data-dev-comment-type="c">NaN</code> and <code data-dev-comment-type="c">NegativeZero</code>.</summary>
+      <param name="left">The vector to compare with <code data-dev-comment-type="paramref">right</code>.</param>
+      <param name="right">The vector to compare with <code data-dev-comment-type="paramref">left</code>.</param>
       <typeparam name="T" />
-      <returns>A vector where the corresponding element comes from <code>left</code> if it is greater than <code>right</code>; otherwise, <code>right</code>.</returns>
+      <returns>A vector where the corresponding element comes from <code data-dev-comment-type="paramref">left</code> if it is greater than <code data-dev-comment-type="paramref">right</code>; otherwise, <code data-dev-comment-type="paramref">right</code>.</returns>
     </member>
     <member name="M:System.Numerics.Vector.MaxNumber``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})">
-      <summary>Compares two vectors, on a per-element basis, to compute which is greater and returning the other value if an element is <code>NaN</code>.</summary>
-      <param name="left">The vector to compare with <code>right</code>.</param>
-      <param name="right">The vector to compare with <code>left</code>.</param>
+      <summary>Compares two vectors, on a per-element basis, to compute which is greater and returning the other value if an element is <code data-dev-comment-type="c">NaN</code>.</summary>
+      <param name="left">The vector to compare with <code data-dev-comment-type="paramref">right</code>.</param>
+      <param name="right">The vector to compare with <code data-dev-comment-type="paramref">left</code>.</param>
       <typeparam name="T" />
-      <returns>A vector where the corresponding element comes from <code>left</code> if it is greater than <code>right</code>; otherwise, <code>right</code>.</returns>
+      <returns>A vector where the corresponding element comes from <code data-dev-comment-type="paramref">left</code> if it is greater than <code data-dev-comment-type="paramref">right</code>; otherwise, <code data-dev-comment-type="paramref">right</code>.</returns>
     </member>
     <member name="M:System.Numerics.Vector.Min``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})">
       <summary>Returns a new vector whose elements are the minimum of each pair of elements in the two given vectors.</summary>
       <param name="left">The first vector to compare.</param>
       <param name="right">The second vector to compare.</param>
-      <typeparam name="T">The vector type. <code>T</code> can be any primitive numeric type.</typeparam>
+      <typeparam name="T">The vector type. <code data-dev-comment-type="c">T</code> can be any primitive numeric type.</typeparam>
       <returns>The minimum vector.</returns>
     </member>
     <member name="M:System.Numerics.Vector.MinMagnitude``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})">
       <summary>Compares two vectors to compute which has the lesser magnitude on a per-element basis.</summary>
-      <param name="left">The vector to compare with <code>right</code>.</param>
-      <param name="right">The vector to compare with <code>left</code>.</param>
+      <param name="left">The vector to compare with <code data-dev-comment-type="paramref">right</code>.</param>
+      <param name="right">The vector to compare with <code data-dev-comment-type="paramref">left</code>.</param>
       <typeparam name="T" />
-      <returns>A vector where the corresponding element comes from <code>left</code> if it has a lesser magnitude than <code>right</code>; otherwise, <code>right</code>.</returns>
+      <returns>A vector where the corresponding element comes from <code data-dev-comment-type="paramref">left</code> if it has a lesser magnitude than <code data-dev-comment-type="paramref">right</code>; otherwise, <code data-dev-comment-type="paramref">right</code>.</returns>
     </member>
     <member name="M:System.Numerics.Vector.MinMagnitudeNumber``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})">
-      <summary>Compares two vectors, on a per-element basis, to compute which has the lesser magnitude and returning the other value if an input is <code>NaN</code>.</summary>
-      <param name="left">The vector to compare with <code>right</code>.</param>
-      <param name="right">The vector to compare with <code>left</code>.</param>
+      <summary>Compares two vectors, on a per-element basis, to compute which has the lesser magnitude and returning the other value if an input is <code data-dev-comment-type="c">NaN</code>.</summary>
+      <param name="left">The vector to compare with <code data-dev-comment-type="paramref">right</code>.</param>
+      <param name="right">The vector to compare with <code data-dev-comment-type="paramref">left</code>.</param>
       <typeparam name="T" />
-      <returns>A vector where the corresponding element comes from <code>left</code> if it has a lesser magnitude than <code>right</code>; otherwise, <code>right</code>.</returns>
+      <returns>A vector where the corresponding element comes from <code data-dev-comment-type="paramref">left</code> if it has a lesser magnitude than <code data-dev-comment-type="paramref">right</code>; otherwise, <code data-dev-comment-type="paramref">right</code>.</returns>
     </member>
     <member name="M:System.Numerics.Vector.MinNative``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})">
-      <summary>Compare two vectors to determine which is lesser on a per-element basis using platform specific behavior for <code>NaN</code> and <code>NegativeZero</code>.</summary>
-      <param name="left">The vector to compare with <code>right</code>.</param>
-      <param name="right">The vector to compare with <code>left</code>.</param>
+      <summary>Compare two vectors to determine which is lesser on a per-element basis using platform specific behavior for <code data-dev-comment-type="c">NaN</code> and <code data-dev-comment-type="c">NegativeZero</code>.</summary>
+      <param name="left">The vector to compare with <code data-dev-comment-type="paramref">right</code>.</param>
+      <param name="right">The vector to compare with <code data-dev-comment-type="paramref">left</code>.</param>
       <typeparam name="T" />
-      <returns>A vector where the corresponding element comes from <code>left</code> if it is lesser than <code>right</code>; otherwise, <code>right</code>.</returns>
+      <returns>A vector where the corresponding element comes from <code data-dev-comment-type="paramref">left</code> if it is lesser than <code data-dev-comment-type="paramref">right</code>; otherwise, <code data-dev-comment-type="paramref">right</code>.</returns>
     </member>
     <member name="M:System.Numerics.Vector.MinNumber``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})">
-      <summary>Compares two vectors, on a per-element basis, to compute which is lesser and returning the other value if an element is <code>NaN</code>.</summary>
-      <param name="left">The vector to compare with <code>right</code>.</param>
-      <param name="right">The vector to compare with <code>left</code>.</param>
+      <summary>Compares two vectors, on a per-element basis, to compute which is lesser and returning the other value if an element is <code data-dev-comment-type="c">NaN</code>.</summary>
+      <param name="left">The vector to compare with <code data-dev-comment-type="paramref">right</code>.</param>
+      <param name="right">The vector to compare with <code data-dev-comment-type="paramref">left</code>.</param>
       <typeparam name="T" />
-      <returns>A vector where the corresponding element comes from <code>left</code> if it is lesser than <code>right</code>; otherwise, <code>right</code>.</returns>
+      <returns>A vector where the corresponding element comes from <code data-dev-comment-type="paramref">left</code> if it is lesser than <code data-dev-comment-type="paramref">right</code>; otherwise, <code data-dev-comment-type="paramref">right</code>.</returns>
     </member>
     <member name="M:System.Numerics.Vector.Multiply``1(``0,System.Numerics.Vector{``0})">
       <summary>Returns a new vector whose values are a scalar value multiplied by each of the values of a specified vector.</summary>
@@ -2845,7 +2845,7 @@
       <returns>The restricted vector.</returns>
     </member>
     <member name="M:System.Numerics.Vector2.ClampNative(System.Numerics.Vector2,System.Numerics.Vector2,System.Numerics.Vector2)">
-      <summary>Restricts a vector between a minimum and a maximum value using platform specific behavior for <code>NaN</code> and <code>NegativeZero</code>..</summary>
+      <summary>Restricts a vector between a minimum and a maximum value using platform specific behavior for <code data-dev-comment-type="c">NaN</code> and <code data-dev-comment-type="c">NegativeZero</code>..</summary>
       <param name="value1" />
       <param name="min">The minimum value.</param>
       <param name="max">The maximum value.</param>
@@ -2855,7 +2855,7 @@
       <summary>Copies the per-element sign of a vector to the per-element sign of another vector.</summary>
       <param name="value">The vector whose magnitude is used in the result.</param>
       <param name="sign">The vector whose sign is used in the result.</param>
-      <returns>A vector with the magnitude of <code>value</code> and the sign of <code>sign</code>.</returns>
+      <returns>A vector with the magnitude of <code data-dev-comment-type="paramref">value</code> and the sign of <code data-dev-comment-type="paramref">sign</code>.</returns>
     </member>
     <member name="M:System.Numerics.Vector2.CopyTo(System.Single[],System.Int32)">
       <summary>Copies the elements of the vector to a specified array starting at a specified index position.</summary>
@@ -2865,10 +2865,10 @@
         <paramref name="array" /> is <see langword="null" />.</exception>
       <exception cref="T:System.ArgumentException">The number of elements in the current instance is greater than in the array.</exception>
       <exception cref="T:System.ArgumentOutOfRangeException">
-        <paramref name="index" /> is less than zero.  
-  
- -or-  
-  
+        <paramref name="index" /> is less than zero.
+
+ -or-
+
  <paramref name="index" /> is greater than or equal to the array length.</exception>
       <exception cref="T:System.RankException">
         <paramref name="array" /> is multidimensional.</exception>
@@ -2988,7 +2988,7 @@
       <summary>Performs a linear interpolation between two vectors based on the given weighting.</summary>
       <param name="value1">The first vector.</param>
       <param name="value2">The second vector.</param>
-      <param name="amount">A value between 0 and 1 that indicates the weight of <code>value2</code>.</param>
+      <param name="amount">A value between 0 and 1 that indicates the weight of <code data-dev-comment-type="paramref">value2</code>.</param>
       <returns>The interpolated vector.</returns>
     </member>
     <member name="M:System.Numerics.Vector2.Log(System.Numerics.Vector2)">
@@ -3007,25 +3007,25 @@
       <summary>Compares two vectors to compute which has the greater magnitude on a per-element basis.</summary>
       <param name="value1" />
       <param name="value2" />
-      <returns>A vector where the corresponding element comes from <code>left</code> if it has a greater magnitude than <code>right</code>; otherwise, <code>right</code>.</returns>
+      <returns>A vector where the corresponding element comes from <code data-dev-comment-type="paramref">left</code> if it has a greater magnitude than <code data-dev-comment-type="paramref">right</code>; otherwise, <code data-dev-comment-type="paramref">right</code>.</returns>
     </member>
     <member name="M:System.Numerics.Vector2.MaxMagnitudeNumber(System.Numerics.Vector2,System.Numerics.Vector2)">
-      <summary>Compares two vectors, on a per-element basis, to compute which has the greater magnitude and returning the other value if an input is <code>NaN</code>.</summary>
+      <summary>Compares two vectors, on a per-element basis, to compute which has the greater magnitude and returning the other value if an input is <code data-dev-comment-type="c">NaN</code>.</summary>
       <param name="value1" />
       <param name="value2" />
-      <returns>A vector where the corresponding element comes from <code>left</code> if it has a greater magnitude than <code>right</code>; otherwise, <code>right</code>.</returns>
+      <returns>A vector where the corresponding element comes from <code data-dev-comment-type="paramref">left</code> if it has a greater magnitude than <code data-dev-comment-type="paramref">right</code>; otherwise, <code data-dev-comment-type="paramref">right</code>.</returns>
     </member>
     <member name="M:System.Numerics.Vector2.MaxNative(System.Numerics.Vector2,System.Numerics.Vector2)">
-      <summary>Compare two vectors to determine which is greater on a per-element basis using platform specific behavior for <code>NaN</code> and <code>NegativeZero</code>.</summary>
+      <summary>Compare two vectors to determine which is greater on a per-element basis using platform specific behavior for <code data-dev-comment-type="c">NaN</code> and <code data-dev-comment-type="c">NegativeZero</code>.</summary>
       <param name="value1" />
       <param name="value2" />
-      <returns>A vector where the corresponding element comes from <code>left</code> if it is greater than <code>right</code>; otherwise, <code>right</code>.</returns>
+      <returns>A vector where the corresponding element comes from <code data-dev-comment-type="paramref">left</code> if it is greater than <code data-dev-comment-type="paramref">right</code>; otherwise, <code data-dev-comment-type="paramref">right</code>.</returns>
     </member>
     <member name="M:System.Numerics.Vector2.MaxNumber(System.Numerics.Vector2,System.Numerics.Vector2)">
-      <summary>Compares two vectors, on a per-element basis, to compute which is greater and returning the other value if an element is <code>NaN</code>.</summary>
+      <summary>Compares two vectors, on a per-element basis, to compute which is greater and returning the other value if an element is <code data-dev-comment-type="c">NaN</code>.</summary>
       <param name="value1" />
       <param name="value2" />
-      <returns>A vector where the corresponding element comes from <code>left</code> if it is greater than <code>right</code>; otherwise, <code>right</code>.</returns>
+      <returns>A vector where the corresponding element comes from <code data-dev-comment-type="paramref">left</code> if it is greater than <code data-dev-comment-type="paramref">right</code>; otherwise, <code data-dev-comment-type="paramref">right</code>.</returns>
     </member>
     <member name="M:System.Numerics.Vector2.Min(System.Numerics.Vector2,System.Numerics.Vector2)">
       <summary>Returns a vector whose elements are the minimum of each of the pairs of elements in two specified vectors.</summary>
@@ -3037,25 +3037,25 @@
       <summary>Compares two vectors to compute which has the lesser magnitude on a per-element basis.</summary>
       <param name="value1" />
       <param name="value2" />
-      <returns>A vector where the corresponding element comes from <code>left</code> if it has a lesser magnitude than <code>right</code>; otherwise, <code>right</code>.</returns>
+      <returns>A vector where the corresponding element comes from <code data-dev-comment-type="paramref">left</code> if it has a lesser magnitude than <code data-dev-comment-type="paramref">right</code>; otherwise, <code data-dev-comment-type="paramref">right</code>.</returns>
     </member>
     <member name="M:System.Numerics.Vector2.MinMagnitudeNumber(System.Numerics.Vector2,System.Numerics.Vector2)">
-      <summary>Compares two vectors, on a per-element basis, to compute which has the lesser magnitude and returning the other value if an input is <code>NaN</code>.</summary>
+      <summary>Compares two vectors, on a per-element basis, to compute which has the lesser magnitude and returning the other value if an input is <code data-dev-comment-type="c">NaN</code>.</summary>
       <param name="value1" />
       <param name="value2" />
-      <returns>A vector where the corresponding element comes from <code>left</code> if it has a lesser magnitude than <code>right</code>; otherwise, <code>right</code>.</returns>
+      <returns>A vector where the corresponding element comes from <code data-dev-comment-type="paramref">left</code> if it has a lesser magnitude than <code data-dev-comment-type="paramref">right</code>; otherwise, <code data-dev-comment-type="paramref">right</code>.</returns>
     </member>
     <member name="M:System.Numerics.Vector2.MinNative(System.Numerics.Vector2,System.Numerics.Vector2)">
-      <summary>Compare two vectors to determine which is lesser on a per-element basis using platform specific behavior for <code>NaN</code> and <code>NegativeZero</code>.</summary>
+      <summary>Compare two vectors to determine which is lesser on a per-element basis using platform specific behavior for <code data-dev-comment-type="c">NaN</code> and <code data-dev-comment-type="c">NegativeZero</code>.</summary>
       <param name="value1" />
       <param name="value2" />
-      <returns>A vector where the corresponding element comes from <code>left</code> if it is lesser than <code>right</code>; otherwise, <code>right</code>.</returns>
+      <returns>A vector where the corresponding element comes from <code data-dev-comment-type="paramref">left</code> if it is lesser than <code data-dev-comment-type="paramref">right</code>; otherwise, <code data-dev-comment-type="paramref">right</code>.</returns>
     </member>
     <member name="M:System.Numerics.Vector2.MinNumber(System.Numerics.Vector2,System.Numerics.Vector2)">
-      <summary>Compares two vectors, on a per-element basis, to compute which is lesser and returning the other value if an element is <code>NaN</code>.</summary>
+      <summary>Compares two vectors, on a per-element basis, to compute which is lesser and returning the other value if an element is <code data-dev-comment-type="c">NaN</code>.</summary>
       <param name="value1" />
       <param name="value2" />
-      <returns>A vector where the corresponding element comes from <code>left</code> if it is lesser than <code>right</code>; otherwise, <code>right</code>.</returns>
+      <returns>A vector where the corresponding element comes from <code data-dev-comment-type="paramref">left</code> if it is lesser than <code data-dev-comment-type="paramref">right</code>; otherwise, <code data-dev-comment-type="paramref">right</code>.</returns>
     </member>
     <member name="M:System.Numerics.Vector2.Multiply(System.Numerics.Vector2,System.Numerics.Vector2)">
       <summary>Returns a new vector whose values are the product of each pair of elements in two specified vectors.</summary>
@@ -3239,12 +3239,12 @@
         <see langword="true" /> if the source vector was successfully copied to <paramref name="destination" />. <see langword="false" /> if <paramref name="destination" /> is not large enough to hold the source vector.</returns>
     </member>
     <member name="P:System.Numerics.Vector2.E">
-      <summary>Gets a vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.E"></xref>.</summary>
-      <returns>A vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.E"></xref> (that is, it returns the vector <code>Create(float.E)</code>).</returns>
+      <summary>Gets a vector whose elements are equal to <see cref="P:System.Single.E" />.</summary>
+      <returns>A vector whose elements are equal to <see cref="P:System.Single.E" /> (that is, it returns the vector <code data-dev-comment-type="c">Create(float.E)</code>).</returns>
     </member>
     <member name="P:System.Numerics.Vector2.Epsilon">
-      <summary>Gets a vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.Epsilon"></xref>.</summary>
-      <returns>A vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.Epsilon"></xref> (that is, it returns the vector <code>Create(float.Epsilon)</code>).</returns>
+      <summary>Gets a vector whose elements are equal to <see cref="P:System.Single.Epsilon" />.</summary>
+      <returns>A vector whose elements are equal to <see cref="P:System.Single.Epsilon" /> (that is, it returns the vector <code data-dev-comment-type="c">Create(float.Epsilon)</code>).</returns>
     </member>
     <member name="P:System.Numerics.Vector2.Item(System.Int32)">
       <summary>Gets or sets the element at the specified index.</summary>
@@ -3254,32 +3254,32 @@
       <returns>The the element at <paramref name="index" />.</returns>
     </member>
     <member name="P:System.Numerics.Vector2.NaN">
-      <summary>Gets a vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.NaN"></xref>.</summary>
-      <returns>A vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.NaN"></xref> (that is, it returns the vector <code>Create(float.NaN)</code>).</returns>
+      <summary>Gets a vector whose elements are equal to <see cref="P:System.Single.NaN" />.</summary>
+      <returns>A vector whose elements are equal to <see cref="P:System.Single.NaN" /> (that is, it returns the vector <code data-dev-comment-type="c">Create(float.NaN)</code>).</returns>
     </member>
     <member name="P:System.Numerics.Vector2.NegativeInfinity">
-      <summary>Gets a vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.NegativeInfinity"></xref>.</summary>
-      <returns>A vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.NegativeInfinity"></xref> (that is, it returns the vector <code>Create(float.NegativeInfinity)</code>).</returns>
+      <summary>Gets a vector whose elements are equal to <see cref="P:System.Single.NegativeInfinity" />.</summary>
+      <returns>A vector whose elements are equal to <see cref="P:System.Single.NegativeInfinity" /> (that is, it returns the vector <code data-dev-comment-type="c">Create(float.NegativeInfinity)</code>).</returns>
     </member>
     <member name="P:System.Numerics.Vector2.NegativeZero">
-      <summary>Gets a vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.NegativeZero"></xref>.</summary>
-      <returns>A vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.NegativeZero"></xref> (that is, it returns the vector <code>Create(float.NegativeZero)</code>).</returns>
+      <summary>Gets a vector whose elements are equal to <see cref="P:System.Single.NegativeZero" />.</summary>
+      <returns>A vector whose elements are equal to <see cref="P:System.Single.NegativeZero" /> (that is, it returns the vector <code data-dev-comment-type="c">Create(float.NegativeZero)</code>).</returns>
     </member>
     <member name="P:System.Numerics.Vector2.One">
       <summary>Gets a vector whose 2 elements are equal to one.</summary>
       <returns>A vector whose two elements are equal to one (that is, it returns the vector <code>(1,1)</code>).</returns>
     </member>
     <member name="P:System.Numerics.Vector2.Pi">
-      <summary>Gets a vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.Pi"></xref>.</summary>
-      <returns>A vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.Pi"></xref> (that is, it returns the vector <code>Create(float.Pi)</code>).</returns>
+      <summary>Gets a vector whose elements are equal to <see cref="P:System.Single.Pi" />.</summary>
+      <returns>A vector whose elements are equal to <see cref="P:System.Single.Pi" /> (that is, it returns the vector <code data-dev-comment-type="c">Create(float.Pi)</code>).</returns>
     </member>
     <member name="P:System.Numerics.Vector2.PositiveInfinity">
-      <summary>Gets a vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.PositiveInfinity"></xref>.</summary>
-      <returns>A vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.PositiveInfinity"></xref> (that is, it returns the vector <code>Create(float.PositiveInfinity)</code>).</returns>
+      <summary>Gets a vector whose elements are equal to <see cref="P:System.Single.PositiveInfinity" />.</summary>
+      <returns>A vector whose elements are equal to <see cref="P:System.Single.PositiveInfinity" /> (that is, it returns the vector <code data-dev-comment-type="c">Create(float.PositiveInfinity)</code>).</returns>
     </member>
     <member name="P:System.Numerics.Vector2.Tau">
-      <summary>Gets a vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.Tau"></xref>.</summary>
-      <returns>A vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.Tau"></xref> (that is, it returns the vector <code>Create(float.Tau)</code>).</returns>
+      <summary>Gets a vector whose elements are equal to <see cref="P:System.Single.Tau" />.</summary>
+      <returns>A vector whose elements are equal to <see cref="P:System.Single.Tau" /> (that is, it returns the vector <code data-dev-comment-type="c">Create(float.Tau)</code>).</returns>
     </member>
     <member name="P:System.Numerics.Vector2.UnitX">
       <summary>Gets the vector (1,0).</summary>
@@ -3343,7 +3343,7 @@
       <returns>The restricted vector.</returns>
     </member>
     <member name="M:System.Numerics.Vector3.ClampNative(System.Numerics.Vector3,System.Numerics.Vector3,System.Numerics.Vector3)">
-      <summary>Restricts a vector between a minimum and a maximum value using platform specific behavior for <code>NaN</code> and <code>NegativeZero</code>..</summary>
+      <summary>Restricts a vector between a minimum and a maximum value using platform specific behavior for <code data-dev-comment-type="c">NaN</code> and <code data-dev-comment-type="c">NegativeZero</code>..</summary>
       <param name="value1" />
       <param name="min">The minimum value.</param>
       <param name="max">The maximum value.</param>
@@ -3353,7 +3353,7 @@
       <summary>Copies the per-element sign of a vector to the per-element sign of another vector.</summary>
       <param name="value">The vector whose magnitude is used in the result.</param>
       <param name="sign">The vector whose sign is used in the result.</param>
-      <returns>A vector with the magnitude of <code>value</code> and the sign of <code>sign</code>.</returns>
+      <returns>A vector with the magnitude of <code data-dev-comment-type="paramref">value</code> and the sign of <code data-dev-comment-type="paramref">sign</code>.</returns>
     </member>
     <member name="M:System.Numerics.Vector3.CopyTo(System.Single[],System.Int32)">
       <summary>Copies the elements of the vector to a specified array starting at a specified index position.</summary>
@@ -3363,10 +3363,10 @@
         <paramref name="array" /> is <see langword="null" />.</exception>
       <exception cref="T:System.ArgumentException">The number of elements in the current instance is greater than in the array.</exception>
       <exception cref="T:System.ArgumentOutOfRangeException">
-        <paramref name="index" /> is less than zero.  
-  
- -or-  
-  
+        <paramref name="index" /> is less than zero.
+
+ -or-
+
  <paramref name="index" /> is greater than or equal to the array length.</exception>
       <exception cref="T:System.RankException">
         <paramref name="array" /> is multidimensional.</exception>
@@ -3499,7 +3499,7 @@
       <summary>Performs a linear interpolation between two vectors based on the given weighting.</summary>
       <param name="value1">The first vector.</param>
       <param name="value2">The second vector.</param>
-      <param name="amount">A value between 0 and 1 that indicates the weight of <code>value2</code>.</param>
+      <param name="amount">A value between 0 and 1 that indicates the weight of <code data-dev-comment-type="paramref">value2</code>.</param>
       <returns>The interpolated vector.</returns>
     </member>
     <member name="M:System.Numerics.Vector3.Log(System.Numerics.Vector3)">
@@ -3518,25 +3518,25 @@
       <summary>Compares two vectors to compute which has the greater magnitude on a per-element basis.</summary>
       <param name="value1" />
       <param name="value2" />
-      <returns>A vector where the corresponding element comes from <code>left</code> if it has a greater magnitude than <code>right</code>; otherwise, <code>right</code>.</returns>
+      <returns>A vector where the corresponding element comes from <code data-dev-comment-type="paramref">left</code> if it has a greater magnitude than <code data-dev-comment-type="paramref">right</code>; otherwise, <code data-dev-comment-type="paramref">right</code>.</returns>
     </member>
     <member name="M:System.Numerics.Vector3.MaxMagnitudeNumber(System.Numerics.Vector3,System.Numerics.Vector3)">
-      <summary>Compares two vectors, on a per-element basis, to compute which has the greater magnitude and returning the other value if an input is <code>NaN</code>.</summary>
+      <summary>Compares two vectors, on a per-element basis, to compute which has the greater magnitude and returning the other value if an input is <code data-dev-comment-type="c">NaN</code>.</summary>
       <param name="value1" />
       <param name="value2" />
-      <returns>A vector where the corresponding element comes from <code>left</code> if it has a greater magnitude than <code>right</code>; otherwise, <code>right</code>.</returns>
+      <returns>A vector where the corresponding element comes from <code data-dev-comment-type="paramref">left</code> if it has a greater magnitude than <code data-dev-comment-type="paramref">right</code>; otherwise, <code data-dev-comment-type="paramref">right</code>.</returns>
     </member>
     <member name="M:System.Numerics.Vector3.MaxNative(System.Numerics.Vector3,System.Numerics.Vector3)">
-      <summary>Compare two vectors to determine which is greater on a per-element basis using platform specific behavior for <code>NaN</code> and <code>NegativeZero</code>.</summary>
+      <summary>Compare two vectors to determine which is greater on a per-element basis using platform specific behavior for <code data-dev-comment-type="c">NaN</code> and <code data-dev-comment-type="c">NegativeZero</code>.</summary>
       <param name="value1" />
       <param name="value2" />
-      <returns>A vector where the corresponding element comes from <code>left</code> if it is greater than <code>right</code>; otherwise, <code>right</code>.</returns>
+      <returns>A vector where the corresponding element comes from <code data-dev-comment-type="paramref">left</code> if it is greater than <code data-dev-comment-type="paramref">right</code>; otherwise, <code data-dev-comment-type="paramref">right</code>.</returns>
     </member>
     <member name="M:System.Numerics.Vector3.MaxNumber(System.Numerics.Vector3,System.Numerics.Vector3)">
-      <summary>Compares two vectors, on a per-element basis, to compute which is greater and returning the other value if an element is <code>NaN</code>.</summary>
+      <summary>Compares two vectors, on a per-element basis, to compute which is greater and returning the other value if an element is <code data-dev-comment-type="c">NaN</code>.</summary>
       <param name="value1" />
       <param name="value2" />
-      <returns>A vector where the corresponding element comes from <code>left</code> if it is greater than <code>right</code>; otherwise, <code>right</code>.</returns>
+      <returns>A vector where the corresponding element comes from <code data-dev-comment-type="paramref">left</code> if it is greater than <code data-dev-comment-type="paramref">right</code>; otherwise, <code data-dev-comment-type="paramref">right</code>.</returns>
     </member>
     <member name="M:System.Numerics.Vector3.Min(System.Numerics.Vector3,System.Numerics.Vector3)">
       <summary>Returns a vector whose elements are the minimum of each of the pairs of elements in two specified vectors.</summary>
@@ -3548,25 +3548,25 @@
       <summary>Compares two vectors to compute which has the lesser magnitude on a per-element basis.</summary>
       <param name="value1" />
       <param name="value2" />
-      <returns>A vector where the corresponding element comes from <code>left</code> if it has a lesser magnitude than <code>right</code>; otherwise, <code>right</code>.</returns>
+      <returns>A vector where the corresponding element comes from <code data-dev-comment-type="paramref">left</code> if it has a lesser magnitude than <code data-dev-comment-type="paramref">right</code>; otherwise, <code data-dev-comment-type="paramref">right</code>.</returns>
     </member>
     <member name="M:System.Numerics.Vector3.MinMagnitudeNumber(System.Numerics.Vector3,System.Numerics.Vector3)">
-      <summary>Compares two vectors, on a per-element basis, to compute which has the lesser magnitude and returning the other value if an input is <code>NaN</code>.</summary>
+      <summary>Compares two vectors, on a per-element basis, to compute which has the lesser magnitude and returning the other value if an input is <code data-dev-comment-type="c">NaN</code>.</summary>
       <param name="value1" />
       <param name="value2" />
-      <returns>A vector where the corresponding element comes from <code>left</code> if it has a lesser magnitude than <code>right</code>; otherwise, <code>right</code>.</returns>
+      <returns>A vector where the corresponding element comes from <code data-dev-comment-type="paramref">left</code> if it has a lesser magnitude than <code data-dev-comment-type="paramref">right</code>; otherwise, <code data-dev-comment-type="paramref">right</code>.</returns>
     </member>
     <member name="M:System.Numerics.Vector3.MinNative(System.Numerics.Vector3,System.Numerics.Vector3)">
-      <summary>Compare two vectors to determine which is lesser on a per-element basis using platform specific behavior for <code>NaN</code> and <code>NegativeZero</code>.</summary>
+      <summary>Compare two vectors to determine which is lesser on a per-element basis using platform specific behavior for <code data-dev-comment-type="c">NaN</code> and <code data-dev-comment-type="c">NegativeZero</code>.</summary>
       <param name="value1" />
       <param name="value2" />
-      <returns>A vector where the corresponding element comes from <code>left</code> if it is lesser than <code>right</code>; otherwise, <code>right</code>.</returns>
+      <returns>A vector where the corresponding element comes from <code data-dev-comment-type="paramref">left</code> if it is lesser than <code data-dev-comment-type="paramref">right</code>; otherwise, <code data-dev-comment-type="paramref">right</code>.</returns>
     </member>
     <member name="M:System.Numerics.Vector3.MinNumber(System.Numerics.Vector3,System.Numerics.Vector3)">
-      <summary>Compares two vectors, on a per-element basis, to compute which is lesser and returning the other value if an element is <code>NaN</code>.</summary>
+      <summary>Compares two vectors, on a per-element basis, to compute which is lesser and returning the other value if an element is <code data-dev-comment-type="c">NaN</code>.</summary>
       <param name="value1" />
       <param name="value2" />
-      <returns>A vector where the corresponding element comes from <code>left</code> if it is lesser than <code>right</code>; otherwise, <code>right</code>.</returns>
+      <returns>A vector where the corresponding element comes from <code data-dev-comment-type="paramref">left</code> if it is lesser than <code data-dev-comment-type="paramref">right</code>; otherwise, <code data-dev-comment-type="paramref">right</code>.</returns>
     </member>
     <member name="M:System.Numerics.Vector3.Multiply(System.Numerics.Vector3,System.Numerics.Vector3)">
       <summary>Returns a new vector whose values are the product of each pair of elements in two specified vectors.</summary>
@@ -3738,12 +3738,12 @@
         <see langword="true" /> if the source vector was successfully copied to <paramref name="destination" />. <see langword="false" /> if <paramref name="destination" /> is not large enough to hold the source vector.</returns>
     </member>
     <member name="P:System.Numerics.Vector3.E">
-      <summary>Gets a vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.E"></xref>.</summary>
-      <returns>A vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.E"></xref> (that is, it returns the vector <code>Create(float.E)</code>).</returns>
+      <summary>Gets a vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.E" />.</summary>
+      <returns>A vector whose elements are equal to <see cref="P:System.Single.E" /> (that is, it returns the vector <code data-dev-comment-type="c">Create(float.E)</code>).</returns>
     </member>
     <member name="P:System.Numerics.Vector3.Epsilon">
-      <summary>Gets a vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.Epsilon"></xref>.</summary>
-      <returns>A vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.Epsilon"></xref> (that is, it returns the vector <code>Create(float.Epsilon)</code>).</returns>
+      <summary>Gets a vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.Epsilon" />.</summary>
+      <returns>A vector whose elements are equal to <see cref="P:System.Single.Epsilon" /> (that is, it returns the vector <code data-dev-comment-type="c">Create(float.Epsilon)</code>).</returns>
     </member>
     <member name="P:System.Numerics.Vector3.Item(System.Int32)">
       <summary>Gets or sets the element at the specified index.</summary>
@@ -3753,32 +3753,32 @@
       <returns>The the element at <paramref name="index" />.</returns>
     </member>
     <member name="P:System.Numerics.Vector3.NaN">
-      <summary>Gets a vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.NaN"></xref>.</summary>
-      <returns>A vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.NaN"></xref> (that is, it returns the vector <code>Create(float.NaN)</code>).</returns>
+      <summary>Gets a vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.NaN" />.</summary>
+      <returns>A vector whose elements are equal to <see cref="P:System.Single.NaN" /> (that is, it returns the vector <code data-dev-comment-type="c">Create(float.NaN)</code>).</returns>
     </member>
     <member name="P:System.Numerics.Vector3.NegativeInfinity">
-      <summary>Gets a vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.NegativeInfinity"></xref>.</summary>
-      <returns>A vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.NegativeInfinity"></xref> (that is, it returns the vector <code>Create(float.NegativeInfinity)</code>).</returns>
+      <summary>Gets a vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.NegativeInfinity" />.</summary>
+      <returns>A vector whose elements are equal to <see cref="P:System.Single.NegativeInfinity" /> (that is, it returns the vector <code data-dev-comment-type="c">Create(float.NegativeInfinity)</code>).</returns>
     </member>
     <member name="P:System.Numerics.Vector3.NegativeZero">
-      <summary>Gets a vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.NegativeZero"></xref>.</summary>
-      <returns>A vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.NegativeZero"></xref> (that is, it returns the vector <code>Create(float.NegativeZero)</code>).</returns>
+      <summary>Gets a vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.NegativeZero" />.</summary>
+      <returns>A vector whose elements are equal to <see cref="P:System.Single.NegativeZero" /> (that is, it returns the vector <code data-dev-comment-type="c">Create(float.NegativeZero)</code>).</returns>
     </member>
     <member name="P:System.Numerics.Vector3.One">
       <summary>Gets a vector whose 3 elements are equal to one.</summary>
       <returns>A vector whose three elements are equal to one (that is, it returns the vector <code>(1,1,1)</code>).</returns>
     </member>
     <member name="P:System.Numerics.Vector3.Pi">
-      <summary>Gets a vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.Pi"></xref>.</summary>
-      <returns>A vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.Pi"></xref> (that is, it returns the vector <code>Create(float.Pi)</code>).</returns>
+      <summary>Gets a vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.Pi" />.</summary>
+      <returns>A vector whose elements are equal to <see cref="P:System.Single.Pi" /> (that is, it returns the vector <code data-dev-comment-type="c">Create(float.Pi)</code>).</returns>
     </member>
     <member name="P:System.Numerics.Vector3.PositiveInfinity">
-      <summary>Gets a vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.PositiveInfinity"></xref>.</summary>
-      <returns>A vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.PositiveInfinity"></xref> (that is, it returns the vector <code>Create(float.PositiveInfinity)</code>).</returns>
+      <summary>Gets a vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.PositiveInfinity" />.</summary>
+      <returns>A vector whose elements are equal to <see cref="P:System.Single.PositiveInfinity" /> (that is, it returns the vector <code data-dev-comment-type="c">Create(float.PositiveInfinity)</code>).</returns>
     </member>
     <member name="P:System.Numerics.Vector3.Tau">
-      <summary>Gets a vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.Tau"></xref>.</summary>
-      <returns>A vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.Tau"></xref> (that is, it returns the vector <code>Create(float.Tau)</code>).</returns>
+      <summary>Gets a vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.Tau" />.</summary>
+      <returns>A vector whose elements are equal to <see cref="P:System.Single.Tau" /> (that is, it returns the vector <code data-dev-comment-type="c">Create(float.Tau)</code>).</returns>
     </member>
     <member name="P:System.Numerics.Vector3.UnitX">
       <summary>Gets the vector (1,0,0).</summary>
@@ -3856,7 +3856,7 @@
       <returns>The restricted vector.</returns>
     </member>
     <member name="M:System.Numerics.Vector4.ClampNative(System.Numerics.Vector4,System.Numerics.Vector4,System.Numerics.Vector4)">
-      <summary>Restricts a vector between a minimum and a maximum value using platform specific behavior for <code>NaN</code> and <code>NegativeZero</code>..</summary>
+      <summary>Restricts a vector between a minimum and a maximum value using platform specific behavior for <code data-dev-comment-type="c">NaN</code> and <code data-dev-comment-type="c">NegativeZero</code>..</summary>
       <param name="value1" />
       <param name="min">The minimum value.</param>
       <param name="max">The maximum value.</param>
@@ -3866,7 +3866,7 @@
       <summary>Copies the per-element sign of a vector to the per-element sign of another vector.</summary>
       <param name="value">The vector whose magnitude is used in the result.</param>
       <param name="sign">The vector whose sign is used in the result.</param>
-      <returns>A vector with the magnitude of <code>value</code> and the sign of <code>sign</code>.</returns>
+      <returns>A vector with the magnitude of <code data-dev-comment-type="paramref">value</code> and the sign of <code data-dev-comment-type="paramref">sign</code>.</returns>
     </member>
     <member name="M:System.Numerics.Vector4.CopyTo(System.Single[],System.Int32)">
       <summary>Copies the elements of the vector to a specified array starting at a specified index position.</summary>
@@ -4014,7 +4014,7 @@
       <summary>Performs a linear interpolation between two vectors based on the given weighting.</summary>
       <param name="value1">The first vector.</param>
       <param name="value2">The second vector.</param>
-      <param name="amount">A value between 0 and 1 that indicates the weight of <code>value2</code>.</param>
+      <param name="amount">A value between 0 and 1 that indicates the weight of <code data-dev-comment-type="paramref">value2</code>.</param>
       <returns>The interpolated vector.</returns>
     </member>
     <member name="M:System.Numerics.Vector4.Log(System.Numerics.Vector4)">
@@ -4033,25 +4033,25 @@
       <summary>Compares two vectors to compute which has the greater magnitude on a per-element basis.</summary>
       <param name="value1" />
       <param name="value2" />
-      <returns>A vector where the corresponding element comes from <code>left</code> if it has a greater magnitude than <code>right</code>; otherwise, <code>right</code>.</returns>
+      <returns>A vector where the corresponding element comes from <code data-dev-comment-type="paramref">left</code> if it has a greater magnitude than <code data-dev-comment-type="paramref">right</code>; otherwise, <code data-dev-comment-type="paramref">right</code>.</returns>
     </member>
     <member name="M:System.Numerics.Vector4.MaxMagnitudeNumber(System.Numerics.Vector4,System.Numerics.Vector4)">
-      <summary>Compares two vectors, on a per-element basis, to compute which has the greater magnitude and returning the other value if an input is <code>NaN</code>.</summary>
+      <summary>Compares two vectors, on a per-element basis, to compute which has the greater magnitude and returning the other value if an input is <code data-dev-comment-type="c">NaN</code>.</summary>
       <param name="value1" />
       <param name="value2" />
-      <returns>A vector where the corresponding element comes from <code>left</code> if it has a greater magnitude than <code>right</code>; otherwise, <code>right</code>.</returns>
+      <returns>A vector where the corresponding element comes from <code data-dev-comment-type="paramref">left</code> if it has a greater magnitude than <code data-dev-comment-type="paramref">right</code>; otherwise, <code data-dev-comment-type="paramref">right</code>.</returns>
     </member>
     <member name="M:System.Numerics.Vector4.MaxNative(System.Numerics.Vector4,System.Numerics.Vector4)">
-      <summary>Compare two vectors to determine which is greater on a per-element basis using platform specific behavior for <code>NaN</code> and <code>NegativeZero</code>.</summary>
+      <summary>Compare two vectors to determine which is greater on a per-element basis using platform specific behavior for <code data-dev-comment-type="c">NaN</code> and <code data-dev-comment-type="c">NegativeZero</code>.</summary>
       <param name="value1" />
       <param name="value2" />
-      <returns>A vector where the corresponding element comes from <code>left</code> if it is greater than <code>right</code>; otherwise, <code>right</code>.</returns>
+      <returns>A vector where the corresponding element comes from <code data-dev-comment-type="paramref">left</code> if it is greater than <code data-dev-comment-type="paramref">right</code>; otherwise, <code data-dev-comment-type="paramref">right</code>.</returns>
     </member>
     <member name="M:System.Numerics.Vector4.MaxNumber(System.Numerics.Vector4,System.Numerics.Vector4)">
-      <summary>Compares two vectors, on a per-element basis, to compute which is greater and returning the other value if an element is <code>NaN</code>.</summary>
+      <summary>Compares two vectors, on a per-element basis, to compute which is greater and returning the other value if an element is <code data-dev-comment-type="c">NaN</code>.</summary>
       <param name="value1" />
       <param name="value2" />
-      <returns>A vector where the corresponding element comes from <code>left</code> if it is greater than <code>right</code>; otherwise, <code>right</code>.</returns>
+      <returns>A vector where the corresponding element comes from <code data-dev-comment-type="paramref">left</code> if it is greater than <code data-dev-comment-type="paramref">right</code>; otherwise, <code data-dev-comment-type="paramref">right</code>.</returns>
     </member>
     <member name="M:System.Numerics.Vector4.Min(System.Numerics.Vector4,System.Numerics.Vector4)">
       <summary>Returns a vector whose elements are the minimum of each of the pairs of elements in two specified vectors.</summary>
@@ -4063,25 +4063,25 @@
       <summary>Compares two vectors to compute which has the lesser magnitude on a per-element basis.</summary>
       <param name="value1" />
       <param name="value2" />
-      <returns>A vector where the corresponding element comes from <code>left</code> if it has a lesser magnitude than <code>right</code>; otherwise, <code>right</code>.</returns>
+      <returns>A vector where the corresponding element comes from <code data-dev-comment-type="paramref">left</code> if it has a lesser magnitude than <code data-dev-comment-type="paramref">right</code>; otherwise, <code data-dev-comment-type="paramref">right</code>.</returns>
     </member>
     <member name="M:System.Numerics.Vector4.MinMagnitudeNumber(System.Numerics.Vector4,System.Numerics.Vector4)">
-      <summary>Compares two vectors, on a per-element basis, to compute which has the lesser magnitude and returning the other value if an input is <code>NaN</code>.</summary>
+      <summary>Compares two vectors, on a per-element basis, to compute which has the lesser magnitude and returning the other value if an input is <code data-dev-comment-type="c">NaN</code>.</summary>
       <param name="value1" />
       <param name="value2" />
-      <returns>A vector where the corresponding element comes from <code>left</code> if it has a lesser magnitude than <code>right</code>; otherwise, <code>right</code>.</returns>
+      <returns>A vector where the corresponding element comes from <code data-dev-comment-type="paramref">left</code> if it has a lesser magnitude than <code data-dev-comment-type="paramref">right</code>; otherwise, <code data-dev-comment-type="paramref">right</code>.</returns>
     </member>
     <member name="M:System.Numerics.Vector4.MinNative(System.Numerics.Vector4,System.Numerics.Vector4)">
-      <summary>Compare two vectors to determine which is lesser on a per-element basis using platform specific behavior for <code>NaN</code> and <code>NegativeZero</code>.</summary>
+      <summary>Compare two vectors to determine which is lesser on a per-element basis using platform specific behavior for <code data-dev-comment-type="c">NaN</code> and <code data-dev-comment-type="c">NegativeZero</code>.</summary>
       <param name="value1" />
       <param name="value2" />
-      <returns>A vector where the corresponding element comes from <code>left</code> if it is lesser than <code>right</code>; otherwise, <code>right</code>.</returns>
+      <returns>A vector where the corresponding element comes from <code data-dev-comment-type="paramref">left</code> if it is lesser than <code data-dev-comment-type="paramref">right</code>; otherwise, <code data-dev-comment-type="paramref">right</code>.</returns>
     </member>
     <member name="M:System.Numerics.Vector4.MinNumber(System.Numerics.Vector4,System.Numerics.Vector4)">
-      <summary>Compares two vectors, on a per-element basis, to compute which is lesser and returning the other value if an element is <code>NaN</code>.</summary>
+      <summary>Compares two vectors, on a per-element basis, to compute which is lesser and returning the other value if an element is <code data-dev-comment-type="c">NaN</code>.</summary>
       <param name="value1" />
       <param name="value2" />
-      <returns>A vector where the corresponding element comes from <code>left</code> if it is lesser than <code>right</code>; otherwise, <code>right</code>.</returns>
+      <returns>A vector where the corresponding element comes from <code data-dev-comment-type="paramref">left</code> if it is lesser than <code data-dev-comment-type="paramref">right</code>; otherwise, <code data-dev-comment-type="paramref">right</code>.</returns>
     </member>
     <member name="M:System.Numerics.Vector4.Multiply(System.Numerics.Vector4,System.Numerics.Vector4)">
       <summary>Returns a new vector whose values are the product of each pair of elements in two specified vectors.</summary>

@@ -34672,12 +34672,15 @@
     <member name="T:System.Windows.MessageBoxButton">
       <summary>Specifies the buttons that are displayed on a message box. Used as an argument of the <see cref="Overload:System.Windows.MessageBox.Show" /> method.</summary>
     </member>
+    <member name="F:System.Windows.MessageBoxButton.AbortRetryIgnore" />
+    <member name="F:System.Windows.MessageBoxButton.CancelTryContinue" />
     <member name="F:System.Windows.MessageBoxButton.OK">
       <summary>The message box displays an OK button.</summary>
     </member>
     <member name="F:System.Windows.MessageBoxButton.OKCancel">
       <summary>The message box displays OK and Cancel buttons.</summary>
     </member>
+    <member name="F:System.Windows.MessageBoxButton.RetryCancel" />
     <member name="F:System.Windows.MessageBoxButton.YesNo">
       <summary>The message box displays Yes and No buttons.</summary>
     </member>
@@ -34735,9 +34738,12 @@
     <member name="T:System.Windows.MessageBoxResult">
       <summary>Specifies which message box button that a user clicks. <see cref="T:System.Windows.MessageBoxResult" /> is returned by the <see cref="Overload:System.Windows.MessageBox.Show" /> method.</summary>
     </member>
+    <member name="F:System.Windows.MessageBoxResult.Abort" />
     <member name="F:System.Windows.MessageBoxResult.Cancel">
       <summary>The result value of the message box is Cancel.</summary>
     </member>
+    <member name="F:System.Windows.MessageBoxResult.Continue" />
+    <member name="F:System.Windows.MessageBoxResult.Ignore" />
     <member name="F:System.Windows.MessageBoxResult.No">
       <summary>The result value of the message box is No.</summary>
     </member>
@@ -34747,6 +34753,8 @@
     <member name="F:System.Windows.MessageBoxResult.OK">
       <summary>The result value of the message box is OK.</summary>
     </member>
+    <member name="F:System.Windows.MessageBoxResult.Retry" />
+    <member name="F:System.Windows.MessageBoxResult.TryAgain" />
     <member name="F:System.Windows.MessageBoxResult.Yes">
       <summary>The result value of the message box is Yes.</summary>
     </member>

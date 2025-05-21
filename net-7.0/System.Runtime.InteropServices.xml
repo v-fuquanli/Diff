@@ -5400,91 +5400,91 @@ Note: In .NET for Windows Store apps or the Portable Class Library, catch the ba
     <member name="M:System.Runtime.InteropServices.NFloat.Abs(System.Runtime.InteropServices.NFloat)">
       <summary>Computes the absolute of a value.</summary>
       <param name="value">The value for which to get its absolute.</param>
-      <returns>The absolute of <code data-dev-comment-type="paramref">value</code>.</returns>
+      <returns>The absolute of <paramref name="value" />.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.Acos(System.Runtime.InteropServices.NFloat)">
       <summary>Computes the arc-cosine of a value.</summary>
       <param name="x">The value, in radians, whose arc-cosine is to be computed.</param>
-      <returns>The arc-cosine of <code data-dev-comment-type="paramref">x</code>.</returns>
+      <returns>The arc-cosine of <paramref name="x" />.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.Acosh(System.Runtime.InteropServices.NFloat)">
       <summary>Computes the hyperbolic arc-cosine of a value.</summary>
       <param name="x">The value, in radians, whose hyperbolic arc-cosine is to be computed.</param>
-      <returns>The hyperbolic arc-cosine of <code data-dev-comment-type="paramref">x</code>.</returns>
+      <returns>The hyperbolic arc-cosine of <paramref name="x" />.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.AcosPi(System.Runtime.InteropServices.NFloat)">
-      <summary>Computes the arc-cosine of a value and divides the result by <code data-dev-comment-type="c">pi</code>.</summary>
+      <summary>Computes the arc-cosine of a value and divides the result by <c>pi</c>.</summary>
       <param name="x">The value whose arc-cosine is to be computed.</param>
-      <returns>The arc-cosine of <code data-dev-comment-type="paramref">x</code>, divided by <code data-dev-comment-type="c">pi</code>.</returns>
+      <returns>The arc-cosine of <paramref name="x" />, divided by <c>pi</c>.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.Asin(System.Runtime.InteropServices.NFloat)">
       <summary>Computes the arc-sine of a value.</summary>
       <param name="x">The value, in radians, whose arc-sine is to be computed.</param>
-      <returns>The arc-sine of <code data-dev-comment-type="paramref">x</code>.</returns>
+      <returns>The arc-sine of <paramref name="x" />.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.Asinh(System.Runtime.InteropServices.NFloat)">
       <summary>Computes the hyperbolic arc-sine of a value.</summary>
       <param name="x">The value, in radians, whose hyperbolic arc-sine is to be computed.</param>
-      <returns>The hyperbolic arc-sine of <code data-dev-comment-type="paramref">x</code>.</returns>
+      <returns>The hyperbolic arc-sine of <paramref name="x" />.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.AsinPi(System.Runtime.InteropServices.NFloat)">
-      <summary>Computes the arc-sine of a value and divides the result by <code data-dev-comment-type="c">pi</code>.</summary>
+      <summary>Computes the arc-sine of a value and divides the result by <c>pi</c>.</summary>
       <param name="x">The value whose arc-sine is to be computed.</param>
-      <returns>The arc-sine of <code data-dev-comment-type="paramref">x</code>, divided by <code data-dev-comment-type="c">pi</code>.</returns>
+      <returns>The arc-sine of <paramref name="x" />, divided by <c>pi</c>.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.Atan(System.Runtime.InteropServices.NFloat)">
       <summary>Computes the arc-tangent of a value.</summary>
       <param name="x">The value, in radians, whose arc-tangent is to be computed.</param>
-      <returns>The arc-tangent of <code data-dev-comment-type="paramref">x</code>.</returns>
+      <returns>The arc-tangent of <paramref name="x" />.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.Atan2(System.Runtime.InteropServices.NFloat,System.Runtime.InteropServices.NFloat)">
       <summary>Computes the arc-tangent of the quotient of two values.</summary>
       <param name="y">The y-coordinate of a point.</param>
       <param name="x">The x-coordinate of a point.</param>
-      <returns>The arc-tangent of <code data-dev-comment-type="paramref">y</code> divided-by <code data-dev-comment-type="paramref">x</code>.</returns>
+      <returns>The arc-tangent of <paramref name="y" /> divided-by <paramref name="x" />.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.Atan2Pi(System.Runtime.InteropServices.NFloat,System.Runtime.InteropServices.NFloat)">
-      <summary>Computes the arc-tangent for the quotient of two values and divides the result by <code data-dev-comment-type="c">pi</code>.</summary>
+      <summary>Computes the arc-tangent for the quotient of two values and divides the result by <c>pi</c>.</summary>
       <param name="y">The y-coordinate of a point.</param>
       <param name="x">The x-coordinate of a point.</param>
-      <returns>The arc-tangent of <code data-dev-comment-type="paramref">y</code> divided-by <code data-dev-comment-type="paramref">x</code>, divided by <code data-dev-comment-type="c">pi</code>.</returns>
+      <returns>The arc-tangent of <paramref name="y" /> divided-by <paramref name="x" />, divided by <c>pi</c>.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.Atanh(System.Runtime.InteropServices.NFloat)">
       <summary>Computes the hyperbolic arc-tangent of a value.</summary>
       <param name="x">The value, in radians, whose hyperbolic arc-tangent is to be computed.</param>
-      <returns>The hyperbolic arc-tangent of <code data-dev-comment-type="paramref">x</code>.</returns>
+      <returns>The hyperbolic arc-tangent of <paramref name="x" />.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.AtanPi(System.Runtime.InteropServices.NFloat)">
       <summary>Computes the arc-tangent of a value and divides the result by pi.</summary>
       <param name="x">The value whose arc-tangent is to be computed.</param>
-      <returns>The arc-tangent of <code data-dev-comment-type="paramref">x</code>, divided by <code data-dev-comment-type="c">pi</code>.</returns>
+      <returns>The arc-tangent of <paramref name="x" />, divided by <c>pi</c>.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.BitDecrement(System.Runtime.InteropServices.NFloat)">
       <summary>Decrements a value to the smallest value that compares less than a given value.</summary>
       <param name="x">The value to be bitwise decremented.</param>
-      <returns>The smallest value that compares less than <code data-dev-comment-type="paramref">x</code>.</returns>
+      <returns>The smallest value that compares less than <paramref name="x" />.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.BitIncrement(System.Runtime.InteropServices.NFloat)">
       <summary>Increments a value to the smallest value that compares greater than a given value.</summary>
       <param name="x">The value to be bitwise incremented.</param>
-      <returns>The smallest value that compares greater than <code data-dev-comment-type="paramref">x</code>.</returns>
+      <returns>The smallest value that compares greater than <paramref name="x" />.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.Cbrt(System.Runtime.InteropServices.NFloat)">
       <summary>Computes the cube-root of a value.</summary>
       <param name="x">The value whose cube-root is to be computed.</param>
-      <returns>The cube-root of <code data-dev-comment-type="paramref">x</code>.</returns>
+      <returns>The cube-root of <paramref name="x" />.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.Ceiling(System.Runtime.InteropServices.NFloat)">
       <summary>Computes the ceiling of a value.</summary>
       <param name="x">The value whose ceiling is to be computed.</param>
-      <returns>The ceiling of <code data-dev-comment-type="paramref">x</code>.</returns>
+      <returns>The ceiling of <paramref name="x" />.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.Clamp(System.Runtime.InteropServices.NFloat,System.Runtime.InteropServices.NFloat,System.Runtime.InteropServices.NFloat)">
       <summary>Clamps a value to an inclusive minimum and maximum value.</summary>
       <param name="value">The value to clamp.</param>
-      <param name="min">The inclusive minimum to which <code data-dev-comment-type="paramref">value</code> should clamp.</param>
-      <param name="max">The inclusive maximum to which <code data-dev-comment-type="paramref">value</code> should clamp.</param>
-      <returns>The result of clamping <code data-dev-comment-type="paramref">value</code> to the inclusive range of <code data-dev-comment-type="paramref">min</code> and <code data-dev-comment-type="paramref">max</code>.</returns>
+      <param name="min">The inclusive minimum to which <paramref name="value" /> should clamp.</param>
+      <param name="max">The inclusive maximum to which <paramref name="value" /> should clamp.</param>
+      <returns>The result of clamping <paramref name="value" /> to the inclusive range of <paramref name="min" /> and <paramref name="max" />.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.CompareTo(System.Object)">
       <summary>Compares this instance to a specified object and returns an integer that indicates whether the value of this instance is less than, equal to, or greater than the value of the specified object.</summary>
@@ -5542,40 +5542,40 @@ Note: In .NET for Windows Store apps or the Portable Class Library, catch the ba
       <summary>Copies the sign of a value to the sign of another value.</summary>
       <param name="value">The value whose magnitude is used in the result.</param>
       <param name="sign">The value whose sign is used in the result.</param>
-      <returns>A value with the magnitude of <code data-dev-comment-type="paramref">value</code> and the sign of <code data-dev-comment-type="paramref">sign</code>.</returns>
+      <returns>A value with the magnitude of <paramref name="value" /> and the sign of <paramref name="sign" />.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.Cos(System.Runtime.InteropServices.NFloat)">
       <summary>Computes the cosine of a value.</summary>
       <param name="x">The value, in radians, whose cosine is to be computed.</param>
-      <returns>The cosine of <code data-dev-comment-type="paramref">x</code>.</returns>
+      <returns>The cosine of <paramref name="x" />.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.Cosh(System.Runtime.InteropServices.NFloat)">
       <summary>Computes the hyperbolic cosine of a value.</summary>
       <param name="x">The value, in radians, whose hyperbolic cosine is to be computed.</param>
-      <returns>The hyperbolic cosine of <code data-dev-comment-type="paramref">x</code>.</returns>
+      <returns>The hyperbolic cosine of <paramref name="x" />.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.CosPi(System.Runtime.InteropServices.NFloat)">
-      <summary>Computes the cosine of a value that has been multipled by <code data-dev-comment-type="c">pi</code>.</summary>
+      <summary>Computes the cosine of a value that has been multipled by <c>pi</c>.</summary>
       <param name="x">The value, in half-revolutions, whose cosine is to be computed.</param>
-      <returns>The cosine of <code data-dev-comment-type="paramref">x</code> multiplied-by <code data-dev-comment-type="c">pi</code>.</returns>
+      <returns>The cosine of <paramref name="x" /> multiplied-by <c>pi</c>.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.CreateChecked``1(``0)">
       <summary>Creates an instance of the current type from a value, throwing an overflow exception for any values that fall outside the representable range of the current type.</summary>
-      <param name="value">The value that's used to create the instance of <code data-dev-comment-type="typeparamref">TSelf</code>.</param>
-      <typeparam name="TOther">The type of <code data-dev-comment-type="paramref">value</code>.</typeparam>
-      <returns>An instance of <code data-dev-comment-type="typeparamref">TSelf</code> created from <code data-dev-comment-type="paramref">value</code>.</returns>
+      <param name="value">The value that's used to create the instance of <typeparamref name="TSelf" />.</param>
+      <typeparam name="TOther">The type of <paramref name="value" />.</typeparam>
+      <returns>An instance of <typeparamref name="TSelf" /> created from <paramref name="value" />.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.CreateSaturating``1(``0)">
       <summary>Creates an instance of the current type from a value, saturating any values that fall outside the representable range of the current type.</summary>
-      <param name="value">The value that's used to create the instance of <code data-dev-comment-type="typeparamref">TSelf</code>.</param>
-      <typeparam name="TOther">The type of <code data-dev-comment-type="paramref">value</code>.</typeparam>
-      <returns>An instance of <code data-dev-comment-type="typeparamref">TSelf</code> created from <code data-dev-comment-type="paramref">value</code>, saturating if <code data-dev-comment-type="paramref">value</code> falls outside the representable range of <code data-dev-comment-type="typeparamref">TSelf</code>.</returns>
+      <param name="value">The value that's used to create the instance of <typeparamref name="TSelf" />.</param>
+      <typeparam name="TOther">The type of <paramref name="value" />.</typeparam>
+      <returns>An instance of <typeparamref name="TSelf" /> created from <paramref name="value" />, saturating if <paramref name="value" /> falls outside the representable range of <typeparamref name="TSelf" />.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.CreateTruncating``1(``0)">
       <summary>Creates an instance of the current type from a value, truncating any values that fall outside the representable range of the current type.</summary>
-      <param name="value">The value that's used to create the instance of <code data-dev-comment-type="typeparamref">TSelf</code>.</param>
-      <typeparam name="TOther">The type of <code data-dev-comment-type="paramref">value</code>.</typeparam>
-      <returns>An instance of <code data-dev-comment-type="typeparamref">TSelf</code> created from <code data-dev-comment-type="paramref">value</code>, truncating if <code data-dev-comment-type="paramref">value</code> falls outside the representable range of <code data-dev-comment-type="typeparamref">TSelf</code>.</returns>
+      <param name="value">The value that's used to create the instance of <typeparamref name="TSelf" />.</param>
+      <typeparam name="TOther">The type of <paramref name="value" />.</typeparam>
+      <returns>An instance of <typeparamref name="TSelf" /> created from <paramref name="value" />, truncating if <paramref name="value" /> falls outside the representable range of <typeparamref name="TSelf" />.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.Equals(System.Object)">
       <summary>Returns a value indicating whether this instance is equal to a specified object.</summary>
@@ -5590,57 +5590,57 @@ Note: In .NET for Windows Store apps or the Portable Class Library, catch the ba
         <see langword="true" /> if <paramref name="other" /> has the same value as this instance; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.Exp(System.Runtime.InteropServices.NFloat)">
-      <summary>Computes <code data-dev-comment-type="c">E</code> raised to a given power.</summary>
-      <param name="x">The power to which <code data-dev-comment-type="c">E</code> is raised.</param>
+      <summary>Computes <c>E</c> raised to a given power.</summary>
+      <param name="x">The power to which <c>E</c> is raised.</param>
       <returns>
-        <code data-dev-comment-type="c">E</code> raised to the power of <code data-dev-comment-type="paramref">x</code>.</returns>
+        <c>E</c> raised to the power of <paramref name="x" />.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.Exp10(System.Runtime.InteropServices.NFloat)">
-      <summary>Computes <code data-dev-comment-type="c">10</code> raised to a given power.</summary>
-      <param name="x">The power to which <code data-dev-comment-type="c">10</code> is raised.</param>
+      <summary>Computes <c>10</c> raised to a given power.</summary>
+      <param name="x">The power to which <c>10</c> is raised.</param>
       <returns>
-        <code data-dev-comment-type="c">10x</code>
+        <c>10<sup><paramref name="x" /></sup></c>
       </returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.Exp10M1(System.Runtime.InteropServices.NFloat)">
-      <summary>Computes <code data-dev-comment-type="c">10</code> raised to a given power and subtracts one.</summary>
-      <param name="x">The power to which <code data-dev-comment-type="c">10</code> is raised.</param>
+      <summary>Computes <c>10</c> raised to a given power and subtracts one.</summary>
+      <param name="x">The power to which <c>10</c> is raised.</param>
       <returns>
-        <code data-dev-comment-type="c">10x - 1</code>
+        <c>10<sup><paramref name="x" /></sup> - 1</c>
       </returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.Exp2(System.Runtime.InteropServices.NFloat)">
-      <summary>Computes <code data-dev-comment-type="c">2</code> raised to a given power.</summary>
-      <param name="x">The power to which <code data-dev-comment-type="c">2</code> is raised.</param>
+      <summary>Computes <c>2</c> raised to a given power.</summary>
+      <param name="x">The power to which <c>2</c> is raised.</param>
       <returns>
-        <code data-dev-comment-type="c">2x</code>
+        <c>2<sup><paramref name="x" /></sup></c>
       </returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.Exp2M1(System.Runtime.InteropServices.NFloat)">
-      <summary>Computes <code data-dev-comment-type="c">2</code> raised to a given power and subtracts one.</summary>
-      <param name="x">The power to which <code data-dev-comment-type="c">2</code> is raised.</param>
+      <summary>Computes <c>2</c> raised to a given power and subtracts one.</summary>
+      <param name="x">The power to which <c>2</c> is raised.</param>
       <returns>
-        <code data-dev-comment-type="c">2x - 1</code>
+        <c>2<sup><paramref name="x" /></sup> - 1</c>
       </returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.ExpM1(System.Runtime.InteropServices.NFloat)">
-      <summary>Computes <code data-dev-comment-type="c">E</code> raised to a given power and subtracts one.</summary>
-      <param name="x">The power to which <code data-dev-comment-type="c">E</code> is raised.</param>
+      <summary>Computes <c>E</c> raised to a given power and subtracts one.</summary>
+      <param name="x">The power to which <c>E</c> is raised.</param>
       <returns>
-        <code data-dev-comment-type="c">Ex - 1</code>
+        <c>E<sup><paramref name="x" /></sup> - 1</c>
       </returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.Floor(System.Runtime.InteropServices.NFloat)">
       <summary>Computes the floor of a value.</summary>
       <param name="x">The value whose floor is to be computed.</param>
-      <returns>The floor of <code data-dev-comment-type="paramref">x</code>.</returns>
+      <returns>The floor of <paramref name="x" />.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.FusedMultiplyAdd(System.Runtime.InteropServices.NFloat,System.Runtime.InteropServices.NFloat,System.Runtime.InteropServices.NFloat)">
       <summary>Computes the fused multiply-add of three values.</summary>
-      <param name="left">The value that <code data-dev-comment-type="paramref">right</code> multiplies.</param>
-      <param name="right">The value that multiplies <code data-dev-comment-type="paramref">left</code>.</param>
-      <param name="addend">The value that is added to the product of <code data-dev-comment-type="paramref">left</code> and <code data-dev-comment-type="paramref">right</code>.</param>
-      <returns>The result of <code data-dev-comment-type="paramref">left</code> times <code data-dev-comment-type="paramref">right</code> plus <code data-dev-comment-type="paramref">addend</code> computed as one ternary operation.</returns>
+      <param name="left">The value that <paramref name="right" /> multiplies.</param>
+      <param name="right">The value that multiplies <paramref name="left" />.</param>
+      <param name="addend">The value that is added to the product of <paramref name="left" /> and <paramref name="right" />.</param>
+      <returns>The result of <paramref name="left" /> times <paramref name="right" /> plus <paramref name="addend" /> computed as one ternary operation.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.GetHashCode">
       <summary>Returns the hash code for this instance.</summary>
@@ -5648,26 +5648,26 @@ Note: In .NET for Windows Store apps or the Portable Class Library, catch the ba
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.Hypot(System.Runtime.InteropServices.NFloat,System.Runtime.InteropServices.NFloat)">
       <summary>Computes the hypotenuse given two values representing the lengths of the shorter sides in a right-angled triangle.</summary>
-      <param name="x">The value to square and add to <code data-dev-comment-type="paramref">y</code>.</param>
-      <param name="y">The value to square and add to <code data-dev-comment-type="paramref">x</code>.</param>
-      <returns>The square root of <code data-dev-comment-type="paramref">x</code>-squared plus <code data-dev-comment-type="paramref">y</code>-squared.</returns>
+      <param name="x">The value to square and add to <paramref name="y" />.</param>
+      <param name="y">The value to square and add to <paramref name="x" />.</param>
+      <returns>The square root of <paramref name="x" />-squared plus <paramref name="y" />-squared.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.Ieee754Remainder(System.Runtime.InteropServices.NFloat,System.Runtime.InteropServices.NFloat)">
       <summary>Computes the remainder of two values as specified by IEEE 754.</summary>
-      <param name="left">The value that <code data-dev-comment-type="paramref">right</code> divides.</param>
-      <param name="right">The value that divides <code data-dev-comment-type="paramref">left</code>.</param>
-      <returns>The remainder of <code data-dev-comment-type="paramref">left</code> divided by <code data-dev-comment-type="paramref">right</code> as specified by IEEE 754.</returns>
+      <param name="left">The value that <paramref name="right" /> divides.</param>
+      <param name="right">The value that divides <paramref name="left" />.</param>
+      <returns>The remainder of <paramref name="left" /> divided by <paramref name="right" /> as specified by IEEE 754.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.ILogB(System.Runtime.InteropServices.NFloat)">
       <summary>Computes the integer logarithm of a value.</summary>
       <param name="x">The value whose integer logarithm is to be computed.</param>
-      <returns>The integer logarithm of <code data-dev-comment-type="paramref">x</code>.</returns>
+      <returns>The integer logarithm of <paramref name="x" />.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.IsEvenInteger(System.Runtime.InteropServices.NFloat)">
       <summary>Determines if a value represents an even integral number.</summary>
       <param name="value">The value to be checked.</param>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if <code data-dev-comment-type="paramref">value</code> is an even integer; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if <paramref name="value" /> is an even integer; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.IsFinite(System.Runtime.InteropServices.NFloat)">
       <summary>Determines whether the specified value is finite (zero, subnormal, or normal).</summary>
@@ -5685,7 +5685,7 @@ Note: In .NET for Windows Store apps or the Portable Class Library, catch the ba
       <summary>Determines if a value represents an integral number.</summary>
       <param name="value">The value to be checked.</param>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if <code data-dev-comment-type="paramref">value</code> is an integer; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if <paramref name="value" /> is an integer; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.IsNaN(System.Runtime.InteropServices.NFloat)">
       <summary>Determines whether the specified value is NaN (not a number).</summary>
@@ -5715,13 +5715,13 @@ Note: In .NET for Windows Store apps or the Portable Class Library, catch the ba
       <summary>Determines if a value represents an odd integral number.</summary>
       <param name="value">The value to be checked.</param>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if <code data-dev-comment-type="paramref">value</code> is an odd integer; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if <paramref name="value" /> is an odd integer; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.IsPositive(System.Runtime.InteropServices.NFloat)">
       <summary>Determines if a value is positive.</summary>
       <param name="value">The value to be checked.</param>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if <code data-dev-comment-type="paramref">value</code> is positive; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if <paramref name="value" /> is positive; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.IsPositiveInfinity(System.Runtime.InteropServices.NFloat)">
       <summary>Determines whether the specified value is positive infinity.</summary>
@@ -5733,13 +5733,13 @@ Note: In .NET for Windows Store apps or the Portable Class Library, catch the ba
       <summary>Determines if a value is a power of two.</summary>
       <param name="value">The value to be checked.</param>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if <code data-dev-comment-type="paramref">value</code> is a power of two; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if <paramref name="value" /> is a power of two; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.IsRealNumber(System.Runtime.InteropServices.NFloat)">
       <summary>Determines if a value represents a real number.</summary>
       <param name="value">The value to be checked.</param>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if <code data-dev-comment-type="paramref">value</code> is a real number; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if <paramref name="value" /> is a real number; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.IsSubnormal(System.Runtime.InteropServices.NFloat)">
       <summary>Determines whether the specified value is subnormal.</summary>
@@ -5751,99 +5751,99 @@ Note: In .NET for Windows Store apps or the Portable Class Library, catch the ba
       <summary>Computes the logarithm of a value in the specified base.</summary>
       <param name="x">The value whose logarithm is to be computed.</param>
       <param name="newBase">The base in which the logarithm is to be computed.</param>
-      <returns>The base-<code data-dev-comment-type="paramref">newBase</code> logarithm of <code data-dev-comment-type="paramref">x</code>.</returns>
+      <returns>The base-<paramref name="newBase" /> logarithm of <paramref name="x" />.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.Log(System.Runtime.InteropServices.NFloat)">
-      <summary>Computes the natural (<code data-dev-comment-type="c">base-E</code> logarithm of a value.</summary>
+      <summary>Computes the natural (<c>base-E</c> logarithm of a value.</summary>
       <param name="x">The value whose natural logarithm is to be computed.</param>
-      <returns>The natural logarithm of <code data-dev-comment-type="paramref">x</code>.</returns>
+      <returns>The natural logarithm of <paramref name="x" />.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.Log10(System.Runtime.InteropServices.NFloat)">
       <summary>Computes the base-10 logarithm of a value.</summary>
       <param name="x">The value whose base-10 logarithm is to be computed.</param>
-      <returns>The base-10 logarithm of <code data-dev-comment-type="paramref">x</code>.</returns>
+      <returns>The base-10 logarithm of <paramref name="x" />.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.Log10P1(System.Runtime.InteropServices.NFloat)">
       <summary>Computes the base-10 logarithm of a value plus one.</summary>
       <param name="x">The value to which one is added before computing the base-10 logarithm.</param>
       <returns>
-        <code data-dev-comment-type="c">log<sub>10</sub>(<code data-dev-comment-type="paramref">x</code> + 1)</code>
+        <c>log<sub>10</sub>(<paramref name="x" /> + 1)</c>
       </returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.Log2(System.Runtime.InteropServices.NFloat)">
       <summary>Computes the log2 of a value.</summary>
       <param name="value">The value whose log2 is to be computed.</param>
-      <returns>The log2 of <code data-dev-comment-type="paramref">value</code>.</returns>
+      <returns>The log2 of <paramref name="value" />.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.Log2P1(System.Runtime.InteropServices.NFloat)">
       <summary>Computes the base-2 logarithm of a value plus one.</summary>
       <param name="x">The value to which one is added before computing the base-2 logarithm.</param>
       <returns>
-        <code data-dev-comment-type="c">log<sub>2</sub>(<code data-dev-comment-type="paramref">x</code> + 1)</code>
+        <c>log<sub>2</sub>(<paramref name="x" /> + 1)</c>
       </returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.LogP1(System.Runtime.InteropServices.NFloat)">
-      <summary>Computes the natural (<code data-dev-comment-type="c">base-E</code>) logarithm of a value plus one.</summary>
+      <summary>Computes the natural (<c>base-E</c>) logarithm of a value plus one.</summary>
       <param name="x">The value to which one is added before computing the natural logarithm.</param>
       <returns>
-        <code data-dev-comment-type="c">log<sub>e</sub>(<code data-dev-comment-type="paramref">x</code> + 1)</code>
+        <c>log<sub>e</sub>(<paramref name="x" /> + 1)</c>
       </returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.Max(System.Runtime.InteropServices.NFloat,System.Runtime.InteropServices.NFloat)">
       <summary>Compares two values to compute which is greater.</summary>
-      <param name="x">The value to compare with <code data-dev-comment-type="paramref">y</code>.</param>
-      <param name="y">The value to compare with <code data-dev-comment-type="paramref">x</code>.</param>
+      <param name="x">The value to compare with <paramref name="y" />.</param>
+      <param name="y">The value to compare with <paramref name="x" />.</param>
       <returns>
-        <code data-dev-comment-type="paramref">x</code> if it is greater than <code data-dev-comment-type="paramref">y</code>; otherwise, <code data-dev-comment-type="paramref">y</code>.</returns>
+        <paramref name="x" /> if it is greater than <paramref name="y" />; otherwise, <paramref name="y" />.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.MaxMagnitude(System.Runtime.InteropServices.NFloat,System.Runtime.InteropServices.NFloat)">
       <summary>Compares two values to compute which is greater.</summary>
-      <param name="x">The value to compare with <code data-dev-comment-type="paramref">y</code>.</param>
-      <param name="y">The value to compare with <code data-dev-comment-type="paramref">x</code>.</param>
+      <param name="x">The value to compare with <paramref name="y" />.</param>
+      <param name="y">The value to compare with <paramref name="x" />.</param>
       <returns>
-        <code data-dev-comment-type="paramref">x</code> if it is greater than <code data-dev-comment-type="paramref">y</code>; otherwise, <code data-dev-comment-type="paramref">y</code>.</returns>
+        <paramref name="x" /> if it is greater than <paramref name="y" />; otherwise, <paramref name="y" />.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.MaxMagnitudeNumber(System.Runtime.InteropServices.NFloat,System.Runtime.InteropServices.NFloat)">
-      <summary>Compares two values to compute which has the greater magnitude and returning the other value if an input is <code data-dev-comment-type="c">NaN</code>.</summary>
-      <param name="x">The value to compare with <code data-dev-comment-type="paramref">y</code>.</param>
-      <param name="y">The value to compare with <code data-dev-comment-type="paramref">x</code>.</param>
+      <summary>Compares two values to compute which has the greater magnitude and returning the other value if an input is <c>NaN</c>.</summary>
+      <param name="x">The value to compare with <paramref name="y" />.</param>
+      <param name="y">The value to compare with <paramref name="x" />.</param>
       <returns>
-        <code data-dev-comment-type="paramref">x</code> if it is greater than <code data-dev-comment-type="paramref">y</code>; otherwise, <code data-dev-comment-type="paramref">y</code>.</returns>
+        <paramref name="x" /> if it is greater than <paramref name="y" />; otherwise, <paramref name="y" />.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.MaxNumber(System.Runtime.InteropServices.NFloat,System.Runtime.InteropServices.NFloat)">
-      <summary>Compares two values to compute which is greater and returning the other value if an input is <code data-dev-comment-type="c">NaN</code>.</summary>
-      <param name="x">The value to compare with <code data-dev-comment-type="paramref">y</code>.</param>
-      <param name="y">The value to compare with <code data-dev-comment-type="paramref">x</code>.</param>
+      <summary>Compares two values to compute which is greater and returning the other value if an input is <c>NaN</c>.</summary>
+      <param name="x">The value to compare with <paramref name="y" />.</param>
+      <param name="y">The value to compare with <paramref name="x" />.</param>
       <returns>
-        <code data-dev-comment-type="paramref">x</code> if it is greater than <code data-dev-comment-type="paramref">y</code>; otherwise, <code data-dev-comment-type="paramref">y</code>.</returns>
+        <paramref name="x" /> if it is greater than <paramref name="y" />; otherwise, <paramref name="y" />.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.Min(System.Runtime.InteropServices.NFloat,System.Runtime.InteropServices.NFloat)">
       <summary>Compares two values to compute which is lesser.</summary>
-      <param name="x">The value to compare with <code data-dev-comment-type="paramref">y</code>.</param>
-      <param name="y">The value to compare with <code data-dev-comment-type="paramref">x</code>.</param>
+      <param name="x">The value to compare with <paramref name="y" />.</param>
+      <param name="y">The value to compare with <paramref name="x" />.</param>
       <returns>
-        <code data-dev-comment-type="paramref">x</code> if it is less than <code data-dev-comment-type="paramref">y</code>; otherwise, <code data-dev-comment-type="paramref">y</code>.</returns>
+        <paramref name="x" /> if it is less than <paramref name="y" />; otherwise, <paramref name="y" />.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.MinMagnitude(System.Runtime.InteropServices.NFloat,System.Runtime.InteropServices.NFloat)">
       <summary>Compares two values to compute which is lesser.</summary>
-      <param name="x">The value to compare with <code data-dev-comment-type="paramref">y</code>.</param>
-      <param name="y">The value to compare with <code data-dev-comment-type="paramref">x</code>.</param>
+      <param name="x">The value to compare with <paramref name="y" />.</param>
+      <param name="y">The value to compare with <paramref name="x" />.</param>
       <returns>
-        <code data-dev-comment-type="paramref">x</code> if it is less than <code data-dev-comment-type="paramref">y</code>; otherwise, <code data-dev-comment-type="paramref">y</code>.</returns>
+        <paramref name="x" /> if it is less than <paramref name="y" />; otherwise, <paramref name="y" />.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.MinMagnitudeNumber(System.Runtime.InteropServices.NFloat,System.Runtime.InteropServices.NFloat)">
-      <summary>Compares two values to compute which has the lesser magnitude and returning the other value if an input is <code data-dev-comment-type="c">NaN</code>.</summary>
-      <param name="x">The value to compare with <code data-dev-comment-type="paramref">y</code>.</param>
-      <param name="y">The value to compare with <code data-dev-comment-type="paramref">x</code>.</param>
+      <summary>Compares two values to compute which has the lesser magnitude and returning the other value if an input is <c>NaN</c>.</summary>
+      <param name="x">The value to compare with <paramref name="y" />.</param>
+      <param name="y">The value to compare with <paramref name="x" />.</param>
       <returns>
-        <code data-dev-comment-type="paramref">x</code> if it is less than <code data-dev-comment-type="paramref">y</code>; otherwise, <code data-dev-comment-type="paramref">y</code>.</returns>
+        <paramref name="x" /> if it is less than <paramref name="y" />; otherwise, <paramref name="y" />.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.MinNumber(System.Runtime.InteropServices.NFloat,System.Runtime.InteropServices.NFloat)">
-      <summary>Compares two values to compute which is lesser and returning the other value if an input is <code data-dev-comment-type="c">NaN</code>.</summary>
-      <param name="x">The value to compare with <code data-dev-comment-type="paramref">y</code>.</param>
-      <param name="y">The value to compare with <code data-dev-comment-type="paramref">x</code>.</param>
+      <summary>Compares two values to compute which is lesser and returning the other value if an input is <c>NaN</c>.</summary>
+      <param name="x">The value to compare with <paramref name="y" />.</param>
+      <param name="y">The value to compare with <paramref name="x" />.</param>
       <returns>
-        <code data-dev-comment-type="paramref">x</code> if it is less than <code data-dev-comment-type="paramref">y</code>; otherwise, <code data-dev-comment-type="paramref">y</code>.</returns>
+        <paramref name="x" /> if it is less than <paramref name="y" />; otherwise, <paramref name="y" />.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.op_Addition(System.Runtime.InteropServices.NFloat,System.Runtime.InteropServices.NFloat)">
       <summary>Adds two values together to compute their sum.</summary>
@@ -6162,8 +6162,8 @@ Note: In .NET for Windows Store apps or the Portable Class Library, catch the ba
     <member name="M:System.Runtime.InteropServices.NFloat.Parse(System.ReadOnlySpan{System.Char},System.IFormatProvider)">
       <summary>Parses a span of characters into a value.</summary>
       <param name="s">The span of characters to parse.</param>
-      <param name="provider">An object that provides culture-specific formatting information about <code data-dev-comment-type="paramref">s</code>.</param>
-      <returns>The result of parsing <code data-dev-comment-type="paramref">s</code>.</returns>
+      <param name="provider">An object that provides culture-specific formatting information about <paramref name="s" />.</param>
+      <returns>The result of parsing <paramref name="s" />.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.Parse(System.String,System.Globalization.NumberStyles,System.IFormatProvider)">
       <summary>Converts the string representation of a number in a specified style and culture-specific format to its floating-point number equivalent.</summary>
@@ -6219,91 +6219,91 @@ Note: In .NET for Windows Store apps or the Portable Class Library, catch the ba
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.Pow(System.Runtime.InteropServices.NFloat,System.Runtime.InteropServices.NFloat)">
       <summary>Computes a value raised to a given power.</summary>
-      <param name="x">The value that's raised to the power of <code data-dev-comment-type="paramref">x</code>.</param>
-      <param name="y">The power to which <code data-dev-comment-type="paramref">x</code> is raised.</param>
+      <param name="x">The value that's raised to the power of <paramref name="x" />.</param>
+      <param name="y">The power to which <paramref name="x" /> is raised.</param>
       <returns>
-        <code data-dev-comment-type="paramref">x</code> raised to the power of <code data-dev-comment-type="paramref">y</code>.</returns>
+        <paramref name="x" /> raised to the power of <paramref name="y" />.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.ReciprocalEstimate(System.Runtime.InteropServices.NFloat)">
       <summary>Computes an estimate of the reciprocal of a value.</summary>
       <param name="x">The value whose estimate of the reciprocal is to be computed.</param>
-      <returns>An estimate of the reciprocal of <code data-dev-comment-type="paramref">x</code>.</returns>
+      <returns>An estimate of the reciprocal of <paramref name="x" />.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.ReciprocalSqrtEstimate(System.Runtime.InteropServices.NFloat)">
       <summary>Computes an estimate of the reciprocal square root of a value.</summary>
       <param name="x">The value whose estimate of the reciprocal square root is to be computed.</param>
-      <returns>An estimate of the reciprocal square root of <code data-dev-comment-type="paramref">x</code>.</returns>
+      <returns>An estimate of the reciprocal square root of <paramref name="x" />.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.RootN(System.Runtime.InteropServices.NFloat,System.Int32)">
       <summary>Computes the n-th root of a value.</summary>
-      <param name="x">The value whose <code data-dev-comment-type="paramref">n</code>-th root is to be computed.</param>
+      <param name="x">The value whose <paramref name="n" />-th root is to be computed.</param>
       <param name="n">The degree of the root to be computed.</param>
-      <returns>The <code data-dev-comment-type="paramref">n</code>-th root of <code data-dev-comment-type="paramref">x</code>.</returns>
+      <returns>The <paramref name="n" />-th root of <paramref name="x" />.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.Round(System.Runtime.InteropServices.NFloat,System.Int32,System.MidpointRounding)">
-      <summary>Rounds a value to a specified number of fractional-digits using the default rounding mode (<xref data-throw-if-not-resolved="true" uid="System.MidpointRounding.ToEven"></xref>).</summary>
+      <summary>Rounds a value to a specified number of fractional-digits using the default rounding mode (<see cref="F:System.MidpointRounding.ToEven" />).</summary>
       <param name="x">The value to round.</param>
-      <param name="digits">The number of fractional digits to which <code data-dev-comment-type="paramref">x</code> should be rounded.</param>
-      <param name="mode">The mode under which <code data-dev-comment-type="paramref">x</code> should be rounded.</param>
-      <returns>The result of rounding <code data-dev-comment-type="paramref">x</code> to <code data-dev-comment-type="paramref">digits</code> fractional-digits using <code data-dev-comment-type="paramref">mode</code>.</returns>
+      <param name="digits">The number of fractional digits to which <paramref name="x" /> should be rounded.</param>
+      <param name="mode">The mode under which <paramref name="x" /> should be rounded.</param>
+      <returns>The result of rounding <paramref name="x" /> to <paramref name="digits" /> fractional-digits using <paramref name="mode" />.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.Round(System.Runtime.InteropServices.NFloat,System.Int32)">
-      <summary>Rounds a value to a specified number of fractional-digits using the default rounding mode (<xref data-throw-if-not-resolved="true" uid="System.MidpointRounding.ToEven"></xref>).</summary>
+      <summary>Rounds a value to a specified number of fractional-digits using the default rounding mode (<see cref="F:System.MidpointRounding.ToEven" />).</summary>
       <param name="x">The value to round.</param>
-      <param name="digits">The number of fractional digits to which <code data-dev-comment-type="paramref">x</code> should be rounded.</param>
-      <returns>The result of rounding <code data-dev-comment-type="paramref">x</code> to <code data-dev-comment-type="paramref">digits</code> fractional-digits using the default rounding mode.</returns>
+      <param name="digits">The number of fractional digits to which <paramref name="x" /> should be rounded.</param>
+      <returns>The result of rounding <paramref name="x" /> to <paramref name="digits" /> fractional-digits using the default rounding mode.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.Round(System.Runtime.InteropServices.NFloat,System.MidpointRounding)">
       <summary>Rounds a value to the nearest integer using the specified rounding mode.</summary>
       <param name="x">The value to round.</param>
-      <param name="mode">The mode under which <code data-dev-comment-type="paramref">x</code> should be rounded.</param>
-      <returns>The result of rounding <code data-dev-comment-type="paramref">x</code> to the nearest integer using <code data-dev-comment-type="paramref">mode</code>.</returns>
+      <param name="mode">The mode under which <paramref name="x" /> should be rounded.</param>
+      <returns>The result of rounding <paramref name="x" /> to the nearest integer using <paramref name="mode" />.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.Round(System.Runtime.InteropServices.NFloat)">
-      <summary>Rounds a value to the nearest integer using the default rounding mode (<xref data-throw-if-not-resolved="true" uid="System.MidpointRounding.ToEven"></xref>).</summary>
+      <summary>Rounds a value to the nearest integer using the default rounding mode (<see cref="F:System.MidpointRounding.ToEven" />).</summary>
       <param name="x">The value to round.</param>
-      <returns>The result of rounding <code data-dev-comment-type="paramref">x</code> to the nearest integer using the default rounding mode.</returns>
+      <returns>The result of rounding <paramref name="x" /> to the nearest integer using the default rounding mode.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.ScaleB(System.Runtime.InteropServices.NFloat,System.Int32)">
       <summary>Computes the product of a value and its base-radix raised to the specified power.</summary>
-      <param name="x">The value that base-radix raised to the power of <code data-dev-comment-type="paramref">n</code> multiplies.</param>
-      <param name="n">The value to which base-radix is raised before multipliying <code data-dev-comment-type="paramref">x</code>.</param>
-      <returns>The product of <code data-dev-comment-type="paramref">x</code> and base-radix raised to the power of <code data-dev-comment-type="paramref">n</code>.</returns>
+      <param name="x">The value that base-radix raised to the power of <paramref name="n" /> multiplies.</param>
+      <param name="n">The value to which base-radix is raised before multipliying <paramref name="x" />.</param>
+      <returns>The product of <paramref name="x" /> and base-radix raised to the power of <paramref name="n" />.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.Sign(System.Runtime.InteropServices.NFloat)">
       <summary>Computes the sign of a value.</summary>
       <param name="value">The value whose sign is to be computed.</param>
-      <returns>A positive value if <code data-dev-comment-type="paramref">value</code> is positive, <xref data-throw-if-not-resolved="true" uid="System.Numerics.INumberBase`1.Zero"></xref> if <code data-dev-comment-type="paramref">value</code> is zero, and a negative value if <code data-dev-comment-type="paramref">value</code> is negative.</returns>
+      <returns>A positive value if <paramref name="value" /> is positive, <see cref="P:System.Numerics.INumberBase`1.Zero" /> if <paramref name="value" /> is zero, and a negative value if <paramref name="value" /> is negative.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.Sin(System.Runtime.InteropServices.NFloat)">
       <summary>Computes the sine of a value.</summary>
       <param name="x">The value, in radians, whose sine is to be computed.</param>
-      <returns>The sine of <code data-dev-comment-type="paramref">x</code>.</returns>
+      <returns>The sine of <paramref name="x" />.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.SinCos(System.Runtime.InteropServices.NFloat)">
       <summary>Computes the sine and cosine of a value.</summary>
       <param name="x">The value, in radians, whose sine and cosine are to be computed.</param>
-      <returns>The sine and cosine of <code data-dev-comment-type="paramref">x</code>.</returns>
+      <returns>The sine and cosine of <paramref name="x" />.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.SinCosPi(System.Runtime.InteropServices.NFloat)">
       <summary>Computes the sine and cosine of a value.</summary>
-      <param name="x">The value, in half-revolutions, that is multipled by <code data-dev-comment-type="c">pi</code> before computing its sine and cosine.</param>
-      <returns>The sine and cosine of <code data-dev-comment-type="paramref">x</code>.</returns>
+      <param name="x">The value, in half-revolutions, that is multipled by <c>pi</c> before computing its sine and cosine.</param>
+      <returns>The sine and cosine of <paramref name="x" />.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.Sinh(System.Runtime.InteropServices.NFloat)">
       <summary>Computes the hyperbolic sine of a value.</summary>
       <param name="x">The value, in radians, whose hyperbolic sine is to be computed.</param>
-      <returns>The hyperbolic sine of <code data-dev-comment-type="paramref">x</code>.</returns>
+      <returns>The hyperbolic sine of <paramref name="x" />.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.SinPi(System.Runtime.InteropServices.NFloat)">
-      <summary>Computes the sine of a value that has been multiplied by <code data-dev-comment-type="c">pi</code>.</summary>
-      <param name="x">The value, in half-revolutions, that is multipled by <code data-dev-comment-type="c">pi</code> before computing its sine.</param>
-      <returns>The sine of <code data-dev-comment-type="paramref">x</code> multiplied-by <code data-dev-comment-type="c">pi</code>.</returns>
+      <summary>Computes the sine of a value that has been multiplied by <c>pi</c>.</summary>
+      <param name="x">The value, in half-revolutions, that is multipled by <c>pi</c> before computing its sine.</param>
+      <returns>The sine of <paramref name="x" /> multiplied-by <c>pi</c>.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.Sqrt(System.Runtime.InteropServices.NFloat)">
       <summary>Computes the square-root of a value.</summary>
       <param name="x">The value whose square-root is to be computed.</param>
-      <returns>The square-root of <code data-dev-comment-type="paramref">x</code>.</returns>
+      <returns>The square-root of <paramref name="x" />.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.System#Numerics#IAdditionOperators{System#Runtime#InteropServices#NFloat@System#Runtime#InteropServices#NFloat@System#Runtime#InteropServices#NFloat}#op_CheckedAddition(System.Runtime.InteropServices.NFloat,System.Runtime.InteropServices.NFloat)">
       <summary>Adds two values together to compute their sum.</summary>
@@ -6345,9 +6345,9 @@ Note: In .NET for Windows Store apps or the Portable Class Library, catch the ba
       <param name="right">The value that divides <paramref name="left" />.</param>
       <returns>The quotient of <paramref name="left" /> divided by <paramref name="right" />.</returns>
     </member>
-    <member name="M:System.Runtime.InteropServices.NFloat.System#Numerics#IFloatingPoint&lt;System#Runtime#InteropServices#NFloat&gt;#GetExponentByteCount">
-      <summary>Gets the number of bytes that will be written as part of <xref data-throw-if-not-resolved="true" uid="System.Numerics.IFloatingPoint`1.TryWriteExponentLittleEndian(System.Span{System.Byte},System.Int32@)"></xref>.</summary>
-      <returns>The number of bytes that will be written as part of <xref data-throw-if-not-resolved="true" uid="System.Numerics.IFloatingPoint`1.TryWriteExponentLittleEndian(System.Span{System.Byte},System.Int32@)"></xref>.</returns>
+    <member name="M:System.Runtime.InteropServices.NFloat.System#Numerics#IFloatingPoint{System#Runtime#InteropServices#NFloat}#GetExponentByteCount">
+      <summary>Gets the number of bytes that will be written as part of <see cref="M:System.Numerics.IFloatingPoint`1.TryWriteExponentLittleEndian(System.Span{System.Byte},System.Int32@)" />.</summary>
+      <returns>The number of bytes that will be written as part of <see cref="M:System.Numerics.IFloatingPoint`1.TryWriteExponentLittleEndian(System.Span{System.Byte},System.Int32@)" />.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.System#Numerics#IFloatingPoint&lt;System#Runtime#InteropServices#NFloat&gt;#GetExponentShortestBitLength">
       <summary>Gets the length, in bits, of the shortest two's complement representation of the current exponent.</summary>
@@ -6357,37 +6357,37 @@ Note: In .NET for Windows Store apps or the Portable Class Library, catch the ba
       <summary>Gets the length, in bits, of the current significand.</summary>
       <returns>The length, in bits, of the current significand.</returns>
     </member>
-    <member name="M:System.Runtime.InteropServices.NFloat.System#Numerics#IFloatingPoint&lt;System#Runtime#InteropServices#NFloat&gt;#GetSignificandByteCount">
-      <summary>Gets the number of bytes that will be written as part of <xref data-throw-if-not-resolved="true" uid="System.Numerics.IFloatingPoint`1.TryWriteSignificandLittleEndian(System.Span{System.Byte},System.Int32@)"></xref>.</summary>
-      <returns>The number of bytes that will be written as part of <xref data-throw-if-not-resolved="true" uid="System.Numerics.IFloatingPoint`1.TryWriteSignificandLittleEndian(System.Span{System.Byte},System.Int32@)"></xref>.</returns>
+    <member name="M:System.Runtime.InteropServices.NFloat.System#Numerics#IFloatingPoint{System#Runtime#InteropServices#NFloat}#GetSignificandByteCount">
+      <summary>Gets the number of bytes that will be written as part of <see cref="M:System.Numerics.IFloatingPoint`1.TryWriteSignificandLittleEndian(System.Span{System.Byte},System.Int32@)" />.</summary>
+      <returns>The number of bytes that will be written as part of <see cref="M:System.Numerics.IFloatingPoint`1.TryWriteSignificandLittleEndian(System.Span{System.Byte},System.Int32@)" />.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.System#Numerics#IFloatingPoint&lt;System#Runtime#InteropServices#NFloat&gt;#TryWriteExponentBigEndian(System.Span{System.Byte},System.Int32@)">
       <summary>Tries to write the current exponent, in big-endian format, to a given span.</summary>
       <param name="destination">The span to which the current exponent should be written.</param>
-      <param name="bytesWritten">When this method returns, contains the number of bytes written to <code data-dev-comment-type="paramref">destination</code>.</param>
+      <param name="bytesWritten">When this method returns, contains the number of bytes written to <paramref name="destination" />.</param>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if the exponent was succesfully written to <code data-dev-comment-type="paramref">destination</code>; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if the exponent was succesfully written to <paramref name="destination" />; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.System#Numerics#IFloatingPoint&lt;System#Runtime#InteropServices#NFloat&gt;#TryWriteExponentLittleEndian(System.Span{System.Byte},System.Int32@)">
       <summary>Tries to write the current exponent, in little-endian format, to a given span.</summary>
       <param name="destination">The span to which the current exponent should be written.</param>
-      <param name="bytesWritten">When this method returns, contains the number of bytes written to <code data-dev-comment-type="paramref">destination</code>.</param>
+      <param name="bytesWritten">When this method returns, contains the number of bytes written to <paramref name="destination" />.</param>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if the exponent was succesfully written to <code data-dev-comment-type="paramref">destination</code>; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if the exponent was succesfully written to <paramref name="destination" />; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.System#Numerics#IFloatingPoint&lt;System#Runtime#InteropServices#NFloat&gt;#TryWriteSignificandBigEndian(System.Span{System.Byte},System.Int32@)">
       <summary>Tries to write the current significand, in big-endian format, to a given span.</summary>
       <param name="destination">The span to which the current significand should be written.</param>
-      <param name="bytesWritten">When this method returns, contains the number of bytes written to <code data-dev-comment-type="paramref">destination</code>.</param>
+      <param name="bytesWritten">When this method returns, contains the number of bytes written to <paramref name="destination" />.</param>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if the significand was succesfully written to <code data-dev-comment-type="paramref">destination</code>; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if the significand was succesfully written to <paramref name="destination" />; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.System#Numerics#IFloatingPoint&lt;System#Runtime#InteropServices#NFloat&gt;#TryWriteSignificandLittleEndian(System.Span{System.Byte},System.Int32@)">
       <summary>Tries to write the current significand, in little-endian format, to a given span.</summary>
       <param name="destination">The span to which the current significand should be written.</param>
-      <param name="bytesWritten">When this method returns, contains the number of bytes written to <code data-dev-comment-type="paramref">destination</code>.</param>
+      <param name="bytesWritten">When this method returns, contains the number of bytes written to <paramref name="destination" />.</param>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if the significand was succesfully written to <code data-dev-comment-type="paramref">destination</code>; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if the significand was succesfully written to <paramref name="destination" />; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.System#Numerics#IIncrementOperators{System#Runtime#InteropServices#NFloat}#op_CheckedIncrement(System.Runtime.InteropServices.NFloat)">
       <summary>Increments a value.</summary>
@@ -6477,17 +6477,17 @@ Note: In .NET for Windows Store apps or the Portable Class Library, catch the ba
     <member name="M:System.Runtime.InteropServices.NFloat.Tan(System.Runtime.InteropServices.NFloat)">
       <summary>Computes the tangent of a value.</summary>
       <param name="x">The value, in radians, whose tangent is to be computed.</param>
-      <returns>The tangent of <code data-dev-comment-type="paramref">x</code>.</returns>
+      <returns>The tangent of <paramref name="x" />.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.Tanh(System.Runtime.InteropServices.NFloat)">
       <summary>Computes the hyperbolic tangent of a value.</summary>
       <param name="x">The value, in radians, whose hyperbolic tangent is to be computed.</param>
-      <returns>The hyperbolic tangent of <code data-dev-comment-type="paramref">x</code>.</returns>
+      <returns>The hyperbolic tangent of <paramref name="x" />.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.TanPi(System.Runtime.InteropServices.NFloat)">
-      <summary>Computes the tangent of a value that has been multipled by <code data-dev-comment-type="c">pi</code>.</summary>
-      <param name="x">The value, in half-revolutions, that is multipled by <code data-dev-comment-type="c">pi</code> before computing its tangent.</param>
-      <returns>The tangent of <code data-dev-comment-type="paramref">x</code> multiplied-by <code data-dev-comment-type="c">pi</code>.</returns>
+      <summary>Computes the tangent of a value that has been multipled by <c>pi</c>.</summary>
+      <param name="x">The value, in half-revolutions, that is multipled by <c>pi</c> before computing its tangent.</param>
+      <returns>The tangent of <paramref name="x" /> multiplied-by <c>pi</c>.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.ToString">
       <summary>Converts the numeric value of this instance to its equivalent string representation.</summary>
@@ -6516,7 +6516,7 @@ Note: In .NET for Windows Store apps or the Portable Class Library, catch the ba
     <member name="M:System.Runtime.InteropServices.NFloat.Truncate(System.Runtime.InteropServices.NFloat)">
       <summary>Truncates a value.</summary>
       <param name="x">The value to truncate.</param>
-      <returns>The truncation of <code data-dev-comment-type="paramref">x</code>.</returns>
+      <returns>The truncation of <paramref name="x" />.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.TryFormat(System.Span{System.Char},System.Int32@,System.ReadOnlySpan{System.Char},System.IFormatProvider)">
       <summary>Tries to format the value of the current instance into the provided span of characters.</summary>
@@ -6545,10 +6545,10 @@ Note: In .NET for Windows Store apps or the Portable Class Library, catch the ba
     <member name="M:System.Runtime.InteropServices.NFloat.TryParse(System.ReadOnlySpan{System.Char},System.IFormatProvider,System.Runtime.InteropServices.NFloat@)">
       <summary>Tries to parse a span of characters into a value.</summary>
       <param name="s">The span of characters to parse.</param>
-      <param name="provider">An object that provides culture-specific formatting information about <code data-dev-comment-type="paramref">s</code>.</param>
-      <param name="result">When this method returns, contains the result of successfully parsing <code data-dev-comment-type="paramref">s</code>, or an undefined value on failure.</param>
+      <param name="provider">An object that provides culture-specific formatting information about <paramref name="s" />.</param>
+      <param name="result">When this method returns, contains the result of successfully parsing <paramref name="s" />, or an undefined value on failure.</param>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if <code data-dev-comment-type="paramref">s</code> was successfully parsed; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if <paramref name="s" /> was successfully parsed; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.TryParse(System.ReadOnlySpan{System.Char},System.Runtime.InteropServices.NFloat@)">
       <summary>Tries to convert a character span containing the string representation of a number to its floating-point number equivalent.</summary>
@@ -6575,10 +6575,10 @@ Note: In .NET for Windows Store apps or the Portable Class Library, catch the ba
     <member name="M:System.Runtime.InteropServices.NFloat.TryParse(System.String,System.IFormatProvider,System.Runtime.InteropServices.NFloat@)">
       <summary>Tries to parse a string into a value.</summary>
       <param name="s">The string to parse.</param>
-      <param name="provider">An object that provides culture-specific formatting information about <code data-dev-comment-type="paramref">s</code>.</param>
-      <param name="result">When this method returns, contains the result of successfully parsing <code data-dev-comment-type="paramref">s</code> or an undefined value on failure.</param>
+      <param name="provider">An object that provides culture-specific formatting information about <paramref name="s" />.</param>
+      <param name="result">When this method returns, contains the result of successfully parsing <paramref name="s" /> or an undefined value on failure.</param>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if <code data-dev-comment-type="paramref">s</code> was successfully parsed; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if <paramref name="s" /> was successfully parsed; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.TryParse(System.String,System.Runtime.InteropServices.NFloat@)">
       <summary>Tries to convert the string representation of a number to its floating-point number equivalent.</summary>
@@ -6588,7 +6588,7 @@ Note: In .NET for Windows Store apps or the Portable Class Library, catch the ba
         <see langword="true" /> if <paramref name="s" /> was converted successfully; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="P:System.Runtime.InteropServices.NFloat.E">
-      <summary>Gets the mathematical constant <code data-dev-comment-type="c">e</code>.</summary>
+      <summary>Gets the mathematical constant <c>e</c>.</summary>
     </member>
     <member name="P:System.Runtime.InteropServices.NFloat.Epsilon">
       <summary>Represents the smallest positive NFloat value that is greater than zero.</summary>
@@ -6606,10 +6606,10 @@ Note: In .NET for Windows Store apps or the Portable Class Library, catch the ba
       <summary>Represents negative infinity.</summary>
     </member>
     <member name="P:System.Runtime.InteropServices.NFloat.NegativeZero">
-      <summary>Gets a value that represents negative <code data-dev-comment-type="c">zero</code>.</summary>
+      <summary>Gets a value that represents negative <c>zero</c>.</summary>
     </member>
     <member name="P:System.Runtime.InteropServices.NFloat.Pi">
-      <summary>Gets the mathematical constant <code data-dev-comment-type="c">pi</code>.</summary>
+      <summary>Gets the mathematical constant <c>pi</c>.</summary>
     </member>
     <member name="P:System.Runtime.InteropServices.NFloat.PositiveInfinity">
       <summary>Represents positive infinity.</summary>
@@ -6639,7 +6639,7 @@ Note: In .NET for Windows Store apps or the Portable Class Library, catch the ba
       <summary>Gets the value <c>-1</c> for the type.</summary>
     </member>
     <member name="P:System.Runtime.InteropServices.NFloat.Tau">
-      <summary>Gets the mathematical constant <code data-dev-comment-type="c">tau</code>.</summary>
+      <summary>Gets the mathematical constant <c>tau</c>.</summary>
     </member>
     <member name="P:System.Runtime.InteropServices.NFloat.Value">
       <summary>The underlying floating-point value of this instance.</summary>

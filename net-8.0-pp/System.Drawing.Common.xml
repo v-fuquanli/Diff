@@ -1289,11 +1289,11 @@
       <summary>Represents a series of connected lines and curves. This class cannot be inherited.</summary>
     </member>
     <member name="M:System.Drawing.Drawing2D.GraphicsPath.#ctor">
-      <summary>Initializes a new instance of the <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.GraphicsPath"></xref> class with a <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.GraphicsPath.FillMode"></xref> value of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.FillMode.Alternate"></xref>.</summary>
+      <summary>Initializes a new instance of the <see cref="T:System.Drawing.Drawing2D.GraphicsPath" /> class with a <see cref="P:System.Drawing.Drawing2D.GraphicsPath.FillMode" /> value of <see cref="F:System.Drawing.Drawing2D.FillMode.Alternate" />.</summary>
     </member>
     <member name="M:System.Drawing.Drawing2D.GraphicsPath.#ctor(System.Drawing.Drawing2D.FillMode)">
-      <summary>Initializes a new instance of the <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.GraphicsPath"></xref> class with the specified <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.FillMode"></xref> enumeration.</summary>
-      <param name="fillMode">The <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.FillMode"></xref> enumeration that determines how the interior of this <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.GraphicsPath"></xref> is filled.</param>
+      <summary>Initializes a new instance of the <see cref="T:System.Drawing.Drawing2D.GraphicsPath" /> class with the specified <see cref="T:System.Drawing.Drawing2D.FillMode" /> enumeration.</summary>
+      <param name="fillMode">The <see cref="T:System.Drawing.Drawing2D.FillMode" /> enumeration that determines how the interior of this <see cref="T:System.Drawing.Drawing2D.GraphicsPath" /> is filled.</param>
     </member>
     <member name="M:System.Drawing.Drawing2D.GraphicsPath.#ctor(System.Drawing.Point[],System.Byte[],System.Drawing.Drawing2D.FillMode)">
       <summary>Initializes a new instance of the <see cref="T:System.Drawing.Drawing2D.GraphicsPath" /> class with the specified <see cref="T:System.Drawing.Drawing2D.PathPointType" /> and <see cref="T:System.Drawing.Point" /> arrays and with the specified <see cref="T:System.Drawing.Drawing2D.FillMode" /> enumeration element.</summary>
@@ -1302,20 +1302,20 @@
       <param name="fillMode">A <see cref="T:System.Drawing.Drawing2D.FillMode" /> enumeration that specifies how the interiors of shapes in this <see cref="T:System.Drawing.Drawing2D.GraphicsPath" /> are filled.</param>
     </member>
     <member name="M:System.Drawing.Drawing2D.GraphicsPath.#ctor(System.Drawing.Point[],System.Byte[])">
-      <summary>Initializes a new instance of the <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.GraphicsPath"></xref> class with the specified <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.PathPointType"></xref> and <xref data-throw-if-not-resolved="true" uid="System.Drawing.Point"></xref> arrays.</summary>
-      <param name="pts">An array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Point"></xref> structures that defines the coordinates of the points that make up this <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.GraphicsPath"></xref>.</param>
-      <param name="types">An array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.PathPointType"></xref> enumeration elements that specifies the type of each corresponding point in the <code data-dev-comment-type="paramref">pts</code> array.</param>
+      <summary>Initializes a new instance of the <see cref="T:System.Drawing.Drawing2D.GraphicsPath" /> class with the specified <see cref="T:System.Drawing.Drawing2D.PathPointType" /> and <see cref="T:System.Drawing.Point" /> arrays.</summary>
+      <param name="pts">An array of <see cref="T:System.Drawing.Point" /> structures that defines the coordinates of the points that make up this <see cref="T:System.Drawing.Drawing2D.GraphicsPath" />.</param>
+      <param name="types">An array of <see cref="T:System.Drawing.Drawing2D.PathPointType" /> enumeration elements that specifies the type of each corresponding point in the <paramref name="pts" /> array.</param>
     </member>
     <member name="M:System.Drawing.Drawing2D.GraphicsPath.#ctor(System.Drawing.PointF[],System.Byte[],System.Drawing.Drawing2D.FillMode)">
-      <summary>Initializes a new instance of the <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.GraphicsPath"></xref> array with the specified <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.PathPointType"></xref> and <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> arrays and with the specified <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.FillMode"></xref> enumeration element.</summary>
-      <param name="pts">An array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structures that defines the coordinates of the points that make up this <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.GraphicsPath"></xref>.</param>
-      <param name="types">An array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.PathPointType"></xref> enumeration elements that specifies the type of each corresponding point in the <code data-dev-comment-type="paramref">pts</code> array.</param>
-      <param name="fillMode">A <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.FillMode"></xref> enumeration that specifies how the interiors of shapes in this <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.GraphicsPath"></xref> are filled.</param>
+      <summary>Initializes a new instance of the <see cref="T:System.Drawing.Drawing2D.GraphicsPath" /> array with the specified <see cref="T:System.Drawing.Drawing2D.PathPointType" /> and <see cref="T:System.Drawing.PointF" /> arrays and with the specified <see cref="T:System.Drawing.Drawing2D.FillMode" /> enumeration element.</summary>
+      <param name="pts">An array of <see cref="T:System.Drawing.PointF" /> structures that defines the coordinates of the points that make up this <see cref="T:System.Drawing.Drawing2D.GraphicsPath" />.</param>
+      <param name="types">An array of <see cref="T:System.Drawing.Drawing2D.PathPointType" /> enumeration elements that specifies the type of each corresponding point in the <paramref name="pts" /> array.</param>
+      <param name="fillMode">A <see cref="T:System.Drawing.Drawing2D.FillMode" /> enumeration that specifies how the interiors of shapes in this <see cref="T:System.Drawing.Drawing2D.GraphicsPath" /> are filled.</param>
     </member>
     <member name="M:System.Drawing.Drawing2D.GraphicsPath.#ctor(System.Drawing.PointF[],System.Byte[])">
-      <summary>Initializes a new instance of the <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.GraphicsPath"></xref> array with the specified <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.PathPointType"></xref> and <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> arrays.</summary>
-      <param name="pts">An array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structures that defines the coordinates of the points that make up this <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.GraphicsPath"></xref>.</param>
-      <param name="types">An array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.PathPointType"></xref> enumeration elements that specifies the type of each corresponding point in the <code data-dev-comment-type="paramref">pts</code> array.</param>
+      <summary>Initializes a new instance of the <see cref="T:System.Drawing.Drawing2D.GraphicsPath" /> array with the specified <see cref="T:System.Drawing.Drawing2D.PathPointType" /> and <see cref="T:System.Drawing.PointF" /> arrays.</summary>
+      <param name="pts">An array of <see cref="T:System.Drawing.PointF" /> structures that defines the coordinates of the points that make up this <see cref="T:System.Drawing.Drawing2D.GraphicsPath" />.</param>
+      <param name="types">An array of <see cref="T:System.Drawing.Drawing2D.PathPointType" /> enumeration elements that specifies the type of each corresponding point in the <paramref name="pts" /> array.</param>
     </member>
     <member name="M:System.Drawing.Drawing2D.GraphicsPath.AddArc(System.Drawing.Rectangle,System.Single,System.Single)">
       <summary>Appends an elliptical arc to the current figure.</summary>
@@ -1385,7 +1385,7 @@
     </member>
     <member name="M:System.Drawing.Drawing2D.GraphicsPath.AddBeziers(System.Drawing.Point[])">
       <summary>Adds a sequence of connected cubic Bézier curves to the current figure.</summary>
-      <param name="points">An array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Point"></xref> structures that represents the points that define the curves.</param>
+      <param name="points">An array of <see cref="T:System.Drawing.Point" /> structures that represents the points that define the curves.</param>
     </member>
     <member name="M:System.Drawing.Drawing2D.GraphicsPath.AddBeziers(System.Drawing.PointF[])">
       <summary>Adds a sequence of connected cubic Bézier curves to the current figure.</summary>
@@ -1393,37 +1393,37 @@
     </member>
     <member name="M:System.Drawing.Drawing2D.GraphicsPath.AddClosedCurve(System.Drawing.Point[],System.Single)">
       <summary>Adds a closed curve to this path. A cardinal spline curve is used because the curve travels through each of the points in the array.</summary>
-      <param name="points">An array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Point"></xref> structures that represents the points that define the curve.</param>
+      <param name="points">An array of <see cref="T:System.Drawing.Point" /> structures that represents the points that define the curve.</param>
       <param name="tension">A value between from 0 through 1 that specifies the amount that the curve bends between points, with 0 being the smallest curve (sharpest corner) and 1 being the smoothest curve.</param>
     </member>
     <member name="M:System.Drawing.Drawing2D.GraphicsPath.AddClosedCurve(System.Drawing.Point[])">
       <summary>Adds a closed curve to this path. A cardinal spline curve is used because the curve travels through each of the points in the array.</summary>
-      <param name="points">An array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Point"></xref> structures that represents the points that define the curve.</param>
+      <param name="points">An array of <see cref="T:System.Drawing.Point" /> structures that represents the points that define the curve.</param>
     </member>
     <member name="M:System.Drawing.Drawing2D.GraphicsPath.AddClosedCurve(System.Drawing.PointF[],System.Single)">
       <summary>Adds a closed curve to this path. A cardinal spline curve is used because the curve travels through each of the points in the array.</summary>
-      <param name="points">An array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structures that represents the points that define the curve.</param>
+      <param name="points">An array of <see cref="T:System.Drawing.PointF" /> structures that represents the points that define the curve.</param>
       <param name="tension">A value between from 0 through 1 that specifies the amount that the curve bends between points, with 0 being the smallest curve (sharpest corner) and 1 being the smoothest curve.</param>
     </member>
     <member name="M:System.Drawing.Drawing2D.GraphicsPath.AddClosedCurve(System.Drawing.PointF[])">
       <summary>Adds a closed curve to this path. A cardinal spline curve is used because the curve travels through each of the points in the array.</summary>
-      <param name="points">An array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structures that represents the points that define the curve.</param>
+      <param name="points">An array of <see cref="T:System.Drawing.PointF" /> structures that represents the points that define the curve.</param>
     </member>
     <member name="M:System.Drawing.Drawing2D.GraphicsPath.AddCurve(System.Drawing.Point[],System.Int32,System.Int32,System.Single)">
       <summary>Adds a spline curve to the current figure.</summary>
-      <param name="points">An array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Point"></xref> structures that represents the points that define the curve.</param>
-      <param name="offset">The index of the element in the <code data-dev-comment-type="paramref">points</code> array that is used as the first point in the curve.</param>
+      <param name="points">An array of <see cref="T:System.Drawing.Point" /> structures that represents the points that define the curve.</param>
+      <param name="offset">The index of the element in the <paramref name="points" /> array that is used as the first point in the curve.</param>
       <param name="numberOfSegments">A value that specifies the amount that the curve bends between control points. Values greater than 1 produce unpredictable results.</param>
       <param name="tension">A value that specifies the amount that the curve bends between control points. Values greater than 1 produce unpredictable results.</param>
     </member>
     <member name="M:System.Drawing.Drawing2D.GraphicsPath.AddCurve(System.Drawing.Point[],System.Single)">
       <summary>Adds a spline curve to the current figure.</summary>
-      <param name="points">An array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Point"></xref> structures that represents the points that define the curve.</param>
+      <param name="points">An array of <see cref="T:System.Drawing.Point" /> structures that represents the points that define the curve.</param>
       <param name="tension">A value that specifies the amount that the curve bends between control points. Values greater than 1 produce unpredictable results.</param>
     </member>
     <member name="M:System.Drawing.Drawing2D.GraphicsPath.AddCurve(System.Drawing.Point[])">
       <summary>Adds a spline curve to the current figure. A cardinal spline curve is used because the curve travels through each of the points in the array.</summary>
-      <param name="points">An array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Point"></xref> structures that represents the points that define the curve.</param>
+      <param name="points">An array of <see cref="T:System.Drawing.Point" /> structures that represents the points that define the curve.</param>
     </member>
     <member name="M:System.Drawing.Drawing2D.GraphicsPath.AddCurve(System.Drawing.PointF[],System.Int32,System.Int32,System.Single)">
       <summary>Adds a spline curve to the current figure.</summary>
@@ -1434,12 +1434,12 @@
     </member>
     <member name="M:System.Drawing.Drawing2D.GraphicsPath.AddCurve(System.Drawing.PointF[],System.Single)">
       <summary>Adds a spline curve to the current figure.</summary>
-      <param name="points">An array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structures that represents the points that define the curve.</param>
+      <param name="points">An array of <see cref="T:System.Drawing.PointF" /> structures that represents the points that define the curve.</param>
       <param name="tension">A value that specifies the amount that the curve bends between control points. Values greater than 1 produce unpredictable results.</param>
     </member>
     <member name="M:System.Drawing.Drawing2D.GraphicsPath.AddCurve(System.Drawing.PointF[])">
       <summary>Adds a spline curve to the current figure. A cardinal spline curve is used because the curve travels through each of the points in the array.</summary>
-      <param name="points">An array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structures that represents the points that define the curve.</param>
+      <param name="points">An array of <see cref="T:System.Drawing.PointF" /> structures that represents the points that define the curve.</param>
     </member>
     <member name="M:System.Drawing.Drawing2D.GraphicsPath.AddEllipse(System.Drawing.Rectangle)">
       <summary>Adds an ellipse to the current path.</summary>
@@ -1488,8 +1488,8 @@
       <param name="y2">The y-coordinate of the endpoint of the line.</param>
     </member>
     <member name="M:System.Drawing.Drawing2D.GraphicsPath.AddLines(System.Drawing.Point[])">
-      <summary>Appends a series of connected line segments to the end of this <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.GraphicsPath"></xref>.</summary>
-      <param name="points">An array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Point"></xref> structures that represents the points that define the line segments to add.</param>
+      <summary>Appends a series of connected line segments to the end of this <see cref="T:System.Drawing.Drawing2D.GraphicsPath" />.</summary>
+      <param name="points">An array of <see cref="T:System.Drawing.Point" /> structures that represents the points that define the line segments to add.</param>
     </member>
     <member name="M:System.Drawing.Drawing2D.GraphicsPath.AddLines(System.Drawing.PointF[])">
       <summary>Appends a series of connected line segments to the end of this <see cref="T:System.Drawing.Drawing2D.GraphicsPath" />.</summary>
@@ -1531,7 +1531,7 @@
     </member>
     <member name="M:System.Drawing.Drawing2D.GraphicsPath.AddPolygon(System.Drawing.PointF[])">
       <summary>Adds a polygon to this path.</summary>
-      <param name="points">An array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structures that defines the polygon to add.</param>
+      <param name="points">An array of <see cref="T:System.Drawing.PointF" /> structures that defines the polygon to add.</param>
     </member>
     <member name="M:System.Drawing.Drawing2D.GraphicsPath.AddRectangle(System.Drawing.Rectangle)">
       <summary>Adds a rectangle to this path.</summary>
@@ -1543,7 +1543,7 @@
     </member>
     <member name="M:System.Drawing.Drawing2D.GraphicsPath.AddRectangles(System.Drawing.Rectangle[])">
       <summary>Adds a series of rectangles to this path.</summary>
-      <param name="rects">An array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Rectangle"></xref> structures that represents the rectangles to add.</param>
+      <param name="rects">An array of <see cref="T:System.Drawing.Rectangle" /> structures that represents the rectangles to add.</param>
     </member>
     <member name="M:System.Drawing.Drawing2D.GraphicsPath.AddRectangles(System.Drawing.RectangleF[])">
       <summary>Adds a series of rectangles to this path.</summary>
@@ -1756,30 +1756,30 @@
       <param name="matrix">A <see cref="T:System.Drawing.Drawing2D.Matrix" /> that represents the transformation to apply.</param>
     </member>
     <member name="M:System.Drawing.Drawing2D.GraphicsPath.Warp(System.Drawing.PointF[],System.Drawing.RectangleF,System.Drawing.Drawing2D.Matrix,System.Drawing.Drawing2D.WarpMode,System.Single)">
-      <summary>Applies a warp transform, defined by a rectangle and a parallelogram, to this <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.GraphicsPath"></xref>.</summary>
-      <param name="destPoints">An array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structures that define a parallelogram to which the rectangle defined by <code data-dev-comment-type="paramref">srcRect</code> is transformed. The array can contain either three or four elements. If the array contains three elements, the lower-right corner of the parallelogram is implied by the first three points.</param>
-      <param name="srcRect">A <xref data-throw-if-not-resolved="true" uid="System.Drawing.RectangleF"></xref> that represents the rectangle that is transformed to the parallelogram defined by <code data-dev-comment-type="paramref">destPoints</code>.</param>
-      <param name="matrix">A <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.Matrix"></xref> that specifies a geometric transform to apply to the path.</param>
-      <param name="warpMode">A <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.WarpMode"></xref> enumeration that specifies whether this warp operation uses perspective or bilinear mode.</param>
-      <param name="flatness">A value from 0 through 1 that specifies how flat the resulting path is. For more information, see the <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.GraphicsPath.Flatten"></xref> methods.</param>
+      <summary>Applies a warp transform, defined by a rectangle and a parallelogram, to this <see cref="T:System.Drawing.Drawing2D.GraphicsPath" />.</summary>
+      <param name="destPoints">An array of <see cref="T:System.Drawing.PointF" /> structures that define a parallelogram to which the rectangle defined by <paramref name="srcRect" /> is transformed. The array can contain either three or four elements. If the array contains three elements, the lower-right corner of the parallelogram is implied by the first three points.</param>
+      <param name="srcRect">A <see cref="T:System.Drawing.RectangleF" /> that represents the rectangle that is transformed to the parallelogram defined by <paramref name="destPoints" />.</param>
+      <param name="matrix">A <see cref="T:System.Drawing.Drawing2D.Matrix" /> that specifies a geometric transform to apply to the path.</param>
+      <param name="warpMode">A <see cref="T:System.Drawing.Drawing2D.WarpMode" /> enumeration that specifies whether this warp operation uses perspective or bilinear mode.</param>
+      <param name="flatness">A value from 0 through 1 that specifies how flat the resulting path is. For more information, see the <see cref="M:System.Drawing.Drawing2D.GraphicsPath.Flatten" /> methods.</param>
     </member>
     <member name="M:System.Drawing.Drawing2D.GraphicsPath.Warp(System.Drawing.PointF[],System.Drawing.RectangleF,System.Drawing.Drawing2D.Matrix,System.Drawing.Drawing2D.WarpMode)">
-      <summary>Applies a warp transform, defined by a rectangle and a parallelogram, to this <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.GraphicsPath"></xref>.</summary>
-      <param name="destPoints">An array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structures that defines a parallelogram to which the rectangle defined by <code data-dev-comment-type="paramref">srcRect</code> is transformed. The array can contain either three or four elements. If the array contains three elements, the lower-right corner of the parallelogram is implied by the first three points.</param>
-      <param name="srcRect">A <xref data-throw-if-not-resolved="true" uid="System.Drawing.RectangleF"></xref> that represents the rectangle that is transformed to the parallelogram defined by <code data-dev-comment-type="paramref">destPoints</code>.</param>
-      <param name="matrix">A <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.Matrix"></xref> that specifies a geometric transform to apply to the path.</param>
-      <param name="warpMode">A <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.WarpMode"></xref> enumeration that specifies whether this warp operation uses perspective or bilinear mode.</param>
+      <summary>Applies a warp transform, defined by a rectangle and a parallelogram, to this <see cref="T:System.Drawing.Drawing2D.GraphicsPath" />.</summary>
+      <param name="destPoints">An array of <see cref="T:System.Drawing.PointF" /> structures that defines a parallelogram to which the rectangle defined by <paramref name="srcRect" /> is transformed. The array can contain either three or four elements. If the array contains three elements, the lower-right corner of the parallelogram is implied by the first three points.</param>
+      <param name="srcRect">A <see cref="T:System.Drawing.RectangleF" /> that represents the rectangle that is transformed to the parallelogram defined by <paramref name="destPoints" />.</param>
+      <param name="matrix">A <see cref="T:System.Drawing.Drawing2D.Matrix" /> that specifies a geometric transform to apply to the path.</param>
+      <param name="warpMode">A <see cref="T:System.Drawing.Drawing2D.WarpMode" /> enumeration that specifies whether this warp operation uses perspective or bilinear mode.</param>
     </member>
     <member name="M:System.Drawing.Drawing2D.GraphicsPath.Warp(System.Drawing.PointF[],System.Drawing.RectangleF,System.Drawing.Drawing2D.Matrix)">
-      <summary>Applies a warp transform, defined by a rectangle and a parallelogram, to this <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.GraphicsPath"></xref>.</summary>
-      <param name="destPoints">An array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structures that define a parallelogram to which the rectangle defined by <code data-dev-comment-type="paramref">srcRect</code> is transformed. The array can contain either three or four elements. If the array contains three elements, the lower-right corner of the parallelogram is implied by the first three points.</param>
-      <param name="srcRect">A <xref data-throw-if-not-resolved="true" uid="System.Drawing.RectangleF"></xref> that represents the rectangle that is transformed to the parallelogram defined by <code data-dev-comment-type="paramref">destPoints</code>.</param>
-      <param name="matrix">A <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.Matrix"></xref> that specifies a geometric transform to apply to the path.</param>
+      <summary>Applies a warp transform, defined by a rectangle and a parallelogram, to this <see cref="T:System.Drawing.Drawing2D.GraphicsPath" />.</summary>
+      <param name="destPoints">An array of <see cref="T:System.Drawing.PointF" /> structures that define a parallelogram to which the rectangle defined by <paramref name="srcRect" /> is transformed. The array can contain either three or four elements. If the array contains three elements, the lower-right corner of the parallelogram is implied by the first three points.</param>
+      <param name="srcRect">A <see cref="T:System.Drawing.RectangleF" /> that represents the rectangle that is transformed to the parallelogram defined by <paramref name="destPoints" />.</param>
+      <param name="matrix">A <see cref="T:System.Drawing.Drawing2D.Matrix" /> that specifies a geometric transform to apply to the path.</param>
     </member>
     <member name="M:System.Drawing.Drawing2D.GraphicsPath.Warp(System.Drawing.PointF[],System.Drawing.RectangleF)">
-      <summary>Applies a warp transform, defined by a rectangle and a parallelogram, to this <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.GraphicsPath"></xref>.</summary>
-      <param name="destPoints">An array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structures that define a parallelogram to which the rectangle defined by <code data-dev-comment-type="paramref">srcRect</code> is transformed. The array can contain either three or four elements. If the array contains three elements, the lower-right corner of the parallelogram is implied by the first three points.</param>
-      <param name="srcRect">A <xref data-throw-if-not-resolved="true" uid="System.Drawing.RectangleF"></xref> that represents the rectangle that is transformed to the parallelogram defined by <code data-dev-comment-type="paramref">destPoints</code>.</param>
+      <summary>Applies a warp transform, defined by a rectangle and a parallelogram, to this <see cref="T:System.Drawing.Drawing2D.GraphicsPath" />.</summary>
+      <param name="destPoints">An array of <see cref="T:System.Drawing.PointF" /> structures that define a parallelogram to which the rectangle defined by <paramref name="srcRect" /> is transformed. The array can contain either three or four elements. If the array contains three elements, the lower-right corner of the parallelogram is implied by the first three points.</param>
+      <param name="srcRect">A <see cref="T:System.Drawing.RectangleF" /> that represents the rectangle that is transformed to the parallelogram defined by <paramref name="destPoints" />.</param>
     </member>
     <member name="M:System.Drawing.Drawing2D.GraphicsPath.Widen(System.Drawing.Pen,System.Drawing.Drawing2D.Matrix,System.Single)">
       <summary>Replaces this <see cref="T:System.Drawing.Drawing2D.GraphicsPath" /> with curves that enclose the area that is filled when this path is drawn by the specified pen.</summary>
@@ -1835,8 +1835,8 @@
       <summary>Releases all resources used by this <see cref="T:System.Drawing.Drawing2D.GraphicsPathIterator" /> object.</summary>
     </member>
     <member name="M:System.Drawing.Drawing2D.GraphicsPathIterator.Enumerate(System.Drawing.PointF[]@,System.Byte[]@)">
-      <summary>Copies the <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.GraphicsPath.PathPoints"></xref> property and <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.GraphicsPath.PathTypes"></xref> property arrays of the associated <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.GraphicsPath"></xref> into the two specified arrays.</summary>
-      <param name="points">Upon return, contains an array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structures that represents the points in the path.</param>
+      <summary>Copies the <see cref="P:System.Drawing.Drawing2D.GraphicsPath.PathPoints" /> property and <see cref="P:System.Drawing.Drawing2D.GraphicsPath.PathTypes" /> property arrays of the associated <see cref="T:System.Drawing.Drawing2D.GraphicsPath" /> into the two specified arrays.</summary>
+      <param name="points">Upon return, contains an array of <see cref="T:System.Drawing.PointF" /> structures that represents the points in the path.</param>
       <param name="types">Upon return, contains an array of bytes that represents the types of points in the path.</param>
       <returns>The number of points copied.</returns>
     </member>
@@ -2453,12 +2453,12 @@
       <param name="pts">An array of <see cref="T:System.Drawing.Point" /> structures that represents the points to transform.</param>
     </member>
     <member name="M:System.Drawing.Drawing2D.Matrix.TransformPoints(System.Drawing.PointF[])">
-      <summary>Applies the geometric transform represented by this <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.Matrix"></xref> to a specified array of points.</summary>
-      <param name="pts">An array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structures that represents the points to transform.</param>
+      <summary>Applies the geometric transform represented by this <see cref="T:System.Drawing.Drawing2D.Matrix" /> to a specified array of points.</summary>
+      <param name="pts">An array of <see cref="T:System.Drawing.PointF" /> structures that represents the points to transform.</param>
     </member>
     <member name="M:System.Drawing.Drawing2D.Matrix.TransformVectors(System.Drawing.Point[])">
-      <summary>Applies only the scale and rotate components of this <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.Matrix"></xref> to the specified array of points.</summary>
-      <param name="pts">An array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Point"></xref> structures that represents the points to transform.</param>
+      <summary>Applies only the scale and rotate components of this <see cref="T:System.Drawing.Drawing2D.Matrix" /> to the specified array of points.</summary>
+      <param name="pts">An array of <see cref="T:System.Drawing.Point" /> structures that represents the points to transform.</param>
     </member>
     <member name="M:System.Drawing.Drawing2D.Matrix.TransformVectors(System.Drawing.PointF[])">
       <summary>Multiplies each vector in an array by the matrix. The translation elements of this matrix (third row) are ignored.</summary>
@@ -2477,7 +2477,7 @@
     </member>
     <member name="M:System.Drawing.Drawing2D.Matrix.VectorTransformPoints(System.Drawing.Point[])">
       <summary>Multiplies each vector in an array by the matrix. The translation elements of this matrix (third row) are ignored.</summary>
-      <param name="pts">An array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Point"></xref> structures that represents the points to transform.</param>
+      <param name="pts">An array of <see cref="T:System.Drawing.Point" /> structures that represents the points to transform.</param>
     </member>
     <member name="P:System.Drawing.Drawing2D.Matrix.Elements">
       <summary>Gets an array of floating-point values that represents the elements of this <see cref="T:System.Drawing.Drawing2D.Matrix" />.</summary>
@@ -2533,13 +2533,13 @@
       <param name="path">The <see cref="T:System.Drawing.Drawing2D.GraphicsPath" /> that defines the area filled by this <see cref="T:System.Drawing.Drawing2D.PathGradientBrush" />.</param>
     </member>
     <member name="M:System.Drawing.Drawing2D.PathGradientBrush.#ctor(System.Drawing.Point[],System.Drawing.Drawing2D.WrapMode)">
-      <summary>Initializes a new instance of the <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.PathGradientBrush"></xref> class with the specified points and wrap mode.</summary>
-      <param name="points">An array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Point"></xref> structures that represents the points that make up the vertices of the path.</param>
-      <param name="wrapMode">A <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.WrapMode"></xref> that specifies how fills drawn with this <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.PathGradientBrush"></xref> are tiled.</param>
+      <summary>Initializes a new instance of the <see cref="T:System.Drawing.Drawing2D.PathGradientBrush" /> class with the specified points and wrap mode.</summary>
+      <param name="points">An array of <see cref="T:System.Drawing.Point" /> structures that represents the points that make up the vertices of the path.</param>
+      <param name="wrapMode">A <see cref="T:System.Drawing.Drawing2D.WrapMode" /> that specifies how fills drawn with this <see cref="T:System.Drawing.Drawing2D.PathGradientBrush" /> are tiled.</param>
     </member>
     <member name="M:System.Drawing.Drawing2D.PathGradientBrush.#ctor(System.Drawing.Point[])">
-      <summary>Initializes a new instance of the <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.PathGradientBrush"></xref> class with the specified points.</summary>
-      <param name="points">An array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Point"></xref> structures that represents the points that make up the vertices of the path.</param>
+      <summary>Initializes a new instance of the <see cref="T:System.Drawing.Drawing2D.PathGradientBrush" /> class with the specified points.</summary>
+      <param name="points">An array of <see cref="T:System.Drawing.Point" /> structures that represents the points that make up the vertices of the path.</param>
     </member>
     <member name="M:System.Drawing.Drawing2D.PathGradientBrush.#ctor(System.Drawing.PointF[],System.Drawing.Drawing2D.WrapMode)">
       <summary>Initializes a new instance of the <see cref="T:System.Drawing.Drawing2D.PathGradientBrush" /> class with the specified points and wrap mode.</summary>
@@ -3529,10 +3529,10 @@
  <paramref name="points" /> is <see langword="null" />.</exception>
     </member>
     <member name="M:System.Drawing.Graphics.DrawBeziers(System.Drawing.Pen,System.Drawing.PointF[])">
-      <summary>Draws a series of Bézier splines from an array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structures.</summary>
+      <summary>Draws a series of Bézier splines from an array of <see cref="T:System.Drawing.PointF" /> structures.</summary>
       <param name="pen">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Pen"></xref> that determines the color, width, and style of the curve.</param>
-      <param name="points">Array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structures that represent the points that determine the curve. The number of points in the array should be a multiple of 3 plus 1, such as 4, 7, or 10.</param>
+        <see cref="T:System.Drawing.Pen" /> that determines the color, width, and style of the curve.</param>
+      <param name="points">Array of <see cref="T:System.Drawing.PointF" /> structures that represent the points that determine the curve. The number of points in the array should be a multiple of 3 plus 1, such as 4, 7, or 10.</param>
     </member>
     <member name="M:System.Drawing.Graphics.DrawCachedBitmap(System.Drawing.Imaging.CachedBitmap,System.Int32,System.Int32)">
       <summary>Draws the given <paramref name="cachedBitmap" />.</summary>
@@ -3550,18 +3550,18 @@
 The <see cref="T:System.Drawing.Graphics" /> object has a transform applied other than a translation.</exception>
     </member>
     <member name="M:System.Drawing.Graphics.DrawClosedCurve(System.Drawing.Pen,System.Drawing.Point[],System.Single,System.Drawing.Drawing2D.FillMode)">
-      <summary>Draws a closed cardinal spline defined by an array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Point"></xref> structures using a specified tension.</summary>
+      <summary>Draws a closed cardinal spline defined by an array of <see cref="T:System.Drawing.Point" /> structures using a specified tension.</summary>
       <param name="pen">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Pen"></xref> that determines the color, width, and height of the curve.</param>
-      <param name="points">Array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Point"></xref> structures that define the spline.</param>
+        <see cref="T:System.Drawing.Pen" /> that determines the color, width, and height of the curve.</param>
+      <param name="points">Array of <see cref="T:System.Drawing.Point" /> structures that define the spline.</param>
       <param name="tension">Value greater than or equal to 0.0F that specifies the tension of the curve.</param>
-      <param name="fillmode">Member of the <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.FillMode"></xref> enumeration that determines how the curve is filled. This parameter is required but ignored.</param>
+      <param name="fillmode">Member of the <see cref="T:System.Drawing.Drawing2D.FillMode" /> enumeration that determines how the curve is filled. This parameter is required but ignored.</param>
     </member>
     <member name="M:System.Drawing.Graphics.DrawClosedCurve(System.Drawing.Pen,System.Drawing.Point[])">
-      <summary>Draws a closed cardinal spline defined by an array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Point"></xref> structures.</summary>
+      <summary>Draws a closed cardinal spline defined by an array of <see cref="T:System.Drawing.Point" /> structures.</summary>
       <param name="pen">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Pen"></xref> that determines the color, width, and height of the curve.</param>
-      <param name="points">Array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Point"></xref> structures that define the spline.</param>
+        <see cref="T:System.Drawing.Pen" /> that determines the color, width, and height of the curve.</param>
+      <param name="points">Array of <see cref="T:System.Drawing.Point" /> structures that define the spline.</param>
     </member>
     <member name="M:System.Drawing.Graphics.DrawClosedCurve(System.Drawing.Pen,System.Drawing.PointF[],System.Single,System.Drawing.Drawing2D.FillMode)">
       <summary>Draws a closed cardinal spline defined by an array of <see cref="T:System.Drawing.PointF" /> structures using a specified tension.</summary>
@@ -3578,10 +3578,10 @@ The <see cref="T:System.Drawing.Graphics" /> object has a transform applied othe
  <paramref name="points" /> is <see langword="null" />.</exception>
     </member>
     <member name="M:System.Drawing.Graphics.DrawClosedCurve(System.Drawing.Pen,System.Drawing.PointF[])">
-      <summary>Draws a closed cardinal spline defined by an array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structures.</summary>
+      <summary>Draws a closed cardinal spline defined by an array of <see cref="T:System.Drawing.PointF" /> structures.</summary>
       <param name="pen">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Pen"></xref> that determines the color, width, and height of the curve.</param>
-      <param name="points">Array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structures that define the spline.</param>
+        <see cref="T:System.Drawing.Pen" /> that determines the color, width, and height of the curve.</param>
+      <param name="points">Array of <see cref="T:System.Drawing.PointF" /> structures that define the spline.</param>
     </member>
     <member name="M:System.Drawing.Graphics.DrawCurve(System.Drawing.Pen,System.Drawing.Point[],System.Int32,System.Int32,System.Single)">
       <summary>Draws a cardinal spline through a specified array of <see cref="T:System.Drawing.Point" /> structures using a specified tension.</summary>
@@ -3599,47 +3599,47 @@ The <see cref="T:System.Drawing.Graphics" /> object has a transform applied othe
  <paramref name="points" /> is <see langword="null" />.</exception>
     </member>
     <member name="M:System.Drawing.Graphics.DrawCurve(System.Drawing.Pen,System.Drawing.Point[],System.Single)">
-      <summary>Draws a cardinal spline through a specified array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Point"></xref> structures using a specified tension.</summary>
+      <summary>Draws a cardinal spline through a specified array of <see cref="T:System.Drawing.Point" /> structures using a specified tension.</summary>
       <param name="pen">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Pen"></xref> that determines the color, width, and style of the curve.</param>
-      <param name="points">Array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Point"></xref> structures that define the spline.</param>
+        <see cref="T:System.Drawing.Pen" /> that determines the color, width, and style of the curve.</param>
+      <param name="points">Array of <see cref="T:System.Drawing.Point" /> structures that define the spline.</param>
       <param name="tension">Value greater than or equal to 0.0F that specifies the tension of the curve.</param>
     </member>
     <member name="M:System.Drawing.Graphics.DrawCurve(System.Drawing.Pen,System.Drawing.Point[])">
-      <summary>Draws a cardinal spline through a specified array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Point"></xref> structures.</summary>
+      <summary>Draws a cardinal spline through a specified array of <see cref="T:System.Drawing.Point" /> structures.</summary>
       <param name="pen">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Pen"></xref> that determines the color, width, and height of the curve.</param>
-      <param name="points">Array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Point"></xref> structures that define the spline.</param>
+        <see cref="T:System.Drawing.Pen" /> that determines the color, width, and height of the curve.</param>
+      <param name="points">Array of <see cref="T:System.Drawing.Point" /> structures that define the spline.</param>
     </member>
     <member name="M:System.Drawing.Graphics.DrawCurve(System.Drawing.Pen,System.Drawing.PointF[],System.Int32,System.Int32,System.Single)">
-      <summary>Draws a cardinal spline through a specified array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structures using a specified tension. The drawing begins offset from the beginning of the array.</summary>
+      <summary>Draws a cardinal spline through a specified array of <see cref="T:System.Drawing.PointF" /> structures using a specified tension. The drawing begins offset from the beginning of the array.</summary>
       <param name="pen">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Pen"></xref> that determines the color, width, and style of the curve.</param>
-      <param name="points">Array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structures that define the spline.</param>
-      <param name="offset">Offset from the first element in the array of the <code data-dev-comment-type="paramref">points</code> parameter to the starting point in the curve.</param>
+        <see cref="T:System.Drawing.Pen" /> that determines the color, width, and style of the curve.</param>
+      <param name="points">Array of <see cref="T:System.Drawing.PointF" /> structures that define the spline.</param>
+      <param name="offset">Offset from the first element in the array of the <paramref name="points" /> parameter to the starting point in the curve.</param>
       <param name="numberOfSegments">Number of segments after the starting point to include in the curve.</param>
       <param name="tension">Value greater than or equal to 0.0F that specifies the tension of the curve.</param>
     </member>
     <member name="M:System.Drawing.Graphics.DrawCurve(System.Drawing.Pen,System.Drawing.PointF[],System.Int32,System.Int32)">
-      <summary>Draws a cardinal spline through a specified array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structures. The drawing begins offset from the beginning of the array.</summary>
+      <summary>Draws a cardinal spline through a specified array of <see cref="T:System.Drawing.PointF" /> structures. The drawing begins offset from the beginning of the array.</summary>
       <param name="pen">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Pen"></xref> that determines the color, width, and style of the curve.</param>
-      <param name="points">Array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structures that define the spline.</param>
-      <param name="offset">Offset from the first element in the array of the <code data-dev-comment-type="paramref">points</code> parameter to the starting point in the curve.</param>
+        <see cref="T:System.Drawing.Pen" /> that determines the color, width, and style of the curve.</param>
+      <param name="points">Array of <see cref="T:System.Drawing.PointF" /> structures that define the spline.</param>
+      <param name="offset">Offset from the first element in the array of the <paramref name="points" /> parameter to the starting point in the curve.</param>
       <param name="numberOfSegments">Number of segments after the starting point to include in the curve.</param>
     </member>
     <member name="M:System.Drawing.Graphics.DrawCurve(System.Drawing.Pen,System.Drawing.PointF[],System.Single)">
-      <summary>Draws a cardinal spline through a specified array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structures using a specified tension.</summary>
+      <summary>Draws a cardinal spline through a specified array of <see cref="T:System.Drawing.PointF" /> structures using a specified tension.</summary>
       <param name="pen">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Pen"></xref> that determines the color, width, and style of the curve.</param>
-      <param name="points">Array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structures that represent the points that define the curve.</param>
+        <see cref="T:System.Drawing.Pen" /> that determines the color, width, and style of the curve.</param>
+      <param name="points">Array of <see cref="T:System.Drawing.PointF" /> structures that represent the points that define the curve.</param>
       <param name="tension">Value greater than or equal to 0.0F that specifies the tension of the curve.</param>
     </member>
     <member name="M:System.Drawing.Graphics.DrawCurve(System.Drawing.Pen,System.Drawing.PointF[])">
-      <summary>Draws a cardinal spline through a specified array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structures.</summary>
+      <summary>Draws a cardinal spline through a specified array of <see cref="T:System.Drawing.PointF" /> structures.</summary>
       <param name="pen">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Pen"></xref> that determines the color, width, and style of the curve.</param>
-      <param name="points">Array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structures that define the spline.</param>
+        <see cref="T:System.Drawing.Pen" /> that determines the color, width, and style of the curve.</param>
+      <param name="points">Array of <see cref="T:System.Drawing.PointF" /> structures that define the spline.</param>
     </member>
     <member name="M:System.Drawing.Graphics.DrawEllipse(System.Drawing.Pen,System.Drawing.Rectangle)">
       <summary>Draws an ellipse specified by a bounding <see cref="T:System.Drawing.Rectangle" /> structure.</summary>
@@ -4192,10 +4192,10 @@ The <see cref="T:System.Drawing.Graphics" /> object has a transform applied othe
  <paramref name="points" /> is <see langword="null" />.</exception>
     </member>
     <member name="M:System.Drawing.Graphics.DrawLines(System.Drawing.Pen,System.Drawing.PointF[])">
-      <summary>Draws a series of line segments that connect an array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structures.</summary>
+      <summary>Draws a series of line segments that connect an array of <see cref="T:System.Drawing.PointF" /> structures.</summary>
       <param name="pen">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Pen"></xref> that determines the color, width, and style of the line segments.</param>
-      <param name="points">Array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structures that represent the points to connect.</param>
+        <see cref="T:System.Drawing.Pen" /> that determines the color, width, and style of the line segments.</param>
+      <param name="points">Array of <see cref="T:System.Drawing.PointF" /> structures that represent the points to connect.</param>
     </member>
     <member name="M:System.Drawing.Graphics.DrawPath(System.Drawing.Pen,System.Drawing.Drawing2D.GraphicsPath)">
       <summary>Draws a <see cref="T:System.Drawing.Drawing2D.GraphicsPath" />.</summary>
@@ -4267,10 +4267,10 @@ The <see cref="T:System.Drawing.Graphics" /> object has a transform applied othe
         <paramref name="pen" /> is <see langword="null" />.</exception>
     </member>
     <member name="M:System.Drawing.Graphics.DrawPolygon(System.Drawing.Pen,System.Drawing.PointF[])">
-      <summary>Draws a polygon defined by an array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structures.</summary>
+      <summary>Draws a polygon defined by an array of <see cref="T:System.Drawing.PointF" /> structures.</summary>
       <param name="pen">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Pen"></xref> that determines the color, width, and style of the polygon.</param>
-      <param name="points">Array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structures that represent the vertices of the polygon.</param>
+        <see cref="T:System.Drawing.Pen" /> that determines the color, width, and style of the polygon.</param>
+      <param name="points">Array of <see cref="T:System.Drawing.PointF" /> structures that represent the vertices of the polygon.</param>
     </member>
     <member name="M:System.Drawing.Graphics.DrawRectangle(System.Drawing.Pen,System.Drawing.Rectangle)">
       <summary>Draws a rectangle specified by a <see cref="T:System.Drawing.Rectangle" /> structure.</summary>
@@ -4320,10 +4320,10 @@ The <see cref="T:System.Drawing.Graphics" /> object has a transform applied othe
         <paramref name="rects" /> is a zero-length array.</exception>
     </member>
     <member name="M:System.Drawing.Graphics.DrawRectangles(System.Drawing.Pen,System.Drawing.RectangleF[])">
-      <summary>Draws a series of rectangles specified by <xref data-throw-if-not-resolved="true" uid="System.Drawing.RectangleF"></xref> structures.</summary>
+      <summary>Draws a series of rectangles specified by <see cref="T:System.Drawing.RectangleF" /> structures.</summary>
       <param name="pen">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Pen"></xref> that determines the color, width, and style of the outlines of the rectangles.</param>
-      <param name="rects">Array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.RectangleF"></xref> structures that represent the rectangles to draw.</param>
+        <see cref="T:System.Drawing.Pen" /> that determines the color, width, and style of the outlines of the rectangles.</param>
+      <param name="rects">Array of <see cref="T:System.Drawing.RectangleF" /> structures that represent the rectangles to draw.</param>
     </member>
     <member name="M:System.Drawing.Graphics.DrawString(System.ReadOnlySpan{System.Char},System.Drawing.Font,System.Drawing.Brush,System.Drawing.PointF,System.Drawing.StringFormat)">
       <summary>Draws the specified text string at the specified location with the specified <xref data-throw-if-not-resolved="true" uid="System.Drawing.Brush"></xref> and <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref> objects using the formatting attributes of the specified <xref data-throw-if-not-resolved="true" uid="System.Drawing.StringFormat"></xref>.</summary>
@@ -4923,25 +4923,25 @@ The <see cref="T:System.Drawing.Graphics" /> object has a transform applied othe
         <see cref="T:System.Drawing.Region" /> that specifies the region to exclude from the clip region.</param>
     </member>
     <member name="M:System.Drawing.Graphics.FillClosedCurve(System.Drawing.Brush,System.Drawing.Point[],System.Drawing.Drawing2D.FillMode,System.Single)">
-      <summary>Fills the interior of a closed cardinal spline curve defined by an array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Point"></xref> structures using the specified fill mode and tension.</summary>
+      <summary>Fills the interior of a closed cardinal spline curve defined by an array of <see cref="T:System.Drawing.Point" /> structures using the specified fill mode and tension.</summary>
       <param name="brush">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Brush"></xref> that determines the characteristics of the fill.</param>
-      <param name="points">Array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Point"></xref> structures that define the spline.</param>
-      <param name="fillmode">Member of the <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.FillMode"></xref> enumeration that determines how the curve is filled.</param>
+        <see cref="T:System.Drawing.Brush" /> that determines the characteristics of the fill.</param>
+      <param name="points">Array of <see cref="T:System.Drawing.Point" /> structures that define the spline.</param>
+      <param name="fillmode">Member of the <see cref="T:System.Drawing.Drawing2D.FillMode" /> enumeration that determines how the curve is filled.</param>
       <param name="tension">Value greater than or equal to 0.0F that specifies the tension of the curve.</param>
     </member>
     <member name="M:System.Drawing.Graphics.FillClosedCurve(System.Drawing.Brush,System.Drawing.Point[],System.Drawing.Drawing2D.FillMode)">
-      <summary>Fills the interior of a closed cardinal spline curve defined by an array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Point"></xref> structures using the specified fill mode.</summary>
+      <summary>Fills the interior of a closed cardinal spline curve defined by an array of <see cref="T:System.Drawing.Point" /> structures using the specified fill mode.</summary>
       <param name="brush">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Brush"></xref> that determines the characteristics of the fill.</param>
-      <param name="points">Array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Point"></xref> structures that define the spline.</param>
-      <param name="fillmode">Member of the <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.FillMode"></xref> enumeration that determines how the curve is filled.</param>
+        <see cref="T:System.Drawing.Brush" /> that determines the characteristics of the fill.</param>
+      <param name="points">Array of <see cref="T:System.Drawing.Point" /> structures that define the spline.</param>
+      <param name="fillmode">Member of the <see cref="T:System.Drawing.Drawing2D.FillMode" /> enumeration that determines how the curve is filled.</param>
     </member>
     <member name="M:System.Drawing.Graphics.FillClosedCurve(System.Drawing.Brush,System.Drawing.Point[])">
-      <summary>Fills the interior of a closed cardinal spline curve defined by an array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Point"></xref> structures.</summary>
+      <summary>Fills the interior of a closed cardinal spline curve defined by an array of <see cref="T:System.Drawing.Point" /> structures.</summary>
       <param name="brush">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Brush"></xref> that determines the characteristics of the fill.</param>
-      <param name="points">Array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Point"></xref> structures that define the spline.</param>
+        <see cref="T:System.Drawing.Brush" /> that determines the characteristics of the fill.</param>
+      <param name="points">Array of <see cref="T:System.Drawing.Point" /> structures that define the spline.</param>
     </member>
     <member name="M:System.Drawing.Graphics.FillClosedCurve(System.Drawing.Brush,System.Drawing.PointF[],System.Drawing.Drawing2D.FillMode,System.Single)">
       <summary>Fills the interior of a closed cardinal spline curve defined by an array of <see cref="T:System.Drawing.PointF" /> structures using the specified fill mode and tension.</summary>
@@ -4957,17 +4957,17 @@ The <see cref="T:System.Drawing.Graphics" /> object has a transform applied othe
  <paramref name="points" /> is <see langword="null" />.</exception>
     </member>
     <member name="M:System.Drawing.Graphics.FillClosedCurve(System.Drawing.Brush,System.Drawing.PointF[],System.Drawing.Drawing2D.FillMode)">
-      <summary>Fills the interior of a closed cardinal spline curve defined by an array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structures using the specified fill mode.</summary>
+      <summary>Fills the interior of a closed cardinal spline curve defined by an array of <see cref="T:System.Drawing.PointF" /> structures using the specified fill mode.</summary>
       <param name="brush">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Brush"></xref> that determines the characteristics of the fill.</param>
-      <param name="points">Array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structures that define the spline.</param>
-      <param name="fillmode">Member of the <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.FillMode"></xref> enumeration that determines how the curve is filled.</param>
+        <see cref="T:System.Drawing.Brush" /> that determines the characteristics of the fill.</param>
+      <param name="points">Array of <see cref="T:System.Drawing.PointF" /> structures that define the spline.</param>
+      <param name="fillmode">Member of the <see cref="T:System.Drawing.Drawing2D.FillMode" /> enumeration that determines how the curve is filled.</param>
     </member>
     <member name="M:System.Drawing.Graphics.FillClosedCurve(System.Drawing.Brush,System.Drawing.PointF[])">
-      <summary>Fills the interior of a closed cardinal spline curve defined by an array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structures.</summary>
+      <summary>Fills the interior of a closed cardinal spline curve defined by an array of <see cref="T:System.Drawing.PointF" /> structures.</summary>
       <param name="brush">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Brush"></xref> that determines the characteristics of the fill.</param>
-      <param name="points">Array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structures that define the spline.</param>
+        <see cref="T:System.Drawing.Brush" /> that determines the characteristics of the fill.</param>
+      <param name="points">Array of <see cref="T:System.Drawing.PointF" /> structures that define the spline.</param>
     </member>
     <member name="M:System.Drawing.Graphics.FillEllipse(System.Drawing.Brush,System.Drawing.Rectangle)">
       <summary>Fills the interior of an ellipse defined by a bounding rectangle specified by a <see cref="T:System.Drawing.Rectangle" /> structure.</summary>
@@ -5080,23 +5080,23 @@ The <see cref="T:System.Drawing.Graphics" /> object has a transform applied othe
  <paramref name="points" /> is <see langword="null" />.</exception>
     </member>
     <member name="M:System.Drawing.Graphics.FillPolygon(System.Drawing.Brush,System.Drawing.Point[])">
-      <summary>Fills the interior of a polygon defined by an array of points specified by <xref data-throw-if-not-resolved="true" uid="System.Drawing.Point"></xref> structures.</summary>
+      <summary>Fills the interior of a polygon defined by an array of points specified by <see cref="T:System.Drawing.Point" /> structures.</summary>
       <param name="brush">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Brush"></xref> that determines the characteristics of the fill.</param>
-      <param name="points">Array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Point"></xref> structures that represent the vertices of the polygon to fill.</param>
+        <see cref="T:System.Drawing.Brush" /> that determines the characteristics of the fill.</param>
+      <param name="points">Array of <see cref="T:System.Drawing.Point" /> structures that represent the vertices of the polygon to fill.</param>
     </member>
     <member name="M:System.Drawing.Graphics.FillPolygon(System.Drawing.Brush,System.Drawing.PointF[],System.Drawing.Drawing2D.FillMode)">
-      <summary>Fills the interior of a polygon defined by an array of points specified by <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structures using the specified fill mode.</summary>
+      <summary>Fills the interior of a polygon defined by an array of points specified by <see cref="T:System.Drawing.PointF" /> structures using the specified fill mode.</summary>
       <param name="brush">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Brush"></xref> that determines the characteristics of the fill.</param>
-      <param name="points">Array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structures that represent the vertices of the polygon to fill.</param>
-      <param name="fillMode">Member of the <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.FillMode"></xref> enumeration that determines the style of the fill.</param>
+        <see cref="T:System.Drawing.Brush" /> that determines the characteristics of the fill.</param>
+      <param name="points">Array of <see cref="T:System.Drawing.PointF" /> structures that represent the vertices of the polygon to fill.</param>
+      <param name="fillMode">Member of the <see cref="T:System.Drawing.Drawing2D.FillMode" /> enumeration that determines the style of the fill.</param>
     </member>
     <member name="M:System.Drawing.Graphics.FillPolygon(System.Drawing.Brush,System.Drawing.PointF[])">
-      <summary>Fills the interior of a polygon defined by an array of points specified by <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structures.</summary>
+      <summary>Fills the interior of a polygon defined by an array of points specified by <see cref="T:System.Drawing.PointF" /> structures.</summary>
       <param name="brush">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Brush"></xref> that determines the characteristics of the fill.</param>
-      <param name="points">Array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structures that represent the vertices of the polygon to fill.</param>
+        <see cref="T:System.Drawing.Brush" /> that determines the characteristics of the fill.</param>
+      <param name="points">Array of <see cref="T:System.Drawing.PointF" /> structures that represent the vertices of the polygon to fill.</param>
     </member>
     <member name="M:System.Drawing.Graphics.FillRectangle(System.Drawing.Brush,System.Drawing.Rectangle)">
       <summary>Fills the interior of a rectangle specified by a <see cref="T:System.Drawing.Rectangle" /> structure.</summary>
@@ -5139,10 +5139,10 @@ The <see cref="T:System.Drawing.Graphics" /> object has a transform applied othe
         <paramref name="brush" /> is <see langword="null" />.</exception>
     </member>
     <member name="M:System.Drawing.Graphics.FillRectangles(System.Drawing.Brush,System.Drawing.Rectangle[])">
-      <summary>Fills the interiors of a series of rectangles specified by <xref data-throw-if-not-resolved="true" uid="System.Drawing.Rectangle"></xref> structures.</summary>
+      <summary>Fills the interiors of a series of rectangles specified by <see cref="T:System.Drawing.Rectangle" /> structures.</summary>
       <param name="brush">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Brush"></xref> that determines the characteristics of the fill.</param>
-      <param name="rects">Array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Rectangle"></xref> structures that represent the rectangles to fill.</param>
+        <see cref="T:System.Drawing.Brush" /> that determines the characteristics of the fill.</param>
+      <param name="rects">Array of <see cref="T:System.Drawing.Rectangle" /> structures that represent the rectangles to fill.</param>
     </member>
     <member name="M:System.Drawing.Graphics.FillRectangles(System.Drawing.Brush,System.Drawing.RectangleF[])">
       <summary>Fills the interiors of a series of rectangles specified by <see cref="T:System.Drawing.RectangleF" /> structures.</summary>
@@ -5413,66 +5413,66 @@ The <see cref="T:System.Drawing.Graphics" /> object has a transform applied othe
       <returns>This method returns a <xref data-throw-if-not-resolved="true" uid="System.Drawing.SizeF"></xref> structure that represents the size, in the units specified by the <xref data-throw-if-not-resolved="true" uid="System.Drawing.Graphics.PageUnit"></xref> property, of the string specified by the <code data-dev-comment-type="paramref">text</code> parameter as drawn with the <code data-dev-comment-type="paramref">font</code> parameter.</returns>
     </member>
     <member name="M:System.Drawing.Graphics.MeasureString(System.String,System.Drawing.Font,System.Drawing.PointF,System.Drawing.StringFormat)">
-      <summary>Measures the specified string when drawn with the specified <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref> and formatted with the specified <xref data-throw-if-not-resolved="true" uid="System.Drawing.StringFormat"></xref>.</summary>
+      <summary>Measures the specified string when drawn with the specified <see cref="T:System.Drawing.Font" /> and formatted with the specified <see cref="T:System.Drawing.StringFormat" />.</summary>
       <param name="text">String to measure.</param>
       <param name="font">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref> defines the text format of the string.</param>
+        <see cref="T:System.Drawing.Font" /> defines the text format of the string.</param>
       <param name="origin">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structure that represents the upper-left corner of the string.</param>
+        <see cref="T:System.Drawing.PointF" /> structure that represents the upper-left corner of the string.</param>
       <param name="stringFormat">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.StringFormat"></xref> that represents formatting information, such as line spacing, for the string.</param>
-      <returns>This method returns a <xref data-throw-if-not-resolved="true" uid="System.Drawing.SizeF"></xref> structure that represents the size, in the units specified by the <xref data-throw-if-not-resolved="true" uid="System.Drawing.Graphics.PageUnit"></xref> property, of the string specified by the <code data-dev-comment-type="paramref">text</code> parameter as drawn with the <code data-dev-comment-type="paramref">font</code> parameter and the <code data-dev-comment-type="paramref">stringFormat</code> parameter.</returns>
+        <see cref="T:System.Drawing.StringFormat" /> that represents formatting information, such as line spacing, for the string.</param>
+      <returns>This method returns a <see cref="T:System.Drawing.SizeF" /> structure that represents the size, in the units specified by the <see cref="P:System.Drawing.Graphics.PageUnit" /> property, of the string specified by the <paramref name="text" /> parameter as drawn with the <paramref name="font" /> parameter and the <paramref name="stringFormat" /> parameter.</returns>
     </member>
     <member name="M:System.Drawing.Graphics.MeasureString(System.String,System.Drawing.Font,System.Drawing.SizeF,System.Drawing.StringFormat,System.Int32@,System.Int32@)">
-      <summary>Measures the specified string when drawn with the specified <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref> and formatted with the specified <xref data-throw-if-not-resolved="true" uid="System.Drawing.StringFormat"></xref>.</summary>
+      <summary>Measures the specified string when drawn with the specified <see cref="T:System.Drawing.Font" /> and formatted with the specified <see cref="T:System.Drawing.StringFormat" />.</summary>
       <param name="text">String to measure.</param>
       <param name="font">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref> that defines the text format of the string.</param>
+        <see cref="T:System.Drawing.Font" /> that defines the text format of the string.</param>
       <param name="layoutArea">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.SizeF"></xref> structure that specifies the maximum layout area for the text.</param>
+        <see cref="T:System.Drawing.SizeF" /> structure that specifies the maximum layout area for the text.</param>
       <param name="stringFormat">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.StringFormat"></xref> that represents formatting information, such as line spacing, for the string.</param>
+        <see cref="T:System.Drawing.StringFormat" /> that represents formatting information, such as line spacing, for the string.</param>
       <param name="charactersFitted">Number of characters in the string.</param>
       <param name="linesFilled">Number of text lines in the string.</param>
-      <returns>This method returns a <xref data-throw-if-not-resolved="true" uid="System.Drawing.SizeF"></xref> structure that represents the size of the string, in the units specified by the <xref data-throw-if-not-resolved="true" uid="System.Drawing.Graphics.PageUnit"></xref> property, of the <code data-dev-comment-type="paramref">text</code> parameter as drawn with the <code data-dev-comment-type="paramref">font</code> parameter and the <code data-dev-comment-type="paramref">stringFormat</code> parameter.</returns>
+      <returns>This method returns a <see cref="T:System.Drawing.SizeF" /> structure that represents the size of the string, in the units specified by the <see cref="P:System.Drawing.Graphics.PageUnit" /> property, of the <paramref name="text" /> parameter as drawn with the <paramref name="font" /> parameter and the <paramref name="stringFormat" /> parameter.</returns>
     </member>
     <member name="M:System.Drawing.Graphics.MeasureString(System.String,System.Drawing.Font,System.Drawing.SizeF,System.Drawing.StringFormat)">
-      <summary>Measures the specified string when drawn with the specified <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref> and formatted with the specified <xref data-throw-if-not-resolved="true" uid="System.Drawing.StringFormat"></xref>.</summary>
+      <summary>Measures the specified string when drawn with the specified <see cref="T:System.Drawing.Font" /> and formatted with the specified <see cref="T:System.Drawing.StringFormat" />.</summary>
       <param name="text">String to measure.</param>
       <param name="font">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref> defines the text format of the string.</param>
+        <see cref="T:System.Drawing.Font" /> defines the text format of the string.</param>
       <param name="layoutArea">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.SizeF"></xref> structure that specifies the maximum layout area for the text.</param>
+        <see cref="T:System.Drawing.SizeF" /> structure that specifies the maximum layout area for the text.</param>
       <param name="stringFormat">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.StringFormat"></xref> that represents formatting information, such as line spacing, for the string.</param>
-      <returns>This method returns a <xref data-throw-if-not-resolved="true" uid="System.Drawing.SizeF"></xref> structure that represents the size, in the units specified by the <xref data-throw-if-not-resolved="true" uid="System.Drawing.Graphics.PageUnit"></xref> property, of the string specified in the <code data-dev-comment-type="paramref">text</code> parameter as drawn with the <code data-dev-comment-type="paramref">font</code> parameter and the <code data-dev-comment-type="paramref">stringFormat</code> parameter.</returns>
+        <see cref="T:System.Drawing.StringFormat" /> that represents formatting information, such as line spacing, for the string.</param>
+      <returns>This method returns a <see cref="T:System.Drawing.SizeF" /> structure that represents the size, in the units specified by the <see cref="P:System.Drawing.Graphics.PageUnit" /> property, of the string specified in the <paramref name="text" /> parameter as drawn with the <paramref name="font" /> parameter and the <paramref name="stringFormat" /> parameter.</returns>
     </member>
     <member name="M:System.Drawing.Graphics.MeasureString(System.String,System.Drawing.Font,System.Drawing.SizeF)">
-      <summary>Measures the specified string when drawn with the specified <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref> within the specified layout area.</summary>
+      <summary>Measures the specified string when drawn with the specified <see cref="T:System.Drawing.Font" /> within the specified layout area.</summary>
       <param name="text">String to measure.</param>
       <param name="font">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref> defines the text format of the string.</param>
+        <see cref="T:System.Drawing.Font" /> defines the text format of the string.</param>
       <param name="layoutArea">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.SizeF"></xref> structure that specifies the maximum layout area for the text.</param>
-      <returns>This method returns a <xref data-throw-if-not-resolved="true" uid="System.Drawing.SizeF"></xref> structure that represents the size, in the units specified by the <xref data-throw-if-not-resolved="true" uid="System.Drawing.Graphics.PageUnit"></xref> property, of the string specified by the <code data-dev-comment-type="paramref">text</code> parameter as drawn with the <code data-dev-comment-type="paramref">font</code> parameter.</returns>
+        <see cref="T:System.Drawing.SizeF" /> structure that specifies the maximum layout area for the text.</param>
+      <returns>This method returns a <see cref="T:System.Drawing.SizeF" /> structure that represents the size, in the units specified by the <see cref="P:System.Drawing.Graphics.PageUnit" /> property, of the string specified by the <paramref name="text" /> parameter as drawn with the <paramref name="font" /> parameter.</returns>
     </member>
     <member name="M:System.Drawing.Graphics.MeasureString(System.String,System.Drawing.Font,System.Int32,System.Drawing.StringFormat)">
-      <summary>Measures the specified string when drawn with the specified <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref> and formatted with the specified <xref data-throw-if-not-resolved="true" uid="System.Drawing.StringFormat"></xref>.</summary>
+      <summary>Measures the specified string when drawn with the specified <see cref="T:System.Drawing.Font" /> and formatted with the specified <see cref="T:System.Drawing.StringFormat" />.</summary>
       <param name="text">String to measure.</param>
       <param name="font">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref> that defines the text format of the string.</param>
+        <see cref="T:System.Drawing.Font" /> that defines the text format of the string.</param>
       <param name="width">Maximum width of the string.</param>
       <param name="format">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.StringFormat"></xref> that represents formatting information, such as line spacing, for the string.</param>
-      <returns>This method returns a <xref data-throw-if-not-resolved="true" uid="System.Drawing.SizeF"></xref> structure that represents the size, in the units specified by the <xref data-throw-if-not-resolved="true" uid="System.Drawing.Graphics.PageUnit"></xref> property, of the string specified in the <code data-dev-comment-type="paramref">text</code> parameter as drawn with the <code data-dev-comment-type="paramref">font</code> parameter and the <code data-dev-comment-type="paramref">format</code> parameter.</returns>
+        <see cref="T:System.Drawing.StringFormat" /> that represents formatting information, such as line spacing, for the string.</param>
+      <returns>This method returns a <see cref="T:System.Drawing.SizeF" /> structure that represents the size, in the units specified by the <see cref="P:System.Drawing.Graphics.PageUnit" /> property, of the string specified in the <paramref name="text" /> parameter as drawn with the <paramref name="font" /> parameter and the <paramref name="format" /> parameter.</returns>
     </member>
     <member name="M:System.Drawing.Graphics.MeasureString(System.String,System.Drawing.Font,System.Int32)">
-      <summary>Measures the specified string when drawn with the specified <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref>.</summary>
+      <summary>Measures the specified string when drawn with the specified <see cref="T:System.Drawing.Font" />.</summary>
       <param name="text">String to measure.</param>
       <param name="font">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref> that defines the format of the string.</param>
+        <see cref="T:System.Drawing.Font" /> that defines the format of the string.</param>
       <param name="width">Maximum width of the string in pixels.</param>
-      <returns>This method returns a <xref data-throw-if-not-resolved="true" uid="System.Drawing.SizeF"></xref> structure that represents the size, in the units specified by the <xref data-throw-if-not-resolved="true" uid="System.Drawing.Graphics.PageUnit"></xref> property, of the string specified in the <code data-dev-comment-type="paramref">text</code> parameter as drawn with the <code data-dev-comment-type="paramref">font</code> parameter.</returns>
+      <returns>This method returns a <see cref="T:System.Drawing.SizeF" /> structure that represents the size, in the units specified by the <see cref="P:System.Drawing.Graphics.PageUnit" /> property, of the string specified in the <paramref name="text" /> parameter as drawn with the <paramref name="font" /> parameter.</returns>
     </member>
     <member name="M:System.Drawing.Graphics.MeasureString(System.String,System.Drawing.Font)">
       <summary>Measures the specified string when drawn with the specified <see cref="T:System.Drawing.Font" />.</summary>
@@ -5599,10 +5599,10 @@ The <see cref="T:System.Drawing.Graphics" /> object has a transform applied othe
       <param name="combineMode">Member from the <see cref="T:System.Drawing.Drawing2D.CombineMode" /> enumeration that specifies the combining operation to use.</param>
     </member>
     <member name="M:System.Drawing.Graphics.TransformPoints(System.Drawing.Drawing2D.CoordinateSpace,System.Drawing.Drawing2D.CoordinateSpace,System.Drawing.Point[])">
-      <summary>Transforms an array of points from one coordinate space to another using the current world and page transformations of this <xref data-throw-if-not-resolved="true" uid="System.Drawing.Graphics"></xref>.</summary>
-      <param name="destSpace">Member of the <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.CoordinateSpace"></xref> enumeration that specifies the destination coordinate space.</param>
-      <param name="srcSpace">Member of the <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.CoordinateSpace"></xref> enumeration that specifies the source coordinate space.</param>
-      <param name="pts">Array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Point"></xref> structures that represents the points to transformation.</param>
+      <summary>Transforms an array of points from one coordinate space to another using the current world and page transformations of this <see cref="T:System.Drawing.Graphics" />.</summary>
+      <param name="destSpace">Member of the <see cref="T:System.Drawing.Drawing2D.CoordinateSpace" /> enumeration that specifies the destination coordinate space.</param>
+      <param name="srcSpace">Member of the <see cref="T:System.Drawing.Drawing2D.CoordinateSpace" /> enumeration that specifies the source coordinate space.</param>
+      <param name="pts">Array of <see cref="T:System.Drawing.Point" /> structures that represents the points to transformation.</param>
     </member>
     <member name="M:System.Drawing.Graphics.TransformPoints(System.Drawing.Drawing2D.CoordinateSpace,System.Drawing.Drawing2D.CoordinateSpace,System.Drawing.PointF[])">
       <summary>Transforms an array of points from one coordinate space to another using the current world and page transformations of this <see cref="T:System.Drawing.Graphics" />.</summary>
@@ -5827,7 +5827,7 @@ The <see cref="T:System.Drawing.Graphics" /> object has a transform applied othe
       <param name="filePath">Path to an icon or PE (.dll, .exe) file.</param>
       <param name="id">Positive numbers refer to an icon index in the given file. Negative numbers refer to a specific native resource identifier in a PE (.dll, .exe) file.</param>
       <param name="smallIcon">
-        <code data-dev-comment-type="langword">true</code> to get the <xref data-throw-if-not-resolved="true" uid="System.Drawing.Icon"></xref> at the current system small icon size setting. <code data-dev-comment-type="langword">false</code> to get the <xref data-throw-if-not-resolved="true" uid="System.Drawing.Icon"></xref> at the current system large icon size setting. The default is <code data-dev-comment-type="langword">false</code>.</param>
+        <see langword="true" /> to get the <see cref="T:System.Drawing.Icon" /> at the current system small icon size setting. <see langword="false" /> to get the <see cref="T:System.Drawing.Icon" /> at the current system large icon size setting. The default is <see langword="false" />.</param>
       <returns>An <xref data-throw-if-not-resolved="true" uid="System.Drawing.Icon"></xref>, or <code data-dev-comment-type="langword">null</code> if an icon can't be found with the specified <code data-dev-comment-type="paramref">id</code>.</returns>
     </member>
     <member name="M:System.Drawing.Icon.ExtractIcon(System.String,System.Int32,System.Int32)">
@@ -7893,12 +7893,12 @@ The <see cref="T:System.Drawing.Graphics" /> object has a transform applied othe
     </member>
     <member name="M:System.Drawing.Imaging.ImageAttributes.SetRemapTable(System.Drawing.Imaging.ColorMap[],System.Drawing.Imaging.ColorAdjustType)">
       <summary>Sets the color-remap table for a specified category.</summary>
-      <param name="map">An array of color pairs of type <xref data-throw-if-not-resolved="true" uid="System.Drawing.Imaging.ColorMap"></xref>. Each color pair contains an existing color (the first value) and the color that it will be mapped to (the second value).</param>
-      <param name="type">An element of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Imaging.ColorAdjustType"></xref> that specifies the category for which the color-remap table is set.</param>
+      <param name="map">An array of color pairs of type <see cref="T:System.Drawing.Imaging.ColorMap" />. Each color pair contains an existing color (the first value) and the color that it will be mapped to (the second value).</param>
+      <param name="type">An element of <see cref="T:System.Drawing.Imaging.ColorAdjustType" /> that specifies the category for which the color-remap table is set.</param>
     </member>
     <member name="M:System.Drawing.Imaging.ImageAttributes.SetRemapTable(System.Drawing.Imaging.ColorMap[])">
       <summary>Sets the color-remap table for the default category.</summary>
-      <param name="map">An array of color pairs of type <xref data-throw-if-not-resolved="true" uid="System.Drawing.Imaging.ColorMap"></xref>. Each color pair contains an existing color (the first value) and the color that it will be mapped to (the second value).</param>
+      <param name="map">An array of color pairs of type <see cref="T:System.Drawing.Imaging.ColorMap" />. Each color pair contains an existing color (the first value) and the color that it will be mapped to (the second value).</param>
     </member>
     <member name="M:System.Drawing.Imaging.ImageAttributes.SetThreshold(System.Single,System.Drawing.Imaging.ColorAdjustType)">
       <summary>Sets the threshold (transparency range) for a specified category.</summary>

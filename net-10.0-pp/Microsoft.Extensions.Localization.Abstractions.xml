@@ -115,7 +115,7 @@
     <member name="M:Microsoft.Extensions.Localization.StringLocalizer`1.GetAllStrings(System.Boolean)">
       <summary>Gets all the resource strings.</summary>
       <param name="includeParentCultures">
-        <code data-dev-comment-type="langword">true</code> to include strings from parent cultures; <code data-dev-comment-type="langword">false</code> otherwise.</param>
+        <see langword="true" /> to include strings from parent cultures; <see langword="false" /> otherwise.</param>
       <returns>An enumeration that contains all the resource strings.</returns>
     </member>
     <member name="P:Microsoft.Extensions.Localization.StringLocalizer`1.Item(System.String,System.Object[])">

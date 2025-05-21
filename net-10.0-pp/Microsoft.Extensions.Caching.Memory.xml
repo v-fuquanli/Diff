@@ -131,7 +131,7 @@
       <param name="key">An object identifying the requested entry.</param>
       <param name="result" />
       <returns>
-        <code>true</code> if the key was found.</returns>
+        <code data-dev-comment-type="langword">true</code> if the key was found.</returns>
     </member>
     <member name="M:Microsoft.Extensions.Caching.Memory.MemoryCache.TryGetValue(System.ReadOnlySpan{System.Char},System.Object@)">
       <summary>

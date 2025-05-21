@@ -140,7 +140,7 @@
       <summary>Indicates whether the current object is equal to another object of the same type.</summary>
       <param name="other">An object to compare with this object.</param>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if the current object is equal to the <code data-dev-comment-type="paramref">other</code> parameter; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if the current object is equal to the <paramref name="other" /> parameter; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="M:System.CommandLine.ArgumentArity.Equals(System.Object)">
       <summary>Indicates whether this instance and a specified object are equal.</summary>
@@ -321,11 +321,11 @@
     <member name="M:System.CommandLine.Binding.BindingContext.GetService(System.Type)">
       <summary>Gets the service object of the specified type.</summary>
       <param name="serviceType">An object that specifies the type of service object to get.</param>
-      <returns>A service object of type <code data-dev-comment-type="paramref">serviceType</code>.
+      <returns>A service object of type <paramref name="serviceType" />.
 
  -or-
 
- <code data-dev-comment-type="langword">null</code> if there is no service object of type <code data-dev-comment-type="paramref">serviceType</code>.</returns>
+ <see langword="null" /> if there is no service object of type <paramref name="serviceType" />.</returns>
     </member>
     <member name="P:System.CommandLine.Binding.BindingContext.Console">
       <summary>
@@ -634,7 +634,7 @@
     </member>
     <member name="M:System.CommandLine.Command.System#Collections#IEnumerable#GetEnumerator">
       <summary>Returns an enumerator that iterates through a collection.</summary>
-      <returns>An <xref data-throw-if-not-resolved="true" uid="System.Collections.IEnumerator"></xref> object that can be used to iterate through the collection.</returns>
+      <returns>An <see cref="T:System.Collections.IEnumerator" /> object that can be used to iterate through the collection.</returns>
     </member>
     <member name="P:System.CommandLine.Command.Arguments">
       <summary>
@@ -1421,7 +1421,7 @@
       <summary>Indicates whether the current object is equal to another object of the same type.</summary>
       <param name="other">An object to compare with this object.</param>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if the current object is equal to the <code data-dev-comment-type="paramref">other</code> parameter; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if the current object is equal to the <paramref name="other" /> parameter; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="M:System.CommandLine.Help.TwoColumnHelpRow.Equals(System.Object)">
       <summary>Determines whether the specified object is equal to the current object.</summary>
@@ -1940,14 +1940,14 @@
       <typeparam name="T">The <xref data-throw-if-not-resolved="true" uid="System.Type"></xref> that the option's arguments are expected to be parsed as.</typeparam>
     </member>
     <member name="M:System.CommandLine.Option`1.#ctor(System.String,System.CommandLine.Parsing.ParseArgument{`0},System.Boolean,System.String)">
-      <summary>Initializes a new instance of the <xref data-throw-if-not-resolved="true" uid="System.CommandLine.Option`1"></xref> class.</summary>
+      <summary>Initializes a new instance of the <see cref="T:System.CommandLine.Option`1" /> class.</summary>
       <param name="name" />
       <param name="parseArgument" />
       <param name="isDefault" />
       <param name="description" />
     </member>
     <member name="M:System.CommandLine.Option`1.#ctor(System.String,System.Func{`0},System.String)">
-      <summary>Initializes a new instance of the <xref data-throw-if-not-resolved="true" uid="System.CommandLine.Option`1"></xref> class.</summary>
+      <summary>Initializes a new instance of the <see cref="T:System.CommandLine.Option`1" /> class.</summary>
       <param name="name" />
       <param name="getDefaultValue" />
       <param name="description" />
@@ -1958,20 +1958,20 @@
       <param name="description">The description of the symbol, which is displayed in command line help.</param>
     </member>
     <member name="M:System.CommandLine.Option`1.#ctor(System.String[],System.CommandLine.Parsing.ParseArgument{`0},System.Boolean,System.String)">
-      <summary>Initializes a new instance of the <xref data-throw-if-not-resolved="true" uid="System.CommandLine.Option`1"></xref> class.</summary>
+      <summary>Initializes a new instance of the <see cref="T:System.CommandLine.Option`1" /> class.</summary>
       <param name="aliases" />
       <param name="parseArgument" />
       <param name="isDefault" />
       <param name="description" />
     </member>
     <member name="M:System.CommandLine.Option`1.#ctor(System.String[],System.Func{`0},System.String)">
-      <summary>Initializes a new instance of the <xref data-throw-if-not-resolved="true" uid="System.CommandLine.Option`1"></xref> class.</summary>
+      <summary>Initializes a new instance of the <see cref="T:System.CommandLine.Option`1" /> class.</summary>
       <param name="aliases" />
       <param name="getDefaultValue" />
       <param name="description" />
     </member>
     <member name="M:System.CommandLine.Option`1.#ctor(System.String[],System.String)">
-      <summary>Initializes a new instance of the <xref data-throw-if-not-resolved="true" uid="System.CommandLine.Option`1"></xref> class.</summary>
+      <summary>Initializes a new instance of the <see cref="T:System.CommandLine.Option`1" /> class.</summary>
       <param name="aliases" />
       <param name="description" />
     </member>
@@ -2456,7 +2456,7 @@
       <summary>Indicates whether the current object is equal to another object of the same type.</summary>
       <param name="other">An object to compare with this object.</param>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if the current object is equal to the <code data-dev-comment-type="paramref">other</code> parameter; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if the current object is equal to the <paramref name="other" /> parameter; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="M:System.CommandLine.Parsing.Token.Equals(System.Object)">
       <summary>Determines whether the specified object is equal to the current object.</summary>

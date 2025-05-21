@@ -129,7 +129,7 @@
       <returns>A value representing the UTF-8 encoding of <paramref name="data" />.</returns>
     </member>
     <member name="M:System.BinaryData.GetHashCode">
-      <summary>Returns the hash code for the current <xref data-throw-if-not-resolved="true" uid="System.BinaryData"></xref> object.</summary>
+      <summary>Returns the hash code for the current <see cref="T:System.BinaryData" /> object.</summary>
       <returns>A 32-bit signed integer hash code.</returns>
     </member>
     <member name="M:System.BinaryData.op_Implicit(System.BinaryData)~System.ReadOnlyMemory{System.Byte}">
@@ -191,7 +191,7 @@
     </member>
     <member name="M:System.Text.Json.Serialization.BinaryDataJsonConverter.#ctor" />
     <member name="M:System.Text.Json.Serialization.BinaryDataJsonConverter.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)">
-      <summary>Reads and converts the JSON to type <code>T</code>.</summary>
+      <summary>Reads and converts the JSON to type <code data-dev-comment-type="typeparamref">T</code>.</summary>
       <param name="reader">The reader.</param>
       <param name="typeToConvert">The type to convert.</param>
       <param name="options">An object that specifies serialization options to use.</param>

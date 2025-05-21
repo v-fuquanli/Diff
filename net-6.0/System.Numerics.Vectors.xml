@@ -1445,14 +1445,14 @@
       <summary>Returns a new vector whose elements are the maximum of each pair of elements in the two given vectors.</summary>
       <param name="left">The first vector to compare.</param>
       <param name="right">The second vector to compare.</param>
-      <typeparam name="T">The vector type. <code>T</code> can be any primitive numeric type.</typeparam>
+      <typeparam name="T">The vector type. <code data-dev-comment-type="c">T</code> can be any primitive numeric type.</typeparam>
       <returns>The maximum vector.</returns>
     </member>
     <member name="M:System.Numerics.Vector.Min``1(System.Numerics.Vector{``0},System.Numerics.Vector{``0})">
       <summary>Returns a new vector whose elements are the minimum of each pair of elements in the two given vectors.</summary>
       <param name="left">The first vector to compare.</param>
       <param name="right">The second vector to compare.</param>
-      <typeparam name="T">The vector type. <code>T</code> can be any primitive numeric type.</typeparam>
+      <typeparam name="T">The vector type. <code data-dev-comment-type="c">T</code> can be any primitive numeric type.</typeparam>
       <returns>The minimum vector.</returns>
     </member>
     <member name="M:System.Numerics.Vector.Multiply``1(``0,System.Numerics.Vector{``0})">
@@ -1995,10 +1995,10 @@
         <paramref name="array" /> is <see langword="null" />.</exception>
       <exception cref="T:System.ArgumentException">The number of elements in the current instance is greater than in the array.</exception>
       <exception cref="T:System.ArgumentOutOfRangeException">
-        <paramref name="index" /> is less than zero.  
-  
- -or-  
-  
+        <paramref name="index" /> is less than zero.
+
+ -or-
+
  <paramref name="index" /> is greater than or equal to the array length.</exception>
       <exception cref="T:System.RankException">
         <paramref name="array" /> is multidimensional.</exception>
@@ -2079,7 +2079,7 @@
       <summary>Performs a linear interpolation between two vectors based on the given weighting.</summary>
       <param name="value1">The first vector.</param>
       <param name="value2">The second vector.</param>
-      <param name="amount">A value between 0 and 1 that indicates the weight of <code>value2</code>.</param>
+      <param name="amount">A value between 0 and 1 that indicates the weight of <code data-dev-comment-type="paramref">value2</code>.</param>
       <returns>The interpolated vector.</returns>
     </member>
     <member name="M:System.Numerics.Vector2.Max(System.Numerics.Vector2,System.Numerics.Vector2)">
@@ -2324,10 +2324,10 @@
         <paramref name="array" /> is <see langword="null" />.</exception>
       <exception cref="T:System.ArgumentException">The number of elements in the current instance is greater than in the array.</exception>
       <exception cref="T:System.ArgumentOutOfRangeException">
-        <paramref name="index" /> is less than zero.  
-  
- -or-  
-  
+        <paramref name="index" /> is less than zero.
+
+ -or-
+
  <paramref name="index" /> is greater than or equal to the array length.</exception>
       <exception cref="T:System.RankException">
         <paramref name="array" /> is multidimensional.</exception>
@@ -2414,7 +2414,7 @@
       <summary>Performs a linear interpolation between two vectors based on the given weighting.</summary>
       <param name="value1">The first vector.</param>
       <param name="value2">The second vector.</param>
-      <param name="amount">A value between 0 and 1 that indicates the weight of <code>value2</code>.</param>
+      <param name="amount">A value between 0 and 1 that indicates the weight of <code data-dev-comment-type="paramref">value2</code>.</param>
       <returns>The interpolated vector.</returns>
     </member>
     <member name="M:System.Numerics.Vector3.Max(System.Numerics.Vector3,System.Numerics.Vector3)">
@@ -2745,7 +2745,7 @@
       <summary>Performs a linear interpolation between two vectors based on the given weighting.</summary>
       <param name="value1">The first vector.</param>
       <param name="value2">The second vector.</param>
-      <param name="amount">A value between 0 and 1 that indicates the weight of <code>value2</code>.</param>
+      <param name="amount">A value between 0 and 1 that indicates the weight of <code data-dev-comment-type="paramref">value2</code>.</param>
       <returns>The interpolated vector.</returns>
     </member>
     <member name="M:System.Numerics.Vector4.Max(System.Numerics.Vector4,System.Numerics.Vector4)">

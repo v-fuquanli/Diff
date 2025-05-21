@@ -1884,7 +1884,7 @@
       <param name="value">The value to search for.</param>
       <typeparam name="T">The type of the elements in the span.</typeparam>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if found, <code data-dev-comment-type="langword">false</code> otherwise.</returns>
+        <see langword="true" /> if found, <see langword="false" /> otherwise.</returns>
     </member>
     <member name="M:System.MemoryExtensions.CopyTo``1(``0[],System.Memory{``0})">
       <summary>Copies the contents of the array into a memory region.</summary>

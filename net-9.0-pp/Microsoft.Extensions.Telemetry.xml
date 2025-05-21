@@ -113,6 +113,60 @@
         <paramref name="services" /> is <see langword="null" />.</exception>
       <returns>The value of <paramref name="services" />.</returns>
     </member>
+    <member name="T:Microsoft.Extensions.Diagnostics.Buffering.GlobalLogBufferingOptions">
+      <summary>
+            The options for global log buffering.</summary>
+    </member>
+    <member name="M:Microsoft.Extensions.Diagnostics.Buffering.GlobalLogBufferingOptions.#ctor" />
+    <member name="P:Microsoft.Extensions.Diagnostics.Buffering.GlobalLogBufferingOptions.AutoFlushDuration">
+      <summary>
+            Gets or sets the time to do automatic flushing after manual flushing was triggered.</summary>
+    </member>
+    <member name="P:Microsoft.Extensions.Diagnostics.Buffering.GlobalLogBufferingOptions.MaxBufferSizeInBytes">
+      <summary>
+            Gets or sets the maximum size of the buffer in bytes.</summary>
+    </member>
+    <member name="P:Microsoft.Extensions.Diagnostics.Buffering.GlobalLogBufferingOptions.MaxLogRecordSizeInBytes">
+      <summary>
+            Gets or sets the maximum size of each individual log record in bytes.</summary>
+    </member>
+    <member name="P:Microsoft.Extensions.Diagnostics.Buffering.GlobalLogBufferingOptions.Rules">
+      <summary>
+            Gets or sets the collection of <see cref="T:Microsoft.Extensions.Diagnostics.Buffering.LogBufferingFilterRule" /> used for filtering log messages for the purpose of further buffering.</summary>
+    </member>
+    <member name="T:Microsoft.Extensions.Diagnostics.Buffering.LogBufferingFilterRule">
+      <summary>
+            Defines a rule used to filter log messages for purposes of further buffering.</summary>
+    </member>
+    <member name="M:Microsoft.Extensions.Diagnostics.Buffering.LogBufferingFilterRule.#ctor(System.String,System.Nullable{Microsoft.Extensions.Logging.LogLevel},System.Nullable{System.Int32},System.String,System.Collections.Generic.IReadOnlyList{System.Collections.Generic.KeyValuePair{System.String,System.Object}})">
+      <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Extensions.Diagnostics.Buffering.LogBufferingFilterRule" /> class.</summary>
+      <param name="categoryName">The category name to use in this filter rule.</param>
+      <param name="logLevel">The <see cref="P:Microsoft.Extensions.Diagnostics.Buffering.LogBufferingFilterRule.LogLevel" /> to use in this filter rule.</param>
+      <param name="eventId">The event ID to use in this filter rule.</param>
+      <param name="eventName">The event name to use in this filter rule.</param>
+      <param name="attributes">The log state attributes to use in this filter rule.</param>
+    </member>
+    <member name="P:Microsoft.Extensions.Diagnostics.Buffering.LogBufferingFilterRule.Attributes">
+      <summary>
+            Gets the log state attributes of messages where this rule applies to.</summary>
+    </member>
+    <member name="P:Microsoft.Extensions.Diagnostics.Buffering.LogBufferingFilterRule.CategoryName">
+      <summary>
+            Gets the logger category name this rule applies to.</summary>
+    </member>
+    <member name="P:Microsoft.Extensions.Diagnostics.Buffering.LogBufferingFilterRule.EventId">
+      <summary>
+            Gets the event ID of messages where this rule applies to.</summary>
+    </member>
+    <member name="P:Microsoft.Extensions.Diagnostics.Buffering.LogBufferingFilterRule.EventName">
+      <summary>
+            Gets the name of the event this rule applies to.</summary>
+    </member>
+    <member name="P:Microsoft.Extensions.Diagnostics.Buffering.LogBufferingFilterRule.LogLevel">
+      <summary>
+            Gets the maximum <see cref="P:Microsoft.Extensions.Diagnostics.Buffering.LogBufferingFilterRule.LogLevel" /> of messages this rule applies to.</summary>
+    </member>
     <member name="T:Microsoft.Extensions.Diagnostics.Enrichment.ApplicationEnricherTags">
       <summary>
             Constants used for enrichment tags.</summary>
@@ -264,6 +318,37 @@
     <member name="P:Microsoft.Extensions.Diagnostics.Sampling.RandomProbabilisticSamplerOptions.Rules">
       <summary>
             Gets or sets the collection of <see cref="T:Microsoft.Extensions.Diagnostics.Sampling.RandomProbabilisticSamplerFilterRule" /> used for filtering log messages.</summary>
+    </member>
+    <member name="T:Microsoft.Extensions.Logging.GlobalBufferLoggingBuilderExtensions">
+      <summary>
+            Lets you register log buffering in a dependency injection container.</summary>
+    </member>
+    <member name="M:Microsoft.Extensions.Logging.GlobalBufferLoggingBuilderExtensions.AddGlobalBuffer(Microsoft.Extensions.Logging.ILoggingBuilder,Microsoft.Extensions.Configuration.IConfiguration)">
+      <summary>
+            Adds global log buffering to the logging infrastructure.</summary>
+      <param name="builder">The <see cref="T:Microsoft.Extensions.Logging.ILoggingBuilder" />.</param>
+      <param name="configuration">The <see cref="T:Microsoft.Extensions.Configuration.IConfiguration" /> to add.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="builder" /> is <see langword="null" />.</exception>
+      <returns>The value of <paramref name="builder" />.</returns>
+    </member>
+    <member name="M:Microsoft.Extensions.Logging.GlobalBufferLoggingBuilderExtensions.AddGlobalBuffer(Microsoft.Extensions.Logging.ILoggingBuilder,System.Action{Microsoft.Extensions.Diagnostics.Buffering.GlobalLogBufferingOptions})">
+      <summary>
+            Adds global log buffering to the logging infrastructure.</summary>
+      <param name="builder">The <see cref="T:Microsoft.Extensions.Logging.ILoggingBuilder" />.</param>
+      <param name="configure">Configure buffer options.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="builder" /> is <see langword="null" />.</exception>
+      <returns>The value of <paramref name="builder" />.</returns>
+    </member>
+    <member name="M:Microsoft.Extensions.Logging.GlobalBufferLoggingBuilderExtensions.AddGlobalBuffer(Microsoft.Extensions.Logging.ILoggingBuilder,System.Nullable{Microsoft.Extensions.Logging.LogLevel})">
+      <summary>
+            Adds global log buffering to the logging infrastructure.</summary>
+      <param name="builder">The <see cref="T:Microsoft.Extensions.Logging.ILoggingBuilder" />.</param>
+      <param name="logLevel">The log level (and below) to apply the buffer to.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="builder" /> is <see langword="null" />.</exception>
+      <returns>The value of <paramref name="builder" />.</returns>
     </member>
     <member name="T:Microsoft.Extensions.Logging.LoggerEnrichmentOptions">
       <summary>

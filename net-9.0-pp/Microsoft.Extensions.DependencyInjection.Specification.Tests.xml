@@ -333,6 +333,7 @@
     <member name="M:Microsoft.Extensions.DependencyInjection.Specification.KeyedDependencyInjectionSpecificationTests.ResolveKeyedTransientFromScopeServiceProvider" />
     <member name="M:Microsoft.Extensions.DependencyInjection.Specification.KeyedDependencyInjectionSpecificationTests.ResolveNonKeyedService" />
     <member name="M:Microsoft.Extensions.DependencyInjection.Specification.KeyedDependencyInjectionSpecificationTests.ResolveNullKeyedService" />
+    <member name="M:Microsoft.Extensions.DependencyInjection.Specification.KeyedDependencyInjectionSpecificationTests.ResolveRequiredKeyedServiceThrowsIfNotFound" />
     <member name="M:Microsoft.Extensions.DependencyInjection.Specification.KeyedDependencyInjectionSpecificationTests.SimpleServiceKeyedResolution" />
     <member name="P:Microsoft.Extensions.DependencyInjection.Specification.KeyedDependencyInjectionSpecificationTests.SupportsIServiceProviderIsKeyedService" />
     <member name="T:Microsoft.Extensions.DependencyInjection.Specification.KeyedDependencyInjectionSpecificationTests.AnotherSimpleService" />

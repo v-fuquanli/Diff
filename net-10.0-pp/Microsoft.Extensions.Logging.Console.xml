@@ -184,7 +184,7 @@
       <param name="options">The options to create <see cref="T:Microsoft.Extensions.Logging.Console.ConsoleLogger" /> instances with.</param>
     </member>
     <member name="M:Microsoft.Extensions.Logging.Console.ConsoleLoggerProvider.CreateLogger(System.String)">
-      <summary>Creates a new <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.Logging.ILogger"></xref> instance.</summary>
+      <summary>Creates a new <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.Logging.ILogger" /> instance.</summary>
       <param name="name" />
       <returns>The instance of <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.Logging.ILogger"></xref> that was created.</returns>
     </member>

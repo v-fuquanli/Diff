@@ -2294,7 +2294,15 @@ The <paramref name="tag" /> parameter length is not 16 bytes (128 bits).</except
       <summary>Asynchronously reads the bytes from the underlying stream, applies the relevant cryptographic transforms, and writes the result to the destination stream.</summary>
       <param name="destination">The stream to which the contents of the current stream will be copied.</param>
       <param name="bufferSize">The size, in bytes, of the buffer. This value must be greater than zero. The default size is 81920.</param>
-      <param name="cancellationToken">The token to monitor for cancellation requests. The default value is <xref data-throw-if-not-resolved="true" uid="System.Threading.CancellationToken.None"></xref>.</param>
+      <param name="cancellationToken">The token to monitor for cancellation requests. The default value is <see cref="P:System.Threading.CancellationToken.None" />.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="destination" /> is <see langword="null" />.</exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="bufferSize" /> is negative or zero.</exception>
+      <exception cref="T:System.ObjectDisposedException">Either the current stream or the destination stream is disposed.</exception>
+      <exception cref="T:System.NotSupportedException">The current stream does not support reading, or the destination stream does not support writing.</exception>
+      <exception cref="T:System.Security.Cryptography.CryptographicException">An error occurred during a cryptographic operation.</exception>
+      <exception cref="T:System.OperationCanceledException">The cancellation token was canceled. This exception is stored into the returned task.</exception>
       <returns>A task that represents the asynchronous copy operation.</returns>
     </member>
     <member name="M:System.Security.Cryptography.CryptoStream.Dispose(System.Boolean)">
@@ -2391,8 +2399,10 @@ The <paramref name="tag" /> parameter length is not 16 bytes (128 bits).</except
     <member name="M:System.Security.Cryptography.CryptoStream.ReadAsync(System.Memory{System.Byte},System.Threading.CancellationToken)">
       <summary>Asynchronously reads a sequence of bytes from the current stream, advances the position within the stream by the number of bytes read, and monitors cancellation requests.</summary>
       <param name="buffer">The region of memory to write the data into.</param>
-      <param name="cancellationToken">The token to monitor for cancellation requests. The default value is <xref data-throw-if-not-resolved="true" uid="System.Threading.CancellationToken.None"></xref>.</param>
-      <returns>A task that represents the asynchronous read operation. The value of its <xref data-throw-if-not-resolved="true" uid="System.Threading.Tasks.ValueTask`1.Result"></xref> property contains the total number of bytes read into the buffer. The result value can be less than the number of bytes allocated in the buffer if that many bytes are not currently available, or it can be 0 (zero) if the end of the stream has been reached.</returns>
+      <param name="cancellationToken">The token to monitor for cancellation requests. The default value is <see cref="P:System.Threading.CancellationToken.None" />.</param>
+      <exception cref="T:System.NotSupportedException">The <see cref="T:System.Security.Cryptography.CryptoStreamMode" /> associated with the current <see cref="T:System.Security.Cryptography.CryptoStream" /> object does not match the underlying stream. For example, this exception is thrown when using <see cref="F:System.Security.Cryptography.CryptoStreamMode.Read" /> with an underlying stream that's write only.</exception>
+      <exception cref="T:System.OperationCanceledException">The cancellation token was canceled. This exception is stored into the returned task.</exception>
+      <returns>A task that represents the asynchronous read operation. The value of its <see cref="P:System.Threading.Tasks.ValueTask`1.Result" /> property contains the total number of bytes read into the buffer. The result value can be less than the number of bytes allocated in the buffer if that many bytes are not currently available, or it can be 0 (zero) if the end of the stream has been reached.</returns>
     </member>
     <member name="M:System.Security.Cryptography.CryptoStream.ReadByte">
       <summary>Reads a byte from the stream and advances the position within the stream by one byte, or returns -1 if at the end of the stream.</summary>
@@ -2442,7 +2452,9 @@ The <paramref name="tag" /> parameter length is not 16 bytes (128 bits).</except
     <member name="M:System.Security.Cryptography.CryptoStream.WriteAsync(System.ReadOnlyMemory{System.Byte},System.Threading.CancellationToken)">
       <summary>Asynchronously writes a sequence of bytes to the current stream, advances the current position within this stream by the number of bytes written, and monitors cancellation requests.</summary>
       <param name="buffer">The region of memory to write data from.</param>
-      <param name="cancellationToken">The token to monitor for cancellation requests. The default value is <xref data-throw-if-not-resolved="true" uid="System.Threading.CancellationToken.None"></xref>.</param>
+      <param name="cancellationToken">The token to monitor for cancellation requests. The default value is <see cref="P:System.Threading.CancellationToken.None" />.</param>
+      <exception cref="T:System.NotSupportedException">The <see cref="T:System.Security.Cryptography.CryptoStreamMode" /> associated with current <see cref="T:System.Security.Cryptography.CryptoStream" /> object does not match the underlying stream. For example, this exception is thrown when using <see cref="F:System.Security.Cryptography.CryptoStreamMode.Write" /> with an underlying stream that is read only.</exception>
+      <exception cref="T:System.OperationCanceledException">The cancellation token was canceled. This exception is stored into the returned task.</exception>
       <returns>A task that represents the asynchronous write operation.</returns>
     </member>
     <member name="M:System.Security.Cryptography.CryptoStream.WriteByte(System.Byte)">
@@ -3554,13 +3566,13 @@ An error occurred during signature creation.</exception>
       <summary>Imports the public/private keypair from a PKCS#8 EncryptedPrivateKeyInfo structure after decrypting with a byte-based password, replacing the keys for this object.</summary>
       <param name="passwordBytes">The bytes to use as a password when decrypting the key material.</param>
       <param name="source">The bytes of a PKCS#8 EncryptedPrivateKeyInfo structure in the ASN.1-BER encoding.</param>
-      <param name="bytesRead">When this method returns, contains a value that indicates the number of bytes read from <code data-dev-comment-type="paramref">source</code>. This parameter is treated as uninitialized.</param>
+      <param name="bytesRead">When this method returns, contains a value that indicates the number of bytes read from <paramref name="source" />. This parameter is treated as uninitialized.</param>
     </member>
     <member name="M:System.Security.Cryptography.DSACng.ImportEncryptedPkcs8PrivateKey(System.ReadOnlySpan{System.Char},System.ReadOnlySpan{System.Byte},System.Int32@)">
       <summary>Imports the public/private keypair from a PKCS#8 EncryptedPrivateKeyInfo structure after decrypting with a char-based password, replacing the keys for this object.</summary>
       <param name="password">The password to use for decrypting the key material.</param>
       <param name="source">The bytes of a PKCS#8 EncryptedPrivateKeyInfo structure in the ASN.1-BER encoding.</param>
-      <param name="bytesRead">When this method returns, contains a value that indicates the number of bytes read from <code data-dev-comment-type="paramref">source</code>. This parameter is treated as uninitialized.</param>
+      <param name="bytesRead">When this method returns, contains a value that indicates the number of bytes read from <paramref name="source" />. This parameter is treated as uninitialized.</param>
     </member>
     <member name="M:System.Security.Cryptography.DSACng.ImportParameters(System.Security.Cryptography.DSAParameters)">
       <summary>Replaces the existing key that the current instance is working with by creating a new <see cref="T:System.Security.Cryptography.CngKey" /> for the parameters structure.</summary>
@@ -3572,25 +3584,25 @@ An error occurred during signature creation.</exception>
       <param name="passwordBytes">The bytes to use as a password when encrypting the key material.</param>
       <param name="pbeParameters">The password-based encryption (PBE) parameters to use when encrypting the key material.</param>
       <param name="destination">The byte span to receive the PKCS#8 EncryptedPrivateKeyInfo data.</param>
-      <param name="bytesWritten">When this method returns, contains a value that indicates the number of bytes written to <code data-dev-comment-type="paramref">destination</code>. This parameter is treated as uninitialized.</param>
+      <param name="bytesWritten">When this method returns, contains a value that indicates the number of bytes written to <paramref name="destination" />. This parameter is treated as uninitialized.</param>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if <code data-dev-comment-type="paramref">destination</code> is big enough to receive the output; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if <paramref name="destination" /> is big enough to receive the output; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="M:System.Security.Cryptography.DSACng.TryExportEncryptedPkcs8PrivateKey(System.ReadOnlySpan{System.Char},System.Security.Cryptography.PbeParameters,System.Span{System.Byte},System.Int32@)">
       <summary>Attempts to export the current key in the PKCS#8 EncryptedPrivateKeyInfo format into a provided buffer, using a char-based password.</summary>
       <param name="password">The password to use when encrypting the key material.</param>
       <param name="pbeParameters">The password-based encryption (PBE) parameters to use when encrypting the key material.</param>
       <param name="destination">The byte span to receive the PKCS#8 EncryptedPrivateKeyInfo data.</param>
-      <param name="bytesWritten">When this method returns, contains a value that indicates the number of bytes written to <code data-dev-comment-type="paramref">destination</code>. This parameter is treated as uninitialized.</param>
+      <param name="bytesWritten">When this method returns, contains a value that indicates the number of bytes written to <paramref name="destination" />. This parameter is treated as uninitialized.</param>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if <code data-dev-comment-type="paramref">destination</code> is big enough to receive the output; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if <paramref name="destination" /> is big enough to receive the output; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="M:System.Security.Cryptography.DSACng.TryExportPkcs8PrivateKey(System.Span{System.Byte},System.Int32@)">
       <summary>Attempts to export the current key in the PKCS#8 PrivateKeyInfo format into a provided buffer.</summary>
       <param name="destination">The byte span to receive the PKCS#8 PrivateKeyInfo data.</param>
-      <param name="bytesWritten">When this method returns, contains a value that indicates the number of bytes written to <code data-dev-comment-type="paramref">destination</code>. This parameter is treated as uninitialized.</param>
+      <param name="bytesWritten">When this method returns, contains a value that indicates the number of bytes written to <paramref name="destination" />. This parameter is treated as uninitialized.</param>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if <code data-dev-comment-type="paramref">destination</code> is big enough to receive the output; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if <paramref name="destination" /> is big enough to receive the output; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="M:System.Security.Cryptography.DSACng.VerifySignature(System.Byte[],System.Byte[])">
       <summary>Verifies if the specified digital signature matches the specified hash.</summary>
@@ -3668,13 +3680,13 @@ An error occurred during signature creation.</exception>
       <summary>Imports the public/private keypair from a PKCS#8 EncryptedPrivateKeyInfo structure after decrypting with a byte-based password, replacing the keys for this object.</summary>
       <param name="passwordBytes">The bytes to use as a password when decrypting the key material.</param>
       <param name="source">The bytes of a PKCS#8 EncryptedPrivateKeyInfo structure in the ASN.1-BER encoding.</param>
-      <param name="bytesRead">When this method returns, contains a value that indicates the number of bytes read from <code data-dev-comment-type="paramref">source</code>. This parameter is treated as uninitialized.</param>
+      <param name="bytesRead">When this method returns, contains a value that indicates the number of bytes read from <paramref name="source" />. This parameter is treated as uninitialized.</param>
     </member>
     <member name="M:System.Security.Cryptography.DSACryptoServiceProvider.ImportEncryptedPkcs8PrivateKey(System.ReadOnlySpan{System.Char},System.ReadOnlySpan{System.Byte},System.Int32@)">
       <summary>Imports the public/private keypair from a PKCS#8 EncryptedPrivateKeyInfo structure after decrypting with a char-based password, replacing the keys for this object.</summary>
       <param name="password">The password to use for decrypting the key material.</param>
       <param name="source">The bytes of a PKCS#8 EncryptedPrivateKeyInfo structure in the ASN.1-BER encoding.</param>
-      <param name="bytesRead">When this method returns, contains a value that indicates the number of bytes read from <code data-dev-comment-type="paramref">source</code>. This parameter is treated as uninitialized.</param>
+      <param name="bytesRead">When this method returns, contains a value that indicates the number of bytes read from <paramref name="source" />. This parameter is treated as uninitialized.</param>
     </member>
     <member name="M:System.Security.Cryptography.DSACryptoServiceProvider.ImportParameters(System.Security.Cryptography.DSAParameters)">
       <summary>Imports the specified <see cref="T:System.Security.Cryptography.DSAParameters" />.</summary>
@@ -4802,13 +4814,13 @@ This instance represents only a public key.</exception>
       <summary>Imports the public/private keypair from a PKCS#8 EncryptedPrivateKeyInfo structure after decrypting with a byte-based password, replacing the keys for this object.</summary>
       <param name="passwordBytes">The bytes to use as a password when decrypting the key material.</param>
       <param name="source">The bytes of a PKCS#8 EncryptedPrivateKeyInfo structure in the ASN.1-BER encoding.</param>
-      <param name="bytesRead">When this method returns, contains a value that indicates the number of bytes read from <code data-dev-comment-type="paramref">source</code>. This parameter is treated as uninitialized.</param>
+      <param name="bytesRead">When this method returns, contains a value that indicates the number of bytes read from <paramref name="source" />. This parameter is treated as uninitialized.</param>
     </member>
     <member name="M:System.Security.Cryptography.ECDiffieHellmanCng.ImportEncryptedPkcs8PrivateKey(System.ReadOnlySpan{System.Char},System.ReadOnlySpan{System.Byte},System.Int32@)">
       <summary>Imports the public/private keypair from a PKCS#8 EncryptedPrivateKeyInfo structure after decrypting with a char-based password, replacing the keys for this object.</summary>
       <param name="password">The password to use for decrypting the key material.</param>
       <param name="source">The bytes of a PKCS#8 EncryptedPrivateKeyInfo structure in the ASN.1-BER encoding.</param>
-      <param name="bytesRead">When this method returns, contains a value that indicates the number of bytes read from <code data-dev-comment-type="paramref">source</code>. This parameter is treated as uninitialized.</param>
+      <param name="bytesRead">When this method returns, contains a value that indicates the number of bytes read from <paramref name="source" />. This parameter is treated as uninitialized.</param>
     </member>
     <member name="M:System.Security.Cryptography.ECDiffieHellmanCng.ImportParameters(System.Security.Cryptography.ECParameters)">
       <summary>Imports the specified parameters for an <see cref="T:System.Security.Cryptography.ECCurve" /> object as a key into the current instance.</summary>
@@ -4823,7 +4835,7 @@ This instance represents only a public key.</exception>
     <member name="M:System.Security.Cryptography.ECDiffieHellmanCng.ImportPkcs8PrivateKey(System.ReadOnlySpan{System.Byte},System.Int32@)">
       <summary>Imports the public/private keypair from a PKCS#8 PrivateKeyInfo structure after decryption, replacing the keys for this object.</summary>
       <param name="source">The bytes of a PKCS#8 PrivateKeyInfo structure in the ASN.1-BER encoding.</param>
-      <param name="bytesRead">When this method returns, contains a value that indicates the number of bytes read from <code data-dev-comment-type="paramref">source</code>. This parameter is treated as uninitialized.</param>
+      <param name="bytesRead">When this method returns, contains a value that indicates the number of bytes read from <paramref name="source" />. This parameter is treated as uninitialized.</param>
     </member>
     <member name="M:System.Security.Cryptography.ECDiffieHellmanCng.ToXmlString(System.Security.Cryptography.ECKeyXmlFormat)">
       <summary>Serializes the key information to an XML string by using the specified format.</summary>
@@ -4838,25 +4850,25 @@ This instance represents only a public key.</exception>
       <param name="passwordBytes">The bytes to use as a password when encrypting the key material.</param>
       <param name="pbeParameters">The password-based encryption (PBE) parameters to use when encrypting the key material.</param>
       <param name="destination">The byte span to receive the PKCS#8 EncryptedPrivateKeyInfo data.</param>
-      <param name="bytesWritten">When this method returns, contains a value that indicates the number of bytes written to <code data-dev-comment-type="paramref">destination</code>. This parameter is treated as uninitialized.</param>
+      <param name="bytesWritten">When this method returns, contains a value that indicates the number of bytes written to <paramref name="destination" />. This parameter is treated as uninitialized.</param>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if <code data-dev-comment-type="paramref">destination</code> is big enough to receive the output; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if <paramref name="destination" /> is big enough to receive the output; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="M:System.Security.Cryptography.ECDiffieHellmanCng.TryExportEncryptedPkcs8PrivateKey(System.ReadOnlySpan{System.Char},System.Security.Cryptography.PbeParameters,System.Span{System.Byte},System.Int32@)">
       <summary>Attempts to export the current key in the PKCS#8 EncryptedPrivateKeyInfo format into a provided buffer, using a char-based password.</summary>
       <param name="password">The password to use when encrypting the key material.</param>
       <param name="pbeParameters">The password-based encryption (PBE) parameters to use when encrypting the key material.</param>
       <param name="destination">The byte span to receive the PKCS#8 EncryptedPrivateKeyInfo data.</param>
-      <param name="bytesWritten">When this method returns, contains a value that indicates the number of bytes written to <code data-dev-comment-type="paramref">destination</code>. This parameter is treated as uninitialized.</param>
+      <param name="bytesWritten">When this method returns, contains a value that indicates the number of bytes written to <paramref name="destination" />. This parameter is treated as uninitialized.</param>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if <code data-dev-comment-type="paramref">destination</code> is big enough to receive the output; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if <paramref name="destination" /> is big enough to receive the output; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="M:System.Security.Cryptography.ECDiffieHellmanCng.TryExportPkcs8PrivateKey(System.Span{System.Byte},System.Int32@)">
       <summary>Attempts to export the current key in the PKCS#8 PrivateKeyInfo format into a provided buffer.</summary>
       <param name="destination">The byte span to receive the PKCS#8 PrivateKeyInfo data.</param>
-      <param name="bytesWritten">When this method returns, contains a value that indicates the number of bytes written to <code data-dev-comment-type="paramref">destination</code>. This parameter is treated as uninitialized.</param>
+      <param name="bytesWritten">When this method returns, contains a value that indicates the number of bytes written to <paramref name="destination" />. This parameter is treated as uninitialized.</param>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if <code data-dev-comment-type="paramref">destination</code> is big enough to receive the output; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if <paramref name="destination" /> is big enough to receive the output; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="P:System.Security.Cryptography.ECDiffieHellmanCng.HashAlgorithm">
       <summary>Gets or sets the hash algorithm to use when generating key material.</summary>
@@ -5755,13 +5767,13 @@ The buffer in <paramref name="destination" /> is too small to hold the signature
       <summary>Imports the public/private keypair from a PKCS#8 EncryptedPrivateKeyInfo structure after decrypting with a byte-based password, replacing the keys for this object.</summary>
       <param name="passwordBytes">The bytes to use as a password when decrypting the key material.</param>
       <param name="source">The bytes of a PKCS#8 EncryptedPrivateKeyInfo structure in the ASN.1-BER encoding.</param>
-      <param name="bytesRead">When this method returns, contains a value that indicates the number of bytes read from <code data-dev-comment-type="paramref">source</code>. This parameter is treated as uninitialized.</param>
+      <param name="bytesRead">When this method returns, contains a value that indicates the number of bytes read from <paramref name="source" />. This parameter is treated as uninitialized.</param>
     </member>
     <member name="M:System.Security.Cryptography.ECDsaCng.ImportEncryptedPkcs8PrivateKey(System.ReadOnlySpan{System.Char},System.ReadOnlySpan{System.Byte},System.Int32@)">
       <summary>Imports the public/private keypair from a PKCS#8 EncryptedPrivateKeyInfo structure after decrypting with a char-based password, replacing the keys for this object.</summary>
       <param name="password">The password to use for decrypting the key material.</param>
       <param name="source">The bytes of a PKCS#8 EncryptedPrivateKeyInfo structure in the ASN.1-BER encoding.</param>
-      <param name="bytesRead">When this method returns, contains a value that indicates the number of bytes read from <code data-dev-comment-type="paramref">source</code>. This parameter is treated as uninitialized.</param>
+      <param name="bytesRead">When this method returns, contains a value that indicates the number of bytes read from <paramref name="source" />. This parameter is treated as uninitialized.</param>
     </member>
     <member name="M:System.Security.Cryptography.ECDsaCng.ImportParameters(System.Security.Cryptography.ECParameters)">
       <summary>Replaces the existing key that the current instance is working with by creating a new <see cref="T:System.Security.Cryptography.CngKey" /> for the parameters structure.</summary>
@@ -5776,7 +5788,7 @@ The buffer in <paramref name="destination" /> is too small to hold the signature
     <member name="M:System.Security.Cryptography.ECDsaCng.ImportPkcs8PrivateKey(System.ReadOnlySpan{System.Byte},System.Int32@)">
       <summary>Imports the public/private keypair from a PKCS#8 PrivateKeyInfo structure after decryption, replacing the keys for this object.</summary>
       <param name="source">The bytes of a PKCS#8 PrivateKeyInfo structure in the ASN.1-BER encoding.</param>
-      <param name="bytesRead">When this method returns, contains a value that indicates the number of bytes read from <code data-dev-comment-type="paramref">source</code>. This parameter is treated as uninitialized.</param>
+      <param name="bytesRead">When this method returns, contains a value that indicates the number of bytes read from <paramref name="source" />. This parameter is treated as uninitialized.</param>
     </member>
     <member name="M:System.Security.Cryptography.ECDsaCng.SignData(System.Byte[],System.Int32,System.Int32)">
       <summary>Generates a digital signature for the specified length of data, beginning at the specified offset.</summary>
@@ -5827,33 +5839,33 @@ The buffer in <paramref name="destination" /> is too small to hold the signature
       <param name="passwordBytes">The bytes to use as a password when encrypting the key material.</param>
       <param name="pbeParameters">The password-based encryption (PBE) parameters to use when encrypting the key material.</param>
       <param name="destination">The byte span to receive the PKCS#8 EncryptedPrivateKeyInfo data.</param>
-      <param name="bytesWritten">When this method returns, contains a value that indicates the number of bytes written to <code data-dev-comment-type="paramref">destination</code>. This parameter is treated as uninitialized.</param>
+      <param name="bytesWritten">When this method returns, contains a value that indicates the number of bytes written to <paramref name="destination" />. This parameter is treated as uninitialized.</param>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if <code data-dev-comment-type="paramref">destination</code> is big enough to receive the output; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if <paramref name="destination" /> is big enough to receive the output; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="M:System.Security.Cryptography.ECDsaCng.TryExportEncryptedPkcs8PrivateKey(System.ReadOnlySpan{System.Char},System.Security.Cryptography.PbeParameters,System.Span{System.Byte},System.Int32@)">
       <summary>Attempts to export the current key in the PKCS#8 EncryptedPrivateKeyInfo format into a provided buffer, using a char-based password.</summary>
       <param name="password">The password to use when encrypting the key material.</param>
       <param name="pbeParameters">The password-based encryption (PBE) parameters to use when encrypting the key material.</param>
       <param name="destination">The byte span to receive the PKCS#8 EncryptedPrivateKeyInfo data.</param>
-      <param name="bytesWritten">When this method returns, contains a value that indicates the number of bytes written to <code data-dev-comment-type="paramref">destination</code>. This parameter is treated as uninitialized.</param>
+      <param name="bytesWritten">When this method returns, contains a value that indicates the number of bytes written to <paramref name="destination" />. This parameter is treated as uninitialized.</param>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if <code data-dev-comment-type="paramref">destination</code> is big enough to receive the output; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if <paramref name="destination" /> is big enough to receive the output; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="M:System.Security.Cryptography.ECDsaCng.TryExportPkcs8PrivateKey(System.Span{System.Byte},System.Int32@)">
       <summary>Attempts to export the current key in the PKCS#8 PrivateKeyInfo format into a provided buffer.</summary>
       <param name="destination">The byte span to receive the PKCS#8 PrivateKeyInfo data.</param>
-      <param name="bytesWritten">When this method returns, contains a value that indicates the number of bytes written to <code data-dev-comment-type="paramref">destination</code>. This parameter is treated as uninitialized.</param>
+      <param name="bytesWritten">When this method returns, contains a value that indicates the number of bytes written to <paramref name="destination" />. This parameter is treated as uninitialized.</param>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if <code data-dev-comment-type="paramref">destination</code> is big enough to receive the output; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if <paramref name="destination" /> is big enough to receive the output; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="M:System.Security.Cryptography.ECDsaCng.TrySignHash(System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.Int32@)">
       <summary>Attempts to compute the ECDSA digital signature for the specified read-only span of bytes representing a data hash into the provided destination by using the current key.</summary>
       <param name="source" />
       <param name="destination">The buffer to receive the signature.</param>
-      <param name="bytesWritten">When this method returns, the total number of bytes written into <code data-dev-comment-type="paramref">destination</code>. This parameter is treated as uninitialized.</param>
+      <param name="bytesWritten">When this method returns, the total number of bytes written into <paramref name="destination" />. This parameter is treated as uninitialized.</param>
       <returns>
-        <code data-dev-comment-type="langword">false</code> if <code data-dev-comment-type="paramref">destination</code> is not long enough to receive the signature.</returns>
+        <see langword="false" /> if <paramref name="destination" /> is not long enough to receive the signature.</returns>
     </member>
     <member name="M:System.Security.Cryptography.ECDsaCng.VerifyData(System.Byte[],System.Byte[])">
       <summary>Verifies the digital signature of the specified data.</summary>
@@ -5904,7 +5916,7 @@ The buffer in <paramref name="destination" /> is too small to hold the signature
       <param name="hash">The hash value of the data to be verified.</param>
       <param name="signature">The digital signature of the data to be verified against the hash value.</param>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if the signature is valid; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if the signature is valid; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="P:System.Security.Cryptography.ECDsaCng.HashAlgorithm">
       <summary>Gets or sets the hash algorithm to use when signing and verifying data.</summary>
@@ -7012,9 +7024,9 @@ Releases the unmanaged resources used by the <see cref="T:System.Security.Crypto
         <paramref name="key" /> is <see langword="null" />.</exception>
     </member>
     <member name="M:System.Security.Cryptography.HMACSHA3_256.Dispose(System.Boolean)">
-      <summary>Releases the unmanaged resources used by the <xref data-throw-if-not-resolved="true" uid="System.Security.Cryptography.HMAC"></xref> class when a key change is legitimate and optionally releases the managed resources.</summary>
+      <summary>Releases the unmanaged resources used by the <see cref="T:System.Security.Cryptography.HMAC" /> class when a key change is legitimate and optionally releases the managed resources.</summary>
       <param name="disposing">
-        <code data-dev-comment-type="langword">true</code> to release both managed and unmanaged resources; <code data-dev-comment-type="langword">false</code> to release only unmanaged resources.</param>
+        <see langword="true" /> to release both managed and unmanaged resources; <see langword="false" /> to release only unmanaged resources.</param>
     </member>
     <member name="M:System.Security.Cryptography.HMACSHA3_256.HashCore(System.Byte[],System.Int32,System.Int32)">
       <summary>When overridden in a derived class, routes data written to the object into the HMAC algorithm for computing the HMAC value.</summary>
@@ -7137,7 +7149,7 @@ Releases the unmanaged resources used by the <see cref="T:System.Security.Crypto
       <returns>The computed HMAC value in a byte array.</returns>
     </member>
     <member name="M:System.Security.Cryptography.HMACSHA3_256.Initialize">
-      <summary>Initializes an instance of the default implementation of <xref data-throw-if-not-resolved="true" uid="System.Security.Cryptography.HMAC"></xref>.</summary>
+      <summary>Initializes an instance of the default implementation of <see cref="T:System.Security.Cryptography.HMAC" />.</summary>
     </member>
     <member name="M:System.Security.Cryptography.HMACSHA3_256.TryHashData(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.Int32@)">
       <summary>Attempts to compute the HMAC of data using the SHA-3-256 algorithm.</summary>
@@ -7151,9 +7163,9 @@ Releases the unmanaged resources used by the <see cref="T:System.Security.Crypto
     <member name="M:System.Security.Cryptography.HMACSHA3_256.TryHashFinal(System.Span{System.Byte},System.Int32@)">
       <summary>Attempts to finalize the HMAC computation after the last data is processed by the HMAC algorithm.</summary>
       <param name="destination">The buffer to receive the HMAC value.</param>
-      <param name="bytesWritten">When this method returns, contains the total number of bytes written into <code data-dev-comment-type="paramref">destination</code>. This parameter is treated as uninitialized.</param>
+      <param name="bytesWritten">When this method returns, contains the total number of bytes written into <paramref name="destination" />. This parameter is treated as uninitialized.</param>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if <code data-dev-comment-type="paramref">destination</code> is long enough to receive the HMAC value; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if <paramref name="destination" /> is long enough to receive the HMAC value; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="P:System.Security.Cryptography.HMACSHA3_256.IsSupported">
       <summary>Gets a value that indicates whether the algorithm is supported on the current platform.</summary>
@@ -7183,9 +7195,9 @@ Releases the unmanaged resources used by the <see cref="T:System.Security.Crypto
         <paramref name="key" /> is <see langword="null" />.</exception>
     </member>
     <member name="M:System.Security.Cryptography.HMACSHA3_384.Dispose(System.Boolean)">
-      <summary>Releases the unmanaged resources used by the <xref data-throw-if-not-resolved="true" uid="System.Security.Cryptography.HMAC"></xref> class when a key change is legitimate and optionally releases the managed resources.</summary>
+      <summary>Releases the unmanaged resources used by the <see cref="T:System.Security.Cryptography.HMAC" /> class when a key change is legitimate and optionally releases the managed resources.</summary>
       <param name="disposing">
-        <code data-dev-comment-type="langword">true</code> to release both managed and unmanaged resources; <code data-dev-comment-type="langword">false</code> to release only unmanaged resources.</param>
+        <see langword="true" /> to release both managed and unmanaged resources; <see langword="false" /> to release only unmanaged resources.</param>
     </member>
     <member name="M:System.Security.Cryptography.HMACSHA3_384.HashCore(System.Byte[],System.Int32,System.Int32)">
       <summary>When overridden in a derived class, routes data written to the object into the HMAC algorithm for computing the HMAC value.</summary>
@@ -7308,7 +7320,7 @@ Releases the unmanaged resources used by the <see cref="T:System.Security.Crypto
       <returns>The computed HMAC value in a byte array.</returns>
     </member>
     <member name="M:System.Security.Cryptography.HMACSHA3_384.Initialize">
-      <summary>Initializes an instance of the default implementation of <xref data-throw-if-not-resolved="true" uid="System.Security.Cryptography.HMAC"></xref>.</summary>
+      <summary>Initializes an instance of the default implementation of <see cref="T:System.Security.Cryptography.HMAC" />.</summary>
     </member>
     <member name="M:System.Security.Cryptography.HMACSHA3_384.TryHashData(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.Int32@)">
       <summary>Attempts to compute the HMAC of data using the SHA-3-384 algorithm.</summary>
@@ -7322,9 +7334,9 @@ Releases the unmanaged resources used by the <see cref="T:System.Security.Crypto
     <member name="M:System.Security.Cryptography.HMACSHA3_384.TryHashFinal(System.Span{System.Byte},System.Int32@)">
       <summary>Attempts to finalize the HMAC computation after the last data is processed by the HMAC algorithm.</summary>
       <param name="destination">The buffer to receive the HMAC value.</param>
-      <param name="bytesWritten">When this method returns, contains the total number of bytes written into <code data-dev-comment-type="paramref">destination</code>. This parameter is treated as uninitialized.</param>
+      <param name="bytesWritten">When this method returns, contains the total number of bytes written into <paramref name="destination" />. This parameter is treated as uninitialized.</param>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if <code data-dev-comment-type="paramref">destination</code> is long enough to receive the HMAC value; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if <paramref name="destination" /> is long enough to receive the HMAC value; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="P:System.Security.Cryptography.HMACSHA3_384.IsSupported">
       <summary>Gets a value that indicates whether the algorithm is supported on the current platform.</summary>
@@ -7354,9 +7366,9 @@ Releases the unmanaged resources used by the <see cref="T:System.Security.Crypto
         <paramref name="key" /> is <see langword="null" />.</exception>
     </member>
     <member name="M:System.Security.Cryptography.HMACSHA3_512.Dispose(System.Boolean)">
-      <summary>Releases the unmanaged resources used by the <xref data-throw-if-not-resolved="true" uid="System.Security.Cryptography.HMAC"></xref> class when a key change is legitimate and optionally releases the managed resources.</summary>
+      <summary>Releases the unmanaged resources used by the <see cref="T:System.Security.Cryptography.HMAC" /> class when a key change is legitimate and optionally releases the managed resources.</summary>
       <param name="disposing">
-        <code data-dev-comment-type="langword">true</code> to release both managed and unmanaged resources; <code data-dev-comment-type="langword">false</code> to release only unmanaged resources.</param>
+        <see langword="true" /> to release both managed and unmanaged resources; <see langword="false" /> to release only unmanaged resources.</param>
     </member>
     <member name="M:System.Security.Cryptography.HMACSHA3_512.HashCore(System.Byte[],System.Int32,System.Int32)">
       <summary>When overridden in a derived class, routes data written to the object into the HMAC algorithm for computing the HMAC value.</summary>
@@ -7479,7 +7491,7 @@ Releases the unmanaged resources used by the <see cref="T:System.Security.Crypto
       <returns>The computed HMAC value in a byte array.</returns>
     </member>
     <member name="M:System.Security.Cryptography.HMACSHA3_512.Initialize">
-      <summary>Initializes an instance of the default implementation of <xref data-throw-if-not-resolved="true" uid="System.Security.Cryptography.HMAC"></xref>.</summary>
+      <summary>Initializes an instance of the default implementation of <see cref="T:System.Security.Cryptography.HMAC" />.</summary>
     </member>
     <member name="M:System.Security.Cryptography.HMACSHA3_512.TryHashData(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.Int32@)">
       <summary>Attempts to compute the HMAC of data using the SHA-3-512 algorithm.</summary>
@@ -7493,9 +7505,9 @@ Releases the unmanaged resources used by the <see cref="T:System.Security.Crypto
     <member name="M:System.Security.Cryptography.HMACSHA3_512.TryHashFinal(System.Span{System.Byte},System.Int32@)">
       <summary>Attempts to finalize the HMAC computation after the last data is processed by the HMAC algorithm.</summary>
       <param name="destination">The buffer to receive the HMAC value.</param>
-      <param name="bytesWritten">When this method returns, contains the total number of bytes written into <code data-dev-comment-type="paramref">destination</code>. This parameter is treated as uninitialized.</param>
+      <param name="bytesWritten">When this method returns, contains the total number of bytes written into <paramref name="destination" />. This parameter is treated as uninitialized.</param>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if <code data-dev-comment-type="paramref">destination</code> is long enough to receive the HMAC value; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if <paramref name="destination" /> is long enough to receive the HMAC value; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="P:System.Security.Cryptography.HMACSHA3_512.IsSupported">
       <summary>Gets a value that indicates whether the algorithm is supported on the current platform.</summary>
@@ -10271,13 +10283,13 @@ An error occurred creating the signature.</exception>
       <summary>Imports the public/private keypair from a PKCS#8 EncryptedPrivateKeyInfo structure after decrypting with a byte-based password, replacing the keys for this object.</summary>
       <param name="passwordBytes">The bytes to use as a password when decrypting the key material.</param>
       <param name="source">The bytes of a PKCS#8 EncryptedPrivateKeyInfo structure in the ASN.1-BER encoding.</param>
-      <param name="bytesRead">When this method returns, contains a value that indicates the number of bytes read from <code data-dev-comment-type="paramref">source</code>. This parameter is treated as uninitialized.</param>
+      <param name="bytesRead">When this method returns, contains a value that indicates the number of bytes read from <paramref name="source" />. This parameter is treated as uninitialized.</param>
     </member>
     <member name="M:System.Security.Cryptography.RSACng.ImportEncryptedPkcs8PrivateKey(System.ReadOnlySpan{System.Char},System.ReadOnlySpan{System.Byte},System.Int32@)">
       <summary>Imports the public/private keypair from a PKCS#8 EncryptedPrivateKeyInfo structure after decrypting with a char-based password, replacing the keys for this object.</summary>
       <param name="password">The password to use for decrypting the key material.</param>
       <param name="source">The bytes of a PKCS#8 EncryptedPrivateKeyInfo structure in the ASN.1-BER encoding.</param>
-      <param name="bytesRead">When this method returns, contains a value that indicates the number of bytes read from <code data-dev-comment-type="paramref">source</code>. This parameter is treated as uninitialized.</param>
+      <param name="bytesRead">When this method returns, contains a value that indicates the number of bytes read from <paramref name="source" />. This parameter is treated as uninitialized.</param>
     </member>
     <member name="M:System.Security.Cryptography.RSACng.ImportParameters(System.Security.Cryptography.RSAParameters)">
       <summary>Replaces the existing key that the current instance is working with by creating a new <see cref="T:System.Security.Cryptography.CngKey" /> for the parameters structure.</summary>
@@ -10294,7 +10306,7 @@ An error occurred creating the signature.</exception>
     <member name="M:System.Security.Cryptography.RSACng.ImportPkcs8PrivateKey(System.ReadOnlySpan{System.Byte},System.Int32@)">
       <summary>Imports the public/private keypair from a PKCS#8 PrivateKeyInfo structure after decryption, replacing the keys for this object.</summary>
       <param name="source">The bytes of a PKCS#8 PrivateKeyInfo structure in the ASN.1-BER encoding.</param>
-      <param name="bytesRead">When this method returns, contains a value that indicates the number of bytes read from <code data-dev-comment-type="paramref">source</code>. This parameter is treated as uninitialized.</param>
+      <param name="bytesRead">When this method returns, contains a value that indicates the number of bytes read from <paramref name="source" />. This parameter is treated as uninitialized.</param>
     </member>
     <member name="M:System.Security.Cryptography.RSACng.SignHash(System.Byte[],System.Security.Cryptography.HashAlgorithmName,System.Security.Cryptography.RSASignaturePadding)">
       <summary>Signs data that was hashed by using the specified hashing algorithm and padding mode.</summary>
@@ -10317,43 +10329,43 @@ An error occurred creating the signature.</exception>
       <param name="data">The data to decrypt.</param>
       <param name="destination">The buffer to receive the decrypted data.</param>
       <param name="padding">The padding mode.</param>
-      <param name="bytesWritten">When this method returns, the total number of bytes written into <code data-dev-comment-type="paramref">destination</code>. This parameter is treated as uninitialized.</param>
+      <param name="bytesWritten">When this method returns, the total number of bytes written into <paramref name="destination" />. This parameter is treated as uninitialized.</param>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if <code data-dev-comment-type="paramref">destination</code> is long enough to receive the decrypted data; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if <paramref name="destination" /> is long enough to receive the decrypted data; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="M:System.Security.Cryptography.RSACng.TryEncrypt(System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.Security.Cryptography.RSAEncryptionPadding,System.Int32@)">
       <summary>Encrypts data using the public key.</summary>
       <param name="data">The data to encrypt.</param>
       <param name="destination">The buffer to receive the encrypted data.</param>
       <param name="padding">The padding mode.</param>
-      <param name="bytesWritten">When this method returns, the total number of bytes written into <code data-dev-comment-type="paramref">destination</code>. This parameter is treated as uninitialized.</param>
+      <param name="bytesWritten">When this method returns, the total number of bytes written into <paramref name="destination" />. This parameter is treated as uninitialized.</param>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if <code data-dev-comment-type="paramref">destination</code> is long enough to receive the encrypted data; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if <paramref name="destination" /> is long enough to receive the encrypted data; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="M:System.Security.Cryptography.RSACng.TryExportEncryptedPkcs8PrivateKey(System.ReadOnlySpan{System.Byte},System.Security.Cryptography.PbeParameters,System.Span{System.Byte},System.Int32@)">
       <summary>Attempts to export the current key in the PKCS#8 EncryptedPrivateKeyInfo format into a provided buffer, using a byte-based password.</summary>
       <param name="passwordBytes">The bytes to use as a password when encrypting the key material.</param>
       <param name="pbeParameters">The password-based encryption (PBE) parameters to use when encrypting the key material.</param>
       <param name="destination">The byte span to receive the PKCS#8 EncryptedPrivateKeyInfo data.</param>
-      <param name="bytesWritten">When this method returns, contains a value that indicates the number of bytes written to <code data-dev-comment-type="paramref">destination</code>. This parameter is treated as uninitialized.</param>
+      <param name="bytesWritten">When this method returns, contains a value that indicates the number of bytes written to <paramref name="destination" />. This parameter is treated as uninitialized.</param>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if <code data-dev-comment-type="paramref">destination</code> is big enough to receive the output; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if <paramref name="destination" /> is big enough to receive the output; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="M:System.Security.Cryptography.RSACng.TryExportEncryptedPkcs8PrivateKey(System.ReadOnlySpan{System.Char},System.Security.Cryptography.PbeParameters,System.Span{System.Byte},System.Int32@)">
       <summary>Attempts to export the current key in the PKCS#8 EncryptedPrivateKeyInfo format into a provided buffer, using a char-based password.</summary>
       <param name="password">The password to use when encrypting the key material.</param>
       <param name="pbeParameters">The password-based encryption (PBE) parameters to use when encrypting the key material.</param>
       <param name="destination">The byte span to receive the PKCS#8 EncryptedPrivateKeyInfo data.</param>
-      <param name="bytesWritten">When this method returns, contains a value that indicates the number of bytes written to <code data-dev-comment-type="paramref">destination</code>. This parameter is treated as uninitialized.</param>
+      <param name="bytesWritten">When this method returns, contains a value that indicates the number of bytes written to <paramref name="destination" />. This parameter is treated as uninitialized.</param>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if <code data-dev-comment-type="paramref">destination</code> is big enough to receive the output; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if <paramref name="destination" /> is big enough to receive the output; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="M:System.Security.Cryptography.RSACng.TryExportPkcs8PrivateKey(System.Span{System.Byte},System.Int32@)">
       <summary>Attempts to export the current key in the PKCS#8 PrivateKeyInfo format into a provided buffer.</summary>
       <param name="destination">The byte span to receive the PKCS#8 PrivateKeyInfo data.</param>
-      <param name="bytesWritten">When this method returns, contains a value that indicates the number of bytes written to <code data-dev-comment-type="paramref">destination</code>. This parameter is treated as uninitialized.</param>
+      <param name="bytesWritten">When this method returns, contains a value that indicates the number of bytes written to <paramref name="destination" />. This parameter is treated as uninitialized.</param>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if <code data-dev-comment-type="paramref">destination</code> is big enough to receive the output; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if <paramref name="destination" /> is big enough to receive the output; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="M:System.Security.Cryptography.RSACng.TrySignHash(System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.Security.Cryptography.HashAlgorithmName,System.Security.Cryptography.RSASignaturePadding,System.Int32@)">
       <summary>Attempts to sign the hash with the current key, writing the signature into a provided buffer.</summary>
@@ -10361,9 +10373,9 @@ An error occurred creating the signature.</exception>
       <param name="destination">The buffer to receive the RSA signature.</param>
       <param name="hashAlgorithm">The hash algorithm used to create the hash value of the data.</param>
       <param name="padding">The padding.</param>
-      <param name="bytesWritten">When this method returns, the total number of bytes written into <code data-dev-comment-type="paramref">destination</code>. This parameter is treated as uninitialized.</param>
+      <param name="bytesWritten">When this method returns, the total number of bytes written into <paramref name="destination" />. This parameter is treated as uninitialized.</param>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if <code data-dev-comment-type="paramref">destination</code> is long enough to receive the RSA signature; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if <paramref name="destination" /> is long enough to receive the RSA signature; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="M:System.Security.Cryptography.RSACng.VerifyHash(System.Byte[],System.Byte[],System.Security.Cryptography.HashAlgorithmName,System.Security.Cryptography.RSASignaturePadding)">
       <summary>Verifies data that was signed and already hashed with the specified algorithm and padding mode.</summary>
@@ -10398,7 +10410,7 @@ An error occurred creating the signature.</exception>
       <param name="hashAlgorithm">The hash algorithm used to create the hash value.</param>
       <param name="padding">The padding mode.</param>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if the signature is valid; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if the signature is valid; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="P:System.Security.Cryptography.RSACng.Key">
       <summary>Gets the key that will be used by the <see cref="T:System.Security.Cryptography.RSACng" /> object for any cryptographic operation that it performs.</summary>
@@ -10526,13 +10538,13 @@ An error occurred creating the signature.</exception>
       <summary>Imports the public/private keypair from a PKCS#8 EncryptedPrivateKeyInfo structure after decrypting with a byte-based password, replacing the keys for this object.</summary>
       <param name="passwordBytes">The bytes to use as a password when decrypting the key material.</param>
       <param name="source">The bytes of a PKCS#8 EncryptedPrivateKeyInfo structure in the ASN.1-BER encoding.</param>
-      <param name="bytesRead">When this method returns, contains a value that indicates the number of bytes read from <code data-dev-comment-type="paramref">source</code>. This parameter is treated as uninitialized.</param>
+      <param name="bytesRead">When this method returns, contains a value that indicates the number of bytes read from <paramref name="source" />. This parameter is treated as uninitialized.</param>
     </member>
     <member name="M:System.Security.Cryptography.RSACryptoServiceProvider.ImportEncryptedPkcs8PrivateKey(System.ReadOnlySpan{System.Char},System.ReadOnlySpan{System.Byte},System.Int32@)">
       <summary>Imports the public/private keypair from a PKCS#8 EncryptedPrivateKeyInfo structure after decrypting with a char-based password, replacing the keys for this object.</summary>
       <param name="password">The password to use for decrypting the key material.</param>
       <param name="source">The bytes of a PKCS#8 EncryptedPrivateKeyInfo structure in the ASN.1-BER encoding.</param>
-      <param name="bytesRead">When this method returns, contains a value that indicates the number of bytes read from <code data-dev-comment-type="paramref">source</code>. This parameter is treated as uninitialized.</param>
+      <param name="bytesRead">When this method returns, contains a value that indicates the number of bytes read from <paramref name="source" />. This parameter is treated as uninitialized.</param>
     </member>
     <member name="M:System.Security.Cryptography.RSACryptoServiceProvider.ImportParameters(System.Security.Cryptography.RSAParameters)">
       <summary>Imports the specified <see cref="T:System.Security.Cryptography.RSAParameters" />.</summary>
@@ -14741,8 +14753,8 @@ This object was created with a constructor which did not accept a signing key.</
         <paramref name="rawData" /> did not decode as an Authority Information Access extension.</exception>
     </member>
     <member name="M:System.Security.Cryptography.X509Certificates.X509AuthorityInformationAccessExtension.CopyFrom(System.Security.Cryptography.AsnEncodedData)">
-      <summary>Copies the extension properties of the specified <xref data-throw-if-not-resolved="true" uid="System.Security.Cryptography.AsnEncodedData"></xref> object.</summary>
-      <param name="asnEncodedData">The <xref data-throw-if-not-resolved="true" uid="System.Security.Cryptography.AsnEncodedData"></xref> to be copied.</param>
+      <summary>Copies the extension properties of the specified <see cref="T:System.Security.Cryptography.AsnEncodedData" /> object.</summary>
+      <param name="asnEncodedData">The <see cref="T:System.Security.Cryptography.AsnEncodedData" /> to be copied.</param>
     </member>
     <member name="M:System.Security.Cryptography.X509Certificates.X509AuthorityInformationAccessExtension.EnumerateCAIssuersUris">
       <summary>Enumerates the AccessDescription values whose AccessMethod is CAIssuers (1.3.6.1.5.5.7.48.2) and content data type is URI.</summary>
@@ -14797,8 +14809,8 @@ This object was created with a constructor which did not accept a signing key.</
         <paramref name="rawData" /> did not decode as an Authority Key Identifier extension.</exception>
     </member>
     <member name="M:System.Security.Cryptography.X509Certificates.X509AuthorityKeyIdentifierExtension.CopyFrom(System.Security.Cryptography.AsnEncodedData)">
-      <summary>Copies the extension properties of the specified <xref data-throw-if-not-resolved="true" uid="System.Security.Cryptography.AsnEncodedData"></xref> object.</summary>
-      <param name="asnEncodedData">The <xref data-throw-if-not-resolved="true" uid="System.Security.Cryptography.AsnEncodedData"></xref> to be copied.</param>
+      <summary>Copies the extension properties of the specified <see cref="T:System.Security.Cryptography.AsnEncodedData" /> object.</summary>
+      <param name="asnEncodedData">The <see cref="T:System.Security.Cryptography.AsnEncodedData" /> to be copied.</param>
     </member>
     <member name="M:System.Security.Cryptography.X509Certificates.X509AuthorityKeyIdentifierExtension.Create(System.Byte[],System.Security.Cryptography.X509Certificates.X500DistinguishedName,System.Byte[])">
       <summary>Creates an <see cref="T:System.Security.Cryptography.X509Certificates.X509AuthorityKeyIdentifierExtension" /> that specifies the provided key identifier, issuer name and serial number.</summary>
@@ -17241,8 +17253,8 @@ The Subject Alternative Name extension or Subject Name could not be decoded.</ex
         <paramref name="rawData" /> did not decode as a Subject Alternative Name extension.</exception>
     </member>
     <member name="M:System.Security.Cryptography.X509Certificates.X509SubjectAlternativeNameExtension.CopyFrom(System.Security.Cryptography.AsnEncodedData)">
-      <summary>Copies the extension properties of the specified <xref data-throw-if-not-resolved="true" uid="System.Security.Cryptography.AsnEncodedData"></xref> object.</summary>
-      <param name="asnEncodedData">The <xref data-throw-if-not-resolved="true" uid="System.Security.Cryptography.AsnEncodedData"></xref> to be copied.</param>
+      <summary>Copies the extension properties of the specified <see cref="T:System.Security.Cryptography.AsnEncodedData" /> object.</summary>
+      <param name="asnEncodedData">The <see cref="T:System.Security.Cryptography.AsnEncodedData" /> to be copied.</param>
     </member>
     <member name="M:System.Security.Cryptography.X509Certificates.X509SubjectAlternativeNameExtension.EnumerateDnsNames">
       <summary>Enumerates the alternative name entries with a DNS Name type identifier.</summary>

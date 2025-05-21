@@ -24,7 +24,7 @@
       <summary>Provides a mechanism for examining the structural content of a JSON value without automatically instantiating data values.</summary>
     </member>
     <member name="M:System.Text.Json.JsonDocument.Dispose">
-      <summary>Releases the resources used by this <xref data-throw-if-not-resolved="true" uid="System.Text.Json.JsonDocument"></xref> instance.</summary>
+      <summary>Releases the resources used by this <see cref="T:System.Text.Json.JsonDocument" /> instance.</summary>
     </member>
     <member name="M:System.Text.Json.JsonDocument.Parse(System.Buffers.ReadOnlySequence{System.Byte},System.Text.Json.JsonDocumentOptions)">
       <summary>Parses a sequence as UTF-8-encoded text representing a single JSON value into a JsonDocument.</summary>
@@ -543,7 +543,7 @@ The current <paramref name="reader" /> token does not start or represent a value
       <summary>Represents an enumerator for the contents of a JSON array.</summary>
     </member>
     <member name="M:System.Text.Json.JsonElement.ArrayEnumerator.Dispose">
-      <summary>Releases the resources used by this <xref data-throw-if-not-resolved="true" uid="System.Text.Json.JsonElement.ArrayEnumerator"></xref> instance.</summary>
+      <summary>Releases the resources used by this <see cref="T:System.Text.Json.JsonElement.ArrayEnumerator" /> instance.</summary>
     </member>
     <member name="M:System.Text.Json.JsonElement.ArrayEnumerator.GetEnumerator">
       <summary>Returns an enumerator that iterates through a collection.</summary>
@@ -552,14 +552,14 @@ The current <paramref name="reader" /> token does not start or represent a value
     <member name="M:System.Text.Json.JsonElement.ArrayEnumerator.MoveNext">
       <summary>Advances the enumerator to the next element of the collection.</summary>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if the enumerator was successfully advanced to the next element; <code data-dev-comment-type="langword">false</code> if the enumerator has passed the end of the collection.</returns>
+        <see langword="true" /> if the enumerator was successfully advanced to the next element; <see langword="false" /> if the enumerator has passed the end of the collection.</returns>
     </member>
     <member name="M:System.Text.Json.JsonElement.ArrayEnumerator.Reset">
       <summary>Sets the enumerator to its initial position, which is before the first element in the collection.</summary>
     </member>
-    <member name="M:System.Text.Json.JsonElement.ArrayEnumerator.System#Collections#Generic#IEnumerable&lt;System#Text#Json#JsonElement&gt;#GetEnumerator">
+    <member name="M:System.Text.Json.JsonElement.ArrayEnumerator.System#Collections#Generic#IEnumerable{System#Text#Json#JsonElement}#GetEnumerator">
       <summary>Returns an enumerator that iterates through a collection.</summary>
-      <returns>An enumerator for an array of <xref data-throw-if-not-resolved="true" uid="System.Text.Json.JsonElement"></xref> that can be used to iterate through the collection.</returns>
+      <returns>An enumerator for an array of <see cref="T:System.Text.Json.JsonElement" /> that can be used to iterate through the collection.</returns>
     </member>
     <member name="M:System.Text.Json.JsonElement.ArrayEnumerator.System#Collections#IEnumerable#GetEnumerator">
       <summary>Returns an enumerator that iterates through a collection.</summary>
@@ -577,7 +577,7 @@ The current <paramref name="reader" /> token does not start or represent a value
       <summary>Represents an enumerator for the properties of a JSON object.</summary>
     </member>
     <member name="M:System.Text.Json.JsonElement.ObjectEnumerator.Dispose">
-      <summary>Releases the resources used by this <xref data-throw-if-not-resolved="true" uid="System.Text.Json.JsonElement.ObjectEnumerator"></xref> instance.</summary>
+      <summary>Releases the resources used by this <see cref="T:System.Text.Json.JsonElement.ObjectEnumerator" /> instance.</summary>
     </member>
     <member name="M:System.Text.Json.JsonElement.ObjectEnumerator.GetEnumerator">
       <summary>Returns an enumerator that iterates the properties of an object.</summary>
@@ -586,14 +586,14 @@ The current <paramref name="reader" /> token does not start or represent a value
     <member name="M:System.Text.Json.JsonElement.ObjectEnumerator.MoveNext">
       <summary>Advances the enumerator to the next element of the collection.</summary>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if the enumerator was successfully advanced to the next element; <code data-dev-comment-type="langword">false</code> if the enumerator has passed the end of the collection.</returns>
+        <see langword="true" /> if the enumerator was successfully advanced to the next element; <see langword="false" /> if the enumerator has passed the end of the collection.</returns>
     </member>
     <member name="M:System.Text.Json.JsonElement.ObjectEnumerator.Reset">
       <summary>Sets the enumerator to its initial position, which is before the first element in the collection.</summary>
     </member>
-    <member name="M:System.Text.Json.JsonElement.ObjectEnumerator.System#Collections#Generic#IEnumerable&lt;System#Text#Json#JsonProperty&gt;#GetEnumerator">
+    <member name="M:System.Text.Json.JsonElement.ObjectEnumerator.System#Collections#Generic#IEnumerable{System#Text#Json#JsonProperty}#GetEnumerator">
       <summary>Returns an enumerator that iterates through a collection.</summary>
-      <returns>An enumerator for <xref data-throw-if-not-resolved="true" uid="System.Text.Json.JsonProperty"></xref> objects that can be used to iterate through the collection.</returns>
+      <returns>An enumerator for <see cref="T:System.Text.Json.JsonProperty" /> objects that can be used to iterate through the collection.</returns>
     </member>
     <member name="M:System.Text.Json.JsonElement.ObjectEnumerator.System#Collections#IEnumerable#GetEnumerator">
       <summary>Returns an enumerator that iterates through a collection.</summary>
@@ -2516,9 +2516,10 @@ There is remaining data in the stream.</exception>
       <returns>A <see cref="T:System.Collections.IEnumerator" /> for the <see cref="T:System.Text.Json.Nodes.JsonArray" />.</returns>
     </member>
     <member name="M:System.Text.Json.Nodes.JsonArray.WriteTo(System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions)">
-      <summary>Writes the <xref data-throw-if-not-resolved="true" uid="System.Text.Json.Nodes.JsonNode"></xref> into the provided <xref data-throw-if-not-resolved="true" uid="System.Text.Json.Utf8JsonWriter"></xref> as JSON.</summary>
-      <param name="writer">The <xref data-throw-if-not-resolved="true" uid="System.Text.Json.Utf8JsonWriter"></xref>.</param>
+      <summary>Writes the <see cref="T:System.Text.Json.Nodes.JsonNode" /> into the provided <see cref="T:System.Text.Json.Utf8JsonWriter" /> as JSON.</summary>
+      <param name="writer">The <see cref="T:System.Text.Json.Utf8JsonWriter" />.</param>
       <param name="options">Options to control the serialization behavior.</param>
+      <exception cref="T:System.ArgumentNullException">The <paramref name="writer" /> parameter is <see langword="null" />.</exception>
     </member>
     <member name="P:System.Text.Json.Nodes.JsonArray.Count">
       <summary>Gets the number of elements contained in the <see cref="T:System.Text.Json.Nodes.JsonArray" />.</summary>
@@ -3177,9 +3178,10 @@ There is remaining data in the stream.</exception>
         <see langword="true" /> if a property with the specified name was found; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="M:System.Text.Json.Nodes.JsonObject.WriteTo(System.Text.Json.Utf8JsonWriter,System.Text.Json.JsonSerializerOptions)">
-      <summary>Writes the <xref data-throw-if-not-resolved="true" uid="System.Text.Json.Nodes.JsonNode"></xref> into the provided <xref data-throw-if-not-resolved="true" uid="System.Text.Json.Utf8JsonWriter"></xref> as JSON.</summary>
-      <param name="writer">The <xref data-throw-if-not-resolved="true" uid="System.Text.Json.Utf8JsonWriter"></xref>.</param>
+      <summary>Writes the <see cref="T:System.Text.Json.Nodes.JsonNode" /> into the provided <see cref="T:System.Text.Json.Utf8JsonWriter" /> as JSON.</summary>
+      <param name="writer">The <see cref="T:System.Text.Json.Utf8JsonWriter" />.</param>
       <param name="options">Options to control the serialization behavior.</param>
+      <exception cref="T:System.ArgumentNullException">The <paramref name="writer" /> parameter is <see langword="null" />.</exception>
     </member>
     <member name="P:System.Text.Json.Nodes.JsonObject.Count">
       <summary>Gets the number of elements contained in <see cref="T:System.Text.Json.Nodes.JsonObject" />.</summary>
@@ -3715,13 +3717,13 @@ There is remaining data in the stream.</exception>
       <summary>When overridden in a derived class, determines whether the converter instance can convert the specified object type.</summary>
       <param name="typeToConvert">The type of the object to check whether it can be converted by this converter instance.</param>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if the instance can convert the specified object type; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if the instance can convert the specified object type; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="M:System.Text.Json.Serialization.JsonNumberEnumConverter`1.CreateConverter(System.Type,System.Text.Json.JsonSerializerOptions)">
       <summary>Creates a converter for a specified type.</summary>
       <param name="typeToConvert">The type handled by the converter.</param>
       <param name="options">The serialization options to use.</param>
-      <returns>A converter for which <code data-dev-comment-type="typeparamref">T</code> is compatible with <code data-dev-comment-type="paramref">typeToConvert</code>.</returns>
+      <returns>A converter for which <typeparamref name="T" /> is compatible with <paramref name="typeToConvert" />.</returns>
     </member>
     <member name="T:System.Text.Json.Serialization.JsonNumberHandling">
       <summary>Determines how <see cref="T:System.Text.Json.JsonSerializer" /> handles numbers when serializing and deserializing.</summary>
@@ -3967,13 +3969,13 @@ There is remaining data in the stream.</exception>
       <summary>Determines whether the specified type can be converted to an enum.</summary>
       <param name="typeToConvert">The type to be checked.</param>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if the type can be converted; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if the type can be converted; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="M:System.Text.Json.Serialization.JsonStringEnumConverter.CreateConverter(System.Type,System.Text.Json.JsonSerializerOptions)">
       <summary>Creates a converter for the specified type.</summary>
       <param name="typeToConvert">The type handled by the converter.</param>
       <param name="options">The serialization options to use.</param>
-      <returns>A converter for which <code data-dev-comment-type="typeparamref">T</code> is compatible with <code data-dev-comment-type="paramref">typeToConvert</code>.</returns>
+      <returns>A converter for which <typeparamref name="T" /> is compatible with <paramref name="typeToConvert" />.</returns>
     </member>
     <member name="T:System.Text.Json.Serialization.JsonStringEnumConverter`1">
       <summary>Converter to convert enums to and from strings.</summary>
@@ -3992,13 +3994,13 @@ There is remaining data in the stream.</exception>
       <summary>When overridden in a derived class, determines whether the converter instance can convert the specified object type.</summary>
       <param name="typeToConvert">The type of the object to check whether it can be converted by this converter instance.</param>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if the instance can convert the specified object type; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if the instance can convert the specified object type; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="M:System.Text.Json.Serialization.JsonStringEnumConverter`1.CreateConverter(System.Type,System.Text.Json.JsonSerializerOptions)">
       <summary>Creates a converter for a specified type.</summary>
       <param name="typeToConvert">The type handled by the converter.</param>
       <param name="options">The serialization options to use.</param>
-      <returns>A converter for which <code data-dev-comment-type="typeparamref">T</code> is compatible with <code data-dev-comment-type="paramref">typeToConvert</code>.</returns>
+      <returns>A converter for which <typeparamref name="T" /> is compatible with <paramref name="typeToConvert" />.</returns>
     </member>
     <member name="T:System.Text.Json.Serialization.JsonStringEnumMemberNameAttribute" />
     <member name="M:System.Text.Json.Serialization.JsonStringEnumMemberNameAttribute.#ctor(System.String)">

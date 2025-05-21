@@ -23384,17 +23384,17 @@
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector256.Max``1(System.Runtime.Intrinsics.Vector256{``0},System.Runtime.Intrinsics.Vector256{``0})">
       <summary>Computes the maximum of two vectors on a per-element basis.</summary>
-      <param name="left">The vector to compare with <code data-dev-comment-type="paramref">right</code>.</param>
-      <param name="right">The vector to compare with <code data-dev-comment-type="paramref">left</code>.</param>
+      <param name="left">The vector to compare with <paramref name="right" />.</param>
+      <param name="right">The vector to compare with <paramref name="left" />.</param>
       <typeparam name="T">The type of the elements in the vector.</typeparam>
-      <returns>A vector whose elements are the maximum of the corresponding elements in <code data-dev-comment-type="paramref">left</code> and <code data-dev-comment-type="paramref">right</code>.</returns>
+      <returns>A vector whose elements are the maximum of the corresponding elements in <paramref name="left" /> and <paramref name="right" />.</returns>
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector256.Min``1(System.Runtime.Intrinsics.Vector256{``0},System.Runtime.Intrinsics.Vector256{``0})">
       <summary>Computes the minimum of two vectors on a per-element basis.</summary>
-      <param name="left">The vector to compare with <code data-dev-comment-type="paramref">right</code>.</param>
-      <param name="right">The vector to compare with <code data-dev-comment-type="paramref">left</code>.</param>
+      <param name="left">The vector to compare with <paramref name="right" />.</param>
+      <param name="right">The vector to compare with <paramref name="left" />.</param>
       <typeparam name="T">The type of the elements in the vector.</typeparam>
-      <returns>A vector whose elements are the minimum of the corresponding elements in <code data-dev-comment-type="paramref">left</code> and <code data-dev-comment-type="paramref">right</code>.</returns>
+      <returns>A vector whose elements are the minimum of the corresponding elements in <paramref name="left" /> and <paramref name="right" />.</returns>
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector256.Multiply``1(``0,System.Runtime.Intrinsics.Vector256{``0})">
       <summary>Multiplies a vector by a scalar to compute their product.</summary>
@@ -25198,17 +25198,17 @@
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector512.Max``1(System.Runtime.Intrinsics.Vector512{``0},System.Runtime.Intrinsics.Vector512{``0})">
       <summary>Computes the maximum of two vectors on a per-element basis.</summary>
-      <param name="left">The vector to compare with <code data-dev-comment-type="paramref">right</code>.</param>
-      <param name="right">The vector to compare with <code data-dev-comment-type="paramref">left</code>.</param>
+      <param name="left">The vector to compare with <paramref name="right" />.</param>
+      <param name="right">The vector to compare with <paramref name="left" />.</param>
       <typeparam name="T">The type of the elements in the vector.</typeparam>
-      <returns>A vector whose elements are the maximum of the corresponding elements in <code data-dev-comment-type="paramref">left</code> and <code data-dev-comment-type="paramref">right</code>.</returns>
+      <returns>A vector whose elements are the maximum of the corresponding elements in <paramref name="left" /> and <paramref name="right" />.</returns>
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector512.Min``1(System.Runtime.Intrinsics.Vector512{``0},System.Runtime.Intrinsics.Vector512{``0})">
       <summary>Computes the minimum of two vectors on a per-element basis.</summary>
-      <param name="left">The vector to compare with <code data-dev-comment-type="paramref">right</code>.</param>
-      <param name="right">The vector to compare with <code data-dev-comment-type="paramref">left</code>.</param>
+      <param name="left">The vector to compare with <paramref name="right" />.</param>
+      <param name="right">The vector to compare with <paramref name="left" />.</param>
       <typeparam name="T">The type of the elements in the vector.</typeparam>
-      <returns>A vector whose elements are the minimum of the corresponding elements in <code data-dev-comment-type="paramref">left</code> and <code data-dev-comment-type="paramref">right</code>.</returns>
+      <returns>A vector whose elements are the minimum of the corresponding elements in <paramref name="left" /> and <paramref name="right" />.</returns>
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector512.Multiply``1(``0,System.Runtime.Intrinsics.Vector512{``0})">
       <summary>Multiplies a vector by a scalar to compute their product.</summary>
@@ -26642,17 +26642,17 @@
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector64.Max``1(System.Runtime.Intrinsics.Vector64{``0},System.Runtime.Intrinsics.Vector64{``0})">
       <summary>Computes the maximum of two vectors on a per-element basis.</summary>
-      <param name="left">The vector to compare with <code data-dev-comment-type="paramref">right</code>.</param>
-      <param name="right">The vector to compare with <code data-dev-comment-type="paramref">left</code>.</param>
+      <param name="left">The vector to compare with <paramref name="right" />.</param>
+      <param name="right">The vector to compare with <paramref name="left" />.</param>
       <typeparam name="T">The type of the elements in the vector.</typeparam>
-      <returns>A vector whose elements are the maximum of the corresponding elements in <code data-dev-comment-type="paramref">left</code> and <code data-dev-comment-type="paramref">right</code>.</returns>
+      <returns>A vector whose elements are the maximum of the corresponding elements in <paramref name="left" /> and <paramref name="right" />.</returns>
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector64.Min``1(System.Runtime.Intrinsics.Vector64{``0},System.Runtime.Intrinsics.Vector64{``0})">
       <summary>Computes the minimum of two vectors on a per-element basis.</summary>
-      <param name="left">The vector to compare with <code data-dev-comment-type="paramref">right</code>.</param>
-      <param name="right">The vector to compare with <code data-dev-comment-type="paramref">left</code>.</param>
+      <param name="left">The vector to compare with <paramref name="right" />.</param>
+      <param name="right">The vector to compare with <paramref name="left" />.</param>
       <typeparam name="T">The type of the elements in the vector.</typeparam>
-      <returns>A vector whose elements are the minimum of the corresponding elements in <code data-dev-comment-type="paramref">left</code> and <code data-dev-comment-type="paramref">right</code>.</returns>
+      <returns>A vector whose elements are the minimum of the corresponding elements in <paramref name="left" /> and <paramref name="right" />.</returns>
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector64.Multiply``1(``0,System.Runtime.Intrinsics.Vector64{``0})">
       <summary>Multiplies a vector by a scalar to compute their product.</summary>

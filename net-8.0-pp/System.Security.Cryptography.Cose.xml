@@ -113,21 +113,21 @@
       <exception cref="T:System.InvalidOperationException">The header map is read-only.</exception>
     </member>
     <member name="M:System.Security.Cryptography.Cose.CoseHeaderMap.Contains(System.Collections.Generic.KeyValuePair{System.Security.Cryptography.Cose.CoseHeaderLabel,System.Security.Cryptography.Cose.CoseHeaderValue})">
-      <summary>Determines whether the <xref data-throw-if-not-resolved="true" uid="System.Collections.Generic.ICollection`1"></xref> contains a specific value.</summary>
-      <param name="item">The object to locate in the <xref data-throw-if-not-resolved="true" uid="System.Collections.Generic.ICollection`1"></xref>.</param>
+      <summary>Determines whether the <see cref="T:System.Collections.Generic.ICollection`1" /> contains a specific value.</summary>
+      <param name="item">The object to locate in the <see cref="T:System.Collections.Generic.ICollection`1" />.</param>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if <code data-dev-comment-type="paramref">item</code> is found in the <xref data-throw-if-not-resolved="true" uid="System.Collections.Generic.ICollection`1"></xref>; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if <paramref name="item" /> is found in the <see cref="T:System.Collections.Generic.ICollection`1" />; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="M:System.Security.Cryptography.Cose.CoseHeaderMap.ContainsKey(System.Security.Cryptography.Cose.CoseHeaderLabel)">
-      <summary>Determines whether the <xref data-throw-if-not-resolved="true" uid="System.Collections.Generic.IDictionary`2"></xref> contains an element with the specified key.</summary>
-      <param name="key">The key to locate in the <xref data-throw-if-not-resolved="true" uid="System.Collections.Generic.IDictionary`2"></xref>.</param>
+      <summary>Determines whether the <see cref="T:System.Collections.Generic.IDictionary`2" /> contains an element with the specified key.</summary>
+      <param name="key">The key to locate in the <see cref="T:System.Collections.Generic.IDictionary`2" />.</param>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if the <xref data-throw-if-not-resolved="true" uid="System.Collections.Generic.IDictionary`2"></xref> contains an element with the key; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if the <see cref="T:System.Collections.Generic.IDictionary`2" /> contains an element with the key; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="M:System.Security.Cryptography.Cose.CoseHeaderMap.CopyTo(System.Collections.Generic.KeyValuePair{System.Security.Cryptography.Cose.CoseHeaderLabel,System.Security.Cryptography.Cose.CoseHeaderValue}[],System.Int32)">
-      <summary>Copies the elements of the <xref data-throw-if-not-resolved="true" uid="System.Collections.Generic.ICollection`1"></xref> to an <xref data-throw-if-not-resolved="true" uid="System.Array"></xref>, starting at a particular <xref data-throw-if-not-resolved="true" uid="System.Array"></xref> index.</summary>
-      <param name="array">The one-dimensional <xref data-throw-if-not-resolved="true" uid="System.Array"></xref> that is the destination of the elements copied from <xref data-throw-if-not-resolved="true" uid="System.Collections.Generic.ICollection`1"></xref>. The <xref data-throw-if-not-resolved="true" uid="System.Array"></xref> must have zero-based indexing.</param>
-      <param name="arrayIndex">The zero-based index in <code data-dev-comment-type="paramref">array</code> at which copying begins.</param>
+      <summary>Copies the elements of the <see cref="T:System.Collections.Generic.ICollection`1" /> to an <see cref="T:System.Array" />, starting at a particular <see cref="T:System.Array" /> index.</summary>
+      <param name="array">The one-dimensional <see cref="T:System.Array" /> that is the destination of the elements copied from <see cref="T:System.Collections.Generic.ICollection`1" />. The <see cref="T:System.Array" /> must have zero-based indexing.</param>
+      <param name="arrayIndex">The zero-based index in <paramref name="array" /> at which copying begins.</param>
     </member>
     <member name="M:System.Security.Cryptography.Cose.CoseHeaderMap.GetEnumerator">
       <summary>Returns an enumerator that iterates through the collection.</summary>
@@ -182,7 +182,7 @@
     </member>
     <member name="M:System.Security.Cryptography.Cose.CoseHeaderMap.System#Collections#IEnumerable#GetEnumerator">
       <summary>Returns an enumerator that iterates through a collection.</summary>
-      <returns>An <xref data-throw-if-not-resolved="true" uid="System.Collections.IEnumerator"></xref> object that can be used to iterate through the collection.</returns>
+      <returns>An <see cref="T:System.Collections.IEnumerator" /> object that can be used to iterate through the collection.</returns>
     </member>
     <member name="M:System.Security.Cryptography.Cose.CoseHeaderMap.TryGetValue(System.Security.Cryptography.Cose.CoseHeaderLabel,System.Security.Cryptography.Cose.CoseHeaderValue@)">
       <summary>Gets the value associated with the specified key.</summary>

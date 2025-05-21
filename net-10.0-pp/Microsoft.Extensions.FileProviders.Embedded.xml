@@ -131,9 +131,9 @@
       <returns>The file information. Caller must check Exists property.</returns>
     </member>
     <member name="M:Microsoft.Extensions.FileProviders.ManifestEmbeddedFileProvider.Watch(System.String)">
-      <summary>Creates a <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.Primitives.IChangeToken"></xref> for the specified <code data-dev-comment-type="paramref">filter</code>.</summary>
+      <summary>Creates a <see cref="T:Microsoft.Extensions.Primitives.IChangeToken" /> for the specified <paramref name="filter" />.</summary>
       <param name="filter">Filter string used to determine what files or folders to monitor. Example: */.cs, ., subFolder/*/.cshtml.</param>
-      <returns>An <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.Primitives.IChangeToken"></xref> that is notified when a file matching <code data-dev-comment-type="paramref">filter</code> is added, modified or deleted.</returns>
+      <returns>An <see cref="T:Microsoft.Extensions.Primitives.IChangeToken" /> that is notified when a file matching <paramref name="filter" /> is added, modified or deleted.</returns>
     </member>
     <member name="P:Microsoft.Extensions.FileProviders.ManifestEmbeddedFileProvider.Assembly">
       <summary>

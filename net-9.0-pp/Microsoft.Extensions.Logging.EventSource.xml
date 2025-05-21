@@ -14,7 +14,7 @@
       <param name="eventSource">The logging event source.</param>
     </member>
     <member name="M:Microsoft.Extensions.Logging.EventSource.EventSourceLoggerProvider.CreateLogger(System.String)">
-      <summary>Creates a new <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.Logging.ILogger"></xref> instance.</summary>
+      <summary>Creates a new <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.Logging.ILogger" /> instance.</summary>
       <param name="categoryName">The category name for messages produced by the logger.</param>
       <returns>The instance of <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.Logging.ILogger"></xref> that was created.</returns>
     </member>

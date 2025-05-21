@@ -7,6 +7,17 @@
     <member name="T:System.Collections.Frozen.FrozenDictionary">
       <summary>Provides a set of initialization methods for instances of the <see cref="T:System.Collections.Frozen.FrozenDictionary`2" /> class.</summary>
     </member>
+    <member name="M:System.Collections.Frozen.FrozenDictionary.Create``2(System.Collections.Generic.IEqualityComparer{``0},System.ReadOnlySpan{System.Collections.Generic.KeyValuePair{``0,``1}})">
+      <param name="comparer" />
+      <param name="source" />
+      <typeparam name="TKey" />
+      <typeparam name="TValue" />
+    </member>
+    <member name="M:System.Collections.Frozen.FrozenDictionary.Create``2(System.ReadOnlySpan{System.Collections.Generic.KeyValuePair{``0,``1}})">
+      <param name="source" />
+      <typeparam name="TKey" />
+      <typeparam name="TValue" />
+    </member>
     <member name="M:System.Collections.Frozen.FrozenDictionary.ToFrozenDictionary``2(System.Collections.Generic.IEnumerable{``0},System.Func{``0,``1},System.Collections.Generic.IEqualityComparer{``1})">
       <summary>Creates a <see cref="T:System.Collections.Frozen.FrozenDictionary`2" /> from an <see cref="T:System.Collections.Generic.IEnumerable`1" /> according to specified key selector function.</summary>
       <param name="source">An <see cref="T:System.Collections.Generic.IEnumerable`1" /> from which to create a <see cref="T:System.Collections.Frozen.FrozenDictionary`2" />.</param>
@@ -99,35 +110,35 @@
       <returns>An enumerator that can be used to iterate through the collection.</returns>
     </member>
     <member name="M:System.Collections.Frozen.FrozenDictionary`2.System#Collections#ICollection#CopyTo(System.Array,System.Int32)">
-      <summary>Copies the elements of the <xref data-throw-if-not-resolved="true" uid="System.Collections.ICollection"></xref> to an <xref data-throw-if-not-resolved="true" uid="System.Array"></xref>, starting at a particular <xref data-throw-if-not-resolved="true" uid="System.Array"></xref> index.</summary>
-      <param name="array">The one-dimensional <xref data-throw-if-not-resolved="true" uid="System.Array"></xref> that is the destination of the elements copied from <xref data-throw-if-not-resolved="true" uid="System.Collections.ICollection"></xref>. The <xref data-throw-if-not-resolved="true" uid="System.Array"></xref> must have zero-based indexing.</param>
-      <param name="index">The zero-based index in <code data-dev-comment-type="paramref">array</code> at which copying begins.</param>
+      <summary>Copies the elements of the <see cref="T:System.Collections.ICollection" /> to an <see cref="T:System.Array" />, starting at a particular <see cref="T:System.Array" /> index.</summary>
+      <param name="array">The one-dimensional <see cref="T:System.Array" /> that is the destination of the elements copied from <see cref="T:System.Collections.ICollection" />. The <see cref="T:System.Array" /> must have zero-based indexing.</param>
+      <param name="index">The zero-based index in <paramref name="array" /> at which copying begins.</param>
     </member>
     <member name="M:System.Collections.Frozen.FrozenDictionary`2.System#Collections#IDictionary#Add(System.Object,System.Object)">
-      <summary>Adds an element with the provided key and value to the <xref data-throw-if-not-resolved="true" uid="System.Collections.IDictionary"></xref> object.</summary>
-      <param name="key">The <xref data-throw-if-not-resolved="true" uid="System.Object"></xref> to use as the key of the element to add.</param>
-      <param name="value">The <xref data-throw-if-not-resolved="true" uid="System.Object"></xref> to use as the value of the element to add.</param>
+      <summary>Adds an element with the provided key and value to the <see cref="T:System.Collections.IDictionary" /> object.</summary>
+      <param name="key">The <see cref="T:System.Object" /> to use as the key of the element to add.</param>
+      <param name="value">The <see cref="T:System.Object" /> to use as the value of the element to add.</param>
     </member>
     <member name="M:System.Collections.Frozen.FrozenDictionary`2.System#Collections#IDictionary#Clear">
-      <summary>Removes all elements from the <xref data-throw-if-not-resolved="true" uid="System.Collections.IDictionary"></xref> object.</summary>
+      <summary>Removes all elements from the <see cref="T:System.Collections.IDictionary" /> object.</summary>
     </member>
     <member name="M:System.Collections.Frozen.FrozenDictionary`2.System#Collections#IDictionary#Contains(System.Object)">
-      <summary>Determines whether the <xref data-throw-if-not-resolved="true" uid="System.Collections.IDictionary"></xref> object contains an element with the specified key.</summary>
-      <param name="key">The key to locate in the <xref data-throw-if-not-resolved="true" uid="System.Collections.IDictionary"></xref> object.</param>
+      <summary>Determines whether the <see cref="T:System.Collections.IDictionary" /> object contains an element with the specified key.</summary>
+      <param name="key">The key to locate in the <see cref="T:System.Collections.IDictionary" /> object.</param>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if the <xref data-throw-if-not-resolved="true" uid="System.Collections.IDictionary"></xref> contains an element with the key; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if the <see cref="T:System.Collections.IDictionary" /> contains an element with the key; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="M:System.Collections.Frozen.FrozenDictionary`2.System#Collections#IDictionary#GetEnumerator">
-      <summary>Returns an <xref data-throw-if-not-resolved="true" uid="System.Collections.IDictionaryEnumerator"></xref> object for the <xref data-throw-if-not-resolved="true" uid="System.Collections.IDictionary"></xref> object.</summary>
-      <returns>An <xref data-throw-if-not-resolved="true" uid="System.Collections.IDictionaryEnumerator"></xref> object for the <xref data-throw-if-not-resolved="true" uid="System.Collections.IDictionary"></xref> object.</returns>
+      <summary>Returns an <see cref="T:System.Collections.IDictionaryEnumerator" /> object for the <see cref="T:System.Collections.IDictionary" /> object.</summary>
+      <returns>An <see cref="T:System.Collections.IDictionaryEnumerator" /> object for the <see cref="T:System.Collections.IDictionary" /> object.</returns>
     </member>
     <member name="M:System.Collections.Frozen.FrozenDictionary`2.System#Collections#IDictionary#Remove(System.Object)">
-      <summary>Removes the element with the specified key from the <xref data-throw-if-not-resolved="true" uid="System.Collections.IDictionary"></xref> object.</summary>
+      <summary>Removes the element with the specified key from the <see cref="T:System.Collections.IDictionary" /> object.</summary>
       <param name="key">The key of the element to remove.</param>
     </member>
     <member name="M:System.Collections.Frozen.FrozenDictionary`2.System#Collections#IEnumerable#GetEnumerator">
       <summary>Returns an enumerator that iterates through a collection.</summary>
-      <returns>An <xref data-throw-if-not-resolved="true" uid="System.Collections.IEnumerator"></xref> object that can be used to iterate through the collection.</returns>
+      <returns>An <see cref="T:System.Collections.IEnumerator" /> object that can be used to iterate through the collection.</returns>
     </member>
     <member name="M:System.Collections.Frozen.FrozenDictionary`2.TryGetValue(`0,`1@)">
       <summary>Gets the value associated with the specified key.</summary>
@@ -187,23 +198,23 @@
       <returns>An enumerable collection that contains the values in the read-only dictionary.</returns>
     </member>
     <member name="P:System.Collections.Frozen.FrozenDictionary`2.System#Collections#ICollection#IsSynchronized">
-      <summary>Gets a value indicating whether access to the <xref data-throw-if-not-resolved="true" uid="System.Collections.ICollection"></xref> is synchronized (thread safe).</summary>
+      <summary>Gets a value indicating whether access to the <see cref="T:System.Collections.ICollection" /> is synchronized (thread safe).</summary>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if access to the <xref data-throw-if-not-resolved="true" uid="System.Collections.ICollection"></xref> is synchronized (thread safe); otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if access to the <see cref="T:System.Collections.ICollection" /> is synchronized (thread safe); otherwise, <see langword="false" />.</returns>
     </member>
     <member name="P:System.Collections.Frozen.FrozenDictionary`2.System#Collections#ICollection#SyncRoot">
-      <summary>Gets an object that can be used to synchronize access to the <xref data-throw-if-not-resolved="true" uid="System.Collections.ICollection"></xref>.</summary>
-      <returns>An object that can be used to synchronize access to the <xref data-throw-if-not-resolved="true" uid="System.Collections.ICollection"></xref>.</returns>
+      <summary>Gets an object that can be used to synchronize access to the <see cref="T:System.Collections.ICollection" />.</summary>
+      <returns>An object that can be used to synchronize access to the <see cref="T:System.Collections.ICollection" />.</returns>
     </member>
     <member name="P:System.Collections.Frozen.FrozenDictionary`2.System#Collections#IDictionary#IsFixedSize">
-      <summary>Gets a value indicating whether the <xref data-throw-if-not-resolved="true" uid="System.Collections.IDictionary"></xref> object has a fixed size.</summary>
+      <summary>Gets a value indicating whether the <see cref="T:System.Collections.IDictionary" /> object has a fixed size.</summary>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if the <xref data-throw-if-not-resolved="true" uid="System.Collections.IDictionary"></xref> object has a fixed size; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if the <see cref="T:System.Collections.IDictionary" /> object has a fixed size; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="P:System.Collections.Frozen.FrozenDictionary`2.System#Collections#IDictionary#IsReadOnly">
-      <summary>Gets a value indicating whether the <xref data-throw-if-not-resolved="true" uid="System.Collections.IDictionary"></xref> object is read-only.</summary>
+      <summary>Gets a value indicating whether the <see cref="T:System.Collections.IDictionary" /> object is read-only.</summary>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if the <xref data-throw-if-not-resolved="true" uid="System.Collections.IDictionary"></xref> object is read-only; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if the <see cref="T:System.Collections.IDictionary" /> object is read-only; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="P:System.Collections.Frozen.FrozenDictionary`2.System#Collections#IDictionary#Item(System.Object)">
       <summary>Gets or sets the element with the specified key.</summary>
@@ -211,12 +222,12 @@
       <returns>The element with the specified key, or <code data-dev-comment-type="langword">null</code> if the key does not exist.</returns>
     </member>
     <member name="P:System.Collections.Frozen.FrozenDictionary`2.System#Collections#IDictionary#Keys">
-      <summary>Gets an <xref data-throw-if-not-resolved="true" uid="System.Collections.ICollection"></xref> object containing the keys of the <xref data-throw-if-not-resolved="true" uid="System.Collections.IDictionary"></xref> object.</summary>
-      <returns>An <xref data-throw-if-not-resolved="true" uid="System.Collections.ICollection"></xref> object containing the keys of the <xref data-throw-if-not-resolved="true" uid="System.Collections.IDictionary"></xref> object.</returns>
+      <summary>Gets an <see cref="T:System.Collections.ICollection" /> object containing the keys of the <see cref="T:System.Collections.IDictionary" /> object.</summary>
+      <returns>An <see cref="T:System.Collections.ICollection" /> object containing the keys of the <see cref="T:System.Collections.IDictionary" /> object.</returns>
     </member>
     <member name="P:System.Collections.Frozen.FrozenDictionary`2.System#Collections#IDictionary#Values">
-      <summary>Gets an <xref data-throw-if-not-resolved="true" uid="System.Collections.ICollection"></xref> object containing the values in the <xref data-throw-if-not-resolved="true" uid="System.Collections.IDictionary"></xref> object.</summary>
-      <returns>An <xref data-throw-if-not-resolved="true" uid="System.Collections.ICollection"></xref> object containing the values in the <xref data-throw-if-not-resolved="true" uid="System.Collections.IDictionary"></xref> object.</returns>
+      <summary>Gets an <see cref="T:System.Collections.ICollection" /> object containing the values in the <see cref="T:System.Collections.IDictionary" /> object.</summary>
+      <returns>An <see cref="T:System.Collections.ICollection" /> object containing the values in the <see cref="T:System.Collections.IDictionary" /> object.</returns>
     </member>
     <member name="P:System.Collections.Frozen.FrozenDictionary`2.Values">
       <summary>Gets a collection containing the values in the dictionary.</summary>
@@ -229,7 +240,7 @@
     <member name="M:System.Collections.Frozen.FrozenDictionary`2.Enumerator.MoveNext">
       <summary>Advances the enumerator to the next element of the collection.</summary>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if the enumerator was successfully advanced to the next element; <code data-dev-comment-type="langword">false</code> if the enumerator has passed the end of the collection.</returns>
+        <see langword="true" /> if the enumerator was successfully advanced to the next element; <see langword="false" /> if the enumerator has passed the end of the collection.</returns>
     </member>
     <member name="M:System.Collections.Frozen.FrozenDictionary`2.Enumerator.System#Collections#IEnumerator#Reset">
       <summary>Sets the enumerator to its initial position, which is before the first element in the collection.</summary>
@@ -295,37 +306,37 @@
       <summary>Determines whether the current set is a proper (strict) subset of a specified collection.</summary>
       <param name="other">The collection to compare to the current set.</param>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if the current set is a proper subset of <code data-dev-comment-type="paramref">other</code>; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if the current set is a proper subset of <paramref name="other" />; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="M:System.Collections.Frozen.FrozenSet`1.IsProperSupersetOf(System.Collections.Generic.IEnumerable{`0})">
       <summary>Determines whether the current set is a proper (strict) superset of a specified collection.</summary>
       <param name="other">The collection to compare to the current set.</param>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if the current set is a proper superset of <code data-dev-comment-type="paramref">other</code>; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if the current set is a proper superset of <paramref name="other" />; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="M:System.Collections.Frozen.FrozenSet`1.IsSubsetOf(System.Collections.Generic.IEnumerable{`0})">
       <summary>Determines whether a set is a subset of a specified collection.</summary>
       <param name="other">The collection to compare to the current set.</param>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if the current set is a subset of <code data-dev-comment-type="paramref">other</code>; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if the current set is a subset of <paramref name="other" />; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="M:System.Collections.Frozen.FrozenSet`1.IsSupersetOf(System.Collections.Generic.IEnumerable{`0})">
       <summary>Determines whether the current set is a superset of a specified collection.</summary>
       <param name="other">The collection to compare to the current set.</param>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if the current set is a superset of <code data-dev-comment-type="paramref">other</code>; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if the current set is a superset of <paramref name="other" />; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="M:System.Collections.Frozen.FrozenSet`1.Overlaps(System.Collections.Generic.IEnumerable{`0})">
       <summary>Determines whether the current set overlaps with the specified collection.</summary>
       <param name="other">The collection to compare to the current set.</param>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if the current set and <code data-dev-comment-type="paramref">other</code> share at least one common element; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if the current set and <paramref name="other" /> share at least one common element; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="M:System.Collections.Frozen.FrozenSet`1.SetEquals(System.Collections.Generic.IEnumerable{`0})">
       <summary>Determines whether the current set and the specified collection contain the same elements.</summary>
       <param name="other">The collection to compare to the current set.</param>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if the current set is equal to <code data-dev-comment-type="paramref">other</code>; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if the current set is equal to <paramref name="other" />; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="M:System.Collections.Frozen.FrozenSet`1.System#Collections#Generic#ICollection{T}#Add(`0)">
       <summary>Adds an item to the <see cref="T:System.Collections.Generic.ICollection`1" />.</summary>
@@ -367,13 +378,13 @@
       <param name="other">The collection to compare to the current set.</param>
     </member>
     <member name="M:System.Collections.Frozen.FrozenSet`1.System#Collections#ICollection#CopyTo(System.Array,System.Int32)">
-      <summary>Copies the elements of the <xref data-throw-if-not-resolved="true" uid="System.Collections.ICollection"></xref> to an <xref data-throw-if-not-resolved="true" uid="System.Array"></xref>, starting at a particular <xref data-throw-if-not-resolved="true" uid="System.Array"></xref> index.</summary>
-      <param name="array">The one-dimensional <xref data-throw-if-not-resolved="true" uid="System.Array"></xref> that is the destination of the elements copied from <xref data-throw-if-not-resolved="true" uid="System.Collections.ICollection"></xref>. The <xref data-throw-if-not-resolved="true" uid="System.Array"></xref> must have zero-based indexing.</param>
-      <param name="index">The zero-based index in <code data-dev-comment-type="paramref">array</code> at which copying begins.</param>
+      <summary>Copies the elements of the <see cref="T:System.Collections.ICollection" /> to an <see cref="T:System.Array" />, starting at a particular <see cref="T:System.Array" /> index.</summary>
+      <param name="array">The one-dimensional <see cref="T:System.Array" /> that is the destination of the elements copied from <see cref="T:System.Collections.ICollection" />. The <see cref="T:System.Array" /> must have zero-based indexing.</param>
+      <param name="index">The zero-based index in <paramref name="array" /> at which copying begins.</param>
     </member>
     <member name="M:System.Collections.Frozen.FrozenSet`1.System#Collections#IEnumerable#GetEnumerator">
       <summary>Returns an enumerator that iterates through a collection.</summary>
-      <returns>An <xref data-throw-if-not-resolved="true" uid="System.Collections.IEnumerator"></xref> object that can be used to iterate through the collection.</returns>
+      <returns>An <see cref="T:System.Collections.IEnumerator" /> object that can be used to iterate through the collection.</returns>
     </member>
     <member name="M:System.Collections.Frozen.FrozenSet`1.TryGetValue(`0,`0@)">
       <summary>Searches the set for a given value and returns the equal value it finds, if any.</summary>
@@ -399,13 +410,13 @@
         <see langword="true" /> if the <see cref="T:System.Collections.Generic.ICollection`1" /> is read-only; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="P:System.Collections.Frozen.FrozenSet`1.System#Collections#ICollection#IsSynchronized">
-      <summary>Gets a value indicating whether access to the <xref data-throw-if-not-resolved="true" uid="System.Collections.ICollection"></xref> is synchronized (thread safe).</summary>
+      <summary>Gets a value indicating whether access to the <see cref="T:System.Collections.ICollection" /> is synchronized (thread safe).</summary>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if access to the <xref data-throw-if-not-resolved="true" uid="System.Collections.ICollection"></xref> is synchronized (thread safe); otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if access to the <see cref="T:System.Collections.ICollection" /> is synchronized (thread safe); otherwise, <see langword="false" />.</returns>
     </member>
     <member name="P:System.Collections.Frozen.FrozenSet`1.System#Collections#ICollection#SyncRoot">
-      <summary>Gets an object that can be used to synchronize access to the <xref data-throw-if-not-resolved="true" uid="System.Collections.ICollection"></xref>.</summary>
-      <returns>An object that can be used to synchronize access to the <xref data-throw-if-not-resolved="true" uid="System.Collections.ICollection"></xref>.</returns>
+      <summary>Gets an object that can be used to synchronize access to the <see cref="T:System.Collections.ICollection" />.</summary>
+      <returns>An object that can be used to synchronize access to the <see cref="T:System.Collections.ICollection" />.</returns>
     </member>
     <member name="T:System.Collections.Frozen.FrozenSet`1.Enumerator">
       <summary>Enumerates the values of a <see cref="T:System.Collections.Frozen.FrozenSet`1" />.</summary>
@@ -414,7 +425,7 @@
     <member name="M:System.Collections.Frozen.FrozenSet`1.Enumerator.MoveNext">
       <summary>Advances the enumerator to the next element of the collection.</summary>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if the enumerator was successfully advanced to the next element; <code data-dev-comment-type="langword">false</code> if the enumerator has passed the end of the collection.</returns>
+        <see langword="true" /> if the enumerator was successfully advanced to the next element; <see langword="false" /> if the enumerator has passed the end of the collection.</returns>
     </member>
     <member name="M:System.Collections.Frozen.FrozenSet`1.Enumerator.System#Collections#IEnumerator#Reset">
       <summary>Sets the enumerator to its initial position, which is before the first element in the collection.</summary>

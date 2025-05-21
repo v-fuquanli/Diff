@@ -200,6 +200,46 @@ An I/O error occurred while opening a file to be archived.</exception>
   
  The zip archive does not support writing.</exception>
     </member>
+    <member name="M:System.IO.Compression.ZipFile.CreateFromDirectoryAsync(System.String,System.IO.Stream,System.IO.Compression.CompressionLevel,System.Boolean,System.Text.Encoding,System.Threading.CancellationToken)">
+      <param name="sourceDirectoryName" />
+      <param name="destination" />
+      <param name="compressionLevel" />
+      <param name="includeBaseDirectory" />
+      <param name="entryNameEncoding" />
+      <param name="cancellationToken" />
+    </member>
+    <member name="M:System.IO.Compression.ZipFile.CreateFromDirectoryAsync(System.String,System.IO.Stream,System.IO.Compression.CompressionLevel,System.Boolean,System.Threading.CancellationToken)">
+      <param name="sourceDirectoryName" />
+      <param name="destination" />
+      <param name="compressionLevel" />
+      <param name="includeBaseDirectory" />
+      <param name="cancellationToken" />
+    </member>
+    <member name="M:System.IO.Compression.ZipFile.CreateFromDirectoryAsync(System.String,System.IO.Stream,System.Threading.CancellationToken)">
+      <param name="sourceDirectoryName" />
+      <param name="destination" />
+      <param name="cancellationToken" />
+    </member>
+    <member name="M:System.IO.Compression.ZipFile.CreateFromDirectoryAsync(System.String,System.String,System.IO.Compression.CompressionLevel,System.Boolean,System.Text.Encoding,System.Threading.CancellationToken)">
+      <param name="sourceDirectoryName" />
+      <param name="destinationArchiveFileName" />
+      <param name="compressionLevel" />
+      <param name="includeBaseDirectory" />
+      <param name="entryNameEncoding" />
+      <param name="cancellationToken" />
+    </member>
+    <member name="M:System.IO.Compression.ZipFile.CreateFromDirectoryAsync(System.String,System.String,System.IO.Compression.CompressionLevel,System.Boolean,System.Threading.CancellationToken)">
+      <param name="sourceDirectoryName" />
+      <param name="destinationArchiveFileName" />
+      <param name="compressionLevel" />
+      <param name="includeBaseDirectory" />
+      <param name="cancellationToken" />
+    </member>
+    <member name="M:System.IO.Compression.ZipFile.CreateFromDirectoryAsync(System.String,System.String,System.Threading.CancellationToken)">
+      <param name="sourceDirectoryName" />
+      <param name="destinationArchiveFileName" />
+      <param name="cancellationToken" />
+    </member>
     <member name="M:System.IO.Compression.ZipFile.ExtractToDirectory(System.IO.Stream,System.String,System.Boolean)">
       <summary>Extracts all the files from the zip archive stored in the specified stream and places them in the specified destination directory on the file system, and optionally allows choosing if the files in the destination directory should be overwritten.</summary>
       <param name="source">The stream from which the zip archive is to be extracted.</param>
@@ -512,6 +552,54 @@ An archive entry has been compressed using a compression method that is not supp
   
  An archive entry was compressed by using a compression method that is not supported.</exception>
     </member>
+    <member name="M:System.IO.Compression.ZipFile.ExtractToDirectoryAsync(System.IO.Stream,System.String,System.Boolean,System.Threading.CancellationToken)">
+      <param name="source" />
+      <param name="destinationDirectoryName" />
+      <param name="overwriteFiles" />
+      <param name="cancellationToken" />
+    </member>
+    <member name="M:System.IO.Compression.ZipFile.ExtractToDirectoryAsync(System.IO.Stream,System.String,System.Text.Encoding,System.Boolean,System.Threading.CancellationToken)">
+      <param name="source" />
+      <param name="destinationDirectoryName" />
+      <param name="entryNameEncoding" />
+      <param name="overwriteFiles" />
+      <param name="cancellationToken" />
+    </member>
+    <member name="M:System.IO.Compression.ZipFile.ExtractToDirectoryAsync(System.IO.Stream,System.String,System.Text.Encoding,System.Threading.CancellationToken)">
+      <param name="source" />
+      <param name="destinationDirectoryName" />
+      <param name="entryNameEncoding" />
+      <param name="cancellationToken" />
+    </member>
+    <member name="M:System.IO.Compression.ZipFile.ExtractToDirectoryAsync(System.IO.Stream,System.String,System.Threading.CancellationToken)">
+      <param name="source" />
+      <param name="destinationDirectoryName" />
+      <param name="cancellationToken" />
+    </member>
+    <member name="M:System.IO.Compression.ZipFile.ExtractToDirectoryAsync(System.String,System.String,System.Boolean,System.Threading.CancellationToken)">
+      <param name="sourceArchiveFileName" />
+      <param name="destinationDirectoryName" />
+      <param name="overwriteFiles" />
+      <param name="cancellationToken" />
+    </member>
+    <member name="M:System.IO.Compression.ZipFile.ExtractToDirectoryAsync(System.String,System.String,System.Text.Encoding,System.Boolean,System.Threading.CancellationToken)">
+      <param name="sourceArchiveFileName" />
+      <param name="destinationDirectoryName" />
+      <param name="entryNameEncoding" />
+      <param name="overwriteFiles" />
+      <param name="cancellationToken" />
+    </member>
+    <member name="M:System.IO.Compression.ZipFile.ExtractToDirectoryAsync(System.String,System.String,System.Text.Encoding,System.Threading.CancellationToken)">
+      <param name="sourceArchiveFileName" />
+      <param name="destinationDirectoryName" />
+      <param name="entryNameEncoding" />
+      <param name="cancellationToken" />
+    </member>
+    <member name="M:System.IO.Compression.ZipFile.ExtractToDirectoryAsync(System.String,System.String,System.Threading.CancellationToken)">
+      <param name="sourceArchiveFileName" />
+      <param name="destinationDirectoryName" />
+      <param name="cancellationToken" />
+    </member>
     <member name="M:System.IO.Compression.ZipFile.Open(System.String,System.IO.Compression.ZipArchiveMode,System.Text.Encoding)">
       <summary>Opens a zip archive at the specified path, in the specified mode, and by using the specified character encoding for entry names and comments.</summary>
       <param name="archiveFileName">The path to the archive to open, specified as a relative or absolute path. A relative path is interpreted as relative to the current working directory.</param>
@@ -607,6 +695,17 @@ An unspecified I/O error occurred while opening the file.</exception>
  <paramref name="mode" /> is <see cref="F:System.IO.Compression.ZipArchiveMode.Update" />, but an entry is too large to fit into memory.</exception>
       <returns>The opened zip archive.</returns>
     </member>
+    <member name="M:System.IO.Compression.ZipFile.OpenAsync(System.String,System.IO.Compression.ZipArchiveMode,System.Text.Encoding,System.Threading.CancellationToken)">
+      <param name="archiveFileName" />
+      <param name="mode" />
+      <param name="entryNameEncoding" />
+      <param name="cancellationToken" />
+    </member>
+    <member name="M:System.IO.Compression.ZipFile.OpenAsync(System.String,System.IO.Compression.ZipArchiveMode,System.Threading.CancellationToken)">
+      <param name="archiveFileName" />
+      <param name="mode" />
+      <param name="cancellationToken" />
+    </member>
     <member name="M:System.IO.Compression.ZipFile.OpenRead(System.String)">
       <summary>Opens a zip archive for reading at the specified path.</summary>
       <param name="archiveFileName">The path to the archive to open, specified as a relative or absolute path. A relative path is interpreted as relative to the current working directory.</param>
@@ -635,6 +734,10 @@ An unspecified I/O error occurred while opening the file.</exception>
       <exception cref="T:System.IO.InvalidDataException">
         <paramref name="archiveFileName" /> could not be interpreted as a zip archive.</exception>
       <returns>The opened zip archive.</returns>
+    </member>
+    <member name="M:System.IO.Compression.ZipFile.OpenReadAsync(System.String,System.Threading.CancellationToken)">
+      <param name="archiveFileName" />
+      <param name="cancellationToken" />
     </member>
     <member name="T:System.IO.Compression.ZipFileExtensions">
       <summary>Provides extension methods for the <see cref="T:System.IO.Compression.ZipArchive" /> and <see cref="T:System.IO.Compression.ZipArchiveEntry" /> classes.</summary>
@@ -704,6 +807,19 @@ An unspecified I/O error occurred while opening the file.</exception>
       <exception cref="T:System.ObjectDisposedException">The zip archive has been disposed.</exception>
       <returns>A wrapper for the new entry in the zip archive.</returns>
     </member>
+    <member name="M:System.IO.Compression.ZipFileExtensions.CreateEntryFromFileAsync(System.IO.Compression.ZipArchive,System.String,System.String,System.IO.Compression.CompressionLevel,System.Threading.CancellationToken)">
+      <param name="destination" />
+      <param name="sourceFileName" />
+      <param name="entryName" />
+      <param name="compressionLevel" />
+      <param name="cancellationToken" />
+    </member>
+    <member name="M:System.IO.Compression.ZipFileExtensions.CreateEntryFromFileAsync(System.IO.Compression.ZipArchive,System.String,System.String,System.Threading.CancellationToken)">
+      <param name="destination" />
+      <param name="sourceFileName" />
+      <param name="entryName" />
+      <param name="cancellationToken" />
+    </member>
     <member name="M:System.IO.Compression.ZipFileExtensions.ExtractToDirectory(System.IO.Compression.ZipArchive,System.String,System.Boolean)">
       <summary>Extracts all of the files in the archive to a directory on the file system.</summary>
       <param name="source">The <see cref="T:System.IO.Compression.ZipArchive" /> to extract.</param>
@@ -762,6 +878,17 @@ A <see cref="T:System.IO.Compression.ZipArchiveEntry" /> has been compressed usi
  -or-
 
  An archive entry was compressed by using a compression method that is not supported.</exception>
+    </member>
+    <member name="M:System.IO.Compression.ZipFileExtensions.ExtractToDirectoryAsync(System.IO.Compression.ZipArchive,System.String,System.Boolean,System.Threading.CancellationToken)">
+      <param name="source" />
+      <param name="destinationDirectoryName" />
+      <param name="overwriteFiles" />
+      <param name="cancellationToken" />
+    </member>
+    <member name="M:System.IO.Compression.ZipFileExtensions.ExtractToDirectoryAsync(System.IO.Compression.ZipArchive,System.String,System.Threading.CancellationToken)">
+      <param name="source" />
+      <param name="destinationDirectoryName" />
+      <param name="cancellationToken" />
     </member>
     <member name="M:System.IO.Compression.ZipFileExtensions.ExtractToFile(System.IO.Compression.ZipArchiveEntry,System.String,System.Boolean)">
       <summary>Extracts an entry in the zip archive to a file, and optionally overwrites an existing file that has the same name.</summary>
@@ -848,6 +975,17 @@ A <see cref="T:System.IO.Compression.ZipArchiveEntry" /> has been compressed usi
  -or-
 
  The zip archive for this entry was opened in <see cref="F:System.IO.Compression.ZipArchiveMode.Create" /> mode, which does not permit the retrieval of entries.</exception>
+    </member>
+    <member name="M:System.IO.Compression.ZipFileExtensions.ExtractToFileAsync(System.IO.Compression.ZipArchiveEntry,System.String,System.Boolean,System.Threading.CancellationToken)">
+      <param name="source" />
+      <param name="destinationFileName" />
+      <param name="overwrite" />
+      <param name="cancellationToken" />
+    </member>
+    <member name="M:System.IO.Compression.ZipFileExtensions.ExtractToFileAsync(System.IO.Compression.ZipArchiveEntry,System.String,System.Threading.CancellationToken)">
+      <param name="source" />
+      <param name="destinationFileName" />
+      <param name="cancellationToken" />
     </member>
   </members>
 </doc>

@@ -41,8 +41,8 @@
       <returns>The initialized <see cref="T:Microsoft.Extensions.Hosting.HostApplicationBuilder" />.</returns>
     </member>
     <member name="M:Microsoft.Extensions.Hosting.Host.CreateApplicationBuilder(Microsoft.Extensions.Hosting.HostApplicationBuilderSettings)">
-      <summary>Initializes a new instance of the <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.Hosting.HostApplicationBuilder"></xref> class with preconfigured defaults.</summary>
-      <param name="settings">Controls the initial configuration and other settings for constructing the <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.Hosting.HostApplicationBuilder"></xref>.</param>
+      <summary>Initializes a new instance of the <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.Hosting.HostApplicationBuilder" /> class with preconfigured defaults.</summary>
+      <param name="settings">Controls the initial configuration and other settings for constructing the <see cref="T:Microsoft.Extensions.Hosting.HostApplicationBuilder" />.</param>
       <returns>A new <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.Hosting.HostApplicationBuilder"></xref> instance.</returns>
     </member>
     <member name="M:Microsoft.Extensions.Hosting.Host.CreateApplicationBuilder(System.String[])">
@@ -92,7 +92,7 @@
       <returns>An initialized <see cref="T:Microsoft.Extensions.Hosting.IHost" />.</returns>
     </member>
     <member name="M:Microsoft.Extensions.Hosting.HostApplicationBuilder.ConfigureContainer``1(Microsoft.Extensions.DependencyInjection.IServiceProviderFactory{``0},System.Action{``0})">
-      <summary>Registers a <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.DependencyInjection.IServiceProviderFactory`1"></xref> instance to be used to create the <xref data-throw-if-not-resolved="true" uid="System.IServiceProvider"></xref>.</summary>
+      <summary>Registers a <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.DependencyInjection.IServiceProviderFactory`1" /> instance to be used to create the <xref data-throw-if-not-resolved="true" uid="System.IServiceProvider" />.</summary>
       <param name="factory">The <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.DependencyInjection.IServiceProviderFactory`1"></xref>.</param>
       <param name="configure">A delegate used to configure the . This delegate can be used to configure services using APIs that are specific to the <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.DependencyInjection.IServiceProviderFactory`1"></xref> implementation.</param>
       <typeparam name="TContainerBuilder">The type of builder provided by the <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.DependencyInjection.IServiceProviderFactory`1"></xref>.</typeparam>

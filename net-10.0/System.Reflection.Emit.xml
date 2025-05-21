@@ -496,30 +496,30 @@
       <returns>The defined field.</returns>
     </member>
     <member name="M:System.Reflection.Emit.EnumBuilder.GetAttributeFlagsImpl">
-      <summary>When overridden in a derived class, implements the <xref data-throw-if-not-resolved="true" uid="System.Type.Attributes"></xref> property and gets a bitwise combination of enumeration values that indicate the attributes associated with the <xref data-throw-if-not-resolved="true" uid="System.Type"></xref>.</summary>
-      <returns>A <xref data-throw-if-not-resolved="true" uid="System.Reflection.TypeAttributes"></xref> object representing the attribute set of the <xref data-throw-if-not-resolved="true" uid="System.Type"></xref>.</returns>
+      <summary>When overridden in a derived class, implements the <see cref="T:System.Type.Attributes" /> property and gets a bitwise combination of enumeration values that indicate the attributes associated with the <see cref="T:System.Type" />.</summary>
+      <returns>A <see cref="T:System.Reflection.TypeAttributes" /> object representing the attribute set of the <see cref="T:System.Type" />.</returns>
     </member>
     <member name="M:System.Reflection.Emit.EnumBuilder.GetConstructorImpl(System.Reflection.BindingFlags,System.Reflection.Binder,System.Reflection.CallingConventions,System.Type[],System.Reflection.ParameterModifier[])">
       <summary>When overridden in a derived class, searches for a constructor whose parameters match the specified argument types and modifiers, using the specified binding constraints and the specified calling convention.</summary>
       <param name="bindingAttr">
-        <p>A bitwise combination of the enumeration values that specify how the search is conducted.</p>
-        <p>-or-</p>
-        <p>
-          <xref data-throw-if-not-resolved="true" uid="System.Reflection.BindingFlags.Default"></xref> to return <code data-dev-comment-type="langword">null</code>.</p>
+        <para>A bitwise combination of the enumeration values that specify how the search is conducted.</para>
+        <para>-or-</para>
+        <para>
+          <see cref="T:System.Reflection.BindingFlags.Default" /> to return <see langword="null" />.</para>
       </param>
       <param name="binder">
-        <p>An object that defines a set of properties and enables binding, which can involve selection of an overloaded method, coercion of argument types, and invocation of a member through reflection.</p>
-        <p>-or-</p>
-        <p>A <code data-dev-comment-type="langword">null</code> reference (<code data-dev-comment-type="langword">Nothing</code> in Visual Basic), to use the <xref data-throw-if-not-resolved="true" uid="System.Type.DefaultBinder"></xref>.</p>
+        <para>An object that defines a set of properties and enables binding, which can involve selection of an overloaded method, coercion of argument types, and invocation of a member through reflection.</para>
+        <para>-or-</para>
+        <para>A <see langword="null" /> reference (<see langword="Nothing" /> in Visual Basic), to use the <see cref="T:System.Type.DefaultBinder" />.</para>
       </param>
       <param name="callConvention">The object that specifies the set of rules to use regarding the order and layout of arguments, how the return value is passed, what registers are used for arguments, and the stack is cleaned up.</param>
       <param name="types">
-        <p>An array of <xref data-throw-if-not-resolved="true" uid="System.Type"></xref> objects representing the number, order, and type of the parameters for the constructor to get.</p>
-        <p>-or-</p>
-        <p>An empty array of the type <xref data-throw-if-not-resolved="true" uid="System.Type"></xref> (that is, Type[] types = new Type[0]) to get a constructor that takes no parameters.</p>
+        <para>An array of <see cref="T:System.Type" /> objects representing the number, order, and type of the parameters for the constructor to get.</para>
+        <para>-or-</para>
+        <para>An empty array of the type <see cref="T:System.Type" /> (that is, Type[] types = new Type[0]) to get a constructor that takes no parameters.</para>
       </param>
-      <param name="modifiers">An array of <xref data-throw-if-not-resolved="true" uid="System.Reflection.ParameterModifier"></xref> objects representing the attributes associated with the corresponding element in the <code data-dev-comment-type="paramref">types</code> array. The default binder does not process this parameter.</param>
-      <returns>A <xref data-throw-if-not-resolved="true" uid="System.Reflection.ConstructorInfo"></xref> object representing the constructor that matches the specified requirements, if found; otherwise, <code data-dev-comment-type="langword">null</code>.</returns>
+      <param name="modifiers">An array of <see cref="T:System.Reflection.ParameterModifier" /> objects representing the attributes associated with the corresponding element in the <paramref name="types" /> array. The default binder does not process this parameter.</param>
+      <returns>A <see cref="T:System.Reflection.ConstructorInfo" /> object representing the constructor that matches the specified requirements, if found; otherwise, <see langword="null" />.</returns>
     </member>
     <member name="M:System.Reflection.Emit.EnumBuilder.GetConstructors(System.Reflection.BindingFlags)">
       <summary>Returns an array of <see cref="T:System.Reflection.ConstructorInfo" /> objects representing the public and non-public constructors defined for this class, as specified.</summary>
@@ -615,27 +615,27 @@
       <summary>When overridden in a derived class, searches for the specified method whose parameters match the specified argument types and modifiers, using the specified binding constraints and the specified calling convention.</summary>
       <param name="name">The string containing the name of the method to get.</param>
       <param name="bindingAttr">
-        <p>A bitwise combination of the enumeration values that specify how the search is conducted.</p>
-        <p>-or-</p>
-        <p>
-          <xref data-throw-if-not-resolved="true" uid="System.Reflection.BindingFlags.Default"></xref> to return <code data-dev-comment-type="langword">null</code>.</p>
+        <para>A bitwise combination of the enumeration values that specify how the search is conducted.</para>
+        <para>-or-</para>
+        <para>
+          <see cref="T:System.Reflection.BindingFlags.Default" /> to return <see langword="null" />.</para>
       </param>
       <param name="binder">
-        <p>An object that defines a set of properties and enables binding, which can involve selection of an overloaded method, coercion of argument types, and invocation of a member through reflection.</p>
-        <p>-or-</p>
-        <p>A <code data-dev-comment-type="langword">null</code> reference (<code data-dev-comment-type="langword">Nothing</code> in Visual Basic), to use the <xref data-throw-if-not-resolved="true" uid="System.Type.DefaultBinder"></xref>.</p>
+        <para>An object that defines a set of properties and enables binding, which can involve selection of an overloaded method, coercion of argument types, and invocation of a member through reflection.</para>
+        <para>-or-</para>
+        <para>A <see langword="null" /> reference (<see langword="Nothing" /> in Visual Basic), to use the <see cref="T:System.Type.DefaultBinder" />.</para>
       </param>
       <param name="callConvention">The object that specifies the set of rules to use regarding the order and layout of arguments, how the return value is passed, what registers are used for arguments, and what process cleans up the stack.</param>
       <param name="types">
-        <p>An array of <xref data-throw-if-not-resolved="true" uid="System.Type"></xref> objects representing the number, order, and type of the parameters for the method to get.</p>
-        <p>-or-</p>
-        <p>An empty array of the type <xref data-throw-if-not-resolved="true" uid="System.Type"></xref> (that is, Type[] types = new Type[0]) to get a method that takes no parameters.</p>
-        <p>-or-</p>
-        <p>
-          <code data-dev-comment-type="langword">null</code>. If <code data-dev-comment-type="paramref">types</code> is <code data-dev-comment-type="langword">null</code>, arguments are not matched.</p>
+        <para>An array of <see cref="T:System.Type" /> objects representing the number, order, and type of the parameters for the method to get.</para>
+        <para>-or-</para>
+        <para>An empty array of the type <see cref="T:System.Type" /> (that is, Type[] types = new Type[0]) to get a method that takes no parameters.</para>
+        <para>-or-</para>
+        <para>
+          <see langword="null" />. If <paramref name="types" /> is <see langword="null" />, arguments are not matched.</para>
       </param>
-      <param name="modifiers">An array of <xref data-throw-if-not-resolved="true" uid="System.Reflection.ParameterModifier"></xref> objects representing the attributes associated with the corresponding element in the <code data-dev-comment-type="paramref">types</code> array. The default binder does not process this parameter.</param>
-      <returns>An object representing the method that matches the specified requirements, if found; otherwise, <code data-dev-comment-type="langword">null</code>.</returns>
+      <param name="modifiers">An array of <see cref="T:System.Reflection.ParameterModifier" /> objects representing the attributes associated with the corresponding element in the <paramref name="types" /> array. The default binder does not process this parameter.</param>
+      <returns>An object representing the method that matches the specified requirements, if found; otherwise, <see langword="null" />.</returns>
     </member>
     <member name="M:System.Reflection.Emit.EnumBuilder.GetMethods(System.Reflection.BindingFlags)">
       <summary>Returns all the public and non-public methods declared or inherited by this type, as specified.</summary>
@@ -680,9 +680,9 @@
       <returns>This method is not supported. No value is returned.</returns>
     </member>
     <member name="M:System.Reflection.Emit.EnumBuilder.HasElementTypeImpl">
-      <summary>When overridden in a derived class, implements the <xref data-throw-if-not-resolved="true" uid="System.Type.HasElementType"></xref> property and determines whether the current <xref data-throw-if-not-resolved="true" uid="System.Type"></xref> encompasses or refers to another type; that is, whether the current <xref data-throw-if-not-resolved="true" uid="System.Type"></xref> is an array, a pointer, or is passed by reference.</summary>
+      <summary>When overridden in a derived class, implements the <see cref="T:System.Type.HasElementType" /> property and determines whether the current <see cref="T:System.Type" /> encompasses or refers to another type; that is, whether the current <see cref="T:System.Type" /> is an array, a pointer, or is passed by reference.</summary>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if the <xref data-throw-if-not-resolved="true" uid="System.Type"></xref> is an array, a pointer, or is passed by reference; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if the <see cref="T:System.Type" /> is an array, a pointer, or is passed by reference; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="M:System.Reflection.Emit.EnumBuilder.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])">
       <summary>Invokes the specified member. The method that is to be invoked must be accessible and provide the most specific match with the specified argument list, under the constraints of the specified binder and invocation attributes.</summary>
@@ -698,9 +698,9 @@
       <returns>Returns the return value of the invoked member.</returns>
     </member>
     <member name="M:System.Reflection.Emit.EnumBuilder.IsArrayImpl">
-      <summary>When overridden in a derived class, implements the <xref data-throw-if-not-resolved="true" uid="System.Type.IsArray"></xref> property and determines whether the <xref data-throw-if-not-resolved="true" uid="System.Type"></xref> is an array.</summary>
+      <summary>When overridden in a derived class, implements the <see cref="T:System.Type.IsArray" /> property and determines whether the <see cref="T:System.Type" /> is an array.</summary>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if the <xref data-throw-if-not-resolved="true" uid="System.Type"></xref> is an array; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if the <see cref="T:System.Type" /> is an array; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="M:System.Reflection.Emit.EnumBuilder.IsAssignableFrom(System.Reflection.TypeInfo)">
       <summary>Gets a value that indicates whether a specified <see cref="T:System.Reflection.TypeInfo" /> object can be assigned to this object.</summary>
@@ -709,14 +709,14 @@
         <see langword="true" /> if <paramref name="typeInfo" /> can be assigned to this object; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="M:System.Reflection.Emit.EnumBuilder.IsByRefImpl">
-      <summary>When overridden in a derived class, implements the <xref data-throw-if-not-resolved="true" uid="System.Type.IsByRef"></xref> property and determines whether the <xref data-throw-if-not-resolved="true" uid="System.Type"></xref> is passed by reference.</summary>
+      <summary>When overridden in a derived class, implements the <see cref="T:System.Type.IsByRef" /> property and determines whether the <see cref="T:System.Type" /> is passed by reference.</summary>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if the <xref data-throw-if-not-resolved="true" uid="System.Type"></xref> is passed by reference; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if the <see cref="T:System.Type" /> is passed by reference; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="M:System.Reflection.Emit.EnumBuilder.IsCOMObjectImpl">
-      <summary>When overridden in a derived class, implements the <xref data-throw-if-not-resolved="true" uid="System.Type.IsCOMObject"></xref> property and determines whether the <xref data-throw-if-not-resolved="true" uid="System.Type"></xref> is a COM object.</summary>
+      <summary>When overridden in a derived class, implements the <see cref="T:System.Type.IsCOMObject" /> property and determines whether the <see cref="T:System.Type" /> is a COM object.</summary>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if the <xref data-throw-if-not-resolved="true" uid="System.Type"></xref> is a COM object; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if the <see cref="T:System.Type" /> is a COM object; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="M:System.Reflection.Emit.EnumBuilder.IsDefined(System.Type,System.Boolean)">
       <summary>Checks if the specified custom attribute type is defined.</summary>
@@ -727,19 +727,19 @@
         <see langword="true" /> if one or more instance of <paramref name="attributeType" /> is defined on this member; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="M:System.Reflection.Emit.EnumBuilder.IsPointerImpl">
-      <summary>When overridden in a derived class, implements the <xref data-throw-if-not-resolved="true" uid="System.Type.IsPointer"></xref> property and determines whether the <xref data-throw-if-not-resolved="true" uid="System.Type"></xref> is a pointer.</summary>
+      <summary>When overridden in a derived class, implements the <see cref="T:System.Type.IsPointer" /> property and determines whether the <see cref="T:System.Type" /> is a pointer.</summary>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if the <xref data-throw-if-not-resolved="true" uid="System.Type"></xref> is a pointer; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if the <see cref="T:System.Type" /> is a pointer; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="M:System.Reflection.Emit.EnumBuilder.IsPrimitiveImpl">
-      <summary>When overridden in a derived class, implements the <xref data-throw-if-not-resolved="true" uid="System.Type.IsPrimitive"></xref> property and determines whether the <xref data-throw-if-not-resolved="true" uid="System.Type"></xref> is one of the primitive types.</summary>
+      <summary>When overridden in a derived class, implements the <see cref="T:System.Type.IsPrimitive" /> property and determines whether the <see cref="T:System.Type" /> is one of the primitive types.</summary>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if the <xref data-throw-if-not-resolved="true" uid="System.Type"></xref> is one of the primitive types; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if the <see cref="T:System.Type" /> is one of the primitive types; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="M:System.Reflection.Emit.EnumBuilder.IsValueTypeImpl">
-      <summary>Implements the <xref data-throw-if-not-resolved="true" uid="System.Type.IsValueType"></xref> property and determines whether the <xref data-throw-if-not-resolved="true" uid="System.Type"></xref> is a value type; that is, not a class or an interface.</summary>
+      <summary>Implements the <see cref="T:System.Type.IsValueType" /> property and determines whether the <see cref="T:System.Type" /> is a value type; that is, not a class or an interface.</summary>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if the <xref data-throw-if-not-resolved="true" uid="System.Type"></xref> is a value type; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if the <see cref="T:System.Type" /> is a value type; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="M:System.Reflection.Emit.EnumBuilder.MakeArrayType">
       <summary>Returns a <see cref="T:System.Type" /> object representing a one-dimensional array of the current type, with a lower bound of zero.</summary>
@@ -806,7 +806,7 @@
     <member name="P:System.Reflection.Emit.EnumBuilder.IsByRefLike">
       <summary>Gets a value that indicates whether the type is a byref-like structure.</summary>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if the <xref data-throw-if-not-resolved="true" uid="System.Type"></xref> is a byref-like structure; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if the <see cref="T:System.Type" /> is a byref-like structure; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="P:System.Reflection.Emit.EnumBuilder.IsConstructedGenericType">
       <summary>Gets a value that indicates whether this object represents a constructed generic type.</summary>
@@ -816,12 +816,12 @@
     <member name="P:System.Reflection.Emit.EnumBuilder.IsSZArray">
       <summary>Gets a value that indicates whether the type is an array type that can represent only a single-dimensional array with a zero lower bound.</summary>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if the current <xref data-throw-if-not-resolved="true" uid="System.Type"></xref> is an array type that can represent only a single-dimensional array with a zero lower bound; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if the current <see cref="T:System.Type" /> is an array type that can represent only a single-dimensional array with a zero lower bound; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="P:System.Reflection.Emit.EnumBuilder.IsTypeDefinition">
       <summary>Gets a value that indicates whether the type is a type definition.</summary>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if the current <xref data-throw-if-not-resolved="true" uid="System.Type"></xref> is a type definition; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if the current <see cref="T:System.Type" /> is a type definition; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="P:System.Reflection.Emit.EnumBuilder.Module">
       <summary>Retrieves the dynamic module that contains this <see cref="T:System.Reflection.Emit.EnumBuilder" /> definition.</summary>
@@ -1069,8 +1069,8 @@
         <see langword="true" /> if <paramref name="o" /> is an instance of <see langword="EventToken" /> and equals the current instance; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="M:System.Reflection.Emit.GenericTypeParameterBuilder.GetAttributeFlagsImpl">
-      <summary>When overridden in a derived class, implements the <xref data-throw-if-not-resolved="true" uid="System.Type.Attributes"></xref> property and gets a bitwise combination of enumeration values that indicate the attributes associated with the <xref data-throw-if-not-resolved="true" uid="System.Type"></xref>.</summary>
-      <returns>A <xref data-throw-if-not-resolved="true" uid="System.Reflection.TypeAttributes"></xref> object representing the attribute set of the <xref data-throw-if-not-resolved="true" uid="System.Type"></xref>.</returns>
+      <summary>When overridden in a derived class, implements the <see cref="T:System.Type.Attributes" /> property and gets a bitwise combination of enumeration values that indicate the attributes associated with the <see cref="T:System.Type" />.</summary>
+      <returns>A <see cref="T:System.Reflection.TypeAttributes" /> object representing the attribute set of the <see cref="T:System.Type" />.</returns>
     </member>
     <member name="M:System.Reflection.Emit.GenericTypeParameterBuilder.GetConstructorImpl(System.Reflection.BindingFlags,System.Reflection.Binder,System.Reflection.CallingConventions,System.Type[],System.Reflection.ParameterModifier[])">
       <summary>Not supported for incomplete generic type parameters.</summary>
@@ -1232,9 +1232,9 @@
       <returns>Not supported for incomplete generic type parameters.</returns>
     </member>
     <member name="M:System.Reflection.Emit.GenericTypeParameterBuilder.HasElementTypeImpl">
-      <summary>When overridden in a derived class, implements the <xref data-throw-if-not-resolved="true" uid="System.Type.HasElementType"></xref> property and determines whether the current <xref data-throw-if-not-resolved="true" uid="System.Type"></xref> encompasses or refers to another type; that is, whether the current <xref data-throw-if-not-resolved="true" uid="System.Type"></xref> is an array, a pointer, or is passed by reference.</summary>
+      <summary>When overridden in a derived class, implements the <see cref="T:System.Type.HasElementType" /> property and determines whether the current <see cref="T:System.Type" /> encompasses or refers to another type; that is, whether the current <see cref="T:System.Type" /> is an array, a pointer, or is passed by reference.</summary>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if the <xref data-throw-if-not-resolved="true" uid="System.Type"></xref> is an array, a pointer, or is passed by reference; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if the <see cref="T:System.Type" /> is an array, a pointer, or is passed by reference; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="M:System.Reflection.Emit.GenericTypeParameterBuilder.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])">
       <summary>Not supported for incomplete generic type parameters.</summary>
@@ -1250,9 +1250,9 @@
       <returns>Not supported for incomplete generic type parameters.</returns>
     </member>
     <member name="M:System.Reflection.Emit.GenericTypeParameterBuilder.IsArrayImpl">
-      <summary>When overridden in a derived class, implements the <xref data-throw-if-not-resolved="true" uid="System.Type.IsArray"></xref> property and determines whether the <xref data-throw-if-not-resolved="true" uid="System.Type"></xref> is an array.</summary>
+      <summary>When overridden in a derived class, implements the <see cref="T:System.Type.IsArray" /> property and determines whether the <see cref="T:System.Type" /> is an array.</summary>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if the <xref data-throw-if-not-resolved="true" uid="System.Type"></xref> is an array; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if the <see cref="T:System.Type" /> is an array; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="M:System.Reflection.Emit.GenericTypeParameterBuilder.IsAssignableFrom(System.Reflection.TypeInfo)">
       <summary>Throws a <see cref="T:System.NotSupportedException" /> exception in all cases.</summary>
@@ -1267,14 +1267,14 @@
       <returns>Throws a <see cref="T:System.NotSupportedException" /> exception in all cases.</returns>
     </member>
     <member name="M:System.Reflection.Emit.GenericTypeParameterBuilder.IsByRefImpl">
-      <summary>When overridden in a derived class, implements the <xref data-throw-if-not-resolved="true" uid="System.Type.IsByRef"></xref> property and determines whether the <xref data-throw-if-not-resolved="true" uid="System.Type"></xref> is passed by reference.</summary>
+      <summary>When overridden in a derived class, implements the <see cref="T:System.Type.IsByRef" /> property and determines whether the <see cref="T:System.Type" /> is passed by reference.</summary>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if the <xref data-throw-if-not-resolved="true" uid="System.Type"></xref> is passed by reference; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if the <see cref="T:System.Type" /> is passed by reference; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="M:System.Reflection.Emit.GenericTypeParameterBuilder.IsCOMObjectImpl">
-      <summary>When overridden in a derived class, implements the <xref data-throw-if-not-resolved="true" uid="System.Type.IsCOMObject"></xref> property and determines whether the <xref data-throw-if-not-resolved="true" uid="System.Type"></xref> is a COM object.</summary>
+      <summary>When overridden in a derived class, implements the <see cref="T:System.Type.IsCOMObject" /> property and determines whether the <see cref="T:System.Type" /> is a COM object.</summary>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if the <xref data-throw-if-not-resolved="true" uid="System.Type"></xref> is a COM object; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if the <see cref="T:System.Type" /> is a COM object; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="M:System.Reflection.Emit.GenericTypeParameterBuilder.IsDefined(System.Type,System.Boolean)">
       <summary>Not supported for incomplete generic type parameters.</summary>
@@ -1284,14 +1284,14 @@
       <returns>Not supported for incomplete generic type parameters.</returns>
     </member>
     <member name="M:System.Reflection.Emit.GenericTypeParameterBuilder.IsPointerImpl">
-      <summary>When overridden in a derived class, implements the <xref data-throw-if-not-resolved="true" uid="System.Type.IsPointer"></xref> property and determines whether the <xref data-throw-if-not-resolved="true" uid="System.Type"></xref> is a pointer.</summary>
+      <summary>When overridden in a derived class, implements the <see cref="T:System.Type.IsPointer" /> property and determines whether the <see cref="T:System.Type" /> is a pointer.</summary>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if the <xref data-throw-if-not-resolved="true" uid="System.Type"></xref> is a pointer; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if the <see cref="T:System.Type" /> is a pointer; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="M:System.Reflection.Emit.GenericTypeParameterBuilder.IsPrimitiveImpl">
-      <summary>When overridden in a derived class, implements the <xref data-throw-if-not-resolved="true" uid="System.Type.IsPrimitive"></xref> property and determines whether the <xref data-throw-if-not-resolved="true" uid="System.Type"></xref> is one of the primitive types.</summary>
+      <summary>When overridden in a derived class, implements the <see cref="T:System.Type.IsPrimitive" /> property and determines whether the <see cref="T:System.Type" /> is one of the primitive types.</summary>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if the <xref data-throw-if-not-resolved="true" uid="System.Type"></xref> is one of the primitive types; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if the <see cref="T:System.Type" /> is one of the primitive types; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="M:System.Reflection.Emit.GenericTypeParameterBuilder.IsSubclassOf(System.Type)">
       <summary>Not supported for incomplete generic type parameters.</summary>
@@ -1300,9 +1300,9 @@
       <returns>Not supported for incomplete generic type parameters.</returns>
     </member>
     <member name="M:System.Reflection.Emit.GenericTypeParameterBuilder.IsValueTypeImpl">
-      <summary>Implements the <xref data-throw-if-not-resolved="true" uid="System.Type.IsValueType"></xref> property and determines whether the <xref data-throw-if-not-resolved="true" uid="System.Type"></xref> is a value type; that is, not a class or an interface.</summary>
+      <summary>Implements the <see cref="T:System.Type.IsValueType" /> property and determines whether the <see cref="T:System.Type" /> is a value type; that is, not a class or an interface.</summary>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if the <xref data-throw-if-not-resolved="true" uid="System.Type"></xref> is a value type; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if the <see cref="T:System.Type" /> is a value type; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="M:System.Reflection.Emit.GenericTypeParameterBuilder.MakeArrayType">
       <summary>Returns the type of a one-dimensional array whose element type is the generic type parameter.</summary>
@@ -1424,7 +1424,7 @@
     <member name="P:System.Reflection.Emit.GenericTypeParameterBuilder.IsByRefLike">
       <summary>Gets a value that indicates whether the type is a byref-like structure.</summary>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if the <xref data-throw-if-not-resolved="true" uid="System.Type"></xref> is a byref-like structure; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if the <see cref="T:System.Type" /> is a byref-like structure; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="P:System.Reflection.Emit.GenericTypeParameterBuilder.IsConstructedGenericType">
       <summary>Gets a value that indicates whether this object represents a constructed generic type.</summary>
@@ -1449,12 +1449,12 @@
     <member name="P:System.Reflection.Emit.GenericTypeParameterBuilder.IsSZArray">
       <summary>Gets a value that indicates whether the type is an array type that can represent only a single-dimensional array with a zero lower bound.</summary>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if the current <xref data-throw-if-not-resolved="true" uid="System.Type"></xref> is an array type that can represent only a single-dimensional array with a zero lower bound; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if the current <see cref="T:System.Type" /> is an array type that can represent only a single-dimensional array with a zero lower bound; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="P:System.Reflection.Emit.GenericTypeParameterBuilder.IsTypeDefinition">
       <summary>Gets a value that indicates whether the type is a type definition.</summary>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if the current <xref data-throw-if-not-resolved="true" uid="System.Type"></xref> is a type definition; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if the current <see cref="T:System.Type" /> is a type definition; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="P:System.Reflection.Emit.GenericTypeParameterBuilder.MetadataToken">
       <summary>Gets a token that identifies the current dynamic module in metadata.</summary>
@@ -3475,8 +3475,8 @@
       <returns>A field to reference the data.</returns>
     </member>
     <member name="M:System.Reflection.Emit.TypeBuilder.GetAttributeFlagsImpl">
-      <summary>When overridden in a derived class, implements the <xref data-throw-if-not-resolved="true" uid="System.Type.Attributes"></xref> property and gets a bitwise combination of enumeration values that indicate the attributes associated with the <xref data-throw-if-not-resolved="true" uid="System.Type"></xref>.</summary>
-      <returns>A <xref data-throw-if-not-resolved="true" uid="System.Reflection.TypeAttributes"></xref> object representing the attribute set of the <xref data-throw-if-not-resolved="true" uid="System.Type"></xref>.</returns>
+      <summary>When overridden in a derived class, implements the <see cref="T:System.Type.Attributes" /> property and gets a bitwise combination of enumeration values that indicate the attributes associated with the <see cref="T:System.Type" />.</summary>
+      <returns>A <see cref="T:System.Reflection.TypeAttributes" /> object representing the attribute set of the <see cref="T:System.Type" />.</returns>
     </member>
     <member name="M:System.Reflection.Emit.TypeBuilder.GetConstructor(System.Type,System.Reflection.ConstructorInfo)">
       <summary>Returns the constructor of the specified constructed generic type that corresponds to the specified constructor of the generic type definition.</summary>
@@ -3501,24 +3501,24 @@
     <member name="M:System.Reflection.Emit.TypeBuilder.GetConstructorImpl(System.Reflection.BindingFlags,System.Reflection.Binder,System.Reflection.CallingConventions,System.Type[],System.Reflection.ParameterModifier[])">
       <summary>When overridden in a derived class, searches for a constructor whose parameters match the specified argument types and modifiers, using the specified binding constraints and the specified calling convention.</summary>
       <param name="bindingAttr">
-        <p>A bitwise combination of the enumeration values that specify how the search is conducted.</p>
-        <p>-or-</p>
-        <p>
-          <xref data-throw-if-not-resolved="true" uid="System.Reflection.BindingFlags.Default"></xref> to return <code data-dev-comment-type="langword">null</code>.</p>
+        <para>A bitwise combination of the enumeration values that specify how the search is conducted.</para>
+        <para>-or-</para>
+        <para>
+          <see cref="T:System.Reflection.BindingFlags.Default" /> to return <see langword="null" />.</para>
       </param>
       <param name="binder">
-        <p>An object that defines a set of properties and enables binding, which can involve selection of an overloaded method, coercion of argument types, and invocation of a member through reflection.</p>
-        <p>-or-</p>
-        <p>A <code data-dev-comment-type="langword">null</code> reference (<code data-dev-comment-type="langword">Nothing</code> in Visual Basic), to use the <xref data-throw-if-not-resolved="true" uid="System.Type.DefaultBinder"></xref>.</p>
+        <para>An object that defines a set of properties and enables binding, which can involve selection of an overloaded method, coercion of argument types, and invocation of a member through reflection.</para>
+        <para>-or-</para>
+        <para>A <see langword="null" /> reference (<see langword="Nothing" /> in Visual Basic), to use the <see cref="T:System.Type.DefaultBinder" />.</para>
       </param>
       <param name="callConvention">The object that specifies the set of rules to use regarding the order and layout of arguments, how the return value is passed, what registers are used for arguments, and the stack is cleaned up.</param>
       <param name="types">
-        <p>An array of <xref data-throw-if-not-resolved="true" uid="System.Type"></xref> objects representing the number, order, and type of the parameters for the constructor to get.</p>
-        <p>-or-</p>
-        <p>An empty array of the type <xref data-throw-if-not-resolved="true" uid="System.Type"></xref> (that is, Type[] types = new Type[0]) to get a constructor that takes no parameters.</p>
+        <para>An array of <see cref="T:System.Type" /> objects representing the number, order, and type of the parameters for the constructor to get.</para>
+        <para>-or-</para>
+        <para>An empty array of the type <see cref="T:System.Type" /> (that is, Type[] types = new Type[0]) to get a constructor that takes no parameters.</para>
       </param>
-      <param name="modifiers">An array of <xref data-throw-if-not-resolved="true" uid="System.Reflection.ParameterModifier"></xref> objects representing the attributes associated with the corresponding element in the <code data-dev-comment-type="paramref">types</code> array. The default binder does not process this parameter.</param>
-      <returns>A <xref data-throw-if-not-resolved="true" uid="System.Reflection.ConstructorInfo"></xref> object representing the constructor that matches the specified requirements, if found; otherwise, <code data-dev-comment-type="langword">null</code>.</returns>
+      <param name="modifiers">An array of <see cref="T:System.Reflection.ParameterModifier" /> objects representing the attributes associated with the corresponding element in the <paramref name="types" /> array. The default binder does not process this parameter.</param>
+      <returns>A <see cref="T:System.Reflection.ConstructorInfo" /> object representing the constructor that matches the specified requirements, if found; otherwise, <see langword="null" />.</returns>
     </member>
     <member name="M:System.Reflection.Emit.TypeBuilder.GetConstructors(System.Reflection.BindingFlags)">
       <summary>Returns an array of <see cref="T:System.Reflection.ConstructorInfo" /> objects representing the public and non-public constructors defined for this class, as specified.</summary>
@@ -3666,27 +3666,27 @@
       <summary>When overridden in a derived class, searches for the specified method whose parameters match the specified argument types and modifiers, using the specified binding constraints and the specified calling convention.</summary>
       <param name="name">The string containing the name of the method to get.</param>
       <param name="bindingAttr">
-        <p>A bitwise combination of the enumeration values that specify how the search is conducted.</p>
-        <p>-or-</p>
-        <p>
-          <xref data-throw-if-not-resolved="true" uid="System.Reflection.BindingFlags.Default"></xref> to return <code data-dev-comment-type="langword">null</code>.</p>
+        <para>A bitwise combination of the enumeration values that specify how the search is conducted.</para>
+        <para>-or-</para>
+        <para>
+          <see cref="T:System.Reflection.BindingFlags.Default" /> to return <see langword="null" />.</para>
       </param>
       <param name="binder">
-        <p>An object that defines a set of properties and enables binding, which can involve selection of an overloaded method, coercion of argument types, and invocation of a member through reflection.</p>
-        <p>-or-</p>
-        <p>A <code data-dev-comment-type="langword">null</code> reference (<code data-dev-comment-type="langword">Nothing</code> in Visual Basic), to use the <xref data-throw-if-not-resolved="true" uid="System.Type.DefaultBinder"></xref>.</p>
+        <para>An object that defines a set of properties and enables binding, which can involve selection of an overloaded method, coercion of argument types, and invocation of a member through reflection.</para>
+        <para>-or-</para>
+        <para>A <see langword="null" /> reference (<see langword="Nothing" /> in Visual Basic), to use the <see cref="T:System.Type.DefaultBinder" />.</para>
       </param>
       <param name="callConvention">The object that specifies the set of rules to use regarding the order and layout of arguments, how the return value is passed, what registers are used for arguments, and what process cleans up the stack.</param>
       <param name="types">
-        <p>An array of <xref data-throw-if-not-resolved="true" uid="System.Type"></xref> objects representing the number, order, and type of the parameters for the method to get.</p>
-        <p>-or-</p>
-        <p>An empty array of the type <xref data-throw-if-not-resolved="true" uid="System.Type"></xref> (that is, Type[] types = new Type[0]) to get a method that takes no parameters.</p>
-        <p>-or-</p>
-        <p>
-          <code data-dev-comment-type="langword">null</code>. If <code data-dev-comment-type="paramref">types</code> is <code data-dev-comment-type="langword">null</code>, arguments are not matched.</p>
+        <para>An array of <see cref="T:System.Type" /> objects representing the number, order, and type of the parameters for the method to get.</para>
+        <para>-or-</para>
+        <para>An empty array of the type <see cref="T:System.Type" /> (that is, Type[] types = new Type[0]) to get a method that takes no parameters.</para>
+        <para>-or-</para>
+        <para>
+          <see langword="null" />. If <paramref name="types" /> is <see langword="null" />, arguments are not matched.</para>
       </param>
-      <param name="modifiers">An array of <xref data-throw-if-not-resolved="true" uid="System.Reflection.ParameterModifier"></xref> objects representing the attributes associated with the corresponding element in the <code data-dev-comment-type="paramref">types</code> array. The default binder does not process this parameter.</param>
-      <returns>An object representing the method that matches the specified requirements, if found; otherwise, <code data-dev-comment-type="langword">null</code>.</returns>
+      <param name="modifiers">An array of <see cref="T:System.Reflection.ParameterModifier" /> objects representing the attributes associated with the corresponding element in the <paramref name="types" /> array. The default binder does not process this parameter.</param>
+      <returns>An object representing the method that matches the specified requirements, if found; otherwise, <see langword="null" />.</returns>
     </member>
     <member name="M:System.Reflection.Emit.TypeBuilder.GetMethods(System.Reflection.BindingFlags)">
       <summary>Returns all the public and non-public methods declared or inherited by this type, as specified.</summary>
@@ -3723,29 +3723,29 @@
       <summary>When overridden in a derived class, searches for the specified property whose parameters match the specified argument types and modifiers, using the specified binding constraints.</summary>
       <param name="name">The string containing the name of the property to get.</param>
       <param name="bindingAttr">
-        <p>A bitwise combination of the enumeration values that specify how the search is conducted.</p>
-        <p>-or-</p>
-        <p>
-          <xref data-throw-if-not-resolved="true" uid="System.Reflection.BindingFlags.Default"></xref> to return <code data-dev-comment-type="langword">null</code>.</p>
+        <para>A bitwise combination of the enumeration values that specify how the search is conducted.</para>
+        <para>-or-</para>
+        <para>
+          <see cref="T:System.Reflection.BindingFlags.Default" /> to return <see langword="null" />.</para>
       </param>
       <param name="binder">
-        <p>An object that defines a set of properties and enables binding, which can involve selection of an overloaded member, coercion of argument types, and invocation of a member through reflection.</p>
-        <p>-or-</p>
-        <p>A <code data-dev-comment-type="langword">null</code> reference (<code data-dev-comment-type="langword">Nothing</code> in Visual Basic), to use the <xref data-throw-if-not-resolved="true" uid="System.Type.DefaultBinder"></xref>.</p>
+        <para>An object that defines a set of properties and enables binding, which can involve selection of an overloaded member, coercion of argument types, and invocation of a member through reflection.</para>
+        <para>-or-</para>
+        <para>A <see langword="null" /> reference (<see langword="Nothing" /> in Visual Basic), to use the <see cref="T:System.Type.DefaultBinder" />.</para>
       </param>
       <param name="returnType">The return type of the property.</param>
       <param name="types">
-        <p>An array of <xref data-throw-if-not-resolved="true" uid="System.Type"></xref> objects representing the number, order, and type of the parameters for the indexed property to get.</p>
-        <p>-or-</p>
-        <p>An empty array of the type <xref data-throw-if-not-resolved="true" uid="System.Type"></xref> (that is, Type[] types = new Type[0]) to get a property that is not indexed.</p>
+        <para>An array of <see cref="T:System.Type" /> objects representing the number, order, and type of the parameters for the indexed property to get.</para>
+        <para>-or-</para>
+        <para>An empty array of the type <see cref="T:System.Type" /> (that is, Type[] types = new Type[0]) to get a property that is not indexed.</para>
       </param>
-      <param name="modifiers">An array of <xref data-throw-if-not-resolved="true" uid="System.Reflection.ParameterModifier"></xref> objects representing the attributes associated with the corresponding element in the <code data-dev-comment-type="paramref">types</code> array. The default binder does not process this parameter.</param>
-      <returns>An object representing the property that matches the specified requirements, if found; otherwise, <code data-dev-comment-type="langword">null</code>.</returns>
+      <param name="modifiers">An array of <see cref="T:System.Reflection.ParameterModifier" /> objects representing the attributes associated with the corresponding element in the <paramref name="types" /> array. The default binder does not process this parameter.</param>
+      <returns>An object representing the property that matches the specified requirements, if found; otherwise, <see langword="null" />.</returns>
     </member>
     <member name="M:System.Reflection.Emit.TypeBuilder.HasElementTypeImpl">
-      <summary>When overridden in a derived class, implements the <xref data-throw-if-not-resolved="true" uid="System.Type.HasElementType"></xref> property and determines whether the current <xref data-throw-if-not-resolved="true" uid="System.Type"></xref> encompasses or refers to another type; that is, whether the current <xref data-throw-if-not-resolved="true" uid="System.Type"></xref> is an array, a pointer, or is passed by reference.</summary>
+      <summary>When overridden in a derived class, implements the <see cref="T:System.Type.HasElementType" /> property and determines whether the current <see cref="T:System.Type" /> encompasses or refers to another type; that is, whether the current <see cref="T:System.Type" /> is an array, a pointer, or is passed by reference.</summary>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if the <xref data-throw-if-not-resolved="true" uid="System.Type"></xref> is an array, a pointer, or is passed by reference; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if the <see cref="T:System.Type" /> is an array, a pointer, or is passed by reference; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="M:System.Reflection.Emit.TypeBuilder.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])">
       <summary>Invokes the specified member. The method that is to be invoked must be accessible and provide the most specific match with the specified argument list, under the constraints of the specified binder and invocation attributes.</summary>
@@ -3761,9 +3761,9 @@
       <returns>Returns the return value of the invoked member.</returns>
     </member>
     <member name="M:System.Reflection.Emit.TypeBuilder.IsArrayImpl">
-      <summary>When overridden in a derived class, implements the <xref data-throw-if-not-resolved="true" uid="System.Type.IsArray"></xref> property and determines whether the <xref data-throw-if-not-resolved="true" uid="System.Type"></xref> is an array.</summary>
+      <summary>When overridden in a derived class, implements the <see cref="T:System.Type.IsArray" /> property and determines whether the <see cref="T:System.Type" /> is an array.</summary>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if the <xref data-throw-if-not-resolved="true" uid="System.Type"></xref> is an array; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if the <see cref="T:System.Type" /> is an array; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="M:System.Reflection.Emit.TypeBuilder.IsAssignableFrom(System.Reflection.TypeInfo)">
       <summary>Gets a value that indicates whether a specified <see cref="T:System.Reflection.TypeInfo" /> object can be assigned to this object.</summary>
@@ -3778,14 +3778,14 @@
         <see langword="true" /> if the <paramref name="c" /> parameter and the current type represent the same type, or if the current type is in the inheritance hierarchy of <paramref name="c" />, or if the current type is an interface that <paramref name="c" /> supports. <see langword="false" /> if none of these conditions are valid, or if <paramref name="c" /> is <see langword="null" />.</returns>
     </member>
     <member name="M:System.Reflection.Emit.TypeBuilder.IsByRefImpl">
-      <summary>When overridden in a derived class, implements the <xref data-throw-if-not-resolved="true" uid="System.Type.IsByRef"></xref> property and determines whether the <xref data-throw-if-not-resolved="true" uid="System.Type"></xref> is passed by reference.</summary>
+      <summary>When overridden in a derived class, implements the <see cref="T:System.Type.IsByRef" /> property and determines whether the <see cref="T:System.Type" /> is passed by reference.</summary>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if the <xref data-throw-if-not-resolved="true" uid="System.Type"></xref> is passed by reference; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if the <see cref="T:System.Type" /> is passed by reference; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="M:System.Reflection.Emit.TypeBuilder.IsCOMObjectImpl">
-      <summary>When overridden in a derived class, implements the <xref data-throw-if-not-resolved="true" uid="System.Type.IsCOMObject"></xref> property and determines whether the <xref data-throw-if-not-resolved="true" uid="System.Type"></xref> is a COM object.</summary>
+      <summary>When overridden in a derived class, implements the <see cref="T:System.Type.IsCOMObject" /> property and determines whether the <see cref="T:System.Type" /> is a COM object.</summary>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if the <xref data-throw-if-not-resolved="true" uid="System.Type"></xref> is a COM object; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if the <see cref="T:System.Type" /> is a COM object; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="M:System.Reflection.Emit.TypeBuilder.IsCreated">
       <summary>Returns a value that indicates whether the current dynamic type has been created.</summary>
@@ -3810,14 +3810,14 @@
         <see langword="true" /> if one or more instances of <paramref name="attributeType" />, or an attribute derived from <paramref name="attributeType" />, is defined on this type; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="M:System.Reflection.Emit.TypeBuilder.IsPointerImpl">
-      <summary>When overridden in a derived class, implements the <xref data-throw-if-not-resolved="true" uid="System.Type.IsPointer"></xref> property and determines whether the <xref data-throw-if-not-resolved="true" uid="System.Type"></xref> is a pointer.</summary>
+      <summary>When overridden in a derived class, implements the <see cref="T:System.Type.IsPointer" /> property and determines whether the <see cref="T:System.Type" /> is a pointer.</summary>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if the <xref data-throw-if-not-resolved="true" uid="System.Type"></xref> is a pointer; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if the <see cref="T:System.Type" /> is a pointer; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="M:System.Reflection.Emit.TypeBuilder.IsPrimitiveImpl">
-      <summary>When overridden in a derived class, implements the <xref data-throw-if-not-resolved="true" uid="System.Type.IsPrimitive"></xref> property and determines whether the <xref data-throw-if-not-resolved="true" uid="System.Type"></xref> is one of the primitive types.</summary>
+      <summary>When overridden in a derived class, implements the <see cref="T:System.Type.IsPrimitive" /> property and determines whether the <see cref="T:System.Type" /> is one of the primitive types.</summary>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if the <xref data-throw-if-not-resolved="true" uid="System.Type"></xref> is one of the primitive types; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if the <see cref="T:System.Type" /> is one of the primitive types; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="M:System.Reflection.Emit.TypeBuilder.IsSubclassOf(System.Type)">
       <summary>Determines whether this type is derived from a specified type.</summary>
@@ -3943,7 +3943,7 @@
     <member name="P:System.Reflection.Emit.TypeBuilder.IsByRefLike">
       <summary>Gets a value that indicates whether the type is a byref-like structure.</summary>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if the <xref data-throw-if-not-resolved="true" uid="System.Type"></xref> is a byref-like structure; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if the <see cref="T:System.Type" /> is a byref-like structure; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="P:System.Reflection.Emit.TypeBuilder.IsConstructedGenericType">
       <summary>Gets a value that indicates whether this object represents a constructed generic type.</summary>

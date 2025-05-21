@@ -278,32 +278,32 @@
       <returns>The reversed value.</returns>
     </member>
     <member name="M:System.Buffers.Binary.BinaryPrimitives.ReverseEndianness(System.ReadOnlySpan{System.Int128},System.Span{System.Int128})">
-      <summary>Copies every primitive value from <code data-dev-comment-type="paramref">source</code> to <code data-dev-comment-type="paramref">destination</code>, reversing each primitive by performing an endianness swap as part of writing each.</summary>
+      <summary>Copies every primitive value from <paramref name="source" /> to <paramref name="destination" />, reversing each primitive by performing an endianness swap as part of writing each.</summary>
       <param name="source">The source span to copy.</param>
       <param name="destination">The destination to which the source elements should be copied.</param>
     </member>
     <member name="M:System.Buffers.Binary.BinaryPrimitives.ReverseEndianness(System.ReadOnlySpan{System.Int16},System.Span{System.Int16})">
-      <summary>Copies every primitive value from <code data-dev-comment-type="paramref">source</code> to <code data-dev-comment-type="paramref">destination</code>, reversing each primitive by performing an endianness swap as part of writing each.</summary>
+      <summary>Copies every primitive value from <paramref name="source" /> to <paramref name="destination" />, reversing each primitive by performing an endianness swap as part of writing each.</summary>
       <param name="source">The source span to copy.</param>
       <param name="destination">The destination to which the source elements should be copied.</param>
     </member>
     <member name="M:System.Buffers.Binary.BinaryPrimitives.ReverseEndianness(System.ReadOnlySpan{System.Int32},System.Span{System.Int32})">
-      <summary>Copies every primitive value from <code data-dev-comment-type="paramref">source</code> to <code data-dev-comment-type="paramref">destination</code>, reversing each primitive by performing an endianness swap as part of writing each.</summary>
+      <summary>Copies every primitive value from <paramref name="source" /> to <paramref name="destination" />, reversing each primitive by performing an endianness swap as part of writing each.</summary>
       <param name="source">The source span to copy.</param>
       <param name="destination">The destination to which the source elements should be copied.</param>
     </member>
     <member name="M:System.Buffers.Binary.BinaryPrimitives.ReverseEndianness(System.ReadOnlySpan{System.Int64},System.Span{System.Int64})">
-      <summary>Copies every primitive value from <code data-dev-comment-type="paramref">source</code> to <code data-dev-comment-type="paramref">destination</code>, reversing each primitive by performing an endianness swap as part of writing each.</summary>
+      <summary>Copies every primitive value from <paramref name="source" /> to <paramref name="destination" />, reversing each primitive by performing an endianness swap as part of writing each.</summary>
       <param name="source">The source span to copy.</param>
       <param name="destination">The destination to which the source elements should be copied.</param>
     </member>
     <member name="M:System.Buffers.Binary.BinaryPrimitives.ReverseEndianness(System.ReadOnlySpan{System.IntPtr},System.Span{System.IntPtr})">
-      <summary>Copies every primitive value from <code data-dev-comment-type="paramref">source</code> to <code data-dev-comment-type="paramref">destination</code>, reversing each primitive by performing an endianness swap as part of writing each.</summary>
+      <summary>Copies every primitive value from <paramref name="source" /> to <paramref name="destination" />, reversing each primitive by performing an endianness swap as part of writing each.</summary>
       <param name="source">The source span to copy.</param>
       <param name="destination">The destination to which the source elements should be copied.</param>
     </member>
     <member name="M:System.Buffers.Binary.BinaryPrimitives.ReverseEndianness(System.ReadOnlySpan{System.UInt128},System.Span{System.UInt128})">
-      <summary>Copies every primitive value from <code data-dev-comment-type="paramref">source</code> to <code data-dev-comment-type="paramref">destination</code>, reversing each primitive by performing an endianness swap as part of writing each.</summary>
+      <summary>Copies every primitive value from <paramref name="source" /> to <paramref name="destination" />, reversing each primitive by performing an endianness swap as part of writing each.</summary>
       <param name="source">The source span to copy.</param>
       <param name="destination">The destination to which the source elements should be copied.</param>
     </member>
@@ -314,17 +314,17 @@
       <exception cref="T:System.ArgumentException">The <paramref name="destination" />'s length is smaller than that of the <paramref name="source" />.</exception>
     </member>
     <member name="M:System.Buffers.Binary.BinaryPrimitives.ReverseEndianness(System.ReadOnlySpan{System.UInt32},System.Span{System.UInt32})">
-      <summary>Copies every primitive value from <code data-dev-comment-type="paramref">source</code> to <code data-dev-comment-type="paramref">destination</code>, reversing each primitive by performing an endianness swap as part of writing each.</summary>
+      <summary>Copies every primitive value from <paramref name="source" /> to <paramref name="destination" />, reversing each primitive by performing an endianness swap as part of writing each.</summary>
       <param name="source">The source span to copy.</param>
       <param name="destination">The destination to which the source elements should be copied.</param>
     </member>
     <member name="M:System.Buffers.Binary.BinaryPrimitives.ReverseEndianness(System.ReadOnlySpan{System.UInt64},System.Span{System.UInt64})">
-      <summary>Copies every primitive value from <code data-dev-comment-type="paramref">source</code> to <code data-dev-comment-type="paramref">destination</code>, reversing each primitive by performing an endianness swap as part of writing each.</summary>
+      <summary>Copies every primitive value from <paramref name="source" /> to <paramref name="destination" />, reversing each primitive by performing an endianness swap as part of writing each.</summary>
       <param name="source">The source span to copy.</param>
       <param name="destination">The destination to which the source elements should be copied.</param>
     </member>
     <member name="M:System.Buffers.Binary.BinaryPrimitives.ReverseEndianness(System.ReadOnlySpan{System.UIntPtr},System.Span{System.UIntPtr})">
-      <summary>Copies every primitive value from <code data-dev-comment-type="paramref">source</code> to <code data-dev-comment-type="paramref">destination</code>, reversing each primitive by performing an endianness swap as part of writing each.</summary>
+      <summary>Copies every primitive value from <paramref name="source" /> to <paramref name="destination" />, reversing each primitive by performing an endianness swap as part of writing each.</summary>
       <param name="source">The source span to copy.</param>
       <param name="destination">The destination to which the source elements should be copied.</param>
     </member>
@@ -2191,7 +2191,7 @@
       <param name="value">The value to search for.</param>
       <typeparam name="T">The type of the elements in the span.</typeparam>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if found, <code data-dev-comment-type="langword">false</code> otherwise.</returns>
+        <see langword="true" /> if found, <see langword="false" /> otherwise.</returns>
     </member>
     <member name="M:System.MemoryExtensions.ContainsAny(System.ReadOnlySpan{System.Char},System.Buffers.SearchValues{System.String})">
       <summary>Searches for any occurrence of any of the specified substring <paramref name="values" />.</summary>
@@ -2264,7 +2264,7 @@
         <see langword="true" /> if found. If not found, returns <see langword="false" />.</returns>
     </member>
     <member name="M:System.MemoryExtensions.ContainsAny``1(System.Span{``0},``0,``0,``0)">
-      <summary>Searches for an occurrence of <code data-dev-comment-type="paramref">value0</code>, <code data-dev-comment-type="paramref">value1</code>, or <code data-dev-comment-type="paramref">value2</code>, and returns <code data-dev-comment-type="langword">true</code> if found. If not found, returns <code data-dev-comment-type="langword">false</code>.</summary>
+      <summary>Searches for an occurrence of <paramref name="value0" />, <paramref name="value1" />, or <paramref name="value2" />, and returns <see langword="true" /> if found. If not found, returns <see langword="false" />.</summary>
       <param name="span">The span to search.</param>
       <param name="value0">One of the values to search for.</param>
       <param name="value1">One of the values to search for.</param>
@@ -2274,7 +2274,7 @@
         <code data-dev-comment-type="langword">true</code> if found. If not found, returns <code data-dev-comment-type="langword">false</code>.</returns>
     </member>
     <member name="M:System.MemoryExtensions.ContainsAny``1(System.Span{``0},``0,``0)">
-      <summary>Searches for an occurrence of <code data-dev-comment-type="paramref">value0</code> or <code data-dev-comment-type="paramref">value1</code>, and returns <code data-dev-comment-type="langword">true</code> if found. If not found, returns <code data-dev-comment-type="langword">false</code>.</summary>
+      <summary>Searches for an occurrence of <paramref name="value0" /> or <paramref name="value1" />, and returns <see langword="true" /> if found. If not found, returns <see langword="false" />.</summary>
       <param name="span">The span to search.</param>
       <param name="value0">One of the values to search for.</param>
       <param name="value1">One of the values to search for.</param>
@@ -2283,7 +2283,7 @@
         <code data-dev-comment-type="langword">true</code> if found. If not found, returns <code data-dev-comment-type="langword">false</code>.</returns>
     </member>
     <member name="M:System.MemoryExtensions.ContainsAny``1(System.Span{``0},System.Buffers.SearchValues{``0})">
-      <summary>Searches for an occurrence of any of the specified <code data-dev-comment-type="paramref">values</code> and returns <code data-dev-comment-type="langword">true</code> if found. If not found, returns <code data-dev-comment-type="langword">false</code>.</summary>
+      <summary>Searches for an occurrence of any of the specified <paramref name="values" /> and returns <see langword="true" /> if found. If not found, returns <see langword="false" />.</summary>
       <param name="span">The span to search.</param>
       <param name="values">The set of values to search for.</param>
       <typeparam name="T" />
@@ -2291,7 +2291,7 @@
         <code data-dev-comment-type="langword">true</code> if found. If not found, returns <code data-dev-comment-type="langword">false</code>.</returns>
     </member>
     <member name="M:System.MemoryExtensions.ContainsAny``1(System.Span{``0},System.ReadOnlySpan{``0})">
-      <summary>Searches for an occurrence of any of the specified <code data-dev-comment-type="paramref">values</code> and returns <code data-dev-comment-type="langword">true</code> if found. If not found, returns <code data-dev-comment-type="langword">false</code>.</summary>
+      <summary>Searches for an occurrence of any of the specified <paramref name="values" /> and returns <see langword="true" /> if found. If not found, returns <see langword="false" />.</summary>
       <param name="span">The span to search.</param>
       <param name="values">The set of values to search for.</param>
       <typeparam name="T" />
@@ -2374,52 +2374,52 @@
  If all of the values are in <paramref name="values" />, returns <see langword="false" />.</returns>
     </member>
     <member name="M:System.MemoryExtensions.ContainsAnyExcept``1(System.Span{``0},``0,``0,``0)">
-      <summary>Searches for any value other than <code data-dev-comment-type="paramref">value0</code>, <code data-dev-comment-type="paramref">value1</code>, or <code data-dev-comment-type="paramref">value2</code>.</summary>
+      <summary>Searches for any value other than <paramref name="value0" />, <paramref name="value1" />, or <paramref name="value2" />.</summary>
       <param name="span">The span to search.</param>
       <param name="value0">The value to exclude from the search.</param>
       <param name="value1">The value to exclude from the search.</param>
       <param name="value2">The value to exclude from the search.</param>
       <typeparam name="T" />
       <returns>
-        <code data-dev-comment-type="langword">true</code> if any value other than <code data-dev-comment-type="paramref">value0</code>, <code data-dev-comment-type="paramref">value1</code>, or <code data-dev-comment-type="paramref">value2</code> is present in the span.
-If all of the values are <code data-dev-comment-type="paramref">value0</code>, <code data-dev-comment-type="paramref">value1</code>, or <code data-dev-comment-type="paramref">value2</code>, returns <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if any value other than <paramref name="value0" />, <paramref name="value1" />, or <paramref name="value2" /> is present in the span.
+ If all of the values are <paramref name="value0" />, <paramref name="value1" />, or <paramref name="value2" />, returns <see langword="false" />.</returns>
     </member>
     <member name="M:System.MemoryExtensions.ContainsAnyExcept``1(System.Span{``0},``0,``0)">
-      <summary>Searches for any value other than <code data-dev-comment-type="paramref">value0</code> or <code data-dev-comment-type="paramref">value1</code>.</summary>
+      <summary>Searches for any value other than <paramref name="value0" /> or <paramref name="value1" />.</summary>
       <param name="span">The span to search.</param>
       <param name="value0">The value to exclude from the search.</param>
       <param name="value1">The value to exclude from the search.</param>
       <typeparam name="T" />
       <returns>
-        <code data-dev-comment-type="langword">true</code> if any value other than <code data-dev-comment-type="paramref">value0</code> or <code data-dev-comment-type="paramref">value1</code> is present in the span.
-If all of the values are <code data-dev-comment-type="paramref">value0</code> or <code data-dev-comment-type="paramref">value1</code>, returns <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if any value other than <paramref name="value0" /> or <paramref name="value1" /> is present in the span.
+ If all of the values are <paramref name="value0" /> or <paramref name="value1" />, returns <see langword="false" />.</returns>
     </member>
     <member name="M:System.MemoryExtensions.ContainsAnyExcept``1(System.Span{``0},``0)">
-      <summary>Searches for any value other than the specified <code data-dev-comment-type="paramref">value</code>.</summary>
+      <summary>Searches for any value other than the specified <paramref name="value" />.</summary>
       <param name="span">The span to search.</param>
       <param name="value">The value to exclude from the search.</param>
       <typeparam name="T" />
       <returns>
-        <code data-dev-comment-type="langword">true</code> if any value other than <code data-dev-comment-type="paramref">value</code> is present in the span.
-If all of the values are <code data-dev-comment-type="paramref">value</code>, returns <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if any value other than <paramref name="value" /> is present in the span.
+ If all of the values are <paramref name="value" />, returns <see langword="false" />.</returns>
     </member>
     <member name="M:System.MemoryExtensions.ContainsAnyExcept``1(System.Span{``0},System.Buffers.SearchValues{``0})">
-      <summary>Searches for any value other than the specified <code data-dev-comment-type="paramref">values</code>.</summary>
+      <summary>Searches for any value other than the specified <paramref name="values" />.</summary>
       <param name="span">The span to search.</param>
       <param name="values">The set of values to exclude from the search.</param>
       <typeparam name="T" />
       <returns>
-        <code data-dev-comment-type="langword">true</code> if any value other than those in <code data-dev-comment-type="paramref">values</code> is present in the span.
-If all of the values are in <code data-dev-comment-type="paramref">values</code>, returns <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if any value other than those in <paramref name="values" /> is present in the span.
+ If all of the values are in <paramref name="values" />, returns <see langword="false" />.</returns>
     </member>
     <member name="M:System.MemoryExtensions.ContainsAnyExcept``1(System.Span{``0},System.ReadOnlySpan{``0})">
-      <summary>Searches for any value other than the specified <code data-dev-comment-type="paramref">values</code>.</summary>
+      <summary>Searches for any value other than the specified <paramref name="values" />.</summary>
       <param name="span">The span to search.</param>
       <param name="values">The set of values to exclude from the search.</param>
       <typeparam name="T" />
       <returns>
-        <code data-dev-comment-type="langword">true</code> if any value other than those in <code data-dev-comment-type="paramref">values</code> is present in the span.
-If all of the values are in <code data-dev-comment-type="paramref">values</code>, returns <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if any value other than those in <paramref name="values" /> is present in the span.
+ If all of the values are in <paramref name="values" />, returns <see langword="false" />.</returns>
     </member>
     <member name="M:System.MemoryExtensions.ContainsAnyExceptInRange``1(System.ReadOnlySpan{``0},``0,``0)">
       <summary>Searches for any value outside of the range between <paramref name="lowInclusive" /> and <paramref name="highInclusive" />, inclusive.</summary>
@@ -2432,14 +2432,14 @@ If all of the values are in <code data-dev-comment-type="paramref">values</code>
  If all of the values are inside of the specified range, returns <see langword="false" />.</returns>
     </member>
     <member name="M:System.MemoryExtensions.ContainsAnyExceptInRange``1(System.Span{``0},``0,``0)">
-      <summary>Searches for any value outside of the range between <code data-dev-comment-type="paramref">lowInclusive</code> and <code data-dev-comment-type="paramref">highInclusive</code>, inclusive.</summary>
+      <summary>Searches for any value outside of the range between <paramref name="lowInclusive" /> and <paramref name="highInclusive" />, inclusive.</summary>
       <param name="span">The span to search.</param>
       <param name="lowInclusive">The lower bound, inclusive, of the excluded range.</param>
       <param name="highInclusive">The upper bound, inclusive, of the excluded range.</param>
       <typeparam name="T" />
       <returns>
-        <code data-dev-comment-type="langword">true</code> if any value other than those in the specified range is present in the span.
-If all of the values are inside of the specified range, returns <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if any value other than those in the specified range is present in the span.
+ If all of the values are inside of the specified range, returns <see langword="false" />.</returns>
     </member>
     <member name="M:System.MemoryExtensions.ContainsAnyInRange``1(System.ReadOnlySpan{``0},``0,``0)">
       <summary>Searches for any value in the range between <paramref name="lowInclusive" /> and <paramref name="highInclusive" />, inclusive.</summary>
@@ -2451,7 +2451,7 @@ If all of the values are inside of the specified range, returns <code data-dev-c
         <see langword="true" /> if found. If not found, returns <see langword="false" />.</returns>
     </member>
     <member name="M:System.MemoryExtensions.ContainsAnyInRange``1(System.Span{``0},``0,``0)">
-      <summary>Searches for any value in the range between <code data-dev-comment-type="paramref">lowInclusive</code> and <code data-dev-comment-type="paramref">highInclusive</code>, inclusive, and returns <code data-dev-comment-type="langword">true</code> if found. If not found, returns <code data-dev-comment-type="langword">false</code>.</summary>
+      <summary>Searches for any value in the range between <paramref name="lowInclusive" /> and <paramref name="highInclusive" />, inclusive, and returns <see langword="true" /> if found. If not found, returns <see langword="false" />.</summary>
       <param name="span">The span to search.</param>
       <param name="lowInclusive">The lower bound, inclusive, of the range for which to search.</param>
       <param name="highInclusive">The upper bound, inclusive, of the range for which to search.</param>
@@ -2866,7 +2866,7 @@ If all of the values are inside of the specified range, returns <code data-dev-c
  If all of the values are inside of the specified range, returns -1.</returns>
     </member>
     <member name="M:System.MemoryExtensions.IndexOfAnyExceptInRange``1(System.Span{``0},``0,``0)">
-      <summary>Searches for the first index of any value outside of the range between <code data-dev-comment-type="paramref">lowInclusive</code> and <code data-dev-comment-type="paramref">highInclusive</code>, inclusive.</summary>
+      <summary>Searches for the first index of any value outside of the range between <paramref name="lowInclusive" /> and <paramref name="highInclusive" />, inclusive.</summary>
       <param name="span">The span to search.</param>
       <param name="lowInclusive">The lower bound, inclusive, of the excluded range.</param>
       <param name="highInclusive">The upper bound, inclusive, of the excluded range.</param>
@@ -2884,7 +2884,7 @@ If all of the values are inside of the specified range, returns <code data-dev-c
  If all of the values are outside of the specified range, returns -1.</returns>
     </member>
     <member name="M:System.MemoryExtensions.IndexOfAnyInRange``1(System.Span{``0},``0,``0)">
-      <summary>Searches for the first index of any value in the range between <code data-dev-comment-type="paramref">lowInclusive</code> and <code data-dev-comment-type="paramref">highInclusive</code>, inclusive.</summary>
+      <summary>Searches for the first index of any value in the range between <paramref name="lowInclusive" /> and <paramref name="highInclusive" />, inclusive.</summary>
       <param name="span">The span to search.</param>
       <param name="lowInclusive">The lower bound, inclusive, of the range for which to search.</param>
       <param name="highInclusive">The upper bound, inclusive, of the range for which to search.</param>
@@ -3151,7 +3151,7 @@ If all of the values are inside of the specified range, returns <code data-dev-c
  If all of the values are inside of the specified range, returns -1.</returns>
     </member>
     <member name="M:System.MemoryExtensions.LastIndexOfAnyExceptInRange``1(System.Span{``0},``0,``0)">
-      <summary>Searches for the last index of any value outside of the range between <code data-dev-comment-type="paramref">lowInclusive</code> and <code data-dev-comment-type="paramref">highInclusive</code>, inclusive.</summary>
+      <summary>Searches for the last index of any value outside of the range between <paramref name="lowInclusive" /> and <paramref name="highInclusive" />, inclusive.</summary>
       <param name="span">The span to search.</param>
       <param name="lowInclusive">The lower bound, inclusive, of the excluded range.</param>
       <param name="highInclusive">The upper bound, inclusive, of the excluded range.</param>
@@ -3169,7 +3169,7 @@ If all of the values are inside of the specified range, returns <code data-dev-c
  If all of the values are outside of the specified range, returns -1.</returns>
     </member>
     <member name="M:System.MemoryExtensions.LastIndexOfAnyInRange``1(System.Span{``0},``0,``0)">
-      <summary>Searches for the last index of any value in the range between <code data-dev-comment-type="paramref">lowInclusive</code> and <code data-dev-comment-type="paramref">highInclusive</code>, inclusive.</summary>
+      <summary>Searches for the last index of any value in the range between <paramref name="lowInclusive" /> and <paramref name="highInclusive" />, inclusive.</summary>
       <param name="span">The span to search.</param>
       <param name="lowInclusive">The lower bound, inclusive, of the range for which to search.</param>
       <param name="highInclusive">The upper bound, inclusive, of the range for which to search.</param>
@@ -3899,6 +3899,7 @@ If all of the values are inside of the specified range, returns <code data-dev-c
       <summary>Gets the current element of the enumeration.</summary>
       <returns>A <see cref="T:System.Range" /> instance that indicates the bounds of the current element withing the source span.</returns>
     </member>
+    <member name="P:System.MemoryExtensions.SpanSplitEnumerator`1.Source" />
     <member name="T:System.MemoryExtensions.TryWriteInterpolatedStringHandler">
       <summary>Provides a handler used by the language compiler to format interpolated strings into character spans.</summary>
     </member>

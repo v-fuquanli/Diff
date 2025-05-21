@@ -137,7 +137,7 @@
       <summary>The name of the file or directory, not including any path.</summary>
     </member>
     <member name="P:Microsoft.Extensions.FileProviders.Physical.PhysicalFileInfo.PhysicalPath">
-      <summary>The path to the file, including the file name. Return <code>null</code> if the file is not directly accessible.</summary>
+      <summary>The path to the file, including the file name. Return <code data-dev-comment-type="langword">null</code> if the file is not directly accessible.</summary>
     </member>
     <member name="T:Microsoft.Extensions.FileProviders.Physical.PhysicalFilesWatcher">
       <summary>
@@ -237,7 +237,7 @@
       <returns>An <see cref="T:System.IDisposable" /> that is used to unregister the callback.</returns>
     </member>
     <member name="P:Microsoft.Extensions.FileProviders.Physical.PollingWildCardChangeToken.ActiveChangeCallbacks">
-      <summary>Indicates if this token will pro-actively raise callbacks. If <code>false</code>, the token consumer must poll <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.Primitives.IChangeToken.HasChanged"></xref> to detect changes.</summary>
+      <summary>Indicates if this token will pro-actively raise callbacks. If <code data-dev-comment-type="langword">false</code>, the token consumer must poll <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.Primitives.IChangeToken.HasChanged" /> to detect changes.</summary>
       <returns>
         <code>true</code> if the token will proactively raise callbacks; <code>false</code> otherwise.</returns>
     </member>

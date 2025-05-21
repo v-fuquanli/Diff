@@ -87,6 +87,34 @@
         <paramref name="services" /> is <see langword="null" />.</exception>
       <returns>The value of <paramref name="services" />.</returns>
     </member>
+    <member name="T:Microsoft.Extensions.Diagnostics.Buffering.GlobalLogBuffer">
+      <summary>
+            Buffers logs into global circular buffers and drops them after some time if not flushed.</summary>
+    </member>
+    <member name="M:Microsoft.Extensions.Diagnostics.Buffering.GlobalLogBuffer.#ctor" />
+    <member name="T:Microsoft.Extensions.Diagnostics.Buffering.LogBuffer">
+      <summary>
+            Buffers logs into circular buffers and drops them after some time if not flushed.</summary>
+    </member>
+    <member name="M:Microsoft.Extensions.Diagnostics.Buffering.LogBuffer.#ctor" />
+    <member name="M:Microsoft.Extensions.Diagnostics.Buffering.LogBuffer.Flush">
+      <summary>
+            Flushes the buffer and emits all buffered logs.</summary>
+    </member>
+    <member name="M:Microsoft.Extensions.Diagnostics.Buffering.LogBuffer.TryEnqueue``1(Microsoft.Extensions.Logging.Abstractions.IBufferedLogger,Microsoft.Extensions.Logging.Abstractions.LogEntry{``0}@|System.Runtime.InteropServices.InAttribute)">
+      <summary>
+            Enqueues a log record in the underlying buffer, if available.</summary>
+      <param name="bufferedLogger">A logger capable of logging buffered log records.</param>
+      <param name="logEntry">A log entry to be buffered.</param>
+      <typeparam name="TState">Type of the log state in the <paramref name="logEntry" /> instance.</typeparam>
+      <returns>
+        <see langword="true" /> if the log record was buffered; otherwise, <see langword="false" />.</returns>
+    </member>
+    <member name="T:Microsoft.Extensions.Diagnostics.Buffering.PerRequestLogBuffer">
+      <summary>
+            Buffers logs into per-request circular buffers and drops them after some time if not flushed or when the request ends.</summary>
+    </member>
+    <member name="M:Microsoft.Extensions.Diagnostics.Buffering.PerRequestLogBuffer.#ctor" />
     <member name="T:Microsoft.Extensions.Diagnostics.Enrichment.IEnrichmentTagCollector">
       <summary>
             Allows enrichers to report enrichment properties.</summary>
