@@ -1740,8 +1740,7 @@
     <member name="P:System.Data.Common.DbConnectionStringBuilder.Item(System.String)">
       <summary>Gets or sets the value associated with the specified key.</summary>
       <param name="keyword">The key of the item to get or set.</param>
-      <exception cref="T:System.ArgumentException">
-          The value for <paramref name="keyword" /> has not been set in the collection.</exception>
+      <exception cref="T:System.ArgumentException">The value for <paramref name="keyword" /> has not been set in the collection.</exception>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="keyword" /> is a null reference (<see langword="Nothing" /> in Visual Basic).</exception>
       <exception cref="T:System.NotSupportedException">The property is set, and the <see cref="T:System.Data.Common.DbConnectionStringBuilder" /> is read-only.
@@ -2099,7 +2098,7 @@
       <summary>Gets or sets a value that enables or disables batch processing support, and specifies the number of commands that can be executed in a batch.</summary>
       <returns>The number of rows to process per batch.  
   
- <list type="table"><listheader><term> Value is</term><description> Effect</description></listheader><item><term> 0</term><description> There is no limit on the batch size.</description></item><item><term> 1</term><description> Disables batch updating.</description></item><item><term> &gt; 1</term><description> Changes are sent using batches of <see cref="P:System.Data.Common.DbDataAdapter.UpdateBatchSize" /> operations at a time.</description></item></list>  
+ <list type="table"><listheader><term>Value is</term><description>Effect</description></listheader><item><term>0</term><description>There is no limit on the batch size.</description></item><item><term>1</term><description>Disables batch updating.</description></item><item><term>&gt; 1</term><description>Changes are sent using batches of <see cref="P:System.Data.Common.DbDataAdapter.UpdateBatchSize" /> operations at a time.</description></item></list>  
 
  When setting this to a value other than 1, all the commands associated with the <see cref="T:System.Data.Common.DbDataAdapter" /> must have their <see cref="P:System.Data.IDbCommand.UpdatedRowSource" /> property set to None or OutputParameters. An exception will be thrown otherwise.</returns>
     </member>
@@ -2963,8 +2962,8 @@ Returns <see langword="null" /> if the executed command returned no resultset, o
     </member>
     <member name="P:System.Data.Common.DbException.SqlState">
       <summary>
-        <para> For database providers that support it, contains a standard SQL 5-character return code indicating the success or failure of the database operation. The first 2 characters represent the <strong>class</strong> of the return code (e.g. error, success), while the last 3 characters represent the <strong>subclass</strong>, allowing detection of error scenarios in a database-portable way.</para>
-        <para> For database providers that don't support it, or for inapplicable error scenarios, contains <see langword="null" />.</para>
+        <para>For database providers that support it, contains a standard SQL 5-character return code indicating the success or failure of the database operation. The first 2 characters represent the <strong>class</strong> of the return code (e.g. error, success), while the last 3 characters represent the <strong>subclass</strong>, allowing detection of error scenarios in a database-portable way.</para>
+        <para>For database providers that don't support it, or for inapplicable error scenarios, contains <see langword="null" />.</para>
       </summary>
       <returns>A standard SQL 5-character return code, or <see langword="null" />.</returns>
     </member>
@@ -3362,7 +3361,7 @@ Returns <see langword="null" /> if the executed command returned no resultset, o
       <summary>Returns a <see cref="T:System.Data.DataTable" /> that contains information about all installed providers that implement <see cref="T:System.Data.Common.DbProviderFactory" />.</summary>
       <returns>A <see cref="T:System.Data.DataTable" /> containing <see cref="T:System.Data.DataRow" /> objects that contain the following data:  
   
- <list type="table"><listheader><term> Column ordinal</term><description> Column name</description><description> Description</description></listheader><item><term> 0</term><description> Name</description><description> Human-readable name for the data provider.</description></item><item><term> 1</term><description> Description</description><description> Human-readable description of the data provider.</description></item><item><term> 2</term><description> InvariantName</description><description> Name that can be used programmatically to refer to the data provider.</description></item><item><term> 3</term><description> AssemblyQualifiedName</description><description> Fully qualified name of the factory class, which contains enough information to instantiate the object.</description></item></list></returns>
+ <list type="table"><listheader><term>Column ordinal</term><description>Column name</description><description>Description</description></listheader><item><term>0</term><description>Name</description><description>Human-readable name for the data provider.</description></item><item><term>1</term><description>Description</description><description>Human-readable description of the data provider.</description></item><item><term>2</term><description>InvariantName</description><description>Name that can be used programmatically to refer to the data provider.</description></item><item><term>3</term><description>AssemblyQualifiedName</description><description>Fully qualified name of the factory class, which contains enough information to instantiate the object.</description></item></list></returns>
     </member>
     <member name="M:System.Data.Common.DbProviderFactories.GetProviderInvariantNames">
       <summary>Returns the invariant provider names for all registered instances of <see cref="T:System.Data.Common.DbProviderFactory" />.</summary>
@@ -9463,14 +9462,14 @@ Returns <see langword="null" /> if the executed command returned no resultset, o
       <param name="value">The <see cref="T:System.Data.SqlTypes.SqlBinary" /> object to be compared to this <see cref="T:System.Data.SqlTypes.SqlBinary" /> structure.</param>
       <returns>A signed number that indicates the relative values of this <see cref="T:System.Data.SqlTypes.SqlBinary" /> structure and the object.  
   
- <list type="table"><listheader><term> Return value</term><description> Condition</description></listheader><item><term> Less than zero</term><description> The value of this <see cref="T:System.Data.SqlTypes.SqlBinary" /> object is less than the object.</description></item><item><term> Zero</term><description> This <see cref="T:System.Data.SqlTypes.SqlBinary" /> object is the same as object.</description></item><item><term> Greater than zero</term><description> This <see cref="T:System.Data.SqlTypes.SqlBinary" /> object is greater than object, or the object is a null reference.</description></item></list></returns>
+ <list type="table"><listheader><term>Return value</term><description>Condition</description></listheader><item><term>Less than zero</term><description>The value of this <see cref="T:System.Data.SqlTypes.SqlBinary" /> object is less than the object.</description></item><item><term>Zero</term><description>This <see cref="T:System.Data.SqlTypes.SqlBinary" /> object is the same as object.</description></item><item><term>Greater than zero</term><description>This <see cref="T:System.Data.SqlTypes.SqlBinary" /> object is greater than object, or the object is a null reference.</description></item></list></returns>
     </member>
     <member name="M:System.Data.SqlTypes.SqlBinary.CompareTo(System.Object)">
       <summary>Compares this <see cref="T:System.Data.SqlTypes.SqlBinary" /> object to the supplied object and returns an indication of their relative values.</summary>
       <param name="value">The object to be compared to this <see cref="T:System.Data.SqlTypes.SqlBinary" /> structure.</param>
       <returns>A signed number that indicates the relative values of this <see cref="T:System.Data.SqlTypes.SqlBinary" /> structure and the object.  
   
- <list type="table"><listheader><term> Return value</term><description> Condition</description></listheader><item><term> Less than zero</term><description> The value of this <see cref="T:System.Data.SqlTypes.SqlBinary" /> object is less than the object.</description></item><item><term> Zero</term><description> This <see cref="T:System.Data.SqlTypes.SqlBinary" /> object is the same as object.</description></item><item><term> Greater than zero</term><description> This <see cref="T:System.Data.SqlTypes.SqlBinary" /> object is greater than object, or the object is a null reference.</description></item></list></returns>
+ <list type="table"><listheader><term>Return value</term><description>Condition</description></listheader><item><term>Less than zero</term><description>The value of this <see cref="T:System.Data.SqlTypes.SqlBinary" /> object is less than the object.</description></item><item><term>Zero</term><description>This <see cref="T:System.Data.SqlTypes.SqlBinary" /> object is the same as object.</description></item><item><term>Greater than zero</term><description>This <see cref="T:System.Data.SqlTypes.SqlBinary" /> object is greater than object, or the object is a null reference.</description></item></list></returns>
     </member>
     <member name="M:System.Data.SqlTypes.SqlBinary.Concat(System.Data.SqlTypes.SqlBinary,System.Data.SqlTypes.SqlBinary)">
       <summary>Concatenates two <see cref="T:System.Data.SqlTypes.SqlBinary" /> structures to create a new <see cref="T:System.Data.SqlTypes.SqlBinary" /> structure.</summary>
@@ -9680,14 +9679,14 @@ Returns <see langword="null" /> if the executed command returned no resultset, o
       <param name="value">A <see cref="T:System.Data.SqlTypes.SqlBoolean" /><see cref="T:System.Data.SqlTypes.SqlBoolean" /> object to compare, or a null reference (<see langword="Nothing" /> in Visual Basic).</param>
       <returns>A signed number that indicates the relative values of the instance and value.  
   
- <list type="table"><listheader><term> Value</term><description> Description</description></listheader><item><term> A negative integer</term><description> This instance is less than <paramref name="value" />.</description></item><item><term> Zero</term><description> This instance is equal to <paramref name="value" />.</description></item><item><term> A positive integer</term><description> This instance is greater than <paramref name="value" />, or <paramref name="value" /> is a null reference (<see langword="Nothing" /> in Visual Basic).</description></item></list></returns>
+ <list type="table"><listheader><term>Value</term><description>Description</description></listheader><item><term>A negative integer</term><description>This instance is less than <paramref name="value" />.</description></item><item><term>Zero</term><description>This instance is equal to <paramref name="value" />.</description></item><item><term>A positive integer</term><description>This instance is greater than <paramref name="value" />, or <paramref name="value" /> is a null reference (<see langword="Nothing" /> in Visual Basic).</description></item></list></returns>
     </member>
     <member name="M:System.Data.SqlTypes.SqlBoolean.CompareTo(System.Object)">
       <summary>Compares this <see cref="T:System.Data.SqlTypes.SqlBoolean" /> structure to a specified object and returns an indication of their relative values.</summary>
       <param name="value">An object to compare, or a null reference (<see langword="Nothing" /> in Visual Basic).</param>
       <returns>A signed number that indicates the relative values of the instance and value.  
   
- <list type="table"><listheader><term> Value</term><description> Description</description></listheader><item><term> A negative integer</term><description> This instance is less than <paramref name="value" />.</description></item><item><term> Zero</term><description> This instance is equal to <paramref name="value" />.</description></item><item><term> A positive integer</term><description> This instance is greater than <paramref name="value" />, or <paramref name="value" /> is a null reference (<see langword="Nothing" /> in Visual Basic).</description></item></list></returns>
+ <list type="table"><listheader><term>Value</term><description>Description</description></listheader><item><term>A negative integer</term><description>This instance is less than <paramref name="value" />.</description></item><item><term>Zero</term><description>This instance is equal to <paramref name="value" />.</description></item><item><term>A positive integer</term><description>This instance is greater than <paramref name="value" />, or <paramref name="value" /> is a null reference (<see langword="Nothing" /> in Visual Basic).</description></item></list></returns>
     </member>
     <member name="M:System.Data.SqlTypes.SqlBoolean.Equals(System.Data.SqlTypes.SqlBoolean,System.Data.SqlTypes.SqlBoolean)">
       <summary>Compares two <see cref="T:System.Data.SqlTypes.SqlBoolean" /> structures to determine whether they are equal.</summary>
@@ -10036,7 +10035,7 @@ Returns <see langword="null" /> if the executed command returned no resultset, o
       <param name="value">The <see cref="T:System.Data.SqlTypes.SqlByte" /> object to be compared.</param>
       <returns>A signed number that indicates the relative values of the instance and the object.  
   
- <list type="table"><listheader><term> Return Value</term><description> Condition</description></listheader><item><term> Less than zero</term><description> This instance is less than the object.</description></item><item><term> Zero</term><description> This instance is the same as the object.</description></item><item><term> Greater than zero</term><description> This instance is greater than the object  
+ <list type="table"><listheader><term>Return Value</term><description>Condition</description></listheader><item><term>Less than zero</term><description>This instance is less than the object.</description></item><item><term>Zero</term><description>This instance is the same as the object.</description></item><item><term>Greater than zero</term><description>This instance is greater than the object  
   
  -or-  
   
@@ -10047,7 +10046,7 @@ Returns <see langword="null" /> if the executed command returned no resultset, o
       <param name="value">The <see cref="T:System.Object" /> to be compared.</param>
       <returns>A signed number that indicates the relative values of the instance and the object.  
   
- <list type="table"><listheader><term> Return Value</term><description> Condition</description></listheader><item><term> Less than zero</term><description> This instance is less than the object.</description></item><item><term> Zero</term><description> This instance is the same as the object.</description></item><item><term> Greater than zero</term><description> This instance is greater than the object  
+ <list type="table"><listheader><term>Return Value</term><description>Condition</description></listheader><item><term>Less than zero</term><description>This instance is less than the object.</description></item><item><term>Zero</term><description>This instance is the same as the object.</description></item><item><term>Greater than zero</term><description>This instance is greater than the object  
   
  -or-  
   
@@ -10706,7 +10705,7 @@ Returns <see langword="null" /> if the executed command returned no resultset, o
       <param name="value">The <see cref="T:System.Data.SqlTypes.SqlDateTime" /> structure to be compared.</param>
       <returns>A signed number that indicates the relative values of the instance and the object.  
   
- <list type="table"><listheader><term> Return value</term><description> Condition</description></listheader><item><term> Less than zero</term><description> This instance is less than <see cref="T:System.Data.SqlTypes.SqlDateTime" />.</description></item><item><term> Zero</term><description> This instance is the same as <see cref="T:System.Data.SqlTypes.SqlDateTime" />.</description></item><item><term> Greater than zero</term><description> This instance is greater than <see cref="T:System.Data.SqlTypes.SqlDateTime" />  
+ <list type="table"><listheader><term>Return value</term><description>Condition</description></listheader><item><term>Less than zero</term><description>This instance is less than <see cref="T:System.Data.SqlTypes.SqlDateTime" />.</description></item><item><term>Zero</term><description>This instance is the same as <see cref="T:System.Data.SqlTypes.SqlDateTime" />.</description></item><item><term>Greater than zero</term><description>This instance is greater than <see cref="T:System.Data.SqlTypes.SqlDateTime" />  
   
  -or-  
   
@@ -10717,7 +10716,7 @@ Returns <see langword="null" /> if the executed command returned no resultset, o
       <param name="value">The <see cref="T:System.Object" /> to be compared.</param>
       <returns>A signed number that indicates the relative values of the instance and the object.  
   
- <list type="table"><listheader><term> Return value</term><description> Condition</description></listheader><item><term> Less than zero</term><description> This instance is less than the object.</description></item><item><term> Zero</term><description> This instance is the same as the object.</description></item><item><term> Greater than zero</term><description> This instance is greater than the object  
+ <list type="table"><listheader><term>Return value</term><description>Condition</description></listheader><item><term>Less than zero</term><description>This instance is less than the object.</description></item><item><term>Zero</term><description>This instance is the same as the object.</description></item><item><term>Greater than zero</term><description>This instance is greater than the object  
   
  -or-  
   
@@ -10978,7 +10977,7 @@ Returns <see langword="null" /> if the executed command returned no resultset, o
       <param name="value">The <see cref="T:System.Data.SqlTypes.SqlDecimal" /> to be compared.</param>
       <returns>A signed number that indicates the relative values of the instance and the object.
 
- <list type="table"><listheader><term> Return value</term><description> Condition</description></listheader><item><term> Less than zero</term><description> This instance is less than the object.</description></item><item><term> Zero</term><description> This instance is the same as the object.</description></item><item><term> Greater than zero</term><description> This instance is greater than the object
+ <list type="table"><listheader><term>Return value</term><description>Condition</description></listheader><item><term>Less than zero</term><description>This instance is less than the object.</description></item><item><term>Zero</term><description>This instance is the same as the object.</description></item><item><term>Greater than zero</term><description>This instance is greater than the object
 
  -or-
 
@@ -10989,7 +10988,7 @@ Returns <see langword="null" /> if the executed command returned no resultset, o
       <param name="value">The <see cref="T:System.Object" /> to be compared.</param>
       <returns>A signed number that indicates the relative values of the instance and the object.
 
- <list type="table"><listheader><term> Return Value</term><description> Condition</description></listheader><item><term> Less than zero</term><description> This instance is less than the object.</description></item><item><term> Zero</term><description> This instance is the same as the object.</description></item><item><term> Greater than zero</term><description> This instance is greater than the object
+ <list type="table"><listheader><term>Return Value</term><description>Condition</description></listheader><item><term>Less than zero</term><description>This instance is less than the object.</description></item><item><term>Zero</term><description>This instance is the same as the object.</description></item><item><term>Greater than zero</term><description>This instance is greater than the object
 
  -or-
 
@@ -11367,7 +11366,7 @@ Returns <see langword="null" /> if the executed command returned no resultset, o
       <param name="value">The <see cref="T:System.Data.SqlTypes.SqlDouble" /> to be compared.</param>
       <returns>A signed number that indicates the relative values of the instance and the object.  
   
- <list type="table"><listheader><term> Return value</term><description> Condition</description></listheader><item><term> Less than zero</term><description> This instance is less than the object.</description></item><item><term> Zero</term><description> This instance is the same as the object.</description></item><item><term> Greater than zero</term><description> This instance is greater than the object  
+ <list type="table"><listheader><term>Return value</term><description>Condition</description></listheader><item><term>Less than zero</term><description>This instance is less than the object.</description></item><item><term>Zero</term><description>This instance is the same as the object.</description></item><item><term>Greater than zero</term><description>This instance is greater than the object  
   
  -or-  
   
@@ -11378,7 +11377,7 @@ Returns <see langword="null" /> if the executed command returned no resultset, o
       <param name="value">The <see cref="T:System.Object" /> to compare.</param>
       <returns>A signed number that indicates the relative values of the instance and the object.  
   
- <list type="table"><listheader><term> Return value</term><description> Condition</description></listheader><item><term> Less than zero</term><description> This instance is less than the object.</description></item><item><term> Zero</term><description> This instance is the same as the object.</description></item><item><term> Greater than zero</term><description> This instance is greater than the object  
+ <list type="table"><listheader><term>Return value</term><description>Condition</description></listheader><item><term>Less than zero</term><description>This instance is less than the object.</description></item><item><term>Zero</term><description>This instance is the same as the object.</description></item><item><term>Greater than zero</term><description>This instance is greater than the object  
   
  -or-  
   
@@ -11684,7 +11683,7 @@ Returns <see langword="null" /> if the executed command returned no resultset, o
       <param name="value">The <see cref="T:System.Data.SqlTypes.SqlGuid" /> to be compared.</param>
       <returns>A signed number that indicates the relative values of the instance and the object.  
   
- <list type="table"><listheader><term> Return Value</term><description> Condition</description></listheader><item><term> Less than zero</term><description> This instance is less than object.</description></item><item><term> Zero</term><description> This instance is the same as object.</description></item><item><term> Greater than zero</term><description> This instance is greater than object  
+ <list type="table"><listheader><term>Return Value</term><description>Condition</description></listheader><item><term>Less than zero</term><description>This instance is less than object.</description></item><item><term>Zero</term><description>This instance is the same as object.</description></item><item><term>Greater than zero</term><description>This instance is greater than object  
   
  -or-  
   
@@ -11695,7 +11694,7 @@ Returns <see langword="null" /> if the executed command returned no resultset, o
       <param name="value">The <see cref="T:System.Object" /> to be compared.</param>
       <returns>A signed number that indicates the relative values of the instance and the object.  
   
- <list type="table"><listheader><term> Return Value</term><description> Condition</description></listheader><item><term> Less than zero</term><description> This instance is less than object.</description></item><item><term> Zero</term><description> This instance is the same as object.</description></item><item><term> Greater than zero</term><description> This instance is greater than object  
+ <list type="table"><listheader><term>Return Value</term><description>Condition</description></listheader><item><term>Less than zero</term><description>This instance is less than object.</description></item><item><term>Zero</term><description>This instance is the same as object.</description></item><item><term>Greater than zero</term><description>This instance is greater than object  
   
  -or-  
   
@@ -11908,14 +11907,14 @@ Returns <see langword="null" /> if the executed command returned no resultset, o
       <param name="value">The <see cref="T:System.Data.SqlTypes.SqlInt16" /> to be compared.</param>
       <returns>A signed number that indicates the relative values of the instance and the object.
 
- <list type="table"><listheader><term> Return value</term><description> Condition</description></listheader><item><term> Less than zero</term><description> This instance is less than the object.</description></item><item><term> Zero</term><description> This instance is the same as the object.</description></item><item><term> Greater than zero</term><description> This instance is greater than the object, or the object is a null reference (<see langword="Nothing" /> in Visual Basic)</description></item></list></returns>
+ <list type="table"><listheader><term>Return value</term><description>Condition</description></listheader><item><term>Less than zero</term><description>This instance is less than the object.</description></item><item><term>Zero</term><description>This instance is the same as the object.</description></item><item><term>Greater than zero</term><description>This instance is greater than the object, or the object is a null reference (<see langword="Nothing" /> in Visual Basic)</description></item></list></returns>
     </member>
     <member name="M:System.Data.SqlTypes.SqlInt16.CompareTo(System.Object)">
       <summary>Compares this <see cref="T:System.Data.SqlTypes.SqlInt16" /> instance to the supplied <see cref="T:System.Object" /> and returns an indication of their relative values.</summary>
       <param name="value">The <see cref="T:System.Object" /> to be compared.</param>
       <returns>A signed number that indicates the relative values of the instance and the object.
 
- <list type="table"><listheader><term> Return value</term><description> Condition</description></listheader><item><term> Less than zero</term><description> This instance is less than the object.</description></item><item><term> Zero</term><description> This instance is the same as the object.</description></item><item><term> Greater than zero</term><description> This instance is greater than the object
+ <list type="table"><listheader><term>Return value</term><description>Condition</description></listheader><item><term>Less than zero</term><description>This instance is less than the object.</description></item><item><term>Zero</term><description>This instance is the same as the object.</description></item><item><term>Greater than zero</term><description>This instance is greater than the object
 
  -or-
 
@@ -12282,7 +12281,7 @@ Returns <see langword="null" /> if the executed command returned no resultset, o
       <param name="value">The <see cref="T:System.Data.SqlTypes.SqlInt32" /> to be compared.</param>
       <returns>A signed number that indicates the relative values of the instance and the object.  
   
- <list type="table"><listheader><term> Return value</term><description> Condition</description></listheader><item><term> Less than zero</term><description> This instance is less than the object.</description></item><item><term> Zero</term><description> This instance is the same as the object.</description></item><item><term> Greater than zero</term><description> This instance is greater than the object  
+ <list type="table"><listheader><term>Return value</term><description>Condition</description></listheader><item><term>Less than zero</term><description>This instance is less than the object.</description></item><item><term>Zero</term><description>This instance is the same as the object.</description></item><item><term>Greater than zero</term><description>This instance is greater than the object  
   
  -or-  
   
@@ -12293,7 +12292,7 @@ Returns <see langword="null" /> if the executed command returned no resultset, o
       <param name="value">The <see cref="T:System.Object" /> to be compared.</param>
       <returns>A signed number that indicates the relative values of the instance and the object.  
   
- <list type="table"><listheader><term> Return value</term><description> Condition</description></listheader><item><term> Less than zero</term><description> This instance is less than the object.</description></item><item><term> Zero</term><description> This instance is the same as the object.</description></item><item><term> Greater than zero</term><description> This instance is greater than the object  
+ <list type="table"><listheader><term>Return value</term><description>Condition</description></listheader><item><term>Less than zero</term><description>This instance is less than the object.</description></item><item><term>Zero</term><description>This instance is the same as the object.</description></item><item><term>Greater than zero</term><description>This instance is greater than the object  
   
  -or-  
   
@@ -12660,7 +12659,7 @@ Returns <see langword="null" /> if the executed command returned no resultset, o
       <param name="value">The <see cref="T:System.Data.SqlTypes.SqlInt64" /> to be compared.</param>
       <returns>A signed number that indicates the relative values of the instance and the object.  
   
- <list type="table"><listheader><term> Return value</term><description> Condition</description></listheader><item><term> Less than zero</term><description> This instance is less than the object.</description></item><item><term> Zero</term><description> This instance is the same as the object.</description></item><item><term> Greater than zero</term><description> This instance is greater than the object  
+ <list type="table"><listheader><term>Return value</term><description>Condition</description></listheader><item><term>Less than zero</term><description>This instance is less than the object.</description></item><item><term>Zero</term><description>This instance is the same as the object.</description></item><item><term>Greater than zero</term><description>This instance is greater than the object  
   
  -or-  
   
@@ -12671,7 +12670,7 @@ Returns <see langword="null" /> if the executed command returned no resultset, o
       <param name="value">The <see cref="T:System.Object" /> to be compared.</param>
       <returns>A signed number that indicates the relative values of the instance and the object.  
   
- <list type="table"><listheader><term> Return value</term><description> Condition</description></listheader><item><term> Less than zero</term><description> This instance is less than the object.</description></item><item><term> Zero</term><description> This instance is the same as the object.</description></item><item><term> Greater than zero</term><description> This instance is greater than the object  
+ <list type="table"><listheader><term>Return value</term><description>Condition</description></listheader><item><term>Less than zero</term><description>This instance is less than the object.</description></item><item><term>Zero</term><description>This instance is the same as the object.</description></item><item><term>Greater than zero</term><description>This instance is greater than the object  
   
  -or-  
   
@@ -13038,7 +13037,7 @@ Returns <see langword="null" /> if the executed command returned no resultset, o
       <param name="value">The <see cref="T:System.Data.SqlTypes.SqlMoney" /> to be compared.</param>
       <returns>A signed number that indicates the relative values of the instance and the object.  
   
- <list type="table"><listheader><term> Return value</term><description> Condition</description></listheader><item><term> Less than zero</term><description> This instance is less than the object.</description></item><item><term> Zero</term><description> This instance is the same as the object.</description></item><item><term> Greater than zero</term><description> This instance is greater than the object  
+ <list type="table"><listheader><term>Return value</term><description>Condition</description></listheader><item><term>Less than zero</term><description>This instance is less than the object.</description></item><item><term>Zero</term><description>This instance is the same as the object.</description></item><item><term>Greater than zero</term><description>This instance is greater than the object  
   
  -or-  
   
@@ -13049,7 +13048,7 @@ Returns <see langword="null" /> if the executed command returned no resultset, o
       <param name="value">The <see cref="T:System.Object" /> to be compared.</param>
       <returns>A signed number that indicates the relative values of the instance and the object.  
   
- <list type="table"><listheader><term> Return value</term><description> Condition</description></listheader><item><term> Less than zero</term><description> This instance is less than the object.</description></item><item><term> Zero</term><description> This instance is the same as the object.</description></item><item><term> Greater than zero</term><description> This instance is greater than the object  
+ <list type="table"><listheader><term>Return value</term><description>Condition</description></listheader><item><term>Less than zero</term><description>This instance is less than the object.</description></item><item><term>Zero</term><description>This instance is the same as the object.</description></item><item><term>Greater than zero</term><description>This instance is greater than the object  
   
  -or-  
   
@@ -13421,7 +13420,7 @@ Returns <see langword="null" /> if the executed command returned no resultset, o
       <param name="value">The <see cref="T:System.Data.SqlTypes.SqlSingle" /> to be compared.</param>
       <returns>A signed number that indicates the relative values of the instance and the object.
 
- <list type="table"><listheader><term> Return Value</term><description> Condition</description></listheader><item><term> Less than zero</term><description> This instance is less than the object.</description></item><item><term> Zero</term><description> This instance is the same as the object.</description></item><item><term> Greater than zero</term><description> This instance is greater than the object
+ <list type="table"><listheader><term>Return Value</term><description>Condition</description></listheader><item><term>Less than zero</term><description>This instance is less than the object.</description></item><item><term>Zero</term><description>This instance is the same as the object.</description></item><item><term>Greater than zero</term><description>This instance is greater than the object
 
  -or-
 
@@ -13432,7 +13431,7 @@ Returns <see langword="null" /> if the executed command returned no resultset, o
       <param name="value">The <see cref="T:System.Object" /> to be compared.</param>
       <returns>A signed number that indicates the relative values of the instance and the object.
 
- <list type="table"><listheader><term> Return value</term><description> Condition</description></listheader><item><term> Less than zero</term><description> This instance is less than the object.</description></item><item><term> Zero</term><description> This instance is the same as the object.</description></item><item><term> Greater than zero</term><description> This instance is greater than the object
+ <list type="table"><listheader><term>Return value</term><description>Condition</description></listheader><item><term>Less than zero</term><description>This instance is less than the object.</description></item><item><term>Zero</term><description>This instance is the same as the object.</description></item><item><term>Greater than zero</term><description>This instance is greater than the object
 
  -or-
 
@@ -13796,7 +13795,7 @@ Returns <see langword="null" /> if the executed command returned no resultset, o
       <param name="value">The <see cref="T:System.Data.SqlTypes.SqlString" /> to be compared.</param>
       <returns>A signed number that indicates the relative values of the instance and the object.  
   
- <list type="table"><listheader><term> Return value</term><description> Condition</description></listheader><item><term> Less than zero</term><description> This instance is less than the object.</description></item><item><term> Zero</term><description> This instance is the same as the object.</description></item><item><term> Greater than zero</term><description> This instance is greater than the object  
+ <list type="table"><listheader><term>Return value</term><description>Condition</description></listheader><item><term>Less than zero</term><description>This instance is less than the object.</description></item><item><term>Zero</term><description>This instance is the same as the object.</description></item><item><term>Greater than zero</term><description>This instance is greater than the object  
   
  -or-  
   
@@ -13807,7 +13806,7 @@ Returns <see langword="null" /> if the executed command returned no resultset, o
       <param name="value">The <see cref="T:System.Object" /> to be compared.</param>
       <returns>A signed number that indicates the relative values of the instance and the object.  
   
- <list type="table"><listheader><term> Return Value</term><description> Condition</description></listheader><item><term> Less than zero</term><description> This instance is less than the object.</description></item><item><term> Zero</term><description> This instance is the same as the object.</description></item><item><term> Greater than zero</term><description> This instance is greater than the object  
+ <list type="table"><listheader><term>Return Value</term><description>Condition</description></listheader><item><term>Less than zero</term><description>This instance is less than the object.</description></item><item><term>Zero</term><description>This instance is the same as the object.</description></item><item><term>Greater than zero</term><description>This instance is greater than the object  
   
  -or-  
   

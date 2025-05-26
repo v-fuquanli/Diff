@@ -406,9 +406,7 @@
       <param name="associatedData">The extra data associated with the signature, which must also be provided during verification.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="detachedContent" /> or <paramref name="signer" /> is <see langword="null" />.</exception>
-      <exception cref="T:System.ArgumentException">
-
-                The <see cref="P:System.Security.Cryptography.Cose.CoseSigner.ProtectedHeaders" /> and <see cref="P:System.Security.Cryptography.Cose.CoseSigner.UnprotectedHeaders" /> collections in <paramref name="signer" /> have one or more labels in common.
+      <exception cref="T:System.ArgumentException">The <see cref="P:System.Security.Cryptography.Cose.CoseSigner.ProtectedHeaders" /> and <see cref="P:System.Security.Cryptography.Cose.CoseSigner.UnprotectedHeaders" /> collections in <paramref name="signer" /> have one or more labels in common.
 
 -or-
 
@@ -441,9 +439,7 @@ One or more of the labels specified in a <see cref="P:System.Security.Cryptograp
       <param name="associatedData">The extra data associated with the signature, which must also be provided during verification.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="signer" /> is <see langword="null" />.</exception>
-      <exception cref="T:System.ArgumentException">
-
-                The <see cref="P:System.Security.Cryptography.Cose.CoseSigner.ProtectedHeaders" /> and <see cref="P:System.Security.Cryptography.Cose.CoseSigner.UnprotectedHeaders" /> collections in <paramref name="signer" /> have one or more labels in common.
+      <exception cref="T:System.ArgumentException">The <see cref="P:System.Security.Cryptography.Cose.CoseSigner.ProtectedHeaders" /> and <see cref="P:System.Security.Cryptography.Cose.CoseSigner.UnprotectedHeaders" /> collections in <paramref name="signer" /> have one or more labels in common.
 
 -or-
 
@@ -478,9 +474,7 @@ One or more of the labels specified in a <see cref="P:System.Security.Cryptograp
       <param name="associatedData">The extra data associated with the signature, which must also be provided during verification.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="signer" /> is <see langword="null" />.</exception>
-      <exception cref="T:System.ArgumentException">
-
-                The <see cref="P:System.Security.Cryptography.Cose.CoseSigner.ProtectedHeaders" /> and <see cref="P:System.Security.Cryptography.Cose.CoseSigner.UnprotectedHeaders" /> collections in <paramref name="signer" /> have one or more labels in common.
+      <exception cref="T:System.ArgumentException">The <see cref="P:System.Security.Cryptography.Cose.CoseSigner.ProtectedHeaders" /> and <see cref="P:System.Security.Cryptography.Cose.CoseSigner.UnprotectedHeaders" /> collections in <paramref name="signer" /> have one or more labels in common.
 
 -or-
 
@@ -493,9 +487,7 @@ One or more of the labels specified in a <see cref="P:System.Security.Cryptograp
       <param name="associatedData">The extra data associated with the signature, which must also be provided during verification.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="signer" /> is <see langword="null" />.</exception>
-      <exception cref="T:System.ArgumentException">
-
-                The <see cref="P:System.Security.Cryptography.Cose.CoseSigner.ProtectedHeaders" /> and <see cref="P:System.Security.Cryptography.Cose.CoseSigner.UnprotectedHeaders" /> collections in <paramref name="signer" /> have one or more labels in common.
+      <exception cref="T:System.ArgumentException">The <see cref="P:System.Security.Cryptography.Cose.CoseSigner.ProtectedHeaders" /> and <see cref="P:System.Security.Cryptography.Cose.CoseSigner.UnprotectedHeaders" /> collections in <paramref name="signer" /> have one or more labels in common.
 
 -or-
 
@@ -531,9 +523,7 @@ One or more of the labels specified in a <see cref="P:System.Security.Cryptograp
       <param name="associatedData">The extra data associated with the signature, which must also be provided during verification.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="detachedContent" /> or <paramref name="signer" /> is <see langword="null" />.</exception>
-      <exception cref="T:System.ArgumentException">
-
-                The <paramref name="protectedHeaders" /> and <paramref name="unprotectedHeaders" /> collections have one or more labels in common.
+      <exception cref="T:System.ArgumentException">The <paramref name="protectedHeaders" /> and <paramref name="unprotectedHeaders" /> collections have one or more labels in common.
 
 -or-
 
@@ -578,9 +568,7 @@ One or more of the labels specified in a <see cref="P:System.Security.Cryptograp
       <param name="associatedData">The extra data associated with the signature, which must also be provided during verification.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="signer" /> is <see langword="null" />.</exception>
-      <exception cref="T:System.ArgumentException">
-
-                The <paramref name="protectedHeaders" /> and <paramref name="unprotectedHeaders" /> collections have one or more labels in common.
+      <exception cref="T:System.ArgumentException">The <paramref name="protectedHeaders" /> and <paramref name="unprotectedHeaders" /> collections have one or more labels in common.
 
 -or-
 
@@ -627,9 +615,7 @@ One or more of the labels specified in a <see cref="P:System.Security.Cryptograp
       <param name="associatedData">The extra data associated with the signature, which must also be provided during verification.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="embeddedContent" /> or <paramref name="signer" /> is <see langword="null" />.</exception>
-      <exception cref="T:System.ArgumentException">
-
-                The <paramref name="protectedHeaders" /> and <paramref name="unprotectedHeaders" /> collections have one or more labels in common.
+      <exception cref="T:System.ArgumentException">The <paramref name="protectedHeaders" /> and <paramref name="unprotectedHeaders" /> collections have one or more labels in common.
 
 -or-
 
@@ -649,9 +635,7 @@ One or more of the labels specified in a <see cref="P:System.Security.Cryptograp
       <param name="associatedData">The extra data associated with the signature, which must also be provided during verification.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="signer" /> is <see langword="null" />.</exception>
-      <exception cref="T:System.ArgumentException">
-
-                The <paramref name="protectedHeaders" /> and <paramref name="unprotectedHeaders" /> collections have one or more labels in common.
+      <exception cref="T:System.ArgumentException">The <paramref name="protectedHeaders" /> and <paramref name="unprotectedHeaders" /> collections have one or more labels in common.
 
 -or-
 
@@ -666,9 +650,7 @@ One or more of the labels specified in a <see cref="P:System.Security.Cryptograp
       <summary>Attempts to encode this message into the specified buffer.</summary>
       <param name="destination">The buffer in which to write the encoded value.</param>
       <param name="bytesWritten">On success, receives the number of bytes written to <paramref name="destination" />.</param>
-      <exception cref="T:System.InvalidOperationException">
-
-                The <see cref="P:System.Security.Cryptography.Cose.CoseMessage.ProtectedHeaders" /> and <see cref="P:System.Security.Cryptography.Cose.CoseMessage.UnprotectedHeaders" /> collections have one or more labels in common.
+      <exception cref="T:System.InvalidOperationException">The <see cref="P:System.Security.Cryptography.Cose.CoseMessage.ProtectedHeaders" /> and <see cref="P:System.Security.Cryptography.Cose.CoseMessage.UnprotectedHeaders" /> collections have one or more labels in common.
 
 -or-
 
@@ -687,9 +669,7 @@ The message does not contain at least one signature.</exception>
       <param name="associatedData">The extra data associated with the signature, which must also be provided during verification.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="signer" /> is <see langword="null" />.</exception>
-      <exception cref="T:System.ArgumentException">
-
-                The <paramref name="protectedHeaders" /> and <paramref name="unprotectedHeaders" /> collections have one or more labels in common.
+      <exception cref="T:System.ArgumentException">The <paramref name="protectedHeaders" /> and <paramref name="unprotectedHeaders" /> collections have one or more labels in common.
 
 -or-
 
@@ -712,9 +692,7 @@ One or more of the labels specified in a <see cref="P:System.Security.Cryptograp
       <param name="associatedData">The extra data associated with the signature, which must also be provided during verification.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="signer" /> is <see langword="null" />.</exception>
-      <exception cref="T:System.ArgumentException">
-
-                The <paramref name="protectedHeaders" /> and <paramref name="unprotectedHeaders" /> collections have one or more labels in common.
+      <exception cref="T:System.ArgumentException">The <paramref name="protectedHeaders" /> and <paramref name="unprotectedHeaders" /> collections have one or more labels in common.
 
 -or-
 
@@ -744,9 +722,7 @@ One or more of the labels specified in a <see cref="P:System.Security.Cryptograp
       <param name="associatedData">The extra data associated with the signature, which must also be provided during verification.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="detachedContent" /> or <paramref name="signer" /> is <see langword="null" />.</exception>
-      <exception cref="T:System.ArgumentException">
-
-                The <see cref="P:System.Security.Cryptography.Cose.CoseSigner.ProtectedHeaders" /> and <see cref="P:System.Security.Cryptography.Cose.CoseSigner.UnprotectedHeaders" /> collections in <paramref name="signer" /> have one or more labels in common.
+      <exception cref="T:System.ArgumentException">The <see cref="P:System.Security.Cryptography.Cose.CoseSigner.ProtectedHeaders" /> and <see cref="P:System.Security.Cryptography.Cose.CoseSigner.UnprotectedHeaders" /> collections in <paramref name="signer" /> have one or more labels in common.
 
 -or-
 
@@ -779,9 +755,7 @@ One or more of the labels specified in a <see cref="P:System.Security.Cryptograp
       <param name="associatedData">The extra data associated with the signature, which must also be provided during verification.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="signer" /> is <see langword="null" />.</exception>
-      <exception cref="T:System.ArgumentException">
-
-                The <see cref="P:System.Security.Cryptography.Cose.CoseSigner.ProtectedHeaders" /> and <see cref="P:System.Security.Cryptography.Cose.CoseSigner.UnprotectedHeaders" /> collections in <paramref name="signer" /> have one or more labels in common.
+      <exception cref="T:System.ArgumentException">The <see cref="P:System.Security.Cryptography.Cose.CoseSigner.ProtectedHeaders" /> and <see cref="P:System.Security.Cryptography.Cose.CoseSigner.UnprotectedHeaders" /> collections in <paramref name="signer" /> have one or more labels in common.
 
 -or-
 
@@ -816,9 +790,7 @@ One or more of the labels specified in a <see cref="P:System.Security.Cryptograp
       <param name="associatedData">The extra data associated with the signature, which must also be provided during verification.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="embeddedContent" /> or <paramref name="signer" /> is <see langword="null" />.</exception>
-      <exception cref="T:System.ArgumentException">
-
-                The <see cref="P:System.Security.Cryptography.Cose.CoseSigner.ProtectedHeaders" /> and <see cref="P:System.Security.Cryptography.Cose.CoseSigner.UnprotectedHeaders" /> collections in <paramref name="signer" /> have one or more labels in common.
+      <exception cref="T:System.ArgumentException">The <see cref="P:System.Security.Cryptography.Cose.CoseSigner.ProtectedHeaders" /> and <see cref="P:System.Security.Cryptography.Cose.CoseSigner.UnprotectedHeaders" /> collections in <paramref name="signer" /> have one or more labels in common.
 
 -or-
 
@@ -832,9 +804,7 @@ One or more of the labels specified in a <see cref="P:System.Security.Cryptograp
       <param name="associatedData">The extra data associated with the signature, which must also be provided during verification.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="signer" /> is <see langword="null" />.</exception>
-      <exception cref="T:System.ArgumentException">
-
-                The <see cref="P:System.Security.Cryptography.Cose.CoseSigner.ProtectedHeaders" /> and <see cref="P:System.Security.Cryptography.Cose.CoseSigner.UnprotectedHeaders" /> collections in <paramref name="signer" /> have one or more labels in common.
+      <exception cref="T:System.ArgumentException">The <see cref="P:System.Security.Cryptography.Cose.CoseSigner.ProtectedHeaders" /> and <see cref="P:System.Security.Cryptography.Cose.CoseSigner.UnprotectedHeaders" /> collections in <paramref name="signer" /> have one or more labels in common.
 
 -or-
 
@@ -858,9 +828,7 @@ One or more of the labels specified in a <see cref="P:System.Security.Cryptograp
       <param name="associatedData">The extra data associated with the signature, which must also be provided during verification.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="signer" /> is <see langword="null" />.</exception>
-      <exception cref="T:System.ArgumentException">
-
-                The <see cref="P:System.Security.Cryptography.Cose.CoseSigner.ProtectedHeaders" /> and <see cref="P:System.Security.Cryptography.Cose.CoseSigner.UnprotectedHeaders" /> collections in <paramref name="signer" /> have one or more labels in common.
+      <exception cref="T:System.ArgumentException">The <see cref="P:System.Security.Cryptography.Cose.CoseSigner.ProtectedHeaders" /> and <see cref="P:System.Security.Cryptography.Cose.CoseSigner.UnprotectedHeaders" /> collections in <paramref name="signer" /> have one or more labels in common.
 
 -or-
 
@@ -877,9 +845,7 @@ One or more of the labels specified in a <see cref="P:System.Security.Cryptograp
       <param name="associatedData">The extra data associated with the signature, which must also be provided during verification.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="signer" /> is <see langword="null" />.</exception>
-      <exception cref="T:System.ArgumentException">
-
-                The <see cref="P:System.Security.Cryptography.Cose.CoseSigner.ProtectedHeaders" /> and <see cref="P:System.Security.Cryptography.Cose.CoseSigner.UnprotectedHeaders" /> collections in <paramref name="signer" /> have one or more labels in common.
+      <exception cref="T:System.ArgumentException">The <see cref="P:System.Security.Cryptography.Cose.CoseSigner.ProtectedHeaders" /> and <see cref="P:System.Security.Cryptography.Cose.CoseSigner.UnprotectedHeaders" /> collections in <paramref name="signer" /> have one or more labels in common.
 
 -or-
 

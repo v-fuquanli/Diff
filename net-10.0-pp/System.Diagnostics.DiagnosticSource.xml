@@ -2008,8 +2008,7 @@ To create an ObservableUpDownCounter object, use the <see cref="Overload:System.
     <member name="M:System.Diagnostics.TagList.CopyTo(System.Span{System.Collections.Generic.KeyValuePair{System.String,System.Object}})">
       <summary>Copies the contents of this <see cref="T:System.Diagnostics.TagList" /> into a destination <paramref name="tags" /> span.</summary>
       <param name="tags">The destination <see cref="T:System.Span`1" /> object.</param>
-      <exception cref="T:System.ArgumentException">
-          The number of elements in the source <see cref="T:System.Diagnostics.TagList" /> is greater than the number of elements that the destination span.</exception>
+      <exception cref="T:System.ArgumentException">The number of elements in the source <see cref="T:System.Diagnostics.TagList" /> is greater than the number of elements that the destination span.</exception>
     </member>
     <member name="M:System.Diagnostics.TagList.GetEnumerator">
       <summary>Returns an enumerator that iterates through the <see cref="T:System.Diagnostics.TagList" />.</summary>
@@ -2049,8 +2048,7 @@ To create an ObservableUpDownCounter object, use the <see cref="Overload:System.
     </member>
     <member name="P:System.Diagnostics.TagList.IsReadOnly">
       <summary>Gets a value indicating whether the <see cref="T:System.Diagnostics.TagList" /> is read-only. This property will always return <see langword="false" />.</summary>
-      <returns>
-          Always returns <see langword="false" />.</returns>
+      <returns>Always returns <see langword="false" />.</returns>
     </member>
     <member name="P:System.Diagnostics.TagList.Item(System.Int32)">
       <summary>Gets or sets the tags at the specified index.</summary>

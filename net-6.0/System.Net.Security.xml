@@ -990,8 +990,7 @@ Authentication has not occurred.</exception>
     </member>
     <member name="P:System.Net.Security.SslApplicationProtocol.Protocol">
       <summary>Gets a current TLS application protocol represented by this <see cref="T:System.Net.Security.SslApplicationProtocol" />.</summary>
-      <returns>
-          The read-only byte memory representing a TLS application protocol.</returns>
+      <returns>The read-only byte memory representing a TLS application protocol.</returns>
     </member>
     <member name="T:System.Net.Security.SslCertificateTrust">
       <summary>Represents a trust policy for use with SSL/TLS connections.</summary>
@@ -1030,8 +1029,7 @@ Authentication has not occurred.</exception>
     </member>
     <member name="P:System.Net.Security.SslClientAuthenticationOptions.CertificateRevocationCheckMode">
       <summary>Gets or sets the certificate revocation mode for certificate validation.</summary>
-      <exception cref="T:System.ArgumentNullException">
-          The value contains an invalid enumeration value.</exception>
+      <exception cref="T:System.ArgumentNullException">The value contains an invalid enumeration value.</exception>
       <returns>One of the values in <see cref="T:System.Security.Cryptography.X509Certificates.X509RevocationMode" />. The default is <see langword="NoCheck" />.</returns>
     </member>
     <member name="P:System.Net.Security.SslClientAuthenticationOptions.CipherSuitesPolicy">
@@ -1084,8 +1082,7 @@ Authentication has not occurred.</exception>
     </member>
     <member name="P:System.Net.Security.SslServerAuthenticationOptions.CertificateRevocationCheckMode">
       <summary>Gets or sets the certificate revocation mode for certificate validation.</summary>
-      <exception cref="T:System.ArgumentException">
-          The value contains an invalid enumeration value.</exception>
+      <exception cref="T:System.ArgumentException">The value contains an invalid enumeration value.</exception>
       <returns>One of the values in <see cref="T:System.Security.Cryptography.X509Certificates.X509RevocationMode" />: <see langword="NoCheck" />, <see langword="Online" />, or <see langword="Offline" />. The default is <see langword="NoCheck" />.</returns>
     </member>
     <member name="P:System.Net.Security.SslServerAuthenticationOptions.CipherSuitesPolicy">
@@ -1100,8 +1097,7 @@ Authentication has not occurred.</exception>
     </member>
     <member name="P:System.Net.Security.SslServerAuthenticationOptions.EncryptionPolicy">
       <summary>Gets or sets the <see cref="T:System.Net.Security.EncryptionPolicy" />.</summary>
-      <exception cref="T:System.ArgumentException">
-          The value contains an invalid enumeration value.</exception>
+      <exception cref="T:System.ArgumentException">The value contains an invalid enumeration value.</exception>
       <returns>The default value is <see cref="F:System.Net.Security.EncryptionPolicy.RequireEncryption" /></returns>
     </member>
     <member name="P:System.Net.Security.SslServerAuthenticationOptions.RemoteCertificateValidationCallback">
@@ -1420,8 +1416,7 @@ Authentication has not occurred.</exception>
       <param name="optionsCallback">The callback delegate.</param>
       <param name="state">The state object to pass to <paramref name="optionsCallback" /> when the callback is invoked.</param>
       <param name="cancellationToken">The token to monitor for cancellation requests.</param>
-      <exception cref="T:System.ArgumentNullException">
-          Either <see cref="P:System.Net.Security.SslServerAuthenticationOptions.ServerCertificateSelectionCallback" /> or <see cref="P:System.Net.Security.SslServerAuthenticationOptions.ServerCertificate" /> or <see cref="P:System.Net.Security.SslServerAuthenticationOptions.ServerCertificateContext" /> is <see langword="null" /> and <see cref="T:System.Net.Security.LocalCertificateSelectionCallback" /> is not set in the <see langword="SslStream" /> constructor.</exception>
+      <exception cref="T:System.ArgumentNullException">Either <see cref="P:System.Net.Security.SslServerAuthenticationOptions.ServerCertificateSelectionCallback" /> or <see cref="P:System.Net.Security.SslServerAuthenticationOptions.ServerCertificate" /> or <see cref="P:System.Net.Security.SslServerAuthenticationOptions.ServerCertificateContext" /> is <see langword="null" /> and <see cref="T:System.Net.Security.LocalCertificateSelectionCallback" /> is not set in the <see langword="SslStream" /> constructor.</exception>
       <exception cref="T:System.Security.Authentication.AuthenticationException">The authentication failed and left this object in an unusable state.</exception>
       <exception cref="T:System.InvalidOperationException">Authentication has already occurred.
 
@@ -1440,8 +1435,7 @@ Authentication has not occurred.</exception>
       <summary>Authenticates the server and optionally the client in a client-server connection as an asynchronous operation. The authentication process uses information specified in the <paramref name="sslServerAuthenticationOptions" /> property bag.</summary>
       <param name="sslServerAuthenticationOptions">The property bag for the SSL connection.</param>
       <param name="cancellationToken">The token to monitor for cancellation requests.</param>
-      <exception cref="T:System.ArgumentNullException">
-          Either <see cref="P:System.Net.Security.SslServerAuthenticationOptions.ServerCertificateSelectionCallback" /> or <see cref="P:System.Net.Security.SslServerAuthenticationOptions.ServerCertificate" /> or <see cref="P:System.Net.Security.SslServerAuthenticationOptions.ServerCertificateContext" /> is <see langword="null" /> and <see cref="T:System.Net.Security.LocalCertificateSelectionCallback" /> is not set in the <see langword="SslStream" /> constructor.</exception>
+      <exception cref="T:System.ArgumentNullException">Either <see cref="P:System.Net.Security.SslServerAuthenticationOptions.ServerCertificateSelectionCallback" /> or <see cref="P:System.Net.Security.SslServerAuthenticationOptions.ServerCertificate" /> or <see cref="P:System.Net.Security.SslServerAuthenticationOptions.ServerCertificateContext" /> is <see langword="null" /> and <see cref="T:System.Net.Security.LocalCertificateSelectionCallback" /> is not set in the <see langword="SslStream" /> constructor.</exception>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="sslServerAuthenticationOptions" /> is <see langword="null" />.</exception>
       <exception cref="T:System.Security.Authentication.AuthenticationException">The authentication failed and left this object in an unusable state.</exception>

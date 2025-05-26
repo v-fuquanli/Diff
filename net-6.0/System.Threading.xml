@@ -499,8 +499,7 @@ There was some other error. The HResult property may provide more information.</
       <exception cref="T:System.IO.PathTooLongException">The <paramref name="name" /> is too long. Length restrictions may depend on the operating system or configuration.</exception>
       <exception cref="T:System.UnauthorizedAccessException">The named event exists and has access control security, but the user does not have <see cref="F:System.Security.AccessControl.EventWaitHandleRights.FullControl" />.</exception>
       <exception cref="T:System.Threading.WaitHandleCannotBeOpenedException">A synchronization object with the provided <paramref name="name" /> cannot be created. A synchronization object of a different type might have the same name.</exception>
-      <exception cref="T:System.ArgumentException">
-          The <paramref name="mode" /> enum value was out of legal range.
+      <exception cref="T:System.ArgumentException">The <paramref name="mode" /> enum value was out of legal range.
 
 -or-
 
@@ -522,8 +521,7 @@ There was some other error. The HResult property may provide more information.</
       <exception cref="T:System.IO.PathTooLongException">The <paramref name="name" /> is too long. Length restrictions may depend on the operating system or configuration.</exception>
       <exception cref="T:System.UnauthorizedAccessException">The named event exists and has access control security, but the user does not have <see cref="F:System.Security.AccessControl.EventWaitHandleRights.FullControl" />.</exception>
       <exception cref="T:System.Threading.WaitHandleCannotBeOpenedException">A synchronization object with the provided <paramref name="name" /> cannot be created. A synchronization object of a different type might have the same name.</exception>
-      <exception cref="T:System.ArgumentException">
-          The <paramref name="mode" /> enum value was out of legal range.
+      <exception cref="T:System.ArgumentException">The <paramref name="mode" /> enum value was out of legal range.
 
 -or-
 
@@ -1421,8 +1419,7 @@ There was some other error. The HResult property may provide more information.</
       <exception cref="T:System.IO.DirectoryNotFoundException">Windows only: <paramref name="name" /> specified an unknown namespace. See Object Names for more information.</exception>
       <exception cref="T:System.IO.PathTooLongException">The <paramref name="name" /> is too long. Length restrictions may depend on the operating system or configuration.</exception>
       <exception cref="T:System.Threading.WaitHandleCannotBeOpenedException">A synchronization object with the provided <paramref name="name" /> cannot be created. A synchronization object of a different type might have the same name.</exception>
-      <exception cref="T:System.ArgumentException">
-          .NET Framework only: <paramref name="name" /> is longer than MAX_PATH (260 characters).</exception>
+      <exception cref="T:System.ArgumentException">.NET Framework only: <paramref name="name" /> is longer than MAX_PATH (260 characters).</exception>
     </member>
     <member name="M:System.Threading.Mutex.#ctor(System.Boolean,System.String)">
       <summary>Initializes a new instance of the <see cref="T:System.Threading.Mutex" /> class with a Boolean value that indicates whether the calling thread should have initial ownership of the mutex, and a string that is the name of the mutex.</summary>
@@ -1439,8 +1436,7 @@ There was some other error. The HResult property may provide more information.</
       <exception cref="T:System.IO.DirectoryNotFoundException">Windows only: <paramref name="name" /> specified an unknown namespace. See Object Names for more information.</exception>
       <exception cref="T:System.IO.PathTooLongException">The <paramref name="name" /> is too long. Length restrictions may depend on the operating system or configuration.</exception>
       <exception cref="T:System.Threading.WaitHandleCannotBeOpenedException">A synchronization object with the provided <paramref name="name" /> cannot be created. A synchronization object of a different type might have the same name.</exception>
-      <exception cref="T:System.ArgumentException">
-          .NET Framework only: <paramref name="name" /> is longer than MAX_PATH (260 characters).</exception>
+      <exception cref="T:System.ArgumentException">.NET Framework only: <paramref name="name" /> is longer than MAX_PATH (260 characters).</exception>
     </member>
     <member name="M:System.Threading.Mutex.#ctor(System.Boolean)">
       <summary>Initializes a new instance of the <see cref="T:System.Threading.Mutex" /> class with a Boolean value that indicates whether the calling thread should have initial ownership of the mutex.</summary>

@@ -31872,7 +31872,7 @@
     <member name="M:System.Runtime.Intrinsics.X86.Sse41.RoundToPositiveInfinity(System.Runtime.Intrinsics.Vector128{System.Single})">
       <summary>
         <para>__m128 _mm_round_ps (__m128 a, _MM_FROUND_TO_POS_INF |_MM_FROUND_NO_EXC)</para>
-        <para> ROUNDPS xmm, xmm/m128, imm8(10)</para>
+        <para>ROUNDPS xmm, xmm/m128, imm8(10)</para>
       </summary>
       <param name="value" />
     </member>

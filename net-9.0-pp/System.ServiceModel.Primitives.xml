@@ -361,7 +361,7 @@
       <summary>A pre-defined claim that represents the system entity.</summary>
       <returns>A <see cref="T:System.IdentityModel.Claims.Claim" /> object that represents the system entity. This <see cref="T:System.IdentityModel.Claims.Claim" /> object has the property values shown in the following table.
 
- <list type="table"><listheader><term> Property</term><description> Value</description></listheader><item><term><see cref="P:System.IdentityModel.Claims.Claim.ClaimType" /></term><description><see cref="P:System.IdentityModel.Claims.ClaimTypes.System" /></description></item><item><term><see cref="P:System.IdentityModel.Claims.Claim.Resource" /></term><description><see langword="System" /></description></item><item><term><see cref="P:System.IdentityModel.Claims.Claim.Right" /></term><description><see cref="P:System.IdentityModel.Claims.Rights.Identity" /></description></item></list></returns>
+ <list type="table"><listheader><term>Property</term><description>Value</description></listheader><item><term><see cref="P:System.IdentityModel.Claims.Claim.ClaimType" /></term><description><see cref="P:System.IdentityModel.Claims.ClaimTypes.System" /></description></item><item><term><see cref="P:System.IdentityModel.Claims.Claim.Resource" /></term><description><see langword="System" /></description></item><item><term><see cref="P:System.IdentityModel.Claims.Claim.Right" /></term><description><see cref="P:System.IdentityModel.Claims.Rights.Identity" /></description></item></list></returns>
     </member>
     <member name="T:System.IdentityModel.Claims.ClaimSet">
       <summary>Represents the collection of claims that are associated with an entity.</summary>
@@ -8383,8 +8383,7 @@ Note: In .NET for Windows Store apps or the Portable Class Library, catch the ba
     <member name="P:System.ServiceModel.Security.SecurityMessageProperty.SenderIdPrefix">
       <summary>Gets or sets the sender ID prefix for this message.</summary>
       <exception cref="T:System.ArgumentNullException">The property value is <see langword="null" />.</exception>
-      <exception cref="T:System.ArgumentOutOfRangeException">
-          The length of the property value is 0.
+      <exception cref="T:System.ArgumentOutOfRangeException">The length of the property value is 0.
 
 -or-
 

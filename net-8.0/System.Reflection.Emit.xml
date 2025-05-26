@@ -2466,9 +2466,9 @@
       <param name="nonPublic">Indicates whether the accessor should be returned if it is non-public. <see langword="true" /> if non-public methods are to be included; otherwise, <see langword="false" />.</param>
       <returns>The property's <see langword="Set" /> method, or <see langword="null" />, as shown in the following table.
 
- <list type="table"><listheader><term> Value</term><description> Condition</description></listheader><item><term> A <see cref="T:System.Reflection.MethodInfo" /> object representing the Set method for this property.</term><description> The set accessor is public.
+ <list type="table"><listheader><term>Value</term><description>Condition</description></listheader><item><term>A <see cref="T:System.Reflection.MethodInfo" /> object representing the Set method for this property.</term><description>The set accessor is public.
 
- <paramref name="nonPublic" /> is true and non-public methods can be returned.</description></item><item><term> null</term><description><paramref name="nonPublic" /> is true, but the property is read-only.
+ <paramref name="nonPublic" /> is true and non-public methods can be returned.</description></item><item><term>null</term><description><paramref name="nonPublic" /> is true, but the property is read-only.
 
  <paramref name="nonPublic" /> is false and the set accessor is non-public.</description></item></list></returns>
     </member>

@@ -189,8 +189,7 @@
     </member>
     <member name="P:System.Net.Sockets.IPv6MulticastOption.Group">
       <summary>Gets or sets the IP address of a multicast group.</summary>
-      <exception cref="T:System.ArgumentNullException">
-          The value to set is <see langword="null" />.</exception>
+      <exception cref="T:System.ArgumentNullException">The value to set is <see langword="null" />.</exception>
       <returns>An <see cref="T:System.Net.IPAddress" /> that contains the Internet address of a multicast group.</returns>
     </member>
     <member name="P:System.Net.Sockets.IPv6MulticastOption.InterfaceIndex">
@@ -253,8 +252,7 @@
     </member>
     <member name="P:System.Net.Sockets.MulticastOption.Group">
       <summary>Gets or sets the IP address of a multicast group.</summary>
-      <exception cref="T:System.ArgumentNullException">
-          .NET 5 and later versions: The value to set is <see langword="null" />.</exception>
+      <exception cref="T:System.ArgumentNullException">.NET 5 and later versions: The value to set is <see langword="null" />.</exception>
       <returns>The IP address of a multicast group.</returns>
     </member>
     <member name="P:System.Net.Sockets.MulticastOption.InterfaceIndex">

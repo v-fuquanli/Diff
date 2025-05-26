@@ -3439,12 +3439,10 @@ There is remaining data in the stream.</exception>
         <see langword="true" /> if the value can be successfully obtained; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="T:System.Text.Json.Schema.JsonSchemaExporter">
-      <summary>
-            Maps .NET types to JSON schema objects using contract metadata from <see cref="T:System.Text.Json.Serialization.Metadata.JsonTypeInfo" /> instances.</summary>
+      <summary>Maps .NET types to JSON schema objects using contract metadata from <see cref="T:System.Text.Json.Serialization.Metadata.JsonTypeInfo" /> instances.</summary>
     </member>
     <member name="M:System.Text.Json.Schema.JsonSchemaExporter.GetJsonSchemaAsNode(System.Text.Json.JsonSerializerOptions,System.Type,System.Text.Json.Schema.JsonSchemaExporterOptions)">
-      <summary>
-            Generates a JSON schema corresponding to the contract metadata of the specified type.</summary>
+      <summary>Generates a JSON schema corresponding to the contract metadata of the specified type.</summary>
       <param name="options">The options instance from which to resolve the contract metadata.</param>
       <param name="type">The root type for which to generate the JSON schema.</param>
       <param name="exporterOptions">The exporterOptions object controlling the schema generation.</param>
@@ -3453,8 +3451,7 @@ There is remaining data in the stream.</exception>
       <returns>A new <see cref="T:System.Text.Json.Nodes.JsonNode" /> instance defining the JSON schema for <paramref name="type" />.</returns>
     </member>
     <member name="M:System.Text.Json.Schema.JsonSchemaExporter.GetJsonSchemaAsNode(System.Text.Json.Serialization.Metadata.JsonTypeInfo,System.Text.Json.Schema.JsonSchemaExporterOptions)">
-      <summary>
-            Generates a JSON schema corresponding to the specified contract metadata.</summary>
+      <summary>Generates a JSON schema corresponding to the specified contract metadata.</summary>
       <param name="typeInfo">The contract metadata for which to generate the schema.</param>
       <param name="exporterOptions">The exporterOptions object controlling the schema generation.</param>
       <exception cref="T:System.ArgumentNullException">One of the specified parameters is <see langword="null" />.</exception>
@@ -3462,41 +3459,32 @@ There is remaining data in the stream.</exception>
       <returns>A new <see cref="T:System.Text.Json.Nodes.JsonNode" /> instance defining the JSON schema for <paramref name="typeInfo" />.</returns>
     </member>
     <member name="T:System.Text.Json.Schema.JsonSchemaExporterContext">
-      <summary>
-            Defines the context in which a JSON schema within a type graph is being generated.</summary>
+      <summary>Defines the context in which a JSON schema within a type graph is being generated.</summary>
     </member>
     <member name="P:System.Text.Json.Schema.JsonSchemaExporterContext.BaseTypeInfo">
-      <summary>
-            Gets the type info for the polymorphic base type if generated as a derived type.</summary>
+      <summary>Gets the type info for the polymorphic base type if generated as a derived type.</summary>
     </member>
     <member name="P:System.Text.Json.Schema.JsonSchemaExporterContext.Path">
-      <summary>
-            Gets the path to the schema document currently being generated.</summary>
+      <summary>Gets the path to the schema document currently being generated.</summary>
     </member>
     <member name="P:System.Text.Json.Schema.JsonSchemaExporterContext.PropertyInfo">
-      <summary>
-            Gets the <see cref="T:System.Text.Json.Serialization.Metadata.JsonPropertyInfo" /> if the schema is being generated for a property.</summary>
+      <summary>Gets the <see cref="T:System.Text.Json.Serialization.Metadata.JsonPropertyInfo" /> if the schema is being generated for a property.</summary>
     </member>
     <member name="P:System.Text.Json.Schema.JsonSchemaExporterContext.TypeInfo">
-      <summary>
-            Gets the <see cref="T:System.Text.Json.Serialization.Metadata.JsonTypeInfo" /> for the type being processed.</summary>
+      <summary>Gets the <see cref="T:System.Text.Json.Serialization.Metadata.JsonTypeInfo" /> for the type being processed.</summary>
     </member>
     <member name="T:System.Text.Json.Schema.JsonSchemaExporterOptions">
-      <summary>
-            Controls the behavior of the <see cref="T:System.Text.Json.Schema.JsonSchemaExporter" /> class.</summary>
+      <summary>Controls the behavior of the <see cref="T:System.Text.Json.Schema.JsonSchemaExporter" /> class.</summary>
     </member>
     <member name="M:System.Text.Json.Schema.JsonSchemaExporterOptions.#ctor" />
     <member name="P:System.Text.Json.Schema.JsonSchemaExporterOptions.Default">
-      <summary>
-            Gets the default configuration object used by <see cref="T:System.Text.Json.Schema.JsonSchemaExporter" />.</summary>
+      <summary>Gets the default configuration object used by <see cref="T:System.Text.Json.Schema.JsonSchemaExporter" />.</summary>
     </member>
     <member name="P:System.Text.Json.Schema.JsonSchemaExporterOptions.TransformSchemaNode">
-      <summary>
-            Gets a callback that is invoked for every schema that is generated within the type graph.</summary>
+      <summary>Gets a callback that is invoked for every schema that is generated within the type graph.</summary>
     </member>
     <member name="P:System.Text.Json.Schema.JsonSchemaExporterOptions.TreatNullObliviousAsNonNullable">
-      <summary>
-            Gets a value indicating whether non-nullable schemas should be generated for null oblivious reference types.</summary>
+      <summary>Gets a value indicating whether non-nullable schemas should be generated for null oblivious reference types.</summary>
     </member>
     <member name="T:System.Text.Json.Serialization.IJsonOnDeserialized">
       <summary>Specifies that the JSON type should have its <see cref="M:System.Text.Json.Serialization.IJsonOnDeserialized.OnDeserialized" /> method called after deserialization occurs.</summary>

@@ -5,20 +5,17 @@
   </assembly>
   <members>
     <member name="T:Microsoft.Extensions.DependencyInjection.EncoderServiceCollectionExtensions">
-      <summary>
-            Extension methods for setting up web encoding services in an <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />.</summary>
+      <summary>Extension methods for setting up web encoding services in an <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />.</summary>
     </member>
     <member name="M:Microsoft.Extensions.DependencyInjection.EncoderServiceCollectionExtensions.AddWebEncoders(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Microsoft.Extensions.WebEncoders.WebEncoderOptions})">
-      <summary>
-            Adds <see cref="T:System.Text.Encodings.Web.HtmlEncoder" />, <see cref="T:System.Text.Encodings.Web.JavaScriptEncoder" /> and <see cref="T:System.Text.Encodings.Web.UrlEncoder" />
+      <summary>Adds <see cref="T:System.Text.Encodings.Web.HtmlEncoder" />, <see cref="T:System.Text.Encodings.Web.JavaScriptEncoder" /> and <see cref="T:System.Text.Encodings.Web.UrlEncoder" />
             to the specified <paramref name="services" />.</summary>
       <param name="services">The <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />.</param>
       <param name="setupAction">An <see cref="T:System.Action`1" /> to configure the provided <see cref="T:Microsoft.Extensions.WebEncoders.WebEncoderOptions" />.</param>
       <returns>The <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" /> so that additional calls can be chained.</returns>
     </member>
     <member name="M:Microsoft.Extensions.DependencyInjection.EncoderServiceCollectionExtensions.AddWebEncoders(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
-      <summary>
-            Adds <see cref="T:System.Text.Encodings.Web.HtmlEncoder" />, <see cref="T:System.Text.Encodings.Web.JavaScriptEncoder" /> and <see cref="T:System.Text.Encodings.Web.UrlEncoder" />
+      <summary>Adds <see cref="T:System.Text.Encodings.Web.HtmlEncoder" />, <see cref="T:System.Text.Encodings.Web.JavaScriptEncoder" /> and <see cref="T:System.Text.Encodings.Web.UrlEncoder" />
             to the specified <paramref name="services" />.</summary>
       <param name="services">The <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />.</param>
       <returns>The <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" /> so that additional calls can be chained.</returns>
@@ -171,13 +168,11 @@
       <returns>The maximum number of characters.</returns>
     </member>
     <member name="T:Microsoft.Extensions.WebEncoders.WebEncoderOptions">
-      <summary>
-            Specifies options common to all three encoders (HtmlEncode, JavaScriptEncode, UrlEncode).</summary>
+      <summary>Specifies options common to all three encoders (HtmlEncode, JavaScriptEncode, UrlEncode).</summary>
     </member>
     <member name="M:Microsoft.Extensions.WebEncoders.WebEncoderOptions.#ctor" />
     <member name="P:Microsoft.Extensions.WebEncoders.WebEncoderOptions.TextEncoderSettings">
-      <summary>
-            Specifies which code points are allowed to be represented unescaped by the encoders.</summary>
+      <summary>Specifies which code points are allowed to be represented unescaped by the encoders.</summary>
     </member>
   </members>
 </doc>

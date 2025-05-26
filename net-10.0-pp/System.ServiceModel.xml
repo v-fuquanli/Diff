@@ -8167,8 +8167,7 @@ Note: In .NET for Windows Store apps or the Portable Class Library, catch the ba
     <member name="P:System.ServiceModel.Security.SecurityMessageProperty.SenderIdPrefix">
       <summary>Gets or sets the sender ID prefix for this message.</summary>
       <exception cref="T:System.ArgumentNullException">The property value is <see langword="null" />.</exception>
-      <exception cref="T:System.ArgumentOutOfRangeException">
-          The length of the property value is 0.
+      <exception cref="T:System.ArgumentOutOfRangeException">The length of the property value is 0.
 
 -or-
 

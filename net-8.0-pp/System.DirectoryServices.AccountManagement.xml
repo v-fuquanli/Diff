@@ -165,8 +165,7 @@
     </member>
     <member name="M:System.DirectoryServices.AccountManagement.AuthenticablePrincipal.UnlockAccount">
       <summary>Unlocks the account if it is currently locked out.</summary>
-      <exception cref="T:System.DirectoryServices.AccountManagement.PrincipalOperationException">
-          The caller does not have appropriate rights.
+      <exception cref="T:System.DirectoryServices.AccountManagement.PrincipalOperationException">The caller does not have appropriate rights.
 
 -or-
 

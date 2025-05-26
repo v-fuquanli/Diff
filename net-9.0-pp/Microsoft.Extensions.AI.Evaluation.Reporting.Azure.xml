@@ -5,67 +5,50 @@
   </assembly>
   <members>
     <member name="T:Microsoft.Extensions.AI.Evaluation.Reporting.Storage.AzureStorageReportingConfiguration">
-      <summary>
-            Contains factory method for creating a <see cref="T:Microsoft.Extensions.AI.Evaluation.Reporting.ReportingConfiguration" /> that persists
+      <summary>Contains factory method for creating a <see cref="T:Microsoft.Extensions.AI.Evaluation.Reporting.ReportingConfiguration" /> that persists
             <see cref="T:Microsoft.Extensions.AI.Evaluation.Reporting.ScenarioRunResult" />s to Azure Storage and also uses the storage to cache AI responses.</summary>
     </member>
     <member name="M:Microsoft.Extensions.AI.Evaluation.Reporting.Storage.AzureStorageReportingConfiguration.Create(Azure.Storage.Files.DataLake.DataLakeDirectoryClient,System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.Evaluation.IEvaluator},Microsoft.Extensions.AI.Evaluation.ChatConfiguration,System.Boolean,System.Nullable{System.TimeSpan},System.Collections.Generic.IEnumerable{System.String},System.String,System.Func{Microsoft.Extensions.AI.Evaluation.EvaluationMetric,Microsoft.Extensions.AI.Evaluation.EvaluationMetricInterpretation},System.Collections.Generic.IEnumerable{System.String})">
-      <summary>
-            Creates a <see cref="T:Microsoft.Extensions.AI.Evaluation.Reporting.ReportingConfiguration" /> that persists <see cref="T:Microsoft.Extensions.AI.Evaluation.Reporting.ScenarioRunResult" />s to Azure Storage
+      <summary>Creates a <see cref="T:Microsoft.Extensions.AI.Evaluation.Reporting.ReportingConfiguration" /> that persists <see cref="T:Microsoft.Extensions.AI.Evaluation.Reporting.ScenarioRunResult" />s to Azure Storage
             and also uses the storage to cache AI responses.</summary>
-      <param name="client">
-            A <see cref="T:Azure.Storage.Files.DataLake.DataLakeDirectoryClient" /> with access to an Azure Storage container under which the
+      <param name="client">A <see cref="T:Azure.Storage.Files.DataLake.DataLakeDirectoryClient" /> with access to an Azure Storage container under which the
             <see cref="T:Microsoft.Extensions.AI.Evaluation.Reporting.ScenarioRunResult" />s and all cached AI responses should be stored.</param>
-      <param name="evaluators">
-            The set of <see cref="T:Microsoft.Extensions.AI.Evaluation.IEvaluator" />s that should be invoked to evaluate AI responses.</param>
-      <param name="chatConfiguration">
-            A <see cref="T:Microsoft.Extensions.AI.Evaluation.ChatConfiguration" /> that specifies the <see cref="T:Microsoft.Extensions.AI.IChatClient" /> that is used by AI-based
+      <param name="evaluators">The set of <see cref="T:Microsoft.Extensions.AI.Evaluation.IEvaluator" />s that should be invoked to evaluate AI responses.</param>
+      <param name="chatConfiguration">A <see cref="T:Microsoft.Extensions.AI.Evaluation.ChatConfiguration" /> that specifies the <see cref="T:Microsoft.Extensions.AI.IChatClient" /> that is used by AI-based
             <paramref name="evaluators" /> included in the returned <see cref="T:Microsoft.Extensions.AI.Evaluation.Reporting.ReportingConfiguration" />. Can be omitted if
             none of the included <paramref name="evaluators" /> are AI-based.</param>
       <param name="enableResponseCaching">
         <see langword="true" /> to enable caching of AI responses; <see langword="false" /> otherwise.</param>
-      <param name="timeToLiveForCacheEntries">
-            An optional <see cref="T:System.TimeSpan" /> that specifies the maximum amount of time that cached AI responses should
+      <param name="timeToLiveForCacheEntries">An optional <see cref="T:System.TimeSpan" /> that specifies the maximum amount of time that cached AI responses should
             survive in the cache before they are considered expired and evicted.</param>
-      <param name="cachingKeys">
-            An optional collection of unique strings that should be hashed when generating the cache keys for cached AI
+      <param name="cachingKeys">An optional collection of unique strings that should be hashed when generating the cache keys for cached AI
             responses. See <see cref="P:Microsoft.Extensions.AI.Evaluation.Reporting.ReportingConfiguration.CachingKeys" /> for more information about this concept.</param>
-      <param name="executionName">
-            The name of the current execution. See <see cref="P:Microsoft.Extensions.AI.Evaluation.Reporting.ScenarioRun.ExecutionName" /> for more information about this
+      <param name="executionName">The name of the current execution. See <see cref="P:Microsoft.Extensions.AI.Evaluation.Reporting.ScenarioRun.ExecutionName" /> for more information about this
             concept. Uses a fixed default value <c>"Default"</c> if omitted.</param>
-      <param name="evaluationMetricInterpreter">
-            An optional function that can be used to override <see cref="T:Microsoft.Extensions.AI.Evaluation.EvaluationMetricInterpretation" />s for
+      <param name="evaluationMetricInterpreter">An optional function that can be used to override <see cref="T:Microsoft.Extensions.AI.Evaluation.EvaluationMetricInterpretation" />s for
             <see cref="T:Microsoft.Extensions.AI.Evaluation.EvaluationMetric" />s returned from evaluations that use the returned
             <see cref="T:Microsoft.Extensions.AI.Evaluation.Reporting.ReportingConfiguration" />. The supplied function can either return a new
             <see cref="T:Microsoft.Extensions.AI.Evaluation.EvaluationMetricInterpretation" /> for any <see cref="T:Microsoft.Extensions.AI.Evaluation.EvaluationMetric" /> that is supplied to it, or
             return <see langword="null" /> if the <see cref="P:Microsoft.Extensions.AI.Evaluation.EvaluationMetric.Interpretation" /> should be left unchanged.</param>
-      <param name="tags">
-            A optional set of text tags applicable to all <see cref="T:Microsoft.Extensions.AI.Evaluation.Reporting.ScenarioRun" />s created using the returned
+      <param name="tags">A optional set of text tags applicable to all <see cref="T:Microsoft.Extensions.AI.Evaluation.Reporting.ScenarioRun" />s created using the returned
             <see cref="T:Microsoft.Extensions.AI.Evaluation.Reporting.ReportingConfiguration" />.</param>
-      <returns>
-            A <see cref="T:Microsoft.Extensions.AI.Evaluation.Reporting.ReportingConfiguration" /> that persists <see cref="T:Microsoft.Extensions.AI.Evaluation.Reporting.ScenarioRunResult" />s to Azure Storage
+      <returns>A <see cref="T:Microsoft.Extensions.AI.Evaluation.Reporting.ReportingConfiguration" /> that persists <see cref="T:Microsoft.Extensions.AI.Evaluation.Reporting.ScenarioRunResult" />s to Azure Storage
             and also uses Azure Storage to cache AI responses.</returns>
     </member>
     <member name="T:Microsoft.Extensions.AI.Evaluation.Reporting.Storage.AzureStorageResponseCacheProvider">
-      <summary>
-            An <see cref="T:Microsoft.Extensions.AI.Evaluation.Reporting.IEvaluationResponseCacheProvider" /> that returns an <see cref="T:Microsoft.Extensions.Caching.Distributed.IDistributedCache" /> that can cache AI
+      <summary>An <see cref="T:Microsoft.Extensions.AI.Evaluation.Reporting.IEvaluationResponseCacheProvider" /> that returns an <see cref="T:Microsoft.Extensions.Caching.Distributed.IDistributedCache" /> that can cache AI
             responses for a particular <see cref="T:Microsoft.Extensions.AI.Evaluation.Reporting.ScenarioRun" /> under an Azure Storage container.</summary>
-      <param name="client">
-            A <see cref="T:Azure.Storage.Files.DataLake.DataLakeDirectoryClient" /> with access to an Azure Storage container under which the cached AI
+      <param name="client">A <see cref="T:Azure.Storage.Files.DataLake.DataLakeDirectoryClient" /> with access to an Azure Storage container under which the cached AI
             responses should be stored.</param>
-      <param name="timeToLiveForCacheEntries">
-            An optional <see cref="T:System.TimeSpan" /> that specifies the maximum amount of time that cached AI responses should
+      <param name="timeToLiveForCacheEntries">An optional <see cref="T:System.TimeSpan" /> that specifies the maximum amount of time that cached AI responses should
             survive in the cache before they are considered expired and evicted.</param>
     </member>
     <member name="M:Microsoft.Extensions.AI.Evaluation.Reporting.Storage.AzureStorageResponseCacheProvider.#ctor(Azure.Storage.Files.DataLake.DataLakeDirectoryClient,System.Nullable{System.TimeSpan})">
-      <summary>
-            An <see cref="T:Microsoft.Extensions.AI.Evaluation.Reporting.IEvaluationResponseCacheProvider" /> that returns an <see cref="T:Microsoft.Extensions.Caching.Distributed.IDistributedCache" /> that can cache AI
+      <summary>An <see cref="T:Microsoft.Extensions.AI.Evaluation.Reporting.IEvaluationResponseCacheProvider" /> that returns an <see cref="T:Microsoft.Extensions.Caching.Distributed.IDistributedCache" /> that can cache AI
             responses for a particular <see cref="T:Microsoft.Extensions.AI.Evaluation.Reporting.ScenarioRun" /> under an Azure Storage container.</summary>
-      <param name="client">
-            A <see cref="T:Azure.Storage.Files.DataLake.DataLakeDirectoryClient" /> with access to an Azure Storage container under which the cached AI
+      <param name="client">A <see cref="T:Azure.Storage.Files.DataLake.DataLakeDirectoryClient" /> with access to an Azure Storage container under which the cached AI
             responses should be stored.</param>
-      <param name="timeToLiveForCacheEntries">
-            An optional <see cref="T:System.TimeSpan" /> that specifies the maximum amount of time that cached AI responses should
+      <param name="timeToLiveForCacheEntries">An optional <see cref="T:System.TimeSpan" /> that specifies the maximum amount of time that cached AI responses should
             survive in the cache before they are considered expired and evicted.</param>
     </member>
     <member name="M:Microsoft.Extensions.AI.Evaluation.Reporting.Storage.AzureStorageResponseCacheProvider.DeleteExpiredCacheEntriesAsync(System.Threading.CancellationToken)">
@@ -90,19 +73,15 @@
       <returns>A <xref data-throw-if-not-resolved="true" uid="System.Threading.Tasks.ValueTask"></xref> that represents the asynchronous operation.</returns>
     </member>
     <member name="T:Microsoft.Extensions.AI.Evaluation.Reporting.Storage.AzureStorageResultStore">
-      <summary>
-            An <see cref="T:Microsoft.Extensions.AI.Evaluation.Reporting.IEvaluationResultStore" /> implementation that stores <see cref="T:Microsoft.Extensions.AI.Evaluation.Reporting.ScenarioRunResult" />s under an Azure
+      <summary>An <see cref="T:Microsoft.Extensions.AI.Evaluation.Reporting.IEvaluationResultStore" /> implementation that stores <see cref="T:Microsoft.Extensions.AI.Evaluation.Reporting.ScenarioRunResult" />s under an Azure
             Storage container.</summary>
-      <param name="client">
-            A <see cref="T:Azure.Storage.Files.DataLake.DataLakeDirectoryClient" /> with access to an Azure Storage container under which the
+      <param name="client">A <see cref="T:Azure.Storage.Files.DataLake.DataLakeDirectoryClient" /> with access to an Azure Storage container under which the
             <see cref="T:Microsoft.Extensions.AI.Evaluation.Reporting.ScenarioRunResult" />s should be stored.</param>
     </member>
     <member name="M:Microsoft.Extensions.AI.Evaluation.Reporting.Storage.AzureStorageResultStore.#ctor(Azure.Storage.Files.DataLake.DataLakeDirectoryClient)">
-      <summary>
-            An <see cref="T:Microsoft.Extensions.AI.Evaluation.Reporting.IEvaluationResultStore" /> implementation that stores <see cref="T:Microsoft.Extensions.AI.Evaluation.Reporting.ScenarioRunResult" />s under an Azure
+      <summary>An <see cref="T:Microsoft.Extensions.AI.Evaluation.Reporting.IEvaluationResultStore" /> implementation that stores <see cref="T:Microsoft.Extensions.AI.Evaluation.Reporting.ScenarioRunResult" />s under an Azure
             Storage container.</summary>
-      <param name="client">
-            A <see cref="T:Azure.Storage.Files.DataLake.DataLakeDirectoryClient" /> with access to an Azure Storage container under which the
+      <param name="client">A <see cref="T:Azure.Storage.Files.DataLake.DataLakeDirectoryClient" /> with access to an Azure Storage container under which the
             <see cref="T:Microsoft.Extensions.AI.Evaluation.Reporting.ScenarioRunResult" />s should be stored.</param>
     </member>
     <member name="M:Microsoft.Extensions.AI.Evaluation.Reporting.Storage.AzureStorageResultStore.DeleteResultsAsync(System.String,System.String,System.String,System.Threading.CancellationToken)">

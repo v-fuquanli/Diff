@@ -5,12 +5,10 @@
   </assembly>
   <members>
     <member name="T:Microsoft.Extensions.Compliance.Redaction.FakeRedactionBuilderExtensions">
-      <summary>
-            Extensions that allow registering a fake redactor in the application.</summary>
+      <summary>Extensions that allow registering a fake redactor in the application.</summary>
     </member>
     <member name="M:Microsoft.Extensions.Compliance.Redaction.FakeRedactionBuilderExtensions.SetFakeRedactor(Microsoft.Extensions.Compliance.Redaction.IRedactionBuilder,Microsoft.Extensions.Compliance.Classification.DataClassificationSet[])">
-      <summary>
-            Sets the fake redactor to use for a set of data classifications.</summary>
+      <summary>Sets the fake redactor to use for a set of data classifications.</summary>
       <param name="builder">The builder to attach the redactor to.</param>
       <param name="classifications">The data classifications for which the redactor type should be used.</param>
       <exception cref="T:System.ArgumentNullException">
@@ -18,8 +16,7 @@
       <returns>The value of <paramref name="builder" />.</returns>
     </member>
     <member name="M:Microsoft.Extensions.Compliance.Redaction.FakeRedactionBuilderExtensions.SetFakeRedactor(Microsoft.Extensions.Compliance.Redaction.IRedactionBuilder,Microsoft.Extensions.Configuration.IConfigurationSection,Microsoft.Extensions.Compliance.Classification.DataClassificationSet[])">
-      <summary>
-            Sets the fake redactor to use for a set of data classifications.</summary>
+      <summary>Sets the fake redactor to use for a set of data classifications.</summary>
       <param name="builder">The builder to attach the redactor to.</param>
       <param name="section">Configuration section.</param>
       <param name="classifications">The data classifications for which the redactor type should be used.</param>
@@ -28,8 +25,7 @@
       <returns>The value of <paramref name="builder" />.</returns>
     </member>
     <member name="M:Microsoft.Extensions.Compliance.Redaction.FakeRedactionBuilderExtensions.SetFakeRedactor(Microsoft.Extensions.Compliance.Redaction.IRedactionBuilder,System.Action{Microsoft.Extensions.Compliance.Testing.FakeRedactorOptions},Microsoft.Extensions.Compliance.Classification.DataClassificationSet[])">
-      <summary>
-            Sets the fake redactor to use for a set of data classifications.</summary>
+      <summary>Sets the fake redactor to use for a set of data classifications.</summary>
       <param name="builder">The builder to attach the redactor to.</param>
       <param name="configure">Configuration function.</param>
       <param name="classifications">The data classifications for which the redactor type should be used.</param>
@@ -38,41 +34,33 @@
       <returns>The value of <paramref name="builder" />.</returns>
     </member>
     <member name="T:Microsoft.Extensions.Compliance.Testing.FakeRedactionCollector">
-      <summary>
-            Usage history of fake redaction types.</summary>
+      <summary>Usage history of fake redaction types.</summary>
     </member>
     <member name="M:Microsoft.Extensions.Compliance.Testing.FakeRedactionCollector.#ctor" />
     <member name="P:Microsoft.Extensions.Compliance.Testing.FakeRedactionCollector.AllRedactedData">
-      <summary>
-            Gets the full log of all redaction events that happened.</summary>
+      <summary>Gets the full log of all redaction events that happened.</summary>
     </member>
     <member name="P:Microsoft.Extensions.Compliance.Testing.FakeRedactionCollector.AllRedactorRequests">
-      <summary>
-            Gets the full log of all redactor request events that happened.</summary>
+      <summary>Gets the full log of all redactor request events that happened.</summary>
     </member>
     <member name="P:Microsoft.Extensions.Compliance.Testing.FakeRedactionCollector.LastRedactedData">
-      <summary>
-            Gets the last redaction "event".</summary>
+      <summary>Gets the last redaction "event".</summary>
       <exception cref="T:System.InvalidOperationException">There has been no previous redaction event.</exception>
     </member>
     <member name="P:Microsoft.Extensions.Compliance.Testing.FakeRedactionCollector.LastRedactorRequested">
-      <summary>
-            Gets the last redactor request "event".</summary>
+      <summary>Gets the last redactor request "event".</summary>
       <exception cref="T:System.InvalidOperationException">There has been no previous redactor request event.</exception>
     </member>
     <member name="T:Microsoft.Extensions.Compliance.Testing.FakeRedactor">
-      <summary>
-            Redactor designed for use in tests.</summary>
+      <summary>Redactor designed for use in tests.</summary>
     </member>
     <member name="M:Microsoft.Extensions.Compliance.Testing.FakeRedactor.#ctor(Microsoft.Extensions.Options.IOptions{Microsoft.Extensions.Compliance.Testing.FakeRedactorOptions},Microsoft.Extensions.Compliance.Testing.FakeRedactionCollector)">
-      <summary>
-            Initializes a new instance of the <see cref="T:Microsoft.Extensions.Compliance.Testing.FakeRedactor" /> class.</summary>
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.Extensions.Compliance.Testing.FakeRedactor" /> class.</summary>
       <param name="options">The options to control the redactor's behavior.</param>
       <param name="collector">Collects info about redacted values.</param>
     </member>
     <member name="M:Microsoft.Extensions.Compliance.Testing.FakeRedactor.Create(Microsoft.Extensions.Compliance.Testing.FakeRedactorOptions,Microsoft.Extensions.Compliance.Testing.FakeRedactionCollector)">
-      <summary>
-            Initializes a new instance of the <see cref="T:Microsoft.Extensions.Compliance.Testing.FakeRedactor" /> class.</summary>
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.Extensions.Compliance.Testing.FakeRedactor" /> class.</summary>
       <param name="options">The options to control behavior of redactor.</param>
       <param name="collector">Collects info about redacted values.</param>
       <returns>New instance of <see cref="T:Microsoft.Extensions.Compliance.Testing.FakeRedactor" />.</returns>
@@ -89,26 +77,21 @@
       <returns>Number of characters produced when redacting the given source input.</returns>
     </member>
     <member name="P:Microsoft.Extensions.Compliance.Testing.FakeRedactor.EventCollector">
-      <summary>
-            Gets the collector of redaction events.</summary>
+      <summary>Gets the collector of redaction events.</summary>
     </member>
     <member name="T:Microsoft.Extensions.Compliance.Testing.FakeRedactorOptions">
-      <summary>
-            Options to control the fake redactor.</summary>
+      <summary>Options to control the fake redactor.</summary>
     </member>
     <member name="M:Microsoft.Extensions.Compliance.Testing.FakeRedactorOptions.#ctor" />
     <member name="P:Microsoft.Extensions.Compliance.Testing.FakeRedactorOptions.RedactionFormat">
-      <summary>
-            Gets or sets a value indicating how to format redacted data.</summary>
+      <summary>Gets or sets a value indicating how to format redacted data.</summary>
       <returns>The default is "{0}".</returns>
     </member>
     <member name="T:Microsoft.Extensions.Compliance.Testing.FakeRedactorProvider">
-      <summary>
-            A provider of fake redactors.</summary>
+      <summary>A provider of fake redactors.</summary>
     </member>
     <member name="M:Microsoft.Extensions.Compliance.Testing.FakeRedactorProvider.#ctor(Microsoft.Extensions.Compliance.Testing.FakeRedactorOptions,Microsoft.Extensions.Compliance.Testing.FakeRedactionCollector)">
-      <summary>
-            Initializes a new instance of the <see cref="T:Microsoft.Extensions.Compliance.Testing.FakeRedactorProvider" /> class.</summary>
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.Extensions.Compliance.Testing.FakeRedactorProvider" /> class.</summary>
       <param name="options">Fake redactor options.</param>
       <param name="eventCollector">Collects information about redactor requests.</param>
     </member>
@@ -118,159 +101,129 @@
       <returns>A redactor suitable to redact data of the given class.</returns>
     </member>
     <member name="P:Microsoft.Extensions.Compliance.Testing.FakeRedactorProvider.Collector">
-      <summary>
-            Gets the collector that stores data about usage of fake redaction classes.</summary>
+      <summary>Gets the collector that stores data about usage of fake redaction classes.</summary>
     </member>
     <member name="T:Microsoft.Extensions.Compliance.Testing.FakeTaxonomy">
-      <summary>
-            Simple data classifications for testing.</summary>
+      <summary>Simple data classifications for testing.</summary>
     </member>
     <member name="P:Microsoft.Extensions.Compliance.Testing.FakeTaxonomy.PrivateData">
-      <summary>
-            Gets the private data classification.</summary>
+      <summary>Gets the private data classification.</summary>
     </member>
     <member name="P:Microsoft.Extensions.Compliance.Testing.FakeTaxonomy.PublicData">
-      <summary>
-            Gets the public data classification.</summary>
+      <summary>Gets the public data classification.</summary>
     </member>
     <member name="P:Microsoft.Extensions.Compliance.Testing.FakeTaxonomy.TaxonomyName">
-      <summary>
-            Gets the name of this classification taxonomy.</summary>
+      <summary>Gets the name of this classification taxonomy.</summary>
     </member>
     <member name="T:Microsoft.Extensions.Compliance.Testing.PrivateDataAttribute">
-      <summary>
-            Private data.</summary>
+      <summary>Private data.</summary>
     </member>
     <member name="M:Microsoft.Extensions.Compliance.Testing.PrivateDataAttribute.#ctor">
-      <summary>
-            Initializes a new instance of the <see cref="T:Microsoft.Extensions.Compliance.Testing.PrivateDataAttribute" /> class.</summary>
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.Extensions.Compliance.Testing.PrivateDataAttribute" /> class.</summary>
     </member>
     <member name="T:Microsoft.Extensions.Compliance.Testing.PublicDataAttribute">
-      <summary>
-            Public data.</summary>
+      <summary>Public data.</summary>
     </member>
     <member name="M:Microsoft.Extensions.Compliance.Testing.PublicDataAttribute.#ctor">
-      <summary>
-            Initializes a new instance of the <see cref="T:Microsoft.Extensions.Compliance.Testing.PublicDataAttribute" /> class.</summary>
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.Extensions.Compliance.Testing.PublicDataAttribute" /> class.</summary>
     </member>
     <member name="T:Microsoft.Extensions.Compliance.Testing.RedactedData">
-      <summary>
-            State representing a single redaction "event".</summary>
+      <summary>State representing a single redaction "event".</summary>
     </member>
     <member name="M:Microsoft.Extensions.Compliance.Testing.RedactedData.#ctor(System.String,System.String,System.Int32)">
-      <summary>
-            Initializes a new instance of the <see cref="T:Microsoft.Extensions.Compliance.Testing.RedactedData" /> struct.</summary>
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.Extensions.Compliance.Testing.RedactedData" /> struct.</summary>
       <param name="original">Data that was redacted.</param>
       <param name="redacted">Redacted data.</param>
       <param name="sequenceNumber">Order in which data were redacted.</param>
     </member>
     <member name="M:Microsoft.Extensions.Compliance.Testing.RedactedData.Equals(Microsoft.Extensions.Compliance.Testing.RedactedData)">
-      <summary>
-            Checks if object is equal to this instance of <see cref="T:Microsoft.Extensions.Compliance.Testing.RedactedData" />.</summary>
+      <summary>Checks if object is equal to this instance of <see cref="T:Microsoft.Extensions.Compliance.Testing.RedactedData" />.</summary>
       <param name="other">Instance to check for equality.</param>
       <returns>
         <see langword="true" /> if object instances are equal <see langword="false" /> otherwise.</returns>
     </member>
     <member name="M:Microsoft.Extensions.Compliance.Testing.RedactedData.Equals(System.Object)">
-      <summary>
-            Checks if object is equal to this instance of <see cref="T:System.Object" />.</summary>
+      <summary>Checks if object is equal to this instance of <see cref="T:System.Object" />.</summary>
       <param name="obj">Object to check for equality.</param>
       <returns>
         <see langword="true" /> if object instances are equal <see langword="false" /> otherwise.</returns>
     </member>
     <member name="M:Microsoft.Extensions.Compliance.Testing.RedactedData.GetHashCode">
-      <summary>
-            Get hashcode of given <see cref="T:Microsoft.Extensions.Compliance.Testing.RedactedData" />.</summary>
+      <summary>Get hashcode of given <see cref="T:Microsoft.Extensions.Compliance.Testing.RedactedData" />.</summary>
       <returns>Hash code.</returns>
     </member>
     <member name="M:Microsoft.Extensions.Compliance.Testing.RedactedData.op_Equality(Microsoft.Extensions.Compliance.Testing.RedactedData,Microsoft.Extensions.Compliance.Testing.RedactedData)">
-      <summary>
-            Compares two instances.</summary>
+      <summary>Compares two instances.</summary>
       <param name="left">Left argument of the comparison.</param>
       <param name="right">Right argument of the comparison.</param>
       <returns>
         <see langword="true" /> when equal, <see langword="false" /> otherwise.</returns>
     </member>
     <member name="M:Microsoft.Extensions.Compliance.Testing.RedactedData.op_Inequality(Microsoft.Extensions.Compliance.Testing.RedactedData,Microsoft.Extensions.Compliance.Testing.RedactedData)">
-      <summary>
-            Compares two instances.</summary>
+      <summary>Compares two instances.</summary>
       <param name="left">Left argument of the comparison.</param>
       <param name="right">Right argument of the comparison.</param>
       <returns>
         <see langword="true" /> when not equal, <see langword="false" /> otherwise.</returns>
     </member>
     <member name="P:Microsoft.Extensions.Compliance.Testing.RedactedData.Original">
-      <summary>
-            Gets the original data that got redacted.</summary>
+      <summary>Gets the original data that got redacted.</summary>
     </member>
     <member name="P:Microsoft.Extensions.Compliance.Testing.RedactedData.Redacted">
-      <summary>
-            Gets the redacted data.</summary>
+      <summary>Gets the redacted data.</summary>
     </member>
     <member name="P:Microsoft.Extensions.Compliance.Testing.RedactedData.SequenceNumber">
-      <summary>
-            Gets the order in which data was redacted.</summary>
+      <summary>Gets the order in which data was redacted.</summary>
     </member>
     <member name="T:Microsoft.Extensions.Compliance.Testing.RedactorRequested">
-      <summary>
-            State representing a single request for a redactor.</summary>
+      <summary>State representing a single request for a redactor.</summary>
     </member>
     <member name="M:Microsoft.Extensions.Compliance.Testing.RedactorRequested.#ctor(Microsoft.Extensions.Compliance.Classification.DataClassificationSet,System.Int32)">
-      <summary>
-            Initializes a new instance of the <see cref="T:Microsoft.Extensions.Compliance.Testing.RedactorRequested" /> struct.</summary>
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.Extensions.Compliance.Testing.RedactorRequested" /> struct.</summary>
       <param name="classifications">Data classifications for which redactor was used.</param>
       <param name="sequenceNumber">Order in which the request was used.</param>
     </member>
     <member name="M:Microsoft.Extensions.Compliance.Testing.RedactorRequested.Equals(Microsoft.Extensions.Compliance.Testing.RedactorRequested)">
-      <summary>
-            Checks if object is equal to this instance of <see cref="T:Microsoft.Extensions.Compliance.Testing.RedactorRequested" />.</summary>
+      <summary>Checks if object is equal to this instance of <see cref="T:Microsoft.Extensions.Compliance.Testing.RedactorRequested" />.</summary>
       <param name="other">Instance to check for equality.</param>
       <returns>
         <see langword="true" /> if object instances are equal <see langword="false" /> otherwise.</returns>
     </member>
     <member name="M:Microsoft.Extensions.Compliance.Testing.RedactorRequested.Equals(System.Object)">
-      <summary>
-            Checks if object is equal to this instance of <see cref="T:System.Object" />.</summary>
+      <summary>Checks if object is equal to this instance of <see cref="T:System.Object" />.</summary>
       <param name="obj">Object to check for equality.</param>
       <returns>
         <see langword="true" /> if object instances are equal <see langword="false" /> otherwise.</returns>
     </member>
     <member name="M:Microsoft.Extensions.Compliance.Testing.RedactorRequested.GetHashCode">
-      <summary>
-            Get the hash code of given <see cref="T:Microsoft.Extensions.Compliance.Testing.RedactorRequested" />.</summary>
+      <summary>Get the hash code of given <see cref="T:Microsoft.Extensions.Compliance.Testing.RedactorRequested" />.</summary>
       <returns>Hash code.</returns>
     </member>
     <member name="M:Microsoft.Extensions.Compliance.Testing.RedactorRequested.op_Equality(Microsoft.Extensions.Compliance.Testing.RedactorRequested,Microsoft.Extensions.Compliance.Testing.RedactorRequested)">
-      <summary>
-            Compares two instances.</summary>
+      <summary>Compares two instances.</summary>
       <param name="left">Left argument of the comparison.</param>
       <param name="right">Right argument of the comparison.</param>
       <returns>
         <see langword="true" /> when equal, <see langword="false" /> otherwise.</returns>
     </member>
     <member name="M:Microsoft.Extensions.Compliance.Testing.RedactorRequested.op_Inequality(Microsoft.Extensions.Compliance.Testing.RedactorRequested,Microsoft.Extensions.Compliance.Testing.RedactorRequested)">
-      <summary>
-            Compares two instances.</summary>
+      <summary>Compares two instances.</summary>
       <param name="left">Left argument of the comparison.</param>
       <param name="right">Right argument of the comparison.</param>
       <returns>
         <see langword="true" /> when not equal, <see langword="false" /> otherwise.</returns>
     </member>
     <member name="P:Microsoft.Extensions.Compliance.Testing.RedactorRequested.DataClassifications">
-      <summary>
-            Gets the data classifications for which the redactor was returned.</summary>
+      <summary>Gets the data classifications for which the redactor was returned.</summary>
     </member>
     <member name="P:Microsoft.Extensions.Compliance.Testing.RedactorRequested.SequenceNumber">
-      <summary>
-            Gets the order in which the redactor was requested.</summary>
+      <summary>Gets the order in which the redactor was requested.</summary>
     </member>
     <member name="T:Microsoft.Extensions.DependencyInjection.FakeRedactionServiceCollectionExtensions">
-      <summary>
-            Extensions that allow registering a fake redactor in the application.</summary>
+      <summary>Extensions that allow registering a fake redactor in the application.</summary>
     </member>
     <member name="M:Microsoft.Extensions.DependencyInjection.FakeRedactionServiceCollectionExtensions.AddFakeRedaction(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action{Microsoft.Extensions.Compliance.Testing.FakeRedactorOptions})">
-      <summary>
-            Registers the fake redactor provider that always returns fake redactor instances.</summary>
+      <summary>Registers the fake redactor provider that always returns fake redactor instances.</summary>
       <param name="services">Container used to register fake redaction classes.</param>
       <param name="configure">Configures fake redactor.</param>
       <exception cref="T:System.ArgumentNullException">
@@ -278,20 +231,17 @@
       <returns>The value of <paramref name="services" />.</returns>
     </member>
     <member name="M:Microsoft.Extensions.DependencyInjection.FakeRedactionServiceCollectionExtensions.AddFakeRedaction(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
-      <summary>
-            Registers the fake redactor provider that always returns fake redactor instances.</summary>
+      <summary>Registers the fake redactor provider that always returns fake redactor instances.</summary>
       <param name="services">Container used to register fake redaction classes.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="services" /> is <see langword="null" />.</exception>
       <returns>The value of <paramref name="services" />.</returns>
     </member>
     <member name="T:System.FakeRedactionServiceProviderExtensions">
-      <summary>
-            Extensions that allow registering a fake redactor in the application.</summary>
+      <summary>Extensions that allow registering a fake redactor in the application.</summary>
     </member>
     <member name="M:System.FakeRedactionServiceProviderExtensions.GetFakeRedactionCollector(System.IServiceProvider)">
-      <summary>
-            Gets the fake redactor collector instance from the dependency injection container.</summary>
+      <summary>Gets the fake redactor collector instance from the dependency injection container.</summary>
       <param name="serviceProvider">The container used to obtain the collector instance.</param>
       <exception cref="T:System.InvalidOperationException">The collector is not in the container.</exception>
       <exception cref="T:System.ArgumentNullException">

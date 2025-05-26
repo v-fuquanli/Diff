@@ -1449,7 +1449,7 @@ Note: In .NET for Windows Store apps or the Portable Class Library, catch the ba
       <param name="connection">When this method returns, contains a pointer to a DWORD token that identifies this connection. You can use this token later to delete the advisory connection by passing it to <see cref="M:System.Runtime.InteropServices.ComTypes.IDataObject.DUnadvise(System.Int32)" />. If this value is zero, the connection was not established. This parameter is passed uninitialized.</param>
       <returns>This method supports the standard return values E_INVALIDARG, E_UNEXPECTED, and E_OUTOFMEMORY, as well as the following:
 
- <list type="table"><listheader><term> Value</term><description> Description</description></listheader><item><term> S_OK</term><description> The advisory connection was created.</description></item><item><term> E_NOTIMPL</term><description> This method is not implemented on the data object.</description></item><item><term> DV_E_LINDEX</term><description> There is an invalid value for <see cref="F:System.Runtime.InteropServices.ComTypes.FORMATETC.lindex" />; currently, only -1 is supported.</description></item><item><term> DV_E_FORMATETC</term><description> There is an invalid value for the <paramref name="pFormatetc" /> parameter.</description></item><item><term> OLE_E_ADVISENOTSUPPORTED</term><description> The data object does not support change notification.</description></item></list></returns>
+ <list type="table"><listheader><term>Value</term><description>Description</description></listheader><item><term>S_OK</term><description>The advisory connection was created.</description></item><item><term>E_NOTIMPL</term><description>This method is not implemented on the data object.</description></item><item><term>DV_E_LINDEX</term><description>There is an invalid value for <see cref="F:System.Runtime.InteropServices.ComTypes.FORMATETC.lindex" />; currently, only -1 is supported.</description></item><item><term>DV_E_FORMATETC</term><description>There is an invalid value for the <paramref name="pFormatetc" /> parameter.</description></item><item><term>OLE_E_ADVISENOTSUPPORTED</term><description>The data object does not support change notification.</description></item></list></returns>
     </member>
     <member name="M:System.Runtime.InteropServices.ComTypes.IDataObject.DUnadvise(System.Int32)">
       <summary>Destroys a notification connection that had been previously established.</summary>
@@ -1460,14 +1460,14 @@ Note: In .NET for Windows Store apps or the Portable Class Library, catch the ba
       <param name="enumAdvise">When this method returns, contains an <see cref="T:System.Runtime.InteropServices.ComTypes.IEnumSTATDATA" /> that receives the interface pointer to the new enumerator object. If the implementation sets <paramref name="enumAdvise" /> to <see langword="null" />, there are no connections to advisory sinks at this time. This parameter is passed uninitialized.</param>
       <returns>This method supports the standard return value E_OUTOFMEMORY, as well as the following:
 
- <list type="table"><listheader><term> Value</term><description> Description</description></listheader><item><term> S_OK</term><description> The enumerator object is successfully instantiated or there are no connections.</description></item><item><term> OLE_E_ADVISENOTSUPPORTED</term><description> This object does not support advisory notifications.</description></item></list></returns>
+ <list type="table"><listheader><term>Value</term><description>Description</description></listheader><item><term>S_OK</term><description>The enumerator object is successfully instantiated or there are no connections.</description></item><item><term>OLE_E_ADVISENOTSUPPORTED</term><description>This object does not support advisory notifications.</description></item></list></returns>
     </member>
     <member name="M:System.Runtime.InteropServices.ComTypes.IDataObject.EnumFormatEtc(System.Runtime.InteropServices.ComTypes.DATADIR)">
       <summary>Creates an object for enumerating the <see cref="T:System.Runtime.InteropServices.ComTypes.FORMATETC" /> structures for a data object. These structures are used in calls to <see cref="M:System.Runtime.InteropServices.ComTypes.IDataObject.GetData(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDIUM@)" /> or <see cref="M:System.Runtime.InteropServices.ComTypes.IDataObject.SetData(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDIUM@,System.Boolean)" />.</summary>
       <param name="direction">One of the <see cref="T:System.Runtime.InteropServices.ComTypes.DATADIR" /> values that specifies the direction of the data.</param>
       <returns>This method supports the standard return values E_INVALIDARG and E_OUTOFMEMORY, as well as the following:
 
- <list type="table"><listheader><term> Value</term><description> Description</description></listheader><item><term> S_OK</term><description> The enumerator object was successfully created.</description></item><item><term> E_NOTIMPL</term><description> The direction specified by the <paramref name="direction" /> parameter is not supported.</description></item><item><term> OLE_S_USEREG</term><description> Requests that OLE enumerate the formats from the registry.</description></item></list></returns>
+ <list type="table"><listheader><term>Value</term><description>Description</description></listheader><item><term>S_OK</term><description>The enumerator object was successfully created.</description></item><item><term>E_NOTIMPL</term><description>The direction specified by the <paramref name="direction" /> parameter is not supported.</description></item><item><term>OLE_S_USEREG</term><description>Requests that OLE enumerate the formats from the registry.</description></item></list></returns>
     </member>
     <member name="M:System.Runtime.InteropServices.ComTypes.IDataObject.GetCanonicalFormatEtc(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.FORMATETC@)">
       <summary>Provides a standard <see cref="T:System.Runtime.InteropServices.ComTypes.FORMATETC" /> structure that is logically equivalent to a more complex structure. Use this method to determine whether two different <see cref="T:System.Runtime.InteropServices.ComTypes.FORMATETC" /> structures would return the same data, removing the need for duplicate rendering.</summary>
@@ -1475,7 +1475,7 @@ Note: In .NET for Windows Store apps or the Portable Class Library, catch the ba
       <param name="formatOut">When this method returns, contains a pointer to a <see cref="T:System.Runtime.InteropServices.ComTypes.FORMATETC" /> structure that contains the most general information possible for a specific rendering, making it canonically equivalent to <c>formatetcIn</c>. The caller must allocate this structure and the <see cref="M:System.Runtime.InteropServices.ComTypes.IDataObject.GetCanonicalFormatEtc(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.FORMATETC@)" /> method must fill in the data. To retrieve data in a subsequent call such as <see cref="M:System.Runtime.InteropServices.ComTypes.IDataObject.GetData(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDIUM@)" />, the caller uses the supplied value of <paramref name="formatOut" />, unless the value supplied is <see langword="null" />. This value is <see langword="null" /> if the method returns <see langword="DATA_S_SAMEFORMATETC" />. The <see cref="T:System.Runtime.InteropServices.ComTypes.TYMED" /> member is not significant in this case and should be ignored. This parameter is passed uninitialized.</param>
       <returns>This method supports the standard return values E_INVALIDARG, E_UNEXPECTED, and E_OUTOFMEMORY, as well as the following:
 
- <list type="table"><listheader><term> Value</term><description> Description</description></listheader><item><term> S_OK</term><description> The returned <see cref="T:System.Runtime.InteropServices.ComTypes.FORMATETC" /> structure is different from the one that was passed.</description></item><item><term> DATA_S_SAMEFORMATETC</term><description> The <see cref="T:System.Runtime.InteropServices.ComTypes.FORMATETC" /> structures are the same and <see langword="null" /> is returned in the <paramref name="formatOut" /> parameter.</description></item><item><term> DV_E_LINDEX</term><description> There is an invalid value for <see cref="F:System.Runtime.InteropServices.ComTypes.FORMATETC.lindex" />; currently, only -1 is supported.</description></item><item><term> DV_E_FORMATETC</term><description> There is an invalid value for the <paramref name="formatIn" /> parameter.</description></item><item><term> OLE_E_NOTRUNNING</term><description> The application is not running.</description></item></list></returns>
+ <list type="table"><listheader><term>Value</term><description>Description</description></listheader><item><term>S_OK</term><description>The returned <see cref="T:System.Runtime.InteropServices.ComTypes.FORMATETC" /> structure is different from the one that was passed.</description></item><item><term>DATA_S_SAMEFORMATETC</term><description>The <see cref="T:System.Runtime.InteropServices.ComTypes.FORMATETC" /> structures are the same and <see langword="null" /> is returned in the <paramref name="formatOut" /> parameter.</description></item><item><term>DV_E_LINDEX</term><description>There is an invalid value for <see cref="F:System.Runtime.InteropServices.ComTypes.FORMATETC.lindex" />; currently, only -1 is supported.</description></item><item><term>DV_E_FORMATETC</term><description>There is an invalid value for the <paramref name="formatIn" /> parameter.</description></item><item><term>OLE_E_NOTRUNNING</term><description>The application is not running.</description></item></list></returns>
     </member>
     <member name="M:System.Runtime.InteropServices.ComTypes.IDataObject.GetData(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDIUM@)">
       <summary>Obtains data from a source data object. The <see cref="M:System.Runtime.InteropServices.ComTypes.IDataObject.GetData(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDIUM@)" /> method, which is called by a data consumer, renders the data described in the specified <see cref="T:System.Runtime.InteropServices.ComTypes.FORMATETC" /> structure and transfers it through the specified <see cref="T:System.Runtime.InteropServices.ComTypes.STGMEDIUM" /> structure. The caller then assumes responsibility for releasing the <see cref="T:System.Runtime.InteropServices.ComTypes.STGMEDIUM" /> structure.</summary>
@@ -1492,7 +1492,7 @@ Note: In .NET for Windows Store apps or the Portable Class Library, catch the ba
       <param name="format">A pointer to a <see cref="T:System.Runtime.InteropServices.ComTypes.FORMATETC" /> structure, passed by reference, that defines the format, medium, and target device to use for the query.</param>
       <returns>This method supports the standard return values E_INVALIDARG, E_UNEXPECTED, and E_OUTOFMEMORY, as well as the following:
 
- <list type="table"><listheader><term> Value</term><description> Description</description></listheader><item><term> S_OK</term><description> A subsequent call to <see cref="M:System.Runtime.InteropServices.ComTypes.IDataObject.GetData(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDIUM@)" /> would probably be successful.</description></item><item><term> DV_E_LINDEX</term><description> An invalid value for <see cref="F:System.Runtime.InteropServices.ComTypes.FORMATETC.lindex" />; currently, only -1 is supported.</description></item><item><term> DV_E_FORMATETC</term><description> An invalid value for the <paramref name="format" /> parameter.</description></item><item><term> DV_E_TYMED</term><description> An invalid <see cref="F:System.Runtime.InteropServices.ComTypes.FORMATETC.tymed" /> value.</description></item><item><term> DV_E_DVASPECT</term><description> An invalid <see cref="F:System.Runtime.InteropServices.ComTypes.FORMATETC.dwAspect" /> value.</description></item><item><term> OLE_E_NOTRUNNING</term><description> The application is not running.</description></item></list></returns>
+ <list type="table"><listheader><term>Value</term><description>Description</description></listheader><item><term>S_OK</term><description>A subsequent call to <see cref="M:System.Runtime.InteropServices.ComTypes.IDataObject.GetData(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDIUM@)" /> would probably be successful.</description></item><item><term>DV_E_LINDEX</term><description>An invalid value for <see cref="F:System.Runtime.InteropServices.ComTypes.FORMATETC.lindex" />; currently, only -1 is supported.</description></item><item><term>DV_E_FORMATETC</term><description>An invalid value for the <paramref name="format" /> parameter.</description></item><item><term>DV_E_TYMED</term><description>An invalid <see cref="F:System.Runtime.InteropServices.ComTypes.FORMATETC.tymed" /> value.</description></item><item><term>DV_E_DVASPECT</term><description>An invalid <see cref="F:System.Runtime.InteropServices.ComTypes.FORMATETC.dwAspect" /> value.</description></item><item><term>OLE_E_NOTRUNNING</term><description>The application is not running.</description></item></list></returns>
     </member>
     <member name="M:System.Runtime.InteropServices.ComTypes.IDataObject.SetData(System.Runtime.InteropServices.ComTypes.FORMATETC@,System.Runtime.InteropServices.ComTypes.STGMEDIUM@,System.Boolean)">
       <summary>Transfers data to the object that implements this method. This method is called by an object that contains a data source.</summary>
@@ -3707,9 +3707,7 @@ Note: In .NET for Windows Store apps or the Portable Class Library, catch the ba
       <returns>The inner <see langword="IUnknown" /> pointer of the managed object.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.Marshal.CreateAggregatedObject``1(System.IntPtr,``0)">
-      <summary>
-
- Aggregates a managed object of the specified type with the specified COM object.</summary>
+      <summary>Aggregates a managed object of the specified type with the specified COM object.</summary>
       <param name="pOuter">The outer IUnknown pointer.</param>
       <param name="o">The managed object to aggregate.</param>
       <typeparam name="T">The type of the managed object to aggregate.</typeparam>
@@ -3733,9 +3731,7 @@ Note: In .NET for Windows Store apps or the Portable Class Library, catch the ba
       <returns>The newly wrapped object that is an instance of the desired type.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.Marshal.CreateWrapperOfType``2(``0)">
-      <summary>
-
- Wraps the specified COM object in an object of the specified type.</summary>
+      <summary>Wraps the specified COM object in an object of the specified type.</summary>
       <param name="o">The object to be wrapped.</param>
       <typeparam name="T">The type of object to wrap.</typeparam>
       <typeparam name="TWrapper">The type of object to return.</typeparam>
@@ -3757,9 +3753,7 @@ Note: In .NET for Windows Store apps or the Portable Class Library, catch the ba
         <paramref name="structuretype" /> has an automatic layout. Use sequential or explicit instead.</exception>
     </member>
     <member name="M:System.Runtime.InteropServices.Marshal.DestroyStructure``1(System.IntPtr)">
-      <summary>
-
- Frees all substructures of a specified type that the specified unmanaged memory block points to.</summary>
+      <summary>Frees all substructures of a specified type that the specified unmanaged memory block points to.</summary>
       <param name="ptr">A pointer to an unmanaged block of memory.</param>
       <typeparam name="T">The type of the formatted structure. This provides the layout information necessary to delete the buffer in the <paramref name="ptr" /> parameter.</typeparam>
       <exception cref="T:System.ArgumentException">
@@ -3842,9 +3836,7 @@ Note: In .NET for Windows Store apps or the Portable Class Library, catch the ba
       <returns>The interface pointer that represents the specified interface for the object.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.Marshal.GetComInterfaceForObject``2(``0)">
-      <summary>
-
- Returns a pointer to an IUnknown interface that represents the specified interface on an object of the specified type. Custom query interface access is enabled by default.</summary>
+      <summary>Returns a pointer to an IUnknown interface that represents the specified interface on an object of the specified type. Custom query interface access is enabled by default.</summary>
       <param name="o">The object that provides the interface.</param>
       <typeparam name="T">The type of <paramref name="o" />.</typeparam>
       <typeparam name="TInterface">The type of interface to return.</typeparam>
@@ -3892,9 +3884,7 @@ Note: In .NET for Windows Store apps or the Portable Class Library, catch the ba
       <returns>A delegate instance that can be cast to the appropriate delegate type.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.Marshal.GetDelegateForFunctionPointer``1(System.IntPtr)">
-      <summary>
-
- Converts an unmanaged function pointer to a delegate of a specified type.</summary>
+      <summary>Converts an unmanaged function pointer to a delegate of a specified type.</summary>
       <param name="ptr">The unmanaged function pointer to convert.</param>
       <typeparam name="TDelegate">The type of the delegate to return.</typeparam>
       <exception cref="T:System.ArgumentException">The <paramref name="TDelegate" /> generic parameter is not a delegate, or it is an open generic type.</exception>
@@ -3933,9 +3923,7 @@ Note: In .NET for Windows Store apps or the Portable Class Library, catch the ba
       <returns>A value that can be passed to unmanaged code, which, in turn, can use it to call the underlying managed delegate.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.Marshal.GetFunctionPointerForDelegate``1(``0)">
-      <summary>
-
- Converts a delegate of a specified type to a function pointer that is callable from unmanaged code.</summary>
+      <summary>Converts a delegate of a specified type to a function pointer that is callable from unmanaged code.</summary>
       <param name="d">The delegate to be passed to unmanaged code.</param>
       <typeparam name="TDelegate">The type of delegate to convert.</typeparam>
       <exception cref="T:System.ArgumentException">The <paramref name="d" /> parameter is a generic type definition.</exception>
@@ -3992,9 +3980,7 @@ Note: In .NET for Windows Store apps or the Portable Class Library, catch the ba
       <exception cref="T:System.ArgumentException">The <paramref name="obj" /> parameter is an instance of a generic type.</exception>
     </member>
     <member name="M:System.Runtime.InteropServices.Marshal.GetNativeVariantForObject``1(``0,System.IntPtr)">
-      <summary>
-
- Converts an object of a specified type to a COM VARIANT.</summary>
+      <summary>Converts an object of a specified type to a COM VARIANT.</summary>
       <param name="obj">The object for which to get a COM VARIANT.</param>
       <param name="pDstNativeVariant">A pointer to receive the VARIANT that corresponds to the <paramref name="obj" /> parameter.</param>
       <typeparam name="T">The type of the object to convert.</typeparam>
@@ -4016,9 +4002,7 @@ Note: In .NET for Windows Store apps or the Portable Class Library, catch the ba
       <returns>An object that corresponds to the <paramref name="pSrcNativeVariant" /> parameter.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.Marshal.GetObjectForNativeVariant``1(System.IntPtr)">
-      <summary>
-
- Converts a COM VARIANT to an object of a specified type.</summary>
+      <summary>Converts a COM VARIANT to an object of a specified type.</summary>
       <param name="pSrcNativeVariant">A pointer to a COM VARIANT.</param>
       <typeparam name="T">The type to which to convert the COM VARIANT.</typeparam>
       <exception cref="T:System.Runtime.InteropServices.InvalidOleVariantTypeException">
@@ -4036,9 +4020,7 @@ Note: In .NET for Windows Store apps or the Portable Class Library, catch the ba
       <returns>An object array that corresponds to <paramref name="aSrcNativeVariant" />.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.Marshal.GetObjectsForNativeVariants``1(System.IntPtr,System.Int32)">
-      <summary>
-
- Converts an array of COM VARIANTs to an array of a specified type.</summary>
+      <summary>Converts an array of COM VARIANTs to an array of a specified type.</summary>
       <param name="aSrcNativeVariant">A pointer to the first element of an array of COM VARIANTs.</param>
       <param name="cVars">The count of COM VARIANTs in <paramref name="aSrcNativeVariant" />.</param>
       <typeparam name="T">The type of the array to return.</typeparam>
@@ -4116,9 +4098,7 @@ Note: In .NET for Windows Store apps or the Portable Class Library, catch the ba
       <returns>The offset, in bytes, for the <paramref name="fieldName" /> parameter within the specified class that is declared by platform invoke.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.Marshal.OffsetOf``1(System.String)">
-      <summary>
-
- Returns the field offset of the unmanaged form of a specified managed class.</summary>
+      <summary>Returns the field offset of the unmanaged form of a specified managed class.</summary>
       <param name="fieldName">The name of the field in the <paramref name="T" /> type.</param>
       <typeparam name="T">A managed value type or formatted reference type. You must apply the <see cref="T:System.Runtime.InteropServices.StructLayoutAttribute" /> attribute to the class.</typeparam>
       <returns>The offset, in bytes, for the <paramref name="fieldName" /> parameter within the specified class that is declared by platform invoke.</returns>
@@ -4222,18 +4202,14 @@ Note: In .NET for Windows Store apps or the Portable Class Library, catch the ba
       <returns>A managed object containing the data pointed to by the <paramref name="ptr" /> parameter.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.Marshal.PtrToStructure``1(System.IntPtr,``0)">
-      <summary>
-
- Marshals data from an unmanaged block of memory to a managed object of the specified type.</summary>
+      <summary>Marshals data from an unmanaged block of memory to a managed object of the specified type.</summary>
       <param name="ptr">A pointer to an unmanaged block of memory.</param>
       <param name="structure">The object to which the data is to be copied.</param>
       <typeparam name="T">The type of <paramref name="structure" />. This must be a formatted class.</typeparam>
       <exception cref="T:System.ArgumentException">Structure layout is not sequential or explicit.</exception>
     </member>
     <member name="M:System.Runtime.InteropServices.Marshal.PtrToStructure``1(System.IntPtr)">
-      <summary>
-
- Marshals data from an unmanaged block of memory to a newly allocated managed object of the type specified by a generic type parameter.</summary>
+      <summary>Marshals data from an unmanaged block of memory to a newly allocated managed object of the type specified by a generic type parameter.</summary>
       <param name="ptr">A pointer to an unmanaged block of memory.</param>
       <typeparam name="T">The type of the object to which the data is to be copied. This must be a formatted class or a structure.</typeparam>
       <exception cref="T:System.ArgumentException">The layout of <typeparamref name="T" /> is not sequential or explicit.</exception>
@@ -4507,16 +4483,12 @@ Note: In .NET for Windows Store apps or the Portable Class Library, catch the ba
       <returns>The size of the specified type in unmanaged code.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.Marshal.SizeOf``1">
-      <summary>
-
- Returns the size of an unmanaged type in bytes.</summary>
+      <summary>Returns the size of an unmanaged type in bytes.</summary>
       <typeparam name="T">The type whose size is to be returned.</typeparam>
       <returns>The size, in bytes, of the type that is specified by the <typeparamref name="T" /> generic type parameter.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.Marshal.SizeOf``1(``0)">
-      <summary>
-
- Returns the unmanaged size of an object of a specified type in bytes.</summary>
+      <summary>Returns the unmanaged size of an object of a specified type in bytes.</summary>
       <param name="structure">The object whose size is to be returned.</param>
       <typeparam name="T">The type of the <paramref name="structure" /> parameter.</typeparam>
       <exception cref="T:System.ArgumentNullException">The <paramref name="structure" /> parameter is <see langword="null" />.</exception>
@@ -4591,9 +4563,7 @@ Note: In .NET for Windows Store apps or the Portable Class Library, catch the ba
  <paramref name="structure" /> is an instance of a generic type (in the .NET Framework 4.5 and earlier versions only).</exception>
     </member>
     <member name="M:System.Runtime.InteropServices.Marshal.StructureToPtr``1(``0,System.IntPtr,System.Boolean)">
-      <summary>
-
- Marshals data from a managed object of a specified type to an unmanaged block of memory.</summary>
+      <summary>Marshals data from a managed object of a specified type to an unmanaged block of memory.</summary>
       <param name="structure">A managed object that holds the data to be marshaled. The object must be a structure or an instance of a formatted class.</param>
       <param name="ptr">A pointer to an unmanaged block of memory, which must be allocated before this method is called.</param>
       <param name="fDeleteOld">
@@ -4618,9 +4588,7 @@ Note: In .NET for Windows Store apps or the Portable Class Library, catch the ba
       <returns>The address of <paramref name="index" /> inside <paramref name="arr" />.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.Marshal.UnsafeAddrOfPinnedArrayElement``1(``0[],System.Int32)">
-      <summary>
-
- Gets the address of the element at the specified index in an array of a specified type.</summary>
+      <summary>Gets the address of the element at the specified index in an array of a specified type.</summary>
       <param name="arr">The array that contains the desired element.</param>
       <param name="index">The index of the desired element in the <paramref name="arr" /> array.</param>
       <typeparam name="T">The type of the array.</typeparam>

@@ -806,7 +806,7 @@ The <paramref name="sourceUri" /> is not the <see cref="T:System.IO.Packaging.Pa
  Either <paramref name="firstPackUri" /> or <paramref name="secondPackUri" /> do not begin with a "pack://" scheme.</exception>
       <returns>A signed integer indicating the relationship between <paramref name="firstPackUri" /> and <paramref name="secondPackUri" />.
 
- <list type="table"><listheader><term> Value</term><description> Meaning</description></listheader><item><term> Less than 0</term><description><paramref name="firstPackUri" /> is less than <paramref name="secondPackUri" />.</description></item><item><term> 0</term><description><paramref name="firstPackUri" /> is equivalent to <paramref name="secondPackUri" />.</description></item><item><term> Greater than 0</term><description><paramref name="firstPackUri" /> is greater than <paramref name="secondPackUri" />.</description></item></list></returns>
+ <list type="table"><listheader><term>Value</term><description>Meaning</description></listheader><item><term>Less than 0</term><description><paramref name="firstPackUri" /> is less than <paramref name="secondPackUri" />.</description></item><item><term>0</term><description><paramref name="firstPackUri" /> is equivalent to <paramref name="secondPackUri" />.</description></item><item><term>Greater than 0</term><description><paramref name="firstPackUri" /> is greater than <paramref name="secondPackUri" />.</description></item></list></returns>
     </member>
     <member name="M:System.IO.Packaging.PackUriHelper.ComparePartUri(System.Uri,System.Uri)">
       <summary>Returns a value that indicates whether two package part URIs are equivalent.</summary>
@@ -816,7 +816,7 @@ The <paramref name="sourceUri" /> is not the <see cref="T:System.IO.Packaging.Pa
         <paramref name="firstPartUri" /> or <paramref name="secondPartUri" /> is not a valid part URI syntax.</exception>
       <returns>A value that indicates the relationship between <paramref name="firstPartUri" /> and <paramref name="secondPartUri" />.
 
- <list type="table"><listheader><term> Value</term><description> Meaning</description></listheader><item><term> Less than 0</term><description><paramref name="firstPartUri" /> is less than <paramref name="secondPartUri" />.</description></item><item><term> 0</term><description><paramref name="firstPartUri" /> is equivalent to <paramref name="secondPartUri" />.</description></item><item><term> Greater than 0</term><description><paramref name="firstPartUri" /> is greater than <paramref name="secondPartUri" />.</description></item></list></returns>
+ <list type="table"><listheader><term>Value</term><description>Meaning</description></listheader><item><term>Less than 0</term><description><paramref name="firstPartUri" /> is less than <paramref name="secondPartUri" />.</description></item><item><term>0</term><description><paramref name="firstPartUri" /> is equivalent to <paramref name="secondPartUri" />.</description></item><item><term>Greater than 0</term><description><paramref name="firstPartUri" /> is greater than <paramref name="secondPartUri" />.</description></item></list></returns>
     </member>
     <member name="M:System.IO.Packaging.PackUriHelper.Create(System.Uri,System.Uri,System.String)">
       <summary>Creates a pack URI given a <see cref="T:System.IO.Packaging.Package" /> URI, the URI of a part in the package, and a "#" fragment to append.</summary>

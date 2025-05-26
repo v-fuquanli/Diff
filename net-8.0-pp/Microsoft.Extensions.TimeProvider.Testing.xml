@@ -5,26 +5,21 @@
   </assembly>
   <members>
     <member name="T:Microsoft.Extensions.Time.Testing.FakeTimeProvider">
-      <summary>
-            Represents a synthetic time provider that can be used to enable deterministic behavior in tests.</summary>
+      <summary>Represents a synthetic time provider that can be used to enable deterministic behavior in tests.</summary>
     </member>
     <member name="M:Microsoft.Extensions.Time.Testing.FakeTimeProvider.#ctor">
-      <summary>
-            Initializes a new instance of the <see cref="T:Microsoft.Extensions.Time.Testing.FakeTimeProvider" /> class.</summary>
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.Extensions.Time.Testing.FakeTimeProvider" /> class.</summary>
     </member>
     <member name="M:Microsoft.Extensions.Time.Testing.FakeTimeProvider.#ctor(System.DateTimeOffset)">
-      <summary>
-            Initializes a new instance of the <see cref="T:Microsoft.Extensions.Time.Testing.FakeTimeProvider" /> class.</summary>
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.Extensions.Time.Testing.FakeTimeProvider" /> class.</summary>
       <param name="startDateTime">The initial time and date reported by the provider.</param>
     </member>
     <member name="M:Microsoft.Extensions.Time.Testing.FakeTimeProvider.AdjustTime(System.DateTimeOffset)">
-      <summary>
-            Advances the date and time in the UTC time zone.</summary>
+      <summary>Advances the date and time in the UTC time zone.</summary>
       <param name="value">The date and time in the UTC time zone.</param>
     </member>
     <member name="M:Microsoft.Extensions.Time.Testing.FakeTimeProvider.Advance(System.TimeSpan)">
-      <summary>
-            Advances time by a specific amount.</summary>
+      <summary>Advances time by a specific amount.</summary>
       <param name="delta">The amount of time to advance the clock by.</param>
       <exception cref="T:System.ArgumentOutOfRangeException">The time value is less than <see cref="F:System.TimeSpan.Zero" />.</exception>
     </member>
@@ -47,36 +42,30 @@ Coordinated Universal Time (UTC) date and time and whose offset is Zero,
 all according to this <xref data-throw-if-not-resolved="true" uid="System.TimeProvider"></xref>'s notion of time.</summary>
     </member>
     <member name="M:Microsoft.Extensions.Time.Testing.FakeTimeProvider.SetLocalTimeZone(System.TimeZoneInfo)">
-      <summary>
-            Sets the local time zone.</summary>
+      <summary>Sets the local time zone.</summary>
       <param name="localTimeZone">The local time zone.</param>
     </member>
     <member name="M:Microsoft.Extensions.Time.Testing.FakeTimeProvider.SetUtcNow(System.DateTimeOffset)">
-      <summary>
-            Advances the date and time in the UTC time zone.</summary>
+      <summary>Advances the date and time in the UTC time zone.</summary>
       <param name="value">The date and time in the UTC time zone.</param>
       <exception cref="T:System.ArgumentOutOfRangeException">The supplied time value is before the current time.</exception>
     </member>
     <member name="M:Microsoft.Extensions.Time.Testing.FakeTimeProvider.ToString">
-      <summary>
-            Returns a string representation this provider's idea of current time.</summary>
+      <summary>Returns a string representation this provider's idea of current time.</summary>
       <returns>A string representing the provider's current time.</returns>
     </member>
     <member name="P:Microsoft.Extensions.Time.Testing.FakeTimeProvider.AutoAdvanceAmount">
-      <summary>
-            Gets or sets the amount of time by which time advances whenever the clock is read.</summary>
+      <summary>Gets or sets the amount of time by which time advances whenever the clock is read.</summary>
       <exception cref="T:System.ArgumentOutOfRangeException">The time value is less than <see cref="F:System.TimeSpan.Zero" />.</exception>
     </member>
     <member name="P:Microsoft.Extensions.Time.Testing.FakeTimeProvider.LocalTimeZone">
       <summary>Gets a <xref data-throw-if-not-resolved="true" uid="System.TimeZoneInfo"></xref> object that represents the local time zone according to this <xref data-throw-if-not-resolved="true" uid="System.TimeProvider"></xref>'s notion of time.</summary>
     </member>
     <member name="P:Microsoft.Extensions.Time.Testing.FakeTimeProvider.Start">
-      <summary>
-            Gets the starting date and time for this provider.</summary>
+      <summary>Gets the starting date and time for this provider.</summary>
     </member>
     <member name="P:Microsoft.Extensions.Time.Testing.FakeTimeProvider.TimestampFrequency">
-      <summary>
-            Gets the amount by which the value from <see cref="M:Microsoft.Extensions.Time.Testing.FakeTimeProvider.GetTimestamp" /> increments per second.</summary>
+      <summary>Gets the amount by which the value from <see cref="M:Microsoft.Extensions.Time.Testing.FakeTimeProvider.GetTimestamp" /> increments per second.</summary>
     </member>
   </members>
 </doc>

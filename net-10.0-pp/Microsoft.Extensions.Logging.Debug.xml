@@ -5,8 +5,7 @@
   </assembly>
   <members>
     <member name="T:Microsoft.Extensions.Logging.Debug.DebugLoggerProvider">
-      <summary>
-            The provider for the <see cref="T:Microsoft.Extensions.Logging.Debug.DebugLogger" />.</summary>
+      <summary>The provider for the <see cref="T:Microsoft.Extensions.Logging.Debug.DebugLogger" />.</summary>
     </member>
     <member name="M:Microsoft.Extensions.Logging.Debug.DebugLoggerProvider.#ctor" />
     <member name="M:Microsoft.Extensions.Logging.Debug.DebugLoggerProvider.CreateLogger(System.String)">
@@ -18,12 +17,10 @@
       <summary>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.</summary>
     </member>
     <member name="T:Microsoft.Extensions.Logging.DebugLoggerFactoryExtensions">
-      <summary>
-            Extension methods for the <see cref="T:Microsoft.Extensions.Logging.ILoggerFactory" /> class.</summary>
+      <summary>Extension methods for the <see cref="T:Microsoft.Extensions.Logging.ILoggerFactory" /> class.</summary>
     </member>
     <member name="M:Microsoft.Extensions.Logging.DebugLoggerFactoryExtensions.AddDebug(Microsoft.Extensions.Logging.ILoggingBuilder)">
-      <summary>
-            Adds a debug logger named 'Debug' to the factory.</summary>
+      <summary>Adds a debug logger named 'Debug' to the factory.</summary>
       <param name="builder">The extension method argument.</param>
     </member>
   </members>

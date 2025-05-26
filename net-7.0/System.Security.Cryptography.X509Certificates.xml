@@ -1488,8 +1488,7 @@ The specified private key doesn't match the public key for this certificate.</ex
       <param name="certPem">The text of the PEM-encoded X509 certificate.</param>
       <param name="keyPem">The text of the password protected PEM-encoded private key.</param>
       <param name="password">The password for the encrypted PEM.</param>
-      <exception cref="T:System.Security.Cryptography.CryptographicException">
-The contents of <paramref name="certPem" /> do not contain a PEM-encoded certificate, or it is malformed.
+      <exception cref="T:System.Security.Cryptography.CryptographicException">The contents of <paramref name="certPem" /> do not contain a PEM-encoded certificate, or it is malformed.
 
 -or-
 
@@ -1514,8 +1513,7 @@ The password specified for the private key is incorrect.</exception>
       <param name="password">The password for the encrypted PEM.</param>
       <param name="keyPemFilePath">If specified, the path for the password protected PEM-encoded private key.
             If unspecified, the <paramref name="certPemFilePath" /> file will be used to load the private key.</param>
-      <exception cref="T:System.Security.Cryptography.CryptographicException">
-The contents of the file path in <paramref name="certPemFilePath" /> do not contain a PEM-encoded certificate, or it is malformed.
+      <exception cref="T:System.Security.Cryptography.CryptographicException">The contents of the file path in <paramref name="certPemFilePath" /> do not contain a PEM-encoded certificate, or it is malformed.
 
 -or-
 
@@ -1540,8 +1538,7 @@ The password specified for the private key is incorrect.</exception>
       <summary>Creates a new X509 certificate from the contents of an RFC 7468 PEM-encoded certificate and private key.</summary>
       <param name="certPem">The text of the PEM-encoded X509 certificate.</param>
       <param name="keyPem">The text of the PEM-encoded private key.</param>
-      <exception cref="T:System.Security.Cryptography.CryptographicException">
-The contents of <paramref name="certPem" /> do not contain a PEM-encoded certificate, or it is malformed.
+      <exception cref="T:System.Security.Cryptography.CryptographicException">The contents of <paramref name="certPem" /> do not contain a PEM-encoded certificate, or it is malformed.
 
 -or-
 
@@ -1567,8 +1564,7 @@ The certificate uses an unknown public key algorithm.</exception>
       <param name="certPemFilePath">The path for the PEM-encoded X509 certificate.</param>
       <param name="keyPemFilePath">If specified, the path for the PEM-encoded private key.
             If unspecified, the <paramref name="certPemFilePath" /> file will be used to load the private key.</param>
-      <exception cref="T:System.Security.Cryptography.CryptographicException">
-The contents of the file path in <paramref name="certPemFilePath" /> do not contain a PEM-encoded certificate, or it is malformed.
+      <exception cref="T:System.Security.Cryptography.CryptographicException">The contents of the file path in <paramref name="certPemFilePath" /> do not contain a PEM-encoded certificate, or it is malformed.
 
 -or-
 
@@ -1668,8 +1664,7 @@ The certificate uses an unknown public key algorithm.</exception>
       <param name="allowCommonName">
         <see langword="true" /> to allow matching against the subject Common Name value; otherwise, <see langword="false" />.</param>
       <exception cref="T:System.ArgumentException">The <paramref name="hostname" /> parameter is not a valid DNS hostname or IP address.</exception>
-      <exception cref="T:System.Security.Cryptography.CryptographicException">
-The certificate contains multiple Subject Alternative Name extensions.
+      <exception cref="T:System.Security.Cryptography.CryptographicException">The certificate contains multiple Subject Alternative Name extensions.
 
 -or-
 

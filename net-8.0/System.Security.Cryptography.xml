@@ -773,7 +773,7 @@ The length for <paramref name="index" /> is invalid.</exception>
       <summary>Creates an instance of the specified implementation of an asymmetric algorithm.</summary>
       <param name="algName">The asymmetric algorithm implementation to use. The following table shows the valid values for the <paramref name="algName" /> parameter and the algorithms they map to.
 
- <list type="table"><listheader><term> Parameter value</term><description> Implements</description></listheader><item><term> System.Security.Cryptography.AsymmetricAlgorithm</term><description><see cref="T:System.Security.Cryptography.AsymmetricAlgorithm" /></description></item><item><term> RSA</term><description><see cref="T:System.Security.Cryptography.RSA" /></description></item><item><term> System.Security.Cryptography.RSA</term><description><see cref="T:System.Security.Cryptography.RSA" /></description></item><item><term> DSA</term><description><see cref="T:System.Security.Cryptography.DSA" /></description></item><item><term> System.Security.Cryptography.DSA</term><description><see cref="T:System.Security.Cryptography.DSA" /></description></item><item><term> ECDsa</term><description><see cref="T:System.Security.Cryptography.ECDsa" /></description></item><item><term> ECDsaCng</term><description><see cref="T:System.Security.Cryptography.ECDsaCng" /></description></item><item><term> System.Security.Cryptography.ECDsaCng</term><description><see cref="T:System.Security.Cryptography.ECDsaCng" /></description></item><item><term> ECDH</term><description><see cref="T:System.Security.Cryptography.ECDiffieHellman" /></description></item><item><term> ECDiffieHellman</term><description><see cref="T:System.Security.Cryptography.ECDiffieHellman" /></description></item><item><term> ECDiffieHellmanCng</term><description><see cref="T:System.Security.Cryptography.ECDiffieHellmanCng" /></description></item><item><term> System.Security.Cryptography.ECDiffieHellmanCng</term><description><see cref="T:System.Security.Cryptography.ECDiffieHellmanCng" /></description></item></list></param>
+ <list type="table"><listheader><term>Parameter value</term><description>Implements</description></listheader><item><term>System.Security.Cryptography.AsymmetricAlgorithm</term><description><see cref="T:System.Security.Cryptography.AsymmetricAlgorithm" /></description></item><item><term>RSA</term><description><see cref="T:System.Security.Cryptography.RSA" /></description></item><item><term>System.Security.Cryptography.RSA</term><description><see cref="T:System.Security.Cryptography.RSA" /></description></item><item><term>DSA</term><description><see cref="T:System.Security.Cryptography.DSA" /></description></item><item><term>System.Security.Cryptography.DSA</term><description><see cref="T:System.Security.Cryptography.DSA" /></description></item><item><term>ECDsa</term><description><see cref="T:System.Security.Cryptography.ECDsa" /></description></item><item><term>ECDsaCng</term><description><see cref="T:System.Security.Cryptography.ECDsaCng" /></description></item><item><term>System.Security.Cryptography.ECDsaCng</term><description><see cref="T:System.Security.Cryptography.ECDsaCng" /></description></item><item><term>ECDH</term><description><see cref="T:System.Security.Cryptography.ECDiffieHellman" /></description></item><item><term>ECDiffieHellman</term><description><see cref="T:System.Security.Cryptography.ECDiffieHellman" /></description></item><item><term>ECDiffieHellmanCng</term><description><see cref="T:System.Security.Cryptography.ECDiffieHellmanCng" /></description></item><item><term>System.Security.Cryptography.ECDiffieHellmanCng</term><description><see cref="T:System.Security.Cryptography.ECDiffieHellmanCng" /></description></item></list></param>
       <returns>A new instance of the specified asymmetric algorithm implementation.</returns>
     </member>
     <member name="M:System.Security.Cryptography.AsymmetricAlgorithm.Dispose">
@@ -910,9 +910,7 @@ The algorithm-specific key import failed.</exception>
 -or-
 
 <paramref name="input" /> contains multiple PEM-encoded keys with a recognized label.</exception>
-      <exception cref="T:System.Security.Cryptography.CryptographicException">
-
-              The password is incorrect.
+      <exception cref="T:System.Security.Cryptography.CryptographicException">The password is incorrect.
 
 -or-
 
@@ -945,9 +943,7 @@ The algorithm-specific key import failed.</exception>
 -or-
 
 <paramref name="input" /> contains multiple PEM-encoded keys with a recognized label.</exception>
-      <exception cref="T:System.Security.Cryptography.CryptographicException">
-
-              The password is incorrect.
+      <exception cref="T:System.Security.Cryptography.CryptographicException">The password is incorrect.
 
 -or-
 
@@ -4028,8 +4024,7 @@ An error occurred during signature creation.</exception>
       <param name="bytesRead">When this method returns, contains a value that indicates the number of bytes read from <paramref name="source" />. This parameter is treated as uninitialized.</param>
       <exception cref="T:System.NotSupportedException">A derived class has not provided an implementation for <see cref="M:System.Security.Cryptography.ECAlgorithm.ImportParameters(System.Security.Cryptography.ECParameters)" />.</exception>
       <exception cref="T:System.Security.Cryptography.CryptographicException">
-        <p>
-              The contents of <paramref name="source" /> do not represent an
+        <p>The contents of <paramref name="source" /> do not represent an
               ASN.1-BER-encoded PKCS#8 ECPrivateKey structure.</p>
         <p>-or-</p>
         <p>The key import failed.</p>
@@ -4043,20 +4038,16 @@ An error occurred during signature creation.</exception>
       <exception cref="T:System.Security.Cryptography.CryptographicException">
         <p>The password is incorrect.</p>
         <p>-or-</p>
-        <p>
-              The contents of <paramref name="source" /> indicate the Key Derivation Function (KDF)
+        <p>The contents of <paramref name="source" /> indicate the Key Derivation Function (KDF)
               to apply is the legacy PKCS#12 KDF, which requires <see langword="char" />-based passwords.</p>
         <p>-or-</p>
-        <p>
-              The contents of <paramref name="source" /> do not represent an
+        <p>The contents of <paramref name="source" /> do not represent an
               ASN.1-BER-encoded PKCS#8 EncryptedPrivateKeyInfo structure.</p>
         <p>-or-</p>
-        <p>
-              The contents of <paramref name="source" /> indicate the key is for
+        <p>The contents of <paramref name="source" /> indicate the key is for
               an algorithm other than the algorithm represented by this instance.</p>
         <p>-or-</p>
-        <p>
-              The contents of <paramref name="source" /> represent the key in a format
+        <p>The contents of <paramref name="source" /> represent the key in a format
               that is not supported.</p>
         <p>-or-</p>
         <p>The algorithm-specific key import failed.</p>
@@ -4069,16 +4060,13 @@ An error occurred during signature creation.</exception>
       <param name="source">The bytes of a PKCS#8 EncryptedPrivateKeyInfo structure in the ASN.1-BER encoding.</param>
       <param name="bytesRead">When this method returns, contains a value that indicates the number of bytes read from <paramref name="source" />. This parameter is treated as uninitialized.</param>
       <exception cref="T:System.Security.Cryptography.CryptographicException">
-        <p>
-              The contents of <paramref name="source" /> do not represent an
+        <p>The contents of <paramref name="source" /> do not represent an
               ASN.1-BER-encoded PKCS#8 EncryptedPrivateKeyInfo structure.</p>
         <p>-or-</p>
-        <p>
-              The contents of <paramref name="source" /> indicate the key is for
+        <p>The contents of <paramref name="source" /> indicate the key is for
               an algorithm other than the algorithm represented by this instance.</p>
         <p>-or-</p>
-        <p>
-              The contents of <paramref name="source" /> represent the key in a format
+        <p>The contents of <paramref name="source" /> represent the key in a format
               that is not supported.</p>
         <p>-or-</p>
         <p>The algorithm-specific key import failed.</p>
@@ -4095,9 +4083,7 @@ An error occurred during signature creation.</exception>
 -or-
 
 <paramref name="input" /> contains multiple PEM-encoded keys with a recognized label.</exception>
-      <exception cref="T:System.Security.Cryptography.CryptographicException">
-
-              The password is incorrect.
+      <exception cref="T:System.Security.Cryptography.CryptographicException">The password is incorrect.
 
 -or-
 
@@ -4129,9 +4115,7 @@ The algorithm-specific key import failed.</exception>
 -or-
 
 <paramref name="input" /> contains multiple PEM-encoded keys with a recognized label.</exception>
-      <exception cref="T:System.Security.Cryptography.CryptographicException">
-
-              The password is incorrect.
+      <exception cref="T:System.Security.Cryptography.CryptographicException">The password is incorrect.
 
 -or-
 
@@ -4178,18 +4162,15 @@ The algorithm-specific key import failed.</exception>
       <param name="bytesRead">When this method returns, contains a value that indicates the number of bytes read from <paramref name="source" />. This parameter is treated as uninitialized.</param>
       <exception cref="T:System.NotSupportedException">A derived class has not provided an implementation for <see cref="M:System.Security.Cryptography.ECAlgorithm.ImportParameters(System.Security.Cryptography.ECParameters)" />.</exception>
       <exception cref="T:System.Security.Cryptography.CryptographicException">
-        <p>
-              The contents of <paramref name="source" /> do not represent an ASN.1-BER-encoded
+        <p>The contents of <paramref name="source" /> do not represent an ASN.1-BER-encoded
               PKCS#8 PrivateKeyInfo structure.</p>
         <p>-or-</p>
-        <p>
-              The contents of <paramref name="source" /> indicate the key is for an algorithm
+        <p>The contents of <paramref name="source" /> indicate the key is for an algorithm
               other than the algorithm represented by this instance.</p>
         <p>-or-</p>
         <p>The contents of <paramref name="source" /> represent the key in a format that is not supported.</p>
         <p>-or-</p>
-        <p>
-              The algorithm-specific key import failed.</p>
+        <p>The algorithm-specific key import failed.</p>
       </exception>
     </member>
     <member name="M:System.Security.Cryptography.ECAlgorithm.ImportSubjectPublicKeyInfo(System.ReadOnlySpan{System.Byte},System.Int32@)">
@@ -4198,16 +4179,13 @@ The algorithm-specific key import failed.</exception>
       <param name="bytesRead">When this method returns, contains a value that indicates the number of bytes read from <paramref name="source" />. This parameter is treated as uninitialized.</param>
       <exception cref="T:System.NotSupportedException">A derived class has not provided an implementation for <see cref="M:System.Security.Cryptography.ECAlgorithm.ImportParameters(System.Security.Cryptography.ECParameters)" />.</exception>
       <exception cref="T:System.Security.Cryptography.CryptographicException">
-        <p>
-              The contents of <paramref name="source" /> do not represent an
+        <p>The contents of <paramref name="source" /> do not represent an
               ASN.1-DER-encoded X.509 SubjectPublicKeyInfo structure.</p>
         <p>-or-</p>
-        <p>
-              The contents of <paramref name="source" /> indicate the key is for an algorithm
+        <p>The contents of <paramref name="source" /> indicate the key is for an algorithm
             other than the algorithm represented by this instance.</p>
         <p>-or-</p>
-        <p>
-              The contents of <paramref name="source" /> represent the key in a format that is not supported.</p>
+        <p>The contents of <paramref name="source" /> represent the key in a format that is not supported.</p>
         <p>-or-</p>
         <p>The algorithm-specific key import failed.</p>
       </exception>
@@ -4240,8 +4218,7 @@ The algorithm-specific key import failed.</exception>
         <paramref name="pbeParameters" /> is <see langword="null" />.</exception>
       <exception cref="T:System.NotSupportedException">A derived class has not provided an implementation for <see cref="M:System.Security.Cryptography.ECAlgorithm.ExportParameters(System.Boolean)" />.</exception>
       <exception cref="T:System.Security.Cryptography.CryptographicException">
-        <p>
-              The key could not be exported.</p>
+        <p>The key could not be exported.</p>
         <p>-or-</p>
         <p>
           <paramref name="pbeParameters" /> indicates that <see cref="F:System.Security.Cryptography.PbeEncryptionAlgorithm.TripleDes3KeyPkcs12" />
@@ -6178,7 +6155,7 @@ The buffer in <paramref name="destination" /> is too small to hold the signature
       <summary>Creates an instance of the specified implementation of a hash algorithm.</summary>
       <param name="hashName">The hash algorithm implementation to use. The following table shows the valid values for the <paramref name="hashName" /> parameter and the algorithms they map to.
 
- <list type="table"><listheader><term> Parameter value</term><description> Implements</description></listheader><item><term> SHA</term><description><see cref="T:System.Security.Cryptography.SHA1CryptoServiceProvider" /></description></item><item><term> SHA1</term><description><see cref="T:System.Security.Cryptography.SHA1CryptoServiceProvider" /></description></item><item><term> System.Security.Cryptography.SHA1</term><description><see cref="T:System.Security.Cryptography.SHA1CryptoServiceProvider" /></description></item><item><term> System.Security.Cryptography.HashAlgorithm</term><description><see cref="T:System.Security.Cryptography.SHA1CryptoServiceProvider" /></description></item><item><term> MD5</term><description><see cref="T:System.Security.Cryptography.MD5CryptoServiceProvider" /></description></item><item><term> System.Security.Cryptography.MD5</term><description><see cref="T:System.Security.Cryptography.MD5CryptoServiceProvider" /></description></item><item><term> SHA256</term><description><see cref="T:System.Security.Cryptography.SHA256Managed" /></description></item><item><term> SHA-256</term><description><see cref="T:System.Security.Cryptography.SHA256Managed" /></description></item><item><term> System.Security.Cryptography.SHA256</term><description><see cref="T:System.Security.Cryptography.SHA256Managed" /></description></item><item><term> SHA384</term><description><see cref="T:System.Security.Cryptography.SHA384Managed" /></description></item><item><term> SHA-384</term><description><see cref="T:System.Security.Cryptography.SHA384Managed" /></description></item><item><term> System.Security.Cryptography.SHA384</term><description><see cref="T:System.Security.Cryptography.SHA384Managed" /></description></item><item><term> SHA512</term><description><see cref="T:System.Security.Cryptography.SHA512Managed" /></description></item><item><term> SHA-512</term><description><see cref="T:System.Security.Cryptography.SHA512Managed" /></description></item><item><term> System.Security.Cryptography.SHA512</term><description><see cref="T:System.Security.Cryptography.SHA512Managed" /></description></item></list></param>
+ <list type="table"><listheader><term>Parameter value</term><description>Implements</description></listheader><item><term>SHA</term><description><see cref="T:System.Security.Cryptography.SHA1CryptoServiceProvider" /></description></item><item><term>SHA1</term><description><see cref="T:System.Security.Cryptography.SHA1CryptoServiceProvider" /></description></item><item><term>System.Security.Cryptography.SHA1</term><description><see cref="T:System.Security.Cryptography.SHA1CryptoServiceProvider" /></description></item><item><term>System.Security.Cryptography.HashAlgorithm</term><description><see cref="T:System.Security.Cryptography.SHA1CryptoServiceProvider" /></description></item><item><term>MD5</term><description><see cref="T:System.Security.Cryptography.MD5CryptoServiceProvider" /></description></item><item><term>System.Security.Cryptography.MD5</term><description><see cref="T:System.Security.Cryptography.MD5CryptoServiceProvider" /></description></item><item><term>SHA256</term><description><see cref="T:System.Security.Cryptography.SHA256Managed" /></description></item><item><term>SHA-256</term><description><see cref="T:System.Security.Cryptography.SHA256Managed" /></description></item><item><term>System.Security.Cryptography.SHA256</term><description><see cref="T:System.Security.Cryptography.SHA256Managed" /></description></item><item><term>SHA384</term><description><see cref="T:System.Security.Cryptography.SHA384Managed" /></description></item><item><term>SHA-384</term><description><see cref="T:System.Security.Cryptography.SHA384Managed" /></description></item><item><term>System.Security.Cryptography.SHA384</term><description><see cref="T:System.Security.Cryptography.SHA384Managed" /></description></item><item><term>SHA512</term><description><see cref="T:System.Security.Cryptography.SHA512Managed" /></description></item><item><term>SHA-512</term><description><see cref="T:System.Security.Cryptography.SHA512Managed" /></description></item><item><term>System.Security.Cryptography.SHA512</term><description><see cref="T:System.Security.Cryptography.SHA512Managed" /></description></item></list></param>
       <returns>A new instance of the specified hash algorithm, or <see langword="null" /> if <paramref name="hashName" /> is not a valid hash algorithm.</returns>
     </member>
     <member name="M:System.Security.Cryptography.HashAlgorithm.Dispose">
@@ -6458,7 +6435,7 @@ The buffer in <paramref name="destination" /> is too small to hold the signature
       <summary>Creates an instance of the specified implementation of a Hash-based Message Authentication Code (HMAC).</summary>
       <param name="algorithmName">The HMAC implementation to use. The following table shows the valid values for the <paramref name="algorithmName" /> parameter and the algorithms they map to.
 
- <list type="table"><listheader><term> Parameter value</term><description> Implements</description></listheader><item><term> System.Security.Cryptography.HMAC</term><description><see cref="T:System.Security.Cryptography.HMACSHA1" /></description></item><item><term> System.Security.Cryptography.KeyedHashAlgorithm</term><description><see cref="T:System.Security.Cryptography.HMACSHA1" /></description></item><item><term> HMACMD5</term><description><see cref="T:System.Security.Cryptography.HMACMD5" /></description></item><item><term> System.Security.Cryptography.HMACMD5</term><description><see cref="T:System.Security.Cryptography.HMACMD5" /></description></item><item><term> HMACRIPEMD160</term><description><see cref="T:System.Security.Cryptography.HMACRIPEMD160" /></description></item><item><term> System.Security.Cryptography.HMACRIPEMD160</term><description><see cref="T:System.Security.Cryptography.HMACRIPEMD160" /></description></item><item><term> HMACSHA1</term><description><see cref="T:System.Security.Cryptography.HMACSHA1" /></description></item><item><term> System.Security.Cryptography.HMACSHA1</term><description><see cref="T:System.Security.Cryptography.HMACSHA1" /></description></item><item><term> HMACSHA256</term><description><see cref="T:System.Security.Cryptography.HMACSHA256" /></description></item><item><term> System.Security.Cryptography.HMACSHA256</term><description><see cref="T:System.Security.Cryptography.HMACSHA256" /></description></item><item><term> HMACSHA384</term><description><see cref="T:System.Security.Cryptography.HMACSHA384" /></description></item><item><term> System.Security.Cryptography.HMACSHA384</term><description><see cref="T:System.Security.Cryptography.HMACSHA384" /></description></item><item><term> HMACSHA512</term><description><see cref="T:System.Security.Cryptography.HMACSHA512" /></description></item><item><term> System.Security.Cryptography.HMACSHA512</term><description><see cref="T:System.Security.Cryptography.HMACSHA512" /></description></item><item><term> MACTripleDES</term><description><see cref="T:System.Security.Cryptography.MACTripleDES" /></description></item><item><term> System.Security.Cryptography.MACTripleDES</term><description><see cref="T:System.Security.Cryptography.MACTripleDES" /></description></item></list></param>
+ <list type="table"><listheader><term>Parameter value</term><description>Implements</description></listheader><item><term>System.Security.Cryptography.HMAC</term><description><see cref="T:System.Security.Cryptography.HMACSHA1" /></description></item><item><term>System.Security.Cryptography.KeyedHashAlgorithm</term><description><see cref="T:System.Security.Cryptography.HMACSHA1" /></description></item><item><term>HMACMD5</term><description><see cref="T:System.Security.Cryptography.HMACMD5" /></description></item><item><term>System.Security.Cryptography.HMACMD5</term><description><see cref="T:System.Security.Cryptography.HMACMD5" /></description></item><item><term>HMACRIPEMD160</term><description><see cref="T:System.Security.Cryptography.HMACRIPEMD160" /></description></item><item><term>System.Security.Cryptography.HMACRIPEMD160</term><description><see cref="T:System.Security.Cryptography.HMACRIPEMD160" /></description></item><item><term>HMACSHA1</term><description><see cref="T:System.Security.Cryptography.HMACSHA1" /></description></item><item><term>System.Security.Cryptography.HMACSHA1</term><description><see cref="T:System.Security.Cryptography.HMACSHA1" /></description></item><item><term>HMACSHA256</term><description><see cref="T:System.Security.Cryptography.HMACSHA256" /></description></item><item><term>System.Security.Cryptography.HMACSHA256</term><description><see cref="T:System.Security.Cryptography.HMACSHA256" /></description></item><item><term>HMACSHA384</term><description><see cref="T:System.Security.Cryptography.HMACSHA384" /></description></item><item><term>System.Security.Cryptography.HMACSHA384</term><description><see cref="T:System.Security.Cryptography.HMACSHA384" /></description></item><item><term>HMACSHA512</term><description><see cref="T:System.Security.Cryptography.HMACSHA512" /></description></item><item><term>System.Security.Cryptography.HMACSHA512</term><description><see cref="T:System.Security.Cryptography.HMACSHA512" /></description></item><item><term>MACTripleDES</term><description><see cref="T:System.Security.Cryptography.MACTripleDES" /></description></item><item><term>System.Security.Cryptography.MACTripleDES</term><description><see cref="T:System.Security.Cryptography.MACTripleDES" /></description></item></list></param>
       <returns>A new instance of the specified HMAC implementation.</returns>
     </member>
     <member name="M:System.Security.Cryptography.HMAC.Dispose(System.Boolean)">
@@ -6619,8 +6596,7 @@ The buffer in <paramref name="destination" /> is too small to hold the signature
       <exception cref="T:System.ArgumentNullException">
         <paramref name="source" /> is <see langword="null" />.</exception>
       <exception cref="T:System.ArgumentException">
-        <para>
-              The buffer in <paramref name="destination" /> is too small to hold the calculated hash
+        <para>The buffer in <paramref name="destination" /> is too small to hold the calculated hash
               size. The MD5 algorithm always produces a 128-bit hash, or 16 bytes.</para>
         <para>-or-</para>
         <para>
@@ -6735,8 +6711,7 @@ Releases the unmanaged resources used by the <see cref="T:System.Security.Crypto
       <exception cref="T:System.ArgumentNullException">
         <paramref name="source" /> is <see langword="null" />.</exception>
       <exception cref="T:System.ArgumentException">
-        <para>
-              The buffer in <paramref name="destination" /> is too small to hold the calculated HMAC
+        <para>The buffer in <paramref name="destination" /> is too small to hold the calculated HMAC
               size. The SHA-1 algorithm always produces a 160-bit HMAC, or 20 bytes.</para>
         <para>-or-</para>
         <para>
@@ -6791,8 +6766,7 @@ Releases the unmanaged resources used by the <see cref="T:System.Security.Crypto
       <exception cref="T:System.ArgumentNullException">
         <paramref name="source" /> is <see langword="null" />.</exception>
       <exception cref="T:System.ArgumentException">
-        <para>
-              The buffer in <paramref name="destination" /> is too small to hold the calculated hash
+        <para>The buffer in <paramref name="destination" /> is too small to hold the calculated hash
               size. The SHA-1 algorithm always produces a 160-bit hash, or 20 bytes.</para>
         <para>-or-</para>
         <para>
@@ -6899,8 +6873,7 @@ Releases the unmanaged resources used by the <see cref="T:System.Security.Crypto
       <exception cref="T:System.ArgumentNullException">
         <paramref name="source" /> is <see langword="null" />.</exception>
       <exception cref="T:System.ArgumentException">
-        <para>
-              The buffer in <paramref name="destination" /> is too small to hold the calculated HMAC
+        <para>The buffer in <paramref name="destination" /> is too small to hold the calculated HMAC
               size. The SHA-256 algorithm always produces a 256-bit HMAC, or 32 bytes.</para>
         <para>-or-</para>
         <para>
@@ -6955,8 +6928,7 @@ Releases the unmanaged resources used by the <see cref="T:System.Security.Crypto
       <exception cref="T:System.ArgumentNullException">
         <paramref name="source" /> is <see langword="null" />.</exception>
       <exception cref="T:System.ArgumentException">
-        <para>
-              The buffer in <paramref name="destination" /> is too small to hold the calculated hash
+        <para>The buffer in <paramref name="destination" /> is too small to hold the calculated hash
               size. The SHA-256 algorithm always produces a 256-bit hash, or 32 bytes.</para>
         <para>-or-</para>
         <para>
@@ -7063,9 +7035,7 @@ Releases the unmanaged resources used by the <see cref="T:System.Security.Crypto
       <param name="destination">The buffer to receive the HMAC value.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="source" /> is <see langword="null" />.</exception>
-      <exception cref="T:System.ArgumentException">
-
-              The buffer in <paramref name="destination" /> is too small to hold the calculated HMAC
+      <exception cref="T:System.ArgumentException">The buffer in <paramref name="destination" /> is too small to hold the calculated HMAC
               size. The SHA-3-256 algorithm always produces a 256-bit HMAC, or 32 bytes.
 
 -or-
@@ -7120,9 +7090,7 @@ Releases the unmanaged resources used by the <see cref="T:System.Security.Crypto
               The default value is <see cref="P:System.Threading.CancellationToken.None" />.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="source" /> is <see langword="null" />.</exception>
-      <exception cref="T:System.ArgumentException">
-
-              The buffer in <paramref name="destination" /> is too small to hold the calculated hash
+      <exception cref="T:System.ArgumentException">The buffer in <paramref name="destination" /> is too small to hold the calculated hash
               size. The SHA-3-256 algorithm always produces a 256-bit hash, or 32 bytes.
 
 -or-
@@ -7234,9 +7202,7 @@ Releases the unmanaged resources used by the <see cref="T:System.Security.Crypto
       <param name="destination">The buffer to receive the HMAC value.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="source" /> is <see langword="null" />.</exception>
-      <exception cref="T:System.ArgumentException">
-
-              The buffer in <paramref name="destination" /> is too small to hold the calculated HMAC
+      <exception cref="T:System.ArgumentException">The buffer in <paramref name="destination" /> is too small to hold the calculated HMAC
               size. The SHA-3-384 algorithm always produces a 384-bit HMAC, or 48 bytes.
 
 -or-
@@ -7291,9 +7257,7 @@ Releases the unmanaged resources used by the <see cref="T:System.Security.Crypto
               The default value is <see cref="P:System.Threading.CancellationToken.None" />.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="source" /> is <see langword="null" />.</exception>
-      <exception cref="T:System.ArgumentException">
-
-              The buffer in <paramref name="destination" /> is too small to hold the calculated hash
+      <exception cref="T:System.ArgumentException">The buffer in <paramref name="destination" /> is too small to hold the calculated hash
               size. The SHA-3-384 algorithm always produces a 384-bit hash, or 48 bytes.
 
 -or-
@@ -7405,9 +7369,7 @@ Releases the unmanaged resources used by the <see cref="T:System.Security.Crypto
       <param name="destination">The buffer to receive the HMAC value.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="source" /> is <see langword="null" />.</exception>
-      <exception cref="T:System.ArgumentException">
-
-              The buffer in <paramref name="destination" /> is too small to hold the calculated HMAC
+      <exception cref="T:System.ArgumentException">The buffer in <paramref name="destination" /> is too small to hold the calculated HMAC
               size. The SHA-3-512 algorithm always produces a 512-bit HMAC, or 64 bytes.
 
 -or-
@@ -7462,9 +7424,7 @@ Releases the unmanaged resources used by the <see cref="T:System.Security.Crypto
               The default value is <see cref="P:System.Threading.CancellationToken.None" />.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="source" /> is <see langword="null" />.</exception>
-      <exception cref="T:System.ArgumentException">
-
-              The buffer in <paramref name="destination" /> is too small to hold the calculated hash
+      <exception cref="T:System.ArgumentException">The buffer in <paramref name="destination" /> is too small to hold the calculated hash
               size. The SHA-3-512 algorithm always produces a 512-bit hash, or 64 bytes.
 
 -or-
@@ -7576,8 +7536,7 @@ Releases the unmanaged resources used by the <see cref="T:System.Security.Crypto
       <exception cref="T:System.ArgumentNullException">
         <paramref name="source" /> is <see langword="null" />.</exception>
       <exception cref="T:System.ArgumentException">
-        <para>
-              The buffer in <paramref name="destination" /> is too small to hold the calculated HMAC
+        <para>The buffer in <paramref name="destination" /> is too small to hold the calculated HMAC
               size. The SHA-384 algorithm always produces a 384-bit HMAC, or 48 bytes.</para>
         <para>-or-</para>
         <para>
@@ -7632,8 +7591,7 @@ Releases the unmanaged resources used by the <see cref="T:System.Security.Crypto
       <exception cref="T:System.ArgumentNullException">
         <paramref name="source" /> is <see langword="null" />.</exception>
       <exception cref="T:System.ArgumentException">
-        <para>
-              The buffer in <paramref name="destination" /> is too small to hold the calculated hash
+        <para>The buffer in <paramref name="destination" /> is too small to hold the calculated hash
               size. The SHA-384 algorithm always produces a 384-bit hash, or 48 bytes.</para>
         <para>-or-</para>
         <para>
@@ -7745,8 +7703,7 @@ Releases the unmanaged resources used by the <see cref="T:System.Security.Crypto
       <exception cref="T:System.ArgumentNullException">
         <paramref name="source" /> is <see langword="null" />.</exception>
       <exception cref="T:System.ArgumentException">
-        <para>
-              The buffer in <paramref name="destination" /> is too small to hold the calculated HMAC
+        <para>The buffer in <paramref name="destination" /> is too small to hold the calculated HMAC
               size. The SHA-512 algorithm always produces a 512-bit HMAC, or 64 bytes.</para>
         <para>-or-</para>
         <para>
@@ -7801,8 +7758,7 @@ Releases the unmanaged resources used by the <see cref="T:System.Security.Crypto
       <exception cref="T:System.ArgumentNullException">
         <paramref name="source" /> is <see langword="null" />.</exception>
       <exception cref="T:System.ArgumentException">
-        <para>
-              The buffer in <paramref name="destination" /> is too small to hold the calculated hash
+        <para>The buffer in <paramref name="destination" /> is too small to hold the calculated hash
               size. The SHA-512 algorithm always produces a 512-bit hash, or 64 bytes.</para>
         <para>-or-</para>
         <para>
@@ -7911,12 +7867,10 @@ Releases the unmanaged resources used by the <see cref="T:System.Security.Crypto
       <returns>A <see cref="T:System.Security.Cryptography.CspKeyContainerInfo" /> object that describes additional information about a cryptographic key pair.</returns>
     </member>
     <member name="T:System.Security.Cryptography.IncrementalHash">
-      <summary>
-            Provides support for computing a hash or HMAC value incrementally across several segments.</summary>
+      <summary>Provides support for computing a hash or HMAC value incrementally across several segments.</summary>
     </member>
     <member name="M:System.Security.Cryptography.IncrementalHash.AppendData(System.Byte[],System.Int32,System.Int32)">
-      <summary>
-            Append <paramref name="count" /> bytes of <paramref name="data" />, starting at <paramref name="offset" />,
+      <summary>Append <paramref name="count" /> bytes of <paramref name="data" />, starting at <paramref name="offset" />,
             to the data already processed in the hash or HMAC.</summary>
       <param name="data">The data to process.</param>
       <param name="offset">The offset into the byte array from which to begin using data.</param>
@@ -7932,8 +7886,7 @@ Releases the unmanaged resources used by the <see cref="T:System.Security.Crypto
       <exception cref="T:System.ObjectDisposedException">The object has already been disposed.</exception>
     </member>
     <member name="M:System.Security.Cryptography.IncrementalHash.AppendData(System.Byte[])">
-      <summary>
-            Append the entire contents of <paramref name="data" /> to the data already processed in the hash or HMAC.</summary>
+      <summary>Append the entire contents of <paramref name="data" /> to the data already processed in the hash or HMAC.</summary>
       <param name="data">The data to process.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="data" /> is <c>null</c>.</exception>
@@ -7945,26 +7898,22 @@ Releases the unmanaged resources used by the <see cref="T:System.Security.Crypto
       <exception cref="T:System.ObjectDisposedException">The <see cref="T:System.Security.Cryptography.IncrementalHash" /> object has already been disposed.</exception>
     </member>
     <member name="M:System.Security.Cryptography.IncrementalHash.CreateHash(System.Security.Cryptography.HashAlgorithmName)">
-      <summary>
-            Create an <see cref="T:System.Security.Cryptography.IncrementalHash" /> for the algorithm specified by <paramref name="hashAlgorithm" />.</summary>
+      <summary>Create an <see cref="T:System.Security.Cryptography.IncrementalHash" /> for the algorithm specified by <paramref name="hashAlgorithm" />.</summary>
       <param name="hashAlgorithm">The name of the hash algorithm to perform.</param>
       <exception cref="T:System.ArgumentException">
         <paramref name="hashAlgorithm" />.<see cref="P:System.Security.Cryptography.HashAlgorithmName.Name" /> is <c>null</c>, or
                 the empty string.</exception>
       <exception cref="T:System.Security.Cryptography.CryptographicException">
         <paramref name="hashAlgorithm" /> is not a known hash algorithm.</exception>
-      <returns>
-            An <see cref="T:System.Security.Cryptography.IncrementalHash" /> instance ready to compute the hash algorithm specified
+      <returns>An <see cref="T:System.Security.Cryptography.IncrementalHash" /> instance ready to compute the hash algorithm specified
             by <paramref name="hashAlgorithm" />.</returns>
     </member>
     <member name="M:System.Security.Cryptography.IncrementalHash.CreateHMAC(System.Security.Cryptography.HashAlgorithmName,System.Byte[])">
-      <summary>
-            Create an <see cref="T:System.Security.Cryptography.IncrementalHash" /> for the Hash-based Message Authentication Code (HMAC)
+      <summary>Create an <see cref="T:System.Security.Cryptography.IncrementalHash" /> for the Hash-based Message Authentication Code (HMAC)
             algorithm utilizing the hash algorithm specified by <paramref name="hashAlgorithm" />, and a
             key specified by <paramref name="key" />.</summary>
       <param name="hashAlgorithm">The name of the hash algorithm to perform within the HMAC.</param>
-      <param name="key">
-                The secret key for the HMAC. The key can be any length, but a key longer than the output size
+      <param name="key">The secret key for the HMAC. The key can be any length, but a key longer than the output size
                 of the hash algorithm specified by <paramref name="hashAlgorithm" /> will be hashed (using the
                 algorithm specified by <paramref name="hashAlgorithm" />) to derive a correctly-sized key. Therefore,
                 the recommended size of the secret key is the output size of the hash specified by
@@ -7976,8 +7925,7 @@ Releases the unmanaged resources used by the <see cref="T:System.Security.Crypto
                 the empty string.</exception>
       <exception cref="T:System.Security.Cryptography.CryptographicException">
         <paramref name="hashAlgorithm" /> is not a known hash algorithm.</exception>
-      <returns>
-            An <see cref="T:System.Security.Cryptography.IncrementalHash" /> instance ready to compute the hash algorithm specified
+      <returns>An <see cref="T:System.Security.Cryptography.IncrementalHash" /> instance ready to compute the hash algorithm specified
             by <paramref name="hashAlgorithm" />.</returns>
     </member>
     <member name="M:System.Security.Cryptography.IncrementalHash.CreateHMAC(System.Security.Cryptography.HashAlgorithmName,System.ReadOnlySpan{System.Byte})">
@@ -7991,8 +7939,7 @@ Releases the unmanaged resources used by the <see cref="T:System.Security.Crypto
       <returns>A hash instance to compute the hash algorithm specified by <paramref name="hashAlgorithm" />.</returns>
     </member>
     <member name="M:System.Security.Cryptography.IncrementalHash.Dispose">
-      <summary>
-            Release all resources used by the current instance of the
+      <summary>Release all resources used by the current instance of the
             <see cref="T:System.Security.Cryptography.IncrementalHash" /> class.</summary>
     </member>
     <member name="M:System.Security.Cryptography.IncrementalHash.GetCurrentHash">
@@ -8009,8 +7956,7 @@ Releases the unmanaged resources used by the <see cref="T:System.Security.Crypto
       <returns>The number of bytes written to <paramref name="destination" />.</returns>
     </member>
     <member name="M:System.Security.Cryptography.IncrementalHash.GetHashAndReset">
-      <summary>
-            Retrieve the hash or HMAC for the data accumulated from prior calls to
+      <summary>Retrieve the hash or HMAC for the data accumulated from prior calls to
             <see cref="M:System.Security.Cryptography.IncrementalHash.AppendData(System.Byte[])" />, and return to the state the object
             was in at construction.</summary>
       <exception cref="T:System.ObjectDisposedException">The object has already been disposed.</exception>
@@ -8042,8 +7988,7 @@ Releases the unmanaged resources used by the <see cref="T:System.Security.Crypto
         <see langword="true" /> if <paramref name="destination" /> is long enough to receive the hash or HMAC value; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="P:System.Security.Cryptography.IncrementalHash.AlgorithmName">
-      <summary>
-            Get the name of the algorithm being performed.</summary>
+      <summary>Get the name of the algorithm being performed.</summary>
       <returns>The name of the algorithm being performed.</returns>
     </member>
     <member name="P:System.Security.Cryptography.IncrementalHash.HashLengthInBytes">
@@ -8067,7 +8012,7 @@ Releases the unmanaged resources used by the <see cref="T:System.Security.Crypto
       <summary>Creates an instance of the specified implementation of a keyed hash algorithm.</summary>
       <param name="algName">The keyed hash algorithm implementation to use. The following table shows the valid values for the <paramref name="algName" /> parameter and the algorithms they map to.
 
- <list type="table"><listheader><term> Parameter value</term><description> Implements</description></listheader><item><term> System.Security.Cryptography.HMAC</term><description><see cref="T:System.Security.Cryptography.HMACSHA1" /></description></item><item><term> System.Security.Cryptography.KeyedHashAlgorithm</term><description><see cref="T:System.Security.Cryptography.HMACSHA1" /></description></item><item><term> HMACMD5</term><description><see cref="T:System.Security.Cryptography.HMACMD5" /></description></item><item><term> System.Security.Cryptography.HMACMD5</term><description><see cref="T:System.Security.Cryptography.HMACMD5" /></description></item><item><term> HMACRIPEMD160</term><description><see cref="T:System.Security.Cryptography.HMACRIPEMD160" /></description></item><item><term> System.Security.Cryptography.HMACRIPEMD160</term><description><see cref="T:System.Security.Cryptography.HMACRIPEMD160" /></description></item><item><term> HMACSHA1</term><description><see cref="T:System.Security.Cryptography.HMACSHA1" /></description></item><item><term> System.Security.Cryptography.HMACSHA1</term><description><see cref="T:System.Security.Cryptography.HMACSHA1" /></description></item><item><term> HMACSHA256</term><description><see cref="T:System.Security.Cryptography.HMACSHA256" /></description></item><item><term> System.Security.Cryptography.HMACSHA256</term><description><see cref="T:System.Security.Cryptography.HMACSHA256" /></description></item><item><term> HMACSHA384</term><description><see cref="T:System.Security.Cryptography.HMACSHA384" /></description></item><item><term> System.Security.Cryptography.HMACSHA384</term><description><see cref="T:System.Security.Cryptography.HMACSHA384" /></description></item><item><term> HMACSHA512</term><description><see cref="T:System.Security.Cryptography.HMACSHA512" /></description></item><item><term> System.Security.Cryptography.HMACSHA512</term><description><see cref="T:System.Security.Cryptography.HMACSHA512" /></description></item><item><term> MACTripleDES</term><description><see cref="T:System.Security.Cryptography.MACTripleDES" /></description></item><item><term> System.Security.Cryptography.MACTripleDES</term><description><see cref="T:System.Security.Cryptography.MACTripleDES" /></description></item></list></param>
+ <list type="table"><listheader><term>Parameter value</term><description>Implements</description></listheader><item><term>System.Security.Cryptography.HMAC</term><description><see cref="T:System.Security.Cryptography.HMACSHA1" /></description></item><item><term>System.Security.Cryptography.KeyedHashAlgorithm</term><description><see cref="T:System.Security.Cryptography.HMACSHA1" /></description></item><item><term>HMACMD5</term><description><see cref="T:System.Security.Cryptography.HMACMD5" /></description></item><item><term>System.Security.Cryptography.HMACMD5</term><description><see cref="T:System.Security.Cryptography.HMACMD5" /></description></item><item><term>HMACRIPEMD160</term><description><see cref="T:System.Security.Cryptography.HMACRIPEMD160" /></description></item><item><term>System.Security.Cryptography.HMACRIPEMD160</term><description><see cref="T:System.Security.Cryptography.HMACRIPEMD160" /></description></item><item><term>HMACSHA1</term><description><see cref="T:System.Security.Cryptography.HMACSHA1" /></description></item><item><term>System.Security.Cryptography.HMACSHA1</term><description><see cref="T:System.Security.Cryptography.HMACSHA1" /></description></item><item><term>HMACSHA256</term><description><see cref="T:System.Security.Cryptography.HMACSHA256" /></description></item><item><term>System.Security.Cryptography.HMACSHA256</term><description><see cref="T:System.Security.Cryptography.HMACSHA256" /></description></item><item><term>HMACSHA384</term><description><see cref="T:System.Security.Cryptography.HMACSHA384" /></description></item><item><term>System.Security.Cryptography.HMACSHA384</term><description><see cref="T:System.Security.Cryptography.HMACSHA384" /></description></item><item><term>HMACSHA512</term><description><see cref="T:System.Security.Cryptography.HMACSHA512" /></description></item><item><term>System.Security.Cryptography.HMACSHA512</term><description><see cref="T:System.Security.Cryptography.HMACSHA512" /></description></item><item><term>MACTripleDES</term><description><see cref="T:System.Security.Cryptography.MACTripleDES" /></description></item><item><term>System.Security.Cryptography.MACTripleDES</term><description><see cref="T:System.Security.Cryptography.MACTripleDES" /></description></item></list></param>
       <exception cref="T:System.PlatformNotSupportedException">.NET Core 2.0 - 3.1 and .NET 5 and later: In all cases.</exception>
       <returns>A new instance of the specified keyed hash algorithm.</returns>
     </member>
@@ -8160,8 +8105,7 @@ Releases the unmanaged resources used by the <see cref="T:System.Security.Crypto
       <exception cref="T:System.ArgumentNullException">
         <paramref name="source" /> is <see langword="null" />.</exception>
       <exception cref="T:System.ArgumentException">
-        <para>
-              The buffer in <paramref name="destination" /> is too small to hold the calculated hash
+        <para>The buffer in <paramref name="destination" /> is too small to hold the calculated hash
               size. The MD5 algorithm always produces a 128-bit hash, or 16 bytes.</para>
         <para>-or-</para>
         <para>
@@ -8199,8 +8143,7 @@ Releases the unmanaged resources used by the <see cref="T:System.Security.Crypto
       <exception cref="T:System.ArgumentNullException">
         <paramref name="source" /> is <see langword="null" />.</exception>
       <exception cref="T:System.ArgumentException">
-        <para>
-              The buffer in <paramref name="destination" /> is too small to hold the calculated hash
+        <para>The buffer in <paramref name="destination" /> is too small to hold the calculated hash
               size. The MD5 algorithm always produces a 128-bit hash, or 16 bytes.</para>
         <para>-or-</para>
         <para>
@@ -9570,8 +9513,7 @@ The algorithm-specific key import failed.</exception>
 -or-
 
 <paramref name="input" /> contains multiple PEM-encoded keys with a recognized label.</exception>
-      <exception cref="T:System.Security.Cryptography.CryptographicException">
-The password is incorrect.
+      <exception cref="T:System.Security.Cryptography.CryptographicException">The password is incorrect.
 
 -or-
 
@@ -9599,8 +9541,7 @@ The algorithm-specific key import failed.</exception>
 -or-
 
 <paramref name="input" /> contains multiple PEM-encoded keys with a recognized label.</exception>
-      <exception cref="T:System.Security.Cryptography.CryptographicException">
-The password is incorrect.
+      <exception cref="T:System.Security.Cryptography.CryptographicException">The password is incorrect.
 
 -or-
 
@@ -11221,8 +11162,7 @@ An error occurred creating the signature.</exception>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="source" /> is <see langword="null" />.</exception>
       <exception cref="T:System.ArgumentException">
-        <para>
-              The buffer in <paramref name="destination" /> is too small to hold the calculated hash
+        <para>The buffer in <paramref name="destination" /> is too small to hold the calculated hash
               size. The SHA-1 algorithm always produces a 160-bit hash, or 20 bytes.</para>
         <para>-or-</para>
         <para>
@@ -11260,8 +11200,7 @@ An error occurred creating the signature.</exception>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="source" /> is <see langword="null" />.</exception>
       <exception cref="T:System.ArgumentException">
-        <para>
-              The buffer in <paramref name="destination" /> is too small to hold the calculated hash
+        <para>The buffer in <paramref name="destination" /> is too small to hold the calculated hash
               size. The SHA-1 algorithm always produces a 160-bit hash, or 20 bytes.</para>
         <para>-or-</para>
         <para>
@@ -11383,8 +11322,7 @@ An error occurred creating the signature.</exception>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="source" /> is <see langword="null" />.</exception>
       <exception cref="T:System.ArgumentException">
-        <para>
-              The buffer in <paramref name="destination" /> is too small to hold the calculated hash
+        <para>The buffer in <paramref name="destination" /> is too small to hold the calculated hash
               size. The SHA-256 algorithm always produces a 256-bit hash, or 32 bytes.</para>
         <para>-or-</para>
         <para>
@@ -11464,8 +11402,7 @@ An error occurred creating the signature.</exception>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="source" /> is <see langword="null" />.</exception>
       <exception cref="T:System.ArgumentException">
-        <p>
-              The buffer in <paramref name="destination" /> is too small to hold the calculated hash
+        <p>The buffer in <paramref name="destination" /> is too small to hold the calculated hash
               size. The SHA-3-256 algorithm always produces a 256-bit hash, or 32 bytes.</p>
         <p>-or-</p>
         <p>
@@ -11508,8 +11445,7 @@ An error occurred creating the signature.</exception>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="source" /> is <see langword="null" />.</exception>
       <exception cref="T:System.ArgumentException">
-        <p>
-              The buffer in <paramref name="destination" /> is too small to hold the calculated hash
+        <p>The buffer in <paramref name="destination" /> is too small to hold the calculated hash
               size. The SHA-3-256 algorithm always produces a 256-bit hash, or 32 bytes.</p>
         <p>-or-</p>
         <p>
@@ -11577,9 +11513,7 @@ An error occurred creating the signature.</exception>
       <param name="destination">The buffer to receive the hash value.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="source" /> is <see langword="null" />.</exception>
-      <exception cref="T:System.ArgumentException">
-
-              The buffer in <paramref name="destination" /> is too small to hold the calculated hash
+      <exception cref="T:System.ArgumentException">The buffer in <paramref name="destination" /> is too small to hold the calculated hash
               size. The SHA-3-384 algorithm always produces a 384-bit hash, or 48 bytes.
 
 -or-
@@ -11621,9 +11555,7 @@ An error occurred creating the signature.</exception>
               The default value is <see cref="P:System.Threading.CancellationToken.None" />.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="source" /> is <see langword="null" />.</exception>
-      <exception cref="T:System.ArgumentException">
-
-              The buffer in <paramref name="destination" /> is too small to hold the calculated hash
+      <exception cref="T:System.ArgumentException">The buffer in <paramref name="destination" /> is too small to hold the calculated hash
               size. The SHA-3-384 algorithm always produces a 384-bit hash, or 48 bytes.
 
 -or-
@@ -11691,9 +11623,7 @@ An error occurred creating the signature.</exception>
       <param name="destination">The buffer to receive the hash value.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="source" /> is <see langword="null" />.</exception>
-      <exception cref="T:System.ArgumentException">
-
-              The buffer in <paramref name="destination" /> is too small to hold the calculated hash
+      <exception cref="T:System.ArgumentException">The buffer in <paramref name="destination" /> is too small to hold the calculated hash
               size. The SHA-3-512 algorithm always produces a 512-bit hash, or 64 bytes.
 
 -or-
@@ -11735,9 +11665,7 @@ An error occurred creating the signature.</exception>
               The default value is <see cref="P:System.Threading.CancellationToken.None" />.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="source" /> is <see langword="null" />.</exception>
-      <exception cref="T:System.ArgumentException">
-
-              The buffer in <paramref name="destination" /> is too small to hold the calculated hash
+      <exception cref="T:System.ArgumentException">The buffer in <paramref name="destination" /> is too small to hold the calculated hash
               size. The SHA-3-512 algorithm always produces a 512-bit hash, or 64 bytes.
 
 -or-
@@ -11811,8 +11739,7 @@ An error occurred creating the signature.</exception>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="source" /> is <see langword="null" />.</exception>
       <exception cref="T:System.ArgumentException">
-        <p>
-              The buffer in <paramref name="destination" /> is too small to hold the calculated hash
+        <p>The buffer in <paramref name="destination" /> is too small to hold the calculated hash
               size. The SHA-384 algorithm always produces a 384-bit hash, or 48 bytes.</p>
         <p>-or-</p>
         <p>
@@ -11850,8 +11777,7 @@ An error occurred creating the signature.</exception>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="source" /> is <see langword="null" />.</exception>
       <exception cref="T:System.ArgumentException">
-        <p>
-              The buffer in <paramref name="destination" /> is too small to hold the calculated hash
+        <p>The buffer in <paramref name="destination" /> is too small to hold the calculated hash
               size. The SHA-384 algorithm always produces a 384-bit hash, or 48 bytes.</p>
         <p>-or-</p>
         <p>
@@ -11936,8 +11862,7 @@ An error occurred creating the signature.</exception>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="source" /> is <see langword="null" />.</exception>
       <exception cref="T:System.ArgumentException">
-        <p>
-              The buffer in <paramref name="destination" /> is too small to hold the calculated hash
+        <p>The buffer in <paramref name="destination" /> is too small to hold the calculated hash
               size. The SHA-512 algorithm always produces a 512-bit hash, or 64 bytes.</p>
         <p>-or-</p>
         <p>
@@ -11975,8 +11900,7 @@ An error occurred creating the signature.</exception>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="source" /> is <see langword="null" />.</exception>
       <exception cref="T:System.ArgumentException">
-        <p>
-              The buffer in <paramref name="destination" /> is too small to hold the calculated hash
+        <p>The buffer in <paramref name="destination" /> is too small to hold the calculated hash
               size. The SHA-512 algorithm always produces a 512-bit hash, or 64 bytes.</p>
         <p>-or-</p>
         <p>
@@ -12350,18 +12274,16 @@ An error occurred creating the signature.</exception>
       <returns>The key algorithm for the signature description.</returns>
     </member>
     <member name="T:System.Security.Cryptography.SP800108HmacCounterKdf">
-      <summary>
-              NIST SP 800-108 HMAC CTR Key-Based Key Derivation (KBKDF)</summary>
+      <summary>NIST SP 800-108 HMAC CTR Key-Based Key Derivation (KBKDF)</summary>
     </member>
     <member name="M:System.Security.Cryptography.SP800108HmacCounterKdf.#ctor(System.Byte[],System.Security.Cryptography.HashAlgorithmName)">
-      <summary>
-              Initializes a new instance of <see cref="T:System.Security.Cryptography.SP800108HmacCounterKdf" /> using a specified key and HMAC algorithm.</summary>
+      <summary>Initializes a new instance of <see cref="T:System.Security.Cryptography.SP800108HmacCounterKdf" /> using a specified key and HMAC algorithm.</summary>
       <param name="key">The key-derivation key.</param>
       <param name="hashAlgorithm">The HMAC algorithm.</param>
       <exception cref="T:System.ArgumentNullException">
         <para>
           <paramref name="hashAlgorithm" /> has a <see cref="P:System.Security.Cryptography.HashAlgorithmName.Name" /> that's <see langword="null" />.</para>
-        <para> -or-</para>
+        <para>-or-</para>
         <para>
           <paramref name="key" /> is <see langword="null" />.</para>
       </exception>
@@ -12369,12 +12291,10 @@ An error occurred creating the signature.</exception>
         <paramref name="hashAlgorithm" /> has a <see cref="P:System.Security.Cryptography.HashAlgorithmName.Name" /> that's empty.</exception>
       <exception cref="T:System.Security.Cryptography.CryptographicException">
         <paramref name="hashAlgorithm" /> is not a known or supported hash algorithm.</exception>
-      <exception cref="T:System.PlatformNotSupportedException">
-              The current platform does not have a supported implementation of HMAC.</exception>
+      <exception cref="T:System.PlatformNotSupportedException">The current platform does not have a supported implementation of HMAC.</exception>
     </member>
     <member name="M:System.Security.Cryptography.SP800108HmacCounterKdf.#ctor(System.ReadOnlySpan{System.Byte},System.Security.Cryptography.HashAlgorithmName)">
-      <summary>
-              Initializes a new instance of <see cref="T:System.Security.Cryptography.SP800108HmacCounterKdf" /> using a specified key and HMAC algorithm.</summary>
+      <summary>Initializes a new instance of <see cref="T:System.Security.Cryptography.SP800108HmacCounterKdf" /> using a specified key and HMAC algorithm.</summary>
       <param name="key">The key-derivation key.</param>
       <param name="hashAlgorithm">The HMAC algorithm.</param>
       <exception cref="T:System.ArgumentNullException">
@@ -12383,12 +12303,10 @@ An error occurred creating the signature.</exception>
         <paramref name="hashAlgorithm" /> has a <see cref="P:System.Security.Cryptography.HashAlgorithmName.Name" /> that's empty.</exception>
       <exception cref="T:System.Security.Cryptography.CryptographicException">
         <paramref name="hashAlgorithm" /> is not a known or supported hash algorithm.</exception>
-      <exception cref="T:System.PlatformNotSupportedException">
-              The current platform does not have a supported implementation of HMAC.</exception>
+      <exception cref="T:System.PlatformNotSupportedException">The current platform does not have a supported implementation of HMAC.</exception>
     </member>
     <member name="M:System.Security.Cryptography.SP800108HmacCounterKdf.DeriveBytes(System.Byte[],System.Security.Cryptography.HashAlgorithmName,System.Byte[],System.Byte[],System.Int32)">
-      <summary>
-              Derives a key of a specified length.</summary>
+      <summary>Derives a key of a specified length.</summary>
       <param name="key">The key-derivation key.</param>
       <param name="hashAlgorithm">The HMAC algorithm.</param>
       <param name="label">The label that identifies the purpose for the derived key.</param>
@@ -12397,13 +12315,13 @@ An error occurred creating the signature.</exception>
       <exception cref="T:System.ArgumentNullException">
         <para>
           <paramref name="key" /> is <see langword="null" />.</para>
-        <para> -or-</para>
+        <para>-or-</para>
         <para>
           <paramref name="label" /> is <see langword="null" />.</para>
-        <para> -or-</para>
+        <para>-or-</para>
         <para>
           <paramref name="context" /> is <see langword="null" />.</para>
-        <para> -or-</para>
+        <para>-or-</para>
         <para>
           <paramref name="hashAlgorithm" /> has a <see cref="P:System.Security.Cryptography.HashAlgorithmName.Name" /> that's <see langword="null" />.</para>
       </exception>
@@ -12414,13 +12332,11 @@ An error occurred creating the signature.</exception>
                 that can be derived.</exception>
       <exception cref="T:System.Security.Cryptography.CryptographicException">
         <paramref name="hashAlgorithm" /> is not a known or supported hash algorithm.</exception>
-      <exception cref="T:System.PlatformNotSupportedException">
-              The current platform does not have a supported implementation of HMAC.</exception>
+      <exception cref="T:System.PlatformNotSupportedException">The current platform does not have a supported implementation of HMAC.</exception>
       <returns>An array containing the derived key.</returns>
     </member>
     <member name="M:System.Security.Cryptography.SP800108HmacCounterKdf.DeriveBytes(System.Byte[],System.Security.Cryptography.HashAlgorithmName,System.String,System.String,System.Int32)">
-      <summary>
-              Derives a key of a specified length.</summary>
+      <summary>Derives a key of a specified length.</summary>
       <param name="key">The key-derivation key.</param>
       <param name="hashAlgorithm">The HMAC algorithm.</param>
       <param name="label">The label that identifies the purpose for the derived key.</param>
@@ -12429,13 +12345,13 @@ An error occurred creating the signature.</exception>
       <exception cref="T:System.ArgumentNullException">
         <para>
           <paramref name="key" /> is <see langword="null" />.</para>
-        <para> -or-</para>
+        <para>-or-</para>
         <para>
           <paramref name="label" /> is <see langword="null" />.</para>
-        <para> -or-</para>
+        <para>-or-</para>
         <para>
           <paramref name="context" /> is <see langword="null" />.</para>
-        <para> -or-</para>
+        <para>-or-</para>
         <para>
           <paramref name="hashAlgorithm" /> has a <see cref="P:System.Security.Cryptography.HashAlgorithmName.Name" /> that's <see langword="null" />.</para>
       </exception>
@@ -12448,13 +12364,11 @@ An error occurred creating the signature.</exception>
         <paramref name="hashAlgorithm" /> is not a known or supported hash algorithm.</exception>
       <exception cref="T:System.Text.EncoderFallbackException">
         <paramref name="label" /> or <paramref name="context" /> contains text that cannot be converted to UTF-8.</exception>
-      <exception cref="T:System.PlatformNotSupportedException">
-              The current platform does not have a supported implementation of HMAC.</exception>
+      <exception cref="T:System.PlatformNotSupportedException">The current platform does not have a supported implementation of HMAC.</exception>
       <returns>An array containing the derived key.</returns>
     </member>
     <member name="M:System.Security.Cryptography.SP800108HmacCounterKdf.DeriveBytes(System.ReadOnlySpan{System.Byte},System.Security.Cryptography.HashAlgorithmName,System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Int32)">
-      <summary>
-              Derives a key of a specified length.</summary>
+      <summary>Derives a key of a specified length.</summary>
       <param name="key">The key-derivation key.</param>
       <param name="hashAlgorithm">The HMAC algorithm.</param>
       <param name="label">The label that identifies the purpose for the derived key.</param>
@@ -12469,13 +12383,11 @@ An error occurred creating the signature.</exception>
                 that can be derived.</exception>
       <exception cref="T:System.Security.Cryptography.CryptographicException">
         <paramref name="hashAlgorithm" /> is not a known or supported hash algorithm.</exception>
-      <exception cref="T:System.PlatformNotSupportedException">
-              The current platform does not have a supported implementation of HMAC.</exception>
+      <exception cref="T:System.PlatformNotSupportedException">The current platform does not have a supported implementation of HMAC.</exception>
       <returns>An array containing the derived key.</returns>
     </member>
     <member name="M:System.Security.Cryptography.SP800108HmacCounterKdf.DeriveBytes(System.ReadOnlySpan{System.Byte},System.Security.Cryptography.HashAlgorithmName,System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Span{System.Byte})">
-      <summary>
-              Fills a buffer with a derived key.</summary>
+      <summary>Fills a buffer with a derived key.</summary>
       <param name="key">The key-derivation key.</param>
       <param name="hashAlgorithm">The HMAC algorithm.</param>
       <param name="label">The label that identifies the purpose for the derived key.</param>
@@ -12489,12 +12401,10 @@ An error occurred creating the signature.</exception>
         <paramref name="destination" /> is larger than the maximum number of bytes that can be derived.</exception>
       <exception cref="T:System.Security.Cryptography.CryptographicException">
         <paramref name="hashAlgorithm" /> is not a known or supported hash algorithm.</exception>
-      <exception cref="T:System.PlatformNotSupportedException">
-              The current platform does not have a supported implementation of HMAC.</exception>
+      <exception cref="T:System.PlatformNotSupportedException">The current platform does not have a supported implementation of HMAC.</exception>
     </member>
     <member name="M:System.Security.Cryptography.SP800108HmacCounterKdf.DeriveBytes(System.ReadOnlySpan{System.Byte},System.Security.Cryptography.HashAlgorithmName,System.ReadOnlySpan{System.Char},System.ReadOnlySpan{System.Char},System.Int32)">
-      <summary>
-              Derives a key of a specified length.</summary>
+      <summary>Derives a key of a specified length.</summary>
       <param name="key">The key-derivation key.</param>
       <param name="hashAlgorithm">The HMAC algorithm.</param>
       <param name="label">The label that identifies the purpose for the derived key.</param>
@@ -12511,13 +12421,11 @@ An error occurred creating the signature.</exception>
         <paramref name="hashAlgorithm" /> is not a known or supported hash algorithm.</exception>
       <exception cref="T:System.Text.EncoderFallbackException">
         <paramref name="label" /> or <paramref name="context" /> contains text that cannot be converted to UTF-8.</exception>
-      <exception cref="T:System.PlatformNotSupportedException">
-              The current platform does not have a supported implementation of HMAC.</exception>
+      <exception cref="T:System.PlatformNotSupportedException">The current platform does not have a supported implementation of HMAC.</exception>
       <returns>An array containing the derived key.</returns>
     </member>
     <member name="M:System.Security.Cryptography.SP800108HmacCounterKdf.DeriveBytes(System.ReadOnlySpan{System.Byte},System.Security.Cryptography.HashAlgorithmName,System.ReadOnlySpan{System.Char},System.ReadOnlySpan{System.Char},System.Span{System.Byte})">
-      <summary>
-              Fills a buffer with a derived key.</summary>
+      <summary>Fills a buffer with a derived key.</summary>
       <param name="key">The key-derivation key.</param>
       <param name="hashAlgorithm">The HMAC algorithm.</param>
       <param name="label">The label that identifies the purpose for the derived key.</param>
@@ -12533,19 +12441,17 @@ An error occurred creating the signature.</exception>
         <paramref name="hashAlgorithm" /> is not a known or supported hash algorithm.</exception>
       <exception cref="T:System.Text.EncoderFallbackException">
         <paramref name="label" /> or <paramref name="context" /> contains text that cannot be converted to UTF-8.</exception>
-      <exception cref="T:System.PlatformNotSupportedException">
-              The current platform does not have a supported implementation of HMAC.</exception>
+      <exception cref="T:System.PlatformNotSupportedException">The current platform does not have a supported implementation of HMAC.</exception>
     </member>
     <member name="M:System.Security.Cryptography.SP800108HmacCounterKdf.DeriveKey(System.Byte[],System.Byte[],System.Int32)">
-      <summary>
-              Derives a key of a specified length.</summary>
+      <summary>Derives a key of a specified length.</summary>
       <param name="label">The label that identifies the purpose for the derived key.</param>
       <param name="context">The context containing information related to the derived key.</param>
       <param name="derivedKeyLengthInBytes">The length of the derived key, in bytes.</param>
       <exception cref="T:System.ArgumentNullException">
         <para>
           <paramref name="label" /> is <see langword="null" />.</para>
-        <para> -or-</para>
+        <para>-or-</para>
         <para>
           <paramref name="context" /> is <see langword="null" />.</para>
       </exception>
@@ -12555,8 +12461,7 @@ An error occurred creating the signature.</exception>
       <returns>An array containing the derived key.</returns>
     </member>
     <member name="M:System.Security.Cryptography.SP800108HmacCounterKdf.DeriveKey(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Int32)">
-      <summary>
-              Derives a key of a specified length.</summary>
+      <summary>Derives a key of a specified length.</summary>
       <param name="label">The label that identifies the purpose for the derived key.</param>
       <param name="context">The context containing information related to the derived key.</param>
       <param name="derivedKeyLengthInBytes">The length of the derived key, in bytes.</param>
@@ -12566,15 +12471,14 @@ An error occurred creating the signature.</exception>
       <returns>An array containing the derived key.</returns>
     </member>
     <member name="M:System.Security.Cryptography.SP800108HmacCounterKdf.DeriveKey(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Span{System.Byte})">
-      <summary>
-              Fills a buffer with a derived key.</summary>
+      <summary>Fills a buffer with a derived key.</summary>
       <param name="label">The label that identifies the purpose for the derived key.</param>
       <param name="context">The context containing information related to the derived key.</param>
       <param name="destination">The buffer which will receive the derived key.</param>
       <exception cref="T:System.ArgumentNullException">
         <para>
           <paramref name="label" /> is <see langword="null" />.</para>
-        <para> -or-</para>
+        <para>-or-</para>
         <para>
           <paramref name="context" /> is <see langword="null" />.</para>
       </exception>
@@ -12582,8 +12486,7 @@ An error occurred creating the signature.</exception>
         <paramref name="destination" /> is larger than the maximum number of bytes that can be derived.</exception>
     </member>
     <member name="M:System.Security.Cryptography.SP800108HmacCounterKdf.DeriveKey(System.ReadOnlySpan{System.Char},System.ReadOnlySpan{System.Char},System.Int32)">
-      <summary>
-              Derives a key of a specified length.</summary>
+      <summary>Derives a key of a specified length.</summary>
       <param name="label">The label that identifies the purpose for the derived key.</param>
       <param name="context">The context containing information related to the derived key.</param>
       <param name="derivedKeyLengthInBytes">The length of the derived key, in bytes.</param>
@@ -12595,8 +12498,7 @@ An error occurred creating the signature.</exception>
       <returns>An array containing the derived key.</returns>
     </member>
     <member name="M:System.Security.Cryptography.SP800108HmacCounterKdf.DeriveKey(System.ReadOnlySpan{System.Char},System.ReadOnlySpan{System.Char},System.Span{System.Byte})">
-      <summary>
-              Fills a buffer with a derived key.</summary>
+      <summary>Fills a buffer with a derived key.</summary>
       <param name="label">The label that identifies the purpose for the derived key.</param>
       <param name="context">The context containing information related to the derived key.</param>
       <param name="destination">The buffer which will receive the derived key.</param>
@@ -12606,15 +12508,14 @@ An error occurred creating the signature.</exception>
         <paramref name="label" /> or <paramref name="context" /> contains text that cannot be converted to UTF-8.</exception>
     </member>
     <member name="M:System.Security.Cryptography.SP800108HmacCounterKdf.DeriveKey(System.String,System.String,System.Int32)">
-      <summary>
-              Derives a key of a specified length.</summary>
+      <summary>Derives a key of a specified length.</summary>
       <param name="label">The label that identifies the purpose for the derived key.</param>
       <param name="context">The context containing information related to the derived key.</param>
       <param name="derivedKeyLengthInBytes">The length of the derived key, in bytes.</param>
       <exception cref="T:System.ArgumentNullException">
         <para>
           <paramref name="label" /> is <see langword="null" />.</para>
-        <para> -or-</para>
+        <para>-or-</para>
         <para>
           <paramref name="context" /> is <see langword="null" />.</para>
       </exception>
@@ -12626,8 +12527,7 @@ An error occurred creating the signature.</exception>
       <returns>An array containing the derived key.</returns>
     </member>
     <member name="M:System.Security.Cryptography.SP800108HmacCounterKdf.Dispose">
-      <summary>
-              Releases all resources used by the current instance of <see cref="T:System.Security.Cryptography.SP800108HmacCounterKdf" />.</summary>
+      <summary>Releases all resources used by the current instance of <see cref="T:System.Security.Cryptography.SP800108HmacCounterKdf" />.</summary>
     </member>
     <member name="T:System.Security.Cryptography.SymmetricAlgorithm">
       <summary>Represents the abstract base class from which all implementations of symmetric algorithms must inherit.</summary>
@@ -15636,8 +15536,7 @@ The specified private key doesn't match the public key for this certificate.</ex
       <param name="certPem">The text of the PEM-encoded X509 certificate.</param>
       <param name="keyPem">The text of the password protected PEM-encoded private key.</param>
       <param name="password">The password for the encrypted PEM.</param>
-      <exception cref="T:System.Security.Cryptography.CryptographicException">
-The contents of <paramref name="certPem" /> do not contain a PEM-encoded certificate, or it is malformed.
+      <exception cref="T:System.Security.Cryptography.CryptographicException">The contents of <paramref name="certPem" /> do not contain a PEM-encoded certificate, or it is malformed.
 
 -or-
 
@@ -15662,8 +15561,7 @@ The password specified for the private key is incorrect.</exception>
       <param name="password">The password for the encrypted PEM.</param>
       <param name="keyPemFilePath">If specified, the path for the password protected PEM-encoded private key.
             If unspecified, the <paramref name="certPemFilePath" /> file will be used to load the private key.</param>
-      <exception cref="T:System.Security.Cryptography.CryptographicException">
-The contents of the file path in <paramref name="certPemFilePath" /> do not contain a PEM-encoded certificate, or it is malformed.
+      <exception cref="T:System.Security.Cryptography.CryptographicException">The contents of the file path in <paramref name="certPemFilePath" /> do not contain a PEM-encoded certificate, or it is malformed.
 
 -or-
 
@@ -15688,8 +15586,7 @@ The password specified for the private key is incorrect.</exception>
       <summary>Creates a new X509 certificate from the contents of an RFC 7468 PEM-encoded certificate and private key.</summary>
       <param name="certPem">The text of the PEM-encoded X509 certificate.</param>
       <param name="keyPem">The text of the PEM-encoded private key.</param>
-      <exception cref="T:System.Security.Cryptography.CryptographicException">
-The contents of <paramref name="certPem" /> do not contain a PEM-encoded certificate, or it is malformed.
+      <exception cref="T:System.Security.Cryptography.CryptographicException">The contents of <paramref name="certPem" /> do not contain a PEM-encoded certificate, or it is malformed.
 
 -or-
 
@@ -15715,8 +15612,7 @@ The certificate uses an unknown public key algorithm.</exception>
       <param name="certPemFilePath">The path for the PEM-encoded X509 certificate.</param>
       <param name="keyPemFilePath">If specified, the path for the PEM-encoded private key.
             If unspecified, the <paramref name="certPemFilePath" /> file will be used to load the private key.</param>
-      <exception cref="T:System.Security.Cryptography.CryptographicException">
-The contents of the file path in <paramref name="certPemFilePath" /> do not contain a PEM-encoded certificate, or it is malformed.
+      <exception cref="T:System.Security.Cryptography.CryptographicException">The contents of the file path in <paramref name="certPemFilePath" /> do not contain a PEM-encoded certificate, or it is malformed.
 
 -or-
 
@@ -15816,8 +15712,7 @@ The certificate uses an unknown public key algorithm.</exception>
       <param name="allowCommonName">
         <see langword="true" /> to allow matching against the subject Common Name value; otherwise, <see langword="false" />.</param>
       <exception cref="T:System.ArgumentException">The <paramref name="hostname" /> parameter is not a valid DNS hostname or IP address.</exception>
-      <exception cref="T:System.Security.Cryptography.CryptographicException">
-The certificate contains multiple Subject Alternative Name extensions.
+      <exception cref="T:System.Security.Cryptography.CryptographicException">The certificate contains multiple Subject Alternative Name extensions.
 
 -or-
 
