@@ -6007,13 +6007,13 @@ Note: In .NET for Windows Store apps or the Portable Class Library, catch the ba
     <member name="M:System.Runtime.InteropServices.NFloat.ConvertToInteger``1(System.Runtime.InteropServices.NFloat)">
       <summary>Converts a value to a specified integer type using saturation on overflow</summary>
       <param name="value">The value to be converted.</param>
-      <typeparam name="TInteger" />
+      <typeparam name="TInteger">The integer type to which <code data-dev-comment-type="paramref">value</code> is converted.</typeparam>
       <returns>An instance of <code data-dev-comment-type="typeparamref">TInteger</code> created from <code data-dev-comment-type="paramref">value</code>.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.ConvertToIntegerNative``1(System.Runtime.InteropServices.NFloat)">
       <summary>Converts a value to a specified integer type using platform specific behavior on overflow.</summary>
       <param name="value">The value to be converted.</param>
-      <typeparam name="TInteger" />
+      <typeparam name="TInteger">The integer type to which <code data-dev-comment-type="paramref">value</code> is converted.</typeparam>
       <returns>An instance of <code data-dev-comment-type="typeparamref">TInteger</code> created from <code data-dev-comment-type="paramref">value</code>.</returns>
     </member>
     <member name="M:System.Runtime.InteropServices.NFloat.CopySign(System.Runtime.InteropServices.NFloat,System.Runtime.InteropServices.NFloat)">

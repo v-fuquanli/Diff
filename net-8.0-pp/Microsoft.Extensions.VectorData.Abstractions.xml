@@ -1042,16 +1042,16 @@ the configured <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions
     </member>
     <member name="M:Microsoft.Extensions.VectorData.VectorStoreCollection`2.GetService(System.Type,System.Object)">
       <summary>Asks the <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.VectorData.IVectorSearchable`1"></xref> for an object of the specified type <code data-dev-comment-type="paramref">serviceType</code>.</summary>
-      <param name="serviceType" />
-      <param name="serviceKey" />
+      <param name="serviceType">The type of object being requested.</param>
+      <param name="serviceKey">An optional key that can be used to help identify the target service.</param>
       <returns>The found object, otherwise <code data-dev-comment-type="langword">null</code>.</returns>
     </member>
     <member name="M:Microsoft.Extensions.VectorData.VectorStoreCollection`2.SearchAsync``1(``0,System.Int32,Microsoft.Extensions.VectorData.VectorSearchOptions{`1},System.Threading.CancellationToken)">
       <summary>Searches the vector store for records that are similar to the given value.</summary>
-      <param name="searchValue" />
-      <param name="top" />
-      <param name="options" />
-      <param name="cancellationToken" />
+      <param name="searchValue">The value on which to perform the similarity search. See the remarks section for more details.</param>
+      <param name="top">The maximum number of results to return.</param>
+      <param name="options">The options that control the behavior of the search.</param>
+      <param name="cancellationToken">The <xref data-throw-if-not-resolved="true" uid="System.Threading.CancellationToken"></xref> to monitor for cancellation requests. The default is <xref data-throw-if-not-resolved="true" uid="System.Threading.CancellationToken.None"></xref>.</param>
       <typeparam name="TInput">The type of the input value on which to perform the similarity search.</typeparam>
       <returns>The records found by the vector search, including their result scores.</returns>
     </member>

@@ -208,7 +208,7 @@
     <member name="M:System.Numerics.Tensors.IReadOnlyTensor`2.AsReadOnlyTensorSpan(System.ReadOnlySpan{System.Buffers.NIndex})">
       <summary>
             Creates a read-only tensor span for the specified start indexes.</summary>
-      <param name="startIndexes" />
+      <param name="startIndexes">The initial indexes from which the tensor will be converted.</param>
       <returns>The converted <see cref="T:System.Numerics.Tensors.ReadOnlyTensorSpan`1" />.</returns>
     </member>
     <member name="M:System.Numerics.Tensors.IReadOnlyTensor`2.AsReadOnlyTensorSpan(System.ReadOnlySpan{System.Buffers.NRange})">
@@ -240,7 +240,7 @@
     <member name="M:System.Numerics.Tensors.IReadOnlyTensor`2.Slice(System.ReadOnlySpan{System.Buffers.NIndex})">
       <summary>
             Slices the tensor using the specified start indexes.</summary>
-      <param name="startIndexes" />
+      <param name="startIndexes">The indexes at which to begin the slice.</param>
       <returns>The sliced tensor.</returns>
     </member>
     <member name="M:System.Numerics.Tensors.IReadOnlyTensor`2.Slice(System.ReadOnlySpan{System.Buffers.NRange})">
@@ -333,7 +333,7 @@
     <member name="M:System.Numerics.Tensors.ITensor`2.AsTensorSpan(System.ReadOnlySpan{System.Buffers.NIndex})">
       <summary>
             Creates a tensor span for the specified start indexes.</summary>
-      <param name="startIndexes" />
+      <param name="startIndexes">The initial indexes from which the tensor will be converted.</param>
       <returns>The converted <see cref="T:System.Numerics.Tensors.TensorSpan`1" />.</returns>
     </member>
     <member name="M:System.Numerics.Tensors.ITensor`2.AsTensorSpan(System.ReadOnlySpan{System.Buffers.NRange})">
@@ -546,7 +546,7 @@
     </member>
     <member name="M:System.Numerics.Tensors.ReadOnlyTensorSpan`1.CopyTo(System.Numerics.Tensors.TensorSpan{`0}@)">
       <summary>Copies the contents of the tensor into a destination tensor span.</summary>
-      <param name="destination" />
+      <param name="destination">The destination tensor span.</param>
     </member>
     <member name="M:System.Numerics.Tensors.ReadOnlyTensorSpan`1.Equals(System.Object)">
       <summary>Calls to this method are not supported.</summary>
@@ -592,7 +592,7 @@
     <member name="M:System.Numerics.Tensors.ReadOnlyTensorSpan`1.Slice(System.ReadOnlySpan{System.Buffers.NIndex})">
       <summary>
             Returns a reference to specified element of the TensorSpan.</summary>
-      <param name="startIndexes" />
+      <param name="startIndexes">The indexes at which to begin the slice.</param>
       <exception cref="T:System.IndexOutOfRangeException">Any index is less than 0 or greater than or equal to FlattenedLength.</exception>
       <returns>The sliced tensor.</returns>
     </member>
@@ -604,7 +604,7 @@
     </member>
     <member name="M:System.Numerics.Tensors.ReadOnlyTensorSpan`1.Slice(System.ReadOnlySpan{System.IntPtr})">
       <summary>Forms a slice out of the current tensor that begins at a specified index.</summary>
-      <param name="startIndexes" />
+      <param name="startIndexes">The indexes at which to begin the slice.</param>
       <returns>A tensor that consists of all elements of the current tensor from <code data-dev-comment-type="paramref">startIndexes</code> to the end of the tensor.</returns>
     </member>
     <member name="M:System.Numerics.Tensors.ReadOnlyTensorSpan`1.ToString">
@@ -613,7 +613,7 @@
     </member>
     <member name="M:System.Numerics.Tensors.ReadOnlyTensorSpan`1.TryCopyTo(System.Numerics.Tensors.TensorSpan{`0}@)">
       <summary>Attempts to copy the contents of this tensor into a destination tensor span and returns a value to indicate whether or not the operation succeeded.</summary>
-      <param name="destination" />
+      <param name="destination">The target of the copy operation.</param>
       <returns>
         <code data-dev-comment-type="langword">true</code> if the copy operation succeeded; otherwise, <code data-dev-comment-type="c">false</code>.</returns>
     </member>
@@ -641,7 +641,7 @@
     <member name="P:System.Numerics.Tensors.ReadOnlyTensorSpan`1.Item(System.ReadOnlySpan{System.Buffers.NIndex})">
       <summary>
             Returns a reference to specified element of the ReadOnlyTensorSpan.</summary>
-      <param name="indexes" />
+      <param name="indexes">The indexes to be used.</param>
       <exception cref="T:System.IndexOutOfRangeException">
             Any index is less than 0 or any index is greater than or equal to FlattenedLength.</exception>
       <returns>A reference to the element that exists at <code data-dev-comment-type="paramref">indexes</code>.</returns>
@@ -649,7 +649,7 @@
     <member name="P:System.Numerics.Tensors.ReadOnlyTensorSpan`1.Item(System.ReadOnlySpan{System.Buffers.NRange})">
       <summary>
             Returns a slice of the ReadOnlyTensorSpan.</summary>
-      <param name="ranges" />
+      <param name="ranges">The ranges to be used.</param>
       <exception cref="T:System.IndexOutOfRangeException">
             Any index is less than 0 or any index is greater than or equal to FlattenedLength.</exception>
       <returns>A tensor that consists of all elements of the current tensor in <code data-dev-comment-type="paramref">ranges</code>.</returns>
@@ -657,7 +657,7 @@
     <member name="P:System.Numerics.Tensors.ReadOnlyTensorSpan`1.Item(System.ReadOnlySpan{System.IntPtr})">
       <summary>
             Returns a reference to specified element of the ReadOnlyTensorSpan.</summary>
-      <param name="indexes" />
+      <param name="indexes">The index of the element for which to get a reference.</param>
       <exception cref="T:System.IndexOutOfRangeException">
             Any index is less than 0 or any index is greater than or equal to FlattenedLength.</exception>
       <returns>A reference to the element that exists at <code data-dev-comment-type="paramref">indexes</code>.</returns>
@@ -816,17 +816,17 @@
     </member>
     <member name="M:System.Numerics.Tensors.Tensor.AsReadOnlyTensorSpan``1(``0[],System.Int32,System.ReadOnlySpan{System.IntPtr},System.ReadOnlySpan{System.IntPtr})">
       <summary>Creates a new tensor over the portion of the target array beginning at the specified start index and using the specified lengths and strides.</summary>
-      <param name="array" />
-      <param name="start" />
-      <param name="lengths" />
-      <param name="strides" />
+      <param name="array">The target array.</param>
+      <param name="start">The index at which to begin the tensor.</param>
+      <param name="lengths">The lengths of the dimensions. If an empty span is provided, the created tensor will have a single dimension that is the same length as <code data-dev-comment-type="paramref">array</code>.</param>
+      <param name="strides">The strides of each dimension. If an empty span is provided, then strides will be automatically calculated from <code data-dev-comment-type="paramref">lengths</code>.</param>
       <typeparam name="T" />
     </member>
     <member name="M:System.Numerics.Tensors.Tensor.AsReadOnlyTensorSpan``1(``0[],System.ReadOnlySpan{System.IntPtr},System.ReadOnlySpan{System.IntPtr})">
       <summary>Creates a new tensor over the portion of the target array beginning at the specified start index and using the specified lengths and strides.</summary>
-      <param name="array" />
-      <param name="lengths" />
-      <param name="strides" />
+      <param name="array">The target array.</param>
+      <param name="lengths">The lengths of the dimensions. If an empty span is provided, the created tensor will have a single dimension that is the same length as <code data-dev-comment-type="paramref">array</code>.</param>
+      <param name="strides">The strides of each dimension. If an empty span is provided, then strides will be automatically calculated from <code data-dev-comment-type="paramref">lengths</code>.</param>
       <typeparam name="T" />
     </member>
     <member name="M:System.Numerics.Tensors.Tensor.AsReadOnlyTensorSpan``1(``0[],System.ReadOnlySpan{System.IntPtr})">
@@ -838,16 +838,16 @@
     </member>
     <member name="M:System.Numerics.Tensors.Tensor.AsReadOnlyTensorSpan``1(``0[])">
       <summary>Creates a new tensor over the entirety of the target array.</summary>
-      <param name="array" />
+      <param name="array">The target array.</param>
       <typeparam name="T" />
     </member>
     <member name="M:System.Numerics.Tensors.Tensor.AsTensorSpan``1(``0[],System.Int32,System.ReadOnlySpan{System.IntPtr},System.ReadOnlySpan{System.IntPtr})">
       <summary>Creates a new span over the portion of the target array beginning
 at 'start' index and ending at 'end' index (exclusive).</summary>
-      <param name="array" />
-      <param name="start" />
-      <param name="lengths" />
-      <param name="strides" />
+      <param name="array">The target array.</param>
+      <param name="start">The index at which to begin the span.</param>
+      <param name="lengths">The lengths of the dimensions. If default is provided, it's assumed to have one dimension with a length equal to the length of the data.</param>
+      <param name="strides">The strides of each dimension. If default or span of length 0 is provided, then strides will be automatically calculated.</param>
       <typeparam name="T" />
     </member>
     <member name="M:System.Numerics.Tensors.Tensor.AsTensorSpan``1(``0[],System.ReadOnlySpan{System.IntPtr},System.ReadOnlySpan{System.IntPtr})">
@@ -865,7 +865,7 @@ at 'start' index and ending at 'end' index (exclusive).</summary>
     </member>
     <member name="M:System.Numerics.Tensors.Tensor.AsTensorSpan``1(``0[])">
       <summary>Creates a new span over the entirety of the target array.</summary>
-      <param name="array" />
+      <param name="array">The target array.</param>
       <typeparam name="T" />
     </member>
     <member name="M:System.Numerics.Tensors.Tensor.Atan``1(System.Numerics.Tensors.ReadOnlyTensorSpan{``0}@,System.Numerics.Tensors.TensorSpan{``0}@)">
@@ -1284,25 +1284,25 @@ at 'start' index and ending at 'end' index (exclusive).</summary>
     </member>
     <member name="M:System.Numerics.Tensors.Tensor.Create``1(``0[],System.Int32,System.ReadOnlySpan{System.IntPtr},System.ReadOnlySpan{System.IntPtr})">
       <summary>Creates a new tensor over the portion of the target array beginning at the specified start index and using the specified lengths and strides.</summary>
-      <param name="array" />
-      <param name="start" />
-      <param name="lengths" />
-      <param name="strides" />
+      <param name="array">The target array.</param>
+      <param name="start">The index at which to begin the tensor.</param>
+      <param name="lengths">The lengths of the dimensions. If an empty span is provided, the created tensor will have a single dimension that is the same length as <code data-dev-comment-type="paramref">array</code>.</param>
+      <param name="strides">The strides of each dimension. If an empty span is provided, then strides will be automatically calculated from <code data-dev-comment-type="paramref">lengths</code>.</param>
       <typeparam name="T" />
       <returns>A new tensor that uses <paramref name="array" /> as its backing buffer and with the specified <paramref name="lengths" /> and <paramref name="strides" />.</returns>
     </member>
     <member name="M:System.Numerics.Tensors.Tensor.Create``1(``0[],System.ReadOnlySpan{System.IntPtr},System.ReadOnlySpan{System.IntPtr})">
       <summary>Creates a new tensor over the portion of the target array beginning at the specified start index and using the specified lengths and strides.</summary>
-      <param name="array" />
-      <param name="lengths" />
-      <param name="strides" />
+      <param name="array">The target array.</param>
+      <param name="lengths">The lengths of the dimensions. If an empty span is provided, the created tensor will have a single dimension that is the same length as <code data-dev-comment-type="paramref">array</code>.</param>
+      <param name="strides">The strides of each dimension. If an empty span is provided, then strides will be automatically calculated from <code data-dev-comment-type="paramref">lengths</code>.</param>
       <typeparam name="T" />
       <returns>A new tensor that uses <paramref name="array" /> as its backing buffer and with the specified <paramref name="lengths" /> and <paramref name="strides" />.</returns>
     </member>
     <member name="M:System.Numerics.Tensors.Tensor.Create``1(``0[],System.ReadOnlySpan{System.IntPtr})">
       <summary>Creates a new tensor over the portion of the target array using the specified lengths.</summary>
-      <param name="array" />
-      <param name="lengths" />
+      <param name="array">The target array.</param>
+      <param name="lengths">The lengths of the dimensions. If an empty span is provided, the created tensor will have a single dimension that is the same length as <code data-dev-comment-type="paramref">array</code>.</param>
       <typeparam name="T" />
       <returns>A new tensor that uses <paramref name="array" /> as its backing buffer and with the specified <paramref name="lengths" />.</returns>
     </member>
@@ -3472,19 +3472,19 @@ at 'start' index and ending at 'end' index (exclusive).</summary>
     <member name="M:System.Numerics.Tensors.Tensor`1.AsReadOnlyTensorSpan(System.ReadOnlySpan{System.Buffers.NIndex})">
       <summary>
             Converts this <see cref="T:System.Numerics.Tensors.Tensor`1" /> to a <see cref="T:System.Numerics.Tensors.ReadOnlyTensorSpan`1" /> pointing to the same backing memory based on the provided start indexes."/&gt;</summary>
-      <param name="startIndexes" />
+      <param name="startIndexes">The initial indexes from which the tensor will be converted.</param>
       <returns>The converted <xref data-throw-if-not-resolved="true" uid="System.Numerics.Tensors.ReadOnlyTensorSpan`1"></xref>.</returns>
     </member>
     <member name="M:System.Numerics.Tensors.Tensor`1.AsReadOnlyTensorSpan(System.ReadOnlySpan{System.Buffers.NRange})">
       <summary>
             Converts this <see cref="T:System.Numerics.Tensors.Tensor`1" /> to a <see cref="T:System.Numerics.Tensors.ReadOnlyTensorSpan`1" /> pointing to the same backing memory based on the provided ranges."/&gt;</summary>
-      <param name="ranges" />
+      <param name="ranges">The ranges of the tensor to convert.</param>
       <returns>The readonly tensor span representation of the tensor.</returns>
     </member>
     <member name="M:System.Numerics.Tensors.Tensor`1.AsReadOnlyTensorSpan(System.ReadOnlySpan{System.IntPtr})">
       <summary>
             Converts this <see cref="T:System.Numerics.Tensors.Tensor`1" /> to a <see cref="T:System.Numerics.Tensors.ReadOnlyTensorSpan`1" /> pointing to the same backing memory based on the provided start locations."/&gt;</summary>
-      <param name="startIndexes" />
+      <param name="startIndexes">The initial indexes from which the tensor will be converted.</param>
       <returns>The readonly tensor span representation of the tensor.</returns>
     </member>
     <member name="M:System.Numerics.Tensors.Tensor`1.AsTensorSpan">
@@ -3497,21 +3497,21 @@ at 'start' index and ending at 'end' index (exclusive).</summary>
     <member name="M:System.Numerics.Tensors.Tensor`1.AsTensorSpan(System.ReadOnlySpan{System.Buffers.NIndex})">
       <summary>
             Converts this <see cref="T:System.Numerics.Tensors.Tensor`1" /> to a <see cref="T:System.Numerics.Tensors.TensorSpan`1" /> pointing to the same backing memory based on the provided start indexes."/&gt;</summary>
-      <param name="startIndexes" />
+      <param name="startIndexes">The initial indexes from which the tensor will be converted.</param>
       <returns>
         <see cref="T:System.Numerics.Tensors.TensorSpan`1" /> based on the provided ranges.</returns>
     </member>
     <member name="M:System.Numerics.Tensors.Tensor`1.AsTensorSpan(System.ReadOnlySpan{System.Buffers.NRange})">
       <summary>
             Converts this <see cref="T:System.Numerics.Tensors.Tensor`1" /> to a <see cref="T:System.Numerics.Tensors.TensorSpan`1" /> pointing to the same backing memory based on the provided ranges."/&gt;</summary>
-      <param name="ranges" />
+      <param name="ranges">The ranges of the tensor to convert.</param>
       <returns>
         <see cref="T:System.Numerics.Tensors.TensorSpan`1" /> based on the provided ranges.</returns>
     </member>
     <member name="M:System.Numerics.Tensors.Tensor`1.AsTensorSpan(System.ReadOnlySpan{System.IntPtr})">
       <summary>
             Converts this <see cref="T:System.Numerics.Tensors.Tensor`1" /> to a <see cref="T:System.Numerics.Tensors.TensorSpan`1" /> pointing to the same backing memory based on the provided start locations."/&gt;</summary>
-      <param name="startIndexes" />
+      <param name="startIndexes">The initial indexes from which the tensor will be converted.</param>
       <returns>
         <see cref="T:System.Numerics.Tensors.TensorSpan`1" /> based on the provided ranges.</returns>
     </member>
@@ -3521,7 +3521,7 @@ at 'start' index and ending at 'end' index (exclusive).</summary>
     </member>
     <member name="M:System.Numerics.Tensors.Tensor`1.CopyTo(System.Numerics.Tensors.TensorSpan{`0}@)">
       <summary>Copies the contents of the tensor into a destination tensor span.</summary>
-      <param name="destination" />
+      <param name="destination">The destination tensor span.</param>
     </member>
     <member name="M:System.Numerics.Tensors.Tensor`1.Fill(`0)">
       <summary>
@@ -3562,21 +3562,21 @@ at 'start' index and ending at 'end' index (exclusive).</summary>
     <member name="M:System.Numerics.Tensors.Tensor`1.Slice(System.ReadOnlySpan{System.Buffers.NIndex})">
       <summary>
             Forms a slice out of the given tensor</summary>
-      <param name="startIndexes" />
+      <param name="startIndexes">The indexes at which to begin the slice.</param>
       <returns>
         <see cref="T:System.Numerics.Tensors.Tensor`1" /> without copying the provided ranges.</returns>
     </member>
     <member name="M:System.Numerics.Tensors.Tensor`1.Slice(System.ReadOnlySpan{System.Buffers.NRange})">
       <summary>
             Forms a slice out of the given tensor</summary>
-      <param name="ranges" />
+      <param name="ranges">The range of which to slice.</param>
       <returns>
         <see cref="T:System.Numerics.Tensors.Tensor`1" /> without copying the provided ranges.</returns>
     </member>
     <member name="M:System.Numerics.Tensors.Tensor`1.Slice(System.ReadOnlySpan{System.IntPtr})">
       <summary>
             Forms a slice out of the given tensor</summary>
-      <param name="startIndexes" />
+      <param name="startIndexes">The indexes at which to begin the slice.</param>
       <returns>
         <see cref="T:System.Numerics.Tensors.Tensor`1" /> without copying the provided ranges.</returns>
     </member>
@@ -3639,7 +3639,7 @@ at 'start' index and ending at 'end' index (exclusive).</summary>
     </member>
     <member name="M:System.Numerics.Tensors.Tensor`1.TryCopyTo(System.Numerics.Tensors.TensorSpan{`0}@)">
       <summary>Attempts to copy the contents of this tensor into a destination tensor span and returns a value to indicate whether or not the operation succeeded.</summary>
-      <param name="destination" />
+      <param name="destination">The target of the copy operation.</param>
       <returns>
         <code data-dev-comment-type="langword">true</code> if the copy operation succeeded; otherwise, <code data-dev-comment-type="c">false</code>.</returns>
     </member>
@@ -3674,7 +3674,7 @@ at 'start' index and ending at 'end' index (exclusive).</summary>
     <member name="P:System.Numerics.Tensors.Tensor`1.Item(System.ReadOnlySpan{System.Buffers.NIndex})">
       <summary>
             Returns a reference to specified element of the Tensor.</summary>
-      <param name="indexes" />
+      <param name="indexes">The indexes to use.</param>
       <exception cref="T:System.IndexOutOfRangeException">
             Thrown when index less than 0 or index greater than or equal to FlattenedLength</exception>
       <returns>A reference to the element that exists at <code data-dev-comment-type="paramref">indexes</code>.</returns>
@@ -3682,7 +3682,7 @@ at 'start' index and ending at 'end' index (exclusive).</summary>
     <member name="P:System.Numerics.Tensors.Tensor`1.Item(System.ReadOnlySpan{System.Buffers.NRange})">
       <summary>
             Returns a slice of the Tensor.</summary>
-      <param name="ranges" />
+      <param name="ranges">The range of which to slice.</param>
       <exception cref="T:System.IndexOutOfRangeException">
             Thrown when any index is less than 0 or any index is greater than or equal to FlattenedLength</exception>
       <returns>A tensor that consists of all elements of the current tensor in <code data-dev-comment-type="paramref">ranges</code>.</returns>
@@ -3690,7 +3690,7 @@ at 'start' index and ending at 'end' index (exclusive).</summary>
     <member name="P:System.Numerics.Tensors.Tensor`1.Item(System.ReadOnlySpan{System.IntPtr})">
       <summary>
             Returns a reference to specified element of the Tensor.</summary>
-      <param name="indexes" />
+      <param name="indexes">The indexes to use.</param>
       <exception cref="T:System.IndexOutOfRangeException">
             Thrown when index less than 0 or index greater than or equal to FlattenedLength</exception>
       <returns>A reference to the element that exists at <code data-dev-comment-type="paramref">indexes</code>.</returns>
@@ -6124,16 +6124,16 @@ at 'start' index and ending at 'end' index (exclusive).</summary>
     </member>
     <member name="M:System.Numerics.Tensors.TensorSpan`1.#ctor(`0[],System.ReadOnlySpan{System.IntPtr},System.ReadOnlySpan{System.IntPtr})">
       <summary>Creates a new tensor over the portion of the target array beginning at the specified start index and using the specified lengths and strides.</summary>
-      <param name="array" />
-      <param name="lengths" />
-      <param name="strides" />
+      <param name="array">The target array.</param>
+      <param name="lengths">The lengths of the dimensions. If an empty span is provided, the created tensor will have a single dimension that is the same length as <code data-dev-comment-type="paramref">array</code>.</param>
+      <param name="strides">The strides of each dimension. If an empty span is provided, then strides will be automatically calculated from <code data-dev-comment-type="paramref">lengths</code>.</param>
       <exception cref="T:System.ArrayTypeMismatchException">
         <paramref name="array" /> is covariant and its type is not exactly T[].</exception>
     </member>
     <member name="M:System.Numerics.Tensors.TensorSpan`1.#ctor(`0[],System.ReadOnlySpan{System.IntPtr})">
       <summary>Creates a new tensor over the portion of the target array using the specified lengths.</summary>
-      <param name="array" />
-      <param name="lengths" />
+      <param name="array">The target array.</param>
+      <param name="lengths">The lengths of the dimensions. If an empty span is provided, the created tensor will have a single dimension that is the same length as <code data-dev-comment-type="paramref">array</code>.</param>
       <exception cref="T:System.ArrayTypeMismatchException">
         <paramref name="array" /> is covariant and its type is not exactly T[].</exception>
     </member>
@@ -6158,9 +6158,9 @@ at 'start' index and ending at 'end' index (exclusive).</summary>
     </member>
     <member name="M:System.Numerics.Tensors.TensorSpan`1.#ctor(`0*,System.IntPtr,System.ReadOnlySpan{System.IntPtr})">
       <summary>Creates a new tensor span over the target unmanaged buffer using the specified lengths.</summary>
-      <param name="data" />
-      <param name="dataLength" />
-      <param name="lengths" />
+      <param name="data">The pointer to the start of the target unmanaged buffer.</param>
+      <param name="dataLength">The number of elements the target unmanaged buffer contains.</param>
+      <param name="lengths">The lengths of the dimensions. If an empty span is provided, the created tensor span will have a single dimension that is the same length as <code data-dev-comment-type="paramref">dataLength</code>.</param>
     </member>
     <member name="M:System.Numerics.Tensors.TensorSpan`1.#ctor(`0*,System.IntPtr)">
       <summary>
@@ -6195,8 +6195,8 @@ at 'start' index and ending at 'end' index (exclusive).</summary>
     </member>
     <member name="M:System.Numerics.Tensors.TensorSpan`1.#ctor(System.Span{`0},System.ReadOnlySpan{System.IntPtr})">
       <summary>Creates a new tensor span over the target span using the specified lengths.</summary>
-      <param name="span" />
-      <param name="lengths" />
+      <param name="span">The target span.</param>
+      <param name="lengths">The lengths of the dimensions. If an empty span is provided, the created tensor span will have a single dimension that is the same length as <code data-dev-comment-type="paramref">span</code>.</param>
     </member>
     <member name="M:System.Numerics.Tensors.TensorSpan`1.#ctor(System.Span{`0})">
       <summary>
@@ -6210,17 +6210,17 @@ at 'start' index and ending at 'end' index (exclusive).</summary>
     </member>
     <member name="M:System.Numerics.Tensors.TensorSpan`1.AsReadOnlyTensorSpan(System.ReadOnlySpan{System.Buffers.NIndex})">
       <summary>Creates a read-only tensor span for the specified start indexes.</summary>
-      <param name="startIndexes" />
+      <param name="startIndexes">The initial indexes from which the tensor will be converted.</param>
       <returns>The converted <xref data-throw-if-not-resolved="true" uid="System.Numerics.Tensors.ReadOnlyTensorSpan`1"></xref>.</returns>
     </member>
     <member name="M:System.Numerics.Tensors.TensorSpan`1.AsReadOnlyTensorSpan(System.ReadOnlySpan{System.Buffers.NRange})">
       <summary>Creates a new readonly tensor span over a portion of the tensor defined by the specified range.</summary>
-      <param name="ranges" />
+      <param name="ranges">The ranges of the tensor to convert.</param>
       <returns>The readonly tensor span representation of the tensor.</returns>
     </member>
     <member name="M:System.Numerics.Tensors.TensorSpan`1.AsReadOnlyTensorSpan(System.ReadOnlySpan{System.IntPtr})">
       <summary>Creates a new readonly tensor span over a portion of the tensor starting at a specified position to the end of the tensor.</summary>
-      <param name="startIndexes" />
+      <param name="startIndexes">The initial indexes from which the tensor will be converted.</param>
       <returns>The readonly tensor span representation of the tensor.</returns>
     </member>
     <member name="M:System.Numerics.Tensors.TensorSpan`1.Clear">
@@ -6229,7 +6229,7 @@ at 'start' index and ending at 'end' index (exclusive).</summary>
     </member>
     <member name="M:System.Numerics.Tensors.TensorSpan`1.CopyTo(System.Numerics.Tensors.TensorSpan{`0}@)">
       <summary>Copies the contents of the tensor into a destination tensor span.</summary>
-      <param name="destination" />
+      <param name="destination">The destination tensor span.</param>
     </member>
     <member name="M:System.Numerics.Tensors.TensorSpan`1.Equals(System.Object)">
       <summary>
@@ -6267,8 +6267,8 @@ at 'start' index and ending at 'end' index (exclusive).</summary>
     </member>
     <member name="M:System.Numerics.Tensors.TensorSpan`1.op_Equality(System.Numerics.Tensors.TensorSpan{`0}@,System.Numerics.Tensors.TensorSpan{`0}@)">
       <summary>Returns a value that indicates whether two tensor spans are equal.</summary>
-      <param name="left" />
-      <param name="right" />
+      <param name="left">The first tensor span to compare.</param>
+      <param name="right">The second tensor span to compare.</param>
       <returns>
         <code data-dev-comment-type="c">true</code> if the two tensor span are equal; otherwise, <code data-dev-comment-type="c">false</code>.</returns>
     </member>
@@ -6280,15 +6280,15 @@ at 'start' index and ending at 'end' index (exclusive).</summary>
     </member>
     <member name="M:System.Numerics.Tensors.TensorSpan`1.op_Inequality(System.Numerics.Tensors.TensorSpan{`0}@,System.Numerics.Tensors.TensorSpan{`0}@)">
       <summary>Returns a value that indicates whether two tensor spans are not equal.</summary>
-      <param name="left" />
-      <param name="right" />
+      <param name="left">The first tensor span to compare.</param>
+      <param name="right">The second tensor span to compare.</param>
       <returns>
         <code data-dev-comment-type="c">true</code> if the two tensor span are not equal; otherwise, <code data-dev-comment-type="c">false</code>.</returns>
     </member>
     <member name="M:System.Numerics.Tensors.TensorSpan`1.Slice(System.ReadOnlySpan{System.Buffers.NIndex})">
       <summary>
             Returns a reference to specified element of the TensorSpan.</summary>
-      <param name="startIndexes" />
+      <param name="startIndexes">The indexes at which to begin the slice.</param>
       <exception cref="T:System.IndexOutOfRangeException">
             Any index is less than 0 or greater than or equal to <c>FlattenedLength</c>.</exception>
       <returns>The sliced tensor.</returns>
@@ -6301,7 +6301,7 @@ at 'start' index and ending at 'end' index (exclusive).</summary>
     </member>
     <member name="M:System.Numerics.Tensors.TensorSpan`1.Slice(System.ReadOnlySpan{System.IntPtr})">
       <summary>Forms a slice out of the current tensor that begins at a specified index.</summary>
-      <param name="startIndexes" />
+      <param name="startIndexes">The indexes at which to begin the slice.</param>
       <returns>A tensor that consists of all elements of the current tensor from <code data-dev-comment-type="paramref">startIndexes</code> to the end of the tensor.</returns>
     </member>
     <member name="M:System.Numerics.Tensors.TensorSpan`1.ToString">
@@ -6312,7 +6312,7 @@ at 'start' index and ending at 'end' index (exclusive).</summary>
     </member>
     <member name="M:System.Numerics.Tensors.TensorSpan`1.TryCopyTo(System.Numerics.Tensors.TensorSpan{`0}@)">
       <summary>Attempts to copy the contents of this tensor into a destination tensor span and returns a value to indicate whether or not the operation succeeded.</summary>
-      <param name="destination" />
+      <param name="destination">The target of the copy operation.</param>
       <returns>
         <code data-dev-comment-type="langword">true</code> if the copy operation succeeded; otherwise, <code data-dev-comment-type="c">false</code>.</returns>
     </member>
@@ -6340,7 +6340,7 @@ at 'start' index and ending at 'end' index (exclusive).</summary>
     <member name="P:System.Numerics.Tensors.TensorSpan`1.Item(System.ReadOnlySpan{System.Buffers.NIndex})">
       <summary>
             Returns a reference to specified element of the TensorSpan.</summary>
-      <param name="indexes" />
+      <param name="indexes">The indexes to use.</param>
       <exception cref="T:System.IndexOutOfRangeException">
             Any index is less than 0 or greater than or equal to FlattenedLength.</exception>
       <returns>A reference to the element that exists at <code data-dev-comment-type="paramref">indexes</code>.</returns>
@@ -6348,7 +6348,7 @@ at 'start' index and ending at 'end' index (exclusive).</summary>
     <member name="P:System.Numerics.Tensors.TensorSpan`1.Item(System.ReadOnlySpan{System.Buffers.NRange})">
       <summary>
             Returns a slice of the TensorSpan.</summary>
-      <param name="ranges" />
+      <param name="ranges">The range of which to slice.</param>
       <exception cref="T:System.IndexOutOfRangeException">
             Any index is less than 0 or greater than or equal to FlattenedLength.</exception>
       <returns>A tensor that consists of all elements of the current tensor in <code data-dev-comment-type="paramref">ranges</code>.</returns>
@@ -6356,7 +6356,7 @@ at 'start' index and ending at 'end' index (exclusive).</summary>
     <member name="P:System.Numerics.Tensors.TensorSpan`1.Item(System.ReadOnlySpan{System.IntPtr})">
       <summary>
             Returns a reference to specified element of the TensorSpan.</summary>
-      <param name="indexes" />
+      <param name="indexes">The indexes to use.</param>
       <exception cref="T:System.IndexOutOfRangeException">
             Any index is less than 0 or greater than or equal to FlattenedLength.</exception>
       <returns>A reference to the element that exists at <code data-dev-comment-type="paramref">indexes</code>.</returns>

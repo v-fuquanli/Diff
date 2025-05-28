@@ -219,9 +219,11 @@
     <member name="M:System.Formats.Nrbf.NrbfDecoder.DecodeClassRecord(System.IO.Stream,System.Formats.Nrbf.PayloadOptions,System.Boolean)">
       <summary>
             Decodes the provided NRBF payload that is expected to contain an instance of any class (or struct) that is not an <see cref="T:System.Array" /> or a primitive type.</summary>
-      <param name="payload" />
-      <param name="options" />
-      <param name="leaveOpen" />
+      <param name="payload">The NRBF payload.</param>
+      <param name="options">Options to control behavior during parsing.</param>
+      <param name="leaveOpen">
+        <code data-dev-comment-type="langword">true</code> to leave <code data-dev-comment-type="paramref">payload</code> payload open
+    after the reading is finished; otherwise, <code data-dev-comment-type="langword">false</code>.</param>
       <returns>A <see cref="T:System.Formats.Nrbf.ClassRecord" /> that represents the root object.</returns>
     </member>
     <member name="M:System.Formats.Nrbf.NrbfDecoder.StartsWithPayloadHeader(System.IO.Stream)">

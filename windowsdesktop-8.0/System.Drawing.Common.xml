@@ -4407,50 +4407,69 @@ The <see cref="T:System.Drawing.Graphics" /> object has a transform applied othe
     </member>
     <member name="M:System.Drawing.Graphics.DrawString(System.ReadOnlySpan{System.Char},System.Drawing.Font,System.Drawing.Brush,System.Drawing.PointF,System.Drawing.StringFormat)">
       <summary>Draws the specified text string at the specified location with the specified <xref data-throw-if-not-resolved="true" uid="System.Drawing.Brush"></xref> and <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref> objects using the formatting attributes of the specified <xref data-throw-if-not-resolved="true" uid="System.Drawing.StringFormat"></xref>.</summary>
-      <param name="s" />
-      <param name="font" />
-      <param name="brush" />
-      <param name="point" />
-      <param name="format" />
+      <param name="s">String to draw.</param>
+      <param name="font">
+        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref> that defines the text format of the string.</param>
+      <param name="brush">
+        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Brush"></xref> that determines the color and texture of the drawn text.</param>
+      <param name="point">
+        <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structure that specifies the upper-left corner of the drawn text.</param>
+      <param name="format">
+        <xref data-throw-if-not-resolved="true" uid="System.Drawing.StringFormat"></xref> that specifies formatting attributes, such as line spacing and alignment, that are applied to the drawn text.</param>
     </member>
     <member name="M:System.Drawing.Graphics.DrawString(System.ReadOnlySpan{System.Char},System.Drawing.Font,System.Drawing.Brush,System.Drawing.PointF)">
       <summary>Draws the specified text string at the specified location with the specified <xref data-throw-if-not-resolved="true" uid="System.Drawing.Brush"></xref> and <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref> objects.</summary>
-      <param name="s" />
-      <param name="font" />
-      <param name="brush" />
-      <param name="point" />
+      <param name="s">String to draw.</param>
+      <param name="font">
+        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref> that defines the text format of the string.</param>
+      <param name="brush">
+        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Brush"></xref> that determines the color and texture of the drawn text.</param>
+      <param name="point">
+        <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structure that specifies the upper-left corner of the drawn text.</param>
     </member>
     <member name="M:System.Drawing.Graphics.DrawString(System.ReadOnlySpan{System.Char},System.Drawing.Font,System.Drawing.Brush,System.Drawing.RectangleF,System.Drawing.StringFormat)">
       <summary>Draws the specified text string in the specified rectangle with the specified <xref data-throw-if-not-resolved="true" uid="System.Drawing.Brush"></xref> and <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref> objects using the formatting attributes of the specified <xref data-throw-if-not-resolved="true" uid="System.Drawing.StringFormat"></xref>.</summary>
-      <param name="s" />
-      <param name="font" />
-      <param name="brush" />
-      <param name="layoutRectangle" />
-      <param name="format" />
+      <param name="s">String to draw.</param>
+      <param name="font">
+        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref> that defines the text format of the string.</param>
+      <param name="brush">
+        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Brush"></xref> that determines the color and texture of the drawn text.</param>
+      <param name="layoutRectangle">
+        <xref data-throw-if-not-resolved="true" uid="System.Drawing.RectangleF"></xref> structure that specifies the location of the drawn text.</param>
+      <param name="format">
+        <xref data-throw-if-not-resolved="true" uid="System.Drawing.StringFormat"></xref> that specifies formatting attributes, such as line spacing and alignment, that are applied to the drawn text.</param>
     </member>
     <member name="M:System.Drawing.Graphics.DrawString(System.ReadOnlySpan{System.Char},System.Drawing.Font,System.Drawing.Brush,System.Drawing.RectangleF)">
       <summary>Draws the specified text string in the specified rectangle with the specified <xref data-throw-if-not-resolved="true" uid="System.Drawing.Brush"></xref> and <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref> objects.</summary>
-      <param name="s" />
-      <param name="font" />
-      <param name="brush" />
-      <param name="layoutRectangle" />
+      <param name="s">String to draw.</param>
+      <param name="font">
+        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref> that defines the text format of the string.</param>
+      <param name="brush">
+        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Brush"></xref> that determines the color and texture of the drawn text.</param>
+      <param name="layoutRectangle">
+        <xref data-throw-if-not-resolved="true" uid="System.Drawing.RectangleF"></xref> structure that specifies the location of the drawn text.</param>
     </member>
     <member name="M:System.Drawing.Graphics.DrawString(System.ReadOnlySpan{System.Char},System.Drawing.Font,System.Drawing.Brush,System.Single,System.Single,System.Drawing.StringFormat)">
       <summary>Draws the specified text string at the specified location with the specified <xref data-throw-if-not-resolved="true" uid="System.Drawing.Brush"></xref> and <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref> objects using the formatting attributes of the specified <xref data-throw-if-not-resolved="true" uid="System.Drawing.StringFormat"></xref>.</summary>
-      <param name="s" />
-      <param name="font" />
-      <param name="brush" />
-      <param name="x" />
-      <param name="y" />
-      <param name="format" />
+      <param name="s">String to draw.</param>
+      <param name="font">
+        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref> that defines the text format of the string.</param>
+      <param name="brush">
+        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Brush"></xref> that determines the color and texture of the drawn text.</param>
+      <param name="x">The x-coordinate of the upper-left corner of the drawn text.</param>
+      <param name="y">The y-coordinate of the upper-left corner of the drawn text.</param>
+      <param name="format">
+        <xref data-throw-if-not-resolved="true" uid="System.Drawing.StringFormat"></xref> that specifies formatting attributes, such as line spacing and alignment, that are applied to the drawn text.</param>
     </member>
     <member name="M:System.Drawing.Graphics.DrawString(System.ReadOnlySpan{System.Char},System.Drawing.Font,System.Drawing.Brush,System.Single,System.Single)">
       <summary>Draws the specified text string at the specified location with the specified <xref data-throw-if-not-resolved="true" uid="System.Drawing.Brush"></xref> and <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref> objects.</summary>
-      <param name="s" />
-      <param name="font" />
-      <param name="brush" />
-      <param name="x" />
-      <param name="y" />
+      <param name="s">String to draw.</param>
+      <param name="font">
+        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref> that defines the text format of the string.</param>
+      <param name="brush">
+        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Brush"></xref> that determines the color and texture of the drawn text.</param>
+      <param name="x">The x-coordinate of the upper-left corner of the drawn text.</param>
+      <param name="y">The y-coordinate of the upper-left corner of the drawn text.</param>
     </member>
     <member name="M:System.Drawing.Graphics.DrawString(System.String,System.Drawing.Font,System.Drawing.Brush,System.Drawing.PointF,System.Drawing.StringFormat)">
       <summary>Draws the specified text string at the specified location with the specified <see cref="T:System.Drawing.Brush" /> and <see cref="T:System.Drawing.Font" /> objects using the formatting attributes of the specified <see cref="T:System.Drawing.StringFormat" />.</summary>
@@ -5438,10 +5457,13 @@ The <see cref="T:System.Drawing.Graphics" /> object has a transform applied othe
     </member>
     <member name="M:System.Drawing.Graphics.MeasureCharacterRanges(System.ReadOnlySpan{System.Char},System.Drawing.Font,System.Drawing.RectangleF,System.Drawing.StringFormat)">
       <summary>Gets an array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Region"></xref> objects, each of which bounds a range of character positions within the specified string.</summary>
-      <param name="text" />
-      <param name="font" />
-      <param name="layoutRect" />
-      <param name="stringFormat" />
+      <param name="text">String to measure.</param>
+      <param name="font">
+        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref> that defines the text format of the string.</param>
+      <param name="layoutRect">
+        <xref data-throw-if-not-resolved="true" uid="System.Drawing.RectangleF"></xref> structure that specifies the layout rectangle for the string.</param>
+      <param name="stringFormat">
+        <xref data-throw-if-not-resolved="true" uid="System.Drawing.StringFormat"></xref> that represents formatting information, such as line spacing, for the string.</param>
       <returns>This method returns an array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Region"></xref> objects, each of which bounds a range of character positions within the specified string.</returns>
     </member>
     <member name="M:System.Drawing.Graphics.MeasureCharacterRanges(System.String,System.Drawing.Font,System.Drawing.RectangleF,System.Drawing.StringFormat)">
@@ -5459,56 +5481,71 @@ The <see cref="T:System.Drawing.Graphics" /> object has a transform applied othe
     </member>
     <member name="M:System.Drawing.Graphics.MeasureString(System.ReadOnlySpan{System.Char},System.Drawing.Font,System.Drawing.PointF,System.Drawing.StringFormat)">
       <summary>Measures the specified string when drawn with the specified <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref> and formatted with the specified <xref data-throw-if-not-resolved="true" uid="System.Drawing.StringFormat"></xref>.</summary>
-      <param name="text" />
-      <param name="font" />
-      <param name="origin" />
-      <param name="stringFormat" />
+      <param name="text">String to measure.</param>
+      <param name="font">
+        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref> defines the text format of the string.</param>
+      <param name="origin">
+        <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structure that represents the upper-left corner of the string.</param>
+      <param name="stringFormat">
+        <xref data-throw-if-not-resolved="true" uid="System.Drawing.StringFormat"></xref> that represents formatting information, such as line spacing, for the string.</param>
       <returns>This method returns a <xref data-throw-if-not-resolved="true" uid="System.Drawing.SizeF"></xref> structure that represents the size, in the units specified by the <xref data-throw-if-not-resolved="true" uid="System.Drawing.Graphics.PageUnit"></xref> property, of the string specified by the <code data-dev-comment-type="paramref">text</code> parameter as drawn with the <code data-dev-comment-type="paramref">font</code> parameter and the <code data-dev-comment-type="paramref">stringFormat</code> parameter.</returns>
     </member>
     <member name="M:System.Drawing.Graphics.MeasureString(System.ReadOnlySpan{System.Char},System.Drawing.Font,System.Drawing.SizeF,System.Drawing.StringFormat,System.Int32@,System.Int32@)">
       <summary>Measures the specified string when drawn with the specified <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref> and formatted with the specified <xref data-throw-if-not-resolved="true" uid="System.Drawing.StringFormat"></xref>.</summary>
-      <param name="text" />
-      <param name="font" />
-      <param name="layoutArea" />
-      <param name="stringFormat" />
-      <param name="charactersFitted" />
-      <param name="linesFilled" />
+      <param name="text">String to measure.</param>
+      <param name="font">
+        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref> that defines the text format of the string.</param>
+      <param name="layoutArea">
+        <xref data-throw-if-not-resolved="true" uid="System.Drawing.SizeF"></xref> structure that specifies the maximum layout area for the text.</param>
+      <param name="stringFormat">
+        <xref data-throw-if-not-resolved="true" uid="System.Drawing.StringFormat"></xref> that represents formatting information, such as line spacing, for the string.</param>
+      <param name="charactersFitted">Number of characters in the string.</param>
+      <param name="linesFilled">Number of text lines in the string.</param>
       <returns>This method returns a <xref data-throw-if-not-resolved="true" uid="System.Drawing.SizeF"></xref> structure that represents the size of the string, in the units specified by the <xref data-throw-if-not-resolved="true" uid="System.Drawing.Graphics.PageUnit"></xref> property, of the <code data-dev-comment-type="paramref">text</code> parameter as drawn with the <code data-dev-comment-type="paramref">font</code> parameter and the <code data-dev-comment-type="paramref">stringFormat</code> parameter.</returns>
     </member>
     <member name="M:System.Drawing.Graphics.MeasureString(System.ReadOnlySpan{System.Char},System.Drawing.Font,System.Drawing.SizeF,System.Drawing.StringFormat)">
       <summary>Measures the specified string when drawn with the specified <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref> and formatted with the specified <xref data-throw-if-not-resolved="true" uid="System.Drawing.StringFormat"></xref>.</summary>
-      <param name="text" />
-      <param name="font" />
-      <param name="layoutArea" />
-      <param name="stringFormat" />
+      <param name="text">String to measure.</param>
+      <param name="font">
+        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref> defines the text format of the string.</param>
+      <param name="layoutArea">
+        <xref data-throw-if-not-resolved="true" uid="System.Drawing.SizeF"></xref> structure that specifies the maximum layout area for the text.</param>
+      <param name="stringFormat">
+        <xref data-throw-if-not-resolved="true" uid="System.Drawing.StringFormat"></xref> that represents formatting information, such as line spacing, for the string.</param>
       <returns>This method returns a <xref data-throw-if-not-resolved="true" uid="System.Drawing.SizeF"></xref> structure that represents the size, in the units specified by the <xref data-throw-if-not-resolved="true" uid="System.Drawing.Graphics.PageUnit"></xref> property, of the string specified in the <code data-dev-comment-type="paramref">text</code> parameter as drawn with the <code data-dev-comment-type="paramref">font</code> parameter and the <code data-dev-comment-type="paramref">stringFormat</code> parameter.</returns>
     </member>
     <member name="M:System.Drawing.Graphics.MeasureString(System.ReadOnlySpan{System.Char},System.Drawing.Font,System.Drawing.SizeF)">
       <summary>Measures the specified string when drawn with the specified <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref> within the specified layout area.</summary>
-      <param name="text" />
-      <param name="font" />
-      <param name="layoutArea" />
+      <param name="text">String to measure.</param>
+      <param name="font">
+        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref> defines the text format of the string.</param>
+      <param name="layoutArea">
+        <xref data-throw-if-not-resolved="true" uid="System.Drawing.SizeF"></xref> structure that specifies the maximum layout area for the text.</param>
       <returns>This method returns a <xref data-throw-if-not-resolved="true" uid="System.Drawing.SizeF"></xref> structure that represents the size, in the units specified by the <xref data-throw-if-not-resolved="true" uid="System.Drawing.Graphics.PageUnit"></xref> property, of the string specified by the <code data-dev-comment-type="paramref">text</code> parameter as drawn with the <code data-dev-comment-type="paramref">font</code> parameter.</returns>
     </member>
     <member name="M:System.Drawing.Graphics.MeasureString(System.ReadOnlySpan{System.Char},System.Drawing.Font,System.Int32,System.Drawing.StringFormat)">
       <summary>Measures the specified string when drawn with the specified <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref> and formatted with the specified <xref data-throw-if-not-resolved="true" uid="System.Drawing.StringFormat"></xref>.</summary>
-      <param name="text" />
-      <param name="font" />
-      <param name="width" />
-      <param name="format" />
+      <param name="text">String to measure.</param>
+      <param name="font">
+        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref> that defines the text format of the string.</param>
+      <param name="width">Maximum width of the string.</param>
+      <param name="format">
+        <xref data-throw-if-not-resolved="true" uid="System.Drawing.StringFormat"></xref> that represents formatting information, such as line spacing, for the string.</param>
       <returns>This method returns a <xref data-throw-if-not-resolved="true" uid="System.Drawing.SizeF"></xref> structure that represents the size, in the units specified by the <xref data-throw-if-not-resolved="true" uid="System.Drawing.Graphics.PageUnit"></xref> property, of the string specified in the <code data-dev-comment-type="paramref">text</code> parameter as drawn with the <code data-dev-comment-type="paramref">font</code> parameter and the <code data-dev-comment-type="paramref">format</code> parameter.</returns>
     </member>
     <member name="M:System.Drawing.Graphics.MeasureString(System.ReadOnlySpan{System.Char},System.Drawing.Font,System.Int32)">
       <summary>Measures the specified string when drawn with the specified <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref>.</summary>
-      <param name="text" />
-      <param name="font" />
-      <param name="width" />
+      <param name="text">String to measure.</param>
+      <param name="font">
+        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref> that defines the format of the string.</param>
+      <param name="width">Maximum width of the string in pixels.</param>
       <returns>This method returns a <xref data-throw-if-not-resolved="true" uid="System.Drawing.SizeF"></xref> structure that represents the size, in the units specified by the <xref data-throw-if-not-resolved="true" uid="System.Drawing.Graphics.PageUnit"></xref> property, of the string specified in the <code data-dev-comment-type="paramref">text</code> parameter as drawn with the <code data-dev-comment-type="paramref">font</code> parameter.</returns>
     </member>
     <member name="M:System.Drawing.Graphics.MeasureString(System.ReadOnlySpan{System.Char},System.Drawing.Font)">
       <summary>Measures the specified string when drawn with the specified <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref>.</summary>
-      <param name="text" />
-      <param name="font" />
+      <param name="text">String to measure.</param>
+      <param name="font">
+        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref> that defines the text format of the string.</param>
       <returns>This method returns a <xref data-throw-if-not-resolved="true" uid="System.Drawing.SizeF"></xref> structure that represents the size, in the units specified by the <xref data-throw-if-not-resolved="true" uid="System.Drawing.Graphics.PageUnit"></xref> property, of the string specified by the <code data-dev-comment-type="paramref">text</code> parameter as drawn with the <code data-dev-comment-type="paramref">font</code> parameter.</returns>
     </member>
     <member name="M:System.Drawing.Graphics.MeasureString(System.String,System.Drawing.Font,System.Drawing.PointF,System.Drawing.StringFormat)">

@@ -30,10 +30,11 @@
     </member>
     <member name="M:Microsoft.Extensions.Time.Testing.FakeTimeProvider.CreateTimer(System.Threading.TimerCallback,System.Object,System.TimeSpan,System.TimeSpan)">
       <summary>Creates a new <xref data-throw-if-not-resolved="true" uid="System.Threading.ITimer"></xref> instance, using <xref data-throw-if-not-resolved="true" uid="System.TimeSpan"></xref> values to measure time intervals.</summary>
-      <param name="callback" />
-      <param name="state" />
-      <param name="dueTime" />
-      <param name="period" />
+      <param name="callback">A delegate representing a method to be executed when the timer fires. The method specified for callback should be reentrant,
+as it may be invoked simultaneously on two threads if the timer fires again before or while a previous callback is still being handled.</param>
+      <param name="state">An object to be passed to the <code data-dev-comment-type="paramref">callback</code>. This may be null.</param>
+      <param name="dueTime">The amount of time to delay before <code data-dev-comment-type="paramref">callback</code> is invoked. Specify <xref data-throw-if-not-resolved="true" uid="System.Threading.Timeout.InfiniteTimeSpan"></xref> to prevent the timer from starting. Specify <xref data-throw-if-not-resolved="true" uid="System.TimeSpan.Zero"></xref> to start the timer immediately.</param>
+      <param name="period">The time interval between invocations of <code data-dev-comment-type="paramref">callback</code>. Specify <xref data-throw-if-not-resolved="true" uid="System.Threading.Timeout.InfiniteTimeSpan"></xref> to disable periodic signaling.</param>
       <returns>The newly created <xref data-throw-if-not-resolved="true" uid="System.Threading.ITimer"></xref> instance.</returns>
     </member>
     <member name="M:Microsoft.Extensions.Time.Testing.FakeTimeProvider.GetTimestamp">

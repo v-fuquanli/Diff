@@ -107,11 +107,13 @@
     <member name="M:Microsoft.Extensions.AI.Evaluation.Safety.ContentSafetyEvaluator.EvaluateAsync(System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.ChatMessage},Microsoft.Extensions.AI.ChatResponse,Microsoft.Extensions.AI.Evaluation.ChatConfiguration,System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.Evaluation.EvaluationContext},System.Threading.CancellationToken)">
       <summary>Evaluates the supplied <code data-dev-comment-type="paramref">modelResponse</code> and returns an <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.AI.Evaluation.EvaluationResult"></xref>
 containing one or more <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.AI.Evaluation.EvaluationMetric"></xref>s.</summary>
-      <param name="messages" />
-      <param name="modelResponse" />
-      <param name="chatConfiguration" />
-      <param name="additionalContext" />
-      <param name="cancellationToken" />
+      <param name="messages">The conversation history including the request that produced the supplied <code data-dev-comment-type="paramref">modelResponse</code>.</param>
+      <param name="modelResponse">The response that is to be evaluated.</param>
+      <param name="chatConfiguration">A <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.AI.Evaluation.ChatConfiguration"></xref> that specifies the <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.AI.IChatClient"></xref> that should be used if one or
+more composed <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.AI.Evaluation.IEvaluator"></xref>s use an AI model to perform evaluation.</param>
+      <param name="additionalContext">Additional contextual information (beyond that which is available in <code data-dev-comment-type="paramref">messages</code>) that the
+<xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.AI.Evaluation.IEvaluator"></xref> may need to accurately evaluate the supplied <code data-dev-comment-type="paramref">modelResponse</code>.</param>
+      <param name="cancellationToken">A <xref data-throw-if-not-resolved="true" uid="System.Threading.CancellationToken"></xref> that can cancel the evaluation operation.</param>
       <returns>An <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.AI.Evaluation.EvaluationResult"></xref> containing one or more <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.AI.Evaluation.EvaluationMetric"></xref>s.</returns>
     </member>
     <member name="M:Microsoft.Extensions.AI.Evaluation.Safety.ContentSafetyEvaluator.EvaluateContentSafetyAsync(Microsoft.Extensions.AI.IChatClient,System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.ChatMessage},Microsoft.Extensions.AI.ChatResponse,System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.Evaluation.EvaluationContext},System.String,System.Boolean,System.Threading.CancellationToken)">
@@ -276,11 +278,13 @@ containing one or more <xref data-throw-if-not-resolved="true" uid="Microsoft.Ex
     <member name="M:Microsoft.Extensions.AI.Evaluation.Safety.GroundednessProEvaluator.EvaluateAsync(System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.ChatMessage},Microsoft.Extensions.AI.ChatResponse,Microsoft.Extensions.AI.Evaluation.ChatConfiguration,System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.Evaluation.EvaluationContext},System.Threading.CancellationToken)">
       <summary>Evaluates the supplied <code data-dev-comment-type="paramref">modelResponse</code> and returns an <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.AI.Evaluation.EvaluationResult"></xref>
 containing one or more <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.AI.Evaluation.EvaluationMetric"></xref>s.</summary>
-      <param name="messages" />
-      <param name="modelResponse" />
-      <param name="chatConfiguration" />
-      <param name="additionalContext" />
-      <param name="cancellationToken" />
+      <param name="messages">The conversation history including the request that produced the supplied <code data-dev-comment-type="paramref">modelResponse</code>.</param>
+      <param name="modelResponse">The response that is to be evaluated.</param>
+      <param name="chatConfiguration">A <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.AI.Evaluation.ChatConfiguration"></xref> that specifies the <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.AI.IChatClient"></xref> that should be used if one or
+more composed <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.AI.Evaluation.IEvaluator"></xref>s use an AI model to perform evaluation.</param>
+      <param name="additionalContext">Additional contextual information (beyond that which is available in <code data-dev-comment-type="paramref">messages</code>) that the
+<xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.AI.Evaluation.IEvaluator"></xref> may need to accurately evaluate the supplied <code data-dev-comment-type="paramref">modelResponse</code>.</param>
+      <param name="cancellationToken">A <xref data-throw-if-not-resolved="true" uid="System.Threading.CancellationToken"></xref> that can cancel the evaluation operation.</param>
       <returns>An <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.AI.Evaluation.EvaluationResult"></xref> containing one or more <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.AI.Evaluation.EvaluationMetric"></xref>s.</returns>
     </member>
     <member name="P:Microsoft.Extensions.AI.Evaluation.Safety.GroundednessProEvaluator.GroundednessProMetricName">
@@ -365,11 +369,13 @@ containing one or more <xref data-throw-if-not-resolved="true" uid="Microsoft.Ex
     <member name="M:Microsoft.Extensions.AI.Evaluation.Safety.ProtectedMaterialEvaluator.EvaluateAsync(System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.ChatMessage},Microsoft.Extensions.AI.ChatResponse,Microsoft.Extensions.AI.Evaluation.ChatConfiguration,System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.Evaluation.EvaluationContext},System.Threading.CancellationToken)">
       <summary>Evaluates the supplied <code data-dev-comment-type="paramref">modelResponse</code> and returns an <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.AI.Evaluation.EvaluationResult"></xref>
 containing one or more <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.AI.Evaluation.EvaluationMetric"></xref>s.</summary>
-      <param name="messages" />
-      <param name="modelResponse" />
-      <param name="chatConfiguration" />
-      <param name="additionalContext" />
-      <param name="cancellationToken" />
+      <param name="messages">The conversation history including the request that produced the supplied <code data-dev-comment-type="paramref">modelResponse</code>.</param>
+      <param name="modelResponse">The response that is to be evaluated.</param>
+      <param name="chatConfiguration">A <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.AI.Evaluation.ChatConfiguration"></xref> that specifies the <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.AI.IChatClient"></xref> that should be used if one or
+more composed <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.AI.Evaluation.IEvaluator"></xref>s use an AI model to perform evaluation.</param>
+      <param name="additionalContext">Additional contextual information (beyond that which is available in <code data-dev-comment-type="paramref">messages</code>) that the
+<xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.AI.Evaluation.IEvaluator"></xref> may need to accurately evaluate the supplied <code data-dev-comment-type="paramref">modelResponse</code>.</param>
+      <param name="cancellationToken">A <xref data-throw-if-not-resolved="true" uid="System.Threading.CancellationToken"></xref> that can cancel the evaluation operation.</param>
       <returns>An <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.AI.Evaluation.EvaluationResult"></xref> containing one or more <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.AI.Evaluation.EvaluationMetric"></xref>s.</returns>
     </member>
     <member name="P:Microsoft.Extensions.AI.Evaluation.Safety.ProtectedMaterialEvaluator.ProtectedArtworkMetricName">
@@ -447,11 +453,13 @@ containing one or more <xref data-throw-if-not-resolved="true" uid="Microsoft.Ex
     <member name="M:Microsoft.Extensions.AI.Evaluation.Safety.UngroundedAttributesEvaluator.EvaluateAsync(System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.ChatMessage},Microsoft.Extensions.AI.ChatResponse,Microsoft.Extensions.AI.Evaluation.ChatConfiguration,System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.Evaluation.EvaluationContext},System.Threading.CancellationToken)">
       <summary>Evaluates the supplied <code data-dev-comment-type="paramref">modelResponse</code> and returns an <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.AI.Evaluation.EvaluationResult"></xref>
 containing one or more <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.AI.Evaluation.EvaluationMetric"></xref>s.</summary>
-      <param name="messages" />
-      <param name="modelResponse" />
-      <param name="chatConfiguration" />
-      <param name="additionalContext" />
-      <param name="cancellationToken" />
+      <param name="messages">The conversation history including the request that produced the supplied <code data-dev-comment-type="paramref">modelResponse</code>.</param>
+      <param name="modelResponse">The response that is to be evaluated.</param>
+      <param name="chatConfiguration">A <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.AI.Evaluation.ChatConfiguration"></xref> that specifies the <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.AI.IChatClient"></xref> that should be used if one or
+more composed <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.AI.Evaluation.IEvaluator"></xref>s use an AI model to perform evaluation.</param>
+      <param name="additionalContext">Additional contextual information (beyond that which is available in <code data-dev-comment-type="paramref">messages</code>) that the
+<xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.AI.Evaluation.IEvaluator"></xref> may need to accurately evaluate the supplied <code data-dev-comment-type="paramref">modelResponse</code>.</param>
+      <param name="cancellationToken">A <xref data-throw-if-not-resolved="true" uid="System.Threading.CancellationToken"></xref> that can cancel the evaluation operation.</param>
       <returns>An <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.AI.Evaluation.EvaluationResult"></xref> containing one or more <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.AI.Evaluation.EvaluationMetric"></xref>s.</returns>
     </member>
     <member name="P:Microsoft.Extensions.AI.Evaluation.Safety.UngroundedAttributesEvaluator.UngroundedAttributesMetricName">

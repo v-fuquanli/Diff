@@ -154,8 +154,8 @@
     <member name="M:Microsoft.Extensions.Compliance.Classification.DataClassificationTypeConverter.#ctor" />
     <member name="M:Microsoft.Extensions.Compliance.Classification.DataClassificationTypeConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
       <summary>Returns whether this converter can convert an object of the given type to the type of this converter, using the specified context.</summary>
-      <param name="context" />
-      <param name="sourceType" />
+      <param name="context">An <xref data-throw-if-not-resolved="true" uid="System.ComponentModel.ITypeDescriptorContext"></xref> that provides a format context.</param>
+      <param name="sourceType">A <xref data-throw-if-not-resolved="true" uid="System.Type"></xref> that represents the type you want to convert from.</param>
       <returns>
         <code data-dev-comment-type="langword">true</code> if this converter can perform the conversion; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
     </member>
@@ -168,9 +168,9 @@
     </member>
     <member name="M:Microsoft.Extensions.Compliance.Classification.DataClassificationTypeConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
       <summary>Converts the given object to the type of this converter, using the specified context and culture information.</summary>
-      <param name="context" />
-      <param name="culture" />
-      <param name="value" />
+      <param name="context">An <xref data-throw-if-not-resolved="true" uid="System.ComponentModel.ITypeDescriptorContext"></xref> that provides a format context.</param>
+      <param name="culture">The <xref data-throw-if-not-resolved="true" uid="System.Globalization.CultureInfo"></xref> to use as the current culture.</param>
+      <param name="value">The <xref data-throw-if-not-resolved="true" uid="System.Object"></xref> to convert.</param>
       <returns>An <xref data-throw-if-not-resolved="true" uid="System.Object"></xref> that represents the converted value.</returns>
     </member>
     <member name="M:Microsoft.Extensions.Compliance.Classification.DataClassificationTypeConverter.IsValid(System.ComponentModel.ITypeDescriptorContext,System.Object)">
@@ -247,7 +247,7 @@
     </member>
     <member name="M:Microsoft.Extensions.Compliance.Redaction.NullRedactor.Redact(System.String)">
       <summary>Redacts potentially sensitive data.</summary>
-      <param name="source" />
+      <param name="source">Value to redact.</param>
       <returns>Redacted value.</returns>
     </member>
     <member name="P:Microsoft.Extensions.Compliance.Redaction.NullRedactor.Instance">

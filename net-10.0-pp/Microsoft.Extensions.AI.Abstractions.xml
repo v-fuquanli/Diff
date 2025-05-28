@@ -72,22 +72,22 @@
     </member>
     <member name="M:Microsoft.Extensions.AI.AdditionalPropertiesDictionary`1.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{System#String@TValue}}#Add(System.Collections.Generic.KeyValuePair{System.String,`0})">
       <summary>Adds an item to the <xref data-throw-if-not-resolved="true" uid="System.Collections.Generic.ICollection`1"></xref>.</summary>
-      <param name="item" />
+      <param name="item">The object to add to the <xref data-throw-if-not-resolved="true" uid="System.Collections.Generic.ICollection`1"></xref>.</param>
     </member>
     <member name="M:Microsoft.Extensions.AI.AdditionalPropertiesDictionary`1.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{System#String@TValue}}#Contains(System.Collections.Generic.KeyValuePair{System.String,`0})">
       <summary>Determines whether the <xref data-throw-if-not-resolved="true" uid="System.Collections.Generic.ICollection`1"></xref> contains a specific value.</summary>
-      <param name="item" />
+      <param name="item">The object to locate in the <xref data-throw-if-not-resolved="true" uid="System.Collections.Generic.ICollection`1"></xref>.</param>
       <returns>
         <code data-dev-comment-type="langword">true</code> if <code data-dev-comment-type="paramref">item</code> is found in the <xref data-throw-if-not-resolved="true" uid="System.Collections.Generic.ICollection`1"></xref>; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
     </member>
     <member name="M:Microsoft.Extensions.AI.AdditionalPropertiesDictionary`1.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{System#String@TValue}}#CopyTo(System.Collections.Generic.KeyValuePair{System.String,`0}[],System.Int32)">
       <summary>Copies the elements of the <xref data-throw-if-not-resolved="true" uid="System.Collections.Generic.ICollection`1"></xref> to an <xref data-throw-if-not-resolved="true" uid="System.Array"></xref>, starting at a particular <xref data-throw-if-not-resolved="true" uid="System.Array"></xref> index.</summary>
-      <param name="array" />
-      <param name="arrayIndex" />
+      <param name="array">The one-dimensional <xref data-throw-if-not-resolved="true" uid="System.Array"></xref> that is the destination of the elements copied from <xref data-throw-if-not-resolved="true" uid="System.Collections.Generic.ICollection`1"></xref>. The <xref data-throw-if-not-resolved="true" uid="System.Array"></xref> must have zero-based indexing.</param>
+      <param name="arrayIndex">The zero-based index in <code data-dev-comment-type="paramref">array</code> at which copying begins.</param>
     </member>
     <member name="M:Microsoft.Extensions.AI.AdditionalPropertiesDictionary`1.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{System#String@TValue}}#Remove(System.Collections.Generic.KeyValuePair{System.String,`0})">
       <summary>Removes the first occurrence of a specific object from the <xref data-throw-if-not-resolved="true" uid="System.Collections.Generic.ICollection`1"></xref>.</summary>
-      <param name="item" />
+      <param name="item">The object to remove from the <xref data-throw-if-not-resolved="true" uid="System.Collections.Generic.ICollection`1"></xref>.</param>
       <returns>
         <code data-dev-comment-type="langword">true</code> if <code data-dev-comment-type="paramref">item</code> was successfully removed from the <xref data-throw-if-not-resolved="true" uid="System.Collections.Generic.ICollection`1"></xref>; otherwise, <code data-dev-comment-type="langword">false</code>. This method also returns <code data-dev-comment-type="langword">false</code> if <code data-dev-comment-type="paramref">item</code> is not found in the original <xref data-throw-if-not-resolved="true" uid="System.Collections.Generic.ICollection`1"></xref>.</returns>
     </member>
@@ -255,8 +255,8 @@
     </member>
     <member name="M:Microsoft.Extensions.AI.AIFunctionArguments.Add(System.String,System.Object)">
       <summary>Adds an element with the provided key and value to the <xref data-throw-if-not-resolved="true" uid="System.Collections.Generic.IDictionary`2"></xref>.</summary>
-      <param name="key" />
-      <param name="value" />
+      <param name="key">The object to use as the key of the element to add.</param>
+      <param name="value">The object to use as the value of the element to add.</param>
     </member>
     <member name="M:Microsoft.Extensions.AI.AIFunctionArguments.Clear">
       <summary>Removes all items from the <xref data-throw-if-not-resolved="true" uid="System.Collections.Generic.ICollection`1"></xref>.</summary>
@@ -269,8 +269,8 @@
     </member>
     <member name="M:Microsoft.Extensions.AI.AIFunctionArguments.CopyTo(System.Collections.Generic.KeyValuePair{System.String,System.Object}[],System.Int32)">
       <summary>Copies the elements of the <xref data-throw-if-not-resolved="true" uid="System.Collections.Generic.ICollection`1"></xref> to an <xref data-throw-if-not-resolved="true" uid="System.Array"></xref>, starting at a particular <xref data-throw-if-not-resolved="true" uid="System.Array"></xref> index.</summary>
-      <param name="array" />
-      <param name="arrayIndex" />
+      <param name="array">The one-dimensional <xref data-throw-if-not-resolved="true" uid="System.Array"></xref> that is the destination of the elements copied from <xref data-throw-if-not-resolved="true" uid="System.Collections.Generic.ICollection`1"></xref>. The <xref data-throw-if-not-resolved="true" uid="System.Array"></xref> must have zero-based indexing.</param>
+      <param name="arrayIndex">The zero-based index in <code data-dev-comment-type="paramref">array</code> at which copying begins.</param>
     </member>
     <member name="M:Microsoft.Extensions.AI.AIFunctionArguments.GetEnumerator">
       <summary>Returns an enumerator that iterates through the collection.</summary>
@@ -284,17 +284,17 @@
     </member>
     <member name="M:Microsoft.Extensions.AI.AIFunctionArguments.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{System#String@System#Object}}#Add(System.Collections.Generic.KeyValuePair{System.String,System.Object})">
       <summary>Adds an item to the <xref data-throw-if-not-resolved="true" uid="System.Collections.Generic.ICollection`1"></xref>.</summary>
-      <param name="item" />
+      <param name="item">The object to add to the <xref data-throw-if-not-resolved="true" uid="System.Collections.Generic.ICollection`1"></xref>.</param>
     </member>
     <member name="M:Microsoft.Extensions.AI.AIFunctionArguments.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{System#String@System#Object}}#Contains(System.Collections.Generic.KeyValuePair{System.String,System.Object})">
       <summary>Determines whether the <xref data-throw-if-not-resolved="true" uid="System.Collections.Generic.ICollection`1"></xref> contains a specific value.</summary>
-      <param name="item" />
+      <param name="item">The object to locate in the <xref data-throw-if-not-resolved="true" uid="System.Collections.Generic.ICollection`1"></xref>.</param>
       <returns>
         <code data-dev-comment-type="langword">true</code> if <code data-dev-comment-type="paramref">item</code> is found in the <xref data-throw-if-not-resolved="true" uid="System.Collections.Generic.ICollection`1"></xref>; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
     </member>
     <member name="M:Microsoft.Extensions.AI.AIFunctionArguments.System#Collections#Generic#ICollection{System#Collections#Generic#KeyValuePair{System#String@System#Object}}#Remove(System.Collections.Generic.KeyValuePair{System.String,System.Object})">
       <summary>Removes the first occurrence of a specific object from the <xref data-throw-if-not-resolved="true" uid="System.Collections.Generic.ICollection`1"></xref>.</summary>
-      <param name="item" />
+      <param name="item">The object to remove from the <xref data-throw-if-not-resolved="true" uid="System.Collections.Generic.ICollection`1"></xref>.</param>
       <returns>
         <code data-dev-comment-type="langword">true</code> if <code data-dev-comment-type="paramref">item</code> was successfully removed from the <xref data-throw-if-not-resolved="true" uid="System.Collections.Generic.ICollection`1"></xref>; otherwise, <code data-dev-comment-type="langword">false</code>. This method also returns <code data-dev-comment-type="langword">false</code> if <code data-dev-comment-type="paramref">item</code> is not found in the original <xref data-throw-if-not-resolved="true" uid="System.Collections.Generic.ICollection`1"></xref>.</returns>
     </member>
@@ -924,7 +924,7 @@
     </member>
     <member name="M:Microsoft.Extensions.AI.ChatFinishReason.Equals(System.Object)">
       <summary>Indicates whether this instance and a specified object are equal.</summary>
-      <param name="obj" />
+      <param name="obj">The object to compare with the current instance.</param>
       <returns>
         <code data-dev-comment-type="langword">true</code> if <code data-dev-comment-type="paramref">obj</code> and this instance are the same type and represent the same value; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
     </member>
@@ -1323,7 +1323,7 @@
     </member>
     <member name="M:Microsoft.Extensions.AI.ChatRole.Equals(System.Object)">
       <summary>Indicates whether this instance and a specified object are equal.</summary>
-      <param name="obj" />
+      <param name="obj">The object to compare with the current instance.</param>
       <returns>
         <code data-dev-comment-type="langword">true</code> if <code data-dev-comment-type="paramref">obj</code> and this instance are the same type and represent the same value; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
     </member>
@@ -1486,22 +1486,22 @@
     </member>
     <member name="M:Microsoft.Extensions.AI.DelegatingChatClient.GetResponseAsync(System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.ChatMessage},Microsoft.Extensions.AI.ChatOptions,System.Threading.CancellationToken)">
       <summary>Sends chat messages and returns the response.</summary>
-      <param name="messages" />
-      <param name="options" />
-      <param name="cancellationToken" />
+      <param name="messages">The sequence of chat messages to send.</param>
+      <param name="options">The chat options with which to configure the request.</param>
+      <param name="cancellationToken">The <xref data-throw-if-not-resolved="true" uid="System.Threading.CancellationToken"></xref> to monitor for cancellation requests. The default is <xref data-throw-if-not-resolved="true" uid="System.Threading.CancellationToken.None"></xref>.</param>
       <returns>The response messages generated by the client.</returns>
     </member>
     <member name="M:Microsoft.Extensions.AI.DelegatingChatClient.GetService(System.Type,System.Object)">
       <summary>Asks the <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.AI.IChatClient"></xref> for an object of the specified type <code data-dev-comment-type="paramref">serviceType</code>.</summary>
-      <param name="serviceType" />
-      <param name="serviceKey" />
+      <param name="serviceType">The type of object being requested.</param>
+      <param name="serviceKey">An optional key that can be used to help identify the target service.</param>
       <returns>The found object, otherwise <code data-dev-comment-type="langword">null</code>.</returns>
     </member>
     <member name="M:Microsoft.Extensions.AI.DelegatingChatClient.GetStreamingResponseAsync(System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.ChatMessage},Microsoft.Extensions.AI.ChatOptions,System.Threading.CancellationToken)">
       <summary>Sends chat messages and streams the response.</summary>
-      <param name="messages" />
-      <param name="options" />
-      <param name="cancellationToken" />
+      <param name="messages">The sequence of chat messages to send.</param>
+      <param name="options">The chat options with which to configure the request.</param>
+      <param name="cancellationToken">The <xref data-throw-if-not-resolved="true" uid="System.Threading.CancellationToken"></xref> to monitor for cancellation requests. The default is <xref data-throw-if-not-resolved="true" uid="System.Threading.CancellationToken.None"></xref>.</param>
       <returns>The response messages generated by the client.</returns>
     </member>
     <member name="P:Microsoft.Extensions.AI.DelegatingChatClient.InnerClient">
@@ -1528,15 +1528,15 @@
     </member>
     <member name="M:Microsoft.Extensions.AI.DelegatingEmbeddingGenerator`2.GenerateAsync(System.Collections.Generic.IEnumerable{`0},Microsoft.Extensions.AI.EmbeddingGenerationOptions,System.Threading.CancellationToken)">
       <summary>Generates embeddings for each of the supplied <code data-dev-comment-type="paramref">values</code>.</summary>
-      <param name="values" />
-      <param name="options" />
-      <param name="cancellationToken" />
+      <param name="values">The sequence of values for which to generate embeddings.</param>
+      <param name="options">The embedding generation options with which to configure the request.</param>
+      <param name="cancellationToken">The <xref data-throw-if-not-resolved="true" uid="System.Threading.CancellationToken"></xref> to monitor for cancellation requests. The default is <xref data-throw-if-not-resolved="true" uid="System.Threading.CancellationToken.None"></xref>.</param>
       <returns>The generated embeddings.</returns>
     </member>
     <member name="M:Microsoft.Extensions.AI.DelegatingEmbeddingGenerator`2.GetService(System.Type,System.Object)">
       <summary>Asks the <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.AI.IEmbeddingGenerator`2"></xref> for an object of the specified type <code data-dev-comment-type="paramref">serviceType</code>.</summary>
-      <param name="serviceType" />
-      <param name="serviceKey" />
+      <param name="serviceType">The type of object being requested.</param>
+      <param name="serviceKey">An optional key that can be used to help identify the target service.</param>
       <returns>The found object, otherwise <code data-dev-comment-type="langword">null</code>.</returns>
     </member>
     <member name="P:Microsoft.Extensions.AI.DelegatingEmbeddingGenerator`2.InnerGenerator">
@@ -1561,22 +1561,22 @@
     </member>
     <member name="M:Microsoft.Extensions.AI.DelegatingSpeechToTextClient.GetService(System.Type,System.Object)">
       <summary>Asks the <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.AI.ISpeechToTextClient"></xref> for an object of the specified type <code data-dev-comment-type="paramref">serviceType</code>.</summary>
-      <param name="serviceType" />
-      <param name="serviceKey" />
+      <param name="serviceType">The type of object being requested.</param>
+      <param name="serviceKey">An optional key that can be used to help identify the target service.</param>
       <returns>The found object, otherwise <code data-dev-comment-type="langword">null</code>.</returns>
     </member>
     <member name="M:Microsoft.Extensions.AI.DelegatingSpeechToTextClient.GetStreamingTextAsync(System.IO.Stream,Microsoft.Extensions.AI.SpeechToTextOptions,System.Threading.CancellationToken)">
       <summary>Sends audio speech content to the model and streams back the generated text.</summary>
-      <param name="audioSpeechStream" />
-      <param name="options" />
-      <param name="cancellationToken" />
+      <param name="audioSpeechStream">The audio speech stream to send.</param>
+      <param name="options">The speech to text options to configure the request.</param>
+      <param name="cancellationToken">The <xref data-throw-if-not-resolved="true" uid="System.Threading.CancellationToken"></xref> to monitor for cancellation requests. The default is <xref data-throw-if-not-resolved="true" uid="System.Threading.CancellationToken.None"></xref>.</param>
       <returns>The text updates representing the streamed output.</returns>
     </member>
     <member name="M:Microsoft.Extensions.AI.DelegatingSpeechToTextClient.GetTextAsync(System.IO.Stream,Microsoft.Extensions.AI.SpeechToTextOptions,System.Threading.CancellationToken)">
       <summary>Sends audio speech content to the model and returns the generated text.</summary>
-      <param name="audioSpeechStream" />
-      <param name="options" />
-      <param name="cancellationToken" />
+      <param name="audioSpeechStream">The audio speech stream to send.</param>
+      <param name="options">The speech to text options to configure the request.</param>
+      <param name="cancellationToken">The <xref data-throw-if-not-resolved="true" uid="System.Threading.CancellationToken"></xref> to monitor for cancellation requests. The default is <xref data-throw-if-not-resolved="true" uid="System.Threading.CancellationToken.None"></xref>.</param>
       <returns>The text generated.</returns>
     </member>
     <member name="P:Microsoft.Extensions.AI.DelegatingSpeechToTextClient.InnerClient">
@@ -2234,7 +2234,7 @@
     </member>
     <member name="M:Microsoft.Extensions.AI.SpeechToTextResponseUpdateKind.Equals(System.Object)">
       <summary>Indicates whether this instance and a specified object are equal.</summary>
-      <param name="obj" />
+      <param name="obj">The object to compare with the current instance.</param>
       <returns>
         <code data-dev-comment-type="langword">true</code> if <code data-dev-comment-type="paramref">obj</code> and this instance are the same type and represent the same value; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
     </member>

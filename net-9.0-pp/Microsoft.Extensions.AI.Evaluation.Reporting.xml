@@ -779,25 +779,25 @@ If omitted, all <xref data-throw-if-not-resolved="true" uid="Microsoft.Extension
     <member name="M:Microsoft.Extensions.AI.Evaluation.Reporting.Storage.DiskBasedResultStore.GetIterationNamesAsync(System.String,System.String,System.Threading.CancellationToken)">
       <summary>Gets the <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.AI.Evaluation.Reporting.ScenarioRun.IterationName"></xref>s present in the scenario with the specified
 <code data-dev-comment-type="paramref">scenarioName</code> under the execution with the specified <code data-dev-comment-type="paramref">executionName</code>.</summary>
-      <param name="executionName" />
-      <param name="scenarioName" />
-      <param name="cancellationToken" />
+      <param name="executionName">The <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.AI.Evaluation.Reporting.ScenarioRun.ExecutionName"></xref>.</param>
+      <param name="scenarioName">The <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.AI.Evaluation.Reporting.ScenarioRun.ScenarioName"></xref>.</param>
+      <param name="cancellationToken">A <xref data-throw-if-not-resolved="true" uid="System.Threading.CancellationToken"></xref> that can cancel the operation.</param>
       <returns>The <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.AI.Evaluation.Reporting.ScenarioRun.IterationName"></xref>s present in the scenario with the specified
 <code data-dev-comment-type="paramref">scenarioName</code> under the execution with the specified <code data-dev-comment-type="paramref">executionName</code>.</returns>
     </member>
     <member name="M:Microsoft.Extensions.AI.Evaluation.Reporting.Storage.DiskBasedResultStore.GetLatestExecutionNamesAsync(System.Nullable{System.Int32},System.Threading.CancellationToken)">
       <summary>Gets the <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.AI.Evaluation.Reporting.ScenarioRun.ExecutionName"></xref>s of the most recent <code data-dev-comment-type="paramref">count</code> executions from
 the store (ordered from most recent to least recent).</summary>
-      <param name="count" />
-      <param name="cancellationToken" />
+      <param name="count">The number of <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.AI.Evaluation.Reporting.ScenarioRun.ExecutionName"></xref>s to retrieve.</param>
+      <param name="cancellationToken">A <xref data-throw-if-not-resolved="true" uid="System.Threading.CancellationToken"></xref> that can cancel the operation.</param>
       <returns>The <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.AI.Evaluation.Reporting.ScenarioRun.ExecutionName"></xref>s of the most recent <code data-dev-comment-type="paramref">count</code> executions from the
 store (ordered from most recent to least recent).</returns>
     </member>
     <member name="M:Microsoft.Extensions.AI.Evaluation.Reporting.Storage.DiskBasedResultStore.GetScenarioNamesAsync(System.String,System.Threading.CancellationToken)">
       <summary>Gets the <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.AI.Evaluation.Reporting.ScenarioRun.ScenarioName"></xref>s present in the execution with the specified
 <code data-dev-comment-type="paramref">executionName</code>.</summary>
-      <param name="executionName" />
-      <param name="cancellationToken" />
+      <param name="executionName">The <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.AI.Evaluation.Reporting.ScenarioRun.ExecutionName"></xref>.</param>
+      <param name="cancellationToken">A <xref data-throw-if-not-resolved="true" uid="System.Threading.CancellationToken"></xref> that can cancel the operation.</param>
       <returns>The <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.AI.Evaluation.Reporting.ScenarioRun.ScenarioName"></xref>s present in the execution with the specified
 <code data-dev-comment-type="paramref">executionName</code>.</returns>
     </member>
@@ -805,10 +805,15 @@ store (ordered from most recent to least recent).</returns>
       <summary>Returns <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.AI.Evaluation.Reporting.ScenarioRunResult"></xref>s for <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.AI.Evaluation.Reporting.ScenarioRun"></xref>s filtered by the specified
 <code data-dev-comment-type="paramref">executionName</code>, <code data-dev-comment-type="paramref">scenarioName</code>, and <code data-dev-comment-type="paramref">iterationName</code> from
 the store.</summary>
-      <param name="executionName" />
-      <param name="scenarioName" />
-      <param name="iterationName" />
-      <param name="cancellationToken" />
+      <param name="executionName">The <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.AI.Evaluation.Reporting.ScenarioRun.ExecutionName"></xref> by which the <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.AI.Evaluation.Reporting.ScenarioRunResult"></xref>s should be filtered.
+If omitted, all <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.AI.Evaluation.Reporting.ScenarioRun.ExecutionName"></xref>s are considered.</param>
+      <param name="scenarioName">The <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.AI.Evaluation.Reporting.ScenarioRun.ScenarioName"></xref> by which the <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.AI.Evaluation.Reporting.ScenarioRunResult"></xref>s should be filtered.
+If omitted, all <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.AI.Evaluation.Reporting.ScenarioRun.ScenarioName"></xref>s that are in scope based on the specified
+<code data-dev-comment-type="paramref">executionName</code> filter are considered.</param>
+      <param name="iterationName">The <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.AI.Evaluation.Reporting.ScenarioRun.IterationName"></xref> by which the <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.AI.Evaluation.Reporting.ScenarioRunResult"></xref>s should be filtered.
+If omitted, all <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.AI.Evaluation.Reporting.ScenarioRun.IterationName"></xref>s that are in scope based on the specified
+<code data-dev-comment-type="paramref">executionName</code>, and <code data-dev-comment-type="paramref">scenarioName</code> filters are considered.</param>
+      <param name="cancellationToken">A <xref data-throw-if-not-resolved="true" uid="System.Threading.CancellationToken"></xref> that can cancel the operation.</param>
       <returns>The matching <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.AI.Evaluation.Reporting.ScenarioRunResult"></xref>s.</returns>
     </member>
     <member name="M:Microsoft.Extensions.AI.Evaluation.Reporting.Storage.DiskBasedResultStore.WriteResultsAsync(System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.Evaluation.Reporting.ScenarioRunResult},System.Threading.CancellationToken)">

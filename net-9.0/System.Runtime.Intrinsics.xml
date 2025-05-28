@@ -37688,17 +37688,17 @@
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector256.Clamp``1(System.Runtime.Intrinsics.Vector256{``0},System.Runtime.Intrinsics.Vector256{``0},System.Runtime.Intrinsics.Vector256{``0})">
       <summary>Restricts a vector between a minimum and a maximum value.</summary>
-      <param name="value" />
-      <param name="min" />
-      <param name="max" />
+      <param name="value">The vector to restrict.</param>
+      <param name="min">The minimum value.</param>
+      <param name="max">The maximum value.</param>
       <typeparam name="T" />
       <returns>The restricted vector.</returns>
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector256.ClampNative``1(System.Runtime.Intrinsics.Vector256{``0},System.Runtime.Intrinsics.Vector256{``0},System.Runtime.Intrinsics.Vector256{``0})">
       <summary>Restricts a vector between a minimum and a maximum value using platform specific behavior for <code data-dev-comment-type="c">NaN</code> and <code data-dev-comment-type="c">NegativeZero</code>..</summary>
-      <param name="value" />
-      <param name="min" />
-      <param name="max" />
+      <param name="value">The vector to restrict.</param>
+      <param name="min">The minimum value.</param>
+      <param name="max">The maximum value.</param>
       <typeparam name="T" />
       <returns>The restricted vector.</returns>
     </member>
@@ -37773,8 +37773,8 @@
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector256.CopySign``1(System.Runtime.Intrinsics.Vector256{``0},System.Runtime.Intrinsics.Vector256{``0})">
       <summary>Copies the per-element sign of a vector to the per-element sign of another vector.</summary>
-      <param name="value" />
-      <param name="sign" />
+      <param name="value">The vector whose magnitude is used in the result.</param>
+      <param name="sign">The vector whose sign is used in the result.</param>
       <typeparam name="T" />
       <returns>A vector with the magnitude of <code data-dev-comment-type="paramref">value</code> and the sign of <code data-dev-comment-type="paramref">sign</code>.</returns>
     </member>
@@ -38512,31 +38512,31 @@
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector256.IsNaN``1(System.Runtime.Intrinsics.Vector256{``0})">
       <summary>Determines which elements in a vector are NaN.</summary>
-      <param name="vector" />
+      <param name="vector">The vector to be checked.</param>
       <typeparam name="T" />
       <returns>A vector whose elements are all-bits-set or zero, depending on if the corresponding elements in <code data-dev-comment-type="paramref">vector</code> were NaN.</returns>
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector256.IsNegative``1(System.Runtime.Intrinsics.Vector256{``0})">
       <summary>Determines which elements in a vector represents negative real numbers.</summary>
-      <param name="vector" />
+      <param name="vector">The vector to be checked.</param>
       <typeparam name="T" />
       <returns>A vector whose elements are all-bits-set or zero, depending on if the corresponding elements in <code data-dev-comment-type="paramref">vector</code> were negative.</returns>
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector256.IsPositive``1(System.Runtime.Intrinsics.Vector256{``0})">
       <summary>Determines which elements in a vector represents positive real numbers.</summary>
-      <param name="vector" />
+      <param name="vector">The vector to be checked.</param>
       <typeparam name="T" />
       <returns>A vector whose elements are all-bits-set or zero, depending on if the corresponding elements in <code data-dev-comment-type="paramref">vector</code> were positive.</returns>
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector256.IsPositiveInfinity``1(System.Runtime.Intrinsics.Vector256{``0})">
       <summary>Determines which elements in a vector are positive infinity.</summary>
-      <param name="vector" />
+      <param name="vector">The vector to be checked.</param>
       <typeparam name="T" />
       <returns>A vector whose elements are all-bits-set or zero, depending on if the corresponding elements in <code data-dev-comment-type="paramref">vector</code> were positive infinity.</returns>
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector256.IsZero``1(System.Runtime.Intrinsics.Vector256{``0})">
       <summary>Determines which elements in a vector are zero.</summary>
-      <param name="vector" />
+      <param name="vector">The vector to be checked.</param>
       <typeparam name="T" />
       <returns>A vector whose elements are all-bits-set or zero, depending on if the corresponding elements in <code data-dev-comment-type="paramref">vector</code> were zero.</returns>
     </member>
@@ -38672,29 +38672,29 @@
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector256.MaxMagnitude``1(System.Runtime.Intrinsics.Vector256{``0},System.Runtime.Intrinsics.Vector256{``0})">
       <summary>Compares two vectors to compute which has the greater magnitude on a per-element basis.</summary>
-      <param name="left" />
-      <param name="right" />
+      <param name="left">The vector to compare with <code data-dev-comment-type="paramref">right</code>.</param>
+      <param name="right">The vector to compare with <code data-dev-comment-type="paramref">left</code>.</param>
       <typeparam name="T" />
       <returns>A vector where the corresponding element comes from <code data-dev-comment-type="paramref">left</code> if it has a greater magnitude than <code data-dev-comment-type="paramref">right</code>; otherwise, <code data-dev-comment-type="paramref">right</code>.</returns>
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector256.MaxMagnitudeNumber``1(System.Runtime.Intrinsics.Vector256{``0},System.Runtime.Intrinsics.Vector256{``0})">
       <summary>Compares two vectors, on a per-element basis, to compute which has the greater magnitude and returning the other value if an input is <code data-dev-comment-type="c">NaN</code>.</summary>
-      <param name="left" />
-      <param name="right" />
+      <param name="left">The vector to compare with <code data-dev-comment-type="paramref">right</code>.</param>
+      <param name="right">The vector to compare with <code data-dev-comment-type="paramref">left</code>.</param>
       <typeparam name="T" />
       <returns>A vector where the corresponding element comes from <code data-dev-comment-type="paramref">left</code> if it has a greater magnitude than <code data-dev-comment-type="paramref">right</code>; otherwise, <code data-dev-comment-type="paramref">right</code>.</returns>
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector256.MaxNative``1(System.Runtime.Intrinsics.Vector256{``0},System.Runtime.Intrinsics.Vector256{``0})">
       <summary>Compare two vectors to determine which is greater on a per-element basis using platform specific behavior for <code data-dev-comment-type="c">NaN</code> and <code data-dev-comment-type="c">NegativeZero</code>.</summary>
-      <param name="left" />
-      <param name="right" />
+      <param name="left">The vector to compare with <code data-dev-comment-type="paramref">right</code>.</param>
+      <param name="right">The vector to compare with <code data-dev-comment-type="paramref">left</code>.</param>
       <typeparam name="T" />
       <returns>A vector where the corresponding element comes from <code data-dev-comment-type="paramref">left</code> if it is greater than <code data-dev-comment-type="paramref">right</code>; otherwise, <code data-dev-comment-type="paramref">right</code>.</returns>
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector256.MaxNumber``1(System.Runtime.Intrinsics.Vector256{``0},System.Runtime.Intrinsics.Vector256{``0})">
       <summary>Compares two vectors, on a per-element basis, to compute which is greater and returning the other value if an element is <code data-dev-comment-type="c">NaN</code>.</summary>
-      <param name="left" />
-      <param name="right" />
+      <param name="left">The vector to compare with <code data-dev-comment-type="paramref">right</code>.</param>
+      <param name="right">The vector to compare with <code data-dev-comment-type="paramref">left</code>.</param>
       <typeparam name="T" />
       <returns>A vector where the corresponding element comes from <code data-dev-comment-type="paramref">left</code> if it is greater than <code data-dev-comment-type="paramref">right</code>; otherwise, <code data-dev-comment-type="paramref">right</code>.</returns>
     </member>
@@ -38708,29 +38708,29 @@
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector256.MinMagnitude``1(System.Runtime.Intrinsics.Vector256{``0},System.Runtime.Intrinsics.Vector256{``0})">
       <summary>Compares two vectors to compute which has the lesser magnitude on a per-element basis.</summary>
-      <param name="left" />
-      <param name="right" />
+      <param name="left">The vector to compare with <code data-dev-comment-type="paramref">right</code>.</param>
+      <param name="right">The vector to compare with <code data-dev-comment-type="paramref">left</code>.</param>
       <typeparam name="T" />
       <returns>A vector where the corresponding element comes from <code data-dev-comment-type="paramref">left</code> if it has a lesser magnitude than <code data-dev-comment-type="paramref">right</code>; otherwise, <code data-dev-comment-type="paramref">right</code>.</returns>
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector256.MinMagnitudeNumber``1(System.Runtime.Intrinsics.Vector256{``0},System.Runtime.Intrinsics.Vector256{``0})">
       <summary>Compares two vectors, on a per-element basis, to compute which has the lesser magnitude and returning the other value if an input is <code data-dev-comment-type="c">NaN</code>.</summary>
-      <param name="left" />
-      <param name="right" />
+      <param name="left">The vector to compare with <code data-dev-comment-type="paramref">right</code>.</param>
+      <param name="right">The vector to compare with <code data-dev-comment-type="paramref">left</code>.</param>
       <typeparam name="T" />
       <returns>A vector where the corresponding element comes from <code data-dev-comment-type="paramref">left</code> if it has a lesser magnitude than <code data-dev-comment-type="paramref">right</code>; otherwise, <code data-dev-comment-type="paramref">right</code>.</returns>
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector256.MinNative``1(System.Runtime.Intrinsics.Vector256{``0},System.Runtime.Intrinsics.Vector256{``0})">
       <summary>Compare two vectors to determine which is lesser on a per-element basis using platform specific behavior for <code data-dev-comment-type="c">NaN</code> and <code data-dev-comment-type="c">NegativeZero</code>.</summary>
-      <param name="left" />
-      <param name="right" />
+      <param name="left">The vector to compare with <code data-dev-comment-type="paramref">right</code>.</param>
+      <param name="right">The vector to compare with <code data-dev-comment-type="paramref">left</code>.</param>
       <typeparam name="T" />
       <returns>A vector where the corresponding element comes from <code data-dev-comment-type="paramref">left</code> if it is lesser than <code data-dev-comment-type="paramref">right</code>; otherwise, <code data-dev-comment-type="paramref">right</code>.</returns>
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector256.MinNumber``1(System.Runtime.Intrinsics.Vector256{``0},System.Runtime.Intrinsics.Vector256{``0})">
       <summary>Compares two vectors, on a per-element basis, to compute which is lesser and returning the other value if an element is <code data-dev-comment-type="c">NaN</code>.</summary>
-      <param name="left" />
-      <param name="right" />
+      <param name="left">The vector to compare with <code data-dev-comment-type="paramref">right</code>.</param>
+      <param name="right">The vector to compare with <code data-dev-comment-type="paramref">left</code>.</param>
       <typeparam name="T" />
       <returns>A vector where the corresponding element comes from <code data-dev-comment-type="paramref">left</code> if it is lesser than <code data-dev-comment-type="paramref">right</code>; otherwise, <code data-dev-comment-type="paramref">right</code>.</returns>
     </member>
@@ -39684,17 +39684,17 @@
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector512.Clamp``1(System.Runtime.Intrinsics.Vector512{``0},System.Runtime.Intrinsics.Vector512{``0},System.Runtime.Intrinsics.Vector512{``0})">
       <summary>Restricts a vector between a minimum and a maximum value.</summary>
-      <param name="value" />
-      <param name="min" />
-      <param name="max" />
+      <param name="value">The vector to restrict.</param>
+      <param name="min">The minimum value.</param>
+      <param name="max">The maximum value.</param>
       <typeparam name="T" />
       <returns>The restricted vector.</returns>
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector512.ClampNative``1(System.Runtime.Intrinsics.Vector512{``0},System.Runtime.Intrinsics.Vector512{``0},System.Runtime.Intrinsics.Vector512{``0})">
       <summary>Restricts a vector between a minimum and a maximum value using platform specific behavior for <code data-dev-comment-type="c">NaN</code> and <code data-dev-comment-type="c">NegativeZero</code>..</summary>
-      <param name="value" />
-      <param name="min" />
-      <param name="max" />
+      <param name="value">The vector to restrict.</param>
+      <param name="min">The minimum value.</param>
+      <param name="max">The maximum value.</param>
       <typeparam name="T" />
       <returns>The restricted vector.</returns>
     </member>
@@ -39769,8 +39769,8 @@
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector512.CopySign``1(System.Runtime.Intrinsics.Vector512{``0},System.Runtime.Intrinsics.Vector512{``0})">
       <summary>Copies the per-element sign of a vector to the per-element sign of another vector.</summary>
-      <param name="value" />
-      <param name="sign" />
+      <param name="value">The vector whose magnitude is used in the result.</param>
+      <param name="sign">The vector whose sign is used in the result.</param>
       <typeparam name="T" />
       <returns>A vector with the magnitude of <code data-dev-comment-type="paramref">value</code> and the sign of <code data-dev-comment-type="paramref">sign</code>.</returns>
     </member>
@@ -40647,31 +40647,31 @@
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector512.IsNaN``1(System.Runtime.Intrinsics.Vector512{``0})">
       <summary>Determines which elements in a vector are NaN.</summary>
-      <param name="vector" />
+      <param name="vector">The vector to be checked.</param>
       <typeparam name="T" />
       <returns>A vector whose elements are all-bits-set or zero, depending on if the corresponding elements in <code data-dev-comment-type="paramref">vector</code> were NaN.</returns>
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector512.IsNegative``1(System.Runtime.Intrinsics.Vector512{``0})">
       <summary>Determines which elements in a vector represents negative real numbers.</summary>
-      <param name="vector" />
+      <param name="vector">The vector to be checked.</param>
       <typeparam name="T" />
       <returns>A vector whose elements are all-bits-set or zero, depending on if the corresponding elements in <code data-dev-comment-type="paramref">vector</code> were negative.</returns>
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector512.IsPositive``1(System.Runtime.Intrinsics.Vector512{``0})">
       <summary>Determines which elements in a vector represents positive real numbers.</summary>
-      <param name="vector" />
+      <param name="vector">The vector to be checked.</param>
       <typeparam name="T" />
       <returns>A vector whose elements are all-bits-set or zero, depending on if the corresponding elements in <code data-dev-comment-type="paramref">vector</code> were positive.</returns>
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector512.IsPositiveInfinity``1(System.Runtime.Intrinsics.Vector512{``0})">
       <summary>Determines which elements in a vector are positive infinity.</summary>
-      <param name="vector" />
+      <param name="vector">The vector to be checked.</param>
       <typeparam name="T" />
       <returns>A vector whose elements are all-bits-set or zero, depending on if the corresponding elements in <code data-dev-comment-type="paramref">vector</code> were positive infinity.</returns>
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector512.IsZero``1(System.Runtime.Intrinsics.Vector512{``0})">
       <summary>Determines which elements in a vector are zero.</summary>
-      <param name="vector" />
+      <param name="vector">The vector to be checked.</param>
       <typeparam name="T" />
       <returns>A vector whose elements are all-bits-set or zero, depending on if the corresponding elements in <code data-dev-comment-type="paramref">vector</code> were zero.</returns>
     </member>
@@ -40807,29 +40807,29 @@
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector512.MaxMagnitude``1(System.Runtime.Intrinsics.Vector512{``0},System.Runtime.Intrinsics.Vector512{``0})">
       <summary>Compares two vectors to compute which has the greater magnitude on a per-element basis.</summary>
-      <param name="left" />
-      <param name="right" />
+      <param name="left">The vector to compare with <code data-dev-comment-type="paramref">right</code>.</param>
+      <param name="right">The vector to compare with <code data-dev-comment-type="paramref">left</code>.</param>
       <typeparam name="T" />
       <returns>A vector where the corresponding element comes from <code data-dev-comment-type="paramref">left</code> if it has a greater magnitude than <code data-dev-comment-type="paramref">right</code>; otherwise, <code data-dev-comment-type="paramref">right</code>.</returns>
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector512.MaxMagnitudeNumber``1(System.Runtime.Intrinsics.Vector512{``0},System.Runtime.Intrinsics.Vector512{``0})">
       <summary>Compares two vectors, on a per-element basis, to compute which has the greater magnitude and returning the other value if an input is <code data-dev-comment-type="c">NaN</code>.</summary>
-      <param name="left" />
-      <param name="right" />
+      <param name="left">The vector to compare with <code data-dev-comment-type="paramref">right</code>.</param>
+      <param name="right">The vector to compare with <code data-dev-comment-type="paramref">left</code>.</param>
       <typeparam name="T" />
       <returns>A vector where the corresponding element comes from <code data-dev-comment-type="paramref">left</code> if it has a greater magnitude than <code data-dev-comment-type="paramref">right</code>; otherwise, <code data-dev-comment-type="paramref">right</code>.</returns>
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector512.MaxNative``1(System.Runtime.Intrinsics.Vector512{``0},System.Runtime.Intrinsics.Vector512{``0})">
       <summary>Compare two vectors to determine which is greater on a per-element basis using platform specific behavior for <code data-dev-comment-type="c">NaN</code> and <code data-dev-comment-type="c">NegativeZero</code>.</summary>
-      <param name="left" />
-      <param name="right" />
+      <param name="left">The vector to compare with <code data-dev-comment-type="paramref">right</code>.</param>
+      <param name="right">The vector to compare with <code data-dev-comment-type="paramref">left</code>.</param>
       <typeparam name="T" />
       <returns>A vector where the corresponding element comes from <code data-dev-comment-type="paramref">left</code> if it is greater than <code data-dev-comment-type="paramref">right</code>; otherwise, <code data-dev-comment-type="paramref">right</code>.</returns>
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector512.MaxNumber``1(System.Runtime.Intrinsics.Vector512{``0},System.Runtime.Intrinsics.Vector512{``0})">
       <summary>Compares two vectors, on a per-element basis, to compute which is greater and returning the other value if an element is <code data-dev-comment-type="c">NaN</code>.</summary>
-      <param name="left" />
-      <param name="right" />
+      <param name="left">The vector to compare with <code data-dev-comment-type="paramref">right</code>.</param>
+      <param name="right">The vector to compare with <code data-dev-comment-type="paramref">left</code>.</param>
       <typeparam name="T" />
       <returns>A vector where the corresponding element comes from <code data-dev-comment-type="paramref">left</code> if it is greater than <code data-dev-comment-type="paramref">right</code>; otherwise, <code data-dev-comment-type="paramref">right</code>.</returns>
     </member>
@@ -40843,29 +40843,29 @@
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector512.MinMagnitude``1(System.Runtime.Intrinsics.Vector512{``0},System.Runtime.Intrinsics.Vector512{``0})">
       <summary>Compares two vectors to compute which has the lesser magnitude on a per-element basis.</summary>
-      <param name="left" />
-      <param name="right" />
+      <param name="left">The vector to compare with <code data-dev-comment-type="paramref">right</code>.</param>
+      <param name="right">The vector to compare with <code data-dev-comment-type="paramref">left</code>.</param>
       <typeparam name="T" />
       <returns>A vector where the corresponding element comes from <code data-dev-comment-type="paramref">left</code> if it has a lesser magnitude than <code data-dev-comment-type="paramref">right</code>; otherwise, <code data-dev-comment-type="paramref">right</code>.</returns>
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector512.MinMagnitudeNumber``1(System.Runtime.Intrinsics.Vector512{``0},System.Runtime.Intrinsics.Vector512{``0})">
       <summary>Compares two vectors, on a per-element basis, to compute which has the lesser magnitude and returning the other value if an input is <code data-dev-comment-type="c">NaN</code>.</summary>
-      <param name="left" />
-      <param name="right" />
+      <param name="left">The vector to compare with <code data-dev-comment-type="paramref">right</code>.</param>
+      <param name="right">The vector to compare with <code data-dev-comment-type="paramref">left</code>.</param>
       <typeparam name="T" />
       <returns>A vector where the corresponding element comes from <code data-dev-comment-type="paramref">left</code> if it has a lesser magnitude than <code data-dev-comment-type="paramref">right</code>; otherwise, <code data-dev-comment-type="paramref">right</code>.</returns>
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector512.MinNative``1(System.Runtime.Intrinsics.Vector512{``0},System.Runtime.Intrinsics.Vector512{``0})">
       <summary>Compare two vectors to determine which is lesser on a per-element basis using platform specific behavior for <code data-dev-comment-type="c">NaN</code> and <code data-dev-comment-type="c">NegativeZero</code>.</summary>
-      <param name="left" />
-      <param name="right" />
+      <param name="left">The vector to compare with <code data-dev-comment-type="paramref">right</code>.</param>
+      <param name="right">The vector to compare with <code data-dev-comment-type="paramref">left</code>.</param>
       <typeparam name="T" />
       <returns>A vector where the corresponding element comes from <code data-dev-comment-type="paramref">left</code> if it is lesser than <code data-dev-comment-type="paramref">right</code>; otherwise, <code data-dev-comment-type="paramref">right</code>.</returns>
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector512.MinNumber``1(System.Runtime.Intrinsics.Vector512{``0},System.Runtime.Intrinsics.Vector512{``0})">
       <summary>Compares two vectors, on a per-element basis, to compute which is lesser and returning the other value if an element is <code data-dev-comment-type="c">NaN</code>.</summary>
-      <param name="left" />
-      <param name="right" />
+      <param name="left">The vector to compare with <code data-dev-comment-type="paramref">right</code>.</param>
+      <param name="right">The vector to compare with <code data-dev-comment-type="paramref">left</code>.</param>
       <typeparam name="T" />
       <returns>A vector where the corresponding element comes from <code data-dev-comment-type="paramref">left</code> if it is lesser than <code data-dev-comment-type="paramref">right</code>; otherwise, <code data-dev-comment-type="paramref">right</code>.</returns>
     </member>
@@ -41790,17 +41790,17 @@
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector64.Clamp``1(System.Runtime.Intrinsics.Vector64{``0},System.Runtime.Intrinsics.Vector64{``0},System.Runtime.Intrinsics.Vector64{``0})">
       <summary>Restricts a vector between a minimum and a maximum value.</summary>
-      <param name="value" />
-      <param name="min" />
-      <param name="max" />
+      <param name="value">The vector to restrict.</param>
+      <param name="min">The minimum value.</param>
+      <param name="max">The maximum value.</param>
       <typeparam name="T" />
       <returns>The restricted vector.</returns>
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector64.ClampNative``1(System.Runtime.Intrinsics.Vector64{``0},System.Runtime.Intrinsics.Vector64{``0},System.Runtime.Intrinsics.Vector64{``0})">
       <summary>Restricts a vector between a minimum and a maximum value using platform specific behavior for <code data-dev-comment-type="c">NaN</code> and <code data-dev-comment-type="c">NegativeZero</code>..</summary>
-      <param name="value" />
-      <param name="min" />
-      <param name="max" />
+      <param name="value">The vector to restrict.</param>
+      <param name="min">The minimum value.</param>
+      <param name="max">The maximum value.</param>
       <typeparam name="T" />
       <returns>The restricted vector.</returns>
     </member>
@@ -41875,8 +41875,8 @@
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector64.CopySign``1(System.Runtime.Intrinsics.Vector64{``0},System.Runtime.Intrinsics.Vector64{``0})">
       <summary>Copies the per-element sign of a vector to the per-element sign of another vector.</summary>
-      <param name="value" />
-      <param name="sign" />
+      <param name="value">The vector whose magnitude is used in the result.</param>
+      <param name="sign">The vector whose sign is used in the result.</param>
       <typeparam name="T" />
       <returns>A vector with the magnitude of <code data-dev-comment-type="paramref">value</code> and the sign of <code data-dev-comment-type="paramref">sign</code>.</returns>
     </member>
@@ -42391,31 +42391,31 @@
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector64.IsNaN``1(System.Runtime.Intrinsics.Vector64{``0})">
       <summary>Determines which elements in a vector are NaN.</summary>
-      <param name="vector" />
+      <param name="vector">The vector to be checked.</param>
       <typeparam name="T" />
       <returns>A vector whose elements are all-bits-set or zero, depending on if the corresponding elements in <code data-dev-comment-type="paramref">vector</code> were NaN.</returns>
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector64.IsNegative``1(System.Runtime.Intrinsics.Vector64{``0})">
       <summary>Determines which elements in a vector represents negative real numbers.</summary>
-      <param name="vector" />
+      <param name="vector">The vector to be checked.</param>
       <typeparam name="T" />
       <returns>A vector whose elements are all-bits-set or zero, depending on if the corresponding elements in <code data-dev-comment-type="paramref">vector</code> were negative.</returns>
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector64.IsPositive``1(System.Runtime.Intrinsics.Vector64{``0})">
       <summary>Determines which elements in a vector represents positive real numbers.</summary>
-      <param name="vector" />
+      <param name="vector">The vector to be checked.</param>
       <typeparam name="T" />
       <returns>A vector whose elements are all-bits-set or zero, depending on if the corresponding elements in <code data-dev-comment-type="paramref">vector</code> were positive.</returns>
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector64.IsPositiveInfinity``1(System.Runtime.Intrinsics.Vector64{``0})">
       <summary>Determines which elements in a vector are positive infinity.</summary>
-      <param name="vector" />
+      <param name="vector">The vector to be checked.</param>
       <typeparam name="T" />
       <returns>A vector whose elements are all-bits-set or zero, depending on if the corresponding elements in <code data-dev-comment-type="paramref">vector</code> were positive infinity.</returns>
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector64.IsZero``1(System.Runtime.Intrinsics.Vector64{``0})">
       <summary>Determines which elements in a vector are zero.</summary>
-      <param name="vector" />
+      <param name="vector">The vector to be checked.</param>
       <typeparam name="T" />
       <returns>A vector whose elements are all-bits-set or zero, depending on if the corresponding elements in <code data-dev-comment-type="paramref">vector</code> were zero.</returns>
     </member>
@@ -42551,29 +42551,29 @@
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector64.MaxMagnitude``1(System.Runtime.Intrinsics.Vector64{``0},System.Runtime.Intrinsics.Vector64{``0})">
       <summary>Compares two vectors to compute which has the greater magnitude on a per-element basis.</summary>
-      <param name="left" />
-      <param name="right" />
+      <param name="left">The vector to compare with <code data-dev-comment-type="paramref">right</code>.</param>
+      <param name="right">The vector to compare with <code data-dev-comment-type="paramref">left</code>.</param>
       <typeparam name="T" />
       <returns>A vector where the corresponding element comes from <code data-dev-comment-type="paramref">left</code> if it has a greater magnitude than <code data-dev-comment-type="paramref">right</code>; otherwise, <code data-dev-comment-type="paramref">right</code>.</returns>
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector64.MaxMagnitudeNumber``1(System.Runtime.Intrinsics.Vector64{``0},System.Runtime.Intrinsics.Vector64{``0})">
       <summary>Compares two vectors, on a per-element basis, to compute which has the greater magnitude and returning the other value if an input is <code data-dev-comment-type="c">NaN</code>.</summary>
-      <param name="left" />
-      <param name="right" />
+      <param name="left">The vector to compare with <code data-dev-comment-type="paramref">right</code>.</param>
+      <param name="right">The vector to compare with <code data-dev-comment-type="paramref">left</code>.</param>
       <typeparam name="T" />
       <returns>A vector where the corresponding element comes from <code data-dev-comment-type="paramref">left</code> if it has a greater magnitude than <code data-dev-comment-type="paramref">right</code>; otherwise, <code data-dev-comment-type="paramref">right</code>.</returns>
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector64.MaxNative``1(System.Runtime.Intrinsics.Vector64{``0},System.Runtime.Intrinsics.Vector64{``0})">
       <summary>Compare two vectors to determine which is greater on a per-element basis using platform specific behavior for <code data-dev-comment-type="c">NaN</code> and <code data-dev-comment-type="c">NegativeZero</code>.</summary>
-      <param name="left" />
-      <param name="right" />
+      <param name="left">The vector to compare with <code data-dev-comment-type="paramref">right</code>.</param>
+      <param name="right">The vector to compare with <code data-dev-comment-type="paramref">left</code>.</param>
       <typeparam name="T" />
       <returns>A vector where the corresponding element comes from <code data-dev-comment-type="paramref">left</code> if it is greater than <code data-dev-comment-type="paramref">right</code>; otherwise, <code data-dev-comment-type="paramref">right</code>.</returns>
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector64.MaxNumber``1(System.Runtime.Intrinsics.Vector64{``0},System.Runtime.Intrinsics.Vector64{``0})">
       <summary>Compares two vectors, on a per-element basis, to compute which is greater and returning the other value if an element is <code data-dev-comment-type="c">NaN</code>.</summary>
-      <param name="left" />
-      <param name="right" />
+      <param name="left">The vector to compare with <code data-dev-comment-type="paramref">right</code>.</param>
+      <param name="right">The vector to compare with <code data-dev-comment-type="paramref">left</code>.</param>
       <typeparam name="T" />
       <returns>A vector where the corresponding element comes from <code data-dev-comment-type="paramref">left</code> if it is greater than <code data-dev-comment-type="paramref">right</code>; otherwise, <code data-dev-comment-type="paramref">right</code>.</returns>
     </member>
@@ -42587,29 +42587,29 @@
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector64.MinMagnitude``1(System.Runtime.Intrinsics.Vector64{``0},System.Runtime.Intrinsics.Vector64{``0})">
       <summary>Compares two vectors to compute which has the lesser magnitude on a per-element basis.</summary>
-      <param name="left" />
-      <param name="right" />
+      <param name="left">The vector to compare with <code data-dev-comment-type="paramref">right</code>.</param>
+      <param name="right">The vector to compare with <code data-dev-comment-type="paramref">left</code>.</param>
       <typeparam name="T" />
       <returns>A vector where the corresponding element comes from <code data-dev-comment-type="paramref">left</code> if it has a lesser magnitude than <code data-dev-comment-type="paramref">right</code>; otherwise, <code data-dev-comment-type="paramref">right</code>.</returns>
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector64.MinMagnitudeNumber``1(System.Runtime.Intrinsics.Vector64{``0},System.Runtime.Intrinsics.Vector64{``0})">
       <summary>Compares two vectors, on a per-element basis, to compute which has the lesser magnitude and returning the other value if an input is <code data-dev-comment-type="c">NaN</code>.</summary>
-      <param name="left" />
-      <param name="right" />
+      <param name="left">The vector to compare with <code data-dev-comment-type="paramref">right</code>.</param>
+      <param name="right">The vector to compare with <code data-dev-comment-type="paramref">left</code>.</param>
       <typeparam name="T" />
       <returns>A vector where the corresponding element comes from <code data-dev-comment-type="paramref">left</code> if it has a lesser magnitude than <code data-dev-comment-type="paramref">right</code>; otherwise, <code data-dev-comment-type="paramref">right</code>.</returns>
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector64.MinNative``1(System.Runtime.Intrinsics.Vector64{``0},System.Runtime.Intrinsics.Vector64{``0})">
       <summary>Compare two vectors to determine which is lesser on a per-element basis using platform specific behavior for <code data-dev-comment-type="c">NaN</code> and <code data-dev-comment-type="c">NegativeZero</code>.</summary>
-      <param name="left" />
-      <param name="right" />
+      <param name="left">The vector to compare with <code data-dev-comment-type="paramref">right</code>.</param>
+      <param name="right">The vector to compare with <code data-dev-comment-type="paramref">left</code>.</param>
       <typeparam name="T" />
       <returns>A vector where the corresponding element comes from <code data-dev-comment-type="paramref">left</code> if it is lesser than <code data-dev-comment-type="paramref">right</code>; otherwise, <code data-dev-comment-type="paramref">right</code>.</returns>
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector64.MinNumber``1(System.Runtime.Intrinsics.Vector64{``0},System.Runtime.Intrinsics.Vector64{``0})">
       <summary>Compares two vectors, on a per-element basis, to compute which is lesser and returning the other value if an element is <code data-dev-comment-type="c">NaN</code>.</summary>
-      <param name="left" />
-      <param name="right" />
+      <param name="left">The vector to compare with <code data-dev-comment-type="paramref">right</code>.</param>
+      <param name="right">The vector to compare with <code data-dev-comment-type="paramref">left</code>.</param>
       <typeparam name="T" />
       <returns>A vector where the corresponding element comes from <code data-dev-comment-type="paramref">left</code> if it is lesser than <code data-dev-comment-type="paramref">right</code>; otherwise, <code data-dev-comment-type="paramref">right</code>.</returns>
     </member>
