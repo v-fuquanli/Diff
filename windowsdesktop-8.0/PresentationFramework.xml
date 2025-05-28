@@ -39390,10 +39390,10 @@ The invalidations happen when an implicit data template resource changes.</summa
       <param name="useTransitions">
         <see langword="true" /> to use a <see cref="T:System.Windows.VisualTransition" /> object to transition between states; otherwise, <see langword="false" />.</param>
       <exception cref="T:System.ArgumentNullException">
-        <paramref name="stateGroupsRoot" /> is <see langword="null" />.  
-  
- -or-  
-  
+        <paramref name="stateGroupsRoot" /> is <see langword="null" />.
+
+ -or-
+
  <paramref name="stateName" /> is <see langword="null" />.</exception>
       <returns>
         <see langword="true" /> if the control successfully transitioned to the new state; otherwise, <see langword="false" />.</returns>
@@ -39405,10 +39405,10 @@ The invalidations happen when an implicit data template resource changes.</summa
       <param name="useTransitions">
         <see langword="true" /> to use a <see cref="T:System.Windows.VisualTransition" /> object to transition between states; otherwise, <see langword="false" />.</param>
       <exception cref="T:System.ArgumentNullException">
-        <paramref name="control" /> is <see langword="null" />.  
-  
- -or-  
-  
+        <paramref name="control" /> is <see langword="null" />.
+
+ -or-
+
  <paramref name="stateName" /> is <see langword="null" />.</exception>
       <returns>
         <see langword="true" /> if the control successfully transitioned to the new state; otherwise, <see langword="false" />.</returns>
@@ -39433,10 +39433,10 @@ The invalidations happen when an implicit data template resource changes.</summa
       <param name="control">The control that is transitioning states.</param>
       <param name="stateGroupsRoot">The root element that contains the <see cref="T:System.Windows.VisualStateManager" />.</param>
       <exception cref="T:System.ArgumentNullException">
-        <paramref name="stateGroupsRoot" /> is <see langword="null" />.  
-  
- -or-  
-  
+        <paramref name="stateGroupsRoot" /> is <see langword="null" />.
+
+ -or-
+
  <paramref name="newState" /> is <see langword="null" />.</exception>
     </member>
     <member name="M:System.Windows.VisualStateManager.RaiseCurrentStateChanging(System.Windows.VisualStateGroup,System.Windows.VisualState,System.Windows.VisualState,System.Windows.FrameworkElement,System.Windows.FrameworkElement)">
@@ -39447,10 +39447,10 @@ The invalidations happen when an implicit data template resource changes.</summa
       <param name="control">The control that is transitioning states.</param>
       <param name="stateGroupsRoot">The root element that contains the <see cref="T:System.Windows.VisualStateManager" />.</param>
       <exception cref="T:System.ArgumentNullException">
-        <paramref name="stateGroupsRoot" /> is <see langword="null" />.  
-  
- -or-  
-  
+        <paramref name="stateGroupsRoot" /> is <see langword="null" />.
+
+ -or-
+
  <paramref name="newState" /> is <see langword="null" />.</exception>
     </member>
     <member name="M:System.Windows.VisualStateManager.SetCustomVisualStateManager(System.Windows.FrameworkElement,System.Windows.VisualStateManager)">

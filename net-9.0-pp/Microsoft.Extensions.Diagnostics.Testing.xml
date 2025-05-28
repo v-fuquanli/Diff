@@ -387,11 +387,11 @@
     </member>
     <member name="M:Microsoft.Extensions.Logging.Testing.FakeLoggerProvider.Dispose">
       <summary>
-            Clean up resources held by this object.</summary>
+            Cleans up resources held by this object.</summary>
     </member>
     <member name="M:Microsoft.Extensions.Logging.Testing.FakeLoggerProvider.Dispose(System.Boolean)">
       <summary>
-            Clean up resources held by this object.</summary>
+            Cleans up resources held by this object.</summary>
       <param name="disposing">
         <see langword="true" /> when called from the <see cref="M:Microsoft.Extensions.Logging.Testing.FakeLoggerProvider.Dispose" /> method, <see langword="false" /> when called from a finalizer.</param>
     </member>
@@ -422,7 +422,7 @@
       <summary>
             Initializes a new instance of the <see cref="T:Microsoft.Extensions.Logging.Testing.FakeLogRecord" /> class.</summary>
       <param name="level">The level used when producing the log record.</param>
-      <param name="id">The id representing the specific log statement.</param>
+      <param name="id">The ID representing the specific log statement.</param>
       <param name="state">The opaque state supplied by the caller when creating the log record.</param>
       <param name="exception">An optional exception associated with the log record.</param>
       <param name="message">The formatted message text for the record.</param>
@@ -454,7 +454,7 @@
     </member>
     <member name="P:Microsoft.Extensions.Logging.Testing.FakeLogRecord.Id">
       <summary>
-            Gets the id representing the specific log statement.</summary>
+            Gets the ID representing the specific log statement.</summary>
     </member>
     <member name="P:Microsoft.Extensions.Logging.Testing.FakeLogRecord.Level">
       <summary>
