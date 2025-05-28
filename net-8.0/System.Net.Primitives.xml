@@ -438,7 +438,8 @@
     </member>
     <member name="P:System.Net.CookieContainer.Capacity">
       <summary>Gets or sets the number of <see cref="T:System.Net.Cookie" /> instances that a <see cref="T:System.Net.CookieContainer" /> can hold.</summary>
-      <exception cref="T:System.ArgumentOutOfRangeException">The capacity to set is less than or equal to zero or (value is less than <see cref="P:System.Net.CookieContainer.PerDomainCapacity" /> and <see cref="P:System.Net.CookieContainer.PerDomainCapacity" /> is not equal to <see cref="F:System.Int32.MaxValue">Int32.MaxValue</see>).</exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+          The capacity to set is less than or equal to zero or (value is less than <see cref="P:System.Net.CookieContainer.PerDomainCapacity" /> and <see cref="P:System.Net.CookieContainer.PerDomainCapacity" /> is not equal to <see cref="F:System.Int32.MaxValue">Int32.MaxValue</see>).</exception>
       <returns>The number of <see cref="T:System.Net.Cookie" /> instances that a <see cref="T:System.Net.CookieContainer" /> can hold. This is a hard limit and cannot be exceeded by adding a <see cref="T:System.Net.Cookie" />.</returns>
     </member>
     <member name="P:System.Net.CookieContainer.Count">
@@ -447,12 +448,14 @@
     </member>
     <member name="P:System.Net.CookieContainer.MaxCookieSize">
       <summary>Represents the maximum allowed length of a <see cref="T:System.Net.Cookie" />.</summary>
-      <exception cref="T:System.ArgumentOutOfRangeException">The size to set is less than or equal to zero.</exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+          The size to set is less than or equal to zero.</exception>
       <returns>The maximum allowed length, in bytes, of a <see cref="T:System.Net.Cookie" />.</returns>
     </member>
     <member name="P:System.Net.CookieContainer.PerDomainCapacity">
       <summary>Gets or sets the number of <see cref="T:System.Net.Cookie" /> instances that a <see cref="T:System.Net.CookieContainer" /> can hold per domain.</summary>
-      <exception cref="T:System.ArgumentOutOfRangeException">The value to set is less than or equal to zero.
+      <exception cref="T:System.ArgumentOutOfRangeException">
+          The value to set is less than or equal to zero.
 
  -or-
 

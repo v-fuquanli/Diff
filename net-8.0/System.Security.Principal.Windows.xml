@@ -319,7 +319,7 @@
       <param name="sid">The object to compare with the current object.</param>
       <returns>A signed number indicating the relative values of this instance and <paramref name="sid" />.  
   
- <list type="table"><listheader><term>Return Value</term><description>Description</description></listheader><item><term>Less than zero</term><description>This instance is less than <paramref name="sid" />.</description></item><item><term>Zero</term><description>This instance is equal to <paramref name="sid" />.</description></item><item><term>Greater than zero</term><description>This instance is greater than <paramref name="sid" />.</description></item></list></returns>
+ <list type="table"><listheader><term> Return Value</term><description> Description</description></listheader><item><term> Less than zero</term><description> This instance is less than <paramref name="sid" />.</description></item><item><term> Zero</term><description> This instance is equal to <paramref name="sid" />.</description></item><item><term> Greater than zero</term><description> This instance is greater than <paramref name="sid" />.</description></item></list></returns>
     </member>
     <member name="M:System.Security.Principal.SecurityIdentifier.Equals(System.Object)">
       <summary>Returns a value that indicates whether this <see cref="T:System.Security.Principal.SecurityIdentifier" /> object is equal to a specified object.</summary>

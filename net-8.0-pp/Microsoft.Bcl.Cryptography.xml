@@ -351,36 +351,44 @@
     <member name="P:System.Security.Cryptography.SlhDsaAlgorithm.SlhDsaShake256f" />
     <member name="P:System.Security.Cryptography.SlhDsaAlgorithm.SlhDsaShake256s" />
     <member name="T:System.Security.Cryptography.X509Certificates.Pkcs12LoaderLimits">
-      <summary>Represents a set of constraints to apply when loading PKCS#12/PFX contents.</summary>
+      <summary>
+              Represents a set of constraints to apply when loading PKCS#12/PFX contents.</summary>
     </member>
     <member name="M:System.Security.Cryptography.X509Certificates.Pkcs12LoaderLimits.#ctor">
-      <summary>Initializes a new instance of the <see cref="T:System.Security.Cryptography.X509Certificates.Pkcs12LoaderLimits" /> class
+      <summary>
+              Initializes a new instance of the <see cref="T:System.Security.Cryptography.X509Certificates.Pkcs12LoaderLimits" /> class
               with default values.</summary>
     </member>
     <member name="M:System.Security.Cryptography.X509Certificates.Pkcs12LoaderLimits.#ctor(System.Security.Cryptography.X509Certificates.Pkcs12LoaderLimits)">
-      <summary>Initializes a new instance of the <see cref="T:System.Security.Cryptography.X509Certificates.Pkcs12LoaderLimits" /> class
+      <summary>
+              Initializes a new instance of the <see cref="T:System.Security.Cryptography.X509Certificates.Pkcs12LoaderLimits" /> class
               by copying the values from another instance.</summary>
       <param name="copyFrom">The instance to copy the values from.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="copyFrom" /> is <see langword="null" />.</exception>
     </member>
     <member name="M:System.Security.Cryptography.X509Certificates.Pkcs12LoaderLimits.MakeReadOnly">
-      <summary>Makes the <see cref="T:System.Security.Cryptography.X509Certificates.Pkcs12LoaderLimits" /> instance read-only.</summary>
+      <summary>
+              Makes the <see cref="T:System.Security.Cryptography.X509Certificates.Pkcs12LoaderLimits" /> instance read-only.</summary>
     </member>
     <member name="P:System.Security.Cryptography.X509Certificates.Pkcs12LoaderLimits.DangerousNoLimits">
-      <summary>Gets a shared reference to loader limits that indicate no
+      <summary>
+              Gets a shared reference to loader limits that indicate no
               filtering or restrictions of the contents should be applied
               before sending them to the underlying system loader.</summary>
-      <returns>A shared reference to loader limits that indicate no
+      <returns>
+              A shared reference to loader limits that indicate no
               filtering or restrictions of the contents should be applied
               before sending them to the underlying system loader.</returns>
     </member>
     <member name="P:System.Security.Cryptography.X509Certificates.Pkcs12LoaderLimits.Defaults">
-      <summary>Gets a shared reference to the default loader limits.</summary>
+      <summary>
+              Gets a shared reference to the default loader limits.</summary>
       <returns>A shared reference to the default loader limits.</returns>
     </member>
     <member name="P:System.Security.Cryptography.X509Certificates.Pkcs12LoaderLimits.IgnoreEncryptedAuthSafes">
-      <summary>Gets or sets a value indicating whether to ignore encrypted authentication safes.</summary>
+      <summary>
+              Gets or sets a value indicating whether to ignore encrypted authentication safes.</summary>
       <returns>
         <see langword="true" /> to skip over encrypted PFX AuthSafe values;
               <see langword="false" /> to decrypt encrypted PFX AuthSafe values to process their
@@ -388,36 +396,46 @@
               The default is <see langword="false" />.</returns>
     </member>
     <member name="P:System.Security.Cryptography.X509Certificates.Pkcs12LoaderLimits.IgnorePrivateKeys">
-      <summary>Gets or sets a value indicating whether to ignore private keys.</summary>
+      <summary>
+              Gets or sets a value indicating whether to ignore private keys.</summary>
       <returns>
         <see langword="true" /> to skip loading private keys;
               <see langword="false" /> to load both certificates and private keys.
               The default is <see langword="false" />.</returns>
     </member>
     <member name="P:System.Security.Cryptography.X509Certificates.Pkcs12LoaderLimits.IndividualKdfIterationLimit">
-      <summary>Gets or sets the iteration limit for the individual Key Derivation Function (KDF) calculations.</summary>
-      <returns>The iteration limit for the individual Key Derivation Function (KDF) calculations,
+      <summary>
+              Gets or sets the iteration limit for the individual Key Derivation Function (KDF) calculations.</summary>
+      <returns>
+              The iteration limit for the individual Key Derivation Function (KDF) calculations,
               or <see langword="null" /> for no limit.</returns>
     </member>
     <member name="P:System.Security.Cryptography.X509Certificates.Pkcs12LoaderLimits.IsReadOnly">
-      <summary>Gets a value indicating whether the instance is read-only.</summary>
+      <summary>
+              Gets a value indicating whether the instance is read-only.</summary>
       <returns>
         <see langword="true" /> if the instance is read-only; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="P:System.Security.Cryptography.X509Certificates.Pkcs12LoaderLimits.MacIterationLimit">
-      <summary>Gets or sets the iteration limit for the MAC calculation.</summary>
+      <summary>
+              Gets or sets the iteration limit for the MAC calculation.</summary>
       <returns>The iteration limit for the MAC calculation, or <see langword="null" /> for no limit.</returns>
     </member>
     <member name="P:System.Security.Cryptography.X509Certificates.Pkcs12LoaderLimits.MaxCertificates">
-      <summary>Gets or sets the maximum number of certificates permitted.</summary>
-      <returns>The maximum number of certificates permitted, or <see langword="null" /> for no maximum.</returns>
+      <summary>
+              Gets or sets the maximum number of certificates permitted.</summary>
+      <returns>
+              The maximum number of certificates permitted, or <see langword="null" /> for no maximum.</returns>
     </member>
     <member name="P:System.Security.Cryptography.X509Certificates.Pkcs12LoaderLimits.MaxKeys">
-      <summary>Gets or sets the maximum number of keys permitted.</summary>
-      <returns>The maximum number of keys permitted, or <see langword="null" /> for no maximum.</returns>
+      <summary>
+              Gets or sets the maximum number of keys permitted.</summary>
+      <returns>
+              The maximum number of keys permitted, or <see langword="null" /> for no maximum.</returns>
     </member>
     <member name="P:System.Security.Cryptography.X509Certificates.Pkcs12LoaderLimits.PreserveCertificateAlias">
-      <summary>Gets or sets a value indicating whether to preserve the certificate alias,
+      <summary>
+              Gets or sets a value indicating whether to preserve the certificate alias,
               also known as the friendly name.</summary>
       <returns>
         <see langword="true" /> to respect the alias for a
@@ -426,7 +444,8 @@
               The default is <see langword="false" />.</returns>
     </member>
     <member name="P:System.Security.Cryptography.X509Certificates.Pkcs12LoaderLimits.PreserveKeyName">
-      <summary>Gets or sets a value indicating whether to preserve the key name.</summary>
+      <summary>
+              Gets or sets a value indicating whether to preserve the key name.</summary>
       <returns>
         <see langword="true" /> to respect the key name identifier for a
               private key; <see langword="false" /> to ignore the key name
@@ -434,7 +453,8 @@
               The default is <see langword="false" />.</returns>
     </member>
     <member name="P:System.Security.Cryptography.X509Certificates.Pkcs12LoaderLimits.PreserveStorageProvider">
-      <summary>Gets or sets a value indicating whether to preserve the storage provider.</summary>
+      <summary>
+              Gets or sets a value indicating whether to preserve the storage provider.</summary>
       <returns>
         <see langword="true" /> to respect the storage provider identifier for a
               private key; <see langword="false" /> to ignore the storage provider
@@ -442,7 +462,8 @@
               The default is <see langword="false" />.</returns>
     </member>
     <member name="P:System.Security.Cryptography.X509Certificates.Pkcs12LoaderLimits.PreserveUnknownAttributes">
-      <summary>Gets or sets a value indicating whether to preserve unknown attributes.</summary>
+      <summary>
+              Gets or sets a value indicating whether to preserve unknown attributes.</summary>
       <returns>
         <see langword="true" /> to keep any attributes of a certificate or
               private key that are not described by another property on this type intact
@@ -452,55 +473,73 @@
               The default is <see langword="false" />.</returns>
     </member>
     <member name="P:System.Security.Cryptography.X509Certificates.Pkcs12LoaderLimits.TotalKdfIterationLimit">
-      <summary>Gets or sets the total iteration limit for the Key Derivation Function (KDF) calculations.</summary>
-      <returns>The total iteration limit for the Key Derivation Function (KDF) calculations,
+      <summary>
+              Gets or sets the total iteration limit for the Key Derivation Function (KDF) calculations.</summary>
+      <returns>
+              The total iteration limit for the Key Derivation Function (KDF) calculations,
               or <see langword="null" /> for no limit.</returns>
     </member>
     <member name="T:System.Security.Cryptography.X509Certificates.Pkcs12LoadLimitExceededException">
-      <summary>The exception that is thrown when importing a PKCS#12/PFX has failed
+      <summary>
+              The exception that is thrown when importing a PKCS#12/PFX has failed
               due to violating a specified limit.</summary>
     </member>
     <member name="M:System.Security.Cryptography.X509Certificates.Pkcs12LoadLimitExceededException.#ctor(System.String)">
-      <summary>Initializes a new instance of the <see cref="T:System.Security.Cryptography.X509Certificates.Pkcs12LoadLimitExceededException" />
+      <summary>
+              Initializes a new instance of the <see cref="T:System.Security.Cryptography.X509Certificates.Pkcs12LoadLimitExceededException" />
               class.</summary>
-      <param name="propertyName">The name of the property representing the limit that was exceeded.</param>
+      <param name="propertyName">
+              The name of the property representing the limit that was exceeded.</param>
     </member>
     <member name="T:System.Security.Cryptography.X509Certificates.X509CertificateLoader">
       <summary>Provides methods for loading an X.509 certificate or a PKCS#12 PFX that contains certificates.</summary>
     </member>
     <member name="M:System.Security.Cryptography.X509Certificates.X509CertificateLoader.LoadCertificate(System.Byte[])">
-      <summary>Loads a single X.509 certificate from <paramref name="data" />, in either the PEM
+      <summary>
+              Loads a single X.509 certificate from <paramref name="data" />, in either the PEM
               or DER encoding.</summary>
       <param name="data">The data to load.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="data" /> is <see langword="null" />.</exception>
-      <exception cref="T:System.Security.Cryptography.CryptographicException">The data did not load as a valid X.509 certificate.</exception>
-      <returns>The certificate loaded from <paramref name="data" />.</returns>
+      <exception cref="T:System.Security.Cryptography.CryptographicException">
+              The data did not load as a valid X.509 certificate.</exception>
+      <returns>
+              The certificate loaded from <paramref name="data" />.</returns>
     </member>
     <member name="M:System.Security.Cryptography.X509Certificates.X509CertificateLoader.LoadCertificate(System.ReadOnlySpan{System.Byte})">
-      <summary>Loads a single X.509 certificate from <paramref name="data" />, in either the PEM
+      <summary>
+              Loads a single X.509 certificate from <paramref name="data" />, in either the PEM
               or DER encoding.</summary>
       <param name="data">The data to load.</param>
-      <exception cref="T:System.Security.Cryptography.CryptographicException">The data did not load as a valid X.509 certificate.</exception>
-      <returns>The certificate loaded from <paramref name="data" />.</returns>
+      <exception cref="T:System.Security.Cryptography.CryptographicException">
+              The data did not load as a valid X.509 certificate.</exception>
+      <returns>
+              The certificate loaded from <paramref name="data" />.</returns>
     </member>
     <member name="M:System.Security.Cryptography.X509Certificates.X509CertificateLoader.LoadCertificateFromFile(System.String)">
-      <summary>Loads a single X.509 certificate (in either the PEM or DER encoding)
+      <summary>
+              Loads a single X.509 certificate (in either the PEM or DER encoding)
               from the specified file.</summary>
       <param name="path">The path of the file to open.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="path" /> is <see langword="null" />.</exception>
-      <exception cref="T:System.Security.Cryptography.CryptographicException">The data did not load as a valid X.509 certificate.</exception>
-      <exception cref="T:System.IO.IOException">An error occurred while loading the specified file.</exception>
-      <returns>The loaded certificate.</returns>
+      <exception cref="T:System.Security.Cryptography.CryptographicException">
+              The data did not load as a valid X.509 certificate.</exception>
+      <exception cref="T:System.IO.IOException">
+              An error occurred while loading the specified file.</exception>
+      <returns>
+              The loaded certificate.</returns>
     </member>
     <member name="M:System.Security.Cryptography.X509Certificates.X509CertificateLoader.LoadPkcs12(System.Byte[],System.String,System.Security.Cryptography.X509Certificates.X509KeyStorageFlags,System.Security.Cryptography.X509Certificates.Pkcs12LoaderLimits)">
-      <summary>Loads the provided data as a PKCS#12 PFX and extracts a certificate.</summary>
+      <summary>
+              Loads the provided data as a PKCS#12 PFX and extracts a certificate.</summary>
       <param name="data">The data to load.</param>
       <param name="password">The password to decrypt the contents of the PFX.</param>
-      <param name="keyStorageFlags">A bitwise combination of the enumeration values that control where and how to
+      <param name="keyStorageFlags">
+              A bitwise combination of the enumeration values that control where and how to
               import the private key associated with the returned certificate.</param>
-      <param name="loaderLimits">Limits to apply when loading the PFX.  A <see langword="null" /> value, the default,
+      <param name="loaderLimits">
+              Limits to apply when loading the PFX.  A <see langword="null" /> value, the default,
               is equivalent to <see cref="P:System.Security.Cryptography.X509Certificates.Pkcs12LoaderLimits.Defaults" />.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="data" /> is <see langword="null" />.</exception>
@@ -510,17 +549,22 @@
       <exception cref="T:System.PlatformNotSupportedException">
         <paramref name="keyStorageFlags" /> contains a value that is not valid for the
               current platform.</exception>
-      <exception cref="T:System.Security.Cryptography.X509Certificates.Pkcs12LoadLimitExceededException">The PKCS#12/PFX violated one or more constraints of <paramref name="loaderLimits" />.</exception>
-      <exception cref="T:System.Security.Cryptography.CryptographicException">An error occurred while loading the PKCS#12/PFX.</exception>
+      <exception cref="T:System.Security.Cryptography.X509Certificates.Pkcs12LoadLimitExceededException">
+              The PKCS#12/PFX violated one or more constraints of <paramref name="loaderLimits" />.</exception>
+      <exception cref="T:System.Security.Cryptography.CryptographicException">
+              An error occurred while loading the PKCS#12/PFX.</exception>
       <returns>The loaded certificate.</returns>
     </member>
     <member name="M:System.Security.Cryptography.X509Certificates.X509CertificateLoader.LoadPkcs12(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Char},System.Security.Cryptography.X509Certificates.X509KeyStorageFlags,System.Security.Cryptography.X509Certificates.Pkcs12LoaderLimits)">
-      <summary>Loads the provided data as a PKCS#12 PFX and extracts a certificate.</summary>
+      <summary>
+              Loads the provided data as a PKCS#12 PFX and extracts a certificate.</summary>
       <param name="data">The data to load.</param>
       <param name="password">The password to decrypt the contents of the PFX.</param>
-      <param name="keyStorageFlags">A bitwise combination of the enumeration values that control where and how to
+      <param name="keyStorageFlags">
+              A bitwise combination of the enumeration values that control where and how to
               import the private key associated with the returned certificate.</param>
-      <param name="loaderLimits">Limits to apply when loading the PFX.  A <see langword="null" /> value, the default,
+      <param name="loaderLimits">
+              Limits to apply when loading the PFX.  A <see langword="null" /> value, the default,
               is equivalent to <see cref="P:System.Security.Cryptography.X509Certificates.Pkcs12LoaderLimits.Defaults" />.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="data" /> is <see langword="null" />.</exception>
@@ -530,18 +574,23 @@
       <exception cref="T:System.PlatformNotSupportedException">
         <paramref name="keyStorageFlags" /> contains a value that is not valid for the
               current platform.</exception>
-      <exception cref="T:System.Security.Cryptography.X509Certificates.Pkcs12LoadLimitExceededException">The PKCS#12/PFX violated one or more constraints of <paramref name="loaderLimits" />.</exception>
-      <exception cref="T:System.Security.Cryptography.CryptographicException">An error occurred while loading the PKCS#12/PFX.</exception>
+      <exception cref="T:System.Security.Cryptography.X509Certificates.Pkcs12LoadLimitExceededException">
+              The PKCS#12/PFX violated one or more constraints of <paramref name="loaderLimits" />.</exception>
+      <exception cref="T:System.Security.Cryptography.CryptographicException">
+              An error occurred while loading the PKCS#12/PFX.</exception>
       <returns>The loaded certificate.</returns>
     </member>
     <member name="M:System.Security.Cryptography.X509Certificates.X509CertificateLoader.LoadPkcs12Collection(System.Byte[],System.String,System.Security.Cryptography.X509Certificates.X509KeyStorageFlags,System.Security.Cryptography.X509Certificates.Pkcs12LoaderLimits)">
-      <summary>Loads the provided data as a PKCS#12 PFX and returns a collection of
+      <summary>
+              Loads the provided data as a PKCS#12 PFX and returns a collection of
               all of the certificates therein.</summary>
       <param name="data">The data to load.</param>
       <param name="password">The password to decrypt the contents of the PFX.</param>
-      <param name="keyStorageFlags">A bitwise combination of the enumeration values that control where and how to
+      <param name="keyStorageFlags">
+              A bitwise combination of the enumeration values that control where and how to
               import the private key associated with the returned certificate.</param>
-      <param name="loaderLimits">Limits to apply when loading the PFX.  A <see langword="null" /> value, the default,
+      <param name="loaderLimits">
+              Limits to apply when loading the PFX.  A <see langword="null" /> value, the default,
               is equivalent to <see cref="P:System.Security.Cryptography.X509Certificates.Pkcs12LoaderLimits.Defaults" />.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="data" /> is <see langword="null" />.</exception>
@@ -551,18 +600,23 @@
       <exception cref="T:System.PlatformNotSupportedException">
         <paramref name="keyStorageFlags" /> contains a value that is not valid for the
               current platform.</exception>
-      <exception cref="T:System.Security.Cryptography.X509Certificates.Pkcs12LoadLimitExceededException">The PKCS#12/PFX violated one or more constraints of <paramref name="loaderLimits" />.</exception>
-      <exception cref="T:System.Security.Cryptography.CryptographicException">An error occurred while loading the PKCS#12/PFX.</exception>
+      <exception cref="T:System.Security.Cryptography.X509Certificates.Pkcs12LoadLimitExceededException">
+              The PKCS#12/PFX violated one or more constraints of <paramref name="loaderLimits" />.</exception>
+      <exception cref="T:System.Security.Cryptography.CryptographicException">
+              An error occurred while loading the PKCS#12/PFX.</exception>
       <returns>A collection of the certificates loaded from the input.</returns>
     </member>
     <member name="M:System.Security.Cryptography.X509Certificates.X509CertificateLoader.LoadPkcs12Collection(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Char},System.Security.Cryptography.X509Certificates.X509KeyStorageFlags,System.Security.Cryptography.X509Certificates.Pkcs12LoaderLimits)">
-      <summary>Loads the provided data as a PKCS#12 PFX and returns a collection of
+      <summary>
+              Loads the provided data as a PKCS#12 PFX and returns a collection of
               all of the certificates therein.</summary>
       <param name="data">The data to load.</param>
       <param name="password">The password to decrypt the contents of the PFX.</param>
-      <param name="keyStorageFlags">A bitwise combination of the enumeration values that control where and how to
+      <param name="keyStorageFlags">
+              A bitwise combination of the enumeration values that control where and how to
               import the private key associated with the returned certificate.</param>
-      <param name="loaderLimits">Limits to apply when loading the PFX.  A <see langword="null" /> value, the default,
+      <param name="loaderLimits">
+              Limits to apply when loading the PFX.  A <see langword="null" /> value, the default,
               is equivalent to <see cref="P:System.Security.Cryptography.X509Certificates.Pkcs12LoaderLimits.Defaults" />.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="data" /> is <see langword="null" />.</exception>
@@ -572,19 +626,24 @@
       <exception cref="T:System.PlatformNotSupportedException">
         <paramref name="keyStorageFlags" /> contains a value that is not valid for the
               current platform.</exception>
-      <exception cref="T:System.Security.Cryptography.X509Certificates.Pkcs12LoadLimitExceededException">The PKCS#12/PFX violated one or more constraints of <paramref name="loaderLimits" />.</exception>
-      <exception cref="T:System.Security.Cryptography.CryptographicException">An error occurred while loading the PKCS#12/PFX.</exception>
+      <exception cref="T:System.Security.Cryptography.X509Certificates.Pkcs12LoadLimitExceededException">
+              The PKCS#12/PFX violated one or more constraints of <paramref name="loaderLimits" />.</exception>
+      <exception cref="T:System.Security.Cryptography.CryptographicException">
+              An error occurred while loading the PKCS#12/PFX.</exception>
       <returns>A collection of the certificates loaded from the input.</returns>
     </member>
     <member name="M:System.Security.Cryptography.X509Certificates.X509CertificateLoader.LoadPkcs12CollectionFromFile(System.String,System.ReadOnlySpan{System.Char},System.Security.Cryptography.X509Certificates.X509KeyStorageFlags,System.Security.Cryptography.X509Certificates.Pkcs12LoaderLimits)">
-      <summary>Opens the specified file, reads the contents as a PKCS#12 PFX and extracts a certificate.
+      <summary>
+              Opens the specified file, reads the contents as a PKCS#12 PFX and extracts a certificate.
               Loads the provided data as a PKCS#12 PFX and returns a collection of
               all of the certificates therein.</summary>
       <param name="path">The path of the file to open.</param>
       <param name="password">The password to decrypt the contents of the PFX.</param>
-      <param name="keyStorageFlags">A bitwise combination of the enumeration values that control where and how to
+      <param name="keyStorageFlags">
+              A bitwise combination of the enumeration values that control where and how to
               import the private key associated with the returned certificate.</param>
-      <param name="loaderLimits">Limits to apply when loading the PFX.  A <see langword="null" /> value, the default,
+      <param name="loaderLimits">
+              Limits to apply when loading the PFX.  A <see langword="null" /> value, the default,
               is equivalent to <see cref="P:System.Security.Cryptography.X509Certificates.Pkcs12LoaderLimits.Defaults" />.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="path" /> is <see langword="null" />.</exception>
@@ -594,20 +653,27 @@
       <exception cref="T:System.PlatformNotSupportedException">
         <paramref name="keyStorageFlags" /> contains a value that is not valid for the
               current platform.</exception>
-      <exception cref="T:System.Security.Cryptography.X509Certificates.Pkcs12LoadLimitExceededException">The PKCS#12/PFX violated one or more constraints of <paramref name="loaderLimits" />.</exception>
-      <exception cref="T:System.Security.Cryptography.CryptographicException">An error occurred while loading the PKCS#12/PFX.</exception>
-      <exception cref="T:System.IO.IOException">An error occurred while loading the specified file.</exception>
-      <returns>The loaded certificate.</returns>
+      <exception cref="T:System.Security.Cryptography.X509Certificates.Pkcs12LoadLimitExceededException">
+              The PKCS#12/PFX violated one or more constraints of <paramref name="loaderLimits" />.</exception>
+      <exception cref="T:System.Security.Cryptography.CryptographicException">
+              An error occurred while loading the PKCS#12/PFX.</exception>
+      <exception cref="T:System.IO.IOException">
+              An error occurred while loading the specified file.</exception>
+      <returns>
+              The loaded certificate.</returns>
     </member>
     <member name="M:System.Security.Cryptography.X509Certificates.X509CertificateLoader.LoadPkcs12CollectionFromFile(System.String,System.String,System.Security.Cryptography.X509Certificates.X509KeyStorageFlags,System.Security.Cryptography.X509Certificates.Pkcs12LoaderLimits)">
-      <summary>Opens the specified file, reads the contents as a PKCS#12 PFX and extracts a certificate.
+      <summary>
+              Opens the specified file, reads the contents as a PKCS#12 PFX and extracts a certificate.
               Loads the provided data as a PKCS#12 PFX and returns a collection of
               all of the certificates therein.</summary>
       <param name="path">The path of the file to open.</param>
       <param name="password">The password to decrypt the contents of the PFX.</param>
-      <param name="keyStorageFlags">A bitwise combination of the enumeration values that control where and how to
+      <param name="keyStorageFlags">
+              A bitwise combination of the enumeration values that control where and how to
               import the private key associated with the returned certificate.</param>
-      <param name="loaderLimits">Limits to apply when loading the PFX.  A <see langword="null" /> value, the default,
+      <param name="loaderLimits">
+              Limits to apply when loading the PFX.  A <see langword="null" /> value, the default,
               is equivalent to <see cref="P:System.Security.Cryptography.X509Certificates.Pkcs12LoaderLimits.Defaults" />.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="path" /> is <see langword="null" />.</exception>
@@ -617,18 +683,25 @@
       <exception cref="T:System.PlatformNotSupportedException">
         <paramref name="keyStorageFlags" /> contains a value that is not valid for the
               current platform.</exception>
-      <exception cref="T:System.Security.Cryptography.X509Certificates.Pkcs12LoadLimitExceededException">The PKCS#12/PFX violated one or more constraints of <paramref name="loaderLimits" />.</exception>
-      <exception cref="T:System.Security.Cryptography.CryptographicException">An error occurred while loading the PKCS#12/PFX.</exception>
-      <exception cref="T:System.IO.IOException">An error occurred while loading the specified file.</exception>
-      <returns>The loaded certificate.</returns>
+      <exception cref="T:System.Security.Cryptography.X509Certificates.Pkcs12LoadLimitExceededException">
+              The PKCS#12/PFX violated one or more constraints of <paramref name="loaderLimits" />.</exception>
+      <exception cref="T:System.Security.Cryptography.CryptographicException">
+              An error occurred while loading the PKCS#12/PFX.</exception>
+      <exception cref="T:System.IO.IOException">
+              An error occurred while loading the specified file.</exception>
+      <returns>
+              The loaded certificate.</returns>
     </member>
     <member name="M:System.Security.Cryptography.X509Certificates.X509CertificateLoader.LoadPkcs12FromFile(System.String,System.ReadOnlySpan{System.Char},System.Security.Cryptography.X509Certificates.X509KeyStorageFlags,System.Security.Cryptography.X509Certificates.Pkcs12LoaderLimits)">
-      <summary>Opens the specified file, reads the contents as a PKCS#12 PFX and extracts a certificate.</summary>
+      <summary>
+              Opens the specified file, reads the contents as a PKCS#12 PFX and extracts a certificate.</summary>
       <param name="path">The path of the file to open.</param>
       <param name="password">The password to decrypt the contents of the PFX.</param>
-      <param name="keyStorageFlags">A bitwise combination of the enumeration values that control where and how to
+      <param name="keyStorageFlags">
+              A bitwise combination of the enumeration values that control where and how to
               import the private key associated with the returned certificate.</param>
-      <param name="loaderLimits">Limits to apply when loading the PFX.  A <see langword="null" /> value, the default,
+      <param name="loaderLimits">
+              Limits to apply when loading the PFX.  A <see langword="null" /> value, the default,
               is equivalent to <see cref="P:System.Security.Cryptography.X509Certificates.Pkcs12LoaderLimits.Defaults" />.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="path" /> is <see langword="null" />.</exception>
@@ -638,18 +711,25 @@
       <exception cref="T:System.PlatformNotSupportedException">
         <paramref name="keyStorageFlags" /> contains a value that is not valid for the
               current platform.</exception>
-      <exception cref="T:System.Security.Cryptography.X509Certificates.Pkcs12LoadLimitExceededException">The PKCS#12/PFX violated one or more constraints of <paramref name="loaderLimits" />.</exception>
-      <exception cref="T:System.Security.Cryptography.CryptographicException">An error occurred while loading the PKCS#12/PFX.</exception>
-      <exception cref="T:System.IO.IOException">An error occurred while loading the specified file.</exception>
-      <returns>The loaded certificate.</returns>
+      <exception cref="T:System.Security.Cryptography.X509Certificates.Pkcs12LoadLimitExceededException">
+              The PKCS#12/PFX violated one or more constraints of <paramref name="loaderLimits" />.</exception>
+      <exception cref="T:System.Security.Cryptography.CryptographicException">
+              An error occurred while loading the PKCS#12/PFX.</exception>
+      <exception cref="T:System.IO.IOException">
+              An error occurred while loading the specified file.</exception>
+      <returns>
+              The loaded certificate.</returns>
     </member>
     <member name="M:System.Security.Cryptography.X509Certificates.X509CertificateLoader.LoadPkcs12FromFile(System.String,System.String,System.Security.Cryptography.X509Certificates.X509KeyStorageFlags,System.Security.Cryptography.X509Certificates.Pkcs12LoaderLimits)">
-      <summary>Opens the specified file, reads the contents as a PKCS#12 PFX and extracts a certificate.</summary>
+      <summary>
+              Opens the specified file, reads the contents as a PKCS#12 PFX and extracts a certificate.</summary>
       <param name="path">The path of the file to open.</param>
       <param name="password">The password to decrypt the contents of the PFX.</param>
-      <param name="keyStorageFlags">A bitwise combination of the enumeration values that control where and how to
+      <param name="keyStorageFlags">
+              A bitwise combination of the enumeration values that control where and how to
               import the private key associated with the returned certificate.</param>
-      <param name="loaderLimits">Limits to apply when loading the PFX.  A <see langword="null" /> value, the default,
+      <param name="loaderLimits">
+              Limits to apply when loading the PFX.  A <see langword="null" /> value, the default,
               is equivalent to <see cref="P:System.Security.Cryptography.X509Certificates.Pkcs12LoaderLimits.Defaults" />.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="path" /> is <see langword="null" />.</exception>
@@ -659,10 +739,14 @@
       <exception cref="T:System.PlatformNotSupportedException">
         <paramref name="keyStorageFlags" /> contains a value that is not valid for the
               current platform.</exception>
-      <exception cref="T:System.Security.Cryptography.X509Certificates.Pkcs12LoadLimitExceededException">The PKCS#12/PFX violated one or more constraints of <paramref name="loaderLimits" />.</exception>
-      <exception cref="T:System.Security.Cryptography.CryptographicException">An error occurred while loading the PKCS#12/PFX.</exception>
-      <exception cref="T:System.IO.IOException">An error occurred while loading the specified file.</exception>
-      <returns>The loaded certificate.</returns>
+      <exception cref="T:System.Security.Cryptography.X509Certificates.Pkcs12LoadLimitExceededException">
+              The PKCS#12/PFX violated one or more constraints of <paramref name="loaderLimits" />.</exception>
+      <exception cref="T:System.Security.Cryptography.CryptographicException">
+              An error occurred while loading the PKCS#12/PFX.</exception>
+      <exception cref="T:System.IO.IOException">
+              An error occurred while loading the specified file.</exception>
+      <returns>
+              The loaded certificate.</returns>
     </member>
   </members>
 </doc>

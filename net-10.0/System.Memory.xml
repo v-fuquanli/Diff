@@ -2202,8 +2202,8 @@
     </member>
     <member name="M:System.MemoryExtensions.ContainsAny(System.Span{System.Char},System.Buffers.SearchValues{System.String})">
       <summary>Searches for any occurrence of any of the specified substring <code data-dev-comment-type="paramref">values</code>.</summary>
-      <param name="span">The span to search.</param>
-      <param name="values">The set of values to search for.</param>
+      <param name="span" />
+      <param name="values" />
       <returns>
         <code data-dev-comment-type="langword">true</code> if found. If not found, returns <code data-dev-comment-type="langword">false</code>.</returns>
     </member>

@@ -2924,7 +2924,7 @@
       <param name="value">The vector.</param>
       <exception cref="T:System.NotSupportedException">The type of the vector (<typeparamref name="T" />) is not supported.</exception>
       <returns>
-        <paramref name="value" />
+        <code data-dev-comment-type="paramref">value</code>
       </returns>
     </member>
     <member name="M:System.Numerics.Vector`1.op_UnsignedRightShift(System.Numerics.Vector{`0},System.Int32)">
@@ -3698,7 +3698,7 @@
     </member>
     <member name="P:System.Numerics.Vector2.One">
       <summary>Gets a vector whose 2 elements are equal to one.</summary>
-      <returns>A vector whose two elements are equal to one (that is, it returns the vector <code>(1,1)</code>).</returns>
+      <returns>A vector whose two elements are equal to one (that is, it returns the vector <code data-dev-comment-type="c">(1,1)</code>).</returns>
     </member>
     <member name="P:System.Numerics.Vector2.Pi">
       <summary>Gets a vector whose elements are equal to <see cref="P:System.Single.Pi" />.</summary>
@@ -3722,7 +3722,7 @@
     </member>
     <member name="P:System.Numerics.Vector2.Zero">
       <summary>Returns a vector whose 2 elements are equal to zero.</summary>
-      <returns>A vector whose two elements are equal to zero (that is, it returns the vector <code>(0,0)</code>).</returns>
+      <returns>A vector whose two elements are equal to zero (that is, it returns the vector <code data-dev-comment-type="c">(0,0)</code>).</returns>
     </member>
     <member name="T:System.Numerics.Vector3">
       <summary>Represents a vector with three  single-precision floating-point values.</summary>
@@ -4418,7 +4418,7 @@
     </member>
     <member name="P:System.Numerics.Vector3.One">
       <summary>Gets a vector whose 3 elements are equal to one.</summary>
-      <returns>A vector whose three elements are equal to one (that is, it returns the vector <code>(1,1,1)</code>).</returns>
+      <returns>A vector whose three elements are equal to one (that is, it returns the vector <code data-dev-comment-type="c">(1,1,1)</code>).</returns>
     </member>
     <member name="P:System.Numerics.Vector3.Pi">
       <summary>Gets a vector whose elements are equal to <xref data-throw-if-not-resolved="true" uid="System.Single.Pi" />.</summary>
@@ -4446,7 +4446,7 @@
     </member>
     <member name="P:System.Numerics.Vector3.Zero">
       <summary>Gets a vector whose 3 elements are equal to zero.</summary>
-      <returns>A vector whose three elements are equal to zero (that is, it returns the vector <code>(0,0,0)</code>).</returns>
+      <returns>A vector whose three elements are equal to zero (that is, it returns the vector <code data-dev-comment-type="c">(0,0,0)</code>).</returns>
     </member>
     <member name="T:System.Numerics.Vector4">
       <summary>Represents a vector with four single-precision floating-point values.</summary>

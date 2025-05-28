@@ -3533,6 +3533,12 @@
       <param name="pen">
         <see cref="T:System.Drawing.Pen" /> that determines the color, width, and style of the curve.</param>
       <param name="points">Array of <see cref="T:System.Drawing.PointF" /> structures that represent the points that determine the curve. The number of points in the array should be a multiple of 3 plus 1, such as 4, 7, or 10.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="pen" /> is <see langword="null" />.
+
+ -or-
+
+ <paramref name="points" /> is <see langword="null" />.</exception>
     </member>
     <member name="M:System.Drawing.Graphics.DrawCachedBitmap(System.Drawing.Imaging.CachedBitmap,System.Int32,System.Int32)">
       <summary>Draws the given <paramref name="cachedBitmap" />.</summary>
@@ -3541,7 +3547,9 @@
       <param name="y">The y-coordinate of the upper-left corner of the drawn image.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="cachedBitmap" /> is <see langword="null" />.</exception>
-      <exception cref="T:System.InvalidOperationException">The <paramref name="cachedBitmap" /> is not compatible with the <see cref="T:System.Drawing.Graphics" /> device state.
+      <exception cref="T:System.InvalidOperationException">
+
+              The <paramref name="cachedBitmap" /> is not compatible with the <see cref="T:System.Drawing.Graphics" /> device state.
 
 -or-
 
@@ -3554,12 +3562,24 @@ The <see cref="T:System.Drawing.Graphics" /> object has a transform applied othe
       <param name="points">Array of <see cref="T:System.Drawing.Point" /> structures that define the spline.</param>
       <param name="tension">Value greater than or equal to 0.0F that specifies the tension of the curve.</param>
       <param name="fillmode">Member of the <see cref="T:System.Drawing.Drawing2D.FillMode" /> enumeration that determines how the curve is filled. This parameter is required but ignored.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="pen" /> is <see langword="null" />.
+
+ -or-
+
+ <paramref name="points" /> is <see langword="null" />.</exception>
     </member>
     <member name="M:System.Drawing.Graphics.DrawClosedCurve(System.Drawing.Pen,System.Drawing.Point[])">
       <summary>Draws a closed cardinal spline defined by an array of <see cref="T:System.Drawing.Point" /> structures.</summary>
       <param name="pen">
         <see cref="T:System.Drawing.Pen" /> that determines the color, width, and height of the curve.</param>
       <param name="points">Array of <see cref="T:System.Drawing.Point" /> structures that define the spline.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="pen" /> is <see langword="null" />.
+
+ -or-
+
+ <paramref name="points" /> is <see langword="null" />.</exception>
     </member>
     <member name="M:System.Drawing.Graphics.DrawClosedCurve(System.Drawing.Pen,System.Drawing.PointF[],System.Single,System.Drawing.Drawing2D.FillMode)">
       <summary>Draws a closed cardinal spline defined by an array of <see cref="T:System.Drawing.PointF" /> structures using a specified tension.</summary>
@@ -3580,6 +3600,12 @@ The <see cref="T:System.Drawing.Graphics" /> object has a transform applied othe
       <param name="pen">
         <see cref="T:System.Drawing.Pen" /> that determines the color, width, and height of the curve.</param>
       <param name="points">Array of <see cref="T:System.Drawing.PointF" /> structures that define the spline.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="pen" /> is <see langword="null" />.
+
+ -or-
+
+ <paramref name="points" /> is <see langword="null" />.</exception>
     </member>
     <member name="M:System.Drawing.Graphics.DrawCurve(System.Drawing.Pen,System.Drawing.Point[],System.Int32,System.Int32,System.Single)">
       <summary>Draws a cardinal spline through a specified array of <see cref="T:System.Drawing.Point" /> structures using a specified tension.</summary>
@@ -3602,12 +3628,24 @@ The <see cref="T:System.Drawing.Graphics" /> object has a transform applied othe
         <see cref="T:System.Drawing.Pen" /> that determines the color, width, and style of the curve.</param>
       <param name="points">Array of <see cref="T:System.Drawing.Point" /> structures that define the spline.</param>
       <param name="tension">Value greater than or equal to 0.0F that specifies the tension of the curve.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="pen" /> is <see langword="null" />.
+
+ -or-
+
+ <paramref name="points" /> is <see langword="null" />.</exception>
     </member>
     <member name="M:System.Drawing.Graphics.DrawCurve(System.Drawing.Pen,System.Drawing.Point[])">
       <summary>Draws a cardinal spline through a specified array of <see cref="T:System.Drawing.Point" /> structures.</summary>
       <param name="pen">
         <see cref="T:System.Drawing.Pen" /> that determines the color, width, and height of the curve.</param>
       <param name="points">Array of <see cref="T:System.Drawing.Point" /> structures that define the spline.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="pen" /> is <see langword="null" />.
+
+ -or-
+
+ <paramref name="points" /> is <see langword="null" />.</exception>
     </member>
     <member name="M:System.Drawing.Graphics.DrawCurve(System.Drawing.Pen,System.Drawing.PointF[],System.Int32,System.Int32,System.Single)">
       <summary>Draws a cardinal spline through a specified array of <see cref="T:System.Drawing.PointF" /> structures using a specified tension. The drawing begins offset from the beginning of the array.</summary>
@@ -3617,6 +3655,12 @@ The <see cref="T:System.Drawing.Graphics" /> object has a transform applied othe
       <param name="offset">Offset from the first element in the array of the <paramref name="points" /> parameter to the starting point in the curve.</param>
       <param name="numberOfSegments">Number of segments after the starting point to include in the curve.</param>
       <param name="tension">Value greater than or equal to 0.0F that specifies the tension of the curve.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="pen" /> is <see langword="null" />.
+
+ -or-
+
+ <paramref name="points" /> is <see langword="null" />.</exception>
     </member>
     <member name="M:System.Drawing.Graphics.DrawCurve(System.Drawing.Pen,System.Drawing.PointF[],System.Int32,System.Int32)">
       <summary>Draws a cardinal spline through a specified array of <see cref="T:System.Drawing.PointF" /> structures. The drawing begins offset from the beginning of the array.</summary>
@@ -3625,6 +3669,12 @@ The <see cref="T:System.Drawing.Graphics" /> object has a transform applied othe
       <param name="points">Array of <see cref="T:System.Drawing.PointF" /> structures that define the spline.</param>
       <param name="offset">Offset from the first element in the array of the <paramref name="points" /> parameter to the starting point in the curve.</param>
       <param name="numberOfSegments">Number of segments after the starting point to include in the curve.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="pen" /> is <see langword="null" />.
+
+ -or-
+
+ <paramref name="points" /> is <see langword="null" />.</exception>
     </member>
     <member name="M:System.Drawing.Graphics.DrawCurve(System.Drawing.Pen,System.Drawing.PointF[],System.Single)">
       <summary>Draws a cardinal spline through a specified array of <see cref="T:System.Drawing.PointF" /> structures using a specified tension.</summary>
@@ -3632,12 +3682,24 @@ The <see cref="T:System.Drawing.Graphics" /> object has a transform applied othe
         <see cref="T:System.Drawing.Pen" /> that determines the color, width, and style of the curve.</param>
       <param name="points">Array of <see cref="T:System.Drawing.PointF" /> structures that represent the points that define the curve.</param>
       <param name="tension">Value greater than or equal to 0.0F that specifies the tension of the curve.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="pen" /> is <see langword="null" />.
+
+ -or-
+
+ <paramref name="points" /> is <see langword="null" />.</exception>
     </member>
     <member name="M:System.Drawing.Graphics.DrawCurve(System.Drawing.Pen,System.Drawing.PointF[])">
       <summary>Draws a cardinal spline through a specified array of <see cref="T:System.Drawing.PointF" /> structures.</summary>
       <param name="pen">
         <see cref="T:System.Drawing.Pen" /> that determines the color, width, and style of the curve.</param>
       <param name="points">Array of <see cref="T:System.Drawing.PointF" /> structures that define the spline.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="pen" /> is <see langword="null" />.
+
+ -or-
+
+ <paramref name="points" /> is <see langword="null" />.</exception>
     </member>
     <member name="M:System.Drawing.Graphics.DrawEllipse(System.Drawing.Pen,System.Drawing.Rectangle)">
       <summary>Draws an ellipse specified by a bounding <see cref="T:System.Drawing.Rectangle" /> structure.</summary>
@@ -4194,6 +4256,12 @@ The <see cref="T:System.Drawing.Graphics" /> object has a transform applied othe
       <param name="pen">
         <see cref="T:System.Drawing.Pen" /> that determines the color, width, and style of the line segments.</param>
       <param name="points">Array of <see cref="T:System.Drawing.PointF" /> structures that represent the points to connect.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="pen" /> is <see langword="null" />.
+
+ -or-
+
+ <paramref name="points" /> is <see langword="null" />.</exception>
     </member>
     <member name="M:System.Drawing.Graphics.DrawPath(System.Drawing.Pen,System.Drawing.Drawing2D.GraphicsPath)">
       <summary>Draws a <see cref="T:System.Drawing.Drawing2D.GraphicsPath" />.</summary>
@@ -4269,6 +4337,12 @@ The <see cref="T:System.Drawing.Graphics" /> object has a transform applied othe
       <param name="pen">
         <see cref="T:System.Drawing.Pen" /> that determines the color, width, and style of the polygon.</param>
       <param name="points">Array of <see cref="T:System.Drawing.PointF" /> structures that represent the vertices of the polygon.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="pen" /> is <see langword="null" />.
+
+ -or-
+
+ <paramref name="points" /> is <see langword="null" />.</exception>
     </member>
     <member name="M:System.Drawing.Graphics.DrawRectangle(System.Drawing.Pen,System.Drawing.Rectangle)">
       <summary>Draws a rectangle specified by a <see cref="T:System.Drawing.Rectangle" /> structure.</summary>
@@ -4322,72 +4396,61 @@ The <see cref="T:System.Drawing.Graphics" /> object has a transform applied othe
       <param name="pen">
         <see cref="T:System.Drawing.Pen" /> that determines the color, width, and style of the outlines of the rectangles.</param>
       <param name="rects">Array of <see cref="T:System.Drawing.RectangleF" /> structures that represent the rectangles to draw.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="pen" /> is <see langword="null" />.
+
+ -or-
+
+ <paramref name="rects" /> is <see langword="null" />.</exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="rects" /> is a zero-length array.</exception>
     </member>
     <member name="M:System.Drawing.Graphics.DrawString(System.ReadOnlySpan{System.Char},System.Drawing.Font,System.Drawing.Brush,System.Drawing.PointF,System.Drawing.StringFormat)">
       <summary>Draws the specified text string at the specified location with the specified <xref data-throw-if-not-resolved="true" uid="System.Drawing.Brush"></xref> and <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref> objects using the formatting attributes of the specified <xref data-throw-if-not-resolved="true" uid="System.Drawing.StringFormat"></xref>.</summary>
-      <param name="s">String to draw.</param>
-      <param name="font">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref> that defines the text format of the string.</param>
-      <param name="brush">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Brush"></xref> that determines the color and texture of the drawn text.</param>
-      <param name="point">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structure that specifies the upper-left corner of the drawn text.</param>
-      <param name="format">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.StringFormat"></xref> that specifies formatting attributes, such as line spacing and alignment, that are applied to the drawn text.</param>
+      <param name="s" />
+      <param name="font" />
+      <param name="brush" />
+      <param name="point" />
+      <param name="format" />
     </member>
     <member name="M:System.Drawing.Graphics.DrawString(System.ReadOnlySpan{System.Char},System.Drawing.Font,System.Drawing.Brush,System.Drawing.PointF)">
       <summary>Draws the specified text string at the specified location with the specified <xref data-throw-if-not-resolved="true" uid="System.Drawing.Brush"></xref> and <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref> objects.</summary>
-      <param name="s">String to draw.</param>
-      <param name="font">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref> that defines the text format of the string.</param>
-      <param name="brush">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Brush"></xref> that determines the color and texture of the drawn text.</param>
-      <param name="point">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structure that specifies the upper-left corner of the drawn text.</param>
+      <param name="s" />
+      <param name="font" />
+      <param name="brush" />
+      <param name="point" />
     </member>
     <member name="M:System.Drawing.Graphics.DrawString(System.ReadOnlySpan{System.Char},System.Drawing.Font,System.Drawing.Brush,System.Drawing.RectangleF,System.Drawing.StringFormat)">
       <summary>Draws the specified text string in the specified rectangle with the specified <xref data-throw-if-not-resolved="true" uid="System.Drawing.Brush"></xref> and <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref> objects using the formatting attributes of the specified <xref data-throw-if-not-resolved="true" uid="System.Drawing.StringFormat"></xref>.</summary>
-      <param name="s">String to draw.</param>
-      <param name="font">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref> that defines the text format of the string.</param>
-      <param name="brush">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Brush"></xref> that determines the color and texture of the drawn text.</param>
-      <param name="layoutRectangle">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.RectangleF"></xref> structure that specifies the location of the drawn text.</param>
-      <param name="format">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.StringFormat"></xref> that specifies formatting attributes, such as line spacing and alignment, that are applied to the drawn text.</param>
+      <param name="s" />
+      <param name="font" />
+      <param name="brush" />
+      <param name="layoutRectangle" />
+      <param name="format" />
     </member>
     <member name="M:System.Drawing.Graphics.DrawString(System.ReadOnlySpan{System.Char},System.Drawing.Font,System.Drawing.Brush,System.Drawing.RectangleF)">
       <summary>Draws the specified text string in the specified rectangle with the specified <xref data-throw-if-not-resolved="true" uid="System.Drawing.Brush"></xref> and <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref> objects.</summary>
-      <param name="s">String to draw.</param>
-      <param name="font">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref> that defines the text format of the string.</param>
-      <param name="brush">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Brush"></xref> that determines the color and texture of the drawn text.</param>
-      <param name="layoutRectangle">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.RectangleF"></xref> structure that specifies the location of the drawn text.</param>
+      <param name="s" />
+      <param name="font" />
+      <param name="brush" />
+      <param name="layoutRectangle" />
     </member>
     <member name="M:System.Drawing.Graphics.DrawString(System.ReadOnlySpan{System.Char},System.Drawing.Font,System.Drawing.Brush,System.Single,System.Single,System.Drawing.StringFormat)">
       <summary>Draws the specified text string at the specified location with the specified <xref data-throw-if-not-resolved="true" uid="System.Drawing.Brush"></xref> and <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref> objects using the formatting attributes of the specified <xref data-throw-if-not-resolved="true" uid="System.Drawing.StringFormat"></xref>.</summary>
-      <param name="s">String to draw.</param>
-      <param name="font">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref> that defines the text format of the string.</param>
-      <param name="brush">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Brush"></xref> that determines the color and texture of the drawn text.</param>
-      <param name="x">The x-coordinate of the upper-left corner of the drawn text.</param>
-      <param name="y">The y-coordinate of the upper-left corner of the drawn text.</param>
-      <param name="format">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.StringFormat"></xref> that specifies formatting attributes, such as line spacing and alignment, that are applied to the drawn text.</param>
+      <param name="s" />
+      <param name="font" />
+      <param name="brush" />
+      <param name="x" />
+      <param name="y" />
+      <param name="format" />
     </member>
     <member name="M:System.Drawing.Graphics.DrawString(System.ReadOnlySpan{System.Char},System.Drawing.Font,System.Drawing.Brush,System.Single,System.Single)">
       <summary>Draws the specified text string at the specified location with the specified <xref data-throw-if-not-resolved="true" uid="System.Drawing.Brush"></xref> and <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref> objects.</summary>
-      <param name="s">String to draw.</param>
-      <param name="font">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref> that defines the text format of the string.</param>
-      <param name="brush">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Brush"></xref> that determines the color and texture of the drawn text.</param>
-      <param name="x">The x-coordinate of the upper-left corner of the drawn text.</param>
-      <param name="y">The y-coordinate of the upper-left corner of the drawn text.</param>
+      <param name="s" />
+      <param name="font" />
+      <param name="brush" />
+      <param name="x" />
+      <param name="y" />
     </member>
     <member name="M:System.Drawing.Graphics.DrawString(System.String,System.Drawing.Font,System.Drawing.Brush,System.Drawing.PointF,System.Drawing.StringFormat)">
       <summary>Draws the specified text string at the specified location with the specified <see cref="T:System.Drawing.Brush" /> and <see cref="T:System.Drawing.Font" /> objects using the formatting attributes of the specified <see cref="T:System.Drawing.StringFormat" />.</summary>
@@ -4927,6 +4990,12 @@ The <see cref="T:System.Drawing.Graphics" /> object has a transform applied othe
       <param name="points">Array of <see cref="T:System.Drawing.Point" /> structures that define the spline.</param>
       <param name="fillmode">Member of the <see cref="T:System.Drawing.Drawing2D.FillMode" /> enumeration that determines how the curve is filled.</param>
       <param name="tension">Value greater than or equal to 0.0F that specifies the tension of the curve.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="brush" /> is <see langword="null" />.
+
+ -or-
+
+ <paramref name="points" /> is <see langword="null" />.</exception>
     </member>
     <member name="M:System.Drawing.Graphics.FillClosedCurve(System.Drawing.Brush,System.Drawing.Point[],System.Drawing.Drawing2D.FillMode)">
       <summary>Fills the interior of a closed cardinal spline curve defined by an array of <see cref="T:System.Drawing.Point" /> structures using the specified fill mode.</summary>
@@ -4934,12 +5003,24 @@ The <see cref="T:System.Drawing.Graphics" /> object has a transform applied othe
         <see cref="T:System.Drawing.Brush" /> that determines the characteristics of the fill.</param>
       <param name="points">Array of <see cref="T:System.Drawing.Point" /> structures that define the spline.</param>
       <param name="fillmode">Member of the <see cref="T:System.Drawing.Drawing2D.FillMode" /> enumeration that determines how the curve is filled.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="brush" /> is <see langword="null" />.
+
+ -or-
+
+ <paramref name="points" /> is <see langword="null" />.</exception>
     </member>
     <member name="M:System.Drawing.Graphics.FillClosedCurve(System.Drawing.Brush,System.Drawing.Point[])">
       <summary>Fills the interior of a closed cardinal spline curve defined by an array of <see cref="T:System.Drawing.Point" /> structures.</summary>
       <param name="brush">
         <see cref="T:System.Drawing.Brush" /> that determines the characteristics of the fill.</param>
       <param name="points">Array of <see cref="T:System.Drawing.Point" /> structures that define the spline.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="brush" /> is <see langword="null" />.
+
+ -or-
+
+ <paramref name="points" /> is <see langword="null" />.</exception>
     </member>
     <member name="M:System.Drawing.Graphics.FillClosedCurve(System.Drawing.Brush,System.Drawing.PointF[],System.Drawing.Drawing2D.FillMode,System.Single)">
       <summary>Fills the interior of a closed cardinal spline curve defined by an array of <see cref="T:System.Drawing.PointF" /> structures using the specified fill mode and tension.</summary>
@@ -4960,12 +5041,24 @@ The <see cref="T:System.Drawing.Graphics" /> object has a transform applied othe
         <see cref="T:System.Drawing.Brush" /> that determines the characteristics of the fill.</param>
       <param name="points">Array of <see cref="T:System.Drawing.PointF" /> structures that define the spline.</param>
       <param name="fillmode">Member of the <see cref="T:System.Drawing.Drawing2D.FillMode" /> enumeration that determines how the curve is filled.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="brush" /> is <see langword="null" />.
+
+ -or-
+
+ <paramref name="points" /> is <see langword="null" />.</exception>
     </member>
     <member name="M:System.Drawing.Graphics.FillClosedCurve(System.Drawing.Brush,System.Drawing.PointF[])">
       <summary>Fills the interior of a closed cardinal spline curve defined by an array of <see cref="T:System.Drawing.PointF" /> structures.</summary>
       <param name="brush">
         <see cref="T:System.Drawing.Brush" /> that determines the characteristics of the fill.</param>
       <param name="points">Array of <see cref="T:System.Drawing.PointF" /> structures that define the spline.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="brush" /> is <see langword="null" />.
+
+ -or-
+
+ <paramref name="points" /> is <see langword="null" />.</exception>
     </member>
     <member name="M:System.Drawing.Graphics.FillEllipse(System.Drawing.Brush,System.Drawing.Rectangle)">
       <summary>Fills the interior of an ellipse defined by a bounding rectangle specified by a <see cref="T:System.Drawing.Rectangle" /> structure.</summary>
@@ -5082,6 +5175,12 @@ The <see cref="T:System.Drawing.Graphics" /> object has a transform applied othe
       <param name="brush">
         <see cref="T:System.Drawing.Brush" /> that determines the characteristics of the fill.</param>
       <param name="points">Array of <see cref="T:System.Drawing.Point" /> structures that represent the vertices of the polygon to fill.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="brush" /> is <see langword="null" />.
+
+ -or-
+
+ <paramref name="points" /> is <see langword="null" />.</exception>
     </member>
     <member name="M:System.Drawing.Graphics.FillPolygon(System.Drawing.Brush,System.Drawing.PointF[],System.Drawing.Drawing2D.FillMode)">
       <summary>Fills the interior of a polygon defined by an array of points specified by <see cref="T:System.Drawing.PointF" /> structures using the specified fill mode.</summary>
@@ -5089,12 +5188,24 @@ The <see cref="T:System.Drawing.Graphics" /> object has a transform applied othe
         <see cref="T:System.Drawing.Brush" /> that determines the characteristics of the fill.</param>
       <param name="points">Array of <see cref="T:System.Drawing.PointF" /> structures that represent the vertices of the polygon to fill.</param>
       <param name="fillMode">Member of the <see cref="T:System.Drawing.Drawing2D.FillMode" /> enumeration that determines the style of the fill.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="brush" /> is <see langword="null" />.
+
+ -or-
+
+ <paramref name="points" /> is <see langword="null" />.</exception>
     </member>
     <member name="M:System.Drawing.Graphics.FillPolygon(System.Drawing.Brush,System.Drawing.PointF[])">
       <summary>Fills the interior of a polygon defined by an array of points specified by <see cref="T:System.Drawing.PointF" /> structures.</summary>
       <param name="brush">
         <see cref="T:System.Drawing.Brush" /> that determines the characteristics of the fill.</param>
       <param name="points">Array of <see cref="T:System.Drawing.PointF" /> structures that represent the vertices of the polygon to fill.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="brush" /> is <see langword="null" />.
+
+ -or-
+
+ <paramref name="points" /> is <see langword="null" />.</exception>
     </member>
     <member name="M:System.Drawing.Graphics.FillRectangle(System.Drawing.Brush,System.Drawing.Rectangle)">
       <summary>Fills the interior of a rectangle specified by a <see cref="T:System.Drawing.Rectangle" /> structure.</summary>
@@ -5141,6 +5252,14 @@ The <see cref="T:System.Drawing.Graphics" /> object has a transform applied othe
       <param name="brush">
         <see cref="T:System.Drawing.Brush" /> that determines the characteristics of the fill.</param>
       <param name="rects">Array of <see cref="T:System.Drawing.Rectangle" /> structures that represent the rectangles to fill.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="brush" /> is <see langword="null" />.
+
+ -or-
+
+ <paramref name="rects" /> is <see langword="null" />.</exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="rects" /> is a zero-length array.</exception>
     </member>
     <member name="M:System.Drawing.Graphics.FillRectangles(System.Drawing.Brush,System.Drawing.RectangleF[])">
       <summary>Fills the interiors of a series of rectangles specified by <see cref="T:System.Drawing.RectangleF" /> structures.</summary>
@@ -5319,13 +5438,10 @@ The <see cref="T:System.Drawing.Graphics" /> object has a transform applied othe
     </member>
     <member name="M:System.Drawing.Graphics.MeasureCharacterRanges(System.ReadOnlySpan{System.Char},System.Drawing.Font,System.Drawing.RectangleF,System.Drawing.StringFormat)">
       <summary>Gets an array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Region"></xref> objects, each of which bounds a range of character positions within the specified string.</summary>
-      <param name="text">String to measure.</param>
-      <param name="font">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref> that defines the text format of the string.</param>
-      <param name="layoutRect">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.RectangleF"></xref> structure that specifies the layout rectangle for the string.</param>
-      <param name="stringFormat">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.StringFormat"></xref> that represents formatting information, such as line spacing, for the string.</param>
+      <param name="text" />
+      <param name="font" />
+      <param name="layoutRect" />
+      <param name="stringFormat" />
       <returns>This method returns an array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Region"></xref> objects, each of which bounds a range of character positions within the specified string.</returns>
     </member>
     <member name="M:System.Drawing.Graphics.MeasureCharacterRanges(System.String,System.Drawing.Font,System.Drawing.RectangleF,System.Drawing.StringFormat)">
@@ -5343,71 +5459,56 @@ The <see cref="T:System.Drawing.Graphics" /> object has a transform applied othe
     </member>
     <member name="M:System.Drawing.Graphics.MeasureString(System.ReadOnlySpan{System.Char},System.Drawing.Font,System.Drawing.PointF,System.Drawing.StringFormat)">
       <summary>Measures the specified string when drawn with the specified <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref> and formatted with the specified <xref data-throw-if-not-resolved="true" uid="System.Drawing.StringFormat"></xref>.</summary>
-      <param name="text">String to measure.</param>
-      <param name="font">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref> defines the text format of the string.</param>
-      <param name="origin">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structure that represents the upper-left corner of the string.</param>
-      <param name="stringFormat">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.StringFormat"></xref> that represents formatting information, such as line spacing, for the string.</param>
+      <param name="text" />
+      <param name="font" />
+      <param name="origin" />
+      <param name="stringFormat" />
       <returns>This method returns a <xref data-throw-if-not-resolved="true" uid="System.Drawing.SizeF"></xref> structure that represents the size, in the units specified by the <xref data-throw-if-not-resolved="true" uid="System.Drawing.Graphics.PageUnit"></xref> property, of the string specified by the <code data-dev-comment-type="paramref">text</code> parameter as drawn with the <code data-dev-comment-type="paramref">font</code> parameter and the <code data-dev-comment-type="paramref">stringFormat</code> parameter.</returns>
     </member>
     <member name="M:System.Drawing.Graphics.MeasureString(System.ReadOnlySpan{System.Char},System.Drawing.Font,System.Drawing.SizeF,System.Drawing.StringFormat,System.Int32@,System.Int32@)">
       <summary>Measures the specified string when drawn with the specified <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref> and formatted with the specified <xref data-throw-if-not-resolved="true" uid="System.Drawing.StringFormat"></xref>.</summary>
-      <param name="text">String to measure.</param>
-      <param name="font">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref> that defines the text format of the string.</param>
-      <param name="layoutArea">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.SizeF"></xref> structure that specifies the maximum layout area for the text.</param>
-      <param name="stringFormat">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.StringFormat"></xref> that represents formatting information, such as line spacing, for the string.</param>
-      <param name="charactersFitted">Number of characters in the string.</param>
-      <param name="linesFilled">Number of text lines in the string.</param>
+      <param name="text" />
+      <param name="font" />
+      <param name="layoutArea" />
+      <param name="stringFormat" />
+      <param name="charactersFitted" />
+      <param name="linesFilled" />
       <returns>This method returns a <xref data-throw-if-not-resolved="true" uid="System.Drawing.SizeF"></xref> structure that represents the size of the string, in the units specified by the <xref data-throw-if-not-resolved="true" uid="System.Drawing.Graphics.PageUnit"></xref> property, of the <code data-dev-comment-type="paramref">text</code> parameter as drawn with the <code data-dev-comment-type="paramref">font</code> parameter and the <code data-dev-comment-type="paramref">stringFormat</code> parameter.</returns>
     </member>
     <member name="M:System.Drawing.Graphics.MeasureString(System.ReadOnlySpan{System.Char},System.Drawing.Font,System.Drawing.SizeF,System.Drawing.StringFormat)">
       <summary>Measures the specified string when drawn with the specified <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref> and formatted with the specified <xref data-throw-if-not-resolved="true" uid="System.Drawing.StringFormat"></xref>.</summary>
-      <param name="text">String to measure.</param>
-      <param name="font">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref> defines the text format of the string.</param>
-      <param name="layoutArea">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.SizeF"></xref> structure that specifies the maximum layout area for the text.</param>
-      <param name="stringFormat">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.StringFormat"></xref> that represents formatting information, such as line spacing, for the string.</param>
+      <param name="text" />
+      <param name="font" />
+      <param name="layoutArea" />
+      <param name="stringFormat" />
       <returns>This method returns a <xref data-throw-if-not-resolved="true" uid="System.Drawing.SizeF"></xref> structure that represents the size, in the units specified by the <xref data-throw-if-not-resolved="true" uid="System.Drawing.Graphics.PageUnit"></xref> property, of the string specified in the <code data-dev-comment-type="paramref">text</code> parameter as drawn with the <code data-dev-comment-type="paramref">font</code> parameter and the <code data-dev-comment-type="paramref">stringFormat</code> parameter.</returns>
     </member>
     <member name="M:System.Drawing.Graphics.MeasureString(System.ReadOnlySpan{System.Char},System.Drawing.Font,System.Drawing.SizeF)">
       <summary>Measures the specified string when drawn with the specified <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref> within the specified layout area.</summary>
-      <param name="text">String to measure.</param>
-      <param name="font">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref> defines the text format of the string.</param>
-      <param name="layoutArea">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.SizeF"></xref> structure that specifies the maximum layout area for the text.</param>
+      <param name="text" />
+      <param name="font" />
+      <param name="layoutArea" />
       <returns>This method returns a <xref data-throw-if-not-resolved="true" uid="System.Drawing.SizeF"></xref> structure that represents the size, in the units specified by the <xref data-throw-if-not-resolved="true" uid="System.Drawing.Graphics.PageUnit"></xref> property, of the string specified by the <code data-dev-comment-type="paramref">text</code> parameter as drawn with the <code data-dev-comment-type="paramref">font</code> parameter.</returns>
     </member>
     <member name="M:System.Drawing.Graphics.MeasureString(System.ReadOnlySpan{System.Char},System.Drawing.Font,System.Int32,System.Drawing.StringFormat)">
       <summary>Measures the specified string when drawn with the specified <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref> and formatted with the specified <xref data-throw-if-not-resolved="true" uid="System.Drawing.StringFormat"></xref>.</summary>
-      <param name="text">String to measure.</param>
-      <param name="font">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref> that defines the text format of the string.</param>
-      <param name="width">Maximum width of the string.</param>
-      <param name="format">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.StringFormat"></xref> that represents formatting information, such as line spacing, for the string.</param>
+      <param name="text" />
+      <param name="font" />
+      <param name="width" />
+      <param name="format" />
       <returns>This method returns a <xref data-throw-if-not-resolved="true" uid="System.Drawing.SizeF"></xref> structure that represents the size, in the units specified by the <xref data-throw-if-not-resolved="true" uid="System.Drawing.Graphics.PageUnit"></xref> property, of the string specified in the <code data-dev-comment-type="paramref">text</code> parameter as drawn with the <code data-dev-comment-type="paramref">font</code> parameter and the <code data-dev-comment-type="paramref">format</code> parameter.</returns>
     </member>
     <member name="M:System.Drawing.Graphics.MeasureString(System.ReadOnlySpan{System.Char},System.Drawing.Font,System.Int32)">
       <summary>Measures the specified string when drawn with the specified <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref>.</summary>
-      <param name="text">String to measure.</param>
-      <param name="font">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref> that defines the format of the string.</param>
-      <param name="width">Maximum width of the string in pixels.</param>
+      <param name="text" />
+      <param name="font" />
+      <param name="width" />
       <returns>This method returns a <xref data-throw-if-not-resolved="true" uid="System.Drawing.SizeF"></xref> structure that represents the size, in the units specified by the <xref data-throw-if-not-resolved="true" uid="System.Drawing.Graphics.PageUnit"></xref> property, of the string specified in the <code data-dev-comment-type="paramref">text</code> parameter as drawn with the <code data-dev-comment-type="paramref">font</code> parameter.</returns>
     </member>
     <member name="M:System.Drawing.Graphics.MeasureString(System.ReadOnlySpan{System.Char},System.Drawing.Font)">
       <summary>Measures the specified string when drawn with the specified <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref>.</summary>
-      <param name="text">String to measure.</param>
-      <param name="font">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref> that defines the text format of the string.</param>
+      <param name="text" />
+      <param name="font" />
       <returns>This method returns a <xref data-throw-if-not-resolved="true" uid="System.Drawing.SizeF"></xref> structure that represents the size, in the units specified by the <xref data-throw-if-not-resolved="true" uid="System.Drawing.Graphics.PageUnit"></xref> property, of the string specified by the <code data-dev-comment-type="paramref">text</code> parameter as drawn with the <code data-dev-comment-type="paramref">font</code> parameter.</returns>
     </member>
     <member name="M:System.Drawing.Graphics.MeasureString(System.String,System.Drawing.Font,System.Drawing.PointF,System.Drawing.StringFormat)">
@@ -5419,6 +5520,8 @@ The <see cref="T:System.Drawing.Graphics" /> object has a transform applied othe
         <see cref="T:System.Drawing.PointF" /> structure that represents the upper-left corner of the string.</param>
       <param name="stringFormat">
         <see cref="T:System.Drawing.StringFormat" /> that represents formatting information, such as line spacing, for the string.</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="font" /> is <see langword="null" />.</exception>
       <returns>This method returns a <see cref="T:System.Drawing.SizeF" /> structure that represents the size, in the units specified by the <see cref="P:System.Drawing.Graphics.PageUnit" /> property, of the string specified by the <paramref name="text" /> parameter as drawn with the <paramref name="font" /> parameter and the <paramref name="stringFormat" /> parameter.</returns>
     </member>
     <member name="M:System.Drawing.Graphics.MeasureString(System.String,System.Drawing.Font,System.Drawing.SizeF,System.Drawing.StringFormat,System.Int32@,System.Int32@)">
@@ -5432,6 +5535,8 @@ The <see cref="T:System.Drawing.Graphics" /> object has a transform applied othe
         <see cref="T:System.Drawing.StringFormat" /> that represents formatting information, such as line spacing, for the string.</param>
       <param name="charactersFitted">Number of characters in the string.</param>
       <param name="linesFilled">Number of text lines in the string.</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="font" /> is <see langword="null" />.</exception>
       <returns>This method returns a <see cref="T:System.Drawing.SizeF" /> structure that represents the size of the string, in the units specified by the <see cref="P:System.Drawing.Graphics.PageUnit" /> property, of the <paramref name="text" /> parameter as drawn with the <paramref name="font" /> parameter and the <paramref name="stringFormat" /> parameter.</returns>
     </member>
     <member name="M:System.Drawing.Graphics.MeasureString(System.String,System.Drawing.Font,System.Drawing.SizeF,System.Drawing.StringFormat)">
@@ -5443,6 +5548,8 @@ The <see cref="T:System.Drawing.Graphics" /> object has a transform applied othe
         <see cref="T:System.Drawing.SizeF" /> structure that specifies the maximum layout area for the text.</param>
       <param name="stringFormat">
         <see cref="T:System.Drawing.StringFormat" /> that represents formatting information, such as line spacing, for the string.</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="font" /> is <see langword="null" />.</exception>
       <returns>This method returns a <see cref="T:System.Drawing.SizeF" /> structure that represents the size, in the units specified by the <see cref="P:System.Drawing.Graphics.PageUnit" /> property, of the string specified in the <paramref name="text" /> parameter as drawn with the <paramref name="font" /> parameter and the <paramref name="stringFormat" /> parameter.</returns>
     </member>
     <member name="M:System.Drawing.Graphics.MeasureString(System.String,System.Drawing.Font,System.Drawing.SizeF)">
@@ -5452,6 +5559,8 @@ The <see cref="T:System.Drawing.Graphics" /> object has a transform applied othe
         <see cref="T:System.Drawing.Font" /> defines the text format of the string.</param>
       <param name="layoutArea">
         <see cref="T:System.Drawing.SizeF" /> structure that specifies the maximum layout area for the text.</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="font" /> is <see langword="null" />.</exception>
       <returns>This method returns a <see cref="T:System.Drawing.SizeF" /> structure that represents the size, in the units specified by the <see cref="P:System.Drawing.Graphics.PageUnit" /> property, of the string specified by the <paramref name="text" /> parameter as drawn with the <paramref name="font" /> parameter.</returns>
     </member>
     <member name="M:System.Drawing.Graphics.MeasureString(System.String,System.Drawing.Font,System.Int32,System.Drawing.StringFormat)">
@@ -5462,6 +5571,8 @@ The <see cref="T:System.Drawing.Graphics" /> object has a transform applied othe
       <param name="width">Maximum width of the string.</param>
       <param name="format">
         <see cref="T:System.Drawing.StringFormat" /> that represents formatting information, such as line spacing, for the string.</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="font" /> is <see langword="null" />.</exception>
       <returns>This method returns a <see cref="T:System.Drawing.SizeF" /> structure that represents the size, in the units specified by the <see cref="P:System.Drawing.Graphics.PageUnit" /> property, of the string specified in the <paramref name="text" /> parameter as drawn with the <paramref name="font" /> parameter and the <paramref name="format" /> parameter.</returns>
     </member>
     <member name="M:System.Drawing.Graphics.MeasureString(System.String,System.Drawing.Font,System.Int32)">
@@ -5470,6 +5581,8 @@ The <see cref="T:System.Drawing.Graphics" /> object has a transform applied othe
       <param name="font">
         <see cref="T:System.Drawing.Font" /> that defines the format of the string.</param>
       <param name="width">Maximum width of the string in pixels.</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="font" /> is <see langword="null" />.</exception>
       <returns>This method returns a <see cref="T:System.Drawing.SizeF" /> structure that represents the size, in the units specified by the <see cref="P:System.Drawing.Graphics.PageUnit" /> property, of the string specified in the <paramref name="text" /> parameter as drawn with the <paramref name="font" /> parameter.</returns>
     </member>
     <member name="M:System.Drawing.Graphics.MeasureString(System.String,System.Drawing.Font)">
@@ -5814,8 +5927,8 @@ The <see cref="T:System.Drawing.Graphics" /> object has a transform applied othe
     </member>
     <member name="M:System.Drawing.Icon.ExtractIcon(System.String,System.Int32,System.Boolean)">
       <summary>Extracts a specified icon from the given <code data-dev-comment-type="paramref">filePath</code>.</summary>
-      <param name="filePath">Path to an icon or PE (.dll, .exe) file.</param>
-      <param name="id">Positive numbers refer to an icon index in the given file. Negative numbers refer to a specific native resource identifier in a PE (.dll, .exe) file.</param>
+      <param name="filePath" />
+      <param name="id" />
       <param name="smallIcon">
         <see langword="true" /> to get the <see cref="T:System.Drawing.Icon" /> at the current system small icon size setting. <see langword="false" /> to get the <see cref="T:System.Drawing.Icon" /> at the current system large icon size setting. The default is <see langword="false" />.</param>
       <returns>An <xref data-throw-if-not-resolved="true" uid="System.Drawing.Icon"></xref>, or <code data-dev-comment-type="langword">null</code> if an icon can't be found with the specified <code data-dev-comment-type="paramref">id</code>.</returns>
@@ -12078,7 +12191,7 @@ The <see cref="T:System.Drawing.Graphics" /> object has a transform applied othe
     </member>
     <member name="M:System.Drawing.SystemIcons.GetStockIcon(System.Drawing.StockIconId,System.Int32)">
       <summary>Gets the specified Windows shell stock icon.</summary>
-      <param name="stockIcon">The stock icon to retrieve.</param>
+      <param name="stockIcon" />
       <param name="size">The desired size. If the specified size does not exist, an existing size will be resampled to give the requested size.</param>
       <returns>The requested <xref data-throw-if-not-resolved="true" uid="System.Drawing.Icon"></xref>.</returns>
     </member>

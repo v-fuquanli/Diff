@@ -273,7 +273,7 @@
       <summary>Identifies the <see cref="P:System.Windows.Automation.AutomationElement.AutomationElementInformation.Orientation" /> property.</summary>
     </member>
     <member name="F:System.Windows.Automation.AutomationElement.PositionInSetProperty">
-      <summary>Describes the ordinal location of an automation element within a set of elements that are considered to be siblings.</summary>
+      <summary> Describes the ordinal location of an automation element within a set of elements that are considered to be siblings.</summary>
     </member>
     <member name="F:System.Windows.Automation.AutomationElement.ProcessIdProperty">
       <summary>Identifies the <see cref="P:System.Windows.Automation.AutomationElement.AutomationElementInformation.ProcessId" /> property.</summary>

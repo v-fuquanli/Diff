@@ -32,7 +32,8 @@
       <summary>This value indicates that the current proxy configuration of the WinINet API on the machine is used. The proxy settings can be configured using Internet options and supports WPAD and PAC files.</summary>
     </member>
     <member name="T:System.Net.Http.WinHttpHandler">
-      <summary>Handles messages based on the WinHTTP interface of Windows. This class is intended for use in server environments.</summary>
+      <summary>
+      Handles messages based on the WinHTTP interface of Windows. This class is intended for use in server environments.</summary>
     </member>
     <member name="M:System.Net.Http.WinHttpHandler.#ctor">
       <summary>Initializes a new instance of the <see cref="T:System.Net.Http.WinHttpHandler" /> class.</summary>

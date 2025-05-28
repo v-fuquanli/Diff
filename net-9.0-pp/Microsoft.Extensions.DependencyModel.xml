@@ -56,13 +56,15 @@
     </member>
     <member name="M:Microsoft.Extensions.DependencyModel.CompilationLibrary.ResolveReferencePaths">
       <summary>Gets the collection of absolute reference paths for this library.</summary>
-      <exception cref="T:System.InvalidOperationException">Library location is not found.</exception>
+      <exception cref="T:System.InvalidOperationException">
+          Library location is not found.</exception>
       <returns>The collection of absolute reference paths for this library.</returns>
     </member>
     <member name="M:Microsoft.Extensions.DependencyModel.CompilationLibrary.ResolveReferencePaths(Microsoft.Extensions.DependencyModel.Resolution.ICompilationAssemblyResolver[])">
       <summary>Gets the collection of absolute reference paths for this library using specified custom resolvers.</summary>
       <param name="customResolvers">The array of custom assembly resolvers.</param>
-      <exception cref="T:System.InvalidOperationException">Library location is not found.</exception>
+      <exception cref="T:System.InvalidOperationException">
+          Library location is not found.</exception>
       <returns>The collection of absolute reference paths for this library.</returns>
     </member>
     <member name="P:Microsoft.Extensions.DependencyModel.CompilationLibrary.Assemblies">

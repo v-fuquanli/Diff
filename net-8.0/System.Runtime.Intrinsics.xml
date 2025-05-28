@@ -22372,7 +22372,7 @@
       <param name="value">The vector.</param>
       <exception cref="T:System.NotSupportedException">The type of the vector (<typeparamref name="T" />) is not supported.</exception>
       <returns>
-        <paramref name="value" />
+        <code data-dev-comment-type="paramref">value</code>
       </returns>
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector128`1.op_UnsignedRightShift(System.Runtime.Intrinsics.Vector128{`0},System.Int32)">
@@ -23387,6 +23387,7 @@
       <param name="left">The vector to compare with <paramref name="right" />.</param>
       <param name="right">The vector to compare with <paramref name="left" />.</param>
       <typeparam name="T">The type of the elements in the vector.</typeparam>
+      <exception cref="T:System.NotSupportedException">The type of <paramref name="left" /> and <paramref name="right" /> (<typeparamref name="T" />) is not supported.</exception>
       <returns>A vector whose elements are the maximum of the corresponding elements in <paramref name="left" /> and <paramref name="right" />.</returns>
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector256.Min``1(System.Runtime.Intrinsics.Vector256{``0},System.Runtime.Intrinsics.Vector256{``0})">
@@ -23394,6 +23395,7 @@
       <param name="left">The vector to compare with <paramref name="right" />.</param>
       <param name="right">The vector to compare with <paramref name="left" />.</param>
       <typeparam name="T">The type of the elements in the vector.</typeparam>
+      <exception cref="T:System.NotSupportedException">The type of <paramref name="left" /> and <paramref name="right" /> (<typeparamref name="T" />) is not supported.</exception>
       <returns>A vector whose elements are the minimum of the corresponding elements in <paramref name="left" /> and <paramref name="right" />.</returns>
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector256.Multiply``1(``0,System.Runtime.Intrinsics.Vector256{``0})">
@@ -24056,7 +24058,7 @@
       <param name="value">The vector.</param>
       <exception cref="T:System.NotSupportedException">The type of the vector (<typeparamref name="T" />) is not supported.</exception>
       <returns>
-        <paramref name="value" />
+        <code data-dev-comment-type="paramref">value</code>
       </returns>
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector256`1.op_UnsignedRightShift(System.Runtime.Intrinsics.Vector256{`0},System.Int32)">
@@ -25201,6 +25203,7 @@
       <param name="left">The vector to compare with <paramref name="right" />.</param>
       <param name="right">The vector to compare with <paramref name="left" />.</param>
       <typeparam name="T">The type of the elements in the vector.</typeparam>
+      <exception cref="T:System.NotSupportedException">The type of <paramref name="left" /> and <paramref name="right" /> (<typeparamref name="T" />) is not supported.</exception>
       <returns>A vector whose elements are the maximum of the corresponding elements in <paramref name="left" /> and <paramref name="right" />.</returns>
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector512.Min``1(System.Runtime.Intrinsics.Vector512{``0},System.Runtime.Intrinsics.Vector512{``0})">
@@ -25208,6 +25211,7 @@
       <param name="left">The vector to compare with <paramref name="right" />.</param>
       <param name="right">The vector to compare with <paramref name="left" />.</param>
       <typeparam name="T">The type of the elements in the vector.</typeparam>
+      <exception cref="T:System.NotSupportedException">The type of <paramref name="left" /> and <paramref name="right" /> (<typeparamref name="T" />) is not supported.</exception>
       <returns>A vector whose elements are the minimum of the corresponding elements in <paramref name="left" /> and <paramref name="right" />.</returns>
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector512.Multiply``1(``0,System.Runtime.Intrinsics.Vector512{``0})">
@@ -25855,7 +25859,7 @@
       <param name="value">The vector.</param>
       <exception cref="T:System.NotSupportedException">The type of the vector (<typeparamref name="T" />) is not supported.</exception>
       <returns>
-        <paramref name="value" />
+        <code data-dev-comment-type="paramref">value</code>
       </returns>
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector512`1.op_UnsignedRightShift(System.Runtime.Intrinsics.Vector512{`0},System.Int32)">
@@ -26645,6 +26649,7 @@
       <param name="left">The vector to compare with <paramref name="right" />.</param>
       <param name="right">The vector to compare with <paramref name="left" />.</param>
       <typeparam name="T">The type of the elements in the vector.</typeparam>
+      <exception cref="T:System.NotSupportedException">The type of <paramref name="left" /> and <paramref name="right" /> (<typeparamref name="T" />) is not supported.</exception>
       <returns>A vector whose elements are the maximum of the corresponding elements in <paramref name="left" /> and <paramref name="right" />.</returns>
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector64.Min``1(System.Runtime.Intrinsics.Vector64{``0},System.Runtime.Intrinsics.Vector64{``0})">
@@ -26652,6 +26657,7 @@
       <param name="left">The vector to compare with <paramref name="right" />.</param>
       <param name="right">The vector to compare with <paramref name="left" />.</param>
       <typeparam name="T">The type of the elements in the vector.</typeparam>
+      <exception cref="T:System.NotSupportedException">The type of <paramref name="left" /> and <paramref name="right" /> (<typeparamref name="T" />) is not supported.</exception>
       <returns>A vector whose elements are the minimum of the corresponding elements in <paramref name="left" /> and <paramref name="right" />.</returns>
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector64.Multiply``1(``0,System.Runtime.Intrinsics.Vector64{``0})">
@@ -27280,7 +27286,7 @@
       <param name="value">The vector.</param>
       <exception cref="T:System.NotSupportedException">The type of the vector (<typeparamref name="T" />) is not supported.</exception>
       <returns>
-        <paramref name="value" />
+        <code data-dev-comment-type="paramref">value</code>
       </returns>
     </member>
     <member name="M:System.Runtime.Intrinsics.Vector64`1.op_UnsignedRightShift(System.Runtime.Intrinsics.Vector64{`0},System.Int32)">
@@ -47330,7 +47336,7 @@
     <member name="M:System.Runtime.Intrinsics.X86.Sse41.RoundToPositiveInfinity(System.Runtime.Intrinsics.Vector128{System.Single})">
       <summary>
         <para>__m128 _mm_round_ps (__m128 a, _MM_FROUND_TO_POS_INF |_MM_FROUND_NO_EXC)</para>
-        <para>ROUNDPS xmm, xmm/m128, imm8(10)</para>
+        <para> ROUNDPS xmm, xmm/m128, imm8(10)</para>
       </summary>
       <param name="value" />
     </member>

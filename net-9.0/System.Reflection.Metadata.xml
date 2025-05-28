@@ -5629,7 +5629,8 @@
     <member name="M:System.Reflection.Metadata.MethodBodyBlock.Create(System.Reflection.Metadata.BlobReader)">
       <summary>Creates a new instance of the <see cref="T:System.Reflection.Metadata.MethodBodyBlock" /> class using the specified blob reader.</summary>
       <param name="reader">The blob reader to read the method body.</param>
-      <exception cref="T:System.BadImageFormatException">The method body data in the specified blob reader is invalid.</exception>
+      <exception cref="T:System.BadImageFormatException">
+          The method body data in the specified blob reader is invalid.</exception>
       <returns>A new instance of the <see cref="T:System.Reflection.Metadata.MethodBodyBlock" /> class.</returns>
     </member>
     <member name="M:System.Reflection.Metadata.MethodBodyBlock.GetILBytes">
@@ -7393,7 +7394,7 @@
     <member name="F:System.Reflection.MethodSemanticsAttributes.Raiser">
       <summary>
         <para>Used to indicate that an event has occurred. Corresponds to the <see langword="Fire" /> flag in the Ecma 335 CLI specification.</para>
-        <para>CLS-compliant raisers are named with the <see langword="raise_" /> prefix.</para>
+        <para> CLS-compliant raisers are named with the <see langword="raise_" /> prefix.</para>
       </summary>
     </member>
     <member name="F:System.Reflection.MethodSemanticsAttributes.Remover">
@@ -7583,7 +7584,8 @@
         <paramref name="pdbPath" /> is <see langword="null" />.</exception>
       <exception cref="T:System.ArgumentException">
         <paramref name="pdbPath" /> contains a NUL character.</exception>
-      <exception cref="T:System.ArgumentOutOfRangeException">Either <paramref name="portablePdbVersion" /> is smaller than 0x0100 or <paramref name="age" /> is less than 1.</exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+          Either <paramref name="portablePdbVersion" /> is smaller than 0x0100 or <paramref name="age" /> is less than 1.</exception>
     </member>
     <member name="M:System.Reflection.PortableExecutable.DebugDirectoryBuilder.AddCodeViewEntry(System.String,System.Reflection.Metadata.BlobContentId,System.UInt16)">
       <summary>Adds a CodeView entry.</summary>

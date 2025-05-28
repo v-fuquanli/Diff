@@ -5,7 +5,8 @@
   </assembly>
   <members>
     <member name="T:Microsoft.Extensions.AI.CachingChatClient">
-      <summary>Represents a delegating chat client that caches the results of chat calls.</summary>
+      <summary>
+            Represents a delegating chat client that caches the results of chat calls.</summary>
     </member>
     <member name="M:Microsoft.Extensions.AI.CachingChatClient.#ctor(Microsoft.Extensions.AI.IChatClient)">
       <summary>Initializes a new instance of the <see cref="T:Microsoft.Extensions.AI.CachingChatClient" /> class.</summary>
@@ -29,7 +30,8 @@
       <param name="cancellationToken" />
     </member>
     <member name="M:Microsoft.Extensions.AI.CachingChatClient.ReadCacheAsync(System.String,System.Threading.CancellationToken)">
-      <summary>Returns a previously cached <see cref="T:Microsoft.Extensions.AI.ChatResponse" />, if available.
+      <summary>
+            Returns a previously cached <see cref="T:Microsoft.Extensions.AI.ChatResponse" />, if available.
             This is used when there is a call to <see cref="M:Microsoft.Extensions.AI.IChatClient.GetResponseAsync(System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.ChatMessage},Microsoft.Extensions.AI.ChatOptions,System.Threading.CancellationToken)" />.</summary>
       <param name="key">The cache key.</param>
       <param name="cancellationToken">The <see cref="T:System.Threading.CancellationToken" /> to monitor for cancellation requests.</param>
@@ -38,7 +40,8 @@
       <returns>The previously cached data, if available, otherwise <see langword="null" />.</returns>
     </member>
     <member name="M:Microsoft.Extensions.AI.CachingChatClient.ReadCacheStreamingAsync(System.String,System.Threading.CancellationToken)">
-      <summary>Returns a previously cached list of <see cref="T:Microsoft.Extensions.AI.ChatResponseUpdate" /> values, if available.
+      <summary>
+            Returns a previously cached list of <see cref="T:Microsoft.Extensions.AI.ChatResponseUpdate" /> values, if available.
             This is used when there is a call to <see cref="M:Microsoft.Extensions.AI.IChatClient.GetStreamingResponseAsync(System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.ChatMessage},Microsoft.Extensions.AI.ChatOptions,System.Threading.CancellationToken)" />.</summary>
       <param name="key">The cache key.</param>
       <param name="cancellationToken">The <see cref="T:System.Threading.CancellationToken" /> to monitor for cancellation requests.</param>
@@ -47,7 +50,8 @@
       <returns>The previously cached data, if available, otherwise <see langword="null" />.</returns>
     </member>
     <member name="M:Microsoft.Extensions.AI.CachingChatClient.WriteCacheAsync(System.String,Microsoft.Extensions.AI.ChatResponse,System.Threading.CancellationToken)">
-      <summary>Stores a <see cref="T:Microsoft.Extensions.AI.ChatResponse" /> in the underlying cache.
+      <summary>
+            Stores a <see cref="T:Microsoft.Extensions.AI.ChatResponse" /> in the underlying cache.
             This is used when there is a call to <see cref="M:Microsoft.Extensions.AI.IChatClient.GetResponseAsync(System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.ChatMessage},Microsoft.Extensions.AI.ChatOptions,System.Threading.CancellationToken)" />.</summary>
       <param name="key">The cache key.</param>
       <param name="value">The <see cref="T:Microsoft.Extensions.AI.ChatResponse" /> to be stored.</param>
@@ -57,7 +61,8 @@
       <returns>A <see cref="T:System.Threading.Tasks.Task" /> representing the completion of the operation.</returns>
     </member>
     <member name="M:Microsoft.Extensions.AI.CachingChatClient.WriteCacheStreamingAsync(System.String,System.Collections.Generic.IReadOnlyList{Microsoft.Extensions.AI.ChatResponseUpdate},System.Threading.CancellationToken)">
-      <summary>Stores a list of <see cref="T:Microsoft.Extensions.AI.ChatResponseUpdate" /> values in the underlying cache.
+      <summary>
+            Stores a list of <see cref="T:Microsoft.Extensions.AI.ChatResponseUpdate" /> values in the underlying cache.
             This is used when there is a call to <see cref="M:Microsoft.Extensions.AI.IChatClient.GetStreamingResponseAsync(System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.ChatMessage},Microsoft.Extensions.AI.ChatOptions,System.Threading.CancellationToken)" />.</summary>
       <param name="key">The cache key.</param>
       <param name="value">The <see cref="T:Microsoft.Extensions.AI.ChatResponse" /> to be stored.</param>
@@ -74,7 +79,8 @@
             into a single update, to reduce the number of individual items that are yielded on
             subsequent enumerations of the cached data; <see langword="false" /> if the updates are
             kept unaltered.</para>
-        <para>The default is <see langword="true" />.</para>
+        <para>
+            The default is <see langword="true" />.</para>
       </returns>
     </member>
     <member name="T:Microsoft.Extensions.AI.CachingEmbeddingGenerator`2">
@@ -124,7 +130,8 @@
     </member>
     <member name="M:Microsoft.Extensions.AI.ChatClientBuilder.Build(System.IServiceProvider)">
       <summary>Builds an <see cref="T:Microsoft.Extensions.AI.IChatClient" /> that represents the entire pipeline. Calls to this instance will pass through each of the pipeline stages in turn.</summary>
-      <param name="services">The <see cref="T:System.IServiceProvider" /> that should provide services to the <see cref="T:Microsoft.Extensions.AI.IChatClient" /> instances.
+      <param name="services">
+            The <see cref="T:System.IServiceProvider" /> that should provide services to the <see cref="T:Microsoft.Extensions.AI.IChatClient" /> instances.
             If <see langword="null" />, an empty <see cref="T:System.IServiceProvider" /> will be used.</param>
       <returns>An instance of <see cref="T:Microsoft.Extensions.AI.IChatClient" /> that represents the entire pipeline.</returns>
     </member>
@@ -143,21 +150,26 @@
       <returns>The updated <see cref="T:Microsoft.Extensions.AI.ChatClientBuilder" /> instance.</returns>
     </member>
     <member name="M:Microsoft.Extensions.AI.ChatClientBuilder.Use(System.Func{System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.ChatMessage},Microsoft.Extensions.AI.ChatOptions,Microsoft.Extensions.AI.IChatClient,System.Threading.CancellationToken,System.Threading.Tasks.Task{Microsoft.Extensions.AI.ChatResponse}},System.Func{System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.ChatMessage},Microsoft.Extensions.AI.ChatOptions,Microsoft.Extensions.AI.IChatClient,System.Threading.CancellationToken,System.Collections.Generic.IAsyncEnumerable{Microsoft.Extensions.AI.ChatResponseUpdate}})">
-      <summary>Adds to the chat client pipeline an anonymous delegating chat client based on a delegate that provides
+      <summary>
+            Adds to the chat client pipeline an anonymous delegating chat client based on a delegate that provides
             an implementation for both <see cref="M:Microsoft.Extensions.AI.IChatClient.GetResponseAsync(System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.ChatMessage},Microsoft.Extensions.AI.ChatOptions,System.Threading.CancellationToken)" /> and <see cref="M:Microsoft.Extensions.AI.IChatClient.GetStreamingResponseAsync(System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.ChatMessage},Microsoft.Extensions.AI.ChatOptions,System.Threading.CancellationToken)" />.</summary>
-      <param name="getResponseFunc">A delegate that provides the implementation for <see cref="M:Microsoft.Extensions.AI.IChatClient.GetResponseAsync(System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.ChatMessage},Microsoft.Extensions.AI.ChatOptions,System.Threading.CancellationToken)" />. When <see langword="null" />,
+      <param name="getResponseFunc">
+            A delegate that provides the implementation for <see cref="M:Microsoft.Extensions.AI.IChatClient.GetResponseAsync(System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.ChatMessage},Microsoft.Extensions.AI.ChatOptions,System.Threading.CancellationToken)" />. When <see langword="null" />,
             <paramref name="getStreamingResponseFunc" /> must be non-null, and the implementation of <see cref="M:Microsoft.Extensions.AI.IChatClient.GetResponseAsync(System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.ChatMessage},Microsoft.Extensions.AI.ChatOptions,System.Threading.CancellationToken)" />
             will use <paramref name="getStreamingResponseFunc" /> for the implementation.</param>
-      <param name="getStreamingResponseFunc">A delegate that provides the implementation for <see cref="M:Microsoft.Extensions.AI.IChatClient.GetStreamingResponseAsync(System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.ChatMessage},Microsoft.Extensions.AI.ChatOptions,System.Threading.CancellationToken)" />. When <see langword="null" />,
+      <param name="getStreamingResponseFunc">
+            A delegate that provides the implementation for <see cref="M:Microsoft.Extensions.AI.IChatClient.GetStreamingResponseAsync(System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.ChatMessage},Microsoft.Extensions.AI.ChatOptions,System.Threading.CancellationToken)" />. When <see langword="null" />,
             <paramref name="getResponseFunc" /> must be non-null, and the implementation of <see cref="M:Microsoft.Extensions.AI.IChatClient.GetStreamingResponseAsync(System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.ChatMessage},Microsoft.Extensions.AI.ChatOptions,System.Threading.CancellationToken)" />
             will use <paramref name="getResponseFunc" /> for the implementation.</param>
       <exception cref="T:System.ArgumentNullException">Both <paramref name="getResponseFunc" /> and <paramref name="getStreamingResponseFunc" /> are <see langword="null" />.</exception>
       <returns>The updated <see cref="T:Microsoft.Extensions.AI.ChatClientBuilder" /> instance.</returns>
     </member>
     <member name="M:Microsoft.Extensions.AI.ChatClientBuilder.Use(System.Func{System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.ChatMessage},Microsoft.Extensions.AI.ChatOptions,System.Func{System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.ChatMessage},Microsoft.Extensions.AI.ChatOptions,System.Threading.CancellationToken,System.Threading.Tasks.Task},System.Threading.CancellationToken,System.Threading.Tasks.Task})">
-      <summary>Adds to the chat client pipeline an anonymous delegating chat client based on a delegate that provides
+      <summary>
+            Adds to the chat client pipeline an anonymous delegating chat client based on a delegate that provides
             an implementation for both <see cref="M:Microsoft.Extensions.AI.IChatClient.GetResponseAsync(System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.ChatMessage},Microsoft.Extensions.AI.ChatOptions,System.Threading.CancellationToken)" /> and <see cref="M:Microsoft.Extensions.AI.IChatClient.GetStreamingResponseAsync(System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.ChatMessage},Microsoft.Extensions.AI.ChatOptions,System.Threading.CancellationToken)" />.</summary>
-      <param name="sharedFunc">A delegate that provides the implementation for both <see cref="M:Microsoft.Extensions.AI.IChatClient.GetResponseAsync(System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.ChatMessage},Microsoft.Extensions.AI.ChatOptions,System.Threading.CancellationToken)" /> and
+      <param name="sharedFunc">
+            A delegate that provides the implementation for both <see cref="M:Microsoft.Extensions.AI.IChatClient.GetResponseAsync(System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.ChatMessage},Microsoft.Extensions.AI.ChatOptions,System.Threading.CancellationToken)" /> and
             <see cref="M:Microsoft.Extensions.AI.IChatClient.GetStreamingResponseAsync(System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.ChatMessage},Microsoft.Extensions.AI.ChatOptions,System.Threading.CancellationToken)" />. This delegate is invoked with the list of chat messages, the chat
             options, a delegate that represents invoking the inner client, and a cancellation token. The delegate should be passed
             whatever chat messages, options, and cancellation token should be passed along to the next stage in the pipeline.
@@ -177,7 +189,8 @@
       <returns>The new <see cref="T:Microsoft.Extensions.AI.ChatClientBuilder" /> instance.</returns>
     </member>
     <member name="T:Microsoft.Extensions.AI.ChatClientStructuredOutputExtensions">
-      <summary>Provides extension methods on <see cref="T:Microsoft.Extensions.AI.IChatClient" /> that simplify working with structured output.</summary>
+      <summary>
+            Provides extension methods on <see cref="T:Microsoft.Extensions.AI.IChatClient" /> that simplify working with structured output.</summary>
     </member>
     <member name="M:Microsoft.Extensions.AI.ChatClientStructuredOutputExtensions.GetResponseAsync``1(Microsoft.Extensions.AI.IChatClient,Microsoft.Extensions.AI.ChatMessage,Microsoft.Extensions.AI.ChatOptions,System.Nullable{System.Boolean},System.Threading.CancellationToken)">
       <summary>Sends a chat message, requesting a response matching the type <typeparamref name="T" />.</summary>
@@ -266,13 +279,15 @@
       <param name="serializerOptions">The <see cref="T:System.Text.Json.JsonSerializerOptions" /> to use when deserializing the result.</param>
     </member>
     <member name="M:Microsoft.Extensions.AI.ChatResponse`1.TryGetResult(`0@)">
-      <summary>Attempts to deserialize the result to produce an instance of <typeparamref name="T" />.</summary>
+      <summary>
+            Attempts to deserialize the result to produce an instance of <typeparamref name="T" />.</summary>
       <param name="result">When this method returns, contains the result.</param>
       <returns>
         <see langword="true" /> if the result was produced, otherwise <see langword="false" />.</returns>
     </member>
     <member name="P:Microsoft.Extensions.AI.ChatResponse`1.Result">
-      <summary>Gets the result value of the chat response as an instance of <typeparamref name="T" />.</summary>
+      <summary>
+            Gets the result value of the chat response as an instance of <typeparamref name="T" />.</summary>
     </member>
     <member name="T:Microsoft.Extensions.AI.ConfigureOptionsChatClient">
       <summary>Represents a delegating chat client that configures a <see cref="T:Microsoft.Extensions.AI.ChatOptions" /> instance used by the remainder of the pipeline.</summary>
@@ -280,7 +295,8 @@
     <member name="M:Microsoft.Extensions.AI.ConfigureOptionsChatClient.#ctor(Microsoft.Extensions.AI.IChatClient,System.Action{Microsoft.Extensions.AI.ChatOptions})">
       <summary>Initializes a new instance of the <see cref="T:Microsoft.Extensions.AI.ConfigureOptionsChatClient" /> class with the specified <paramref name="configure" /> callback.</summary>
       <param name="innerClient">The inner client.</param>
-      <param name="configure">The delegate to invoke to configure the <see cref="T:Microsoft.Extensions.AI.ChatOptions" /> instance. It is passed a clone of the caller-supplied <see cref="T:Microsoft.Extensions.AI.ChatOptions" /> instance
+      <param name="configure">
+            The delegate to invoke to configure the <see cref="T:Microsoft.Extensions.AI.ChatOptions" /> instance. It is passed a clone of the caller-supplied <see cref="T:Microsoft.Extensions.AI.ChatOptions" /> instance
             (or a newly constructed instance if the caller-supplied instance is <see langword="null" />).</param>
     </member>
     <member name="M:Microsoft.Extensions.AI.ConfigureOptionsChatClient.GetResponseAsync(System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.ChatMessage},Microsoft.Extensions.AI.ChatOptions,System.Threading.CancellationToken)">
@@ -297,9 +313,11 @@
       <summary>Provides extensions for configuring <see cref="T:Microsoft.Extensions.AI.ConfigureOptionsChatClient" /> instances.</summary>
     </member>
     <member name="M:Microsoft.Extensions.AI.ConfigureOptionsChatClientBuilderExtensions.ConfigureOptions(Microsoft.Extensions.AI.ChatClientBuilder,System.Action{Microsoft.Extensions.AI.ChatOptions})">
-      <summary>Adds a callback that configures a <see cref="T:Microsoft.Extensions.AI.ChatOptions" /> to be passed to the next client in the pipeline.</summary>
+      <summary>
+            Adds a callback that configures a <see cref="T:Microsoft.Extensions.AI.ChatOptions" /> to be passed to the next client in the pipeline.</summary>
       <param name="builder">The <see cref="T:Microsoft.Extensions.AI.ChatClientBuilder" />.</param>
-      <param name="configure">The delegate to invoke to configure the <see cref="T:Microsoft.Extensions.AI.ChatOptions" /> instance.
+      <param name="configure">
+            The delegate to invoke to configure the <see cref="T:Microsoft.Extensions.AI.ChatOptions" /> instance.
             It is passed a clone of the caller-supplied <see cref="T:Microsoft.Extensions.AI.ChatOptions" /> instance (or a newly constructed instance if the caller-supplied instance is <see langword="null" />).</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="configure" /> is <see langword="null" />.</exception>
@@ -311,10 +329,12 @@
       <typeparam name="TEmbedding">The type of the embedding instance produced by the generator.</typeparam>
     </member>
     <member name="M:Microsoft.Extensions.AI.ConfigureOptionsEmbeddingGenerator`2.#ctor(Microsoft.Extensions.AI.IEmbeddingGenerator{`0,`1},System.Action{Microsoft.Extensions.AI.EmbeddingGenerationOptions})">
-      <summary>Initializes a new instance of the <see cref="T:Microsoft.Extensions.AI.ConfigureOptionsEmbeddingGenerator`2" /> class with the
+      <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Extensions.AI.ConfigureOptionsEmbeddingGenerator`2" /> class with the
             specified <paramref name="configure" /> callback.</summary>
       <param name="innerGenerator">The inner generator.</param>
-      <param name="configure">The delegate to invoke to configure the <see cref="T:Microsoft.Extensions.AI.EmbeddingGenerationOptions" /> instance. It is passed a clone of the caller-supplied
+      <param name="configure">
+            The delegate to invoke to configure the <see cref="T:Microsoft.Extensions.AI.EmbeddingGenerationOptions" /> instance. It is passed a clone of the caller-supplied
             <see cref="T:Microsoft.Extensions.AI.EmbeddingGenerationOptions" /> instance (or a newly constructed instance if the caller-supplied instance is <see langword="null" />).</param>
     </member>
     <member name="M:Microsoft.Extensions.AI.ConfigureOptionsEmbeddingGenerator`2.GenerateAsync(System.Collections.Generic.IEnumerable{`0},Microsoft.Extensions.AI.EmbeddingGenerationOptions,System.Threading.CancellationToken)">
@@ -326,9 +346,11 @@
       <summary>Provides extensions for configuring <see cref="T:Microsoft.Extensions.AI.ConfigureOptionsEmbeddingGenerator`2" /> instances.</summary>
     </member>
     <member name="M:Microsoft.Extensions.AI.ConfigureOptionsEmbeddingGeneratorBuilderExtensions.ConfigureOptions``2(Microsoft.Extensions.AI.EmbeddingGeneratorBuilder{``0,``1},System.Action{Microsoft.Extensions.AI.EmbeddingGenerationOptions})">
-      <summary>Adds a callback that configures a <see cref="T:Microsoft.Extensions.AI.EmbeddingGenerationOptions" /> to be passed to the next client in the pipeline.</summary>
+      <summary>
+            Adds a callback that configures a <see cref="T:Microsoft.Extensions.AI.EmbeddingGenerationOptions" /> to be passed to the next client in the pipeline.</summary>
       <param name="builder">The <see cref="T:Microsoft.Extensions.AI.EmbeddingGeneratorBuilder`2" />.</param>
-      <param name="configure">The delegate to invoke to configure the <see cref="T:Microsoft.Extensions.AI.EmbeddingGenerationOptions" /> instance. It is passed a clone of the caller-supplied
+      <param name="configure">
+            The delegate to invoke to configure the <see cref="T:Microsoft.Extensions.AI.EmbeddingGenerationOptions" /> instance. It is passed a clone of the caller-supplied
             <see cref="T:Microsoft.Extensions.AI.EmbeddingGenerationOptions" /> instance (or a new constructed instance if the caller-supplied instance is <see langword="null" />).</param>
       <typeparam name="TInput">The type of the input passed to the generator.</typeparam>
       <typeparam name="TEmbedding">The type of the embedding instance produced by the generator.</typeparam>
@@ -342,7 +364,8 @@
     <member name="M:Microsoft.Extensions.AI.ConfigureOptionsSpeechToTextClient.#ctor(Microsoft.Extensions.AI.ISpeechToTextClient,System.Action{Microsoft.Extensions.AI.SpeechToTextOptions})">
       <summary>Initializes a new instance of the <see cref="T:Microsoft.Extensions.AI.ConfigureOptionsSpeechToTextClient" /> class with the specified <paramref name="configure" /> callback.</summary>
       <param name="innerClient">The inner client.</param>
-      <param name="configure">The delegate to invoke to configure the <see cref="T:Microsoft.Extensions.AI.SpeechToTextOptions" /> instance. It is passed a clone of the caller-supplied <see cref="T:Microsoft.Extensions.AI.SpeechToTextOptions" /> instance
+      <param name="configure">
+            The delegate to invoke to configure the <see cref="T:Microsoft.Extensions.AI.SpeechToTextOptions" /> instance. It is passed a clone of the caller-supplied <see cref="T:Microsoft.Extensions.AI.SpeechToTextOptions" /> instance
             (or a newly constructed instance if the caller-supplied instance is <see langword="null" />).</param>
     </member>
     <member name="M:Microsoft.Extensions.AI.ConfigureOptionsSpeechToTextClient.GetStreamingTextAsync(System.IO.Stream,Microsoft.Extensions.AI.SpeechToTextOptions,System.Threading.CancellationToken)">
@@ -359,14 +382,17 @@
       <summary>Provides extensions for configuring <see cref="T:Microsoft.Extensions.AI.ConfigureOptionsSpeechToTextClient" /> instances.</summary>
     </member>
     <member name="M:Microsoft.Extensions.AI.ConfigureOptionsSpeechToTextClientBuilderExtensions.ConfigureOptions(Microsoft.Extensions.AI.SpeechToTextClientBuilder,System.Action{Microsoft.Extensions.AI.SpeechToTextOptions})">
-      <summary>Adds a callback that configures a <see cref="T:Microsoft.Extensions.AI.SpeechToTextOptions" /> to be passed to the next client in the pipeline.</summary>
+      <summary>
+            Adds a callback that configures a <see cref="T:Microsoft.Extensions.AI.SpeechToTextOptions" /> to be passed to the next client in the pipeline.</summary>
       <param name="builder">The <see cref="T:Microsoft.Extensions.AI.SpeechToTextClientBuilder" />.</param>
-      <param name="configure">The delegate to invoke to configure the <see cref="T:Microsoft.Extensions.AI.SpeechToTextOptions" /> instance.
+      <param name="configure">
+            The delegate to invoke to configure the <see cref="T:Microsoft.Extensions.AI.SpeechToTextOptions" /> instance.
             It is passed a clone of the caller-supplied <see cref="T:Microsoft.Extensions.AI.SpeechToTextOptions" /> instance (or a newly constructed instance if the caller-supplied instance is <see langword="null" />).</param>
       <returns>The <paramref name="builder" />.</returns>
     </member>
     <member name="T:Microsoft.Extensions.AI.DistributedCachingChatClient">
-      <summary>A delegating chat client that caches the results of response calls, storing them as JSON in an <see cref="T:Microsoft.Extensions.Caching.Distributed.IDistributedCache" />.</summary>
+      <summary>
+            A delegating chat client that caches the results of response calls, storing them as JSON in an <see cref="T:Microsoft.Extensions.Caching.Distributed.IDistributedCache" />.</summary>
     </member>
     <member name="M:Microsoft.Extensions.AI.DistributedCachingChatClient.#ctor(Microsoft.Extensions.AI.IChatClient,Microsoft.Extensions.Caching.Distributed.IDistributedCache)">
       <summary>Initializes a new instance of the <see cref="T:Microsoft.Extensions.AI.DistributedCachingChatClient" /> class.</summary>
@@ -414,19 +440,23 @@ This is used when there is a call to <xref data-throw-if-not-resolved="true" uid
       <summary>Gets or sets JSON serialization options to use when serializing cache data.</summary>
     </member>
     <member name="T:Microsoft.Extensions.AI.DistributedCachingChatClientBuilderExtensions">
-      <summary>Extension methods for adding a <see cref="T:Microsoft.Extensions.AI.DistributedCachingChatClient" /> to an <see cref="T:Microsoft.Extensions.AI.IChatClient" /> pipeline.</summary>
+      <summary>
+            Extension methods for adding a <see cref="T:Microsoft.Extensions.AI.DistributedCachingChatClient" /> to an <see cref="T:Microsoft.Extensions.AI.IChatClient" /> pipeline.</summary>
     </member>
     <member name="M:Microsoft.Extensions.AI.DistributedCachingChatClientBuilderExtensions.UseDistributedCache(Microsoft.Extensions.AI.ChatClientBuilder,Microsoft.Extensions.Caching.Distributed.IDistributedCache,System.Action{Microsoft.Extensions.AI.DistributedCachingChatClient})">
-      <summary>Adds a <see cref="T:Microsoft.Extensions.AI.DistributedCachingChatClient" /> as the next stage in the pipeline.</summary>
+      <summary>
+            Adds a <see cref="T:Microsoft.Extensions.AI.DistributedCachingChatClient" /> as the next stage in the pipeline.</summary>
       <param name="builder">The <see cref="T:Microsoft.Extensions.AI.ChatClientBuilder" />.</param>
-      <param name="storage">An optional <see cref="T:Microsoft.Extensions.Caching.Distributed.IDistributedCache" /> instance that will be used as the backing store for the cache. If not supplied, an instance will be resolved from the service provider.</param>
+      <param name="storage">
+            An optional <see cref="T:Microsoft.Extensions.Caching.Distributed.IDistributedCache" /> instance that will be used as the backing store for the cache. If not supplied, an instance will be resolved from the service provider.</param>
       <param name="configure">An optional callback that can be used to configure the <see cref="T:Microsoft.Extensions.AI.DistributedCachingChatClient" /> instance.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="builder" /> is <see langword="null" />.</exception>
       <returns>The <see cref="T:Microsoft.Extensions.AI.ChatClientBuilder" /> provided as <paramref name="builder" />.</returns>
     </member>
     <member name="T:Microsoft.Extensions.AI.DistributedCachingEmbeddingGenerator`2">
-      <summary>Represents a delegating embedding generator that caches the results of embedding generation calls,
+      <summary>
+            Represents a delegating embedding generator that caches the results of embedding generation calls,
             storing them as JSON in an <see cref="T:Microsoft.Extensions.Caching.Distributed.IDistributedCache" />.</summary>
       <typeparam name="TInput">The type from which embeddings will be generated.</typeparam>
       <typeparam name="TEmbedding">The type of embeddings to generate.</typeparam>
@@ -462,13 +492,16 @@ This is used when there is a call to <xref data-throw-if-not-resolved="true" uid
         <paramref name="value" /> is <see langword="null" />.</exception>
     </member>
     <member name="T:Microsoft.Extensions.AI.DistributedCachingEmbeddingGeneratorBuilderExtensions">
-      <summary>Extension methods for adding a <see cref="T:Microsoft.Extensions.AI.DistributedCachingEmbeddingGenerator`2" /> to an
+      <summary>
+            Extension methods for adding a <see cref="T:Microsoft.Extensions.AI.DistributedCachingEmbeddingGenerator`2" /> to an
             <see cref="T:Microsoft.Extensions.AI.IEmbeddingGenerator`2" /> pipeline.</summary>
     </member>
     <member name="M:Microsoft.Extensions.AI.DistributedCachingEmbeddingGeneratorBuilderExtensions.UseDistributedCache``2(Microsoft.Extensions.AI.EmbeddingGeneratorBuilder{``0,``1},Microsoft.Extensions.Caching.Distributed.IDistributedCache,System.Action{Microsoft.Extensions.AI.DistributedCachingEmbeddingGenerator{``0,``1}})">
-      <summary>Adds a <see cref="T:Microsoft.Extensions.AI.DistributedCachingEmbeddingGenerator`2" /> as the next stage in the pipeline.</summary>
+      <summary>
+            Adds a <see cref="T:Microsoft.Extensions.AI.DistributedCachingEmbeddingGenerator`2" /> as the next stage in the pipeline.</summary>
       <param name="builder">The <see cref="T:Microsoft.Extensions.AI.EmbeddingGeneratorBuilder`2" />.</param>
-      <param name="storage">An optional <see cref="T:Microsoft.Extensions.Caching.Distributed.IDistributedCache" /> instance that will be used as the backing store for the cache. If not supplied, an instance will be resolved from the service provider.</param>
+      <param name="storage">
+            An optional <see cref="T:Microsoft.Extensions.Caching.Distributed.IDistributedCache" /> instance that will be used as the backing store for the cache. If not supplied, an instance will be resolved from the service provider.</param>
       <param name="configure">An optional callback that can be used to configure the <see cref="T:Microsoft.Extensions.AI.DistributedCachingEmbeddingGenerator`2" /> instance.</param>
       <typeparam name="TInput">The type from which embeddings will be generated.</typeparam>
       <typeparam name="TEmbedding">The type of embeddings to generate.</typeparam>
@@ -492,8 +525,10 @@ This is used when there is a call to <xref data-throw-if-not-resolved="true" uid
       <param name="innerGeneratorFactory">A callback that produces the inner <see cref="T:Microsoft.Extensions.AI.EmbeddingGeneratorBuilder`2" /> that represents the underlying backend.</param>
     </member>
     <member name="M:Microsoft.Extensions.AI.EmbeddingGeneratorBuilder`2.Build(System.IServiceProvider)">
-      <summary>Builds an <see cref="T:Microsoft.Extensions.AI.IEmbeddingGenerator`2" /> that represents the entire pipeline. Calls to this instance will pass through each of the pipeline stages in turn.</summary>
-      <param name="services">The <see cref="T:System.IServiceProvider" /> that should provide services to the <see cref="T:Microsoft.Extensions.AI.IEmbeddingGenerator`2" /> instances.
+      <summary>
+            Builds an <see cref="T:Microsoft.Extensions.AI.IEmbeddingGenerator`2" /> that represents the entire pipeline. Calls to this instance will pass through each of the pipeline stages in turn.</summary>
+      <param name="services">
+            The <see cref="T:System.IServiceProvider" /> that should provide services to the <see cref="T:Microsoft.Extensions.AI.IEmbeddingGenerator`2" /> instances.
             If <see langword="null" />, an empty <see cref="T:System.IServiceProvider" /> will be used.</param>
       <returns>An instance of <see cref="T:Microsoft.Extensions.AI.IEmbeddingGenerator`2" /> that represents the entire pipeline.</returns>
     </member>
@@ -512,9 +547,11 @@ This is used when there is a call to <xref data-throw-if-not-resolved="true" uid
       <returns>The updated <see cref="T:Microsoft.Extensions.AI.EmbeddingGeneratorBuilder`2" /> instance.</returns>
     </member>
     <member name="M:Microsoft.Extensions.AI.EmbeddingGeneratorBuilder`2.Use(System.Func{System.Collections.Generic.IEnumerable{`0},Microsoft.Extensions.AI.EmbeddingGenerationOptions,Microsoft.Extensions.AI.IEmbeddingGenerator{`0,`1},System.Threading.CancellationToken,System.Threading.Tasks.Task{Microsoft.Extensions.AI.GeneratedEmbeddings{`1}}})">
-      <summary>Adds to the embedding generator pipeline an anonymous delegating embedding generator based on a delegate that provides
+      <summary>
+            Adds to the embedding generator pipeline an anonymous delegating embedding generator based on a delegate that provides
             an implementation for <see cref="M:Microsoft.Extensions.AI.IEmbeddingGenerator`2.GenerateAsync(System.Collections.Generic.IEnumerable{`0},Microsoft.Extensions.AI.EmbeddingGenerationOptions,System.Threading.CancellationToken)" />.</summary>
-      <param name="generateFunc">A delegate that provides the implementation for <see cref="M:Microsoft.Extensions.AI.IEmbeddingGenerator`2.GenerateAsync(System.Collections.Generic.IEnumerable{`0},Microsoft.Extensions.AI.EmbeddingGenerationOptions,System.Threading.CancellationToken)" />.</param>
+      <param name="generateFunc">
+            A delegate that provides the implementation for <see cref="M:Microsoft.Extensions.AI.IEmbeddingGenerator`2.GenerateAsync(System.Collections.Generic.IEnumerable{`0},Microsoft.Extensions.AI.EmbeddingGenerationOptions,System.Threading.CancellationToken)" />.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="generateFunc" /> is <see langword="null" />.</exception>
       <returns>The updated <see cref="T:Microsoft.Extensions.AI.EmbeddingGeneratorBuilder`2" /> instance.</returns>
@@ -524,7 +561,8 @@ This is used when there is a call to <xref data-throw-if-not-resolved="true" uid
             in the context of <see cref="T:Microsoft.Extensions.AI.EmbeddingGeneratorBuilder`2" />.</summary>
     </member>
     <member name="M:Microsoft.Extensions.AI.EmbeddingGeneratorBuilderEmbeddingGeneratorExtensions.AsBuilder``2(Microsoft.Extensions.AI.IEmbeddingGenerator{``0,``1})">
-      <summary>Creates a new <see cref="T:Microsoft.Extensions.AI.EmbeddingGeneratorBuilder`2" /> using
+      <summary>
+            Creates a new <see cref="T:Microsoft.Extensions.AI.EmbeddingGeneratorBuilder`2" /> using
             <paramref name="innerGenerator" /> as its inner generator.</summary>
       <param name="innerGenerator">The generator to use as the inner generator.</param>
       <typeparam name="TInput">The type from which embeddings will be generated.</typeparam>
@@ -555,7 +593,8 @@ This is used when there is a call to <xref data-throw-if-not-resolved="true" uid
       <summary>Gets or sets the total number of function call requests within the iteration.</summary>
     </member>
     <member name="P:Microsoft.Extensions.AI.FunctionInvocationContext.IsStreaming">
-      <summary>Gets or sets a value indicating whether the function invocation is occurring as part of a
+      <summary>
+            Gets or sets a value indicating whether the function invocation is occurring as part of a
             <see cref="M:Microsoft.Extensions.AI.IChatClient.GetStreamingResponseAsync(System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.ChatMessage},Microsoft.Extensions.AI.ChatOptions,System.Threading.CancellationToken)" /> call as opposed to a <see cref="M:Microsoft.Extensions.AI.IChatClient.GetResponseAsync(System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.ChatMessage},Microsoft.Extensions.AI.ChatOptions,System.Threading.CancellationToken)" /> call.</summary>
     </member>
     <member name="P:Microsoft.Extensions.AI.FunctionInvocationContext.Iteration">
@@ -571,11 +610,13 @@ This is used when there is a call to <xref data-throw-if-not-resolved="true" uid
       <summary>Gets or sets a value indicating whether to terminate the request.</summary>
     </member>
     <member name="T:Microsoft.Extensions.AI.FunctionInvokingChatClient">
-      <summary>A delegating chat client that invokes functions defined on <see cref="T:Microsoft.Extensions.AI.ChatOptions" />.
+      <summary>
+            A delegating chat client that invokes functions defined on <see cref="T:Microsoft.Extensions.AI.ChatOptions" />.
             Include this in a chat pipeline to resolve function calls automatically.</summary>
     </member>
     <member name="M:Microsoft.Extensions.AI.FunctionInvokingChatClient.#ctor(Microsoft.Extensions.AI.IChatClient,Microsoft.Extensions.Logging.ILoggerFactory,System.IServiceProvider)">
-      <summary>Initializes a new instance of the <see cref="T:Microsoft.Extensions.AI.FunctionInvokingChatClient" /> class.</summary>
+      <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Extensions.AI.FunctionInvokingChatClient" /> class.</summary>
       <param name="innerClient">The underlying <see cref="T:Microsoft.Extensions.AI.IChatClient" />, or the next instance in a chain of clients.</param>
       <param name="loggerFactory">An <see cref="T:Microsoft.Extensions.Logging.ILoggerFactory" /> to use for logging information about function invocation.</param>
       <param name="functionInvocationServices">An optional <see cref="T:System.IServiceProvider" /> to use for resolving services required by the <see cref="T:Microsoft.Extensions.AI.AIFunction" /> instances being invoked.</param>
@@ -587,16 +628,16 @@ This is used when there is a call to <xref data-throw-if-not-resolved="true" uid
     </member>
     <member name="M:Microsoft.Extensions.AI.FunctionInvokingChatClient.GetResponseAsync(System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.ChatMessage},Microsoft.Extensions.AI.ChatOptions,System.Threading.CancellationToken)">
       <summary>Sends chat messages and returns the response.</summary>
-      <param name="messages">The sequence of chat messages to send.</param>
-      <param name="options">The chat options with which to configure the request.</param>
-      <param name="cancellationToken">The <xref data-throw-if-not-resolved="true" uid="System.Threading.CancellationToken"></xref> to monitor for cancellation requests. The default is <xref data-throw-if-not-resolved="true" uid="System.Threading.CancellationToken.None"></xref>.</param>
+      <param name="messages" />
+      <param name="options" />
+      <param name="cancellationToken" />
       <returns>The response messages generated by the client.</returns>
     </member>
     <member name="M:Microsoft.Extensions.AI.FunctionInvokingChatClient.GetStreamingResponseAsync(System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.ChatMessage},Microsoft.Extensions.AI.ChatOptions,System.Threading.CancellationToken)">
       <summary>Sends chat messages and streams the response.</summary>
-      <param name="messages">The sequence of chat messages to send.</param>
-      <param name="options">The chat options with which to configure the request.</param>
-      <param name="cancellationToken">The <xref data-throw-if-not-resolved="true" uid="System.Threading.CancellationToken"></xref> to monitor for cancellation requests. The default is <xref data-throw-if-not-resolved="true" uid="System.Threading.CancellationToken.None"></xref>.</param>
+      <param name="messages" />
+      <param name="options" />
+      <param name="cancellationToken" />
       <returns>The response messages generated by the client.</returns>
     </member>
     <member name="M:Microsoft.Extensions.AI.FunctionInvokingChatClient.InvokeFunctionAsync(Microsoft.Extensions.AI.FunctionInvocationContext,System.Threading.CancellationToken)">
@@ -608,20 +649,23 @@ This is used when there is a call to <xref data-throw-if-not-resolved="true" uid
       <returns>The function result.</returns>
     </member>
     <member name="P:Microsoft.Extensions.AI.FunctionInvokingChatClient.AllowConcurrentInvocation">
-      <summary>Gets or sets a value indicating whether to allow concurrent invocation of functions.</summary>
+      <summary>
+            Gets or sets a value indicating whether to allow concurrent invocation of functions.</summary>
       <returns>
         <see langword="true" /> if multiple function calls can execute in parallel.
             <see langword="false" /> if function calls are processed serially.
             The default value is <see langword="false" />.</returns>
     </member>
     <member name="P:Microsoft.Extensions.AI.FunctionInvokingChatClient.CurrentContext">
-      <summary>Gets or sets the <see cref="T:Microsoft.Extensions.AI.FunctionInvocationContext" /> for the current function invocation.</summary>
+      <summary>
+            Gets or sets the <see cref="T:Microsoft.Extensions.AI.FunctionInvocationContext" /> for the current function invocation.</summary>
     </member>
     <member name="P:Microsoft.Extensions.AI.FunctionInvokingChatClient.FunctionInvocationServices">
       <summary>Gets the <see cref="T:System.IServiceProvider" /> specified when constructing the <see cref="T:Microsoft.Extensions.AI.FunctionInvokingChatClient" />, if any.</summary>
     </member>
     <member name="P:Microsoft.Extensions.AI.FunctionInvokingChatClient.IncludeDetailedErrors">
-      <summary>Gets or sets a value indicating whether detailed exception information should be included
+      <summary>
+            Gets or sets a value indicating whether detailed exception information should be included
             in the chat history when calling the underlying <see cref="T:Microsoft.Extensions.AI.IChatClient" />.</summary>
       <returns>
         <see langword="true" /> if the full exception message is added to the chat history
@@ -630,13 +674,17 @@ This is used when there is a call to <xref data-throw-if-not-resolved="true" uid
             The default value is <see langword="false" />.</returns>
     </member>
     <member name="P:Microsoft.Extensions.AI.FunctionInvokingChatClient.MaximumConsecutiveErrorsPerRequest">
-      <summary>Gets or sets the maximum number of consecutive iterations that are allowed to fail with an error.</summary>
-      <returns>The maximum number of consecutive iterations that are allowed to fail with an error.
+      <summary>
+            Gets or sets the maximum number of consecutive iterations that are allowed to fail with an error.</summary>
+      <returns>
+            The maximum number of consecutive iterations that are allowed to fail with an error.
             The default value is 3.</returns>
     </member>
     <member name="P:Microsoft.Extensions.AI.FunctionInvokingChatClient.MaximumIterationsPerRequest">
-      <summary>Gets or sets the maximum number of iterations per request.</summary>
-      <returns>The maximum number of iterations per request.
+      <summary>
+            Gets or sets the maximum number of iterations per request.</summary>
+      <returns>
+            The maximum number of iterations per request.
             The default value is 10.</returns>
     </member>
     <member name="T:Microsoft.Extensions.AI.FunctionInvokingChatClient.FunctionInvocationResult">
@@ -670,10 +718,12 @@ This is used when there is a call to <xref data-throw-if-not-resolved="true" uid
       <summary>The operation completed successfully.</summary>
     </member>
     <member name="T:Microsoft.Extensions.AI.FunctionInvokingChatClientBuilderExtensions">
-      <summary>Provides extension methods for attaching a <see cref="T:Microsoft.Extensions.AI.FunctionInvokingChatClient" /> to a chat pipeline.</summary>
+      <summary>
+            Provides extension methods for attaching a <see cref="T:Microsoft.Extensions.AI.FunctionInvokingChatClient" /> to a chat pipeline.</summary>
     </member>
     <member name="M:Microsoft.Extensions.AI.FunctionInvokingChatClientBuilderExtensions.UseFunctionInvocation(Microsoft.Extensions.AI.ChatClientBuilder,Microsoft.Extensions.Logging.ILoggerFactory,System.Action{Microsoft.Extensions.AI.FunctionInvokingChatClient})">
-      <summary>Enables automatic function call invocation on the chat pipeline.</summary>
+      <summary>
+            Enables automatic function call invocation on the chat pipeline.</summary>
       <param name="builder">The <see cref="T:Microsoft.Extensions.AI.ChatClientBuilder" /> being used to build the chat pipeline.</param>
       <param name="loggerFactory">An optional <see cref="T:Microsoft.Extensions.Logging.ILoggerFactory" /> to use to create a logger for logging function invocations.</param>
       <param name="configure">An optional callback that can be used to configure the <see cref="T:Microsoft.Extensions.AI.FunctionInvokingChatClient" /> instance.</param>
@@ -691,16 +741,16 @@ This is used when there is a call to <xref data-throw-if-not-resolved="true" uid
     </member>
     <member name="M:Microsoft.Extensions.AI.LoggingChatClient.GetResponseAsync(System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.ChatMessage},Microsoft.Extensions.AI.ChatOptions,System.Threading.CancellationToken)">
       <summary>Sends chat messages and returns the response.</summary>
-      <param name="messages">The sequence of chat messages to send.</param>
-      <param name="options">The chat options with which to configure the request.</param>
-      <param name="cancellationToken">The <xref data-throw-if-not-resolved="true" uid="System.Threading.CancellationToken"></xref> to monitor for cancellation requests. The default is <xref data-throw-if-not-resolved="true" uid="System.Threading.CancellationToken.None"></xref>.</param>
+      <param name="messages" />
+      <param name="options" />
+      <param name="cancellationToken" />
       <returns>The response messages generated by the client.</returns>
     </member>
     <member name="M:Microsoft.Extensions.AI.LoggingChatClient.GetStreamingResponseAsync(System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.ChatMessage},Microsoft.Extensions.AI.ChatOptions,System.Threading.CancellationToken)">
       <summary>Sends chat messages and streams the response.</summary>
-      <param name="messages">The sequence of chat messages to send.</param>
-      <param name="options">The chat options with which to configure the request.</param>
-      <param name="cancellationToken">The <xref data-throw-if-not-resolved="true" uid="System.Threading.CancellationToken"></xref> to monitor for cancellation requests. The default is <xref data-throw-if-not-resolved="true" uid="System.Threading.CancellationToken.None"></xref>.</param>
+      <param name="messages" />
+      <param name="options" />
+      <param name="cancellationToken" />
       <returns>The response messages generated by the client.</returns>
     </member>
     <member name="P:Microsoft.Extensions.AI.LoggingChatClient.JsonSerializerOptions">
@@ -712,7 +762,8 @@ This is used when there is a call to <xref data-throw-if-not-resolved="true" uid
     <member name="M:Microsoft.Extensions.AI.LoggingChatClientBuilderExtensions.UseLogging(Microsoft.Extensions.AI.ChatClientBuilder,Microsoft.Extensions.Logging.ILoggerFactory,System.Action{Microsoft.Extensions.AI.LoggingChatClient})">
       <summary>Adds logging to the chat client pipeline.</summary>
       <param name="builder">The <see cref="T:Microsoft.Extensions.AI.ChatClientBuilder" />.</param>
-      <param name="loggerFactory">An optional <see cref="T:Microsoft.Extensions.Logging.ILoggerFactory" /> used to create a logger with which logging should be performed.
+      <param name="loggerFactory">
+            An optional <see cref="T:Microsoft.Extensions.Logging.ILoggerFactory" /> used to create a logger with which logging should be performed.
             If not supplied, a required instance will be resolved from the service provider.</param>
       <param name="configure">An optional callback that can be used to configure the <see cref="T:Microsoft.Extensions.AI.LoggingChatClient" /> instance.</param>
       <exception cref="T:System.ArgumentNullException">
@@ -731,9 +782,9 @@ This is used when there is a call to <xref data-throw-if-not-resolved="true" uid
     </member>
     <member name="M:Microsoft.Extensions.AI.LoggingEmbeddingGenerator`2.GenerateAsync(System.Collections.Generic.IEnumerable{`0},Microsoft.Extensions.AI.EmbeddingGenerationOptions,System.Threading.CancellationToken)">
       <summary>Generates embeddings for each of the supplied <code data-dev-comment-type="paramref">values</code>.</summary>
-      <param name="values">The sequence of values for which to generate embeddings.</param>
-      <param name="options">The embedding generation options with which to configure the request.</param>
-      <param name="cancellationToken">The <xref data-throw-if-not-resolved="true" uid="System.Threading.CancellationToken"></xref> to monitor for cancellation requests. The default is <xref data-throw-if-not-resolved="true" uid="System.Threading.CancellationToken.None"></xref>.</param>
+      <param name="values" />
+      <param name="options" />
+      <param name="cancellationToken" />
       <returns>The generated embeddings.</returns>
     </member>
     <member name="P:Microsoft.Extensions.AI.LoggingEmbeddingGenerator`2.JsonSerializerOptions">
@@ -745,7 +796,8 @@ This is used when there is a call to <xref data-throw-if-not-resolved="true" uid
     <member name="M:Microsoft.Extensions.AI.LoggingEmbeddingGeneratorBuilderExtensions.UseLogging``2(Microsoft.Extensions.AI.EmbeddingGeneratorBuilder{``0,``1},Microsoft.Extensions.Logging.ILoggerFactory,System.Action{Microsoft.Extensions.AI.LoggingEmbeddingGenerator{``0,``1}})">
       <summary>Adds logging to the embedding generator pipeline.</summary>
       <param name="builder">The <see cref="T:Microsoft.Extensions.AI.EmbeddingGeneratorBuilder`2" />.</param>
-      <param name="loggerFactory">An optional <see cref="T:Microsoft.Extensions.Logging.ILoggerFactory" /> used to create a logger with which logging should be performed.
+      <param name="loggerFactory">
+            An optional <see cref="T:Microsoft.Extensions.Logging.ILoggerFactory" /> used to create a logger with which logging should be performed.
             If not supplied, a required instance will be resolved from the service provider.</param>
       <param name="configure">An optional callback that can be used to configure the <see cref="T:Microsoft.Extensions.AI.LoggingEmbeddingGenerator`2" /> instance.</param>
       <typeparam name="TInput">Specifies the type of the input passed to the generator.</typeparam>
@@ -764,16 +816,16 @@ This is used when there is a call to <xref data-throw-if-not-resolved="true" uid
     </member>
     <member name="M:Microsoft.Extensions.AI.LoggingSpeechToTextClient.GetStreamingTextAsync(System.IO.Stream,Microsoft.Extensions.AI.SpeechToTextOptions,System.Threading.CancellationToken)">
       <summary>Sends audio speech content to the model and streams back the generated text.</summary>
-      <param name="audioSpeechStream">The audio speech stream to send.</param>
-      <param name="options">The speech to text options to configure the request.</param>
-      <param name="cancellationToken">The <xref data-throw-if-not-resolved="true" uid="System.Threading.CancellationToken"></xref> to monitor for cancellation requests. The default is <xref data-throw-if-not-resolved="true" uid="System.Threading.CancellationToken.None"></xref>.</param>
+      <param name="audioSpeechStream" />
+      <param name="options" />
+      <param name="cancellationToken" />
       <returns>The text updates representing the streamed output.</returns>
     </member>
     <member name="M:Microsoft.Extensions.AI.LoggingSpeechToTextClient.GetTextAsync(System.IO.Stream,Microsoft.Extensions.AI.SpeechToTextOptions,System.Threading.CancellationToken)">
       <summary>Sends audio speech content to the model and returns the generated text.</summary>
-      <param name="audioSpeechStream">The audio speech stream to send.</param>
-      <param name="options">The speech to text options to configure the request.</param>
-      <param name="cancellationToken">The <xref data-throw-if-not-resolved="true" uid="System.Threading.CancellationToken"></xref> to monitor for cancellation requests. The default is <xref data-throw-if-not-resolved="true" uid="System.Threading.CancellationToken.None"></xref>.</param>
+      <param name="audioSpeechStream" />
+      <param name="options" />
+      <param name="cancellationToken" />
       <returns>The text generated.</returns>
     </member>
     <member name="P:Microsoft.Extensions.AI.LoggingSpeechToTextClient.JsonSerializerOptions">
@@ -785,7 +837,8 @@ This is used when there is a call to <xref data-throw-if-not-resolved="true" uid
     <member name="M:Microsoft.Extensions.AI.LoggingSpeechToTextClientBuilderExtensions.UseLogging(Microsoft.Extensions.AI.SpeechToTextClientBuilder,Microsoft.Extensions.Logging.ILoggerFactory,System.Action{Microsoft.Extensions.AI.LoggingSpeechToTextClient})">
       <summary>Adds logging to the audio transcription client pipeline.</summary>
       <param name="builder">The <see cref="T:Microsoft.Extensions.AI.SpeechToTextClientBuilder" />.</param>
-      <param name="loggerFactory">An optional <see cref="T:Microsoft.Extensions.Logging.ILoggerFactory" /> used to create a logger with which logging should be performed.
+      <param name="loggerFactory">
+            An optional <see cref="T:Microsoft.Extensions.Logging.ILoggerFactory" /> used to create a logger with which logging should be performed.
             If not supplied, a required instance will be resolved from the service provider.</param>
       <param name="configure">An optional callback that can be used to configure the <see cref="T:Microsoft.Extensions.AI.LoggingSpeechToTextClient" /> instance.</param>
       <returns>The <paramref name="builder" />.</returns>
@@ -801,26 +854,27 @@ This is used when there is a call to <xref data-throw-if-not-resolved="true" uid
     </member>
     <member name="M:Microsoft.Extensions.AI.OpenTelemetryChatClient.GetResponseAsync(System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.ChatMessage},Microsoft.Extensions.AI.ChatOptions,System.Threading.CancellationToken)">
       <summary>Sends chat messages and returns the response.</summary>
-      <param name="messages">The sequence of chat messages to send.</param>
-      <param name="options">The chat options with which to configure the request.</param>
-      <param name="cancellationToken">The <xref data-throw-if-not-resolved="true" uid="System.Threading.CancellationToken"></xref> to monitor for cancellation requests. The default is <xref data-throw-if-not-resolved="true" uid="System.Threading.CancellationToken.None"></xref>.</param>
+      <param name="messages" />
+      <param name="options" />
+      <param name="cancellationToken" />
       <returns>The response messages generated by the client.</returns>
     </member>
     <member name="M:Microsoft.Extensions.AI.OpenTelemetryChatClient.GetService(System.Type,System.Object)">
       <summary>Asks the <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.AI.IChatClient"></xref> for an object of the specified type <code data-dev-comment-type="paramref">serviceType</code>.</summary>
-      <param name="serviceType">The type of object being requested.</param>
-      <param name="serviceKey">An optional key that can be used to help identify the target service.</param>
+      <param name="serviceType" />
+      <param name="serviceKey" />
       <returns>The found object, otherwise <code data-dev-comment-type="langword">null</code>.</returns>
     </member>
     <member name="M:Microsoft.Extensions.AI.OpenTelemetryChatClient.GetStreamingResponseAsync(System.Collections.Generic.IEnumerable{Microsoft.Extensions.AI.ChatMessage},Microsoft.Extensions.AI.ChatOptions,System.Threading.CancellationToken)">
       <summary>Sends chat messages and streams the response.</summary>
-      <param name="messages">The sequence of chat messages to send.</param>
-      <param name="options">The chat options with which to configure the request.</param>
-      <param name="cancellationToken">The <xref data-throw-if-not-resolved="true" uid="System.Threading.CancellationToken"></xref> to monitor for cancellation requests. The default is <xref data-throw-if-not-resolved="true" uid="System.Threading.CancellationToken.None"></xref>.</param>
+      <param name="messages" />
+      <param name="options" />
+      <param name="cancellationToken" />
       <returns>The response messages generated by the client.</returns>
     </member>
     <member name="P:Microsoft.Extensions.AI.OpenTelemetryChatClient.EnableSensitiveData">
-      <summary>Gets or sets a value indicating whether potentially sensitive information should be included in telemetry.</summary>
+      <summary>
+            Gets or sets a value indicating whether potentially sensitive information should be included in telemetry.</summary>
       <returns>
         <see langword="true" /> if potentially sensitive information should be included in telemetry;
             <see langword="false" /> if telemetry shouldn't include raw inputs and outputs.
@@ -833,7 +887,8 @@ This is used when there is a call to <xref data-throw-if-not-resolved="true" uid
       <summary>Provides extensions for configuring <see cref="T:Microsoft.Extensions.AI.OpenTelemetryChatClient" /> instances.</summary>
     </member>
     <member name="M:Microsoft.Extensions.AI.OpenTelemetryChatClientBuilderExtensions.UseOpenTelemetry(Microsoft.Extensions.AI.ChatClientBuilder,Microsoft.Extensions.Logging.ILoggerFactory,System.String,System.Action{Microsoft.Extensions.AI.OpenTelemetryChatClient})">
-      <summary>Adds OpenTelemetry support to the chat client pipeline, following the OpenTelemetry Semantic Conventions for Generative AI systems.</summary>
+      <summary>
+            Adds OpenTelemetry support to the chat client pipeline, following the OpenTelemetry Semantic Conventions for Generative AI systems.</summary>
       <param name="builder">The <see cref="T:Microsoft.Extensions.AI.ChatClientBuilder" />.</param>
       <param name="loggerFactory">An optional <see cref="T:Microsoft.Extensions.Logging.ILoggerFactory" /> to use to create a logger for logging events.</param>
       <param name="sourceName">An optional source name that will be used on the telemetry data.</param>
@@ -846,26 +901,28 @@ This is used when there is a call to <xref data-throw-if-not-resolved="true" uid
       <typeparam name="TEmbedding">The type of embedding generated.</typeparam>
     </member>
     <member name="M:Microsoft.Extensions.AI.OpenTelemetryEmbeddingGenerator`2.#ctor(Microsoft.Extensions.AI.IEmbeddingGenerator{`0,`1},Microsoft.Extensions.Logging.ILogger,System.String)">
-      <summary>Initializes a new instance of the <see cref="T:Microsoft.Extensions.AI.OpenTelemetryEmbeddingGenerator`2" /> class.</summary>
+      <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Extensions.AI.OpenTelemetryEmbeddingGenerator`2" /> class.</summary>
       <param name="innerGenerator">The underlying <see cref="T:Microsoft.Extensions.AI.IEmbeddingGenerator`2" />, which is the next stage of the pipeline.</param>
       <param name="logger">The <see cref="T:Microsoft.Extensions.Logging.ILogger" /> to use for emitting events.</param>
       <param name="sourceName">An optional source name that will be used on the telemetry data.</param>
     </member>
     <member name="M:Microsoft.Extensions.AI.OpenTelemetryEmbeddingGenerator`2.GenerateAsync(System.Collections.Generic.IEnumerable{`0},Microsoft.Extensions.AI.EmbeddingGenerationOptions,System.Threading.CancellationToken)">
       <summary>Generates embeddings for each of the supplied <code data-dev-comment-type="paramref">values</code>.</summary>
-      <param name="values">The sequence of values for which to generate embeddings.</param>
-      <param name="options">The embedding generation options with which to configure the request.</param>
-      <param name="cancellationToken">The <xref data-throw-if-not-resolved="true" uid="System.Threading.CancellationToken"></xref> to monitor for cancellation requests. The default is <xref data-throw-if-not-resolved="true" uid="System.Threading.CancellationToken.None"></xref>.</param>
+      <param name="values" />
+      <param name="options" />
+      <param name="cancellationToken" />
       <returns>The generated embeddings.</returns>
     </member>
     <member name="M:Microsoft.Extensions.AI.OpenTelemetryEmbeddingGenerator`2.GetService(System.Type,System.Object)">
       <summary>Asks the <xref data-throw-if-not-resolved="true" uid="Microsoft.Extensions.AI.IEmbeddingGenerator`2"></xref> for an object of the specified type <code data-dev-comment-type="paramref">serviceType</code>.</summary>
-      <param name="serviceType">The type of object being requested.</param>
-      <param name="serviceKey">An optional key that can be used to help identify the target service.</param>
+      <param name="serviceType" />
+      <param name="serviceKey" />
       <returns>The found object, otherwise <code data-dev-comment-type="langword">null</code>.</returns>
     </member>
     <member name="P:Microsoft.Extensions.AI.OpenTelemetryEmbeddingGenerator`2.EnableSensitiveData">
-      <summary>Gets or sets a value indicating whether potentially sensitive information should be included in telemetry.</summary>
+      <summary>
+            Gets or sets a value indicating whether potentially sensitive information should be included in telemetry.</summary>
       <returns>
         <see langword="true" /> if potentially sensitive information should be included in telemetry;
             <see langword="false" /> if telemetry shouldn't include raw inputs and outputs.
@@ -875,7 +932,8 @@ This is used when there is a call to <xref data-throw-if-not-resolved="true" uid
       <summary>Provides extensions for configuring <see cref="T:Microsoft.Extensions.AI.OpenTelemetryEmbeddingGenerator`2" /> instances.</summary>
     </member>
     <member name="M:Microsoft.Extensions.AI.OpenTelemetryEmbeddingGeneratorBuilderExtensions.UseOpenTelemetry``2(Microsoft.Extensions.AI.EmbeddingGeneratorBuilder{``0,``1},Microsoft.Extensions.Logging.ILoggerFactory,System.String,System.Action{Microsoft.Extensions.AI.OpenTelemetryEmbeddingGenerator{``0,``1}})">
-      <summary>Adds OpenTelemetry support to the embedding generator pipeline, following the OpenTelemetry Semantic Conventions for Generative AI systems.</summary>
+      <summary>
+            Adds OpenTelemetry support to the embedding generator pipeline, following the OpenTelemetry Semantic Conventions for Generative AI systems.</summary>
       <param name="builder">The <see cref="T:Microsoft.Extensions.AI.EmbeddingGeneratorBuilder`2" />.</param>
       <param name="loggerFactory">An optional <see cref="T:Microsoft.Extensions.Logging.ILoggerFactory" /> to use to create a logger for logging events.</param>
       <param name="sourceName">An optional source name that will be used on the telemetry data.</param>
@@ -897,7 +955,8 @@ This is used when there is a call to <xref data-throw-if-not-resolved="true" uid
     </member>
     <member name="M:Microsoft.Extensions.AI.SpeechToTextClientBuilder.Build(System.IServiceProvider)">
       <summary>Builds an <see cref="T:Microsoft.Extensions.AI.ISpeechToTextClient" /> that represents the entire pipeline. Calls to this instance will pass through each of the pipeline stages in turn.</summary>
-      <param name="services">The <see cref="T:System.IServiceProvider" /> that should provide services to the <see cref="T:Microsoft.Extensions.AI.ISpeechToTextClient" /> instances.
+      <param name="services">
+            The <see cref="T:System.IServiceProvider" /> that should provide services to the <see cref="T:Microsoft.Extensions.AI.ISpeechToTextClient" /> instances.
             If null, an empty <see cref="T:System.IServiceProvider" /> will be used.</param>
       <returns>An instance of <see cref="T:Microsoft.Extensions.AI.ISpeechToTextClient" /> that represents the entire pipeline.</returns>
     </member>

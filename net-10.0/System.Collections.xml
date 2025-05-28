@@ -291,7 +291,7 @@
       <exception cref="T:System.ArgumentException">Type <code>T</code> does not implement either the <see cref="T:System.IComparable`1" /> generic interface or the <see cref="T:System.IComparable" /> interface.</exception>
       <returns>A signed integer that indicates the relative values of <paramref name="x" /> and <paramref name="y" />, as shown in the following table.
 
- <list type="table"><listheader><term>Value</term><description>Meaning</description></listheader><item><term>Less than zero</term><description><paramref name="x" /> is less than <paramref name="y" />.</description></item><item><term>Zero</term><description><paramref name="x" /> equals <paramref name="y" />.</description></item><item><term>Greater than zero</term><description><paramref name="x" /> is greater than <paramref name="y" />.</description></item></list></returns>
+ <list type="table"><listheader><term> Value</term><description> Meaning</description></listheader><item><term> Less than zero</term><description><paramref name="x" /> is less than <paramref name="y" />.</description></item><item><term> Zero</term><description><paramref name="x" /> equals <paramref name="y" />.</description></item><item><term> Greater than zero</term><description><paramref name="x" /> is greater than <paramref name="y" />.</description></item></list></returns>
     </member>
     <member name="M:System.Collections.Generic.Comparer`1.Create(System.Comparison{`0})">
       <summary>Creates a comparer by using the specified comparison.</summary>
@@ -310,7 +310,7 @@
  <paramref name="x" /> and <paramref name="y" /> do not implement either the <see cref="T:System.IComparable`1" /> generic interface or the <see cref="T:System.IComparable" /> interface.</exception>
       <returns>A signed integer that indicates the relative values of <paramref name="x" /> and <paramref name="y" />, as shown in the following table.
 
- <list type="table"><listheader><term>Value</term><description>Meaning</description></listheader><item><term>Less than zero</term><description><paramref name="x" /> is less than <paramref name="y" />.</description></item><item><term>Zero</term><description><paramref name="x" /> equals <paramref name="y" />.</description></item><item><term>Greater than zero</term><description><paramref name="x" /> is greater than <paramref name="y" />.</description></item></list></returns>
+ <list type="table"><listheader><term> Value</term><description> Meaning</description></listheader><item><term> Less than zero</term><description><paramref name="x" /> is less than <paramref name="y" />.</description></item><item><term> Zero</term><description><paramref name="x" /> equals <paramref name="y" />.</description></item><item><term> Greater than zero</term><description><paramref name="x" /> is greater than <paramref name="y" />.</description></item></list></returns>
     </member>
     <member name="P:System.Collections.Generic.Comparer`1.Default">
       <summary>Returns a default sort-order comparer for the type specified by the generic argument.</summary>
@@ -2674,7 +2674,7 @@
     <member name="P:System.Collections.Generic.OrderedDictionary`2.System#Collections#IDictionary#Item(System.Object)">
       <summary>Gets or sets the element with the specified key.</summary>
       <param name="key">The key of the element to get or set.</param>
-      <returns>The element with the specified key, or <code data-dev-comment-type="langword">null</code> if the key does not exist.</returns>
+      <returns>The element with the specified key, or <see langword="null" /> if the key does not exist.</returns>
     </member>
     <member name="P:System.Collections.Generic.OrderedDictionary`2.System#Collections#IDictionary#Keys">
       <summary>Gets an <see cref="T:System.Collections.ICollection" /> object containing the keys of the <see cref="T:System.Collections.IDictionary" /> object.</summary>
@@ -4721,7 +4721,7 @@
     <member name="P:System.Collections.Generic.Stack`1.System#Collections#ICollection#IsSynchronized">
       <summary>Gets a value indicating whether access to the <see cref="T:System.Collections.ICollection" /> is synchronized (thread safe).</summary>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if access to the <xref data-throw-if-not-resolved="true" uid="System.Collections.ICollection"></xref> is synchronized (thread safe); otherwise, <code data-dev-comment-type="langword">false</code>.  In the default implementation of <xref data-throw-if-not-resolved="true" uid="System.Collections.Generic.Stack`1"></xref>, this property always returns <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if access to the <see cref="T:System.Collections.ICollection" /> is synchronized (thread safe); otherwise, <see langword="false" />.  In the default implementation of <see cref="T:System.Collections.Generic.Stack`1" />, this property always returns <see langword="false" />.</returns>
     </member>
     <member name="P:System.Collections.Generic.Stack`1.System#Collections#ICollection#SyncRoot">
       <summary>Gets an object that can be used to synchronize access to the <see cref="T:System.Collections.ICollection" />.</summary>

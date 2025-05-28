@@ -403,7 +403,7 @@
     <member name="P:System.Net.Quic.QuicStream.CanRead">
       <summary>Gets a value indicating whether the <see cref="T:System.Net.Quic.QuicStream" /> supports reading.</summary>
       <returns>
-        <code data-dev-comment-type="langword">true</code> if the stream supports reading; otherwise, <code data-dev-comment-type="langword">false</code>.</returns>
+        <see langword="true" /> if the stream supports reading; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="P:System.Net.Quic.QuicStream.CanSeek">
       <summary>Gets a value indicating whether the <see cref="T:System.Net.Quic.QuicStream" /> supports seeking.</summary>

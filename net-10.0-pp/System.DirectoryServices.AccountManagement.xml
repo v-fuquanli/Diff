@@ -165,7 +165,8 @@
     </member>
     <member name="M:System.DirectoryServices.AccountManagement.AuthenticablePrincipal.UnlockAccount">
       <summary>Unlocks the account if it is currently locked out.</summary>
-      <exception cref="T:System.DirectoryServices.AccountManagement.PrincipalOperationException">The caller does not have appropriate rights.
+      <exception cref="T:System.DirectoryServices.AccountManagement.PrincipalOperationException">
+          The caller does not have appropriate rights.
 
 -or-
 
@@ -1322,7 +1323,7 @@ Caution: Communications may be sent over the Internet in clear text if the Secur
       <summary>Returns a bool indicating whether the specified object is in the collection.</summary>
       <param name="value">An object.</param>
       <returns>
-        <see langword="boolean" />
+        <code data-dev-comment-type="langword">boolean</code>
       </returns>
     </member>
     <member name="M:System.DirectoryServices.AccountManagement.PrincipalValueCollection`1.System#Collections#IList#IndexOf(System.Object)">

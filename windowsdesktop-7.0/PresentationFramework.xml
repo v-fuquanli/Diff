@@ -13400,7 +13400,7 @@
       <param name="parameter">This parameter is not used.</param>
       <param name="culture">This parameter is not used.</param>
       <returns>
-        <see cref="F:System.Windows.Data.Binding.DoNothing" />
+        <xref data-throw-if-not-resolved="true" uid="System.Windows.Data.Binding.DoNothing"></xref>
       </returns>
     </member>
     <member name="T:System.Windows.Controls.NotifyDataErrorValidationRule">
@@ -22003,7 +22003,7 @@
       <summary>Gets the estimated number of records in the collection.</summary>
       <returns>One of the following:  
   
- <list type="table"><listheader><term>Value</term><description>Meaning</description></listheader><item><term>-1</term><description>Could not determine the count of the collection. This might be returned by a "virtualizing" view, where the view deliberately does not account for all items in the underlying collection because the view is attempting to increase efficiency and minimize dependence on always having the entire collection available.</description></item><item><term>any other integer</term><description>The count of the collection.</description></item></list></returns>
+ <list type="table"><listheader><term> Value</term><description> Meaning</description></listheader><item><term> -1</term><description> Could not determine the count of the collection. This might be returned by a "virtualizing" view, where the view deliberately does not account for all items in the underlying collection because the view is attempting to increase efficiency and minimize dependence on always having the entire collection available.</description></item><item><term> any other integer</term><description> The count of the collection.</description></item></list></returns>
     </member>
     <member name="P:System.Windows.Data.BindingListCollectionView.CurrentAddItem">
       <summary>Gets the item that is being added during the current add transaction.</summary>
@@ -23229,7 +23229,7 @@
       <summary>Gets the estimated number of records.</summary>
       <returns>One of the following:  
   
- <list type="table"><listheader><term>Value</term><description>Meaning</description></listheader><item><term>-1</term><description>Could not determine the count of the collection. This might be returned by a "virtualizing" view, where the view deliberately does not account for all items in the underlying collection because the view is trying to increase efficiency and minimize dependence on always having the whole collection available.</description></item><item><term>any other integer</term><description>The count of the collection.</description></item></list></returns>
+ <list type="table"><listheader><term> Value</term><description> Meaning</description></listheader><item><term> -1</term><description> Could not determine the count of the collection. This might be returned by a "virtualizing" view, where the view deliberately does not account for all items in the underlying collection because the view is trying to increase efficiency and minimize dependence on always having the whole collection available.</description></item><item><term> any other integer</term><description> The count of the collection.</description></item></list></returns>
     </member>
     <member name="P:System.Windows.Data.ListCollectionView.CurrentAddItem">
       <summary>Gets the item that is being added during the current add transaction.</summary>
@@ -23709,9 +23709,9 @@
       <param name="exception">The exception encountered.</param>
       <returns>An object that is typically one of the following:  
   
- <list type="table"><listheader><term>Value</term><description>Description</description></listheader><item><term><see langword="null" /></term><description>To ignore any exceptions. The default behavior (if there is no <see cref="T:System.Windows.Data.UpdateSourceExceptionFilterCallback" />) is to create a <see cref="T:System.Windows.Controls.ValidationError" /> with the exception and adds it to the <see cref="P:System.Windows.Controls.Validation.Errors" /> collection of the bound element.</description></item><item><term>Any object</term><description>To create a <see cref="T:System.Windows.Controls.ValidationError" /> object with the <see cref="P:System.Windows.Controls.ValidationError.ErrorContent" /> set to that object.  
+ <list type="table"><listheader><term> Value</term><description> Description</description></listheader><item><term><see langword="null" /></term><description> To ignore any exceptions. The default behavior (if there is no <see cref="T:System.Windows.Data.UpdateSourceExceptionFilterCallback" />) is to create a <see cref="T:System.Windows.Controls.ValidationError" /> with the exception and adds it to the <see cref="P:System.Windows.Controls.Validation.Errors" /> collection of the bound element.</description></item><item><term> Any object</term><description> To create a <see cref="T:System.Windows.Controls.ValidationError" /> object with the <see cref="P:System.Windows.Controls.ValidationError.ErrorContent" /> set to that object.  
   
- The <see cref="T:System.Windows.Controls.ValidationError" /> object is added to <see cref="P:System.Windows.Controls.Validation.Errors" /> collection of the bound element.</description></item><item><term>A <see cref="T:System.Windows.Controls.ValidationError" /> object</term><description>To set the <see cref="T:System.Windows.Data.BindingExpression" /> or <see cref="T:System.Windows.Data.MultiBindingExpression" /> object as the <see cref="P:System.Windows.Controls.ValidationError.BindingInError" />. The <see cref="T:System.Windows.Controls.ValidationError" /> object is added to <see cref="P:System.Windows.Controls.Validation.Errors" /> collection of the bound element.</description></item></list></returns>
+ The <see cref="T:System.Windows.Controls.ValidationError" /> object is added to <see cref="P:System.Windows.Controls.Validation.Errors" /> collection of the bound element.</description></item><item><term> A <see cref="T:System.Windows.Controls.ValidationError" /> object</term><description> To set the <see cref="T:System.Windows.Data.BindingExpression" /> or <see cref="T:System.Windows.Data.MultiBindingExpression" /> object as the <see cref="P:System.Windows.Controls.ValidationError.BindingInError" />. The <see cref="T:System.Windows.Controls.ValidationError" /> object is added to <see cref="P:System.Windows.Controls.Validation.Errors" /> collection of the bound element.</description></item></list></returns>
     </member>
     <member name="T:System.Windows.Data.UpdateSourceTrigger">
       <summary>Describes the timing of binding source updates.</summary>
@@ -24133,7 +24133,7 @@
     <member name="P:System.Windows.Diagnostics.ResourceDictionaryDiagnostics.ThemedResourceDictionaries">
       <summary>Gets all instances of themed <see cref="T:System.Windows.ResourceDictionary" /> objects loaded by the application when a managed debugger is attached.</summary>
       <returns>
-        <see cref="P:System.Windows.Diagnostics.ResourceDictionaryDiagnostics.ThemedResourceDictionaries" />
+        <xref data-throw-if-not-resolved="true" uid="System.Windows.Diagnostics.ResourceDictionaryDiagnostics.ThemedResourceDictionaries"></xref>
       </returns>
     </member>
     <member name="T:System.Windows.Diagnostics.ResourceDictionaryInfo">

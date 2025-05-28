@@ -70,21 +70,21 @@
       <param name="right">The second value to compare.</param>
       <returns>A signed integer that indicates the relative values of <paramref name="left" /> and <paramref name="right" />, as shown in the following table.
 
- <list type="table"><listheader><term>Value</term><description>Condition</description></listheader><item><term>Less than zero</term><description><paramref name="left" /> is less than <paramref name="right" />.</description></item><item><term>Zero</term><description><paramref name="left" /> equals <paramref name="right" />.</description></item><item><term>Greater than zero</term><description><paramref name="left" /> is greater than <paramref name="right" />.</description></item></list></returns>
+ <list type="table"><listheader><term> Value</term><description> Condition</description></listheader><item><term> Less than zero</term><description><paramref name="left" /> is less than <paramref name="right" />.</description></item><item><term> Zero</term><description><paramref name="left" /> equals <paramref name="right" />.</description></item><item><term> Greater than zero</term><description><paramref name="left" /> is greater than <paramref name="right" />.</description></item></list></returns>
     </member>
     <member name="M:System.Numerics.BigInteger.CompareTo(System.Int64)">
       <summary>Compares this instance to a signed 64-bit integer and returns an integer that indicates whether the value of this instance is less than, equal to, or greater than the value of the signed 64-bit integer.</summary>
       <param name="other">The signed 64-bit integer to compare.</param>
       <returns>A signed integer value that indicates the relationship of this instance to <paramref name="other" />, as shown in the following table.
 
- <list type="table"><listheader><term>Return value</term><description>Description</description></listheader><item><term>Less than zero</term><description>The current instance is less than <paramref name="other" />.</description></item><item><term>Zero</term><description>The current instance equals <paramref name="other" />.</description></item><item><term>Greater than zero</term><description>The current instance is greater than <paramref name="other" />.</description></item></list></returns>
+ <list type="table"><listheader><term> Return value</term><description> Description</description></listheader><item><term> Less than zero</term><description> The current instance is less than <paramref name="other" />.</description></item><item><term> Zero</term><description> The current instance equals <paramref name="other" />.</description></item><item><term> Greater than zero</term><description> The current instance is greater than <paramref name="other" />.</description></item></list></returns>
     </member>
     <member name="M:System.Numerics.BigInteger.CompareTo(System.Numerics.BigInteger)">
       <summary>Compares this instance to a second <see cref="T:System.Numerics.BigInteger" /> and returns an integer that indicates whether the value of this instance is less than, equal to, or greater than the value of the specified object.</summary>
       <param name="other">The object to compare.</param>
       <returns>A signed integer value that indicates the relationship of this instance to <paramref name="other" />, as shown in the following table.
 
- <list type="table"><listheader><term>Return value</term><description>Description</description></listheader><item><term>Less than zero</term><description>The current instance is less than <paramref name="other" />.</description></item><item><term>Zero</term><description>The current instance equals <paramref name="other" />.</description></item><item><term>Greater than zero</term><description>The current instance is greater than <paramref name="other" />.</description></item></list></returns>
+ <list type="table"><listheader><term> Return value</term><description> Description</description></listheader><item><term> Less than zero</term><description> The current instance is less than <paramref name="other" />.</description></item><item><term> Zero</term><description> The current instance equals <paramref name="other" />.</description></item><item><term> Greater than zero</term><description> The current instance is greater than <paramref name="other" />.</description></item></list></returns>
     </member>
     <member name="M:System.Numerics.BigInteger.CompareTo(System.Object)">
       <summary>Compares this instance to a specified object and returns an integer that indicates whether the value of this instance is less than, equal to, or greater than the value of the specified object.</summary>
@@ -93,7 +93,7 @@
         <paramref name="obj" /> is not a <see cref="T:System.Numerics.BigInteger" />.</exception>
       <returns>A signed integer that indicates the relationship of the current instance to the <paramref name="obj" /> parameter, as shown in the following table.
 
- <list type="table"><listheader><term>Return value</term><description>Description</description></listheader><item><term>Less than zero</term><description>The current instance is less than <paramref name="obj" />.</description></item><item><term>Zero</term><description>The current instance equals <paramref name="obj" />.</description></item><item><term>Greater than zero</term><description>The current instance is greater than <paramref name="obj" />, or the <paramref name="obj" /> parameter is <see langword="null" />.</description></item></list></returns>
+ <list type="table"><listheader><term> Return value</term><description> Description</description></listheader><item><term> Less than zero</term><description> The current instance is less than <paramref name="obj" />.</description></item><item><term> Zero</term><description> The current instance equals <paramref name="obj" />.</description></item><item><term> Greater than zero</term><description> The current instance is greater than <paramref name="obj" />, or the <paramref name="obj" /> parameter is <see langword="null" />.</description></item></list></returns>
     </member>
     <member name="M:System.Numerics.BigInteger.CompareTo(System.UInt64)">
       <summary>Compares this instance to an unsigned 64-bit integer and returns an integer that indicates whether the value of this instance is less than, equal to, or greater than the value of the unsigned 64-bit integer.</summary>
@@ -890,7 +890,7 @@
       <summary>Gets a number that indicates the sign (negative, positive, or zero) of the current <see cref="T:System.Numerics.BigInteger" /> object.</summary>
       <returns>A number that indicates the sign of the <see cref="T:System.Numerics.BigInteger" /> object, as shown in the following table.
 
- <list type="table"><listheader><term>Number</term><description>Description</description></listheader><item><term>-1</term><description>The value of this object is negative.</description></item><item><term>0</term><description>The value of this object is 0 (zero).</description></item><item><term>1</term><description>The value of this object is positive.</description></item></list></returns>
+ <list type="table"><listheader><term> Number</term><description> Description</description></listheader><item><term> -1</term><description> The value of this object is negative.</description></item><item><term> 0</term><description> The value of this object is 0 (zero).</description></item><item><term> 1</term><description> The value of this object is positive.</description></item></list></returns>
     </member>
     <member name="P:System.Numerics.BigInteger.Zero">
       <summary>Gets a value that represents the number 0 (zero).</summary>

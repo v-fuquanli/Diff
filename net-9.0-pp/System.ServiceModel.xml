@@ -213,13 +213,13 @@
     <member name="P:System.Collections.Generic.SynchronizedCollection`1.System#Collections#Generic#ICollection{T}#IsReadOnly">
       <summary>Gets a value that indicates whether the collection is read only.</summary>
       <returns>
-        <see langword="false" />
+        <code data-dev-comment-type="langword">false</code>
       </returns>
     </member>
     <member name="P:System.Collections.Generic.SynchronizedCollection`1.System#Collections#ICollection#IsSynchronized">
       <summary>Gets a value that indicates whether the collection is thread safe.</summary>
       <returns>
-        <see langword="true" />
+        <code data-dev-comment-type="langword">true</code>
       </returns>
     </member>
     <member name="P:System.Collections.Generic.SynchronizedCollection`1.System#Collections#ICollection#SyncRoot">
@@ -229,13 +229,13 @@
     <member name="P:System.Collections.Generic.SynchronizedCollection`1.System#Collections#IList#IsFixedSize">
       <summary>Gets a value that indicates whether the collection is fixed in size.</summary>
       <returns>
-        <see langword="false" />
+        <code data-dev-comment-type="langword">false</code>
       </returns>
     </member>
     <member name="P:System.Collections.Generic.SynchronizedCollection`1.System#Collections#IList#IsReadOnly">
       <summary>Gets a value that indicates whether the collection is read only.</summary>
       <returns>
-        <see langword="false" />
+        <code data-dev-comment-type="langword">false</code>
       </returns>
     </member>
     <member name="P:System.Collections.Generic.SynchronizedCollection`1.System#Collections#IList#Item(System.Int32)">
@@ -8167,7 +8167,8 @@ Note: In .NET for Windows Store apps or the Portable Class Library, catch the ba
     <member name="P:System.ServiceModel.Security.SecurityMessageProperty.SenderIdPrefix">
       <summary>Gets or sets the sender ID prefix for this message.</summary>
       <exception cref="T:System.ArgumentNullException">The property value is <see langword="null" />.</exception>
-      <exception cref="T:System.ArgumentOutOfRangeException">The length of the property value is 0.
+      <exception cref="T:System.ArgumentOutOfRangeException">
+          The length of the property value is 0.
 
 -or-
 

@@ -27,7 +27,7 @@
  <paramref name="a" /> and <paramref name="b" /> are of different types.</exception>
       <returns>A signed integer that indicates the relative values of <paramref name="a" /> and <paramref name="b" />, as shown in the following table.  
   
- <list type="table"><listheader><term>Value</term><description>Meaning</description></listheader><item><term>Less than zero</term><description><paramref name="a" /> is less than <paramref name="b" />, with casing ignored.</description></item><item><term>Zero</term><description><paramref name="a" /> equals <paramref name="b" />, with casing ignored.</description></item><item><term>Greater than zero</term><description><paramref name="a" /> is greater than <paramref name="b" />, with casing ignored.</description></item></list></returns>
+ <list type="table"><listheader><term> Value</term><description> Meaning</description></listheader><item><term> Less than zero</term><description><paramref name="a" /> is less than <paramref name="b" />, with casing ignored.</description></item><item><term> Zero</term><description><paramref name="a" /> equals <paramref name="b" />, with casing ignored.</description></item><item><term> Greater than zero</term><description><paramref name="a" /> is greater than <paramref name="b" />, with casing ignored.</description></item></list></returns>
     </member>
     <member name="P:System.Collections.CaseInsensitiveComparer.Default">
       <summary>Gets an instance of <see cref="T:System.Collections.CaseInsensitiveComparer" /> that is associated with the <see cref="P:System.Threading.Thread.CurrentCulture" /> of the current thread and that is always available.</summary>

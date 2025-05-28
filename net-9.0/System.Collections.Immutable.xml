@@ -139,7 +139,8 @@
       <returns>An <see cref="T:System.Collections.IEnumerator" /> object that can be used to iterate through the collection.</returns>
     </member>
     <member name="M:System.Collections.Frozen.FrozenDictionary`2.TryGetAlternateLookup``1(System.Collections.Frozen.FrozenDictionary{`0,`1}.AlternateLookup{``0}@)">
-      <summary>Gets an instance of a type that may be used to perform operations on a <see cref="T:System.Collections.Frozen.FrozenDictionary`2" />
+      <summary>
+          Gets an instance of a type that may be used to perform operations on a <see cref="T:System.Collections.Frozen.FrozenDictionary`2" />
           using a <typeparamref name="TAlternateKey" /> as a key instead of a <typeparamref name="TKey" />.</summary>
       <param name="lookup">The created lookup instance when the method returns <see langword="true" />, or a default instance that should not be used if the method returns <see langword="false" />.</param>
       <typeparam name="TAlternateKey">The alternate type of a key for performing lookups.</typeparam>
@@ -225,7 +226,7 @@
     <member name="P:System.Collections.Frozen.FrozenDictionary`2.System#Collections#IDictionary#Item(System.Object)">
       <summary>Gets or sets the element with the specified key.</summary>
       <param name="key">The key of the element to get or set.</param>
-      <returns>The element with the specified key, or <code data-dev-comment-type="langword">null</code> if the key does not exist.</returns>
+      <returns>The element with the specified key, or <see langword="null" /> if the key does not exist.</returns>
     </member>
     <member name="P:System.Collections.Frozen.FrozenDictionary`2.System#Collections#IDictionary#Keys">
       <summary>Gets an <see cref="T:System.Collections.ICollection" /> object containing the keys of the <see cref="T:System.Collections.IDictionary" /> object.</summary>
@@ -445,7 +446,8 @@
       <returns>An <see cref="T:System.Collections.IEnumerator" /> object that can be used to iterate through the collection.</returns>
     </member>
     <member name="M:System.Collections.Frozen.FrozenSet`1.TryGetAlternateLookup``1(System.Collections.Frozen.FrozenSet{`0}.AlternateLookup{``0}@)">
-      <summary>Gets an instance of a type that may be used to perform operations on a <see cref="T:System.Collections.Frozen.FrozenSet`1" />
+      <summary>
+          Gets an instance of a type that may be used to perform operations on a <see cref="T:System.Collections.Frozen.FrozenSet`1" />
           using a <typeparamref name="TAlternate" /> instead of a <typeparamref name="T" />.</summary>
       <param name="lookup">The created lookup instance when the method returns <see langword="true" />, or a default instance that should not be used if the method returns <see langword="false" />.</param>
       <typeparam name="TAlternate">The alternate type of a key for performing lookups.</typeparam>

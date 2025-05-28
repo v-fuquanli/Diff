@@ -5,7 +5,8 @@
   </assembly>
   <members>
     <member name="T:System.Linq.AsyncEnumerable">
-      <summary>Provides a set of static methods for querying objects that implement <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" />.</summary>
+      <summary>
+            Provides a set of static methods for querying objects that implement <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" />.</summary>
     </member>
     <member name="M:System.Linq.AsyncEnumerable.AggregateAsync``1(System.Collections.Generic.IAsyncEnumerable{``0},System.Func{``0,``0,``0},System.Threading.CancellationToken)">
       <summary>Applies an accumulator function over a sequence.</summary>
@@ -56,7 +57,8 @@
       <returns>The final accumulator value.</returns>
     </member>
     <member name="M:System.Linq.AsyncEnumerable.AggregateAsync``3(System.Collections.Generic.IAsyncEnumerable{``0},``1,System.Func{``1,``0,``1},System.Func{``1,``2},System.Threading.CancellationToken)">
-      <summary>Applies an accumulator function over a sequence. The specified seed value is
+      <summary>
+            Applies an accumulator function over a sequence. The specified seed value is
             used as the initial accumulator value, and the specified function is used to
             select the result value.</summary>
       <param name="source">An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> to aggregate over.</param>
@@ -72,7 +74,8 @@
       <returns>The transformed final accumulator value.</returns>
     </member>
     <member name="M:System.Linq.AsyncEnumerable.AggregateAsync``3(System.Collections.Generic.IAsyncEnumerable{``0},``1,System.Func{``1,``0,System.Threading.CancellationToken,System.Threading.Tasks.ValueTask{``1}},System.Func{``1,System.Threading.CancellationToken,System.Threading.Tasks.ValueTask{``2}},System.Threading.CancellationToken)">
-      <summary>Applies an accumulator function over a sequence. The specified seed value is
+      <summary>
+            Applies an accumulator function over a sequence. The specified seed value is
             used as the initial accumulator value, and the specified function is used to
             select the result value.</summary>
       <param name="source">An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> to aggregate over.</param>
@@ -315,7 +318,8 @@
       <returns>The average of the sequence of values.</returns>
     </member>
     <member name="M:System.Linq.AsyncEnumerable.Cast``1(System.Collections.Generic.IAsyncEnumerable{System.Object})">
-      <summary>Casts the elements of an <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> to the specified type.</summary>
+      <summary>
+            Casts the elements of an <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> to the specified type.</summary>
       <param name="source">The <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> that contains the elements to be cast to type <typeparamref name="TResult" />.</param>
       <typeparam name="TResult">The type to cast the elements of source to.</typeparam>
       <returns>An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> that contains each element of the source sequence cast to the <typeparamref name="TResult" /> type.</returns>
@@ -329,7 +333,8 @@
         <paramref name="source" /> is <see langword="null" />.</exception>
       <exception cref="T:System.ArgumentOutOfRangeException">
         <paramref name="size" /> is less than 1.</exception>
-      <returns>An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> that contains the elements of the input sequence split into chunks of size <paramref name="size" />.</returns>
+      <returns>
+            An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> that contains the elements of the input sequence split into chunks of size <paramref name="size" />.</returns>
     </member>
     <member name="M:System.Linq.AsyncEnumerable.Concat``1(System.Collections.Generic.IAsyncEnumerable{``0},System.Collections.Generic.IAsyncEnumerable{``0})">
       <summary>Concatenates two sequences.</summary>
@@ -413,7 +418,8 @@
       <typeparam name="TSource">The type of the elements of source.</typeparam>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="source" /> is <see langword="null" />.</exception>
-      <returns>An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> object that contains the default value for
+      <returns>
+            An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> object that contains the default value for
             the TSource type if source is empty; otherwise, source.</returns>
     </member>
     <member name="M:System.Linq.AsyncEnumerable.DefaultIfEmpty``1(System.Collections.Generic.IAsyncEnumerable{``0})">
@@ -422,7 +428,8 @@
       <typeparam name="TSource">The type of the elements of source.</typeparam>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="source" /> is <see langword="null" />.</exception>
-      <returns>An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> object that contains the default value for
+      <returns>
+            An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> object that contains the default value for
             the TSource type if source is empty; otherwise, source.</returns>
     </member>
     <member name="M:System.Linq.AsyncEnumerable.Distinct``1(System.Collections.Generic.IAsyncEnumerable{``0},System.Collections.Generic.IEqualityComparer{``0})">
@@ -499,11 +506,13 @@
       <typeparam name="TSource">The type of the elements of source.</typeparam>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="source" /> is <see langword="null" />.</exception>
-      <returns>The default value of <typeparamref name="TSource" /> if <paramref name="index" /> is outside the bounds of the source sequence; otherwise, the
+      <returns>
+            The default value of <typeparamref name="TSource" /> if <paramref name="index" /> is outside the bounds of the source sequence; otherwise, the
             element at the specified position in the source sequence.</returns>
     </member>
     <member name="M:System.Linq.AsyncEnumerable.Empty``1">
-      <summary>Returns an empty <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> that has the specified type argument.</summary>
+      <summary>
+            Returns an empty <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> that has the specified type argument.</summary>
       <typeparam name="TResult">The type of the elements of the sequence.</typeparam>
       <returns>An empty <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> whose type argument is <typeparamref name="TResult" />.</returns>
     </member>
@@ -518,7 +527,8 @@
       <returns>A sequence that contains the set difference of the elements of two sequences.</returns>
     </member>
     <member name="M:System.Linq.AsyncEnumerable.ExceptBy``2(System.Collections.Generic.IAsyncEnumerable{``0},System.Collections.Generic.IAsyncEnumerable{``1},System.Func{``0,``1},System.Collections.Generic.IEqualityComparer{``1})">
-      <summary>Produces the set difference of two sequences according to a specified key selector function.</summary>
+      <summary>
+            Produces the set difference of two sequences according to a specified key selector function.</summary>
       <param name="first">An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> whose keys that are not also in <paramref name="second" /> will be returned.</param>
       <param name="second">An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> whose keys that also occur in the first sequence will cause those elements to be removed from the returned sequence.</param>
       <param name="keySelector">A function to extract the key for each element.</param>
@@ -530,7 +540,8 @@
       <returns>A sequence that contains the set difference of the elements of two sequences.</returns>
     </member>
     <member name="M:System.Linq.AsyncEnumerable.ExceptBy``2(System.Collections.Generic.IAsyncEnumerable{``0},System.Collections.Generic.IAsyncEnumerable{``1},System.Func{``0,System.Threading.CancellationToken,System.Threading.Tasks.ValueTask{``1}},System.Collections.Generic.IEqualityComparer{``1})">
-      <summary>Produces the set difference of two sequences according to a specified key selector function.</summary>
+      <summary>
+            Produces the set difference of two sequences according to a specified key selector function.</summary>
       <param name="first">An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> whose keys that are not also in <paramref name="second" /> will be returned.</param>
       <param name="second">An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> whose keys that also occur in the first sequence will cause those elements to be removed from the returned sequence.</param>
       <param name="keySelector">A function to extract the key for each element.</param>
@@ -549,7 +560,8 @@
       <typeparam name="TSource">The type of the elements of source.</typeparam>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="predicate" /> is <see langword="null" />.</exception>
-      <exception cref="T:System.InvalidOperationException">The source sequence is empty, or no element in the sequence satisfies
+      <exception cref="T:System.InvalidOperationException">
+            The source sequence is empty, or no element in the sequence satisfies
             the condition in predicate (via the returned task).</exception>
       <returns>The first element in the sequence that passes the test in the specified predicate function.</returns>
     </member>
@@ -561,7 +573,8 @@
       <typeparam name="TSource">The type of the elements of source.</typeparam>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="predicate" /> is <see langword="null" />.</exception>
-      <exception cref="T:System.InvalidOperationException">The source sequence is empty, or no element in the sequence satisfies
+      <exception cref="T:System.InvalidOperationException">
+            The source sequence is empty, or no element in the sequence satisfies
             the condition in predicate (via the returned task).</exception>
       <returns>The first element in the sequence that passes the test in the specified predicate function.</returns>
     </member>
@@ -606,7 +619,8 @@
       <typeparam name="TSource" />
       <exception cref="T:System.ArgumentNullException">
         <paramref name="predicate" /> is <see langword="null" />.</exception>
-      <returns>The default value of <typeparamref name="TSource" /> if source is empty or if no element passes the test specified
+      <returns>
+            The default value of <typeparamref name="TSource" /> if source is empty or if no element passes the test specified
             by predicate; otherwise, the first element in source that passes the test specified by predicate.</returns>
     </member>
     <member name="M:System.Linq.AsyncEnumerable.FirstOrDefaultAsync``1(System.Collections.Generic.IAsyncEnumerable{``0},System.Func{``0,System.Threading.CancellationToken,System.Threading.Tasks.ValueTask{System.Boolean}},``0,System.Threading.CancellationToken)">
@@ -629,7 +643,8 @@
       <typeparam name="TSource" />
       <exception cref="T:System.ArgumentNullException">
         <paramref name="predicate" /> is <see langword="null" />.</exception>
-      <returns>The default value of <typeparamref name="TSource" /> if source is empty or if no element passes the test specified
+      <returns>
+            The default value of <typeparamref name="TSource" /> if source is empty or if no element passes the test specified
             by predicate; otherwise, the first element in source that passes the test specified by predicate.</returns>
     </member>
     <member name="M:System.Linq.AsyncEnumerable.FirstOrDefaultAsync``1(System.Collections.Generic.IAsyncEnumerable{``0},System.Threading.CancellationToken)">
@@ -650,7 +665,8 @@
       <typeparam name="TKey">The type of the key returned by <paramref name="keySelector" />.</typeparam>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="keySelector" /> is <see langword="null" />.</exception>
-      <returns>An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> where each <see cref="T:System.Linq.IGrouping`2" />
+      <returns>
+            An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> where each <see cref="T:System.Linq.IGrouping`2" />
             contains a sequence of objects and a key.</returns>
     </member>
     <member name="M:System.Linq.AsyncEnumerable.GroupBy``2(System.Collections.Generic.IAsyncEnumerable{``0},System.Func{``0,System.Threading.CancellationToken,System.Threading.Tasks.ValueTask{``1}},System.Collections.Generic.IEqualityComparer{``1})">
@@ -662,11 +678,13 @@
       <typeparam name="TKey">The type of the key returned by <paramref name="keySelector" />.</typeparam>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="keySelector" /> is <see langword="null" />.</exception>
-      <returns>An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> where each <see cref="T:System.Linq.IGrouping`2" />
+      <returns>
+            An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> where each <see cref="T:System.Linq.IGrouping`2" />
             contains a sequence of objects and a key.</returns>
     </member>
     <member name="M:System.Linq.AsyncEnumerable.GroupBy``3(System.Collections.Generic.IAsyncEnumerable{``0},System.Func{``0,``1},System.Func{``0,``2},System.Collections.Generic.IEqualityComparer{``1})">
-      <summary>Groups the elements of a sequence according to a key selector function. The keys
+      <summary>
+            Groups the elements of a sequence according to a key selector function. The keys
             are compared by using a comparer and each group's elements are projected by using
             a specified function.</summary>
       <param name="source">An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> of elements to group.</param>
@@ -678,11 +696,13 @@
       <typeparam name="TElement">The type of the elements in the <see cref="T:System.Linq.IGrouping`2" />.</typeparam>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="elementSelector" /> is <see langword="null" />.</exception>
-      <returns>An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> where each <see cref="T:System.Linq.IGrouping`2" />
+      <returns>
+            An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> where each <see cref="T:System.Linq.IGrouping`2" />
             contains a sequence of objects of type <typeparamref name="TElement" /> and a key.</returns>
     </member>
     <member name="M:System.Linq.AsyncEnumerable.GroupBy``3(System.Collections.Generic.IAsyncEnumerable{``0},System.Func{``0,``1},System.Func{``1,System.Collections.Generic.IEnumerable{``0},``2},System.Collections.Generic.IEqualityComparer{``1})">
-      <summary>Groups the elements of a sequence according to a specified key selector function
+      <summary>
+            Groups the elements of a sequence according to a specified key selector function
             and creates a result value from each group and its key.</summary>
       <param name="source">An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> of elements to group.</param>
       <param name="keySelector">A function to extract the key for each element.</param>
@@ -693,11 +713,13 @@
       <typeparam name="TResult">The type of the result value returned by resultSelector.</typeparam>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="resultSelector" /> is <see langword="null" />.</exception>
-      <returns>A collection of elements of type <typeparamref name="TResult" /> where each element represents
+      <returns>
+            A collection of elements of type <typeparamref name="TResult" /> where each element represents
             a projection over a group and its key.</returns>
     </member>
     <member name="M:System.Linq.AsyncEnumerable.GroupBy``3(System.Collections.Generic.IAsyncEnumerable{``0},System.Func{``0,System.Threading.CancellationToken,System.Threading.Tasks.ValueTask{``1}},System.Func{``0,System.Threading.CancellationToken,System.Threading.Tasks.ValueTask{``2}},System.Collections.Generic.IEqualityComparer{``1})">
-      <summary>Groups the elements of a sequence according to a key selector function. The keys
+      <summary>
+            Groups the elements of a sequence according to a key selector function. The keys
             are compared by using a comparer and each group's elements are projected by using
             a specified function.</summary>
       <param name="source">An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> of elements to group.</param>
@@ -709,11 +731,13 @@
       <typeparam name="TElement">The type of the elements in the <see cref="T:System.Linq.IGrouping`2" />.</typeparam>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="elementSelector" /> is <see langword="null" />.</exception>
-      <returns>An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> where each <see cref="T:System.Linq.IGrouping`2" />
+      <returns>
+            An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> where each <see cref="T:System.Linq.IGrouping`2" />
             contains a sequence of objects of type <typeparamref name="TElement" /> and a key.</returns>
     </member>
     <member name="M:System.Linq.AsyncEnumerable.GroupBy``3(System.Collections.Generic.IAsyncEnumerable{``0},System.Func{``0,System.Threading.CancellationToken,System.Threading.Tasks.ValueTask{``1}},System.Func{``1,System.Collections.Generic.IEnumerable{``0},System.Threading.CancellationToken,System.Threading.Tasks.ValueTask{``2}},System.Collections.Generic.IEqualityComparer{``1})">
-      <summary>Groups the elements of a sequence according to a specified key selector function
+      <summary>
+            Groups the elements of a sequence according to a specified key selector function
             and creates a result value from each group and its key.</summary>
       <param name="source">An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> of elements to group.</param>
       <param name="keySelector">A function to extract the key for each element.</param>
@@ -724,11 +748,13 @@
       <typeparam name="TResult">The type of the result value returned by resultSelector.</typeparam>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="resultSelector" /> is <see langword="null" />.</exception>
-      <returns>A collection of elements of type <typeparamref name="TResult" /> where each element represents
+      <returns>
+            A collection of elements of type <typeparamref name="TResult" /> where each element represents
             a projection over a group and its key.</returns>
     </member>
     <member name="M:System.Linq.AsyncEnumerable.GroupBy``4(System.Collections.Generic.IAsyncEnumerable{``0},System.Func{``0,``1},System.Func{``0,``2},System.Func{``1,System.Collections.Generic.IEnumerable{``2},``3},System.Collections.Generic.IEqualityComparer{``1})">
-      <summary>Groups the elements of a sequence according to a specified key selector function
+      <summary>
+            Groups the elements of a sequence according to a specified key selector function
             and creates a result value from each group and its key. Key values are compared
             by using a specified comparer, and the elements of each group are projected by
             using a specified function.</summary>
@@ -746,7 +772,8 @@
       <returns>A collection of elements of type <typeparamref name="TResult" /> where each element represents a projection over a group and its key.</returns>
     </member>
     <member name="M:System.Linq.AsyncEnumerable.GroupBy``4(System.Collections.Generic.IAsyncEnumerable{``0},System.Func{``0,System.Threading.CancellationToken,System.Threading.Tasks.ValueTask{``1}},System.Func{``0,System.Threading.CancellationToken,System.Threading.Tasks.ValueTask{``2}},System.Func{``1,System.Collections.Generic.IEnumerable{``2},System.Threading.CancellationToken,System.Threading.Tasks.ValueTask{``3}},System.Collections.Generic.IEqualityComparer{``1})">
-      <summary>Groups the elements of a sequence according to a specified key selector function
+      <summary>
+            Groups the elements of a sequence according to a specified key selector function
             and creates a result value from each group and its key. Key values are compared
             by using a specified comparer, and the elements of each group are projected by
             using a specified function.</summary>
@@ -769,7 +796,8 @@
       <param name="inner">The sequence to join to the first sequence.</param>
       <param name="outerKeySelector">A function to extract the join key from each element of the first sequence.</param>
       <param name="innerKeySelector">A function to extract the join key from each element of the second sequence.</param>
-      <param name="resultSelector">A function to create a result element from an element from the first sequence
+      <param name="resultSelector">
+            A function to create a result element from an element from the first sequence
             and a collection of matching elements from the second sequence.</param>
       <param name="comparer">An <see cref="T:System.Collections.Generic.IEqualityComparer`1" /> to use to hash and compare keys.</param>
       <typeparam name="TOuter" />
@@ -778,7 +806,8 @@
       <typeparam name="TResult" />
       <exception cref="T:System.ArgumentNullException">
         <paramref name="resultSelector" /> is <see langword="null" />.</exception>
-      <returns>An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> that contains elements of type <typeparamref name="TResult" />
+      <returns>
+            An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> that contains elements of type <typeparamref name="TResult" />
             that are obtained by performing a grouped join on two sequences.</returns>
     </member>
     <member name="M:System.Linq.AsyncEnumerable.GroupJoin``4(System.Collections.Generic.IAsyncEnumerable{``0},System.Collections.Generic.IAsyncEnumerable{``1},System.Func{``0,System.Threading.CancellationToken,System.Threading.Tasks.ValueTask{``2}},System.Func{``1,System.Threading.CancellationToken,System.Threading.Tasks.ValueTask{``2}},System.Func{``0,System.Collections.Generic.IEnumerable{``1},System.Threading.CancellationToken,System.Threading.Tasks.ValueTask{``3}},System.Collections.Generic.IEqualityComparer{``2})">
@@ -787,7 +816,8 @@
       <param name="inner">The sequence to join to the first sequence.</param>
       <param name="outerKeySelector">A function to extract the join key from each element of the first sequence.</param>
       <param name="innerKeySelector">A function to extract the join key from each element of the second sequence.</param>
-      <param name="resultSelector">A function to create a result element from an element from the first sequence
+      <param name="resultSelector">
+            A function to create a result element from an element from the first sequence
             and a collection of matching elements from the second sequence.</param>
       <param name="comparer">An <see cref="T:System.Collections.Generic.IEqualityComparer`1" /> to use to hash and compare keys.</param>
       <typeparam name="TOuter" />
@@ -796,7 +826,8 @@
       <typeparam name="TResult" />
       <exception cref="T:System.ArgumentNullException">
         <paramref name="resultSelector" /> is <see langword="null" />.</exception>
-      <returns>An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> that contains elements of type <typeparamref name="TResult" />
+      <returns>
+            An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> that contains elements of type <typeparamref name="TResult" />
             that are obtained by performing a grouped join on two sequences.</returns>
     </member>
     <member name="M:System.Linq.AsyncEnumerable.Index``1(System.Collections.Generic.IAsyncEnumerable{``0})">
@@ -855,7 +886,8 @@
       <typeparam name="TResult">The type of the result elements.</typeparam>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="resultSelector" /> is <see langword="null" />.</exception>
-      <returns>An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> that has elements of type <typeparamref name="TResult" />
+      <returns>
+            An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> that has elements of type <typeparamref name="TResult" />
             that are obtained by performing an inner join on two sequences.</returns>
     </member>
     <member name="M:System.Linq.AsyncEnumerable.Join``4(System.Collections.Generic.IAsyncEnumerable{``0},System.Collections.Generic.IAsyncEnumerable{``1},System.Func{``0,System.Threading.CancellationToken,System.Threading.Tasks.ValueTask{``2}},System.Func{``1,System.Threading.CancellationToken,System.Threading.Tasks.ValueTask{``2}},System.Func{``0,``1,System.Threading.CancellationToken,System.Threading.Tasks.ValueTask{``3}},System.Collections.Generic.IEqualityComparer{``2})">
@@ -872,7 +904,8 @@
       <typeparam name="TResult">The type of the result elements.</typeparam>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="resultSelector" /> is <see langword="null" />.</exception>
-      <returns>An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> that has elements of type <typeparamref name="TResult" />
+      <returns>
+            An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> that has elements of type <typeparamref name="TResult" />
             that are obtained by performing an inner join on two sequences.</returns>
     </member>
     <member name="M:System.Linq.AsyncEnumerable.LastAsync``1(System.Collections.Generic.IAsyncEnumerable{``0},System.Func{``0,System.Boolean},System.Threading.CancellationToken)">
@@ -883,7 +916,8 @@
       <typeparam name="TSource">The type of the elements of source.</typeparam>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="predicate" /> is <see langword="null" />.</exception>
-      <exception cref="T:System.InvalidOperationException">The source sequence is empty, or no element in the sequence satisfies
+      <exception cref="T:System.InvalidOperationException">
+            The source sequence is empty, or no element in the sequence satisfies
             the condition in predicate (via the returned task).</exception>
       <returns>The last element in the sequence that passes the test in the specified predicate function.</returns>
     </member>
@@ -895,7 +929,8 @@
       <typeparam name="TSource">The type of the elements of source.</typeparam>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="predicate" /> is <see langword="null" />.</exception>
-      <exception cref="T:System.InvalidOperationException">The source sequence is empty, or no element in the sequence satisfies
+      <exception cref="T:System.InvalidOperationException">
+            The source sequence is empty, or no element in the sequence satisfies
             the condition in predicate (via the returned task).</exception>
       <returns>The last element in the sequence that passes the test in the specified predicate function.</returns>
     </member>
@@ -971,7 +1006,8 @@
       <typeparam name="TSource">The type of the elements of source.</typeparam>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="source" /> is <see langword="null" />.</exception>
-      <returns>The default value of <typeparamref name="TSource" /> if the source sequence is empty;
+      <returns>
+            The default value of <typeparamref name="TSource" /> if the source sequence is empty;
             otherwise, the last element in the <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" />.</returns>
     </member>
     <member name="M:System.Linq.AsyncEnumerable.LeftJoin``4(System.Collections.Generic.IAsyncEnumerable{``0},System.Collections.Generic.IAsyncEnumerable{``1},System.Func{``0,``2},System.Func{``1,``2},System.Func{``0,``1,``3},System.Collections.Generic.IEqualityComparer{``2})">
@@ -1110,7 +1146,8 @@
       <returns>The value with the minimum key in the sequence.</returns>
     </member>
     <member name="M:System.Linq.AsyncEnumerable.OfType``1(System.Collections.Generic.IAsyncEnumerable{System.Object})">
-      <summary>Filters the elements of a <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> based on a specified type <typeparamref name="TResult" />.</summary>
+      <summary>
+            Filters the elements of a <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> based on a specified type <typeparamref name="TResult" />.</summary>
       <param name="source">The <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> whose elements to filter.</param>
       <typeparam name="TResult">The type to filter the elements of the sequence on.</typeparam>
       <returns>An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> that contains elements from the input sequence of type <typeparamref name="TResult" />.</returns>
@@ -1251,31 +1288,36 @@
       <typeparam name="TResult">The type of the value returned by selector.</typeparam>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="selector" /> is <see langword="null" />.</exception>
-      <returns>An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> whose elements are the result of
+      <returns>
+            An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> whose elements are the result of
             invoking the transform function on each element of source.</returns>
     </member>
     <member name="M:System.Linq.AsyncEnumerable.Select``2(System.Collections.Generic.IAsyncEnumerable{``0},System.Func{``0,System.Int32,``1})">
       <summary>Projects each element of a sequence into a new form by incorporating the element's index.</summary>
       <param name="source">A sequence of values to invoke a transform function on.</param>
-      <param name="selector">A transform function to apply to each element; the second parameter of
+      <param name="selector">
+            A transform function to apply to each element; the second parameter of
             the function represents the index of the source element.</param>
       <typeparam name="TSource">The type of the elements of source.</typeparam>
       <typeparam name="TResult">The type of the value returned by selector.</typeparam>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="selector" /> is <see langword="null" />.</exception>
-      <returns>An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> whose elements are the result of
+      <returns>
+            An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> whose elements are the result of
             invoking the transform function on each element of source.</returns>
     </member>
     <member name="M:System.Linq.AsyncEnumerable.Select``2(System.Collections.Generic.IAsyncEnumerable{``0},System.Func{``0,System.Int32,System.Threading.CancellationToken,System.Threading.Tasks.ValueTask{``1}})">
       <summary>Projects each element of a sequence into a new form by incorporating the element's index.</summary>
       <param name="source">A sequence of values to invoke a transform function on.</param>
-      <param name="selector">A transform function to apply to each element; the second parameter of
+      <param name="selector">
+            A transform function to apply to each element; the second parameter of
             the function represents the index of the source element.</param>
       <typeparam name="TSource">The type of the elements of source.</typeparam>
       <typeparam name="TResult">The type of the value returned by selector.</typeparam>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="selector" /> is <see langword="null" />.</exception>
-      <returns>An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> whose elements are the result of
+      <returns>
+            An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> whose elements are the result of
             invoking the transform function on each element of source.</returns>
     </member>
     <member name="M:System.Linq.AsyncEnumerable.Select``2(System.Collections.Generic.IAsyncEnumerable{``0},System.Func{``0,System.Threading.CancellationToken,System.Threading.Tasks.ValueTask{``1}})">
@@ -1286,11 +1328,13 @@
       <typeparam name="TResult">The type of the value returned by selector.</typeparam>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="selector" /> is <see langword="null" />.</exception>
-      <returns>An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> whose elements are the result of
+      <returns>
+            An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> whose elements are the result of
             invoking the transform function on each element of source.</returns>
     </member>
     <member name="M:System.Linq.AsyncEnumerable.SelectMany``2(System.Collections.Generic.IAsyncEnumerable{``0},System.Func{``0,System.Collections.Generic.IAsyncEnumerable{``1}})">
-      <summary>Projects each element of a sequence to an <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> and
+      <summary>
+            Projects each element of a sequence to an <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> and
             flattens the resulting sequences into one <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> sequence.</summary>
       <param name="source">A sequence of values to project.</param>
       <param name="selector">A transform function to apply to each element.</param>
@@ -1298,11 +1342,13 @@
       <typeparam name="TResult">The type of the elements of the sequence returned by selector.</typeparam>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="selector" /> is <see langword="null" />.</exception>
-      <returns>An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> whose elements are the result of
+      <returns>
+            An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> whose elements are the result of
             invoking the one-to-many transform function on each element of the input sequence.</returns>
     </member>
     <member name="M:System.Linq.AsyncEnumerable.SelectMany``2(System.Collections.Generic.IAsyncEnumerable{``0},System.Func{``0,System.Collections.Generic.IEnumerable{``1}})">
-      <summary>Projects each element of a sequence to an <see cref="T:System.Collections.Generic.IEnumerable`1" /> and
+      <summary>
+            Projects each element of a sequence to an <see cref="T:System.Collections.Generic.IEnumerable`1" /> and
             flattens the resulting sequences into one <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> sequence.</summary>
       <param name="source">A sequence of values to project.</param>
       <param name="selector">A transform function to apply to each element.</param>
@@ -1310,11 +1356,13 @@
       <typeparam name="TResult">The type of the elements of the sequence returned by selector.</typeparam>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="selector" /> is <see langword="null" />.</exception>
-      <returns>An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> whose elements are the result of
+      <returns>
+            An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> whose elements are the result of
             invoking the one-to-many transform function on each element of the input sequence.</returns>
     </member>
     <member name="M:System.Linq.AsyncEnumerable.SelectMany``2(System.Collections.Generic.IAsyncEnumerable{``0},System.Func{``0,System.Int32,System.Collections.Generic.IAsyncEnumerable{``1}})">
-      <summary>Projects each element of a sequence to an <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> and
+      <summary>
+            Projects each element of a sequence to an <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> and
             flattens the resulting sequences into one <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> sequence.
             The index of each source element is used in the projected form of that element.</summary>
       <param name="source">A sequence of values to project.</param>
@@ -1323,11 +1371,13 @@
       <typeparam name="TResult">The type of the elements of the sequence returned by selector.</typeparam>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="selector" /> is <see langword="null" />.</exception>
-      <returns>An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> whose elements are the result of
+      <returns>
+            An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> whose elements are the result of
             invoking the one-to-many transform function on each element of the input sequence.</returns>
     </member>
     <member name="M:System.Linq.AsyncEnumerable.SelectMany``2(System.Collections.Generic.IAsyncEnumerable{``0},System.Func{``0,System.Int32,System.Collections.Generic.IEnumerable{``1}})">
-      <summary>Projects each element of a sequence to an <see cref="T:System.Collections.Generic.IEnumerable`1" /> and
+      <summary>
+            Projects each element of a sequence to an <see cref="T:System.Collections.Generic.IEnumerable`1" /> and
             flattens the resulting sequences into one <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> sequence.
             The index of each source element is used in the projected form of that element.</summary>
       <param name="source">A sequence of values to project.</param>
@@ -1336,11 +1386,13 @@
       <typeparam name="TResult">The type of the elements of the sequence returned by selector.</typeparam>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="selector" /> is <see langword="null" />.</exception>
-      <returns>An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> whose elements are the result of
+      <returns>
+            An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> whose elements are the result of
             invoking the one-to-many transform function on each element of the input sequence.</returns>
     </member>
     <member name="M:System.Linq.AsyncEnumerable.SelectMany``2(System.Collections.Generic.IAsyncEnumerable{``0},System.Func{``0,System.Int32,System.Threading.CancellationToken,System.Threading.Tasks.ValueTask{System.Collections.Generic.IEnumerable{``1}}})">
-      <summary>Projects each element of a sequence to an <see cref="T:System.Collections.Generic.IEnumerable`1" /> and
+      <summary>
+            Projects each element of a sequence to an <see cref="T:System.Collections.Generic.IEnumerable`1" /> and
             flattens the resulting sequences into one <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> sequence.
             The index of each source element is used in the projected form of that element.</summary>
       <param name="source">A sequence of values to project.</param>
@@ -1349,11 +1401,13 @@
       <typeparam name="TResult">The type of the elements of the sequence returned by selector.</typeparam>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="selector" /> is <see langword="null" />.</exception>
-      <returns>An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> whose elements are the result of
+      <returns>
+            An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> whose elements are the result of
             invoking the one-to-many transform function on each element of the input sequence.</returns>
     </member>
     <member name="M:System.Linq.AsyncEnumerable.SelectMany``2(System.Collections.Generic.IAsyncEnumerable{``0},System.Func{``0,System.Threading.CancellationToken,System.Threading.Tasks.ValueTask{System.Collections.Generic.IEnumerable{``1}}})">
-      <summary>Projects each element of a sequence to an <see cref="T:System.Collections.Generic.IEnumerable`1" /> and
+      <summary>
+            Projects each element of a sequence to an <see cref="T:System.Collections.Generic.IEnumerable`1" /> and
             flattens the resulting sequences into one <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> sequence.</summary>
       <param name="source">A sequence of values to project.</param>
       <param name="selector">A transform function to apply to each element.</param>
@@ -1361,11 +1415,13 @@
       <typeparam name="TResult">The type of the elements of the sequence returned by selector.</typeparam>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="selector" /> is <see langword="null" />.</exception>
-      <returns>An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> whose elements are the result of
+      <returns>
+            An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> whose elements are the result of
             invoking the one-to-many transform function on each element of the input sequence.</returns>
     </member>
     <member name="M:System.Linq.AsyncEnumerable.SelectMany``3(System.Collections.Generic.IAsyncEnumerable{``0},System.Func{``0,System.Collections.Generic.IAsyncEnumerable{``1}},System.Func{``0,``1,``2})">
-      <summary>Projects each element of a sequence to an <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" />,
+      <summary>
+            Projects each element of a sequence to an <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" />,
             flattens the resulting sequences into one <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> sequence,
             and invokes a result selector function on each element therein. The index of each source element is used in
             the intermediate projected form of that element.</summary>
@@ -1377,13 +1433,15 @@
       <typeparam name="TResult">The type of the elements of the resulting sequence.</typeparam>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="resultSelector" /> is <see langword="null" />.</exception>
-      <returns>An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> whose elements are the result of
+      <returns>
+            An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> whose elements are the result of
             invoking the one-to-many transform function <paramref name="collectionSelector" /> on each element
             of source and then mapping each of those sequence elements and their corresponding
             source element to a result element.</returns>
     </member>
     <member name="M:System.Linq.AsyncEnumerable.SelectMany``3(System.Collections.Generic.IAsyncEnumerable{``0},System.Func{``0,System.Collections.Generic.IAsyncEnumerable{``1}},System.Func{``0,``1,System.Threading.CancellationToken,System.Threading.Tasks.ValueTask{``2}})">
-      <summary>Projects each element of a sequence to an <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" />,
+      <summary>
+            Projects each element of a sequence to an <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" />,
             flattens the resulting sequences into one <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> sequence,
             and invokes a result selector function on each element therein. The index of each source element is used in
             the intermediate projected form of that element.</summary>
@@ -1395,13 +1453,15 @@
       <typeparam name="TResult">The type of the elements of the resulting sequence.</typeparam>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="resultSelector" /> is <see langword="null" />.</exception>
-      <returns>An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> whose elements are the result of
+      <returns>
+            An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> whose elements are the result of
             invoking the one-to-many transform function <paramref name="collectionSelector" /> on each element
             of source and then mapping each of those sequence elements and their corresponding
             source element to a result element.</returns>
     </member>
     <member name="M:System.Linq.AsyncEnumerable.SelectMany``3(System.Collections.Generic.IAsyncEnumerable{``0},System.Func{``0,System.Collections.Generic.IEnumerable{``1}},System.Func{``0,``1,``2})">
-      <summary>Projects each element of a sequence to an <see cref="T:System.Collections.Generic.IEnumerable`1" />,
+      <summary>
+            Projects each element of a sequence to an <see cref="T:System.Collections.Generic.IEnumerable`1" />,
             flattens the resulting sequences into one <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> sequence,
             and invokes a result selector function on each element therein. The index of each source element is used in
             the intermediate projected form of that element.</summary>
@@ -1413,13 +1473,15 @@
       <typeparam name="TResult">The type of the elements of the resulting sequence.</typeparam>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="resultSelector" /> is <see langword="null" />.</exception>
-      <returns>An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> whose elements are the result of
+      <returns>
+            An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> whose elements are the result of
             invoking the one-to-many transform function <paramref name="collectionSelector" /> on each element
             of source and then mapping each of those sequence elements and their corresponding
             source element to a result element.</returns>
     </member>
     <member name="M:System.Linq.AsyncEnumerable.SelectMany``3(System.Collections.Generic.IAsyncEnumerable{``0},System.Func{``0,System.Int32,System.Collections.Generic.IAsyncEnumerable{``1}},System.Func{``0,``1,System.Threading.CancellationToken,System.Threading.Tasks.ValueTask{``2}})">
-      <summary>Projects each element of a sequence to an <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" />,
+      <summary>
+            Projects each element of a sequence to an <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" />,
             flattens the resulting sequences into one <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> sequence,
             and invokes a result selector function on each element therein.</summary>
       <param name="source">A sequence of values to project.</param>
@@ -1430,13 +1492,15 @@
       <typeparam name="TResult">The type of the elements of the resulting sequence.</typeparam>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="resultSelector" /> is <see langword="null" />.</exception>
-      <returns>An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> whose elements are the result of
+      <returns>
+            An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> whose elements are the result of
             invoking the one-to-many transform function <paramref name="collectionSelector" /> on each element
             of source and then mapping each of those sequence elements and their corresponding
             source element to a result element.</returns>
     </member>
     <member name="M:System.Linq.AsyncEnumerable.SelectMany``3(System.Collections.Generic.IAsyncEnumerable{``0},System.Func{``0,System.Int32,System.Collections.Generic.IEnumerable{``1}},System.Func{``0,``1,``2})">
-      <summary>Projects each element of a sequence to an <see cref="T:System.Collections.Generic.IEnumerable`1" />,
+      <summary>
+            Projects each element of a sequence to an <see cref="T:System.Collections.Generic.IEnumerable`1" />,
             flattens the resulting sequences into one <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> sequence,
             and invokes a result selector function on each element therein.</summary>
       <param name="source">A sequence of values to project.</param>
@@ -1447,13 +1511,15 @@
       <typeparam name="TResult">The type of the elements of the resulting sequence.</typeparam>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="resultSelector" /> is <see langword="null" />.</exception>
-      <returns>An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> whose elements are the result of
+      <returns>
+            An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> whose elements are the result of
             invoking the one-to-many transform function <paramref name="collectionSelector" /> on each element
             of source and then mapping each of those sequence elements and their corresponding
             source element to a result element.</returns>
     </member>
     <member name="M:System.Linq.AsyncEnumerable.SelectMany``3(System.Collections.Generic.IAsyncEnumerable{``0},System.Func{``0,System.Int32,System.Threading.CancellationToken,System.Threading.Tasks.ValueTask{System.Collections.Generic.IEnumerable{``1}}},System.Func{``0,``1,System.Threading.CancellationToken,System.Threading.Tasks.ValueTask{``2}})">
-      <summary>Projects each element of a sequence to an <see cref="T:System.Collections.Generic.IEnumerable`1" />,
+      <summary>
+            Projects each element of a sequence to an <see cref="T:System.Collections.Generic.IEnumerable`1" />,
             flattens the resulting sequences into one <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> sequence,
             and invokes a result selector function on each element therein.</summary>
       <param name="source">A sequence of values to project.</param>
@@ -1464,13 +1530,15 @@
       <typeparam name="TResult">The type of the elements of the resulting sequence.</typeparam>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="resultSelector" /> is <see langword="null" />.</exception>
-      <returns>An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> whose elements are the result of
+      <returns>
+            An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> whose elements are the result of
             invoking the one-to-many transform function <paramref name="collectionSelector" /> on each element
             of source and then mapping each of those sequence elements and their corresponding
             source element to a result element.</returns>
     </member>
     <member name="M:System.Linq.AsyncEnumerable.SelectMany``3(System.Collections.Generic.IAsyncEnumerable{``0},System.Func{``0,System.Threading.CancellationToken,System.Threading.Tasks.ValueTask{System.Collections.Generic.IEnumerable{``1}}},System.Func{``0,``1,System.Threading.CancellationToken,System.Threading.Tasks.ValueTask{``2}})">
-      <summary>Projects each element of a sequence to an <see cref="T:System.Collections.Generic.IEnumerable`1" />,
+      <summary>
+            Projects each element of a sequence to an <see cref="T:System.Collections.Generic.IEnumerable`1" />,
             flattens the resulting sequences into one <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> sequence,
             and invokes a result selector function on each element therein. The index of each source element is used in
             the intermediate projected form of that element.</summary>
@@ -1482,7 +1550,8 @@
       <typeparam name="TResult">The type of the elements of the resulting sequence.</typeparam>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="resultSelector" /> is <see langword="null" />.</exception>
-      <returns>An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> whose elements are the result of
+      <returns>
+            An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> whose elements are the result of
             invoking the one-to-many transform function <paramref name="collectionSelector" /> on each element
             of source and then mapping each of those sequence elements and their corresponding
             source element to a result element.</returns>
@@ -1505,7 +1574,8 @@
       <returns>A sequence whose elements correspond to those of the input sequence in randomized order.</returns>
     </member>
     <member name="M:System.Linq.AsyncEnumerable.SingleAsync``1(System.Collections.Generic.IAsyncEnumerable{``0},System.Func{``0,System.Boolean},System.Threading.CancellationToken)">
-      <summary>Returns the only element of a sequence that satisfies a specified condition,
+      <summary>
+            Returns the only element of a sequence that satisfies a specified condition,
             and throws an exception if more than one such element exists.</summary>
       <param name="source">An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> to return the single element of.</param>
       <param name="predicate">A function to test an element for a condition.</param>
@@ -1517,7 +1587,8 @@
       <returns>The single element of the input sequence that satisfies a condition.</returns>
     </member>
     <member name="M:System.Linq.AsyncEnumerable.SingleAsync``1(System.Collections.Generic.IAsyncEnumerable{``0},System.Func{``0,System.Threading.CancellationToken,System.Threading.Tasks.ValueTask{System.Boolean}},System.Threading.CancellationToken)">
-      <summary>Returns the only element of a sequence that satisfies a specified condition,
+      <summary>
+            Returns the only element of a sequence that satisfies a specified condition,
             and throws an exception if more than one such element exists.</summary>
       <param name="source">An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> to return the single element of.</param>
       <param name="predicate">A function to test an element for a condition.</param>
@@ -1529,7 +1600,8 @@
       <returns>The single element of the input sequence that satisfies a condition.</returns>
     </member>
     <member name="M:System.Linq.AsyncEnumerable.SingleAsync``1(System.Collections.Generic.IAsyncEnumerable{``0},System.Threading.CancellationToken)">
-      <summary>Returns the only element of a sequence, and throws an exception if there is not
+      <summary>
+            Returns the only element of a sequence, and throws an exception if there is not
             exactly one element in the sequence.</summary>
       <param name="source">An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> to return the single element of.</param>
       <param name="cancellationToken">The <see cref="T:System.Threading.CancellationToken" /> to monitor for cancellation requests. The default is <see cref="P:System.Threading.CancellationToken.None" />.</param>
@@ -1563,7 +1635,8 @@
       <returns>The single element of the input sequence that satisfies the condition, or <paramref name="defaultValue" /> if no such element is found.</returns>
     </member>
     <member name="M:System.Linq.AsyncEnumerable.SingleOrDefaultAsync``1(System.Collections.Generic.IAsyncEnumerable{``0},System.Func{``0,System.Boolean},System.Threading.CancellationToken)">
-      <summary>Returns the only element of a sequence that satisfies a specified condition or
+      <summary>
+            Returns the only element of a sequence that satisfies a specified condition or
             a default value if no such element exists; this method throws an exception if
             more than one element satisfies the condition.</summary>
       <param name="source">An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> to return the single element of.</param>
@@ -1573,7 +1646,8 @@
       <exception cref="T:System.ArgumentNullException">
         <paramref name="predicate" /> is <see langword="null" />.</exception>
       <exception cref="T:System.InvalidOperationException">The input sequence contains more than one element.</exception>
-      <returns>The single element of the input sequence that satisfies the condition, or the default value of
+      <returns>
+            The single element of the input sequence that satisfies the condition, or the default value of
             <typeparamref name="TSource" /> if no such element is found.</returns>
     </member>
     <member name="M:System.Linq.AsyncEnumerable.SingleOrDefaultAsync``1(System.Collections.Generic.IAsyncEnumerable{``0},System.Func{``0,System.Threading.CancellationToken,System.Threading.Tasks.ValueTask{System.Boolean}},``0,System.Threading.CancellationToken)">
@@ -1589,7 +1663,8 @@
       <returns>The single element of the input sequence that satisfies the condition, or <paramref name="defaultValue" /> if no such element is found.</returns>
     </member>
     <member name="M:System.Linq.AsyncEnumerable.SingleOrDefaultAsync``1(System.Collections.Generic.IAsyncEnumerable{``0},System.Func{``0,System.Threading.CancellationToken,System.Threading.Tasks.ValueTask{System.Boolean}},System.Threading.CancellationToken)">
-      <summary>Returns the only element of a sequence that satisfies a specified condition or
+      <summary>
+            Returns the only element of a sequence that satisfies a specified condition or
             a default value if no such element exists; this method throws an exception if
             more than one element satisfies the condition.</summary>
       <param name="source">An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> to return the single element of.</param>
@@ -1599,11 +1674,13 @@
       <exception cref="T:System.ArgumentNullException">
         <paramref name="predicate" /> is <see langword="null" />.</exception>
       <exception cref="T:System.InvalidOperationException">The input sequence contains more than one element.</exception>
-      <returns>The single element of the input sequence that satisfies the condition, or the default value of
+      <returns>
+            The single element of the input sequence that satisfies the condition, or the default value of
             <typeparamref name="TSource" /> if no such element is found.</returns>
     </member>
     <member name="M:System.Linq.AsyncEnumerable.SingleOrDefaultAsync``1(System.Collections.Generic.IAsyncEnumerable{``0},System.Threading.CancellationToken)">
-      <summary>Returns the only element of a sequence, or a default value if the sequence is
+      <summary>
+            Returns the only element of a sequence, or a default value if the sequence is
             empty; this method throws an exception if there is more than one element in the sequence.</summary>
       <param name="source">An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> to return the single element of.</param>
       <param name="cancellationToken">The <see cref="T:System.Threading.CancellationToken" /> to monitor for cancellation requests. The default is <see cref="P:System.Threading.CancellationToken.None" />.</param>
@@ -1611,7 +1688,8 @@
       <exception cref="T:System.ArgumentNullException">
         <paramref name="source" /> is <see langword="null" />.</exception>
       <exception cref="T:System.InvalidOperationException">The <paramref name="source" /> sequence contains more than one element. (via the returned task).</exception>
-      <returns>The single element of the input sequence, or the default value of <typeparamref name="TSource" />
+      <returns>
+            The single element of the input sequence, or the default value of <typeparamref name="TSource" />
             if the sequence contains no elements.</returns>
     </member>
     <member name="M:System.Linq.AsyncEnumerable.Skip``1(System.Collections.Generic.IAsyncEnumerable{``0},System.Int32)">
@@ -1624,65 +1702,77 @@
       <returns>An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> that contains the elements that occur after the specified index in the input sequence.</returns>
     </member>
     <member name="M:System.Linq.AsyncEnumerable.SkipLast``1(System.Collections.Generic.IAsyncEnumerable{``0},System.Int32)">
-      <summary>Returns a new sequence that contains the elements from <paramref name="source" />
+      <summary>
+            Returns a new sequence that contains the elements from <paramref name="source" />
             with the last <paramref name="count" /> elements of the source collection omitted.</summary>
       <param name="source">An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> to return elements from.</param>
       <param name="count">The number of elements to omit from the end of the sequence.</param>
       <typeparam name="TSource">The type of the elements of <paramref name="source" />.</typeparam>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="source" /> is <see langword="null" />.</exception>
-      <returns>A new sequence that contains the elements from <paramref name="source" /> minus
+      <returns>
+            A new sequence that contains the elements from <paramref name="source" /> minus
             <paramref name="count" /> elements from the end of the sequence.</returns>
     </member>
     <member name="M:System.Linq.AsyncEnumerable.SkipWhile``1(System.Collections.Generic.IAsyncEnumerable{``0},System.Func{``0,System.Boolean})">
-      <summary>Bypasses elements in a sequence as long as a specified condition is true and
+      <summary>
+            Bypasses elements in a sequence as long as a specified condition is true and
             then returns the remaining elements.</summary>
       <param name="source">An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> to return elements from.</param>
       <param name="predicate">A function to test each element for a condition.</param>
       <typeparam name="TSource">The type of the elements of source.</typeparam>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="predicate" /> is <see langword="null" />.</exception>
-      <returns>An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> that contains the elements from the
+      <returns>
+            An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> that contains the elements from the
             input sequence starting at the first element in the linear series that does not
             pass the test specified by predicate.</returns>
     </member>
     <member name="M:System.Linq.AsyncEnumerable.SkipWhile``1(System.Collections.Generic.IAsyncEnumerable{``0},System.Func{``0,System.Int32,System.Boolean})">
-      <summary>Bypasses elements in a sequence as long as a specified condition is true and
+      <summary>
+            Bypasses elements in a sequence as long as a specified condition is true and
             then returns the remaining elements. The element's index is used in the logic
             of the predicate function.</summary>
       <param name="source">An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> to return elements from.</param>
-      <param name="predicate">A function to test each element for a condition; the second parameter
+      <param name="predicate">
+            A function to test each element for a condition; the second parameter
             of the function represents the index of the source element.</param>
       <typeparam name="TSource">The type of the elements of source.</typeparam>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="predicate" /> is <see langword="null" />.</exception>
-      <returns>An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> that contains the elements from the
+      <returns>
+            An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> that contains the elements from the
             input sequence starting at the first element in the linear series that does not
             pass the test specified by predicate.</returns>
     </member>
     <member name="M:System.Linq.AsyncEnumerable.SkipWhile``1(System.Collections.Generic.IAsyncEnumerable{``0},System.Func{``0,System.Int32,System.Threading.CancellationToken,System.Threading.Tasks.ValueTask{System.Boolean}})">
-      <summary>Bypasses elements in a sequence as long as a specified condition is true and
+      <summary>
+            Bypasses elements in a sequence as long as a specified condition is true and
             then returns the remaining elements. The element's index is used in the logic
             of the predicate function.</summary>
       <param name="source">An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> to return elements from.</param>
-      <param name="predicate">A function to test each element for a condition; the second parameter
+      <param name="predicate">
+            A function to test each element for a condition; the second parameter
             of the function represents the index of the source element.</param>
       <typeparam name="TSource">The type of the elements of source.</typeparam>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="predicate" /> is <see langword="null" />.</exception>
-      <returns>An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> that contains the elements from the
+      <returns>
+            An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> that contains the elements from the
             input sequence starting at the first element in the linear series that does not
             pass the test specified by predicate.</returns>
     </member>
     <member name="M:System.Linq.AsyncEnumerable.SkipWhile``1(System.Collections.Generic.IAsyncEnumerable{``0},System.Func{``0,System.Threading.CancellationToken,System.Threading.Tasks.ValueTask{System.Boolean}})">
-      <summary>Bypasses elements in a sequence as long as a specified condition is true and
+      <summary>
+            Bypasses elements in a sequence as long as a specified condition is true and
             then returns the remaining elements.</summary>
       <param name="source">An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> to return elements from.</param>
       <param name="predicate">A function to test each element for a condition.</param>
       <typeparam name="TSource">The type of the elements of source.</typeparam>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="predicate" /> is <see langword="null" />.</exception>
-      <returns>An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> that contains the elements from the
+      <returns>
+            An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> that contains the elements from the
             input sequence starting at the first element in the linear series that does not
             pass the test specified by predicate.</returns>
     </member>
@@ -1777,7 +1867,8 @@
       <typeparam name="TSource">The type of the elements of source.</typeparam>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="source" /> is <see langword="null" />.</exception>
-      <returns>An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> that contains the specified number
+      <returns>
+            An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> that contains the specified number
             of elements from the start of the input sequence.</returns>
     </member>
     <member name="M:System.Linq.AsyncEnumerable.Take``1(System.Collections.Generic.IAsyncEnumerable{``0},System.Range)">
@@ -1803,29 +1894,34 @@
       <typeparam name="TSource">The type of the elements of source.</typeparam>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="predicate" /> is <see langword="null" />.</exception>
-      <returns>An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> that contains the elements from the
+      <returns>
+            An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> that contains the elements from the
             input sequence that occur before the element at which the test no longer passes.</returns>
     </member>
     <member name="M:System.Linq.AsyncEnumerable.TakeWhile``1(System.Collections.Generic.IAsyncEnumerable{``0},System.Func{``0,System.Int32,System.Boolean})">
-      <summary>Returns elements from a sequence as long as a specified condition is true.
+      <summary>
+            Returns elements from a sequence as long as a specified condition is true.
             The element's index is used in the logic of the predicate function.</summary>
       <param name="source">A sequence to return elements from.</param>
       <param name="predicate">A function to test each element for a condition.</param>
       <typeparam name="TSource">The type of the elements of source.</typeparam>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="predicate" /> is <see langword="null" />.</exception>
-      <returns>An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> that contains the elements from the
+      <returns>
+            An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> that contains the elements from the
             input sequence that occur before the element at which the test no longer passes.</returns>
     </member>
     <member name="M:System.Linq.AsyncEnumerable.TakeWhile``1(System.Collections.Generic.IAsyncEnumerable{``0},System.Func{``0,System.Int32,System.Threading.CancellationToken,System.Threading.Tasks.ValueTask{System.Boolean}})">
-      <summary>Returns elements from a sequence as long as a specified condition is true.
+      <summary>
+            Returns elements from a sequence as long as a specified condition is true.
             The element's index is used in the logic of the predicate function.</summary>
       <param name="source">A sequence to return elements from.</param>
       <param name="predicate">A function to test each element for a condition.</param>
       <typeparam name="TSource">The type of the elements of source.</typeparam>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="predicate" /> is <see langword="null" />.</exception>
-      <returns>An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> that contains the elements from the
+      <returns>
+            An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> that contains the elements from the
             input sequence that occur before the element at which the test no longer passes.</returns>
     </member>
     <member name="M:System.Linq.AsyncEnumerable.TakeWhile``1(System.Collections.Generic.IAsyncEnumerable{``0},System.Func{``0,System.Threading.CancellationToken,System.Threading.Tasks.ValueTask{System.Boolean}})">
@@ -1835,7 +1931,8 @@
       <typeparam name="TSource">The type of the elements of source.</typeparam>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="predicate" /> is <see langword="null" />.</exception>
-      <returns>An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> that contains the elements from the
+      <returns>
+            An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> that contains the elements from the
             input sequence that occur before the element at which the test no longer passes.</returns>
     </member>
     <member name="M:System.Linq.AsyncEnumerable.ThenBy``2(System.Linq.IOrderedAsyncEnumerable{``0},System.Func{``0,``1},System.Collections.Generic.IComparer{``1})">
@@ -1900,7 +1997,8 @@
       <returns>An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> containing the sequence of elements from <paramref name="source" />.</returns>
     </member>
     <member name="M:System.Linq.AsyncEnumerable.ToDictionaryAsync``2(System.Collections.Generic.IAsyncEnumerable{``0},System.Func{``0,``1},System.Collections.Generic.IEqualityComparer{``1},System.Threading.CancellationToken)">
-      <summary>Creates a <see cref="T:System.Collections.Generic.Dictionary`2" /> from an <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" />
+      <summary>
+            Creates a <see cref="T:System.Collections.Generic.Dictionary`2" /> from an <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" />
             according to a specified key selector function.</summary>
       <param name="source">An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> to create a <see cref="T:System.Collections.Generic.Dictionary`2" /> from.</param>
       <param name="keySelector">A function to extract a key from each element.</param>
@@ -1915,7 +2013,8 @@
       <returns>A <see cref="T:System.Collections.Generic.Dictionary`2" /> that contains keys and values.</returns>
     </member>
     <member name="M:System.Linq.AsyncEnumerable.ToDictionaryAsync``2(System.Collections.Generic.IAsyncEnumerable{``0},System.Func{``0,System.Threading.CancellationToken,System.Threading.Tasks.ValueTask{``1}},System.Collections.Generic.IEqualityComparer{``1},System.Threading.CancellationToken)">
-      <summary>Creates a <see cref="T:System.Collections.Generic.Dictionary`2" /> from an <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" />
+      <summary>
+            Creates a <see cref="T:System.Collections.Generic.Dictionary`2" /> from an <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" />
             according to a specified key selector function.</summary>
       <param name="source">An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> to create a <see cref="T:System.Collections.Generic.Dictionary`2" /> from.</param>
       <param name="keySelector">A function to extract a key from each element.</param>
@@ -1930,7 +2029,8 @@
       <returns>A <see cref="T:System.Collections.Generic.Dictionary`2" /> that contains keys and values.</returns>
     </member>
     <member name="M:System.Linq.AsyncEnumerable.ToDictionaryAsync``2(System.Collections.Generic.IAsyncEnumerable{System.Collections.Generic.KeyValuePair{``0,``1}},System.Collections.Generic.IEqualityComparer{``0},System.Threading.CancellationToken)">
-      <summary>Creates a <see cref="T:System.Collections.Generic.Dictionary`2" /> from an <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> according to specified key comparer.</summary>
+      <summary>
+            Creates a <see cref="T:System.Collections.Generic.Dictionary`2" /> from an <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> according to specified key comparer.</summary>
       <param name="source">The <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> to create a <see cref="T:System.Collections.Generic.Dictionary`2" /> from.</param>
       <param name="comparer">An <see cref="T:System.Collections.Generic.IEqualityComparer`1" /> to compare keys.</param>
       <param name="cancellationToken">The <see cref="T:System.Threading.CancellationToken" /> to monitor for cancellation requests. The default is <see cref="P:System.Threading.CancellationToken.None" />.</param>
@@ -1943,7 +2043,8 @@
       <returns>A <see cref="T:System.Collections.Generic.Dictionary`2" /> that contains keys and values from <paramref name="source" />.</returns>
     </member>
     <member name="M:System.Linq.AsyncEnumerable.ToDictionaryAsync``2(System.Collections.Generic.IAsyncEnumerable{System.ValueTuple{``0,``1}},System.Collections.Generic.IEqualityComparer{``0},System.Threading.CancellationToken)">
-      <summary>Creates a <see cref="T:System.Collections.Generic.Dictionary`2" /> from an <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> according to specified key comparer.</summary>
+      <summary>
+            Creates a <see cref="T:System.Collections.Generic.Dictionary`2" /> from an <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> according to specified key comparer.</summary>
       <param name="source">The <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> to create a <see cref="T:System.Collections.Generic.Dictionary`2" /> from.</param>
       <param name="comparer">An <see cref="T:System.Collections.Generic.IEqualityComparer`1" /> to compare keys.</param>
       <param name="cancellationToken">The <see cref="T:System.Threading.CancellationToken" /> to monitor for cancellation requests. The default is <see cref="P:System.Threading.CancellationToken.None" />.</param>
@@ -1956,7 +2057,8 @@
       <returns>A <see cref="T:System.Collections.Generic.Dictionary`2" /> that contains keys and values from <paramref name="source" />.</returns>
     </member>
     <member name="M:System.Linq.AsyncEnumerable.ToDictionaryAsync``3(System.Collections.Generic.IAsyncEnumerable{``0},System.Func{``0,``1},System.Func{``0,``2},System.Collections.Generic.IEqualityComparer{``1},System.Threading.CancellationToken)">
-      <summary>Creates a <see cref="T:System.Collections.Generic.Dictionary`2" /> from an <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" />"/&gt;
+      <summary>
+            Creates a <see cref="T:System.Collections.Generic.Dictionary`2" /> from an <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" />"/&gt;
             according to specified key selector and element selector functions.</summary>
       <param name="source">An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> to create a <see cref="T:System.Collections.Generic.Dictionary`2" /> from.</param>
       <param name="keySelector">A function to extract a key from each element.</param>
@@ -1973,7 +2075,8 @@
       <returns>A <see cref="T:System.Collections.Generic.Dictionary`2" /> that contains values of type <typeparamref name="TElement" /> selected from the input sequence.</returns>
     </member>
     <member name="M:System.Linq.AsyncEnumerable.ToDictionaryAsync``3(System.Collections.Generic.IAsyncEnumerable{``0},System.Func{``0,System.Threading.CancellationToken,System.Threading.Tasks.ValueTask{``1}},System.Func{``0,System.Threading.CancellationToken,System.Threading.Tasks.ValueTask{``2}},System.Collections.Generic.IEqualityComparer{``1},System.Threading.CancellationToken)">
-      <summary>Creates a <see cref="T:System.Collections.Generic.Dictionary`2" /> from an <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" />"/&gt;
+      <summary>
+            Creates a <see cref="T:System.Collections.Generic.Dictionary`2" /> from an <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" />"/&gt;
             according to specified key selector and element selector functions.</summary>
       <param name="source">An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> to create a <see cref="T:System.Collections.Generic.Dictionary`2" /> from.</param>
       <param name="keySelector">A function to extract a key from each element.</param>
@@ -2009,7 +2112,8 @@
       <returns>A list that contains the elements from the input sequence.</returns>
     </member>
     <member name="M:System.Linq.AsyncEnumerable.ToLookupAsync``2(System.Collections.Generic.IAsyncEnumerable{``0},System.Func{``0,``1},System.Collections.Generic.IEqualityComparer{``1},System.Threading.CancellationToken)">
-      <summary>Creates a <see cref="T:System.Linq.ILookup`2" /> from an <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" />
+      <summary>
+            Creates a <see cref="T:System.Linq.ILookup`2" /> from an <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" />
             according to a specified key selector function.</summary>
       <param name="source">The <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> to create a <see cref="T:System.Linq.ILookup`2" /> from.</param>
       <param name="keySelector">A function to extract a key from each element.</param>
@@ -2022,7 +2126,8 @@
       <returns>A <see cref="T:System.Linq.ILookup`2" /> that contains keys and values.</returns>
     </member>
     <member name="M:System.Linq.AsyncEnumerable.ToLookupAsync``2(System.Collections.Generic.IAsyncEnumerable{``0},System.Func{``0,System.Threading.CancellationToken,System.Threading.Tasks.ValueTask{``1}},System.Collections.Generic.IEqualityComparer{``1},System.Threading.CancellationToken)">
-      <summary>Creates a <see cref="T:System.Linq.ILookup`2" /> from an <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" />
+      <summary>
+            Creates a <see cref="T:System.Linq.ILookup`2" /> from an <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" />
             according to a specified key selector function.</summary>
       <param name="source">The <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> to create a <see cref="T:System.Linq.ILookup`2" /> from.</param>
       <param name="keySelector">A function to extract a key from each element.</param>
@@ -2035,7 +2140,8 @@
       <returns>A <see cref="T:System.Linq.ILookup`2" /> that contains keys and values.</returns>
     </member>
     <member name="M:System.Linq.AsyncEnumerable.ToLookupAsync``3(System.Collections.Generic.IAsyncEnumerable{``0},System.Func{``0,``1},System.Func{``0,``2},System.Collections.Generic.IEqualityComparer{``1},System.Threading.CancellationToken)">
-      <summary>Creates a <see cref="T:System.Linq.ILookup`2" /> from an <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" />
+      <summary>
+            Creates a <see cref="T:System.Linq.ILookup`2" /> from an <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" />
             according to a specified key selector function and element selector functions.</summary>
       <param name="source">The <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> to create a <see cref="T:System.Linq.ILookup`2" /> from.</param>
       <param name="keySelector">A function to extract a key from each element.</param>
@@ -2050,7 +2156,8 @@
       <returns>A <see cref="T:System.Linq.ILookup`2" /> that contains keys and values.</returns>
     </member>
     <member name="M:System.Linq.AsyncEnumerable.ToLookupAsync``3(System.Collections.Generic.IAsyncEnumerable{``0},System.Func{``0,System.Threading.CancellationToken,System.Threading.Tasks.ValueTask{``1}},System.Func{``0,System.Threading.CancellationToken,System.Threading.Tasks.ValueTask{``2}},System.Collections.Generic.IEqualityComparer{``1},System.Threading.CancellationToken)">
-      <summary>Creates a <see cref="T:System.Linq.ILookup`2" /> from an <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" />
+      <summary>
+            Creates a <see cref="T:System.Linq.ILookup`2" /> from an <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" />
             according to a specified key selector function and element selector functions.</summary>
       <param name="source">The <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> to create a <see cref="T:System.Linq.ILookup`2" /> from.</param>
       <param name="keySelector">A function to extract a key from each element.</param>
@@ -2108,10 +2215,12 @@
       <returns>An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> that contains elements from the input sequence that satisfy the condition.</returns>
     </member>
     <member name="M:System.Linq.AsyncEnumerable.Where``1(System.Collections.Generic.IAsyncEnumerable{``0},System.Func{``0,System.Int32,System.Boolean})">
-      <summary>Filters a sequence of values based on a predicate.
+      <summary>
+            Filters a sequence of values based on a predicate.
             Each element's index is used in the logic of the predicate function.</summary>
       <param name="source">An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> to filter.</param>
-      <param name="predicate">A function to test each element for a condition; the second parameter
+      <param name="predicate">
+            A function to test each element for a condition; the second parameter
             of the function represents the index of the source element.</param>
       <typeparam name="TSource">The type of the elements of <paramref name="source" />.</typeparam>
       <exception cref="T:System.ArgumentNullException">
@@ -2119,10 +2228,12 @@
       <returns>An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> that contains elements from the input sequence that satisfy the condition.</returns>
     </member>
     <member name="M:System.Linq.AsyncEnumerable.Where``1(System.Collections.Generic.IAsyncEnumerable{``0},System.Func{``0,System.Int32,System.Threading.CancellationToken,System.Threading.Tasks.ValueTask{System.Boolean}})">
-      <summary>Filters a sequence of values based on a predicate.
+      <summary>
+            Filters a sequence of values based on a predicate.
             Each element's index is used in the logic of the predicate function.</summary>
       <param name="source">An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> to filter.</param>
-      <param name="predicate">A function to test each element for a condition; the second parameter
+      <param name="predicate">
+            A function to test each element for a condition; the second parameter
             of the function represents the index of the source element.</param>
       <typeparam name="TSource">The type of the elements of <paramref name="source" />.</typeparam>
       <exception cref="T:System.ArgumentNullException">
@@ -2161,7 +2272,8 @@
       <returns>A sequence of tuples with elements taken from the first, second, and third sequences, in that order.</returns>
     </member>
     <member name="M:System.Linq.AsyncEnumerable.Zip``3(System.Collections.Generic.IAsyncEnumerable{``0},System.Collections.Generic.IAsyncEnumerable{``1},System.Func{``0,``1,``2})">
-      <summary>Applies a specified function to the corresponding elements of two sequences,
+      <summary>
+            Applies a specified function to the corresponding elements of two sequences,
             producing a sequence of the results.</summary>
       <param name="first">The first sequence to merge.</param>
       <param name="second">The second sequence to merge.</param>
@@ -2174,7 +2286,8 @@
       <returns>An <see cref="T:System.Collections.Generic.IAsyncEnumerable`1" /> that contains merged elements of two input sequences.</returns>
     </member>
     <member name="M:System.Linq.AsyncEnumerable.Zip``3(System.Collections.Generic.IAsyncEnumerable{``0},System.Collections.Generic.IAsyncEnumerable{``1},System.Func{``0,``1,System.Threading.CancellationToken,System.Threading.Tasks.ValueTask{``2}})">
-      <summary>Applies a specified function to the corresponding elements of two sequences,
+      <summary>
+            Applies a specified function to the corresponding elements of two sequences,
             producing a sequence of the results.</summary>
       <param name="first">The first sequence to merge.</param>
       <param name="second">The second sequence to merge.</param>

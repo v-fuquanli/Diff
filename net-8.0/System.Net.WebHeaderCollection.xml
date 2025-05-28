@@ -233,8 +233,10 @@
       <summary>Initializes a new instance of the <see cref="T:System.Net.WebHeaderCollection" /> class from the specified instances of the <see cref="T:System.Runtime.Serialization.SerializationInfo" /> and <see cref="T:System.Runtime.Serialization.StreamingContext" /> classes.</summary>
       <param name="serializationInfo">A <see cref="T:System.Runtime.Serialization.SerializationInfo" /> containing the information required to serialize the <see cref="T:System.Net.WebHeaderCollection" />.</param>
       <param name="streamingContext">A <see cref="T:System.Runtime.Serialization.StreamingContext" /> containing the source of the serialized stream associated with the new <see cref="T:System.Net.WebHeaderCollection" />.</param>
-      <exception cref="T:System.ArgumentException">The header name contains invalid characters.</exception>
-      <exception cref="T:System.ArgumentNullException">The header name is a null reference or <see cref="F:System.String.Empty" />.</exception>
+      <exception cref="T:System.ArgumentException">
+          The header name contains invalid characters.</exception>
+      <exception cref="T:System.ArgumentNullException">
+          The header name is a null reference or <see cref="F:System.String.Empty" />.</exception>
     </member>
     <member name="M:System.Net.WebHeaderCollection.Add(System.Net.HttpRequestHeader,System.String)">
       <summary>Inserts the specified header with the specified value into the collection.</summary>
@@ -301,7 +303,8 @@
  -or-
 
  <paramref name="headerValue" /> contains invalid characters.</exception>
-      <exception cref="T:System.ArgumentOutOfRangeException">.NET Framework and .NET Core only: <paramref name="headerName" /> is not <see langword="null" /> and the length of <paramref name="headerValue" /> is too long (greater than 65,535 characters).</exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+          .NET Framework and .NET Core only: <paramref name="headerName" /> is not <see langword="null" /> and the length of <paramref name="headerValue" /> is too long (greater than 65,535 characters).</exception>
     </member>
     <member name="M:System.Net.WebHeaderCollection.Clear">
       <summary>Removes all headers from the collection.</summary>

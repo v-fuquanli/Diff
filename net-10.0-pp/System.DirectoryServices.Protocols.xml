@@ -121,7 +121,7 @@
       <exception cref="T:System.ArgumentException">The <paramref name="format" /> parameter contains an undefined character.</exception>
       <exception cref="T:System.DirectoryServices.Protocols.BerConversionException">The underlying decoding fails. The decoding rules include the following.  
   
- <list type="table"><listheader><term>Code</term><description>Corresponding Result</description></listheader><item><term>'{' '}' '[' ']' 'n' 'x'</term><description>No corresponding result</description></item><item><term>'i' 'e'</term><description>int</description></item><item><term>'b'</term><description>bool</description></item><item><term>'a'</term><description>string</description></item><item><term>'O'</term><description>byte[]</description></item><item><term>'B'</term><description>byte[] containing bit strings</description></item><item><term>'v'</term><description>string[]</description></item><item><term>'V'</term><description>byte[][]</description></item></list></exception>
+ <list type="table"><listheader><term> Code</term><description> Corresponding Result</description></listheader><item><term> '{' '}' '[' ']' 'n' 'x'</term><description> No corresponding result</description></item><item><term> 'i' 'e'</term><description> int</description></item><item><term> 'b'</term><description> bool</description></item><item><term> 'a'</term><description> string</description></item><item><term> 'O'</term><description> byte[]</description></item><item><term> 'B'</term><description> byte[] containing bit strings</description></item><item><term> 'v'</term><description> string[]</description></item><item><term> 'V'</term><description> byte[][]</description></item></list></exception>
       <returns>The decoded data.</returns>
     </member>
     <member name="M:System.DirectoryServices.Protocols.BerConverter.Encode(System.String,System.Object[])">
@@ -1103,7 +1103,8 @@
     </member>
     <member name="P:System.DirectoryServices.Protocols.LdapConnection.AuthType">
       <summary>The <see cref="P:System.DirectoryServices.Protocols.LdapConnection.AuthType" /> property contains the supported authentication types.</summary>
-      <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">The authentication type being set is out of range.</exception>
+      <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+          The authentication type being set is out of range.</exception>
       <returns>A supported authentication type.</returns>
     </member>
     <member name="P:System.DirectoryServices.Protocols.LdapConnection.AutoBind">

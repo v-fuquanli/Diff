@@ -526,7 +526,7 @@
       <summary>Gets an enumerator for all of the strings in the collection.</summary>
       <returns>An enumerator for all the strings in the collection.</returns>
     </member>
-    <member name="M:System.Net.Http.Headers.HeaderStringValues.System#Collections#Generic#IEnumerable&lt;System#String&gt;#GetEnumerator">
+    <member name="M:System.Net.Http.Headers.HeaderStringValues.System#Collections#Generic#IEnumerable{System#String}#GetEnumerator">
       <summary>Returns an enumerator that iterates through the collection.</summary>
       <returns>An enumerator that can be used to iterate through the collection.</returns>
     </member>
@@ -712,11 +712,11 @@ The header value format is invalid for this header name, or the header does not 
       <summary>Gets an enumerator that iterates through the <see cref="T:System.Net.Http.Headers.HttpHeadersNonValidated" />.</summary>
       <returns>An enumerator that iterates through the <see cref="T:System.Net.Http.Headers.HttpHeadersNonValidated" />.</returns>
     </member>
-    <member name="M:System.Net.Http.Headers.HttpHeadersNonValidated.System#Collections#Generic#IEnumerable&lt;System#Collections#Generic#KeyValuePair&lt;System#String,System#Net#Http#Headers#HeaderStringValues&gt;&gt;#GetEnumerator">
+    <member name="M:System.Net.Http.Headers.HttpHeadersNonValidated.System#Collections#Generic#IEnumerable{System#Collections#Generic#KeyValuePair{System#String@System#Net#Http#Headers#HeaderStringValues}}#GetEnumerator">
       <summary>Returns an enumerator that iterates through the collection.</summary>
       <returns>An enumerator that can be used to iterate through the collection.</returns>
     </member>
-    <member name="M:System.Net.Http.Headers.HttpHeadersNonValidated.System#Collections#Generic#IReadOnlyDictionary&lt;System#String,System#Net#Http#Headers#HeaderStringValues&gt;#ContainsKey(System.String)">
+    <member name="M:System.Net.Http.Headers.HttpHeadersNonValidated.System#Collections#Generic#IReadOnlyDictionary{System#String@System#Net#Http#Headers#HeaderStringValues}#ContainsKey(System.String)">
       <summary>Determines whether the read-only dictionary contains an element that has the specified key.</summary>
       <param name="key">The key to locate.</param>
       <returns>
@@ -750,11 +750,11 @@ The header value format is invalid for this header name, or the header does not 
       <exception cref="T:System.Collections.Generic.KeyNotFoundException">The header was not contained in the collection.</exception>
       <returns>The values for the specified header.</returns>
     </member>
-    <member name="P:System.Net.Http.Headers.HttpHeadersNonValidated.System#Collections#Generic#IReadOnlyDictionary&lt;System#String,System#Net#Http#Headers#HeaderStringValues&gt;#Keys">
+    <member name="P:System.Net.Http.Headers.HttpHeadersNonValidated.System#Collections#Generic#IReadOnlyDictionary{System#String@System#Net#Http#Headers#HeaderStringValues}#Keys">
       <summary>Gets an enumerable collection that contains the keys in the read-only dictionary.</summary>
       <returns>An enumerable collection that contains the keys in the read-only dictionary.</returns>
     </member>
-    <member name="P:System.Net.Http.Headers.HttpHeadersNonValidated.System#Collections#Generic#IReadOnlyDictionary&lt;System#String,System#Net#Http#Headers#HeaderStringValues&gt;#Values">
+    <member name="P:System.Net.Http.Headers.HttpHeadersNonValidated.System#Collections#Generic#IReadOnlyDictionary{System#String@System#Net#Http#Headers#HeaderStringValues}#Values">
       <summary>Gets an enumerable collection that contains the values in the read-only dictionary.</summary>
       <returns>An enumerable collection that contains the values in the read-only dictionary.</returns>
     </member>

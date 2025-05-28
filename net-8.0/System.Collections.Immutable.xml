@@ -208,7 +208,7 @@
     <member name="P:System.Collections.Frozen.FrozenDictionary`2.System#Collections#IDictionary#Item(System.Object)">
       <summary>Gets or sets the element with the specified key.</summary>
       <param name="key">The key of the element to get or set.</param>
-      <returns>The element with the specified key, or <code data-dev-comment-type="langword">null</code> if the key does not exist.</returns>
+      <returns>The element with the specified key, or <see langword="null" /> if the key does not exist.</returns>
     </member>
     <member name="P:System.Collections.Frozen.FrozenDictionary`2.System#Collections#IDictionary#Keys">
       <summary>Gets an <see cref="T:System.Collections.ICollection" /> object containing the keys of the <see cref="T:System.Collections.IDictionary" /> object.</summary>

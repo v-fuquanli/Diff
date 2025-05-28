@@ -3513,6 +3513,12 @@
       <param name="pen">
         <see cref="T:System.Drawing.Pen" /> that determines the color, width, and style of the curve.</param>
       <param name="points">Array of <see cref="T:System.Drawing.PointF" /> structures that represent the points that determine the curve. The number of points in the array should be a multiple of 3 plus 1, such as 4, 7, or 10.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="pen" /> is <see langword="null" />.
+
+ -or-
+
+ <paramref name="points" /> is <see langword="null" />.</exception>
     </member>
     <member name="M:System.Drawing.Graphics.DrawClosedCurve(System.Drawing.Pen,System.Drawing.Point[],System.Single,System.Drawing.Drawing2D.FillMode)">
       <summary>Draws a closed cardinal spline defined by an array of <see cref="T:System.Drawing.Point" /> structures using a specified tension.</summary>
@@ -3521,12 +3527,24 @@
       <param name="points">Array of <see cref="T:System.Drawing.Point" /> structures that define the spline.</param>
       <param name="tension">Value greater than or equal to 0.0F that specifies the tension of the curve.</param>
       <param name="fillmode">Member of the <see cref="T:System.Drawing.Drawing2D.FillMode" /> enumeration that determines how the curve is filled. This parameter is required but ignored.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="pen" /> is <see langword="null" />.
+
+ -or-
+
+ <paramref name="points" /> is <see langword="null" />.</exception>
     </member>
     <member name="M:System.Drawing.Graphics.DrawClosedCurve(System.Drawing.Pen,System.Drawing.Point[])">
       <summary>Draws a closed cardinal spline defined by an array of <see cref="T:System.Drawing.Point" /> structures.</summary>
       <param name="pen">
         <see cref="T:System.Drawing.Pen" /> that determines the color, width, and height of the curve.</param>
       <param name="points">Array of <see cref="T:System.Drawing.Point" /> structures that define the spline.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="pen" /> is <see langword="null" />.
+
+ -or-
+
+ <paramref name="points" /> is <see langword="null" />.</exception>
     </member>
     <member name="M:System.Drawing.Graphics.DrawClosedCurve(System.Drawing.Pen,System.Drawing.PointF[],System.Single,System.Drawing.Drawing2D.FillMode)">
       <summary>Draws a closed cardinal spline defined by an array of <see cref="T:System.Drawing.PointF" /> structures using a specified tension.</summary>
@@ -3547,6 +3565,12 @@
       <param name="pen">
         <see cref="T:System.Drawing.Pen" /> that determines the color, width, and height of the curve.</param>
       <param name="points">Array of <see cref="T:System.Drawing.PointF" /> structures that define the spline.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="pen" /> is <see langword="null" />.
+
+ -or-
+
+ <paramref name="points" /> is <see langword="null" />.</exception>
     </member>
     <member name="M:System.Drawing.Graphics.DrawCurve(System.Drawing.Pen,System.Drawing.Point[],System.Int32,System.Int32,System.Single)">
       <summary>Draws a cardinal spline through a specified array of <see cref="T:System.Drawing.Point" /> structures using a specified tension.</summary>
@@ -3569,12 +3593,24 @@
         <see cref="T:System.Drawing.Pen" /> that determines the color, width, and style of the curve.</param>
       <param name="points">Array of <see cref="T:System.Drawing.Point" /> structures that define the spline.</param>
       <param name="tension">Value greater than or equal to 0.0F that specifies the tension of the curve.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="pen" /> is <see langword="null" />.
+
+ -or-
+
+ <paramref name="points" /> is <see langword="null" />.</exception>
     </member>
     <member name="M:System.Drawing.Graphics.DrawCurve(System.Drawing.Pen,System.Drawing.Point[])">
       <summary>Draws a cardinal spline through a specified array of <see cref="T:System.Drawing.Point" /> structures.</summary>
       <param name="pen">
         <see cref="T:System.Drawing.Pen" /> that determines the color, width, and height of the curve.</param>
       <param name="points">Array of <see cref="T:System.Drawing.Point" /> structures that define the spline.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="pen" /> is <see langword="null" />.
+
+ -or-
+
+ <paramref name="points" /> is <see langword="null" />.</exception>
     </member>
     <member name="M:System.Drawing.Graphics.DrawCurve(System.Drawing.Pen,System.Drawing.PointF[],System.Int32,System.Int32,System.Single)">
       <summary>Draws a cardinal spline through a specified array of <see cref="T:System.Drawing.PointF" /> structures using a specified tension. The drawing begins offset from the beginning of the array.</summary>
@@ -3584,6 +3620,12 @@
       <param name="offset">Offset from the first element in the array of the <paramref name="points" /> parameter to the starting point in the curve.</param>
       <param name="numberOfSegments">Number of segments after the starting point to include in the curve.</param>
       <param name="tension">Value greater than or equal to 0.0F that specifies the tension of the curve.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="pen" /> is <see langword="null" />.
+
+ -or-
+
+ <paramref name="points" /> is <see langword="null" />.</exception>
     </member>
     <member name="M:System.Drawing.Graphics.DrawCurve(System.Drawing.Pen,System.Drawing.PointF[],System.Int32,System.Int32)">
       <summary>Draws a cardinal spline through a specified array of <see cref="T:System.Drawing.PointF" /> structures. The drawing begins offset from the beginning of the array.</summary>
@@ -3592,6 +3634,12 @@
       <param name="points">Array of <see cref="T:System.Drawing.PointF" /> structures that define the spline.</param>
       <param name="offset">Offset from the first element in the array of the <paramref name="points" /> parameter to the starting point in the curve.</param>
       <param name="numberOfSegments">Number of segments after the starting point to include in the curve.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="pen" /> is <see langword="null" />.
+
+ -or-
+
+ <paramref name="points" /> is <see langword="null" />.</exception>
     </member>
     <member name="M:System.Drawing.Graphics.DrawCurve(System.Drawing.Pen,System.Drawing.PointF[],System.Single)">
       <summary>Draws a cardinal spline through a specified array of <see cref="T:System.Drawing.PointF" /> structures using a specified tension.</summary>
@@ -3599,12 +3647,24 @@
         <see cref="T:System.Drawing.Pen" /> that determines the color, width, and style of the curve.</param>
       <param name="points">Array of <see cref="T:System.Drawing.PointF" /> structures that represent the points that define the curve.</param>
       <param name="tension">Value greater than or equal to 0.0F that specifies the tension of the curve.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="pen" /> is <see langword="null" />.
+
+ -or-
+
+ <paramref name="points" /> is <see langword="null" />.</exception>
     </member>
     <member name="M:System.Drawing.Graphics.DrawCurve(System.Drawing.Pen,System.Drawing.PointF[])">
       <summary>Draws a cardinal spline through a specified array of <see cref="T:System.Drawing.PointF" /> structures.</summary>
       <param name="pen">
         <see cref="T:System.Drawing.Pen" /> that determines the color, width, and style of the curve.</param>
       <param name="points">Array of <see cref="T:System.Drawing.PointF" /> structures that define the spline.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="pen" /> is <see langword="null" />.
+
+ -or-
+
+ <paramref name="points" /> is <see langword="null" />.</exception>
     </member>
     <member name="M:System.Drawing.Graphics.DrawEllipse(System.Drawing.Pen,System.Drawing.Rectangle)">
       <summary>Draws an ellipse specified by a bounding <see cref="T:System.Drawing.Rectangle" /> structure.</summary>
@@ -4161,6 +4221,12 @@
       <param name="pen">
         <see cref="T:System.Drawing.Pen" /> that determines the color, width, and style of the line segments.</param>
       <param name="points">Array of <see cref="T:System.Drawing.PointF" /> structures that represent the points to connect.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="pen" /> is <see langword="null" />.
+
+ -or-
+
+ <paramref name="points" /> is <see langword="null" />.</exception>
     </member>
     <member name="M:System.Drawing.Graphics.DrawPath(System.Drawing.Pen,System.Drawing.Drawing2D.GraphicsPath)">
       <summary>Draws a <see cref="T:System.Drawing.Drawing2D.GraphicsPath" />.</summary>
@@ -4236,6 +4302,12 @@
       <param name="pen">
         <see cref="T:System.Drawing.Pen" /> that determines the color, width, and style of the polygon.</param>
       <param name="points">Array of <see cref="T:System.Drawing.PointF" /> structures that represent the vertices of the polygon.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="pen" /> is <see langword="null" />.
+
+ -or-
+
+ <paramref name="points" /> is <see langword="null" />.</exception>
     </member>
     <member name="M:System.Drawing.Graphics.DrawRectangle(System.Drawing.Pen,System.Drawing.Rectangle)">
       <summary>Draws a rectangle specified by a <see cref="T:System.Drawing.Rectangle" /> structure.</summary>
@@ -4284,6 +4356,14 @@
       <param name="pen">
         <see cref="T:System.Drawing.Pen" /> that determines the color, width, and style of the outlines of the rectangles.</param>
       <param name="rects">Array of <see cref="T:System.Drawing.RectangleF" /> structures that represent the rectangles to draw.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="pen" /> is <see langword="null" />.
+
+ -or-
+
+ <paramref name="rects" /> is <see langword="null" />.</exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="rects" /> is a zero-length array.</exception>
     </member>
     <member name="M:System.Drawing.Graphics.DrawString(System.String,System.Drawing.Font,System.Drawing.Brush,System.Drawing.PointF,System.Drawing.StringFormat)">
       <summary>Draws the specified text string at the specified location with the specified <see cref="T:System.Drawing.Brush" /> and <see cref="T:System.Drawing.Font" /> objects using the formatting attributes of the specified <see cref="T:System.Drawing.StringFormat" />.</summary>
@@ -4823,6 +4903,12 @@
       <param name="points">Array of <see cref="T:System.Drawing.Point" /> structures that define the spline.</param>
       <param name="fillmode">Member of the <see cref="T:System.Drawing.Drawing2D.FillMode" /> enumeration that determines how the curve is filled.</param>
       <param name="tension">Value greater than or equal to 0.0F that specifies the tension of the curve.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="brush" /> is <see langword="null" />.
+
+ -or-
+
+ <paramref name="points" /> is <see langword="null" />.</exception>
     </member>
     <member name="M:System.Drawing.Graphics.FillClosedCurve(System.Drawing.Brush,System.Drawing.Point[],System.Drawing.Drawing2D.FillMode)">
       <summary>Fills the interior of a closed cardinal spline curve defined by an array of <see cref="T:System.Drawing.Point" /> structures using the specified fill mode.</summary>
@@ -4830,12 +4916,24 @@
         <see cref="T:System.Drawing.Brush" /> that determines the characteristics of the fill.</param>
       <param name="points">Array of <see cref="T:System.Drawing.Point" /> structures that define the spline.</param>
       <param name="fillmode">Member of the <see cref="T:System.Drawing.Drawing2D.FillMode" /> enumeration that determines how the curve is filled.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="brush" /> is <see langword="null" />.
+
+ -or-
+
+ <paramref name="points" /> is <see langword="null" />.</exception>
     </member>
     <member name="M:System.Drawing.Graphics.FillClosedCurve(System.Drawing.Brush,System.Drawing.Point[])">
       <summary>Fills the interior of a closed cardinal spline curve defined by an array of <see cref="T:System.Drawing.Point" /> structures.</summary>
       <param name="brush">
         <see cref="T:System.Drawing.Brush" /> that determines the characteristics of the fill.</param>
       <param name="points">Array of <see cref="T:System.Drawing.Point" /> structures that define the spline.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="brush" /> is <see langword="null" />.
+
+ -or-
+
+ <paramref name="points" /> is <see langword="null" />.</exception>
     </member>
     <member name="M:System.Drawing.Graphics.FillClosedCurve(System.Drawing.Brush,System.Drawing.PointF[],System.Drawing.Drawing2D.FillMode,System.Single)">
       <summary>Fills the interior of a closed cardinal spline curve defined by an array of <see cref="T:System.Drawing.PointF" /> structures using the specified fill mode and tension.</summary>
@@ -4856,12 +4954,24 @@
         <see cref="T:System.Drawing.Brush" /> that determines the characteristics of the fill.</param>
       <param name="points">Array of <see cref="T:System.Drawing.PointF" /> structures that define the spline.</param>
       <param name="fillmode">Member of the <see cref="T:System.Drawing.Drawing2D.FillMode" /> enumeration that determines how the curve is filled.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="brush" /> is <see langword="null" />.
+
+ -or-
+
+ <paramref name="points" /> is <see langword="null" />.</exception>
     </member>
     <member name="M:System.Drawing.Graphics.FillClosedCurve(System.Drawing.Brush,System.Drawing.PointF[])">
       <summary>Fills the interior of a closed cardinal spline curve defined by an array of <see cref="T:System.Drawing.PointF" /> structures.</summary>
       <param name="brush">
         <see cref="T:System.Drawing.Brush" /> that determines the characteristics of the fill.</param>
       <param name="points">Array of <see cref="T:System.Drawing.PointF" /> structures that define the spline.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="brush" /> is <see langword="null" />.
+
+ -or-
+
+ <paramref name="points" /> is <see langword="null" />.</exception>
     </member>
     <member name="M:System.Drawing.Graphics.FillEllipse(System.Drawing.Brush,System.Drawing.Rectangle)">
       <summary>Fills the interior of an ellipse defined by a bounding rectangle specified by a <see cref="T:System.Drawing.Rectangle" /> structure.</summary>
@@ -4971,6 +5081,12 @@
       <param name="brush">
         <see cref="T:System.Drawing.Brush" /> that determines the characteristics of the fill.</param>
       <param name="points">Array of <see cref="T:System.Drawing.Point" /> structures that represent the vertices of the polygon to fill.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="brush" /> is <see langword="null" />.
+
+ -or-
+
+ <paramref name="points" /> is <see langword="null" />.</exception>
     </member>
     <member name="M:System.Drawing.Graphics.FillPolygon(System.Drawing.Brush,System.Drawing.PointF[],System.Drawing.Drawing2D.FillMode)">
       <summary>Fills the interior of a polygon defined by an array of points specified by <see cref="T:System.Drawing.PointF" /> structures using the specified fill mode.</summary>
@@ -4978,12 +5094,24 @@
         <see cref="T:System.Drawing.Brush" /> that determines the characteristics of the fill.</param>
       <param name="points">Array of <see cref="T:System.Drawing.PointF" /> structures that represent the vertices of the polygon to fill.</param>
       <param name="fillMode">Member of the <see cref="T:System.Drawing.Drawing2D.FillMode" /> enumeration that determines the style of the fill.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="brush" /> is <see langword="null" />.
+
+ -or-
+
+ <paramref name="points" /> is <see langword="null" />.</exception>
     </member>
     <member name="M:System.Drawing.Graphics.FillPolygon(System.Drawing.Brush,System.Drawing.PointF[])">
       <summary>Fills the interior of a polygon defined by an array of points specified by <see cref="T:System.Drawing.PointF" /> structures.</summary>
       <param name="brush">
         <see cref="T:System.Drawing.Brush" /> that determines the characteristics of the fill.</param>
       <param name="points">Array of <see cref="T:System.Drawing.PointF" /> structures that represent the vertices of the polygon to fill.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="brush" /> is <see langword="null" />.
+
+ -or-
+
+ <paramref name="points" /> is <see langword="null" />.</exception>
     </member>
     <member name="M:System.Drawing.Graphics.FillRectangle(System.Drawing.Brush,System.Drawing.Rectangle)">
       <summary>Fills the interior of a rectangle specified by a <see cref="T:System.Drawing.Rectangle" /> structure.</summary>
@@ -5030,6 +5158,14 @@
       <param name="brush">
         <see cref="T:System.Drawing.Brush" /> that determines the characteristics of the fill.</param>
       <param name="rects">Array of <see cref="T:System.Drawing.Rectangle" /> structures that represent the rectangles to fill.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="brush" /> is <see langword="null" />.
+
+ -or-
+
+ <paramref name="rects" /> is <see langword="null" />.</exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="rects" /> is a zero-length array.</exception>
     </member>
     <member name="M:System.Drawing.Graphics.FillRectangles(System.Drawing.Brush,System.Drawing.RectangleF[])">
       <summary>Fills the interiors of a series of rectangles specified by <see cref="T:System.Drawing.RectangleF" /> structures.</summary>
@@ -5228,6 +5364,8 @@
         <see cref="T:System.Drawing.PointF" /> structure that represents the upper-left corner of the string.</param>
       <param name="stringFormat">
         <see cref="T:System.Drawing.StringFormat" /> that represents formatting information, such as line spacing, for the string.</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="font" /> is <see langword="null" />.</exception>
       <returns>This method returns a <see cref="T:System.Drawing.SizeF" /> structure that represents the size, in the units specified by the <see cref="P:System.Drawing.Graphics.PageUnit" /> property, of the string specified by the <paramref name="text" /> parameter as drawn with the <paramref name="font" /> parameter and the <paramref name="stringFormat" /> parameter.</returns>
     </member>
     <member name="M:System.Drawing.Graphics.MeasureString(System.String,System.Drawing.Font,System.Drawing.SizeF,System.Drawing.StringFormat,System.Int32@,System.Int32@)">
@@ -5241,6 +5379,8 @@
         <see cref="T:System.Drawing.StringFormat" /> that represents formatting information, such as line spacing, for the string.</param>
       <param name="charactersFitted">Number of characters in the string.</param>
       <param name="linesFilled">Number of text lines in the string.</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="font" /> is <see langword="null" />.</exception>
       <returns>This method returns a <see cref="T:System.Drawing.SizeF" /> structure that represents the size of the string, in the units specified by the <see cref="P:System.Drawing.Graphics.PageUnit" /> property, of the <paramref name="text" /> parameter as drawn with the <paramref name="font" /> parameter and the <paramref name="stringFormat" /> parameter.</returns>
     </member>
     <member name="M:System.Drawing.Graphics.MeasureString(System.String,System.Drawing.Font,System.Drawing.SizeF,System.Drawing.StringFormat)">
@@ -5252,6 +5392,8 @@
         <see cref="T:System.Drawing.SizeF" /> structure that specifies the maximum layout area for the text.</param>
       <param name="stringFormat">
         <see cref="T:System.Drawing.StringFormat" /> that represents formatting information, such as line spacing, for the string.</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="font" /> is <see langword="null" />.</exception>
       <returns>This method returns a <see cref="T:System.Drawing.SizeF" /> structure that represents the size, in the units specified by the <see cref="P:System.Drawing.Graphics.PageUnit" /> property, of the string specified in the <paramref name="text" /> parameter as drawn with the <paramref name="font" /> parameter and the <paramref name="stringFormat" /> parameter.</returns>
     </member>
     <member name="M:System.Drawing.Graphics.MeasureString(System.String,System.Drawing.Font,System.Drawing.SizeF)">
@@ -5261,6 +5403,8 @@
         <see cref="T:System.Drawing.Font" /> defines the text format of the string.</param>
       <param name="layoutArea">
         <see cref="T:System.Drawing.SizeF" /> structure that specifies the maximum layout area for the text.</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="font" /> is <see langword="null" />.</exception>
       <returns>This method returns a <see cref="T:System.Drawing.SizeF" /> structure that represents the size, in the units specified by the <see cref="P:System.Drawing.Graphics.PageUnit" /> property, of the string specified by the <paramref name="text" /> parameter as drawn with the <paramref name="font" /> parameter.</returns>
     </member>
     <member name="M:System.Drawing.Graphics.MeasureString(System.String,System.Drawing.Font,System.Int32,System.Drawing.StringFormat)">
@@ -5271,6 +5415,8 @@
       <param name="width">Maximum width of the string.</param>
       <param name="format">
         <see cref="T:System.Drawing.StringFormat" /> that represents formatting information, such as line spacing, for the string.</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="font" /> is <see langword="null" />.</exception>
       <returns>This method returns a <see cref="T:System.Drawing.SizeF" /> structure that represents the size, in the units specified by the <see cref="P:System.Drawing.Graphics.PageUnit" /> property, of the string specified in the <paramref name="text" /> parameter as drawn with the <paramref name="font" /> parameter and the <paramref name="format" /> parameter.</returns>
     </member>
     <member name="M:System.Drawing.Graphics.MeasureString(System.String,System.Drawing.Font,System.Int32)">
@@ -5279,6 +5425,8 @@
       <param name="font">
         <see cref="T:System.Drawing.Font" /> that defines the format of the string.</param>
       <param name="width">Maximum width of the string in pixels.</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="font" /> is <see langword="null" />.</exception>
       <returns>This method returns a <see cref="T:System.Drawing.SizeF" /> structure that represents the size, in the units specified by the <see cref="P:System.Drawing.Graphics.PageUnit" /> property, of the string specified in the <paramref name="text" /> parameter as drawn with the <paramref name="font" /> parameter.</returns>
     </member>
     <member name="M:System.Drawing.Graphics.MeasureString(System.String,System.Drawing.Font)">

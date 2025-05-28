@@ -5,17 +5,20 @@
   </assembly>
   <members>
     <member name="T:System.Net.ServerSentEvents.SseFormatter">
-      <summary>Provides methods for formatting server-sent events.</summary>
+      <summary>
+            Provides methods for formatting server-sent events.</summary>
     </member>
     <member name="M:System.Net.ServerSentEvents.SseFormatter.WriteAsync(System.Collections.Generic.IAsyncEnumerable{System.Net.ServerSentEvents.SseItem{System.String}},System.IO.Stream,System.Threading.CancellationToken)">
-      <summary>Writes the <paramref name="source" /> of server-sent events to the <paramref name="destination" /> stream.</summary>
+      <summary>
+            Writes the <paramref name="source" /> of server-sent events to the <paramref name="destination" /> stream.</summary>
       <param name="source">The events to write to the stream.</param>
       <param name="destination">The destination stream to write the events.</param>
       <param name="cancellationToken">The <see cref="T:System.Threading.CancellationToken" /> that can be used to cancel the write operation.</param>
       <returns>A task that represents the asynchronous write operation.</returns>
     </member>
     <member name="M:System.Net.ServerSentEvents.SseFormatter.WriteAsync``1(System.Collections.Generic.IAsyncEnumerable{System.Net.ServerSentEvents.SseItem{``0}},System.IO.Stream,System.Action{System.Net.ServerSentEvents.SseItem{``0},System.Buffers.IBufferWriter{System.Byte}},System.Threading.CancellationToken)">
-      <summary>Writes the <paramref name="source" /> of server-sent events to the <paramref name="destination" /> stream.</summary>
+      <summary>
+            Writes the <paramref name="source" /> of server-sent events to the <paramref name="destination" /> stream.</summary>
       <param name="source">The events to write to the stream.</param>
       <param name="destination">The destination stream to write the events.</param>
       <param name="itemFormatter">The formatter for the data field of given event.</param>
@@ -64,7 +67,8 @@
       <param name="sseStream">The stream containing the data to parse.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="sseStream" /> is null.</exception>
-      <returns>The enumerable of strings, which can be enumerated synchronously or asynchronously. The strings
+      <returns>
+            The enumerable of strings, which can be enumerated synchronously or asynchronously. The strings
             are decoded from the UTF8-encoded bytes of the payload of each event.</returns>
     </member>
     <member name="M:System.Net.ServerSentEvents.SseParser.Create``1(System.IO.Stream,System.Net.ServerSentEvents.SseItemParser{``0})">

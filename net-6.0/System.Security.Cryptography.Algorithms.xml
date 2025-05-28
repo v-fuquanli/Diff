@@ -1880,7 +1880,8 @@ The algorithm-specific key import failed.</exception>
 -or-
 
 <paramref name="input" /> contains multiple PEM-encoded keys with a recognized label.</exception>
-      <exception cref="T:System.Security.Cryptography.CryptographicException">The password is incorrect.
+      <exception cref="T:System.Security.Cryptography.CryptographicException">
+The password is incorrect.
 
 -or-
 
@@ -1908,7 +1909,8 @@ The algorithm-specific key import failed.</exception>
 -or-
 
 <paramref name="input" /> contains multiple PEM-encoded keys with a recognized label.</exception>
-      <exception cref="T:System.Security.Cryptography.CryptographicException">The password is incorrect.
+      <exception cref="T:System.Security.Cryptography.CryptographicException">
+The password is incorrect.
 
 -or-
 
@@ -2264,7 +2266,8 @@ The algorithm-specific key import failed.</exception>
 -or-
 
 <paramref name="input" /> contains multiple PEM-encoded keys with a recognized label.</exception>
-      <exception cref="T:System.Security.Cryptography.CryptographicException">The password is incorrect.
+      <exception cref="T:System.Security.Cryptography.CryptographicException">
+The password is incorrect.
 
 -or-
           
@@ -2292,7 +2295,8 @@ The algorithm-specific key import failed.</exception>
 -or-
 
 <paramref name="input" /> contains multiple PEM-encoded keys with a recognized label.</exception>
-      <exception cref="T:System.Security.Cryptography.CryptographicException">The password is incorrect.
+      <exception cref="T:System.Security.Cryptography.CryptographicException">
+The password is incorrect.
 
 -or-
 
@@ -3336,10 +3340,12 @@ Releases the unmanaged resources used by the <see cref="T:System.Security.Crypto
         <see langword="true" /> to enable .NET Framework 2.0 Service Pack 1 applications to interact with .NET Framework 2.0 applications; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="T:System.Security.Cryptography.IncrementalHash">
-      <summary>Provides support for computing a hash or HMAC value incrementally across several segments.</summary>
+      <summary>
+            Provides support for computing a hash or HMAC value incrementally across several segments.</summary>
     </member>
     <member name="M:System.Security.Cryptography.IncrementalHash.AppendData(System.Byte[],System.Int32,System.Int32)">
-      <summary>Append <paramref name="count" /> bytes of <paramref name="data" />, starting at <paramref name="offset" />,
+      <summary>
+            Append <paramref name="count" /> bytes of <paramref name="data" />, starting at <paramref name="offset" />,
             to the data already processed in the hash or HMAC.</summary>
       <param name="data">The data to process.</param>
       <param name="offset">The offset into the byte array from which to begin using data.</param>
@@ -3355,7 +3361,8 @@ Releases the unmanaged resources used by the <see cref="T:System.Security.Crypto
       <exception cref="T:System.ObjectDisposedException">The object has already been disposed.</exception>
     </member>
     <member name="M:System.Security.Cryptography.IncrementalHash.AppendData(System.Byte[])">
-      <summary>Append the entire contents of <paramref name="data" /> to the data already processed in the hash or HMAC.</summary>
+      <summary>
+            Append the entire contents of <paramref name="data" /> to the data already processed in the hash or HMAC.</summary>
       <param name="data">The data to process.</param>
       <exception cref="T:System.ArgumentNullException">
         <paramref name="data" /> is <c>null</c>.</exception>
@@ -3367,22 +3374,26 @@ Releases the unmanaged resources used by the <see cref="T:System.Security.Crypto
       <exception cref="T:System.ObjectDisposedException">The <see cref="T:System.Security.Cryptography.IncrementalHash" /> object has already been disposed.</exception>
     </member>
     <member name="M:System.Security.Cryptography.IncrementalHash.CreateHash(System.Security.Cryptography.HashAlgorithmName)">
-      <summary>Create an <see cref="T:System.Security.Cryptography.IncrementalHash" /> for the algorithm specified by <paramref name="hashAlgorithm" />.</summary>
+      <summary>
+            Create an <see cref="T:System.Security.Cryptography.IncrementalHash" /> for the algorithm specified by <paramref name="hashAlgorithm" />.</summary>
       <param name="hashAlgorithm">The name of the hash algorithm to perform.</param>
       <exception cref="T:System.ArgumentException">
         <paramref name="hashAlgorithm" />.<see cref="P:System.Security.Cryptography.HashAlgorithmName.Name" /> is <c>null</c>, or
                 the empty string.</exception>
       <exception cref="T:System.Security.Cryptography.CryptographicException">
         <paramref name="hashAlgorithm" /> is not a known hash algorithm.</exception>
-      <returns>An <see cref="T:System.Security.Cryptography.IncrementalHash" /> instance ready to compute the hash algorithm specified
+      <returns>
+            An <see cref="T:System.Security.Cryptography.IncrementalHash" /> instance ready to compute the hash algorithm specified
             by <paramref name="hashAlgorithm" />.</returns>
     </member>
     <member name="M:System.Security.Cryptography.IncrementalHash.CreateHMAC(System.Security.Cryptography.HashAlgorithmName,System.Byte[])">
-      <summary>Create an <see cref="T:System.Security.Cryptography.IncrementalHash" /> for the Hash-based Message Authentication Code (HMAC)
+      <summary>
+            Create an <see cref="T:System.Security.Cryptography.IncrementalHash" /> for the Hash-based Message Authentication Code (HMAC)
             algorithm utilizing the hash algorithm specified by <paramref name="hashAlgorithm" />, and a
             key specified by <paramref name="key" />.</summary>
       <param name="hashAlgorithm">The name of the hash algorithm to perform within the HMAC.</param>
-      <param name="key">The secret key for the HMAC. The key can be any length, but a key longer than the output size
+      <param name="key">
+                The secret key for the HMAC. The key can be any length, but a key longer than the output size
                 of the hash algorithm specified by <paramref name="hashAlgorithm" /> will be hashed (using the
                 algorithm specified by <paramref name="hashAlgorithm" />) to derive a correctly-sized key. Therefore,
                 the recommended size of the secret key is the output size of the hash specified by
@@ -3394,7 +3405,8 @@ Releases the unmanaged resources used by the <see cref="T:System.Security.Crypto
                 the empty string.</exception>
       <exception cref="T:System.Security.Cryptography.CryptographicException">
         <paramref name="hashAlgorithm" /> is not a known hash algorithm.</exception>
-      <returns>An <see cref="T:System.Security.Cryptography.IncrementalHash" /> instance ready to compute the hash algorithm specified
+      <returns>
+            An <see cref="T:System.Security.Cryptography.IncrementalHash" /> instance ready to compute the hash algorithm specified
             by <paramref name="hashAlgorithm" />.</returns>
     </member>
     <member name="M:System.Security.Cryptography.IncrementalHash.CreateHMAC(System.Security.Cryptography.HashAlgorithmName,System.ReadOnlySpan{System.Byte})">
@@ -3408,7 +3420,8 @@ Releases the unmanaged resources used by the <see cref="T:System.Security.Crypto
       <returns>A hash instance to compute the hash algorithm specified by <paramref name="hashAlgorithm" />.</returns>
     </member>
     <member name="M:System.Security.Cryptography.IncrementalHash.Dispose">
-      <summary>Release all resources used by the current instance of the
+      <summary>
+            Release all resources used by the current instance of the
             <see cref="T:System.Security.Cryptography.IncrementalHash" /> class.</summary>
     </member>
     <member name="M:System.Security.Cryptography.IncrementalHash.GetCurrentHash">
@@ -3425,7 +3438,8 @@ Releases the unmanaged resources used by the <see cref="T:System.Security.Crypto
       <returns>The number of bytes written to <paramref name="destination" />.</returns>
     </member>
     <member name="M:System.Security.Cryptography.IncrementalHash.GetHashAndReset">
-      <summary>Retrieve the hash or HMAC for the data accumulated from prior calls to
+      <summary>
+            Retrieve the hash or HMAC for the data accumulated from prior calls to
             <see cref="M:System.Security.Cryptography.IncrementalHash.AppendData(System.Byte[])" />, and return to the state the object
             was in at construction.</summary>
       <exception cref="T:System.ObjectDisposedException">The object has already been disposed.</exception>
@@ -3457,7 +3471,8 @@ Releases the unmanaged resources used by the <see cref="T:System.Security.Crypto
         <see langword="true" /> if <paramref name="destination" /> is long enough to receive the hash or HMAC value; otherwise, <see langword="false" />.</returns>
     </member>
     <member name="P:System.Security.Cryptography.IncrementalHash.AlgorithmName">
-      <summary>Get the name of the algorithm being performed.</summary>
+      <summary>
+            Get the name of the algorithm being performed.</summary>
       <returns>The name of the algorithm being performed.</returns>
     </member>
     <member name="P:System.Security.Cryptography.IncrementalHash.HashLengthInBytes">
@@ -4155,7 +4170,8 @@ The algorithm-specific key import failed.</exception>
 -or-
 
 <paramref name="input" /> contains multiple PEM-encoded keys with a recognized label.</exception>
-      <exception cref="T:System.Security.Cryptography.CryptographicException">The password is incorrect.
+      <exception cref="T:System.Security.Cryptography.CryptographicException">
+The password is incorrect.
 
 -or-
 
@@ -4183,7 +4199,8 @@ The algorithm-specific key import failed.</exception>
 -or-
 
 <paramref name="input" /> contains multiple PEM-encoded keys with a recognized label.</exception>
-      <exception cref="T:System.Security.Cryptography.CryptographicException">The password is incorrect.
+      <exception cref="T:System.Security.Cryptography.CryptographicException">
+The password is incorrect.
 
 -or-
 
