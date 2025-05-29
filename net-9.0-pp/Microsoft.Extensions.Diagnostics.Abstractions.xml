@@ -159,8 +159,8 @@
     <member name="M:Microsoft.Extensions.Diagnostics.Metrics.MetricsBuilderExtensions.AddListener(Microsoft.Extensions.Diagnostics.Metrics.IMetricsBuilder,Microsoft.Extensions.Diagnostics.Metrics.IMetricsListener)">
       <summary>
             Registers a new <see cref="T:Microsoft.Extensions.Diagnostics.Metrics.IMetricsListener" /> instance.</summary>
-      <param name="listener">The implementation type of the listener.</param>
       <param name="builder">The <see cref="T:Microsoft.Extensions.Diagnostics.Metrics.IMetricsBuilder" />.</param>
+      <param name="listener">The implementation type of the listener.</param>
       <returns>Returns the original <see cref="T:Microsoft.Extensions.Diagnostics.Metrics.IMetricsBuilder" /> for chaining.</returns>
     </member>
     <member name="M:Microsoft.Extensions.Diagnostics.Metrics.MetricsBuilderExtensions.AddListener``1(Microsoft.Extensions.Diagnostics.Metrics.IMetricsBuilder)">

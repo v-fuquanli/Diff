@@ -413,9 +413,9 @@
     <member name="M:System.CommandLine.Builder.CommandLineBuilderExtensions.AddMiddleware(System.CommandLine.Builder.CommandLineBuilder,System.Action{System.CommandLine.Invocation.InvocationContext},System.CommandLine.Invocation.MiddlewareOrder)">
       <summary>
             Adds a middleware delegate to the invocation pipeline called before a command handler is invoked.</summary>
+      <param name="builder">A command line builder.</param>
       <param name="onInvoke">A delegate that will be invoked before a call to a command handler.</param>
       <param name="order">A value indicating the order in which the added delegate will be invoked relative to others in the pipeline.</param>
-      <param name="builder">A command line builder.</param>
       <returns>The same instance of <see cref="T:System.CommandLine.Builder.CommandLineBuilder" />.</returns>
     </member>
     <member name="M:System.CommandLine.Builder.CommandLineBuilderExtensions.AddMiddleware(System.CommandLine.Builder.CommandLineBuilder,System.CommandLine.Invocation.InvocationMiddleware,System.CommandLine.Invocation.MiddlewareOrder)">
@@ -534,8 +534,8 @@
     <member name="M:System.CommandLine.Builder.CommandLineBuilderExtensions.UseParseErrorReporting(System.CommandLine.Builder.CommandLineBuilder,System.Nullable{System.Int32})">
       <summary>
             Configures the command line to write error information to standard error when there are errors parsing command line input.</summary>
-      <param name="errorExitCode">The exit code to use when parser errors occur.</param>
       <param name="builder">A command line builder.</param>
+      <param name="errorExitCode">The exit code to use when parser errors occur.</param>
       <returns>The same instance of <see cref="T:System.CommandLine.Builder.CommandLineBuilder" />.</returns>
     </member>
     <member name="M:System.CommandLine.Builder.CommandLineBuilderExtensions.UseSuggestDirective(System.CommandLine.Builder.CommandLineBuilder)">
@@ -560,8 +560,8 @@
     </member>
     <member name="M:System.CommandLine.Builder.CommandLineBuilderExtensions.UseVersionOption(System.CommandLine.Builder.CommandLineBuilder,System.String[])">
       <summary>Enables the use of a option (defaulting to the alias <code data-dev-comment-type="c">--version</code>) which when specified in command line input will short circuit normal command handling and instead write out version information before exiting.</summary>
-      <param name="aliases">One or more aliases to use instead of the default to signal that version information should be displayed.</param>
       <param name="builder">A command line builder.</param>
+      <param name="aliases">One or more aliases to use instead of the default to signal that version information should be displayed.</param>
       <returns>The same instance of <xref data-throw-if-not-resolved="true" uid="System.CommandLine.Builder.CommandLineBuilder"></xref>.</returns>
     </member>
     <member name="M:System.CommandLine.Builder.CommandLineBuilderExtensions.UseVersionOption(System.CommandLine.Builder.CommandLineBuilder)">

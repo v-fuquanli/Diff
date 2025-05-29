@@ -1145,16 +1145,16 @@ at 'start' index and ending at 'end' index (exclusive).</summary>
     <member name="M:System.Numerics.Tensors.Tensor.ConcatenateOnDimension``1(System.Int32,System.ReadOnlySpan{System.Numerics.Tensors.Tensor{``0}},System.Numerics.Tensors.TensorSpan{``0}@)">
       <summary>
             Join a sequence of tensors along an existing axis.</summary>
-      <param name="tensors">The tensors must have the same shape, except in the dimension corresponding to axis (the first, by default).</param>
       <param name="dimension">The axis along which the tensors will be joined. If axis is -1, arrays are flattened before use. Default is 0.</param>
+      <param name="tensors">The tensors must have the same shape, except in the dimension corresponding to axis (the first, by default).</param>
       <param name="destination" />
       <typeparam name="T" />
     </member>
     <member name="M:System.Numerics.Tensors.Tensor.ConcatenateOnDimension``1(System.Int32,System.ReadOnlySpan{System.Numerics.Tensors.Tensor{``0}})">
       <summary>
             Join a sequence of tensors along an existing axis.</summary>
-      <param name="tensors">The tensors must have the same shape, except in the dimension corresponding to axis (the first, by default).</param>
       <param name="dimension">The axis along which the tensors will be joined. If axis is -1, arrays are flattened before use. Default is 0.</param>
+      <param name="tensors">The tensors must have the same shape, except in the dimension corresponding to axis (the first, by default).</param>
       <typeparam name="T" />
     </member>
     <member name="M:System.Numerics.Tensors.Tensor.ConvertChecked``2(System.Numerics.Tensors.ReadOnlyTensorSpan{``0}@,System.Numerics.Tensors.TensorSpan{``1}@)">
@@ -1788,8 +1788,8 @@ at 'start' index and ending at 'end' index (exclusive).</summary>
             Compares the elements of two <see cref="T:System.Numerics.Tensors.ReadOnlyTensorSpan`1" /> to see if any elements of <paramref name="y" /> are greater than <paramref name="x" />.
             If the shapes are not the same, the tensors are broadcasted to the smallest broadcastable size before they are compared.
             It returns a <see cref="T:System.Boolean" /> where the value is true if any elements in <paramref name="y" /> are greater than <paramref name="x" />.</summary>
-      <param name="y">First <see cref="T:System.Numerics.Tensors.ReadOnlyTensorSpan`1" /> to compare.</param>
       <param name="x">Value to compare against.</param>
+      <param name="y">First <see cref="T:System.Numerics.Tensors.ReadOnlyTensorSpan`1" /> to compare.</param>
       <typeparam name="T" />
       <returns>
         <see cref="T:System.Boolean" /> where the value is true if any elements in <paramref name="y" /> are greater than <paramref name="x" />.</returns>
@@ -1937,8 +1937,8 @@ at 'start' index and ending at 'end' index (exclusive).</summary>
             Compares the elements of two <see cref="T:System.Numerics.Tensors.ReadOnlyTensorSpan`1" /> to see if any elements of <paramref name="y" /> are greater than <paramref name="x" />.
             If the shapes are not the same, the tensors are broadcasted to the smallest broadcastable size before they are compared.
             It returns a <see cref="T:System.Boolean" /> where the value is true if any elements in <paramref name="y" /> are greater than <paramref name="x" />.</summary>
-      <param name="y">First <see cref="T:System.Numerics.Tensors.ReadOnlyTensorSpan`1" /> to compare.</param>
       <param name="x">Value to compare against.</param>
+      <param name="y">First <see cref="T:System.Numerics.Tensors.ReadOnlyTensorSpan`1" /> to compare.</param>
       <typeparam name="T" />
       <returns>
         <see cref="T:System.Boolean" /> where the value is true if any elements in <paramref name="y" /> are greater than <paramref name="x" />.</returns>
@@ -2154,8 +2154,8 @@ at 'start' index and ending at 'end' index (exclusive).</summary>
             Compares the elements of two <see cref="T:System.Numerics.Tensors.ReadOnlyTensorSpan`1" /> to see if all elements of <paramref name="y" /> are less than <paramref name="x" />.
             If the shapes are not the same, the tensors are broadcasted to the smallest broadcastable size before they are compared.
             It returns a <see cref="T:System.Boolean" /> where the value is true if all elements in <paramref name="y" /> are less than <paramref name="x" />.</summary>
-      <param name="y">First value to compare.</param>
       <param name="x">Second value to compare against.</param>
+      <param name="y">First value to compare.</param>
       <typeparam name="T" />
       <returns>
         <see cref="T:System.Boolean" /> where the value is true if all elements in <paramref name="y" /> are less than <paramref name="x" />.</returns>
@@ -2303,8 +2303,8 @@ at 'start' index and ending at 'end' index (exclusive).</summary>
             Compares the elements of two <see cref="T:System.Numerics.Tensors.ReadOnlyTensorSpan`1" /> to see if all elements of <paramref name="y" /> are less than <paramref name="x" />.
             If the shapes are not the same, the tensors are broadcasted to the smallest broadcastable size before they are compared.
             It returns a <see cref="T:System.Boolean" /> where the value is true if all elements in <paramref name="y" /> are less than <paramref name="x" />.</summary>
-      <param name="y">First value to compare.</param>
       <param name="x">Second value to compare against.</param>
+      <param name="y">First value to compare.</param>
       <typeparam name="T" />
       <returns>
         <see cref="T:System.Boolean" /> where the value is true if all elements in <paramref name="y" /> are less than <paramref name="x" />.</returns>
@@ -2964,8 +2964,8 @@ at 'start' index and ending at 'end' index (exclusive).</summary>
     <member name="M:System.Numerics.Tensors.Tensor.RootN``1(System.Numerics.Tensors.ReadOnlyTensorSpan{``0}@,System.Int32,System.Numerics.Tensors.TensorSpan{``0}@)">
       <summary>Computes the element-wise n-th root of the values in the specified tensor.</summary>
       <param name="x">The tensor, represented as a span.</param>
-      <param name="destination">The destination tensor, represented as a span.</param>
       <param name="n">The degree of the root to be computed, represented as a scalar.</param>
+      <param name="destination">The destination tensor, represented as a span.</param>
       <typeparam name="T" />
     </member>
     <member name="M:System.Numerics.Tensors.Tensor.RootN``1(System.Numerics.Tensors.ReadOnlyTensorSpan{``0}@,System.Int32)">
@@ -3223,8 +3223,8 @@ at 'start' index and ending at 'end' index (exclusive).</summary>
     <member name="M:System.Numerics.Tensors.Tensor.StackAlongDimension``1(System.Int32,System.ReadOnlySpan{System.Numerics.Tensors.Tensor{``0}})">
       <summary>
             Join multiple <see cref="T:System.Numerics.Tensors.Tensor`1" /> along a new dimension. The axis parameter specifies the index of the new dimension. All tensors must have the same shape.</summary>
-      <param name="tensors">Input <see cref="T:System.Numerics.Tensors.Tensor`1" />.</param>
       <param name="dimension">Index of where the new dimension will be.</param>
+      <param name="tensors">Input <see cref="T:System.Numerics.Tensors.Tensor`1" />.</param>
       <typeparam name="T" />
     </member>
     <member name="M:System.Numerics.Tensors.Tensor.StackAlongDimension``1(System.ReadOnlySpan{System.Numerics.Tensors.Tensor{``0}},System.Numerics.Tensors.TensorSpan{``0}@,System.Int32)">

@@ -209,8 +209,8 @@
             using the factory specified in <paramref name="implementationFactory" />
             to the <paramref name="services" /> if the service type hasn't already been registered.</summary>
       <param name="services">The <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />.</param>
-      <param name="implementationFactory">The factory that creates the service.</param>
       <param name="serviceKey">The service key.</param>
+      <param name="implementationFactory">The factory that creates the service.</param>
       <typeparam name="TService">The type of the service to add.</typeparam>
     </member>
     <member name="M:Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddKeyedScoped``1(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Object)">
